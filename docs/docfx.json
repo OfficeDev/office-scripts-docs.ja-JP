@@ -1,0 +1,59 @@
+{
+  "build": {
+    "content": [
+      {
+        "files": [
+          "**/*.md",
+          "**/*.yml"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**",
+          "README.md",
+          "LICENSE",
+          "LICENSE-CODE",
+          "ThirdPartyNotices.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "**/*.png",
+          "**/*.jpg",
+          "**/*.gif",
+          "**/*.svg",
+          "**/*.xlsx"
+        ],
+        "exclude": [
+          "**/obj/**",
+          "**/includes/**"
+        ]
+      }
+    ],
+    "overwrite": [],
+    "externalReference": [],
+    "globalMetadata": {
+      "breadcrumb_path": "/office/dev/scripts/breadcrumb/toc.json",
+      "extendBreadcrumb": true,
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "OfficeDev/office-scripts-docs",
+      "feedback_product_url": "https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439",
+      "ms.suite": "office",
+      "ms.author": "o365devx",
+      "author": "o365devx",
+      "ms.topic": "conceptual",
+      "ms.technology": "scripts",
+      "ms.prod": "excel",
+      "titleSuffix": "Office Scripts"
+    },
+    "fileMetadata": {
+      "ms.topic": {
+        "tutorials/*.md": "tutorial"
+      }
+    },
+    "template": [],
+    "dest": "office-scripts-docs",
+    "markdownEngineName": "markdig"
+  }
+}
