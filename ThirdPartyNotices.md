@@ -1,15 +1,10 @@
-## Legal Notices
-Microsoft and any contributors grant you a license to the Microsoft documentation and other content
-in this repository under the [Creative Commons Attribution 4.0 International Public License](https://creativecommons.org/licenses/by/4.0/legalcode),
-see the [LICENSE](LICENSE) file, and grant you a license to any code in the repository under the [MIT License](https://opensource.org/licenses/MIT), see the
-[LICENSE-CODE](LICENSE-CODE) file.
+## <a name="legal-notices"></a>法的通知
+Microsoft とその他の投稿者は、 [Creative Commons 属性4.0 国際公開ライセンス](https://creativecommons.org/licenses/by/4.0/legalcode)の下にある microsoft のドキュメントおよびその他のコンテンツに対するライセンスを付与し、[ライセンス](LICENSE)ファイルを参照し[て、その](https://opensource.org/licenses/MIT)リポジトリ内のすべてのコードのライセンスを付与します。そのためには、[ライセンスコード](LICENSE-CODE)ファイルを参照してください。
 
-Microsoft, Windows, Microsoft Azure and/or other Microsoft products and services referenced in the documentation
-may be either trademarks or registered trademarks of Microsoft in the United States and/or other countries.
-The licenses for this project do not grant you rights to use any Microsoft names, logos, or trademarks.
-Microsoft's general trademark guidelines can be found at http://go.microsoft.com/fwlink/?LinkID=254653.
+このドキュメントで参照されている microsoft、Windows、Microsoft Azure およびその他の Microsoft 製品およびサービスには、米国およびその他の国における登録商標または Microsoft の登録商標のいずれかが含まれている場合があります。
+このプロジェクトのライセンスでは、Microsoft の名前、ロゴ、商標を使用する権限が付与されることはありません。
+Microsoft の商標に関する一般的なガイドラインはhttp://go.microsoft.com/fwlink/?LinkID=254653、にあります。
 
-Privacy information can be found at https://privacy.microsoft.com/en-us/
+プライバシー情報は、にあります。https://privacy.microsoft.com/en-us/
 
-Microsoft and any contributors reserve all others rights, whether under their respective copyrights, patents,
-or trademarks, whether by implication, estoppel or otherwise.
+Microsoft およびその他の投稿者は、それぞれの著作権、特許、または商標、禁反言、またはその他のいずれかによって、他のすべての権利を予約しています。
