@@ -36,7 +36,8 @@
     "globalMetadata": {
       "breadcrumb_path": "/office/dev/scripts/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "GitHub",
+      "feedback_system": "None",
+      "hide_comments": true,
       "feedback_github_repo": "OfficeDev/office-scripts-docs",
       "feedback_product_url": "https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439",
       "ms.suite": "office",
@@ -45,7 +46,8 @@
       "ms.topic": "conceptual",
       "ms.technology": "scripts",
       "ms.prod": "excel",
-      "titleSuffix": "Office Scripts"
+      "titleSuffix": "Office Scripts",
+      "bilingual_type": "hover over"
     },
     "fileMetadata": {
       "ms.topic": {

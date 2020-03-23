@@ -1,6 +1,11 @@
 {
   "docsets_to_publish": [
     {
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+        ]
+      },
       "docset_name": "office-scripts-docs",
       "build_source_folder": "docs",
       "build_output_subfolder": "office-scripts-docs",
@@ -14,20 +19,22 @@
         "LandingPage": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
-        ]
-      }
+      "template_folder": "_themes"
+    }
+  ],
+  "JoinTOCPlugin": [
+    {
+      "ConceptualTOC": "docs/toc.yml",
+      "ReferenceTOCUrl": "/javascript/api/office-scripts/toc.json"
     }
   ],
   "notification_subscribers": [
-    "aljerabe@microsoft.com"
+    "aljerabe@microsoft.com",
+    "mor-oitac-eng@rws.com"
   ],
   "sync_notification_subscribers": [],
   "branches_to_filter": [
-    "live-sxs",
+    "live",
     "master-sxs"
   ],
   "git_repository_url_open_to_public_contributors": "https://github.com/OfficeDev/office-scripts-docs",
@@ -71,12 +78,6 @@
       "template_folder": "_themes.pdf"
     }
   },
-  "JoinTOCPlugin": [
-    {
-      "ConceptualTOC": "docs/toc.yml",
-      "ReferenceTOCUrl": "/javascript/api/office-scripts/toc.json"
-    }
-  ],
   "dependent_packages": [
     {
       "id": "Microsoft.OpenPublishing.CommonPlugins",
