@@ -1,0 +1,139 @@
+---
+title: Excel on the web で Office スクリプトを記録、編集、作成する
+description: 操作レコーダーを使用したスクリプトの記録、ブックへのデータの書き込みなど、Office スクリプトの基本について説明したチュートリアル。
+ms.date: 01/27/2020
+localization_priority: Priority
+ms.openlocfilehash: 1971ff2ffd80554beb6ac561677ee3384f87ca81
+ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 03/10/2020
+ms.locfileid: "42700311"
+---
+# <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを記録、編集、作成する
+
+このチュートリアルでは、Excel on the web の Office スクリプトの基本となる記録、編集、書き込みについて説明します。
+
+## <a name="prerequisites"></a>前提条件
+
+[!INCLUDE [Preview note](../includes/preview-note.md)]
+
+このチュートリアルを開始するには、Office スクリプトへのアクセスが必要です。これには次のものが必要です。
+
+- [Excel on the web](https://www.office.com/launch/excel)。
+- [組織に対して Office スクリプトを許可する](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)よう管理者に依頼します。これにより、リボンに **[自動化]** タブが追加されます。
+
+> [!IMPORTANT]
+> このチュートリアルは、JavaScript や TypeScript について初級から中級レベルの知識を持つユーザーを対象としています。 JavaScript を使い慣れていない場合は、[Mozilla の JavaScript チュートリアル](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction)をご覧になることをお勧めします。 スクリプト環境の詳細については、「[Excel on the web の Office スクリプト](../overview/excel.md)」を参照してください。
+
+## <a name="add-data-and-record-a-basic-script"></a>データを追加し、基本スクリプトを記録する
+
+まず、いくらかのデータと、最初の小さなスクリプトが必要です。
+
+1. Excel for the Web で新しいブックを作成します。
+2. 次の果物売上データをコピーし、ワークシートのセル **A1** から始まるセル範囲に貼り付けます。
+
+    |果物 |2018 |2019 |
+    |:---|:---|:---|
+    |オレンジ |1000 |1200 |
+    |レモン |800 |900 |
+    |ライム |600 |500 |
+    |グレープフルーツ |900 |700 |
+
+3. **[自動化]** タブを開きます。**[自動化]** タブが表示されていない場合は、ドロップダウン矢印を押して、リボンのオーバーフローを確認します。
+4. **[Record Actions](操作を記録する)** ボタンを押します。
+5. セル **A2:C2** ("オレンジ" 行) を選択し、塗りつぶしの色をオレンジ色に設定します。
+6. **[停止]** ボタンを押して、記録を停止します。
+7. **[スクリプト名]** フィールドに覚えやすい名前を入力します。
+8. *オプション:* **[説明]** フィールドにわかりやすい説明を入力します。 このフィールドは、スクリプトの動作に関するコンテキストを提供するために使用します。 このチュートリアルでは、「テーブルの色コード行」を使用できます。
+
+   > [!TIP]
+   > スクリプトの説明は、**[スクリプトの詳細]** ウィンドウで後から編集できます。これは、コード エディターの **[...]** メニューの下にあります。
+
+9. **[保存]** ボタンを押して、スクリプトを保存します。
+
+    ワークシートは次のようになります (色が違っていても問題ありません)。
+
+    !["オレンジ" 行がオレンジ色で強調表示されている果物売上データの行。](../images/tutorial-1.png)
+
+## <a name="edit-an-existing-script"></a>既存のスクリプトを編集する
+
+前のスクリプトでは、"オレンジ" の行がオレンジ色になります。 "レモン" の行に黄色を追加しましょう。
+
+1. **[自動化]** タブを開きます。
+2. **[コード エディター]** ボタンを押します。
+3. 前のセクションで記録したスクリプトを開きます。 次のようなコードが表示されるはずです。
+
+    ```TypeScript
+    async function main(context: Excel.RequestContext) {
+      // Set fill color to FFC000 for range Sheet1!A2:C2
+      let workbook = context.workbook;
+      let worksheets = workbook.worksheets;
+      let selectedSheet = worksheets.getActiveWorksheet();
+      selectedSheet.getRange("A2:C2").format.fill.color = "FFC000";
+    }
+    ```
+
+    このコードは、ブックのワークシート コレクションに最初にアクセスして、現在のワークシートを取得します。 次に、**A2:C2** の範囲の塗りつぶしの色を設定します。
+
+    範囲は、Excel on the web の Office スクリプトの基本となる部分です。 範囲とは、隣接するセルからなる四角形のブロックで、値、数式、書式設定が含まれます。 範囲はセルの基本構造であり、スクリプト タスクの大部分は範囲を指定することにより実行します。
+
+4. 次の行をスクリプトの最後 (`color` の設定箇所と末尾の `}` の間) に追加します。
+
+    ```TypeScript
+    selectedSheet.getRange("A3:C3").format.fill.color = "yellow";
+    ```
+
+5. **[実行]** を押して、スクリプトをテストします。 ブックは次のように表示されるはずです。
+
+    !["オレンジ" 行はオレンジ色、"レモン" 行は黄色で強調表示されている果物売上データの行。](../images/tutorial-2.png)
+
+## <a name="create-a-table"></a>テーブルを作成する
+
+この果物売上データをテーブルに変換しましょう。 プロセス全体でスクリプトを使用します。
+
+1. 次の行をスクリプトの最後 (末尾の `}` の前) に追加します。
+
+    ```TypeScript
+    let table = selectedSheet.tables.add("A1:C5", true);
+    ```
+
+2. この呼び出しは `Table` オブジェクトを返します。 そのテーブルを使用して、データを並べ替えましょう。 "果物" 列の値に基づいて、データを昇順で並べ替えます。 次の行を、テーブル作成の後に追加します。
+
+    ```TypeScript
+    table.sort.apply([{ key: 0, ascending: true }]);
+    ```
+
+    スクリプトは次のようになります。
+
+    ```TypeScript
+    async function main(context: Excel.RequestContext) {
+      // Set fill color to FFC000 for range Sheet1!A2:C2
+      let workbook = context.workbook;
+      let worksheets = workbook.worksheets;
+      let selectedSheet = worksheets.getActiveWorksheet();
+      selectedSheet.getRange("A2:C2").format.fill.color = "FFC000";
+      selectedSheet.getRange("A3:C3").format.fill.color = "yellow";
+      let table = selectedSheet.tables.add("A1:C5", true);
+      table.sort.apply([{ key: 0, ascending: true }]);
+    }
+    ```
+
+    テーブルには `TableSort` オブジェクトがあり、`Table.sort` プロパティを使用してアクセスできます。 そのオブジェクトに並べ替え条件を適用できます。 `apply` メソッドは、`SortField` オブジェクトの配列を受け取ります。 今回は、並べ替え条件が 1 つだけなので、`SortField` を 1 つだけ使用します。 `key: 0` は、並べ替えを定義する値を含む列を "0" (テーブルの 1 列目。この例では **A**) に設定します。 `ascending: true` は、昇順 (降順ではなく) にデータを並べ替えます。
+
+3. スクリプトを実行します。 テーブルが次のように表示されます。
+
+    ![並べ替えられた果物売上テーブル。](../images/tutorial-3.png)
+
+    > [!NOTE]
+    > スクリプトを再実行すると、エラーが表示されます。 これは、テーブルの上に別のテーブルを重ねて作成することはできないためです。 ただし、別のワークシートやブックでスクリプトを実行することはできます。
+
+### <a name="re-run-the-script"></a>スクリプトを再実行する
+
+1. 現在のブックに新しいワークシートを作成します。
+2. このチュートリアルの最初にある果物のデータをコピーし、新しいワークシートのセル **A1** から始まるセル範囲に貼り付けます。
+3. スクリプトを実行します。
+
+## <a name="next-steps"></a>次の手順
+
+チュートリアルの「[Excel on the web で Office スクリプトを使用してブックのデータを読み取る](excel-read-tutorial.md)」を完了します。 このチュートリアルでは、Office スクリプトを使用してブックのデータを読み取る方法について説明します。
