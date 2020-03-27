@@ -1,20 +1,22 @@
 ---
 title: Office スクリプトと Office アドインの相違点
 description: Office スクリプトと Office アドインの動作と API の違い。
-ms.date: 12/12/2019
+ms.date: 03/23/2020
 localization_priority: Normal
-ms.openlocfilehash: 4626afb66b54c94a72f29b039c601435c089d64d
-ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.openlocfilehash: 2290d4e34b7a7286d67443de9e9c64bad4fcd4b7
+ms.sourcegitcommit: d556aaefac80e55f53ac56b7f6ecbc657ebd426f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42700395"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42978729"
 ---
 # <a name="differences-between-office-scripts-and-office-add-ins"></a>Office スクリプトと Office アドインの相違点
 
 Office アドインと Office スクリプトには、多くの共通点があります。 どちらも、Office JavaScript API の名前空間を`Excel`使用して、Excel ブックの自動制御を提供します。 ただし、Office スクリプトの範囲は、より制限されています。
 
-Office スクリプトは、手動のボタンを押すことで完了まで実行されます。 Office アドインは、ユーザーの操作に依存し、ブックの使用中は保持されます。 Excel 拡張機能がスクリプトプラットフォームの機能を超える必要がある場合は、office アドインの[ドキュメント](/office/dev/add-ins)にアクセスして、office アドインの詳細を確認してください。
+![さまざまな Office 機能拡張ソリューションのフォーカス領域を示す4つの領域の図。 Office スクリプトと Office Web アドインはどちらも Web とコラボレーションに重点が置いていますが、Office スクリプトはエンドユーザーに対して機能します (ただし、Office Web アドインでは、プロフェッショナル開発者が対象となります)。)](../images/office-programmability-diagram.png)
+
+Office スクリプトは、作業ウィンドウが開いている間は Office アドインが保持されるのに対して、手動ボタンを押すか、[電源自動化](https://flow.microsoft.com/)で手順として、完了するために実行します。 これは、アドインがセッション中に状態を維持できることを意味しますが、Office スクリプトでは実行の間に内部状態は保持されません。 Excel 拡張機能がスクリプトプラットフォームの機能を超える必要がある場合は、office アドインの[ドキュメント](/office/dev/add-ins)にアクセスして、office アドインの詳細を確認してください。
 
 この記事の残りの部分では、Office アドインと Office スクリプトの主な違いについて説明します。
 
@@ -38,6 +40,7 @@ Office スクリプトでは、[共通 api](/javascript/api/office)を使用で�
 
 ## <a name="see-also"></a>関連項目
 
-- [Web 上の Excel での Office スクリプト](../overview/excel.md)
+- [Excel on the web の Office スクリプト](../overview/excel.md)
+- [Office スクリプトと VBA マクロの相違点](vba-differences.md)
 - [Office スクリプトのトラブルシューティング](../testing/troubleshooting.md)
 - [Excel 作業ウィンドウ アドインを作成する](/office/dev/add-ins/quickstarts/excel-quickstart-jquery)

@@ -1,6 +1,6 @@
-- name: Office スクリプトのドキュメント
+- name: Office スクリプト ドキュメント
   href: index.md
-- name: Web 上の Excel での Office スクリプト
+- name: Excel on the web の Office スクリプト
   items:
     - name: 概要
       href: overview/excel.md
@@ -10,7 +10,7 @@
           href: tutorials/excel-tutorial.md
         - name: スクリプトを使用してブックのデータを読み取る
           href: tutorials/excel-read-tutorial.md
-    - name: スクリプトの基礎
+    - name: スクリプトの基本事項
       href: develop/scripting-fundamentals.md
     - name: 概念
       items:
@@ -18,6 +18,8 @@
           href: develop/javascript-objects.md
         - name: コードエディタ環境
           href: overview/code-editor-environment.md
+        - name: Office スクリプトと VBA マクロの相違点
+          href: resources/vba-differences.md
         - name: Office スクリプトと Office アドインの相違点
           href: resources/add-ins-differences.md
         - name: Office スクリプトの効果を元に戻す
@@ -26,7 +28,7 @@
       href: testing/troubleshooting.md
     - name: サンプル
       items:
-        - name: サンプルスクリプト
+        - name: サンプル スクリプト
           href: resources/excel-samples.md
         - name: シナリオ
           items:
