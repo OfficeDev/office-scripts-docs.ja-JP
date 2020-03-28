@@ -3,12 +3,12 @@ title: Excel on the web の Office スクリプト
 description: Office スクリプト用の操作レコーダーとコード エディターの概要をご紹介します。
 ms.date: 02/24/2020
 localization_priority: Priority
-ms.openlocfilehash: dd48467bc8105a3d31d9fa21e547c703e9e37cce
-ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.openlocfilehash: fb1d32068f9a738bb99412c2892cf22b4119b9b1
+ms.sourcegitcommit: d556aaefac80e55f53ac56b7f6ecbc657ebd426f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42700431"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "42978350"
 ---
 # <a name="office-scripts-in-excel-on-the-web-preview"></a>Excel on the web の Office スクリプト (プレビュー)
 
