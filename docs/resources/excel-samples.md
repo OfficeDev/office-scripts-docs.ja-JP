@@ -1,20 +1,20 @@
 ---
 title: Excel on the web の Office スクリプトのサンプルスクリプト
 description: Web 上の Excel の Office スクリプトで使用するコードサンプルのコレクションです。
-ms.date: 02/19/2020
+ms.date: 04/06/2020
 localization_priority: Normal
-ms.openlocfilehash: abb4064dfde8b644035e725832e481e6463e979e
-ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.openlocfilehash: abf6b87b63ad027cca8ee5c947b687f54815409c
+ms.sourcegitcommit: 0b2232c4c228b14d501edb8bb489fe0e84748b42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42700418"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "43191005"
 ---
 # <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Web 上の Excel での Office スクリプトのサンプルスクリプト (プレビュー)
 
 次のサンプルは、独自のブックで試すことができる簡単なスクリプトです。 Web 上の Excel で使用するには、次のようにします。
 
-1. [**自動化**] タブを開きます。
+1. **[自動化]** タブを開きます。
 2. **コードエディター**を押します。
 3. コードエディターの作業ウィンドウで、[**新しいスクリプト**] をクリックします。
 4. スクリプト全体を、選択したサンプルに置き換えます。
@@ -47,7 +47,9 @@ async function main(context: Excel.RequestContext) {
 
 ### <a name="work-with-dates"></a>日付の操作
 
-この例では、JavaScript の[date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date)オブジェクトを使用して、現在の日付と時刻を取得し、その値を作業中のワークシート内の2つのセルに書き込みます。
+このセクションのサンプルは、JavaScript の[Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date)オブジェクトを使用する方法を示しています。
+
+次の例では、現在の日付と時刻を取得し、アクティブなワークシート内の2つのセルにこれらの値を書き込みます。
 
 ```TypeScript
 async function main(context: Excel.RequestContext) {
@@ -63,6 +65,22 @@ async function main(context: Excel.RequestContext) {
   
   // Add the time string to B1.
   timeRange.values = [[date.toLocaleTimeString()]];
+}
+```
+
+次の例では、Excel に保存されている日付を読み取って、JavaScript の Date オブジェクトに変換します。 [日付のシリアル番号](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46)は、JavaScript 日付の入力として使用されます。
+
+```TypeScript
+async function main(context: Excel.RequestContext) {
+  // Read a date at cell A1 from Excel.
+  let dateRange = context.workbook.worksheets.getActiveWorksheet().getRange("A1");
+  dateRange.load("values");
+  await context.sync();
+
+  // Convert the Excel date to a JavaScript Date object.
+  let excelDateValue = dateRange.values[0][0];
+  let javaScriptDate = new Date(Math.round((excelDateValue - 25569) * 86400 * 1000));
+  console.log(javaScriptDate);
 }
 ```
 
