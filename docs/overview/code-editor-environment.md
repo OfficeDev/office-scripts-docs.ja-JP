@@ -1,14 +1,14 @@
 ---
 title: Office スクリプトのコードエディター環境
 description: Web 上の Excel の Office スクリプトの前提条件と環境情報。
-ms.date: 01/21/2020
+ms.date: 04/08/2020
 localization_priority: Normal
-ms.openlocfilehash: 06318305e4e0091ce4fd8d1cd8130c474e18aed9
-ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.openlocfilehash: 6b26adf886172f085980bed0488b4aa7a6815991
+ms.sourcegitcommit: b13dedb5ee2048f0a244aa2294bf2c38697cb62c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42700400"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43215267"
 ---
 # <a name="office-scripts-code-editor-environment"></a>Office スクリプトのコードエディター環境
 
@@ -32,6 +32,10 @@ Office スクリプトは、 [Office アドイン](/office/dev/add-ins/overview/
 IntelliSense は、スクリプトを編集するときの入力ミスや構文エラーを防止するために役立つコードエディターの機能です。 入力したオブジェクトとフィールド名、および各 API のインラインドキュメントが表示されます。
 
 Excel コードエディターは、Visual Studio Code と同じ IntelliSense エンジンを使用します。 この機能の詳細については、 [Visual Studio Code の IntelliSense 機能](https://code.visualstudio.com/docs/editor/intellisense#_intellisense-features)を参照してください。
+
+## <a name="external-library-support"></a>外部ライブラリのサポート
+
+Office スクリプトでは、外部のサードパーティの JavaScript ライブラリの使用はサポートされていません。 現在、スクリプトから Office スクリプト Api 以外のライブラリを呼び出すことはできません。 [Math](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)などの[組み込みの JavaScript オブジェクト](../develop/javascript-objects.md)には、まだアクセスできます。
 
 ## <a name="see-also"></a>関連項目
 

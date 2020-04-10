@@ -1,14 +1,14 @@
 ---
 title: Office スクリプトでの組み込みの JavaScript オブジェクトの使用
 description: Web 上の Excel で Office スクリプトから組み込みの JavaScript Api を呼び出す方法について説明します。
-ms.date: 04/06/2020
+ms.date: 04/08/2020
 localization_priority: Normal
-ms.openlocfilehash: a4b698215edea5f266e159fee0e08690904dd379
-ms.sourcegitcommit: 0b2232c4c228b14d501edb8bb489fe0e84748b42
+ms.openlocfilehash: 54cadb6e9ce60e631488bbe7de00c29a6db35eb7
+ms.sourcegitcommit: b13dedb5ee2048f0a244aa2294bf2c38697cb62c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "43191014"
+ms.lasthandoff: 04/10/2020
+ms.locfileid: "43215260"
 ---
 # <a name="using-built-in-javascript-objects-in-office-scripts"></a>Office スクリプトでの組み込みの JavaScript オブジェクトの使用
 
@@ -146,6 +146,10 @@ async function main(context: Excel.RequestContext) {
 }
 
 ```
+
+## <a name="use-of-external-javascript-libraries-is-not-supported"></a>外部 JavaScript ライブラリの使用はサポートされていません
+
+Office スクリプトは、外部のサードパーティ製ライブラリの使用をサポートしていません。 スクリプトでは、組み込みの JavaScript オブジェクトと Office スクリプト Api のみを使用できます。
 
 ## <a name="see-also"></a>関連項目
 
