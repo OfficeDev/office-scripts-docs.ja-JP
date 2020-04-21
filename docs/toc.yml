@@ -6,7 +6,7 @@
       href: overview/excel.md
     - name: チュートリアル
       items:
-        - name: Office スクリプトの基礎
+        - name: Office スクリプトの基本
           href: tutorials/excel-tutorial.md
         - name: スクリプトを使用してブックのデータを読み取る
           href: tutorials/excel-read-tutorial.md
@@ -14,13 +14,13 @@
       href: develop/scripting-fundamentals.md
     - name: 概念
       items:
-        - name: 組み込みの JavaScript オブジェクト
+        - name: 組み込み JavaScript オブジェクト
           href: develop/javascript-objects.md
-        - name: コードエディタ環境
+        - name: コード エディターの環境
           href: overview/code-editor-environment.md
-        - name: Office スクリプトと VBA マクロの相違点
+        - name: Office スクリプトと VBA マクロの違い
           href: resources/vba-differences.md
-        - name: Office スクリプトと Office アドインの相違点
+        - name: Office スクリプトと Office アドインの違い
           href: resources/add-ins-differences.md
         - name: Office スクリプトの効果を元に戻す
           href: testing/undo.md
@@ -36,5 +36,5 @@
               href: resources/scenarios/sample-scenario-overview.md
             - name: Web ダウンロードの分析
               href: resources/scenarios/analyze-web-downloads.md
-            - name: 成績計算機
+            - name: グレード計算機
               href: resources/scenarios/grade-calculator.md
