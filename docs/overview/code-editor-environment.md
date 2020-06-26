@@ -1,14 +1,14 @@
 ---
 title: Office スクリプトのコードエディター環境
 description: Web 上の Excel の Office スクリプトの前提条件と環境情報。
-ms.date: 04/08/2020
+ms.date: 04/24/2020
 localization_priority: Normal
-ms.openlocfilehash: 6b26adf886172f085980bed0488b4aa7a6815991
-ms.sourcegitcommit: b13dedb5ee2048f0a244aa2294bf2c38697cb62c
+ms.openlocfilehash: efe6ddbe39a1ea3850b4dc6fea0fa885b80c0c28
+ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2020
-ms.locfileid: "43215267"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44878669"
 ---
 # <a name="office-scripts-code-editor-environment"></a>Office スクリプトのコードエディター環境
 
@@ -25,7 +25,7 @@ Office スクリプトには、主に自己完結型のコード部分があり�
 
 ## <a name="office-scripts-javascript-api"></a>Office スクリプト JavaScript API
 
-Office スクリプトは、 [Office アドイン](/office/dev/add-ins/overview/index)で使用される Office JavaScript api である特別なバージョンを使用します。2つのプラットフォーム間の相違点については、「 [Office スクリプトと Office アドインの相違点](../resources/add-ins-differences.md#apis)」を参照してください。 スクリプトで使用可能なすべての Api は、「 [Office スクリプト API リファレンス」ドキュメント](/javascript/api/office-scripts/overview)で確認できます。
+Office スクリプトは、office[アドイン](/office/dev/add-ins/overview/index)用の Office JavaScript api である特別なバージョンを使用します。2つの Api には類似点がありますが、2つのプラットフォーム間でコードを移植できるとは想定しないでください。 2つのプラットフォーム間の相違点については、「 [Office スクリプトと Office アドインの相違点](../resources/add-ins-differences.md#apis)」を参照してください。 スクリプトで使用可能なすべての Api は、「 [Office スクリプト API リファレンス」ドキュメント](/javascript/api/office-scripts/overview)で確認できます。
 
 ## <a name="intellisense"></a>インテリジェンス
 

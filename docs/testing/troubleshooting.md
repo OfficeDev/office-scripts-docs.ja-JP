@@ -1,14 +1,14 @@
 ---
 title: Office スクリプトのトラブルシューティング
 description: Office スクリプトのヒントとテクニック、およびヘルプリソースをデバッグします。
-ms.date: 12/13/2019
+ms.date: 05/14/2020
 localization_priority: Normal
-ms.openlocfilehash: 959faff875f342dc1b1ab158ad9ded24732b0894
-ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.openlocfilehash: 6448980eec45214a589444229db0fd781b9fea13
+ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42700358"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44878620"
 ---
 # <a name="troubleshooting-office-scripts"></a>Office スクリプトのトラブルシューティング
 
@@ -19,16 +19,11 @@ Office スクリプトを開発する際には、誤りが発生することが�
 トラブルシューティング中に、画面にメッセージを出力することもできます。 これにより、変数の現在の値や、どのコードパスがトリガーされているかを確認できます。 これを行うには、テキストをコンソールに記録します。
 
 ```TypeScript
-console.log("Logging my range's address.");
-myRange.load("address");
-await context.sync();
-console.log(myRange.address);
+console.log("Logging myRange's address.");
+console.log(myRange.getAddress());
 ```
 
-> [!IMPORTANT]
-> オブジェクトプロパティを`load`ログに記録`sync`する前に、ワークシートデータとブックを忘れずに使用してください。
-
-に`console.log`渡される文字列は、コードエディターのログコンソールに表示されます。 コンソールをオンにするには、**省略記号**ボタンを押して [**ログ...** ] を選択します。
+に渡される文字列 `console.log` は、コードエディターのログコンソールに表示されます。 コンソールをオンにするには、**省略記号**ボタンを押して [**ログ...** ] を選択します。
 
 ログがブックに影響を与えることはありません。
 
@@ -46,6 +41,7 @@ Office JavaScript API で問題が発生した場合は、 [Officedev/Office/js]
 
 ## <a name="see-also"></a>関連項目
 
-- [Web 上の Excel での Office スクリプト](../overview/excel.md)
+- [Excel on the web の Office スクリプト](../overview/excel.md)
 - [Web 上の Excel での Office スクリプトのスクリプトの基礎](../develop/scripting-fundamentals.md)
 - [Office スクリプトの効果を元に戻す](undo.md)
+- [Office スクリプトのパフォーマンスを向上させる](../develop/web-client-performance.md)

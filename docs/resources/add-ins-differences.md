@@ -1,18 +1,18 @@
 ---
-title: Office スクリプトと Office アドインの相違点
+title: Office スクリプトと Office アドインの違い
 description: Office スクリプトと Office アドインの動作と API の違い。
-ms.date: 03/23/2020
+ms.date: 06/01/2020
 localization_priority: Normal
-ms.openlocfilehash: 2290d4e34b7a7286d67443de9e9c64bad4fcd4b7
-ms.sourcegitcommit: d556aaefac80e55f53ac56b7f6ecbc657ebd426f
+ms.openlocfilehash: fc2029780190672c633e00e26f44273e4311c754
+ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "42978729"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44878662"
 ---
-# <a name="differences-between-office-scripts-and-office-add-ins"></a>Office スクリプトと Office アドインの相違点
+# <a name="differences-between-office-scripts-and-office-add-ins"></a>Office スクリプトと Office アドインの違い
 
-Office アドインと Office スクリプトには、多くの共通点があります。 どちらも、Office JavaScript API の名前空間を`Excel`使用して、Excel ブックの自動制御を提供します。 ただし、Office スクリプトの範囲は、より制限されています。
+Office アドインと Office スクリプトには、多くの共通点があります。 どちらも、Excel ブックの JavaScript API の自動制御を提供します。 ただし、Office スクリプト Api は、Office JavaScript API の特殊な同期バージョンです。
 
 ![さまざまな Office 機能拡張ソリューションのフォーカス領域を示す4つの領域の図。 Office スクリプトと Office Web アドインはどちらも Web とコラボレーションに重点が置いていますが、Office スクリプトはエンドユーザーに対して機能します (ただし、Office Web アドインでは、プロフェッショナル開発者が対象となります)。)](../images/office-programmability-diagram.png)
 
@@ -28,11 +28,13 @@ Office スクリプトは、現在 web 上の Excel でのみサポートされ�
 
 ## <a name="apis"></a>API
 
-Office スクリプトは、ほとんどの Excel JavaScript Api をサポートしています。これは、2つのプラットフォーム間で多くの機能が重なっていることを意味します。 2つの例外として、イベントと共通 Api があります。
+Office アドイン用の Office JavaScript Api の同期バージョンはありません。標準の Office スクリプト api はプラットフォームに固有のものであり、パラダイムの使用を避けるために多くの最適化と変更が行われてい `load` / `sync` ます。
+
+[Excel JavaScript api](/javascript/api/excel?view=excel-js-preview)の一部は、 [Office スクリプト非同期 api](../develop/excel-async-model.md)と互換性があります。 一部のサンプルおよびアドインコードブロックは、 `Excel.run` 最小限の翻訳でブロックに移植できます。 2つのプラットフォームは機能を共有していますが、ギャップがあります。 Office アドインには、office アドインには含まれませんが、イベントと共通 Api はない2つの主要な API セットがあります。
 
 ### <a name="events"></a>イベント
 
-Office スクリプトは[イベント](/office/dev/add-ins/excel/excel-add-ins-events)をサポートしていません。 すべてのスクリプトは、コードを 1 `main`つのメソッドで実行し、終了します。 イベントがトリガーされると再アクティブ化されないため、イベントを登録できません。
+Office スクリプトは[イベント](/office/dev/add-ins/excel/excel-add-ins-events)をサポートしていません。 すべてのスクリプトは、コードを1つのメソッドで実行し `main` 、終了します。 イベントがトリガーされると再アクティブ化されないため、イベントを登録できません。
 
 ### <a name="common-apis"></a>共通 API
 

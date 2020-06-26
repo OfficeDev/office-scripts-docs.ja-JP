@@ -1,14 +1,14 @@
 ---
 title: Excel on the web の Office スクリプトのサンプルスクリプト
 description: Web 上の Excel の Office スクリプトで使用するコードサンプルのコレクションです。
-ms.date: 04/06/2020
+ms.date: 06/18/2020
 localization_priority: Normal
-ms.openlocfilehash: abf6b87b63ad027cca8ee5c947b687f54815409c
-ms.sourcegitcommit: 0b2232c4c228b14d501edb8bb489fe0e84748b42
+ms.openlocfilehash: bfa6679595e6e28cc5d2ae3e3e487fd3e77738aa
+ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "43191005"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44878676"
 ---
 # <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Web 上の Excel での Office スクリプトのサンプルスクリプト (プレビュー)
 
@@ -30,18 +30,80 @@ ms.locfileid: "43191005"
 
 この例では、 **A1**の値を読み取り、コンソールに出力します。
 
-``` TypeScript
-async function main(context: Excel.RequestContext) {
+```typescript
+function main(workbook: ExcelScript.Workbook) {
   // Get the current worksheet.
-  let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
+  let selectedSheet = workbook.getActiveWorksheet();
 
   // Get the value of cell A1.
   let range = selectedSheet.getRange("A1");
-  range.load("values");
-  await context.sync();
-
+  
   // Print the value of A1.
-  console.log(range.values);
+  console.log(range.getValue());
+}
+```
+
+### <a name="read-the-active-cell"></a>アクティブセルを読み取る
+
+このスクリプトは、現在アクティブなセルの値を記録します。 複数のセルが選択されている場合は、一番左側のセルがログに記録されます。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the current active cell in the workbook.
+  let cell = workbook.getActiveCell();
+
+  // Log that cell's value.
+  console.log(`The current cell's value is ${cell.getValue()}`);
+}
+```
+
+### <a name="change-an-adjacent-cell"></a>隣接するセルを変更する
+
+このスクリプトは、相対参照を使用して隣接するセルを取得します。 アクティブセルが一番上の行にある場合は、現在選択されているセルを参照しているため、スクリプトの一部が失敗することに注意してください。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the currently active cell in the workbook.
+  let activeCell = workbook.getActiveCell();
+  console.log(`The active cell's address is: ${activeCell.getAddress()}`);
+
+  // Get the cell to the right of the active cell and set its value and color.
+  let rightCell = activeCell.getOffsetRange(0,1);
+  rightCell.setValue("Right cell");
+  console.log(`The right cell's address is: ${rightCell.getAddress()}`);
+  rightCell.getFormat().getFont().setColor("Magenta");
+  rightCell.getFormat().getFill().setColor("Cyan");
+
+  // Get the cell to the above of the active cell and set its value and color.
+  // Note that this operation will fail if the active cell is in the top row.
+  let aboveCell = activeCell.getOffsetRange(-1, 0);
+  aboveCell.setValue("Above cell");
+  console.log(`The above cell's address is: ${aboveCell.getAddress()}`);
+  aboveCell.getFormat().getFont().setColor("White");
+  aboveCell.getFormat().getFill().setColor("Black");
+}
+```
+
+### <a name="change-all-adjacent-cells"></a>隣接するすべてのセルを変更する
+
+このスクリプトは、アクティブセルの書式を隣接するセルにコピーします。 このスクリプトは、アクティブセルがワークシートの端にない場合にのみ機能することに注意してください。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the active cell.
+  let activeCell = workbook.getActiveCell();
+
+  // Get the cell that's one row above and one column to the left of the active cell.
+  let cornerCell = activeCell.getOffsetRange(-1,-1);
+
+  // Get a range that includes all the cells surrounding the active cell.
+  let surroundingRange = cornerCell.getResizedRange(2, 2)
+
+  // Copy the formatting from the active cell to the new range.
+  surroundingRange.copyFrom(
+    activeCell, /* The source range. */
+    ExcelScript.RangeCopyType.formats /* What to copy. */
+    );
 }
 ```
 
@@ -52,33 +114,31 @@ async function main(context: Excel.RequestContext) {
 次の例では、現在の日付と時刻を取得し、アクティブなワークシート内の2つのセルにこれらの値を書き込みます。
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
+function main(workbook: ExcelScript.Workbook) {
   // Get the cells at A1 and B1.
-  let dateRange = context.workbook.worksheets.getActiveWorksheet().getRange("A1");
-  let timeRange = context.workbook.worksheets.getActiveWorksheet().getRange("B1");
+  let dateRange = workbook.getActiveWorksheet().getRange("A1");
+  let timeRange = workbook.getActiveWorksheet().getRange("B1");
 
   // Get the current date and time with the JavaScript Date object.
   let date = new Date(Date.now());
 
   // Add the date string to A1.
-  dateRange.values = [[date.toLocaleDateString()]];
-  
+  dateRange.setValue(date.toLocaleDateString());
+
   // Add the time string to B1.
-  timeRange.values = [[date.toLocaleTimeString()]];
+  timeRange.setValue(date.toLocaleTimeString());
 }
 ```
 
 次の例では、Excel に保存されている日付を読み取って、JavaScript の Date オブジェクトに変換します。 [日付のシリアル番号](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46)は、JavaScript 日付の入力として使用されます。
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
+function main(workbook: ExcelScript.Workbook) {
   // Read a date at cell A1 from Excel.
-  let dateRange = context.workbook.worksheets.getActiveWorksheet().getRange("A1");
-  dateRange.load("values");
-  await context.sync();
+  let dateRange = workbook.getActiveWorksheet().getRange("A1");
 
   // Convert the Excel date to a JavaScript Date object.
-  let excelDateValue = dateRange.values[0][0];
+  let excelDateValue = dateRange.getValue();
   let javaScriptDate = new Date(Math.round((excelDateValue - 25569) * 86400 * 1000));
   console.log(javaScriptDate);
 }
@@ -93,20 +153,20 @@ async function main(context: Excel.RequestContext) {
 この例では、ワークシートで現在使用されている範囲に条件付き書式を適用します。 条件付き書式は、値の上位10% の緑の塗りつぶしです。
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
+function main(workbook: ExcelScript.Workbook) {
   // Get the current worksheet.
-  let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
+  let selectedSheet = workbook.getActiveWorksheet();
 
   // Get the used range in the worksheet.
   let range = selectedSheet.getUsedRange();
 
   // Set the fill color to green for the top 10% of values in the range.
-  let conditionalFormat = range.conditionalFormats.add(Excel.ConditionalFormatType.topBottom);
-  conditionalFormat.topBottom.format.fill.color = "green";
-  conditionalFormat.topBottom.rule = {
+  let conditionalFormat = range.addConditionalFormat(ExcelScript.ConditionalFormatType.topBottom)
+  conditionalFormat.getTopBottom().getFormat().getFill().setColor("green");
+  conditionalFormat.getTopBottom().setRule({
     rank: 10, // The percentage threshold.
-    type: Excel.ConditionalTopBottomCriterionType.topPercent // The type of the top/bottom condition.
-  };
+    type: ExcelScript.ConditionalTopBottomCriterionType.topPercent // The type of the top/bottom condition.
+  });
 }
 ```
 
@@ -115,42 +175,43 @@ async function main(context: Excel.RequestContext) {
 次の使用例は、現在のワークシートの使用範囲から表を作成し、最初の列に基づいて並べ替えます。
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
+function main(workbook: ExcelScript.Workbook) {
   // Get the current worksheet.
-  let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
+  let selectedSheet = workbook.getActiveWorksheet();
 
   // Create a table with the used cells.
   let usedRange = selectedSheet.getUsedRange();
-  let newTable = selectedSheet.tables.add(usedRange, true);
+  let newTable = selectedSheet.addTable(usedRange, true);
 
   // Sort the table using the first column.
-  newTable.sort.apply([{ key: 0, ascending: true }]);
+  newTable.getSort().apply([{ key: 0, ascending: true }]);
 }
 ```
 
-## <a name="collaboration"></a>グループ作業
+### <a name="log-the-grand-total-values-from-a-pivottable"></a>ピボットテーブルから "総計" 値を記録する
 
-これらのサンプルは、コメントなど、Excel のグループ作業関連機能を操作する方法を示しています。
+次の例では、ブックの最初のピボットテーブルを検索し、次の図のように、[総計] セル (緑で強調表示されている) に値を記録します。
 
-### <a name="delete-resolved-comments"></a>解決されたコメントの削除
-
-この例では、現在のワークシートから解決されたすべてのコメントを削除します。
+![総計行が緑色で強調表示された果物 sales ピボットテーブル。](../images/sample-pivottable-grand-total-row.png)
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
-  // Get the current worksheet.
-  let selectedSheet = context.workbook.worksheets.getActiveWorksheet();
+function main(workbook: ExcelScript.Workbook) {
+  // Get the first PivotTable in the workbook.
+  let pivotTable = workbook.getPivotTables()[0];
 
-  // Get the comments on this worksheet.
-  let comments = selectedSheet.comments;
-  comments.load("items/resolved");
-  await context.sync();
+  // Get the names of each data column in the PivotTable.
+  let pivotColumnLabelRange = pivotTable.getLayout().getColumnLabelRange();
 
-  // Delete the resolved comments.
-  comments.items.forEach((comment) => {
-      if (comment.resolved) {
-          comment.delete();
-      }
+  // Get the range displaying the pivoted data.
+  let pivotDataRange = pivotTable.getLayout().getRangeBetweenHeaderAndTotal();
+
+  // Get the range with the "grand totals" for the PivotTable columns.
+  let grandTotalRange = pivotDataRange.getLastRow();
+
+  // Print each of the "Grand Totals" to the console.
+  grandTotalRange.getValues()[0].forEach((column, columnIndex) => {
+    console.log(`Grand total of ${pivotColumnLabelRange.getValues()[0][columnIndex]}: ${grandTotalRange.getValues()[0][columnIndex]}`);
+    // Example log: "Grand total of Sum of Crates Sold Wholesale: 11000"
   });
 }
 ```
