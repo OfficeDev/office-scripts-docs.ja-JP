@@ -6,10 +6,14 @@
       href: overview/excel.md
     - name: チュートリアル
       items:
-        - name: Office スクリプトの基本
+        - name: Office スクリプトの基本について説明します。
           href: tutorials/excel-tutorial.md
         - name: スクリプトを使用してブックのデータを読み取る
           href: tutorials/excel-read-tutorial.md
+        - name: Power Automate でスクリプトの使用を開始する
+          href: tutorials/excel-power-automate-manual.md
+        - name: Power Automate でスクリプトを自動的に実行する
+          href: tutorials/excel-power-automate-trigger.md
     - name: スクリプトの基本事項
       href: develop/scripting-fundamentals.md
     - name: 概念
@@ -22,10 +26,18 @@
           href: resources/vba-differences.md
         - name: Office スクリプトと Office アドインの違い
           href: resources/add-ins-differences.md
+        - name: Power Automate との統合
+          href: develop/power-automate-integration.md
+    - name: トラブルシューティング
+      items:
+        - name: トラブルシューティングの基本
+          href: testing/troubleshooting.md
+        - name: スクリプトパフォーマンスの機能強化
+          href: develop/web-client-performance.md
         - name: Office スクリプトの効果を元に戻す
           href: testing/undo.md
-    - name: トラブルシューティング
-      href: testing/troubleshooting.md
+        - name: Async モデルを使用する (レガシ)
+          href: develop/excel-async-model.md
     - name: サンプル
       items:
         - name: サンプル スクリプト
@@ -38,3 +50,5 @@
               href: resources/scenarios/analyze-web-downloads.md
             - name: グレード計算機
               href: resources/scenarios/grade-calculator.md
+            - name: 作業リマインダー (Power Automate付き)
+              href: resources/scenarios/task-reminders.md
