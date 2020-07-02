@@ -1,14 +1,14 @@
 ---
 title: 従来のスクリプトをサポートするための Office スクリプト非同期 Api の使用
 description: Office スクリプト非同期 Api の入門と、従来のスクリプトでロード/同期パターンを使用する方法について説明します。
-ms.date: 06/22/2020
+ms.date: 06/29/2020
 localization_priority: Normal
-ms.openlocfilehash: c7b3c1401ecc2b4d0371590e71f61ae6e9ad8a9d
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
+ms.openlocfilehash: 78a09232060d862a4e0944356ba2f33f7a264ea1
+ms.sourcegitcommit: 30750c4392db3ef057075a5702abb92863c93eda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878854"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44999282"
 ---
 # <a name="using-the-office-scripts-async-apis-to-support-legacy-scripts"></a>従来のスクリプトをサポートするための Office スクリプト非同期 Api の使用
 
@@ -37,7 +37,7 @@ async function main(context: Excel.RequestContext) {
 
 スクリプトとブックは別の場所で実行されるため、両者の間でデータを転送するには時間がかかります。 非同期 API では、スクリプトとブックを同期する操作をスクリプトが明示的に呼び出すまで、コマンドがキューに登録され `sync` ます。 スクリプトは、次のどちらかを実行することが必要になるまで、独立して動作できます。
 
-- ブックからデータを読み取る (`load` 操作または [ClientResult](/javascript/api/office-scripts/excel/excel.clientresult?view=office-scripts-async) を返すメソッドの後)。
+- ブックからデータを読み取る (`load` 操作または [ClientResult](/javascript/api/office-scripts/excelscript/excel.clientresult?view=office-scripts-async) を返すメソッドの後)。
 - ブックにデータを書き込む (通常はスクリプトが完了した結果)。
 
 次の図に、スクリプトとブックの間の制御フローの例を示します。

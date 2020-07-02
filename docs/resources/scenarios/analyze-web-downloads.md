@@ -1,14 +1,14 @@
 ---
 title: 'Office スクリプトサンプルシナリオ: web ダウンロードを分析する'
 description: Excel ブックでインターネットトラフィックを生に取得し、その情報をテーブルに整理する前に元の場所を特定するサンプル。
-ms.date: 06/15/2020
+ms.date: 06/25/2020
 localization_priority: Normal
-ms.openlocfilehash: 2a74fada55115faf79f0b625b8a7cd6352deb651
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
+ms.openlocfilehash: 425d2af432d6b3c4b7604daf7935d2cc1ec059a8
+ms.sourcegitcommit: 30750c4392db3ef057075a5702abb92863c93eda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878648"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44999268"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office スクリプトサンプルシナリオ: web ダウンロードを分析する
 
@@ -30,6 +30,9 @@ ms.locfileid: "44878648"
 このサンプルは、2020年2月に、Office アドインの開発者コミュニティコールの一部として使用されています。
 
 > [!VIDEO https://www.youtube.com/embed/vPEqbb7t6-Y?start=154]
+
+> [!NOTE]
+> このビデオに示されているコードは、古い API モデル ( [Office スクリプト非同期 api](../../develop/excel-async-model.md)) を使用しています。 このページに示されているサンプルは更新されていますが、コードは録音とは少し異なります。 この変更は、プレゼンターのデモのスクリプトまたはその他のコンテンツの動作には影響しません。
 
 ## <a name="setup-instructions"></a>セットアップの手順
 

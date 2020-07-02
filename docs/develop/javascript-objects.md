@@ -1,14 +1,14 @@
 ---
 title: Office スクリプトでの組み込みの JavaScript オブジェクトの使用
 description: Web 上の Excel で Office スクリプトから組み込みの JavaScript Api を呼び出す方法について説明します。
-ms.date: 04/24/2020
+ms.date: 06/29/2020
 localization_priority: Normal
-ms.openlocfilehash: b5d70e77aef79c38a8cfd680c9d03bb126c402b2
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
+ms.openlocfilehash: 1c8ac757574e8c4be64b373f8d4bf421ddfa0c79
+ms.sourcegitcommit: 30750c4392db3ef057075a5702abb92863c93eda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878536"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44999261"
 ---
 # <a name="using-built-in-javascript-objects-in-office-scripts"></a>Office スクリプトでの組み込みの JavaScript オブジェクトの使用
 
@@ -50,10 +50,10 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="working-with-collections"></a>コレクションを処理する
 
-多くの Excel オブジェクトがコレクションに含まれています。 コレクションは Office スクリプト API によって管理され、配列として公開されます。 たとえば、ワークシート内のすべての[図形](/javascript/api/office-scripts/excel/excelscript.shape)は、 `Shape[]` メソッドによって返されるに含まれてい `Worksheet.getShapes` ます。 この配列を使用して、コレクションから値を取得したり、親オブジェクトのメソッドから特定のオブジェクトにアクセスしたりでき `get*` ます。
+多くの Excel オブジェクトがコレクションに含まれています。 コレクションは Office スクリプト API によって管理され、配列として公開されます。 たとえば、ワークシート内のすべての[図形](/javascript/api/office-scripts/excelscript/excelscript.shape)は、 `Shape[]` メソッドによって返されるに含まれてい `Worksheet.getShapes` ます。 この配列を使用して、コレクションから値を取得したり、親オブジェクトのメソッドから特定のオブジェクトにアクセスしたりでき `get*` ます。
 
 > [!NOTE]
-> これらのコレクションの配列に対してオブジェクトを手動で追加または削除しないでください。 `add`親オブジェクトのメソッドと、コレクション型のオブジェクトのメソッドを使用し `delete` ます。 たとえば、メソッドを使用して[ワークシート](/javascript/api/office-scripts/excel/excelscript.worksheet)に[テーブル](/javascript/api/office-scripts/excel/excelscript.table)を追加 `Worksheet.addTable` し、 `Table` using を削除し `Table.delete` ます。
+> これらのコレクションの配列に対してオブジェクトを手動で追加または削除しないでください。 `add`親オブジェクトのメソッドと、コレクション型のオブジェクトのメソッドを使用し `delete` ます。 たとえば、メソッドを使用して[ワークシート](/javascript/api/office-scripts/excelscript/excelscript.worksheet)に[テーブル](/javascript/api/office-scripts/excelscript/excelscript.table)を追加 `Worksheet.addTable` し、 `Table` using を削除し `Table.delete` ます。
 
 次のスクリプトは、現在のワークシート内のすべての図形の種類を記録します。
 
