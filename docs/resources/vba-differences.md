@@ -1,14 +1,13 @@
 ---
 title: Office スクリプトと VBA マクロの相違点
 description: Office スクリプトと Excel VBA マクロの動作と API の違い。
-ms.date: 03/23/2020
+ms.date: 06/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 3a0f2c9a2ed7181a10e41d1f45b3af695877a680
-ms.sourcegitcommit: d556aaefac80e55f53ac56b7f6ecbc657ebd426f
-ms.translationtype: MT
+ms.openlocfilehash: 8a8929f0c6a73a8e9041bb4b55cce1edd539e166
+ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "42978710"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45043392"
 ---
 # <a name="differences-between-office-scripts-and-vba-macros"></a>Office スクリプトと VBA マクロの相違点
 
@@ -21,7 +20,7 @@ Office スクリプトと VBA マクロには、多くの共通点がありま�
 
 ## <a name="platform-and-ecosystem"></a>プラットフォームとエコシステム
 
-VBA はデスクトップ向けに設計されており、Office スクリプトは web 用に設計されています。 VBA は、ユーザーのデスクトップと対話できます。 これにより、COM や OLE などの同様のテクノロジとの統合が可能になります。 ただし、VBA には、インターネットを呼び出すための便利な方法はありません。
+VBA はデスクトップ向けに設計されており、Office スクリプトは web 用に設計されています。 VBA は、ユーザーのデスクトップと対話して、COM や OLE などの同様のテクノロジに接続できます。 ただし、VBA には、インターネットを呼び出すための便利な方法はありません。
 
 Office スクリプトでは、ユニバーサルランタイムまたは JavaScript を使用します。 これにより、スクリプトの実行に使用されているコンピューターに関係なく、一貫性のある動作とアクセスが可能になります。 また、他の web サービスへの呼び出しを行うこともできます。
 
@@ -39,11 +38,11 @@ VBA マクロには、Excel と同じセキュリティクリアランスがあ�
 
 Office スクリプトは、電源自動化を使用して実行できます。 ブックは、スケジュールまたはイベントドリブンフローによって更新できます。これにより、Excel を開かなくてもワークフローを自動化できます。 これは、ブックが OneDrive に保存されていて、そのユーザーが Excel のデスクトップ、Mac、または web クライアントを使用しているかどうかに関係なく、フローがスクリプトを実行できることを意味します。
 
-VBA には、Power 自動化との統合はありません。 サポートされているすべての VBA シナリオでは、マクロの実行にユーザーが参加していました。
+VBA には Power オートメーションコネクタがありません。 サポートされているすべての VBA シナリオでは、マクロの実行にユーザーが参加していました。
 
 ## <a name="see-also"></a>関連項目
 
 - [Excel on the web の Office スクリプト](../overview/excel.md)
-- [Office スクリプトと Office アドインの相違点](add-ins-differences.md)
+- [Office スクリプトと Office アドインの違い](add-ins-differences.md)
 - [Office スクリプトのトラブルシューティング](../testing/troubleshooting.md)
 - [Excel VBA リファレンス](/office/vba/api/overview/excel)

@@ -1,14 +1,13 @@
 ---
-title: パワー自動化を使用してスクリプトを自動的に実行する
-description: Outlook を使用してメールを受信するなど、自動の外部トリガーを使用して、web 上の Excel の Office スクリプトとの Power automatic を統合する方法に関するチュートリアル。
-ms.date: 06/09/2020
+title: Power Automate でスクリプトを自動的に実行する
+description: 自動的な外部トリガー (Outlook 経由でメールを受信する) を使用して、Power automatic を使用して、web 上で Excel の Office スクリプトを実行する方法についてのチュートリアルです。
+ms.date: 06/29/2020
 localization_priority: Priority
-ms.openlocfilehash: 538a6533e4628a0f555d08eadda060a20830a7ae
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
-ms.translationtype: MT
+ms.openlocfilehash: a750197d6b5ae770ad7d2e17b3ee00dc65ee8875
+ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878843"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45043420"
 ---
 # <a name="automatically-run-scripts-with-power-automate-preview"></a>パワー自動でスクリプトを自動的に実行する (プレビュー)
 
@@ -263,6 +262,6 @@ function main(
 
 ## <a name="next-steps"></a>次の手順
 
-Office のスクリプトとパワー自動化の接続の詳細については、「 [Power オートメーションを使用して Office スクリプトを統合](../develop/power-automate-integration.md)する」を参照してください。
+Office スクリプトを Power オートメーションで接続する方法の詳細については、「 [Power オートメーションで Office スクリプトを実行](../develop/power-automate-integration.md)する」を参照してください。
 
 また、[自動タスクリマインダーのサンプルシナリオ](../resources/scenarios/task-reminders.md)を参照して、Office スクリプトと Teams のアダプティブカードを組み合わせたパワーオートメーションを組み合わせる方法を確認することもできます。

@@ -1,25 +1,24 @@
 ---
-title: Office スクリプトとパワー自動化を統合する
+title: パワー自動化を使用して Office スクリプトを実行する
 description: Power 自動ワークフローを使用して、web 上の Excel で Office スクリプトを取得する方法について説明します。
-ms.date: 06/24/2020
+ms.date: 06/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 977d9c88d75c8070eb729a443b4e8bc9a32e456d
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
-ms.translationtype: MT
+ms.openlocfilehash: 0ea58324998d23020e04cb37dfeea065791757f5
+ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878849"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45043385"
 ---
-# <a name="integrate-office-scripts-with-power-automate"></a>Office スクリプトとパワー自動化を統合する
+# <a name="run-office-scripts-with-power-automate"></a>パワー自動化を使用して Office スクリプトを実行する
 
-[パワー自動](https://flow.microsoft.com)では、スクリプトをより大きなワークフローに統合します。 Power オートメーションでは、ワークシートのテーブルに電子メールの内容を追加したり、ブックのコメントに基づいてプロジェクト管理ツールでアクションを作成したりするなどの操作を実行できます。 電力を自動自動化することが初めての場合は、「 [Power オートメーションの使用を開始](/power-automate/getting-started)する」を参照することをお勧めします。 ここでは、複数のサービス間でワークフローを自動化する方法について詳しく知ることができます。
+[Power オートメーション](https://flow.microsoft.com)を使用すると、より大きな自動化されたワークフローに Office スクリプトを追加することができます。 Power オートメーションでは、ワークシートのテーブルに電子メールの内容を追加したり、ブックのコメントに基づいてプロジェクト管理ツールでアクションを作成したりするなどの操作を実行できます。 電力を自動自動化することが初めての場合は、「 [Power オートメーションの使用を開始](/power-automate/getting-started)する」を参照することをお勧めします。 ここでは、複数のサービス間でワークフローを自動化する方法について詳しく知ることができます。
 
 > [!IMPORTANT]
 > 現時点では、[共有フロー](/power-automate/share-buttons)から Office スクリプトを実行することはできません。 パワー自動化を使用しても、スクリプトを作成したユーザーのみが実行できます。
 
 ## <a name="getting-started"></a>はじめに
 
-Power オートメーションと Office のスクリプトの組み合わせを開始するには、チュートリアルの次の手順を実行し[て、Power 自動化を使用したスクリプトの使用を開始](../tutorials/excel-power-automate-manual.md)します。 これにより、簡単なスクリプトを呼び出すフローを作成する方法を学習できます。 そのチュートリアルを完了し、Power オートメーションチュートリアルを使用して[自動的にスクリプトを実行](../tutorials/excel-power-automate-trigger.md)すると、プラットフォームの統合の詳細については、こちらを参照してください。
+Power オートメーションと Office のスクリプトの組み合わせを開始するには、チュートリアルの次の手順を実行し[て、Power 自動化を使用したスクリプトの使用を開始](../tutorials/excel-power-automate-manual.md)します。 これにより、簡単なスクリプトを呼び出すフローを作成する方法を学習できます。 そのチュートリアルを完了し、Power オートメーションチュートリアルを使用して[自動的にスクリプトを実行](../tutorials/excel-power-automate-trigger.md)した後、Office スクリプトを power オートメーションフローに接続する方法についての詳細は、こちらを参照してください。
 
 ## <a name="excel-online-business-connector"></a>Excel Online (Business) コネクタ
 
@@ -135,7 +134,7 @@ function main(
 ## <a name="see-also"></a>関連項目
 
 - [Power オートメーションを使用して web 上の Excel で Office スクリプトを実行する](../tutorials/excel-power-automate-manual.md)
-- [パワー自動化を使用してスクリプトを自動的に実行する](../tutorials/excel-power-automate-trigger.md)
+- [Power Automate でスクリプトを自動的に実行する](../tutorials/excel-power-automate-trigger.md)
 - [Excel on the web での Office スクリプトのスクリプトの基本事項](scripting-fundamentals.md)
 - [Power Automate の使用を開始する](/power-automate/getting-started)
 - [Excel Online (ビジネス向け) コネクタのリファレンスドキュメント](/connectors/excelonlinebusiness/)

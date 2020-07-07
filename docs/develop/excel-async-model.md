@@ -3,12 +3,11 @@ title: 従来のスクリプトをサポートするための Office スクリ�
 description: Office スクリプト非同期 Api の入門と、従来のスクリプトでロード/同期パターンを使用する方法について説明します。
 ms.date: 06/29/2020
 localization_priority: Normal
-ms.openlocfilehash: 78a09232060d862a4e0944356ba2f33f7a264ea1
-ms.sourcegitcommit: 30750c4392db3ef057075a5702abb92863c93eda
-ms.translationtype: MT
+ms.openlocfilehash: 6c31a39c8e1fe53f2f5587183a6b32e100d2b457
+ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44999282"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45043399"
 ---
 # <a name="using-the-office-scripts-async-apis-to-support-legacy-scripts"></a>従来のスクリプトをサポートするための Office スクリプト非同期 Api の使用
 
@@ -37,7 +36,7 @@ async function main(context: Excel.RequestContext) {
 
 スクリプトとブックは別の場所で実行されるため、両者の間でデータを転送するには時間がかかります。 非同期 API では、スクリプトとブックを同期する操作をスクリプトが明示的に呼び出すまで、コマンドがキューに登録され `sync` ます。 スクリプトは、次のどちらかを実行することが必要になるまで、独立して動作できます。
 
-- ブックからデータを読み取る (`load` 操作または [ClientResult](/javascript/api/office-scripts/excelscript/excel.clientresult?view=office-scripts-async) を返すメソッドの後)。
+- ブックからデータを読み取る (`load` 操作または [ClientResult](/javascript/api/office-scripts/excelscript/excelscript.clientresult?view=office-scripts-async) を返すメソッドの後)。
 - ブックにデータを書き込む (通常はスクリプトが完了した結果)。
 
 次の図に、スクリプトとブックの間の制御フローの例を示します。
@@ -116,7 +115,7 @@ async function main(context: Excel.RequestContext){
 
 ### <a name="clientresult"></a>ClientResult
 
-ブックから情報を返す非同期 API のメソッドには、パラダイムに似たパターンがあり `load` / `sync` ます。 たとえば、`TableCollection.getCount` はコレクション内のテーブルの数を取得します。 `getCount` は `ClientResult<number>` を返します。つまり、返される `ClientResult` の `value` プロパティは数値になります。 `context.sync()` が呼び出されるまで、スクリプトはその値にアクセスできません。 プロパティの読み込みと同様、`value` は、`sync` が呼び出されるまでは、ローカルの "空の" 値です。
+ブックから情報を返す非同期 API のメソッドには、パラダイムに似たパターンがあり `load` / `sync` ます。 たとえば、`TableCollection.getCount` はコレクション内のテーブルの数を取得します。 `getCount`を返し `ClientResult<number>` ます。これは、返されたプロパティが数値であることを意味 `value` [`ClientResult`](/javascript/api/office-scripts/excelscript/excelscript.clientresult?view=office-scripts-async) します。 `context.sync()` が呼び出されるまで、スクリプトはその値にアクセスできません。 プロパティの読み込みと同様、`value` は、`sync` が呼び出されるまでは、ローカルの "空の" 値です。
 
 次のスクリプトは、ブック内のテーブルの総数を取得し、その数をコンソールに記録します。
 

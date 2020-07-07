@@ -1,14 +1,13 @@
 ---
-title: パワー自動化によるスクリプトの使用を開始する
-description: 手動によるトリガーを使用した Office スクリプトでの電源自動化の統合に関するチュートリアル。
-ms.date: 06/09/2020
+title: Power Automate でスクリプトの使用を開始する
+description: パワーで Office スクリプトを使用する方法についてのチュートリアルは、手動のトリガーを使用して自動化します。
+ms.date: 06/29/2020
 localization_priority: Priority
-ms.openlocfilehash: 37c2d9ae4c5456a1355362c70695fc61c236a725
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
-ms.translationtype: MT
+ms.openlocfilehash: b2a10692929de90506f58851e9322afa63e15ca0
+ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878872"
+ms.lasthandoff: 07/06/2020
+ms.locfileid: "45043413"
 ---
 # <a name="start-using-scripts-with-power-automate-preview"></a>Power 自動でのスクリプトの使用を開始する (プレビュー)
 
