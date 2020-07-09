@@ -1,15 +1,16 @@
 ---
-title: Power Automate でスクリプトを自動的に実行する
+title: 自動電源自動化フローを使用してスクリプトを自動的に実行する
 description: 自動的な外部トリガー (Outlook 経由でメールを受信する) を使用して、Power automatic を使用して、web 上で Excel の Office スクリプトを実行する方法についてのチュートリアルです。
-ms.date: 06/29/2020
+ms.date: 07/01/2020
 localization_priority: Priority
-ms.openlocfilehash: a750197d6b5ae770ad7d2e17b3ee00dc65ee8875
-ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
+ms.openlocfilehash: fc98fb36fd5a8c5ef10bc3b767d6f5add0306246
+ms.sourcegitcommit: edf58aed3cd38f57e5e7227465a1ef5515e15703
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45043420"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "45081629"
 ---
-# <a name="automatically-run-scripts-with-power-automate-preview"></a>パワー自動でスクリプトを自動的に実行する (プレビュー)
+# <a name="automatically-run-scripts-with-automated-power-automate-flows-preview"></a>自動電源自動化フロー (プレビュー) を使用してスクリプトを自動的に実行する
 
 このチュートリアルでは、自動[電源自動化](https://flow.microsoft.com)ワークフローを使用して web 上の Excel 用 Office スクリプトを使用する方法について説明します。 スクリプトは、電子メールを受信するたびに自動的に実行され、Excel ブックに電子メールの情報を記録します。
 

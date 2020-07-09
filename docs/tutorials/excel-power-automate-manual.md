@@ -1,13 +1,14 @@
 ---
 title: Power Automate でスクリプトの使用を開始する
 description: パワーで Office スクリプトを使用する方法についてのチュートリアルは、手動のトリガーを使用して自動化します。
-ms.date: 06/29/2020
+ms.date: 07/01/2020
 localization_priority: Priority
-ms.openlocfilehash: b2a10692929de90506f58851e9322afa63e15ca0
-ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
+ms.openlocfilehash: 83e072a45fc724ff2aac5bf5f3893dcb64eaf2ff
+ms.sourcegitcommit: edf58aed3cd38f57e5e7227465a1ef5515e15703
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45043413"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "45081636"
 ---
 # <a name="start-using-scripts-with-power-automate-preview"></a>Power 自動でのスクリプトの使用を開始する (プレビュー)
 
@@ -123,4 +124,4 @@ Power オートメーションは `Workbook.getActiveWorksheet` 、ブックコ�
 
 ## <a name="next-steps"></a>次の手順
 
-[パワー自動化チュートリアルを使用して、自動実行スクリプトを](excel-power-automate-trigger.md)完了します。 この章では、ワークフローサービスから Office スクリプトにデータを渡す方法について説明します。
+[自動電源自動化フローに関するチュートリアルを使用して、自動実行スクリプトを](excel-power-automate-trigger.md)完了します。 この章では、ワークフローサービスから Office スクリプトにデータを渡す方法について説明します。

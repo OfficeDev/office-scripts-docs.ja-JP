@@ -1,13 +1,14 @@
 ---
 title: パワー自動化を使用して Office スクリプトを実行する
 description: Power 自動ワークフローを使用して、web 上の Excel で Office スクリプトを取得する方法について説明します。
-ms.date: 06/29/2020
+ms.date: 07/01/2020
 localization_priority: Normal
-ms.openlocfilehash: 0ea58324998d23020e04cb37dfeea065791757f5
-ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
+ms.openlocfilehash: 40a67f3d0e8f049a8ec5516c0af54c5fc6fb9319
+ms.sourcegitcommit: edf58aed3cd38f57e5e7227465a1ef5515e15703
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45043385"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "45081594"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>パワー自動化を使用して Office スクリプトを実行する
 
@@ -18,7 +19,7 @@ ms.locfileid: "45043385"
 
 ## <a name="getting-started"></a>はじめに
 
-Power オートメーションと Office のスクリプトの組み合わせを開始するには、チュートリアルの次の手順を実行し[て、Power 自動化を使用したスクリプトの使用を開始](../tutorials/excel-power-automate-manual.md)します。 これにより、簡単なスクリプトを呼び出すフローを作成する方法を学習できます。 そのチュートリアルを完了し、Power オートメーションチュートリアルを使用して[自動的にスクリプトを実行](../tutorials/excel-power-automate-trigger.md)した後、Office スクリプトを power オートメーションフローに接続する方法についての詳細は、こちらを参照してください。
+Power オートメーションと Office のスクリプトの組み合わせを開始するには、チュートリアルの次の手順を実行し[て、Power 自動化を使用したスクリプトの使用を開始](../tutorials/excel-power-automate-manual.md)します。 これにより、簡単なスクリプトを呼び出すフローを作成する方法を学習できます。 そのチュートリアルを完了し、[自動電源自動化フロー](../tutorials/excel-power-automate-trigger.md)のチュートリアルを使用して自動的にスクリプトを実行すると、Office スクリプトを Power オートメーションフローに接続する方法についての詳細は、こちらを参照してください。
 
 ## <a name="excel-online-business-connector"></a>Excel Online (Business) コネクタ
 
@@ -27,7 +28,16 @@ Power オートメーションと Office のスクリプトの組み合わせを
 > [!IMPORTANT]
 > "スクリプトを実行する" アクションを実行すると、Excel コネクタを使用するユーザーに、ブックとそのデータに対して重要なアクセス権が与えられます。 また、外部の[呼び出しからの外部呼び出し](external-calls.md)について説明するように、外部 API を呼び出すスクリプトにはセキュリティリスクがあります。 管理者が非常に機密性の高いデータの公開を懸念している場合は、Excel Online コネクタをオフにするか、 [Office スクリプト管理者コントロール](https://support.microsoft.com/office/19d3c51a-6ca2-40ab-978d-60fa49554dcf)を使用して office スクリプトへのアクセスを制限することができます。
 
-## <a name="passing-data-from-power-automate-into-a-script"></a>Power オートメーションからスクリプトにデータを渡す
+## <a name="data-transfer-in-flows-for-scripts"></a>スクリプトのフローでのデータ転送
+
+電源自動化を使用すると、フローの手順間でデータを渡すことができます。 必要な種類の情報を受け入れるようにスクリプトを構成して、フローに必要なブックから任意のものを返すことができます。 スクリプトへの入力は、関数にパラメーターを追加することによって指定され `main` ます (に加えて `workbook: ExcelScript.Workbook` )。 スクリプトからの出力は、戻り値の型をに追加することによって宣言され `main` ます。
+
+> [!NOTE]
+> フローに "実行スクリプト" ブロックを作成すると、受け入れられるパラメーターと返される型が設定されます。 スクリプトのパラメーターまたは戻り値の型を変更する場合は、フローの "Run script" ブロックをやり直す必要があります。 これにより、データが正しく解析されるようになります。
+
+次のセクションでは、電力の自動化に使用されるスクリプトの入力と出力の詳細について説明します。 このトピックを学習するための実践的なアプローチを希望される場合は、自動[電源自動フローのチュートリアルを使用して自動的にスクリプトを実行](../tutorials/excel-power-automate-trigger.md)するか、自動化された[タスクリマインダー](../resources/scenarios/task-reminders.md)サンプルシナリオを参照してください。
+
+### <a name="main-parameters-passing-data-to-a-script"></a>`main`パラメーター: スクリプトにデータを渡す
 
 すべてのスクリプトの入力は、関数の追加パラメーターとして指定され `main` ます。 たとえば、入力として名前を表すを受け入れるスクリプトが必要な場合は、 `string` `main` 署名をに変更し `function main(workbook: ExcelScript.Workbook, name: string)` ます。
 
@@ -72,7 +82,7 @@ Power 自動化でフローを構成するときは、スクリプトの入力�
 
 10. 既定のパラメーター値を使用できます (例 `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')` :
 
-## <a name="returning-data-from-a-script-back-to-power-automate"></a>スクリプトからのデータを Power 自動化に戻す
+## <a name="returning-data-from-a-script"></a>スクリプトからデータを返す
 
 スクリプトは、Power オートメーションフローで動的コンテンツとして使用するブックからのデータを返すことができます。 入力パラメーターと同様に、Power オートメーションでは戻り値の型にいくつかの制限が課されます。
 
@@ -134,7 +144,7 @@ function main(
 ## <a name="see-also"></a>関連項目
 
 - [Power オートメーションを使用して web 上の Excel で Office スクリプトを実行する](../tutorials/excel-power-automate-manual.md)
-- [Power Automate でスクリプトを自動的に実行する](../tutorials/excel-power-automate-trigger.md)
+- [自動電源自動化フローを使用してスクリプトを自動的に実行する](../tutorials/excel-power-automate-trigger.md)
 - [Excel on the web での Office スクリプトのスクリプトの基本事項](scripting-fundamentals.md)
 - [Power Automate の使用を開始する](/power-automate/getting-started)
 - [Excel Online (ビジネス向け) コネクタのリファレンスドキュメント](/connectors/excelonlinebusiness/)
