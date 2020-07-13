@@ -1,14 +1,14 @@
 ---
 title: Excel on the web での Office スクリプトのスクリプトの基本事項
 description: Office スクリプトを作成する前に理解しておくべきオブジェクト モデルの情報と他の基本事項について説明します。
-ms.date: 04/24/2020
+ms.date: 06/29/2020
 localization_priority: Priority
-ms.openlocfilehash: 8449654e359f665677f3d416a8e28fa4d6930f26
-ms.sourcegitcommit: 350bd2447f616fa87bb23ac826c7731fb813986b
+ms.openlocfilehash: 9ea24f26052877bc70862c8a05321d588f409b11
+ms.sourcegitcommit: 30750c4392db3ef057075a5702abb92863c93eda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "43919799"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "44999303"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Excel on the web での Office スクリプトのスクリプトの基本事項 (プレビュー)
 
@@ -16,9 +16,24 @@ ms.locfileid: "43919799"
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
 
+## <a name="main-function"></a>`main` 関数
+
+各 Office スクリプトには、最初のパラメーターとして `ExcelScript.Workbook` 型を持つ `main` 関数を含める必要があります。 関数が実行されると、Excel アプリケーションはブックを最初のパラメーターとして指定して、この `main` 関数を呼び出します。 そのため、スクリプトを記録した後、またはコード エディターで新しいスクリプトを作成した後に、`main` 関数の基本シグネチャを変更しないようにすることが重要です。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+// Your code goes here
+}
+```
+
+スクリプトを実行すると、`main` 関数の内部のコードが実行されます。 `main` は、スクリプト内の他の関数を呼び出すことができますが、関数に含まれていないコードは実行されません。
+
+> [!CAUTION]
+> `main` の関数が `async function main(context: Excel.RequestContext)` のように表示されている場合、スクリプトは従来の非同期 API モデルを使用しています。 前のスクリプトを現在の API モデルに変換する方法など、詳細については、[「Office スクリプトの非同期 API を使用して以前のスクリプトをサポートする」](excel-async-model.md) を参照してください。
+
 ## <a name="object-model"></a>オブジェクト モデル
 
-Excel API について理解するには、ブックの構成要素が互いにどのように関連しているかを理解する必要があります。
+スクリプトを作成するには、Office スクリプト API がどのように連携しているかを理解する必要があります。 ブックのコンポーネントには、相互に特定の関係があります。 多くの点で、これらの関係は Excel UI の関係と一致しています。
 
 - **ブック** には、1 つ以上の **ワークシート** が含まれます。
 - **ワークシート** では、**Range** オブジェクトを介してセルにアクセスできます。
@@ -27,52 +42,68 @@ Excel API について理解するには、ブックの構成要素が互いに�
 - **ワークシート** には、個々のシートに存在するデータ オブジェクトのコレクションが含まれます。
 - **ブック** には、**ブック** 全体のデータ オブジェクト (**表** など) の一部のコレクションが含まれます。
 
+### <a name="workbook"></a>ブック
+
+すべてのスクリプトには、`main` 関数によって `Workbook` 型の `workbook` オブジェクトが提供されています。 これは、スクリプトが Excel ブックを操作するための最上位レベルのオブジェクトを表します。
+
+次のスクリプトは、アクティブなワークシートをブックから取得し、その名前を記録します。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+    // Get the active worksheet.
+    let sheet = workbook.getActiveWorksheet();
+
+    // Display the current worksheet's name.
+    console.log(sheet.getName());
+}
+```
+
 ### <a name="ranges"></a>範囲
 
 範囲とは、ブック内の連続したセルのグループのことです。 スクリプトでは、範囲を定義するのに通常 A1 形式の表記が使用されます (例: **B3** は、列 **B**、行 **3** の単一のセルで、**C2:F4** は、列 **C** から **F**、行 **2** から **4** までのセル)。
 
-範囲には `values`、`formulas`、`format` の 3 つの主要なプロパティがあります。 これらのプロパティで、セルの値、評価する数式、およびセルの視覚的な書式設定を取得または設定します。
+範囲には、値、数式、書式の 3 つの主要プロパティがあります。 これらのプロパティで、セルの値、評価する数式、およびセルの視覚的な書式設定を取得または設定します。 `getValues`、`getFormulas`、`getFormat` を介してアクセスします。 値と数式は、`setValues` と `setFormulas` で変更できますが、書式は、個別に設定されている複数の小さなオブジェクトから構成されている `RangeFormat` オブジェクトです。
+
+範囲は、2 次元配列を使用して情報を管理します。 Office スクリプト フレームワークでこれらの配列を処理する方法の詳細については、[「Office スクリプトでの組み込み JavaScript オブジェクトの使用の範囲操作のセクション」](javascript-objects.md#working-with-ranges) を参照してください。
 
 #### <a name="range-sample"></a>サンプル範囲
 
-次のサンプルで、売上記録の作成方法を示します。 このスクリプトは、`Range` オブジェクトを使用して、値、数式、書式を設定しています。
+次のサンプルで、売上記録の作成方法を示します。 このスクリプトは、`Range` オブジェクトを使用して、値、数式、書式の一部を設定しています。
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
-  // Get the active worksheet.
-  let sheet = context.workbook.worksheets.getActiveWorksheet();
+function main(workbook: ExcelScript.Workbook) {
+    // Get the active worksheet.
+    let sheet = workbook.getActiveWorksheet();
 
-  // Create the headers and format them to stand out.
-  let headers = [
-    ["Product", "Quantity", "Unit Price", "Totals"]
-  ];
-  let headerRange = sheet.getRange("B2:E2");
-  headerRange.values = headers;
-  headerRange.format.fill.color = "#4472C4";
-  headerRange.format.font.color = "white";
+    // Create the headers and format them to stand out.
+    let headers = [["Product", "Quantity", "Unit Price", "Totals"]];
+    let headerRange = sheet.getRange("B2:E2");
+    headerRange.setValues(headers);
+    headerRange.getFormat().getFill().setColor("#4472C4");
+    headerRange.getFormat().getFont().setColor("white");
 
-  // Create the product data rows.
-  let productData = [
-    ["Almonds", 6, 7.5],
-    ["Coffee", 20, 34.5],
-    ["Chocolate", 10, 9.56],
-  ];
-  let dataRange = sheet.getRange("B3:D5");
-  dataRange.values = productData;
+    // Create the product data rows.
+    let productData = [
+        ["Almonds", 6, 7.5],
+        ["Coffee", 20, 34.5],
+        ["Chocolate", 10, 9.56],
+    ];
+    let dataRange = sheet.getRange("B3:D5");
+    dataRange.setValues(productData);
 
-  // Create the formulas to total the amounts sold.
-  let totalFormulas = [
-    ["=C3 * D3"],
-    ["=C4 * D4"],
-    ["=C5 * D5"],
-    ["=SUM(E3:E5)"]
-  ];
-  let totalRange = sheet.getRange("E3:E6");
-  totalRange.formulas = totalFormulas;
-  totalRange.format.font.bold = true;
+    // Create the formulas to total the amounts sold.
+    let totalFormulas = [
+        ["=C3 * D3"],
+        ["=C4 * D4"],
+        ["=C5 * D5"],
+        ["=SUM(E3:E5)"],
+    ];
+    let totalRange = sheet.getRange("E3:E6");
+    totalRange.setFormulas(totalFormulas);
+    totalRange.getFormat().getFont().setBold(true);
 
-  // Display the totals as US dollar amounts.
-  totalRange.numberFormat = [["$0.00"]];
+    // Display the totals as US dollar amounts.
+    totalRange.setNumberFormat("$0.00");
 }
 ```
 
@@ -82,7 +113,7 @@ async function main(context: Excel.RequestContext) {
 
 ### <a name="charts-tables-and-other-data-objects"></a>グラフ、表、およびその他のデータ オブジェクト
 
-スクリプトを使用することにより、Excel 内でデータ構造やビジュアル化を作成および操作できます。 表とグラフの 2 つのオブジェクトが頻繁に使用されますが、API はピボットテーブル、図形、画像などもサポートしています。
+スクリプトを使用することにより、Excel 内でデータ構造やビジュアル化を作成および操作できます。 表とグラフの 2 つのオブジェクトが頻繁に使用されますが、API はピボットテーブル、図形、画像などもサポートしています。 これらはコレクションに格納され、この記事の後半で説明します。
 
 #### <a name="creating-a-table"></a>表の作成
 
@@ -91,9 +122,12 @@ async function main(context: Excel.RequestContext) {
 次のスクリプトでは、前のサンプルの範囲を使用して表を作成します。
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
-   let sheet = context.workbook.worksheets.getActiveWorksheet();
-   sheet.tables.add("B2:E5", true);
+function main(workbook: ExcelScript.Workbook) {
+    // Get the active worksheet.
+    let sheet = workbook.getActiveWorksheet();
+
+    // Add a table that has headers using the data from B2:E5.
+    sheet.addTable("B2:E5", true);
 }
 ```
 
@@ -108,10 +142,18 @@ async function main(context: Excel.RequestContext) {
 次のスクリプトで、3 つの品目の簡単な縦棒グラフが作成され、ワークシートの上端から 100 ピクセル下に配置されます。
 
 ```TypeScript
-async function main(context: Excel.RequestContext) {
-  let sheet = context.workbook.worksheets.getActiveWorksheet();
-  let chart = sheet.charts.add(Excel.ChartType.columnStacked, sheet.getRange("B3:C5"));
-  chart.top = 100;
+function main(workbook: ExcelScript.Workbook) {
+    // Get the active worksheet.
+    let sheet = workbook.getActiveWorksheet();
+
+    // Create a column chart using the data from B3:C5.
+    let chart = sheet.addChart(
+        ExcelScript.ChartType.columnStacked,
+        sheet.getRange("B3:C5")
+    );
+
+    // Set the margin of the chart to be 100 pixels from the top of the screen.
+    chart.setTop(100);
 }
 ```
 
@@ -119,116 +161,81 @@ async function main(context: Excel.RequestContext) {
 
 ![前の売上記録の 3 つの品目の数量が表示されている縦棒グラフ。](../images/chart-sample.png)
 
+### <a name="collections-and-other-object-relations"></a>コレクションとその他のオブジェクトの関係
+
+子オブジェクトには、その親オブジェクトを通じてアクセスできます。 たとえば、`Workbook` オブジェクトから `Worksheets` を読み取ることができます。 親クラスには、(`Workbook.getWorksheets()` や `Workbook.getWorksheet(name)` など) 関連する `get` メソッドがあります。 単一の `get` メソッドは、単一のオブジェクトを返し、特定のオブジェクト (ワークシート名など) の ID または名前を要求します。 複数の `get` メソッドは、オブジェクト コレクション全体を配列として返します。 コレクションが空の場合、空の配列 (`[]`) が返されます。
+
+コレクションを取得したら、`length` を取得したり、`for`、`for..of`、`while` ループを使用して反復処理を行ったり、`map`や `forEach` などの TypeScript 配列メソッドを使用したりするなど、通常の配列操作を利用できます。 配列のインデックス値を使用して、コレクション内の個々のオブジェクトにアクセスすることもできます。 たとえば、`workbook.getTables()[0]` はコレクション内の最初のテーブルを返します。 Office スクリプト フレームワークで組み込みの配列機能を使用する方法の詳細については、[「Office スクリプトでの組み込み JavaScript オブジェクトの使用のコレクション操作のセクション」](javascript-objects.md#working-with-collections) を参照してください。
+
+次のスクリプトは、ブック内のすべてのテーブルを取得します。 これにより、ヘッダーが表示され、フィルター ボタンが表示され、テーブル スタイルが「TableStyleLight1」に設定されていることを確認します。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  /* Get table collection */
+  const tables = workbook.getTables();
+  /* Set table formatting properties */
+  tables.forEach(table => {
+    table.setShowHeaders(true);
+    table.setShowFilterButton(true);
+    table.setPredefinedTableStyle("TableStyleLight1");
+  })
+}
+```
+
+#### <a name="adding-excel-objects-with-a-script"></a>スクリプトを使用して Excel オブジェクトを追加する
+
+親オブジェクトで使用可能な対応する `add` メソッドを呼び出すことにより、プログラムでテーブルやグラフなどのドキュメント オブジェクトを追加できます。
+
+> [!NOTE]
+> コレクション配列にオブジェクトを手動で追加しないでください。 親オブジェクトに `add` メソッドを使用します。たとえば、`Worksheet.addTable` メソッドを使用して、`Worksheet` に `Table` を追加します。
+
+次のスクリプトは、ブック内の最初のワークシートに Excel のテーブルを作成します。 作成されたテーブルは、`addTable` メソッドによって返されます。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+    // Get the first worksheet.
+    let sheet = workbook.getWorksheets()[0];
+
+    // Add a table that uses the data in C3:G10.
+    let table = sheet.addTable(
+      "C3:G10",
+       true /* True because the table has headers. */
+    );
+}
+```
+
+## <a name="removing-excel-objects-with-a-script"></a>スクリプトを使用して Excel オブジェクトを削除する
+
+オブジェクトを削除するには、オブジェクトの `delete` メソッドを呼び出します。
+
+> [!NOTE]
+> オブジェクトを追加する場合と同様に、コレクション配列からオブジェクトを手動で削除しないでください。 コレクション型のオブジェクトの `delete` メソッドを使用します。 たとえば、`Table.delete` を使用して `Worksheet` から `Table` を削除します。
+
+次のスクリプトは、ブック内の最初のワークシートを削除します。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+    // Get first worksheet.
+    let sheet = workbook.getWorksheets()[0];
+
+    // Remove that worksheet from the workbook.
+    sheet.delete();
+}
+```
+
 ### <a name="further-reading-on-the-object-model"></a>オブジェクト モデルに関する参考資料
 
 「[Office スクリプト API リファレンス](/javascript/api/office-scripts/overview)」に、Office スクリプトで使用されるオブジェクトが包括的にまとめられています。 目次を使用して、詳細を確認したいクラスに移動できます。 よく参照されているページのいくつかを次に示します。
 
-- [グラフ](/javascript/api/office-scripts/excel/excel.chart)
-- [コメント](/javascript/api/office-scripts/excel/excel.comment)
-- [PivotTable](/javascript/api/office-scripts/excel/excel.pivottable)
-- [Range](/javascript/api/office-scripts/excel/excel.range)
-- [範囲の形式](/javascript/api/office-scripts/excel/excel.rangeformat)
-- [図形](/javascript/api/office-scripts/excel/excel.shape)
-- [表](/javascript/api/office-scripts/excel/excel.table)
-- [ブック](/javascript/api/office-scripts/excel/excel.workbook)
-- [ワークシート](/javascript/api/office-scripts/excel/excel.worksheet)
-
-## <a name="main-function"></a>`main` 関数
-
-どの Office スクリプトにも、次のシグネチャで、`Excel.RequestContext` 型の定義を含む `main` 関数を含める必要があります。
-
-```TypeScript
-async function main(context: Excel.RequestContext) {
-    // Your Excel Script
-}
-```
-
-スクリプトを実行すると、`main` 関数の内部のコードが実行されます。 `main` は、スクリプト内の他の関数を呼び出すことができますが、関数に含まれていないコードは実行されません。
-
-## <a name="context"></a>コンテキスト
-
-`main` 関数は、`context` という名前の `Excel.RequestContext` パラメーターを受け入れます。 `context` は、スクリプトとブックの間のブリッジと見なすことができます。 スクリプトは、`context` オブジェクトを使用してブックにアクセスし、その `context` を使用してデータをやり取りします。
-
-スクリプトと Excel は異なるプロセスや場所で実行されているため、`context` オブジェクトが必要になります。 スクリプトで、クラウドのブックに変更を加えたり、そのブックからデータをクエリしたりする必要があります。 `context` オブジェクトは、それらのトランザクションを管理します。
-
-## <a name="sync-and-load"></a>同期と読み込み
-
-スクリプトとブックは別の場所で実行されるため、両者の間でデータを転送するには時間がかかります。 スクリプトのパフォーマンスを向上させるため、スクリプトが明示的に `sync` 操作を呼び出してスクリプトとブックを同期するまで、コマンドはキューに登録されます。 スクリプトは、次のどちらかを実行することが必要になるまで、独立して動作できます。
-
-- ブックからデータを読み取る (`load` 操作または [ClientResult](/javascript/api/office-scripts/excel/excel.clientresult) を返すメソッドの後)。
-- ブックにデータを書き込む (通常はスクリプトが完了した結果)。
-
-次の図に、スクリプトとブックの間の制御フローの例を示します。
-
-![スクリプトからブックに対して実行される読み取りおよび書き込み操作を示す図。](../images/load-sync.png)
-
-### <a name="sync"></a>同期
-
-スクリプトでブックに対するデータの読み取りや書き込みが必要になる場合、次のように `RequestContext.sync` メソッドを呼び出します。
-
-```TypeScript
-await context.sync();
-```
-
-> [!NOTE]
-> スクリプトが終了すると、`context.sync()` が暗黙的に呼び出されます。
-
-`sync` 操作が完了すると、ブックが更新され、スクリプトが指定した書き込み操作が反映されます。 書き込み操作とは、Excel オブジェクトに任意のプロパティを設定すること (`range.format.fill.color = "red"` など)、またはプロパティを変更するメソッドを呼び出すこと (`range.format.autoFitColumns()` など) を意味します。 また、`sync` 操作では、スクリプトが `load` 操作または `ClientResult` を返すメソッドを使用して要求したブックから任意の値が読み取られます (次のセクションを参照)。
-
-ネットワークによっては、スクリプトとブックを同期するのに時間がかかる場合があります。 スクリプトの実行速度を高めるため、`sync` 呼び出しは最小限に抑えることをお勧めします。  
-
-### <a name="load"></a>読み込み
-
-スクリプトでは、ブックからデータを読み込んでから、そのデータを読み取る必要があります。 しかし、ブック全体からデータを読み込むと、スクリプトの速度が大幅に低下します。 代わりに、`load` メソッドを使用すると、どのデータをブックから取得する必要があるかをスクリプトで具体的に指定できます。
-
-`load` メソッドは、すべての Excel オブジェクトで使用できます。 スクリプトでは、オブジェクトのプロパティを読み込んでからでなければ、それらを読み取ることができません。 これに従わないと、エラーが発生します。
-
-次の例では、`Range` オブジェクトを使用して、`load` メソッドでデータを読み込む方法を示します。
-
-|目的 |コマンドの例 | 効果 |
-|:--|:--|:--|
-|1 つのプロパティを読み込む |`myRange.load("values");` | 単一のプロパティ (この例では、範囲内の値の 2 次元配列) を読み込みます。 |
-|複数のプロパティを読み込む |`myRange.load("values, rowCount, columnCount");`| コンマで区切られたリストからすべてのプロパティ (この例では、値、行数、列数) を読み込みます。 |
-|すべてを読み込む | `myRange.load();`|範囲のすべてのプロパティを読み込みます。 このソリューションは、不要なデータを取得することによりスクリプトの速度が低下するため、推奨されません。 スクリプトをテストする場合、またはオブジェクトのすべてのプロパティが必要な場合にのみ使用してください。 |
-
-スクリプトでは、読み込まれた値を読み取る前に、`context.sync()` を呼び出す必要があります。
-
-```TypeScript
-let range = selectedSheet.getRange("A1:B3");
-range.load ("rowCount"); // Load the property.
-await context.sync(); // Synchronize with the workbook to get the property.
-console.log(range.rowCount); // Read and log the property value (3).
-```
-
-また、コレクション全体のプロパティを読み込むこともできます。 どのコレクション オブジェクトにも、`items` プロパティがあります。これは、そのコレクションのオブジェクトを格納する配列です。 `items` を `load` に対する階層呼び出し (`items\myProperty`) の最初に使用すると、それらの項目それぞれの指定されたプロパティが読み込まれます。 次の例では、ワークシートの `CommentCollection` オブジェクトに含まれる各 `Comment` オブジェクトの `resolved` プロパティが読み込まれます。
-
-```TypeScript
-let comments = selectedSheet.comments;
-comments.load("items/resolved"); // Load the `resolved` property from every comment in this collection.
-await context.sync(); // Synchronize with the workbook to get the properties.
-```
-
-> [!TIP]
-> Office スクリプトでのコレクションの使用方法の詳細については、[「Office スクリプトでの組み込みの JavaScript オブジェクトの使用」の「配列」セクション](javascript-objects.md#array)を参照してください。
-
-### <a name="clientresult"></a>ClientResult
-
-ブックから情報を返すメソッドには、`load`/`sync` パラダイムと似たパターンがあります。 たとえば、`TableCollection.getCount` はコレクション内のテーブルの数を取得します。 `getCount` は `ClientResult<number>` を返します。つまり、返される `ClientResult` の `value` プロパティは数値になります。 `context.sync()` が呼び出されるまで、スクリプトはその値にアクセスできません。 プロパティの読み込みと同様、`value` は、`sync` が呼び出されるまでは、ローカルの "空の" 値です。
-
-次のスクリプトは、ブック内のテーブルの総数を取得し、その数をコンソールに記録します。
-
-```TypeScript
-async function main(context: Excel.RequestContext) {
-  let tableCount = context.workbook.tables.getCount();
-
-  // This sync call implicitly loads tableCount.value.
-  // Any other ClientResult values are loaded too.
-  await context.sync();
-
-  // Trying to log the value before calling sync would throw an error.
-  console.log(tableCount.value);
-}
-```
+- [グラフ](/javascript/api/office-scripts/excelscript/excelscript.chart)
+- [コメント](/javascript/api/office-scripts/excelscript/excelscript.comment)
+- [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable)
+- [Range](/javascript/api/office-scripts/excelscript/excelscript.range)
+- [範囲の形式](/javascript/api/office-scripts/excelscript/excelscript.rangeformat)
+- [図形](/javascript/api/office-scripts/excelscript/excelscript.shape)
+- [表](/javascript/api/office-scripts/excelscript/excelscript.table)
+- [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook)
+- [ワークシート](/javascript/api/office-scripts/excelscript/excelscript.worksheet)
 
 ## <a name="see-also"></a>関連項目
 
