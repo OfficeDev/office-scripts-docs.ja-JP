@@ -1,14 +1,14 @@
 ---
 title: Excel on the web で Office スクリプトを使用してブックのデータを読み取る
 description: ブックのデータを読み取り、スクリプトでそのデータを評価する方法について説明した Office スクリプトのチュートリアル。
-ms.date: 01/27/2020
+ms.date: 04/23/2020
 localization_priority: Priority
-ms.openlocfilehash: 42ed0fe5843a78692f9660b873211e3668702164
-ms.sourcegitcommit: b075eed5a6f275274fbbf6d62633219eac416f26
+ms.openlocfilehash: 93204184d4b5947b2a67107b1fd73c178a73c32e
+ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/10/2020
-ms.locfileid: "42700323"
+ms.lasthandoff: 06/25/2020
+ms.locfileid: "44878688"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを使用してブックのデータを読み取る
 
@@ -19,12 +19,7 @@ ms.locfileid: "42700323"
 
 ## <a name="prerequisites"></a>前提条件
 
-[!INCLUDE [Preview note](../includes/preview-note.md)]
-
-このチュートリアルを開始するには、Office スクリプトへのアクセスが必要です。これには次のものが必要です。
-
-- [Excel on the web](https://www.office.com/launch/excel)。
-- [組織に対して Office スクリプトを許可する](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)よう管理者に依頼します。これにより、リボンに **[自動化]** タブが追加されます。
+[!INCLUDE [Tutorial prerequisites](../includes/tutorial-prerequisites.md)]
 
 > [!IMPORTANT]
 > このチュートリアルは、JavaScript や TypeScript について初級から中級レベルの知識を持つユーザーを対象としています。 JavaScript を使い慣れていない場合は、[Mozilla の JavaScript チュートリアル](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction)をご覧になることをお勧めします。 スクリプト環境の詳細については、「[Excel on the web の Office スクリプト](../overview/excel.md)」を参照してください。
@@ -56,33 +51,25 @@ ms.locfileid: "42700323"
     スクリプトの内容を次のコードで置き換えます。
 
     ```TypeScript
-    async function main(context: Excel.RequestContext) {
-      // Get the current worksheet.
-      let workbook = context.workbook;
-      let worksheets = workbook.worksheets;
-      let selectedSheet = worksheets.getActiveWorksheet();
+    function main(workbook: ExcelScript.Workbook) {
+        // Get the current worksheet.
+        let selectedSheet = workbook.getActiveWorksheet();
 
-      // Format the range to display numerical dollar amounts.
-      selectedSheet.getRange("D2:E8").numberFormat = [["$#,##0.00"]];
+        // Format the range to display numerical dollar amounts.
+        selectedSheet.getRange("D2:E8").setNumberFormat("$#,##0.00");
 
-      // Fit the width of all the used columns to the data.
-      selectedSheet.getUsedRange().format.autofitColumns();
+        // Fit the width of all the used columns to the data.
+        selectedSheet.getUsedRange().getFormat().autofitColumns();
     }
     ```
 
-5. では、いずれかの数値列の値を読み取ってみましょう。 次のコードをスクリプトの最後に追加します。
+5. では、いずれかの数値列の値を読み取ってみましょう。 次のコードをスクリプトの最後 (末尾の `}` の前) に追加します。
 
     ```TypeScript
     // Get the value of cell D2.
     let range = selectedSheet.getRange("D2");
-    range.load("values");
-    await context.sync();
-  
-    // Print the value of D2.
-    console.log(range.values);
+    console.log(range.getValues());
     ```
-
-    `load` と `sync` への呼び出しに注目してください。 これらのメソッドの詳細については、「[Excel on the web での Office スクリプトのスクリプトの基本事項](../develop/scripting-fundamentals.md#sync-and-load)」で説明します。 ここでは、データの読み取りを要求し、スクリプトとブックを同期してそのデータを読み取る必要があることを覚えておいてください。
 
 6. スクリプトを実行します。
 7. コンソールを開きます。 **省略記号**のメニューを選択し、**[Logs...](ログ...)** を押します。
@@ -99,10 +86,12 @@ ms.locfileid: "42700323"
 1. 次のコードをスクリプトの最後に追加します。
 
     ```TypeScript
-    // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
-    let positiveValue = Math.abs(range.values[0][0]);
-    range.values = [[positiveValue]];
+        // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
+    let positiveValue = Math.abs(range.getValue());
+    range.setValue(positiveValue);
     ```
+
+    `getValue` と `setValue` を使用していることに注意してください。 これらの方法は、1 つのセルで使用できます。 複数のセル範囲を処理する場合は、`getValues` と `setValues` を使用します。
 
 2. セル **D2** の値が正の値になります。
 
@@ -113,47 +102,44 @@ ms.locfileid: "42700323"
 1. 1 つのセルにのみ影響するコード (前述の絶対値コード) を削除します。すると、スクリプトは次のようになります。
 
     ```TypeScript
-    async function main(context: Excel.RequestContext) {
-      // Get the current worksheet.
-      let workbook = context.workbook;
-      let worksheets = workbook.worksheets;
-      let selectedSheet = worksheets.getActiveWorksheet();
+    function main(workbook: ExcelScript.Workbook) {
+        // Get the current worksheet.
+        let selectedSheet = workbook.getActiveWorksheet();
 
-      // Format the range to display numerical dollar amounts.
-      selectedSheet.getRange("D2:E8").numberFormat = [["$#,##0.00"]];
+        // Format the range to display numerical dollar amounts.
+        selectedSheet.getRange("D2:E8").setNumberFormat("$#,##0.00");
 
-      // Fit the width of all the used columns to the data.
-      selectedSheet.getUsedRange().format.autofitColumns();
+        // Fit the width of all the used columns to the data.
+        selectedSheet.getUsedRange().getFormat().autofitColumns();
     }
     ```
 
-2. 最後の 2 つの列の行を反復処理するループを追加します。 スクリプトにより、各セルの値が現在の値の絶対値に設定されます。
+2. 最後の 2 つの列の行を反復処理するループをスクリプトの最後に追加します。 スクリプトにより、各セルの値が現在の値の絶対値に設定されます。
 
     セルの位置を定義する配列は 0 から始まることにご注意ください。 したがって、セル **A1** は `range[0][0]` になります。
 
     ```TypeScript
     // Get the values of the used range.
     let range = selectedSheet.getUsedRange();
-    range.load("rowCount,values");
-    await context.sync();
+    let rangeValues = range.getValues();
 
     // Iterate over the fourth and fifth columns and set their values to their absolute value.
-    for (let i = 1; i < range.rowCount; i++) {
-      // The column at index 3 is column "4" in the worksheet.
-      if (range.values[i][3] != 0) {
-        let positiveValue = Math.abs(range.values[i][3]);
-        selectedSheet.getCell(i, 3).values = [[positiveValue]];
-      }
+    for (let i = 1; i < range.getRowCount(); i++) {
+        // The column at index 3 is column "4" in the worksheet.
+        if (rangeValues[i][3] != 0) {
+            let positiveValue = Math.abs(rangeValues[i][3]);
+            selectedSheet.getCell(i, 3).setValue(positiveValue);
+        }
 
-      // The column at index 4 is column "5" in the worksheet.
-      if (range.values[i][4] != 0) {
-        let positiveValue = Math.abs(range.values[i][4]);
-        selectedSheet.getCell(i, 4).values = [[positiveValue]];
-      }
+        // The column at index 4 is column "5" in the worksheet.
+        if (rangeValues[i][4] != 0) {
+            let positiveValue = Math.abs(rangeValues[i][4]);
+            selectedSheet.getCell(i, 4).setValue(positiveValue);
+        }
     }
     ```
 
-    スクリプトのこの部分は、いくつかの重要なタスクを実行します。 まず、指定された範囲の値と行数を読み込みます。 これにより、値が表示され、いつ停止すればよいかを確認できます。 次に、指定された範囲を反復処理し、**[借方]** 列と **[貸方]** 列の各セルをチェックします。 最後に、セルの値が 0 ではない場合、その値が絶対値で置き換えられます。 0 は使用しないので、空のセルはそのままにしておきます。
+    スクリプトのこの部分は、いくつかの重要なタスクを実行します。 まず、指定された範囲の値と行数を取得します。 これにより、値が表示され、いつ停止すればよいかを確認できます。 次に、指定された範囲を反復処理し、**[借方]** 列と **[貸方]** 列の各セルをチェックします。 最後に、セルの値が 0 ではない場合、その値が絶対値で置き換えられます。 0 は使用しないので、空のセルはそのままにしておきます。
 
 3. スクリプトを実行します。
 
