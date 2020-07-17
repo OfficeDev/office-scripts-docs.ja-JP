@@ -1,14 +1,14 @@
 ---
 title: Office スクリプトのコードエディター環境
 description: Web 上の Excel の Office スクリプトの前提条件と環境情報。
-ms.date: 04/24/2020
+ms.date: 07/10/2020
 localization_priority: Normal
-ms.openlocfilehash: efe6ddbe39a1ea3850b4dc6fea0fa885b80c0c28
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
+ms.openlocfilehash: 643ea2d5bd69adf4311546465ccd65c08dacf4b4
+ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878669"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45160496"
 ---
 # <a name="office-scripts-code-editor-environment"></a>Office スクリプトのコードエディター環境
 
@@ -36,6 +36,10 @@ Excel コードエディターは、Visual Studio Code と同じ IntelliSense �
 ## <a name="external-library-support"></a>外部ライブラリのサポート
 
 Office スクリプトでは、外部のサードパーティの JavaScript ライブラリの使用はサポートされていません。 現在、スクリプトから Office スクリプト Api 以外のライブラリを呼び出すことはできません。 [Math](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)などの[組み込みの JavaScript オブジェクト](../develop/javascript-objects.md)には、まだアクセスできます。
+
+## <a name="browser-support"></a>ブラウザのサポート
+
+Office スクリプト[は、web 用の office をサポート](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452)する任意のブラウザーで動作します。 ただし、一部の JavaScript 機能は Internet Explorer 11 (IE 11) ではサポートされていません。 ES6 以降で導入された機能は、IE 11 で[は](https://www.w3schools.com/Js/js_es6.asp)動作しません。 組織内のユーザーが依然としてそのブラウザーを使用している場合は、その環境でスクリプトを共有するときに必ずテストしてください。
 
 ## <a name="see-also"></a>関連項目
 

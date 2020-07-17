@@ -1,25 +1,24 @@
 ---
 title: パワー自動化を使用して Office スクリプトを実行する
 description: Power 自動ワークフローを使用して、web 上の Excel で Office スクリプトを取得する方法について説明します。
-ms.date: 07/01/2020
+ms.date: 07/10/2020
 localization_priority: Normal
-ms.openlocfilehash: 40a67f3d0e8f049a8ec5516c0af54c5fc6fb9319
-ms.sourcegitcommit: edf58aed3cd38f57e5e7227465a1ef5515e15703
+ms.openlocfilehash: bd8fea08b7a9303ad2ceace787de6457a33fb979
+ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "45081594"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45160447"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>パワー自動化を使用して Office スクリプトを実行する
 
-[Power オートメーション](https://flow.microsoft.com)を使用すると、より大きな自動化されたワークフローに Office スクリプトを追加することができます。 Power オートメーションでは、ワークシートのテーブルに電子メールの内容を追加したり、ブックのコメントに基づいてプロジェクト管理ツールでアクションを作成したりするなどの操作を実行できます。 電力を自動自動化することが初めての場合は、「 [Power オートメーションの使用を開始](/power-automate/getting-started)する」を参照することをお勧めします。 ここでは、複数のサービス間でワークフローを自動化する方法について詳しく知ることができます。
-
-> [!IMPORTANT]
-> 現時点では、[共有フロー](/power-automate/share-buttons)から Office スクリプトを実行することはできません。 パワー自動化を使用しても、スクリプトを作成したユーザーのみが実行できます。
+[Power オートメーション](https://flow.microsoft.com)を使用すると、より大きな自動化されたワークフローに Office スクリプトを追加することができます。 Power オートメーションでは、ワークシートのテーブルに電子メールの内容を追加したり、ブックのコメントに基づいてプロジェクト管理ツールでアクションを作成したりするなどの操作を実行できます。
 
 ## <a name="getting-started"></a>はじめに
 
-Power オートメーションと Office のスクリプトの組み合わせを開始するには、チュートリアルの次の手順を実行し[て、Power 自動化を使用したスクリプトの使用を開始](../tutorials/excel-power-automate-manual.md)します。 これにより、簡単なスクリプトを呼び出すフローを作成する方法を学習できます。 そのチュートリアルを完了し、[自動電源自動化フロー](../tutorials/excel-power-automate-trigger.md)のチュートリアルを使用して自動的にスクリプトを実行すると、Office スクリプトを Power オートメーションフローに接続する方法についての詳細は、こちらを参照してください。
+電力を自動自動化することが初めての場合は、「 [Power オートメーションの使用を開始](/power-automate/getting-started)する」を参照することをお勧めします。 ここでは、使用可能な自動化のすべての機能について詳しく知ることができます。 ここでは、Office スクリプトが電力自動化とどのように機能するか、および Excel の操作を改善する方法に重点を置いてドキュメントを作成します。
+
+Power オートメーションと Office のスクリプトの組み合わせを開始するには、チュートリアルの次の手順を実行し[て、Power 自動化を使用したスクリプトの使用を開始](../tutorials/excel-power-automate-manual.md)します。 これにより、簡単なスクリプトを呼び出すフローを作成する方法を学習できます。 そのチュートリアルを完了した後、[自動実行電源自動化フローチュートリアルで [スクリプトにデータを渡す](../tutorials/excel-power-automate-trigger.md)] を参照してください。 Office スクリプトを power オートメーションフローに接続する方法について詳しくは、こちらを参照してください。
 
 ## <a name="excel-online-business-connector"></a>Excel Online (Business) コネクタ
 
@@ -35,7 +34,7 @@ Power オートメーションと Office のスクリプトの組み合わせを
 > [!NOTE]
 > フローに "実行スクリプト" ブロックを作成すると、受け入れられるパラメーターと返される型が設定されます。 スクリプトのパラメーターまたは戻り値の型を変更する場合は、フローの "Run script" ブロックをやり直す必要があります。 これにより、データが正しく解析されるようになります。
 
-次のセクションでは、電力の自動化に使用されるスクリプトの入力と出力の詳細について説明します。 このトピックを学習するための実践的なアプローチを希望される場合は、自動[電源自動フローのチュートリアルを使用して自動的にスクリプトを実行](../tutorials/excel-power-automate-trigger.md)するか、自動化された[タスクリマインダー](../resources/scenarios/task-reminders.md)サンプルシナリオを参照してください。
+次のセクションでは、電力の自動化に使用されるスクリプトの入力と出力の詳細について説明します。 このトピックを学習するための実践的なアプローチを希望される場合は、「自動[実行パワー自動フローのチュートリアルで、スクリプトにデータを渡す」](../tutorials/excel-power-automate-trigger.md)をお試しください。または、[自動タスクリマインダー](../resources/scenarios/task-reminders.md)サンプルシナリオを参照してください。
 
 ### <a name="main-parameters-passing-data-to-a-script"></a>`main`パラメーター: スクリプトにデータを渡す
 
@@ -82,7 +81,7 @@ Power 自動化でフローを構成するときは、スクリプトの入力�
 
 10. 既定のパラメーター値を使用できます (例 `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')` :
 
-## <a name="returning-data-from-a-script"></a>スクリプトからデータを返す
+### <a name="returning-data-from-a-script"></a>スクリプトからデータを返す
 
 スクリプトは、Power オートメーションフローで動的コンテンツとして使用するブックからのデータを返すことができます。 入力パラメーターと同様に、Power オートメーションでは戻り値の型にいくつかの制限が課されます。
 
@@ -100,19 +99,19 @@ Power 自動化でフローを構成するときは、スクリプトの入力�
 
 Power オートメーションは、ユーザーの代わりに、選択した Excel ブックでスクリプトを実行します。 これが発生すると、ブックが閉じられる場合があります。 など、ユーザーの現在の状態に依存する API は、 `Workbook.getActiveWorksheet` 電力の自動処理によって実行されると失敗します。 スクリプトを設計するときは、必ずワークシートおよび範囲の絶対参照を使用してください。
 
-次の関数は、Power オートメーションフローでスクリプトから呼び出されたときにエラーをスローして失敗します。
+次のメソッドは、Power オートメーションフローでスクリプトから呼び出されたときにエラーをスローして失敗します。
 
-- `Chart.activate`
-- `Range.select`
-- `Workbook.getActiveCell`
-- `Workbook.getActiveChart`
-- `Workbook.getActiveChartOrNullObject`
-- `Workbook.getActiveSlicer`
-- `Workbook.getActiveSlicerOrNullObject`
-- `Workbook.getActiveWorksheet`
-- `Workbook.getSelectedRange`
-- `Workbook.getSelectedRanges`
-- `Worksheet.activate`
+| クラス | メソッド |
+|--|--|
+| [グラフ](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
+| [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
+| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveCell` |
+| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveChart` |
+| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
+| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` |
+| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRange` |
+| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRanges` |
+| [ワークシート](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `activate` |
 
 ## <a name="example"></a>例
 
@@ -144,7 +143,7 @@ function main(
 ## <a name="see-also"></a>関連項目
 
 - [Power オートメーションを使用して web 上の Excel で Office スクリプトを実行する](../tutorials/excel-power-automate-manual.md)
-- [自動電源自動化フローを使用してスクリプトを自動的に実行する](../tutorials/excel-power-automate-trigger.md)
+- [自動実行電源自動化フローで、スクリプトにデータを渡す](../tutorials/excel-power-automate-trigger.md)
 - [Excel on the web での Office スクリプトのスクリプトの基本事項](scripting-fundamentals.md)
 - [Power Automate の使用を開始する](/power-automate/getting-started)
 - [Excel Online (ビジネス向け) コネクタのリファレンスドキュメント](/connectors/excelonlinebusiness/)

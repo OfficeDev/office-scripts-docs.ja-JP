@@ -1,21 +1,21 @@
 ---
-title: 従来のスクリプトをサポートするための Office スクリプト非同期 Api の使用
-description: Office スクリプト非同期 Api の入門と、従来のスクリプトでロード/同期パターンを使用する方法について説明します。
-ms.date: 06/29/2020
+title: 非同期 Api を使用する古い Office スクリプトをサポートする
+description: Office スクリプト非同期 Api の入門と、古いスクリプトのロード/同期パターンの使用方法。
+ms.date: 07/08/2020
 localization_priority: Normal
-ms.openlocfilehash: 6c31a39c8e1fe53f2f5587183a6b32e100d2b457
-ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
+ms.openlocfilehash: e7ca5b276cff0e3a38bffc2af1541c0051cf5490
+ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45043399"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45160461"
 ---
-# <a name="using-the-office-scripts-async-apis-to-support-legacy-scripts"></a>従来のスクリプトをサポートするための Office スクリプト非同期 Api の使用
+# <a name="support-older-office-scripts-that-use-the-async-apis"></a>非同期 Api を使用する古い Office スクリプトをサポートする
 
-この記事では、従来の非同期の Api を使用してスクリプトを記述する方法について説明します。 これらの Api は、標準の同期された Office スクリプト Api と同じコア機能を備えていますが、スクリプトとブックとの間のデータ同期を制御する必要があります。
+この記事では、古いモデルの非同期 Api を使用するスクリプトを管理および更新する方法について説明します。 これらの Api は、今のところ標準の同期 Office スクリプト Api と同じコア機能を備えていますが、スクリプトとブックの間のデータ同期を制御するためにスクリプトを必要とします。
 
 > [!IMPORTANT]
-> Async モデルは、現在の[API モデル](scripting-fundamentals.md?view=office-scripts)を実装する前に作成されたスクリプトでのみ使用できます。 スクリプトは、作成時に作成した API モデルに完全にロックされます。 これは、レガシスクリプトを新しいモデルに変換する場合は、新しいスクリプトを使用する必要があることも意味します。 現在のモデルは使いやすいため、変更時に古いスクリプトを新しいモデルに更新することをお勧めします。 この移行を実行する方法については、「[従来の非同期スクリプトを現在のモデルに変換](#converting-legacy-async-scripts-to-the-current-model)する」セクションを参照してください。
+> Async モデルは、現在の[API モデル](scripting-fundamentals.md?view=office-scripts)を実装する前に作成されたスクリプトでのみ使用できます。 スクリプトは、作成時に作成した API モデルに完全にロックされます。 これは、古いスクリプトを新しいモデルに変換する必要がある場合にも、新しいスクリプトを作成する必要があることを意味します。 現在のモデルは使いやすいため、変更時に古いスクリプトを新しいモデルに更新することをお勧めします。 この移行を実行する方法については、「[現在のモデルに非同期スクリプトを変換](#converting-async-scripts-to-the-current-model)する」のセクションを参照してください。
 
 ## <a name="main-function"></a>`main` 関数
 
@@ -55,7 +55,7 @@ await context.sync();
 > [!NOTE]
 > スクリプトが終了すると、`context.sync()` が暗黙的に呼び出されます。
 
-`sync` 操作が完了すると、ブックが更新され、スクリプトが指定した書き込み操作が反映されます。 書き込み操作とは、Excel オブジェクトに任意のプロパティを設定すること (`range.format.fill.color = "red"` など)、またはプロパティを変更するメソッドを呼び出すこと (`range.format.autoFitColumns()` など) を意味します。 また、`sync` 操作では、スクリプトが `load` 操作または `ClientResult` を返すメソッドを使用して要求したブックから任意の値が読み取られます (次のセクションを参照)。
+`sync` 操作が完了すると、ブックが更新され、スクリプトが指定した書き込み操作が反映されます。 書き込み操作は、Excel オブジェクト (など) にプロパティを設定する `range.format.fill.color = "red"` か、プロパティを変更するメソッドを呼び出しています (例: `range.format.autoFitColumns()` )。 また、`sync` 操作では、スクリプトが `load` 操作または `ClientResult` を返すメソッドを使用して要求したブックから任意の値が読み取られます (次のセクションを参照)。
 
 ネットワークによっては、スクリプトとブックを同期するのに時間がかかる場合があります。 `sync`スクリプトの実行速度を速くするために、呼び出しの数を最小限に抑えます。 それ以外の場合、非同期 Api は標準の同期 Api よりも高速ではありません。
 
@@ -137,7 +137,7 @@ async function main(context: Excel.RequestContext) {
 }
 ```
 
-## <a name="converting-legacy-async-scripts-to-the-current-model"></a>従来の非同期スクリプトを現在のモデルに変換する
+## <a name="converting-async-scripts-to-the-current-model"></a>非同期スクリプトを現在のモデルに変換する
 
 現在の API モデルでは、、、またはを使用しません `load` `sync` `RequestContext` 。 これにより、スクリプトがより簡単に作成および管理できるようになります。 古いスクリプトを変換するための最善のリソースは、[スタックオーバーフロー](https://stackoverflow.com/questions/tagged/office-scripts)です。 ここでは、特定のシナリオについてコミュニティにサポートを求めることができます。 次のガイダンスは、実行する必要のある一般的な手順の概要を示すために役立ちます。
 
