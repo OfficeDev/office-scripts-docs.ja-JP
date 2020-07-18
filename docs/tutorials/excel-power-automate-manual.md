@@ -1,41 +1,41 @@
 ---
-title: Power Automate でスクリプトの使用を開始する
-description: パワーで Office スクリプトを使用する方法についてのチュートリアルは、手動のトリガーを使用して自動化します。
-ms.date: 07/01/2020
+title: 手動 Power Automation フローからスクリプトを呼び出す
+description: Power Automate の Office スクリプトで、手動のトリガーを使う方法を説明します。
+ms.date: 07/14/2020
 localization_priority: Priority
-ms.openlocfilehash: 83e072a45fc724ff2aac5bf5f3893dcb64eaf2ff
-ms.sourcegitcommit: edf58aed3cd38f57e5e7227465a1ef5515e15703
+ms.openlocfilehash: 70fca2620973ecefe9eda40f02e28f064b713677
+ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "45081636"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45160442"
 ---
-# <a name="start-using-scripts-with-power-automate-preview"></a>Power 自動でのスクリプトの使用を開始する (プレビュー)
+# <a name="call-scripts-from-a-manual-power-automate-flow-preview"></a>手動 Power Automation フローからスクリプトを呼び出す (プレビュー)
 
-このチュートリアルでは、 [Power オートメーション](https://flow.microsoft.com)を使用して web 上で Excel の Office スクリプトを実行する方法について説明します。
+このチュートリアルでは、[Power Automate](https://flow.microsoft.com)を使用して、Excel on the web 用の Office スクリプトを実行する方法について説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
-[!INCLUDE [Tutorial prerequisites](../includes/tutorial-prerequisites.md)]
+[!INCLUDE [Tutorial prerequisites](../includes/power-automate-tutorial-prerequisites.md)]
 
 > [!IMPORTANT]
-> このチュートリアルでは、「web チュートリアルでの[Excel での Office スクリプトの記録、編集、および作成」](excel-tutorial.md)を完了していることを前提としています。
+> このチュートリアルは、お客様が[「Excel on the web で Office スクリプトを記録、編集、作成する」](excel-tutorial.md)のチュートリアルを既に完了していることを前提にしています。
 
-## <a name="prepare-the-workbook"></a>ブックの準備
+## <a name="prepare-the-workbook"></a>ブックを準備する
 
-Power オートメーションは `Workbook.getActiveWorksheet` 、ブックコンポーネントへのアクセスなどの相対参照を使用できません。 そのため、Power オートメーションが参照できる、一貫した名前を持つブックとワークシートが必要です。
+Power Automate は、`Workbook.getActiveWorksheet` のような相対参照を使用して、ブックのワークブック コンポーネントにアクセスすることはできません。 したがって、Power Automate が参照できる、名前が統一されたワークブックとワークシートが必要です。
 
-1. **Myworkbook**という名前の新しいブックを作成します。
+1. **MyWorkbook** という名前の新しいブックを作成します。
 
-2. **Myworkbook**ブックで、 **TutorialWorksheet**という名前のワークシートを作成します。
+2. **MyWorkbook** というワークブック内に、**TutorialWorksheet** という名前のワークシートを作成します。
 
-## <a name="create-an-office-script"></a>Office スクリプトを作成する
+## <a name="create-an-office-script"></a>オフィス スクリプトを作成する
 
-1. [**自動化**] タブに移動して、[**コードエディター**] を選択します。
+1. **[オートメーション]** タブに移動して **[コード エディター]** を選択します。
 
-2. [**新しいスクリプト**] を選択します。
+2. **[新しいスクリプト]** を選択します。
 
-3. 既定のスクリプトを次のスクリプトに置き換えます。 このスクリプトは、 **TutorialWorksheet**ワークシートの最初の2つのセルに現在の日付と時刻を追加します。
+3. 既定のスクリプトを次のスクリプトに置き換えます。 このスクリプトは、**TutorialWorksheet** というワークシートの最初の 2 つのセルに現在の日付と時刻を追加します。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -57,71 +57,73 @@ Power オートメーションは `Workbook.getActiveWorksheet` 、ブックコ�
     }
     ```
 
-4. スクリプトの名前を変更し**て、日付と時刻を設定**します。 スクリプト名を押して変更します。
+4. スクリプトの名前を **[日付と時刻の設定]** に変更します。 スクリプト名を押して変更します。
 
-5. [**保存スクリプト**を押してスクリプトを保存します。
+5. スクリプトを保存するには **[スクリプトの保存]** を押します。
 
-## <a name="create-an-automated-workflow-with-power-automate"></a>Power 自動化を使用して自動化されたワークフローを作成する
+## <a name="create-an-automated-workflow-with-power-automate"></a>Power Automate を使用して自動化されたワークフローを作成する
 
-1. [パワー自動化プレビューサイト](https://flow.microsoft.com)にサインインします。
+1. [「Power Automate のサイト」](https://flow.microsoft.com)にサインインします。
 
-2. 画面の左側に表示されるメニューで、[**作成**] を押します。 これにより、新しいワークフローを作成する方法の一覧が表示されます。
+2. 画面の左側に表示されるメニューで、**[作成]** を押します。 これにより、新しいワークフローを作成する方法の一覧を表示できます。
 
-    ![パワー自動化の [作成] ボタン。](../images/power-automate-tutorial-1.png)
+    ![Power Automate の [作成] ボタン。](../images/power-automate-tutorial-1.png)
 
-3. [**空白から開始**] セクションで、[**インスタントフロー**] を選択します。 これにより、手動でアクティブ化したワークフローが作成されます。
+3. **[白紙から初める]** セクションで、**[インスタント フロー]** を選択します。 これで、手動でアクティベートされたワークフローが作成されます。
 
-    ![新しいワークフローを作成するためのインスタントフローオプション。](../images/power-automate-tutorial-2.png)
+    ![新しいワークフローを作成するための [クイックフロー] オプション。](../images/power-automate-tutorial-2.png)
 
-4. 表示されるダイアログウィンドウで、[**フロー名**] テキストボックスにフローの名前を入力し、[フロー**の開始方法を選択**してください] で、オプションの一覧から [**フローを手動でトリガー**する] を選択して、[**作成**] をクリックします。
+4. 表示されたダイアログ ウィンドウで、フローの名前を **[フロー名]** テキスト ボックスに入力し、**[フローをトリガーする方法の選択]** 内のオプションの一覧から **[手動でフローをトリガーする]** を選択し、**[作成]** を押します。
 
-    ![新しいインスタントフローを作成するための手動トリガーオプション。](../images/power-automate-tutorial-3.png)
+    ![新しいインスタント フローを作成するための手動トリガー オプション。](../images/power-automate-tutorial-3.png)
 
-5. **新しい手順**を押します。
+    手動でトリガーするフローは、いくつかあるフローの種類のうちの 1 つです。 次のチュートリアルでは、メールを受信したときに自動的に実行されるフローを作成します。
 
-6. [**標準**] タブを選択し、[ **Excel Online (Business)**] を選択します。
+5. **[新しいステップ]** を押します。
 
-    ![Excel Online (Business) の電源自動化オプション。](../images/power-automate-tutorial-4.png)
+6. **[標準]** タブを選択し、**Excel Online (ビジネス)** を選択します。
 
-7. [**アクション**] で、[**スクリプトを実行する (プレビュー)**] を選択します。
+    ![Excel Online (ビジネス) 用の Power Automate オプション。](../images/power-automate-tutorial-4.png)
 
-    ![実行スクリプトのパワー自動処理オプション (プレビュー)。](../images/power-automate-tutorial-5.png)
+7. **[アクション]** の下から、**[スクリプトの実行 (プレビュー)]** を選択します。
 
-8. **実行スクリプト**コネクタについて、次の設定を指定します。
+    ![スクリプトの実行 (プレビュー)用の Power Automate アクションのオプション。](../images/power-automate-tutorial-5.png)
 
-    - **場所**: OneDrive for business
-    - **ドキュメントライブラリ**: OneDrive
+8. **スクリプトの実行**コネクタには、次の設定を指定します。
+
+    - **場所**: OneDrive for Business
+    - **ドキュメント ライブラリ**: OneDrive
     - **ファイル**: MyWorkbook.xlsx
-    - **スクリプト**: 日付と時刻を設定する
+    - **スクリプト**: 日時を設定
 
-    ![パワー自動化でスクリプトを実行するためのコネクタの設定。](../images/power-automate-tutorial-6.png)
+    ![Power Automate でスクリプトを実行するためのコネクタの設定。](../images/power-automate-tutorial-6.png)
 
-9. [**保存**します。
+9. **[保存]** を押します。
 
-これで、電力の自動化を通じてフローを実行する準備が整いました。 フローエディターの [**テスト**] ボタンを使用してテストするか、チュートリアルの残りの手順に従ってフローコレクションからフローを実行することができます。
+これで、フローは Power Automate で実行できるようになりました。 フロー エディターの **[テスト]** ボタンを使用してテストするか、チュートリアルの残りの手順に従って、フロー コレクションからフローを実行できます。
 
-## <a name="run-the-script-through-power-automate"></a>電源自動化を使用してスクリプトを実行する
+## <a name="run-the-script-through-power-automate"></a>Power Automate でスクリプトを実行する
 
-1. [メインパワーの自動化] ページで、[**マイフロー**] を選択します。
+1. Power Automate のメイン ページで、**[自分のフロー]** を選択します。
 
-    ![パワー自動化の [マイフロー] ボタン。](../images/power-automate-tutorial-7.png)
+    ![Power Automate の [自分のフロー] ボタン。](../images/power-automate-tutorial-7.png)
 
-2. [ **My** flow] タブに表示されるフローの一覧から [ **my チュートリアルフロー** ] を選択します。これで、以前に作成したフローの詳細が表示されます。
+2. **[自分のフロー]** タブに表示されているフローの一覧から、**[自分のチュートリアル フロー]** を選択すると、以前に作成したフローの詳細が表示されます。
 
-3. **Run**を押します。
+3. **[実行]** を押します。
 
-    ![電源自動化の [実行] ボタン。](../images/power-automate-tutorial-8.png)
+    ![Power Automate の [実行] ボタン。](../images/power-automate-tutorial-8.png)
 
-4. フローを実行するための作業ウィンドウが表示されます。 Excel Online に**サインイン**するように求めるメッセージが表示されたら、[**続行**] を押します。
+4. フローを実行するための作業ウィンドウが表示されます。 Excel Online への**サインイン** を要求された場合は、**[続ける]** を押します。
 
-5. **Run flow**を押します。 これにより、関連する Office スクリプトが実行されるフローが実行されます。
+5. **[フローの実行]** を押します。 これにより、関連する Office スクリプトを実行するフローが実行されます。
 
-6. [**完了**します。 それに応じて、「**実行**」セクションの更新が表示されます。
+6. **[完了]** を押します。 それに応じて **[実行]** セクションが更新されます。
 
-7. ページを更新して、電力自動化の結果を表示します。 成功した場合は、ブックに移動して、更新されたセルを表示します。 失敗した場合は、フローの設定を確認し、2回目に実行します。
+7. ページを更新して、Power Automate の結果を表示します。 成功した場合は、ワークブックに移動して、更新されたセルを確認します。 エラーが発生した場合は、フローの設定を確認し、もう一度実行します。
 
-    ![フローが正常に実行されたことを示す電力を自動で出力します。](../images/power-automate-tutorial-9.png)
+    ![正常にフローが発生したことを示す Power Automate 出力。](../images/power-automate-tutorial-9.png)
 
 ## <a name="next-steps"></a>次の手順
 
-[自動電源自動化フローに関するチュートリアルを使用して、自動実行スクリプトを](excel-power-automate-trigger.md)完了します。 この章では、ワークフローサービスから Office スクリプトにデータを渡す方法について説明します。
+[「自動で実行される Power Automate フロー内で、データをスクリプトに渡す」](excel-power-automate-trigger.md)のチュートリアルを完了します。 このコースでは、ワークフロー サービスから Office スクリプトにデータを渡す方法と、特定のイベントが発生したときに Power Automate フローを実行する方法について説明します。
