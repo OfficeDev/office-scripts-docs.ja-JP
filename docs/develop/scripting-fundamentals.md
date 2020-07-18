@@ -1,14 +1,14 @@
 ---
 title: Excel on the web での Office スクリプトのスクリプトの基本事項
 description: Office スクリプトを作成する前に理解しておくべきオブジェクト モデルの情報と他の基本事項について説明します。
-ms.date: 06/29/2020
+ms.date: 07/08/2020
 localization_priority: Priority
-ms.openlocfilehash: 9ea24f26052877bc70862c8a05321d588f409b11
-ms.sourcegitcommit: 30750c4392db3ef057075a5702abb92863c93eda
+ms.openlocfilehash: 6c02f4fb986e6a0ed1dd7afb099aaa1c9d1ea276
+ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "44999303"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45160475"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Excel on the web での Office スクリプトのスクリプトの基本事項 (プレビュー)
 
@@ -18,18 +18,18 @@ ms.locfileid: "44999303"
 
 ## <a name="main-function"></a>`main` 関数
 
-各 Office スクリプトには、最初のパラメーターとして `ExcelScript.Workbook` 型を持つ `main` 関数を含める必要があります。 関数が実行されると、Excel アプリケーションはブックを最初のパラメーターとして指定して、この `main` 関数を呼び出します。 そのため、スクリプトを記録した後、またはコード エディターで新しいスクリプトを作成した後に、`main` 関数の基本シグネチャを変更しないようにすることが重要です。
+各 Office スクリプトには、最初のパラメーターとして `ExcelScript.Workbook` 型の `main` 関数を含める必要があります。 関数が実行されると、Excel アプリケーションはブックを最初のパラメーターとして指定して、この `main` 関数を呼び出します。 そのため、スクリプトを記録した後、またはコード エディターで新しいスクリプトを作成した後に、`main` 関数の基本シグネチャを変更しないようにすることが重要です。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
-// Your code goes here
+  // Your code goes here
 }
 ```
 
 スクリプトを実行すると、`main` 関数の内部のコードが実行されます。 `main` は、スクリプト内の他の関数を呼び出すことができますが、関数に含まれていないコードは実行されません。
 
 > [!CAUTION]
-> `main` の関数が `async function main(context: Excel.RequestContext)` のように表示されている場合、スクリプトは従来の非同期 API モデルを使用しています。 前のスクリプトを現在の API モデルに変換する方法など、詳細については、[「Office スクリプトの非同期 API を使用して以前のスクリプトをサポートする」](excel-async-model.md) を参照してください。
+> `main` 関数が `async function main(context: Excel.RequestContext)` のように表示されている場合、スクリプトは従来の非同期 API モデルを使用しています。 詳細 (自分のスクリプトを現在の API モデルに変換する方法を含む) については、[「Office スクリプトの非同期 API を使用して以前のスクリプトをサポートする」](excel-async-model.md) を参照してください。
 
 ## <a name="object-model"></a>オブジェクト モデル
 
