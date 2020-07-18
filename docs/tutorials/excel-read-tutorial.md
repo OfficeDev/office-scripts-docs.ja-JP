@@ -1,14 +1,14 @@
 ---
 title: Excel on the web で Office スクリプトを使用してブックのデータを読み取る
 description: ブックのデータを読み取り、スクリプトでそのデータを評価する方法について説明した Office スクリプトのチュートリアル。
-ms.date: 04/23/2020
+ms.date: 07/10/2020
 localization_priority: Priority
-ms.openlocfilehash: 93204184d4b5947b2a67107b1fd73c178a73c32e
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
+ms.openlocfilehash: fef1df7cab70ccef67a12ee466af5a89803d0992
+ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878688"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "45160418"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを使用してブックのデータを読み取る
 
@@ -72,10 +72,9 @@ ms.locfileid: "44878688"
     ```
 
 6. スクリプトを実行します。
-7. コンソールを開きます。 **省略記号**のメニューを選択し、**[Logs...](ログ...)** を押します。
-8. コンソールに `[Array[1]]` が表示されます。 範囲は 2 次元のデータ配列であるため、これは数値ではありません。 この 2 次元の範囲は、コンソールに直接ログ記録されます。 コード エディターを使用すると、この配列の内容を表示できます。
-9. 2 次元の配列がコンソールにログ記録すると、各行の下に列の値がグループ化されます。 青い三角形を押して、配列のログを展開します。
-10. 新たに表示された青い三角形を押して、配列の第 2 レベルを展開します。 次のように表示されるはずです。
+7. コンソールに `[Array[1]]` が表示されます。 範囲は 2 次元のデータ配列であるため、これは数値ではありません。 この 2 次元の範囲は、コンソールに直接ログ記録されます。 コード エディターを使用すると、この配列の内容を表示できます。
+8. 2 次元の配列がコンソールにログ記録すると、各行の下に列の値がグループ化されます。 青い三角形を押して、配列のログを展開します。
+9. 新たに表示された青い三角形を押して、配列の第 2 レベルを展開します。 次のように表示されるはずです。
 
     ![出力 "-20.05" が 2 つの配列の下に入れ子になって表示されているコンソール ログ。](../images/tutorial-4.png)
 
@@ -86,7 +85,7 @@ ms.locfileid: "44878688"
 1. 次のコードをスクリプトの最後に追加します。
 
     ```TypeScript
-        // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
+    // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
     let positiveValue = Math.abs(range.getValue());
     range.setValue(positiveValue);
     ```
@@ -124,7 +123,8 @@ ms.locfileid: "44878688"
     let rangeValues = range.getValues();
 
     // Iterate over the fourth and fifth columns and set their values to their absolute value.
-    for (let i = 1; i < range.getRowCount(); i++) {
+    let rowCount = range.getRowCount();
+    for (let i = 1; i < rowCount; i++) {
         // The column at index 3 is column "4" in the worksheet.
         if (rangeValues[i][3] != 0) {
             let positiveValue = Math.abs(rangeValues[i][3]);
