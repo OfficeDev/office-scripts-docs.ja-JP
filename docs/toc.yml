@@ -10,9 +10,9 @@
           href: tutorials/excel-tutorial.md
         - name: スクリプトを使用してブックのデータを読み取る
           href: tutorials/excel-read-tutorial.md
-        - name: Power Automate でスクリプトの使用を開始する
+        - name: 手動 Power Automation フローからスクリプトを呼び出す
           href: tutorials/excel-power-automate-manual.md
-        - name: Power Automate でスクリプトを自動的に実行する
+        - name: 自動で実行される Power Automate フロー内でデータを渡す
           href: tutorials/excel-power-automate-trigger.md
     - name: スクリプトの基本事項
       href: develop/scripting-fundamentals.md
@@ -38,7 +38,7 @@
           href: develop/web-client-performance.md
         - name: Office スクリプトの効果を元に戻す
           href: testing/undo.md
-        - name: Async モデルを使用する (レガシ)
+        - name: 古い Office スクリプトをサポートする
           href: develop/excel-async-model.md
     - name: サンプル
       items:
