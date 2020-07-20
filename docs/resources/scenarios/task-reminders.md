@@ -5,7 +5,7 @@ ms.date: 06/09/2020
 localization_priority: Normal
 ms.openlocfilehash: f764c37dafdd964e9435d504770d10b1608428b8
 ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
-ms.translationtype: MT
+ms.translationtype: Auto
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/25/2020
 ms.locfileid: "44878907"
