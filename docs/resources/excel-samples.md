@@ -1,14 +1,14 @@
 ---
 title: Excel on the web の Office スクリプトのサンプルスクリプト
 description: Web 上の Excel の Office スクリプトで使用するコードサンプルのコレクションです。
-ms.date: 06/18/2020
+ms.date: 07/16/2020
 localization_priority: Normal
-ms.openlocfilehash: bfa6679595e6e28cc5d2ae3e3e487fd3e77738aa
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
+ms.openlocfilehash: fa330bfa284799e26ee2cf49800102072d66612b
+ms.sourcegitcommit: 8d549884e68170f808d3d417104a4451a37da83c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878676"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "45229604"
 ---
 # <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Web 上の Excel での Office スクリプトのサンプルスクリプト (プレビュー)
 
@@ -107,7 +107,67 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="work-with-dates"></a>日付の操作
+### <a name="change-each-individual-cell-in-a-range"></a>範囲内の各セルを変更する
+
+このスクリプトは、現在の選択範囲をループします。 現在の書式をクリアし、各セルの塗りつぶしの色をランダムな色に設定します。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the currently selected range.
+  let range = workbook.getSelectedRange();
+
+  // Get the size boundaries of the range.
+  let rows = range.getRowCount();
+  let cols = range.getColumnCount();
+
+  // Clear any existing formatting
+  range.clear(ExcelScript.ClearApplyTo.formats);
+
+  // Iterate over the range.
+  for (let row = 0; row < rows; row++) {
+    for (let col = 0; col < cols; col++) {
+      // Generate a random color hex-code.
+      let colorString = `#${Math.random().toString(16).substr(-6)}`;
+
+      // Set the color of the current cell to that random hex-code.
+      range.getCell(row, col).getFormat().getFill().setColor(colorString);
+    }
+  }
+}
+```
+
+## <a name="collections"></a>コレクション
+
+これらのサンプルは、ブック内のオブジェクトのコレクションに対して機能します。
+
+### <a name="iterating-over-collections"></a>コレクションの反復処理
+
+このスクリプトは、ブック内のすべてのワークシートの名前を取得してログ記録します。 また、タブの色をランダムな色に設定します。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Get all the worksheets in the workbook.
+  let sheets = workbook.getWorksheets();
+
+  // Get a list of all the worksheet names.
+  let names = sheets.map ((sheet) => sheet.getName());
+
+  // Write in the console all the worksheet names and the total count.
+  console.log(names);
+  console.log(`Total worksheets inside of this workbook: ${sheets.length}`);
+  
+  // Set the tab color each worksheet to a random color
+  for (let sheet of sheets) {
+    // Generate a random color hex-code.
+    let colorString = `#${Math.random().toString(16).substr(-6)}`;
+
+    // Set the color of the current worksheet's tab to that random hex-code.
+    sheet.setTabColor(colorString);
+  }
+}
+```
+
+## <a name="dates"></a>日付
 
 このセクションのサンプルは、JavaScript の[Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date)オブジェクトを使用する方法を示しています。
 
