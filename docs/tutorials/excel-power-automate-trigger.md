@@ -1,25 +1,25 @@
 ---
 title: 自動で実行される Power Automate フロー内で、データをスクリプトに渡す
 description: メールを受信し、フロー データをスクリプトに渡すときに、Power Automate を使用して Excel on the web 用の Office スクリプトを実行する方法について説明します。
-ms.date: 07/14/2020
+ms.date: 07/24/2020
 localization_priority: Priority
-ms.openlocfilehash: c024891e187f22b7d10f6e9d52d262dc2ec4057f
-ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
+ms.openlocfilehash: aed34f4b93bbe22768aab73d7a7264cc7d3c3ee6
+ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45160482"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "46616767"
 ---
 # <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow-preview"></a>自動で実行される Power Automate フロー内で、データをスクリプトに渡す(プレビュー)
 
-このチュートリアルでは、自動化された [Power Automate](https://flow.microsoft.com) ワークフローを使用して、Excel on the web 用の Office スクリプトを実行する方法について説明します。 スクリプトは、メールを受信したときに自動的に実行されます。また、Excel ブック内のメールから情報を記録します。
+このチュートリアルでは、自動化された [Power Automate](https://flow.microsoft.com) ワークフローを使用して、Excel on the web 用の Office スクリプトを実行する方法について説明します。 スクリプトは、メールを受信したときに自動的に実行されます。また、Excel ブック内のメールから情報を記録します。 別のアプリケーションから Office スクリプトにデータを渡すことができるようになると、自動プロセスの柔軟性と自由性が大きく向上します。
+
+> [!TIP]
+> Office スクリプトを初めて使用する場合は、チュートリアルの「[Excel on the web で Office スクリプトを記録、編集、作成する](excel-tutorial.md)」から始めることをお勧めします。 Power Automate を初めて使用する場合は、チュートリアルの「[手動 Power Automate フローからスクリプトを呼び出す](excel-power-automate-manual.md)」から始めることを勧めします。 [Office スクリプトは TypeScript を使用](../overview/code-editor-environment.md)します。このチュートリアルは、JavaScript や TypeScript について初級から中級レベルの知識を持つユーザーを対象としています。 JavaScript を使い慣れていない場合は、「[Mozilla の JavaScript チュートリアル](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction)」から始めることをお勧めします。
 
 ## <a name="prerequisites"></a>前提条件
 
 [!INCLUDE [Tutorial prerequisites](../includes/power-automate-tutorial-prerequisites.md)]
-
-> [!IMPORTANT]
-> このチュートリアルは、お客様が[「Power Automate を使用して、Excel on the web で Office スクリプトを実行する」](excel-power-automate-manual.md)のチュートリアルを既に完了していることを前提にしています。
 
 ## <a name="prepare-the-workbook"></a>ブックを準備する
 
@@ -46,7 +46,7 @@ Power Automate は、`Workbook.getActiveWorksheet`のような[相対参照](../
       newTable.setName("EmailTable");
 
       // Add a new PivotTable to a new worksheet
-      let pivotWorksheet = workbook.addWorksheet("SubjectPivot");
+      let pivotWorksheet = workbook.addWorksheet("Subjects");
       let newPivotTable = workbook.addPivotTable("Pivot", "EmailTable", pivotWorksheet.getRange("A3:C20"));
 
       // Setup the pivot hierarchies
@@ -56,7 +56,7 @@ Power Automate は、`Workbook.getActiveWorksheet`のような[相対参照](../
     }
     ```
 
-## <a name="create-an-office-script-for-your-automated-workflow"></a>自動化されたワークフロー用のオフィス スクリプトの作成
+## <a name="create-an-office-script"></a>Office スクリプトを作成する
 
 メールから情報をログに記録するスクリプトを作成してみましょう。 最も多くのメールを受信する曜日と、そのメールを送信する固有の送信者の数について知る必要があります。 ブックには、**[日付]**、**[曜日]**、**[メールアドレス]**、**[件名]** の列を含むテーブルがあります。 また、ワークシートには、 **[曜日]** と **メールアドレス** (行階層)にピボットしている、ピボットテーブルがあります。 一意の **[件名]** の数は、表示されている集計情報（データ階層）です。 メール テーブルを更新した後に、スクリプトがピボットテーブルを更新するようにします。
 
@@ -82,41 +82,16 @@ Power Automate は、`Workbook.getActiveWorksheet`のような[相対参照](../
     let table = emailWorksheet.getTable("EmailTable");
   
     // Get the PivotTable.
-    let pivotTableWorksheet = workbook.getWorksheet("SubjectPivot");
+    let pivotTableWorksheet = workbook.getWorksheet("Subjects");
     let pivotTable = pivotTableWorksheet.getPivotTable("Pivot");
     ```
 
 4. `dateReceived` パラメーターのタイプは `string` です。 それを [`Date` オブジェクト](../develop/javascript-objects.md#date)に変換して、簡単に曜日を取得できるようにしましょう。 その後、日の数値をより読みやすいバージョンにマッピングする必要があります。 `}` を閉じる前に、スクリプトの最後に次のコードを追加します。
 
     ```TypeScript
-    // Parse the received date string.
-    let date = new Date(dateReceived);
-
-    // Convert number representing the day of the week into the name of the day.
-    let dayText : string;
-    switch (date.getDay()) {
-      case 0:
-        dayText = "Sunday";
-        break;
-      case 1:
-        dayText = "Monday";
-        break;
-      case 2:
-        dayText = "Tuesday";
-        break;
-      case 3:
-        dayText = "Wednesday";
-        break;
-      case 4:
-        dayText = "Thursday";
-        break;
-      case 5:
-        dayText = "Friday";
-        break;
-      default:
-        dayText = "Saturday";
-        break;
-    }
+      // Parse the received date string to determine the day of the week.
+      let emailDate = new Date(dateReceived);
+      let dayName = emailDate.toLocaleDateString("en-US", { weekday: 'long' });
     ```
 
 5. `subject` 文字列には、"RE:" という返信タグを含めることができます。 同じスレッドのメールがテーブルに対して同じ件名になるよう、文字列からそれを削除します。 `}` を閉じる前に、スクリプトの最後に次のコードを追加します。
@@ -131,7 +106,7 @@ Power Automate は、`Workbook.getActiveWorksheet`のような[相対参照](../
 
     ```TypeScript
     // Add the parsed text to the table.
-    table.addRow(-1, [dateReceived, dayText, from, subjectText]);
+    table.addRow(-1, [dateReceived, dayName, from, subjectText]);
     ```
 
 7. 最後に、ピボットテーブルを更新されていることを確認しましょう。 `}` を閉じる前に、スクリプトの最後に次のコードを追加します。
@@ -156,44 +131,19 @@ function main(
   let table = emailWorksheet.getTable("EmailTable");
 
   // Get the PivotTable.
-  let pivotTableWorksheet = workbook.getWorksheet("Pivot");
-  let pivotTable = pivotTableWorksheet.getPivotTable("SubjectPivot");
+  let pivotTableWorksheet = workbook.getWorksheet("Subjects");
+  let pivotTable = pivotTableWorksheet.getPivotTable("Pivot");
 
-  // Parse the received date string.
-  let date = new Date(dateReceived);
-
-  // Convert number representing the day of the week into the name of the day.
-  let dayText: string;
-  switch (date.getDay()) {
-    case 0:
-      dayText = "Sunday";
-      break;
-    case 1:
-      dayText = "Monday";
-      break;
-    case 2:
-      dayText = "Tuesday";
-      break;
-    case 3:
-      dayText = "Wednesday";
-      break;
-    case 4:
-      dayText = "Thursday";
-      break;
-    case 5:
-      dayText = "Friday";
-      break;
-    default:
-      dayText = "Saturday";
-      break;
-  }
+  // Parse the received date string to determine the day of the week.
+  let emailDate = new Date(dateReceived);
+  let dayName = emailDate.toLocaleDateString("en-US", { weekday: 'long' });
 
   // Remove the reply tag from the email subject to group emails on the same thread.
   let subjectText = subject.replace("Re: ", "");
   subjectText = subjectText.replace("RE: ", "");
 
   // Add the parsed text to the table.
-  table.addRow(-1, [dateReceived, dayText, from, subjectText]);
+  table.addRow(-1, [dateReceived, dayName, from, subjectText]);
 
   // Refresh the PivotTable to include the new row.
   pivotTable.refresh();
@@ -229,7 +179,7 @@ function main(
 
     ![スクリプトの実行 (プレビュー)用の Power Automate アクションのオプション。](../images/power-automate-tutorial-5.png)
 
-8. **スクリプトの実行**コネクタには、次の設定を指定します。
+8. 次に、フロー ステップで使用するブック、スクリプト、およびスクリプトの入力引数を選択します。 このチュートリアルでは、OneDrive に作成したブックを使用しますが、OneDrive サイトまたは SharePoint サイトでは任意のブックを使用できます。 **スクリプトの実行**コネクタには、次の設定を指定します。
 
     - **場所**: OneDrive for Business
     - **ドキュメント ライブラリ**: OneDrive

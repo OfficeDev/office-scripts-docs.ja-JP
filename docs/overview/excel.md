@@ -1,14 +1,14 @@
 ---
 title: Excel on the web の Office スクリプト
 description: Office スクリプト用の操作レコーダーとコード エディターの概要をご紹介します。
-ms.date: 07/10/2020
+ms.date: 07/21/2020
 localization_priority: Priority
-ms.openlocfilehash: a27d1797ba2e968cbf4f56c4313223978dc9087c
-ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
+ms.openlocfilehash: 557a4f8fac8fbeafe150f425170c8e45f62986c6
+ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45160468"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "46616727"
 ---
 # <a name="office-scripts-in-excel-on-the-web-preview"></a>Excel on the web の Office スクリプト (プレビュー)
 
@@ -20,7 +20,24 @@ Excel on the web の Office スクリプトを使用すると、日常のタス�
 
 > [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4qdFF]
 
+## <a name="requirements"></a>要件
+
 [!INCLUDE [Preview note](../includes/preview-note.md)]
+
+Office スクリプトを使用するには、以下が必要です。
+
+1. [Excel on the web](https://www.office.com/launch/excel) (デスクトップなどのその他のプラットフォームは、サポートされていません)。
+1. [管理者によって有効にされた](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf) Office スクリプト。
+1. Microsoft 365 Office デスクトップ アプリにアクセスできる、次のような商用または教育機関向けの Microsoft 365 ライセンス。
+
+    - Office 365 Business
+    - Office 365 Business Premium
+    - Office 365 ProPlus
+    - Office 365 ProPlus デバイス用
+    - Office 365 Enterprise E3
+    - Office 365 Enterprise E5
+    - Office 365 A3
+    - Office 365 A5
 
 ## <a name="when-to-use-office-scripts"></a>Office スクリプトの使用に適した状況
 
