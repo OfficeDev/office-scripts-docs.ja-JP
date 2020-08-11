@@ -1,14 +1,14 @@
 ---
 title: Office スクリプトのトラブルシューティング
 description: Office スクリプトのヒントとテクニック、およびヘルプリソースをデバッグします。
-ms.date: 05/14/2020
+ms.date: 07/23/2020
 localization_priority: Normal
-ms.openlocfilehash: 6448980eec45214a589444229db0fd781b9fea13
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
+ms.openlocfilehash: 00727b497d49a2d1d3f9c61e259b8d8d75028a59
+ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878620"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "46616683"
 ---
 # <a name="troubleshooting-office-scripts"></a>Office スクリプトのトラブルシューティング
 
@@ -31,6 +31,15 @@ console.log(myRange.getAddress());
 
 Excel スクリプトで問題が発生すると、エラーが生成されます。 **ログを表示**するかどうかの確認を求めるポップアップが表示されます。 そのボタンを押してコンソールを開き、エラーを表示します。
 
+## <a name="automate-tab-not-appearing"></a>[自動タブを表示しない]
+
+次の手順を実行すると、Excel に表示されていない [**自動**] タブに関連する問題のトラブルシューティングに役立ちます。
+
+1. [Microsoft 365 ライセンスに Office スクリプトが含まれていることを確認して](../overview/excel.md#requirements)ください。
+1. [管理者に機能を有効にしてもらい](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)ます。
+1. [ブラウザーがサポートされていることを確認して](platform-limits.md#browser-support)ください。
+1. [サードパーティの cookie が有効になっていることを確認](platform-limits.md#third-party-cookies)します。
+
 ## <a name="help-resources"></a>ヘルプリソース
 
 [スタックオーバーフロー](https://stackoverflow.com/questions/tagged/office-scripts)は、コーディングに関する問題の解決に役立つ開発者のコミュニティです。 多くの場合、クイックスタックオーバーフロー検索を使用して、問題の解決策を見つけることができます。 そうでない場合は、質問して、「office スクリプト」タグでタグを付けてください。 Office*アドイン*ではなく、office*スクリプト*を作成していることを必ずお伝えください。
@@ -43,5 +52,6 @@ Office JavaScript API で問題が発生した場合は、 [Officedev/Office/js]
 
 - [Excel on the web の Office スクリプト](../overview/excel.md)
 - [Web 上の Excel での Office スクリプトのスクリプトの基礎](../develop/scripting-fundamentals.md)
-- [Office スクリプトの効果を元に戻す](undo.md)
+- [Office スクリプトでのプラットフォームの制限](platform-limits.md)
 - [Office スクリプトのパフォーマンスを向上させる](../develop/web-client-performance.md)
+- [Office スクリプトの効果を元に戻す](undo.md)

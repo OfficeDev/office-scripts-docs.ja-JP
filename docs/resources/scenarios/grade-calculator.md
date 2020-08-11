@@ -1,14 +1,14 @@
 ---
 title: 'Office スクリプトサンプルシナリオ: 成績計算ツール'
 description: 学生のクラスのパーセンテージおよび文字成績を決定するサンプルです。
-ms.date: 06/01/2020
+ms.date: 07/24/2020
 localization_priority: Normal
-ms.openlocfilehash: 6f8e3db756c72cf1d0e2f774ccd819c041f0c42d
-ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
+ms.openlocfilehash: 4e488c6cc67bda9122b88c55070654632d9c7fa2
+ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2020
-ms.locfileid: "44878641"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "46616743"
 ---
 # <a name="office-scripts-sample-scenario-grade-calculator"></a>Office スクリプトサンプルシナリオ: 成績計算ツール
 
@@ -132,8 +132,8 @@ ms.locfileid: "44878641"
         setCellValueConditionalFormatting(
           grade,
           totalRange,
-          "#9C0006",
-          "#FFC7CE",
+          "#443300",
+          "#FFEE22",
           ExcelScript.ConditionalCellValueOperator.equalTo
         );
       })
@@ -178,7 +178,7 @@ ms.locfileid: "44878641"
 
 ## <a name="running-the-script"></a>スクリプトを実行する
 
-唯一のワークシートで**成績計算ツール**のスクリプトを実行します。 このスクリプトは成績を合計し、各学生にレターの成績を割り当てます。 個々の成績の数が、割り当てまたはテストの価値を超える場合は、問題のある成績が赤で示され、合計が計算されません。
+唯一のワークシートで**成績計算ツール**のスクリプトを実行します。 このスクリプトは成績を合計し、各学生にレターの成績を割り当てます。 個々の成績の数が、割り当てまたはテストの価値を超える場合は、問題のある成績が赤で示され、合計が計算されません。 また、"A" という成績は緑色で強調表示されていますが、「d」と「F」の成績は黄色で強調表示されています。
 
 ### <a name="before-running-the-script"></a>スクリプトを実行する前に
 

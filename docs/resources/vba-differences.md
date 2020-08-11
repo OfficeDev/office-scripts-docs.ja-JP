@@ -3,12 +3,12 @@ title: Office スクリプトと VBA マクロの相違点
 description: Office スクリプトと Excel VBA マクロの動作と API の違い。
 ms.date: 06/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 8a8929f0c6a73a8e9041bb4b55cce1edd539e166
-ms.sourcegitcommit: bf9f33c37c6f7805d6b408aa648bb9785a7cd133
+ms.openlocfilehash: 8c246545943341607a7aced4da792b8e49880cb0
+ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/06/2020
-ms.locfileid: "45043392"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "46616690"
 ---
 # <a name="differences-between-office-scripts-and-vba-macros"></a>Office スクリプトと VBA マクロの相違点
 
@@ -23,7 +23,7 @@ Office スクリプトと VBA マクロには、多くの共通点がありま�
 
 VBA はデスクトップ向けに設計されており、Office スクリプトは web 用に設計されています。 VBA は、ユーザーのデスクトップと対話して、COM や OLE などの同様のテクノロジに接続できます。 ただし、VBA には、インターネットを呼び出すための便利な方法はありません。
 
-Office スクリプトでは、ユニバーサルランタイムまたは JavaScript を使用します。 これにより、スクリプトの実行に使用されているコンピューターに関係なく、一貫性のある動作とアクセスが可能になります。 また、他の web サービスへの呼び出しを行うこともできます。
+Office スクリプトでは、JavaScript の汎用ランタイムを使用します。 これにより、スクリプトの実行に使用されているコンピューターに関係なく、一貫性のある動作とアクセスが可能になります。 また、他の web サービスへの呼び出しを行うこともできます。
 
 ## <a name="security"></a>セキュリティ
 

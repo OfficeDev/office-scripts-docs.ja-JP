@@ -1,5 +1,3 @@
-[!INCLUDE [Preview note](../includes/preview-note.md)]
-
 このチュートリアルを開始するには、Office スクリプトへのアクセスが必要です。これには次のものが必要です。
 
 - [Excel on the web](https://www.office.com/launch/excel)。

@@ -1,14 +1,14 @@
 ---
 title: パワー自動化を使用して Office スクリプトを実行する
 description: Power 自動ワークフローを使用して、web 上の Excel で Office スクリプトを取得する方法について説明します。
-ms.date: 07/10/2020
+ms.date: 07/24/2020
 localization_priority: Normal
-ms.openlocfilehash: bd8fea08b7a9303ad2ceace787de6457a33fb979
-ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
+ms.openlocfilehash: a427948847d7ab84962cdede7fb44d214592909f
+ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45160447"
+ms.lasthandoff: 08/11/2020
+ms.locfileid: "46616676"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>パワー自動化を使用して Office スクリプトを実行する
 
@@ -22,7 +22,7 @@ Power オートメーションと Office のスクリプトの組み合わせを
 
 ## <a name="excel-online-business-connector"></a>Excel Online (Business) コネクタ
 
-[コネクタ](/connectors/connectors)は、電力の自動化とアプリケーションの間のブリッジです。 [Excel Online (Business) コネクタ](/connectors/excelonlinebusiness)を使用すると、excel ブックへのアクセスがフローに付与されます。 "スクリプトを実行する" アクションを使用すると、選択したブックからアクセス可能な Office スクリプトを呼び出すことができます。 フローを使用してスクリプトを実行できるだけでなく、スクリプト内のフローを使用して、ブックとの間でデータをやり取りすることもできます。
+[コネクタ](/connectors/connectors)は、電力の自動化とアプリケーションの間のブリッジです。 [Excel Online (Business) コネクタ](/connectors/excelonlinebusiness)を使用すると、excel ブックへのアクセスがフローに付与されます。 "スクリプトを実行する" アクションを使用すると、選択したブックからアクセス可能な Office スクリプトを呼び出すことができます。 また、フローによってデータが提供されるように、スクリプトの入力パラメーターを指定することもできます。または、スクリプトで後の手順に関する情報を返すようにします。
 
 > [!IMPORTANT]
 > "スクリプトを実行する" アクションを実行すると、Excel コネクタを使用するユーザーに、ブックとそのデータに対して重要なアクセス権が与えられます。 また、外部の[呼び出しからの外部呼び出し](external-calls.md)について説明するように、外部 API を呼び出すスクリプトにはセキュリティリスクがあります。 管理者が非常に機密性の高いデータの公開を懸念している場合は、Excel Online コネクタをオフにするか、 [Office スクリプト管理者コントロール](https://support.microsoft.com/office/19d3c51a-6ca2-40ab-978d-60fa49554dcf)を使用して office スクリプトへのアクセスを制限することができます。
@@ -46,7 +46,7 @@ Power 自動化でフローを構成するときは、スクリプトの入力�
 
 1. 最初のパラメーターの型はでなければなりません `ExcelScript.Workbook` 。 そのパラメーター名は重要ではありません。
 
-2. すべてのパラメーターには、型を指定する必要があります。
+2. すべてのパラメーターには、型 (またはなど) を指定する必要があり `string` `number` ます。
 
 3. 基本的な型、、、、、、 `string` `number` `boolean` `any` `unknown` `object` 、 `undefined` がサポートされています。
 
@@ -54,7 +54,7 @@ Power 自動化でフローを構成するときは、スクリプトの入力�
 
 5. 入れ子になった配列は、パラメーターとしてサポートされます (戻り値の型としてではありません)。
 
-6. 共用体型は、1つの型 ( `string` 、 `number` 、または) に属するリテラルの和集合である場合に使用でき `boolean` ます。 サポートされている型と未定義の共用体もサポートされています。
+6. 共用体型は、1つの型 (など) に属するリテラルの和集合である場合に使用でき `"Left" | "Right"` ます。 未定義のサポートされている型の共用体もサポートされています (など `string | undefined` )。
 
 7. オブジェクトの種類は、型 `string` 、 `number` 、、 `boolean` サポートされている配列、またはその他のサポートされているオブジェクトのプロパティが含まれている場合に許可されます。 次の例は、パラメータタイプとしてサポートされているネストされたオブジェクトを示しています。
 
@@ -143,7 +143,7 @@ function main(
 ## <a name="see-also"></a>関連項目
 
 - [Power オートメーションを使用して web 上の Excel で Office スクリプトを実行する](../tutorials/excel-power-automate-manual.md)
-- [自動実行電源自動化フローで、スクリプトにデータを渡す](../tutorials/excel-power-automate-trigger.md)
+- [自動で実行される Power Automate フロー内で、データをスクリプトに渡す](../tutorials/excel-power-automate-trigger.md)
 - [Excel on the web での Office スクリプトのスクリプトの基本事項](scripting-fundamentals.md)
 - [Power Automate の使用を開始する](/power-automate/getting-started)
 - [Excel Online (ビジネス向け) コネクタのリファレンスドキュメント](/connectors/excelonlinebusiness/)
