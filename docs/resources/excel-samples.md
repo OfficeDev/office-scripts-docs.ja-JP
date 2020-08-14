@@ -1,14 +1,14 @@
 ---
 title: Excel on the web の Office スクリプトのサンプルスクリプト
 description: Web 上の Excel の Office スクリプトで使用するコードサンプルのコレクションです。
-ms.date: 07/16/2020
+ms.date: 08/04/2020
 localization_priority: Normal
-ms.openlocfilehash: fa330bfa284799e26ee2cf49800102072d66612b
-ms.sourcegitcommit: 8d549884e68170f808d3d417104a4451a37da83c
+ms.openlocfilehash: 4f8d6f2395a841a8dcba2ea0e712e645a84a6d91
+ms.sourcegitcommit: 1c88abcf5df16a05913f12df89490ce843cfebe2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "45229604"
+ms.lasthandoff: 08/13/2020
+ms.locfileid: "46665230"
 ---
 # <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Web 上の Excel での Office スクリプトのサンプルスクリプト (プレビュー)
 
@@ -16,9 +16,9 @@ ms.locfileid: "45229604"
 
 1. **[自動化]** タブを開きます。
 2. **コードエディター**を押します。
-3. コードエディターの作業ウィンドウで、[**新しいスクリプト**] をクリックします。
+3. コードエディターの作業ウィンドウで、[ **新しいスクリプト** ] をクリックします。
 4. スクリプト全体を、選択したサンプルに置き換えます。
-5. コードエディターの作業ウィンドウで、[**実行**] をクリックします。
+5. コードエディターの作業ウィンドウで、[ **実行** ] をクリックします。
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
 
@@ -28,7 +28,7 @@ ms.locfileid: "45229604"
 
 ### <a name="read-and-log-one-cell"></a>1つのセルを読み取り、ログに記録する
 
-この例では、 **A1**の値を読み取り、コンソールに出力します。
+この例では、 **A1** の値を読み取り、コンソールに出力します。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -167,9 +167,38 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+### <a name="querying-and-deleting-from-a-collection"></a>コレクションを照会および削除する
+
+このスクリプトは、新しいワークシートを作成します。 ワークシートの既存のコピーがあるかどうかを確認し、新しいシートを作成する前に削除します。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  // Name of the worksheet to be added.
+  let name = "Index";
+
+  // Get any worksheet with that name.
+  let sheet = workbook.getWorksheet("Index");
+  
+  // If `null` wasn't returned, then there's already a worksheet with that name.
+  if (sheet) {
+    console.log(`Worksheet by the name ${name} already exists. Deleting it.`);
+    // Delete the sheet.
+    sheet.delete();
+  }
+  
+  // Add a blank worksheet with the name "Index".
+  // Note that this code runs regardless of whether an existing sheet was deleted.
+  console.log(`Adding the worksheet named ${name}.`);
+  let newSheet = workbook.addWorksheet("Index");
+
+  // Switch to the new worksheet.
+  newSheet.activate();
+}
+```
+
 ## <a name="dates"></a>日付
 
-このセクションのサンプルは、JavaScript の[Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date)オブジェクトを使用する方法を示しています。
+このセクションのサンプルは、JavaScript の [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) オブジェクトを使用する方法を示しています。
 
 次の例では、現在の日付と時刻を取得し、アクティブなワークシート内の2つのセルにこれらの値を書き込みます。
 
@@ -273,6 +302,65 @@ function main(workbook: ExcelScript.Workbook) {
     console.log(`Grand total of ${pivotColumnLabelRange.getValues()[0][columnIndex]}: ${grandTotalRange.getValues()[0][columnIndex]}`);
     // Example log: "Grand total of Sum of Crates Sold Wholesale: 11000"
   });
+}
+```
+
+## <a name="formulas"></a>式
+
+これらのサンプルでは、Excel の数式を使用して、スクリプト内でそれらを操作する方法を示します。
+
+## <a name="single-formula"></a>単一の数式
+
+次のスクリプトは、セルの数式を設定し、Excel がセルの数式と値を個別に格納する方法を表示します。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  let selectedSheet = workbook.getActiveWorksheet();
+
+  // Set A1 to 2.
+  let a1 = selectedSheet.getRange("A1");
+  a1.setValue(2);
+
+  // Set B1 to the formula =(2*A1), which should equal 4.
+  let b1 = selectedSheet.getRange("B1")
+  b1.setFormula("=(2*A1)");
+
+  // Log the current results for `getFormula` and `getValue` at B1.
+  console.log(`B1 - Formula: ${b1.getFormula()} | Value: ${b1.getValue()}`);
+}
+```
+
+### <a name="spilling-results-from-a-formula"></a>数式からの結果を Spilling する
+
+このスクリプトは、転置関数を使用して、範囲 "A1: D2" を "A4: B7" に置き換えます。 転置した結果、#SPILL エラーが発生した場合は、対象範囲をクリアし、数式を再度適用します。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+  let sheet = workbook.getActiveWorksheet();
+  // Use the data in A1:D2 for the sample.
+  let dataAddress = "A1:D2"
+  let inputRange = sheet.getRange(dataAddress);
+
+  // Place the transposed data starting at A4.
+  let targetStartCell = sheet.getRange("A4");
+
+  // Compute the target range.
+  let targetRange = targetStartCell.getResizedRange(inputRange.getColumnCount() - 1, inputRange.getRowCount() - 1);
+
+  // Call the transpose helper function.
+  targetStartCell.setFormula(`=TRANSPOSE(${dataAddress})`);
+
+  // Check if the range update resulted in a spill error.
+  let checkValue = targetStartCell.getValue() as string;
+  if (checkValue === '#SPILL!') {
+    // Clear the target range and call the transpose function again.
+    console.log("Target range has data that is preventing update. Clearing target range.");
+    targetRange.clear();
+    targetStartCell.setFormula(`=TRANSPOSE(${dataAddress})`);
+  }
+
+  // Select the transposed range to highlight it.
+  targetRange.select();
 }
 ```
 
