@@ -3,12 +3,12 @@ title: Office スクリプトのトラブルシューティング
 description: Office スクリプトのヒントとテクニック、およびヘルプリソースをデバッグします。
 ms.date: 07/23/2020
 localization_priority: Normal
-ms.openlocfilehash: 00727b497d49a2d1d3f9c61e259b8d8d75028a59
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: 0a2c9ab209bc36e8ba2bdb25a6ab79d9f900f29a
+ms.sourcegitcommit: e9a8ef5f56177ea9a3d2fc5ac636368e5bdae1f4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616683"
+ms.lasthandoff: 09/01/2020
+ms.locfileid: "47321594"
 ---
 # <a name="troubleshooting-office-scripts"></a>Office スクリプトのトラブルシューティング
 
@@ -33,20 +33,20 @@ Excel スクリプトで問題が発生すると、エラーが生成されま�
 
 ## <a name="automate-tab-not-appearing"></a>[自動タブを表示しない]
 
-次の手順を実行すると、Excel に表示されていない [**自動**] タブに関連する問題のトラブルシューティングに役立ちます。
+次の手順は、web 上の Excel に表示されない [ **自動化** ] タブに関連する問題のトラブルシューティングに役立ちます。
 
 1. [Microsoft 365 ライセンスに Office スクリプトが含まれていることを確認して](../overview/excel.md#requirements)ください。
-1. [管理者に機能を有効にしてもらい](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)ます。
+1. [管理者に機能を有効にしてもらい](/microsoft-365/admin/manage/manage-office-scripts-settings)ます。
 1. [ブラウザーがサポートされていることを確認して](platform-limits.md#browser-support)ください。
 1. [サードパーティの cookie が有効になっていることを確認](platform-limits.md#third-party-cookies)します。
 
 ## <a name="help-resources"></a>ヘルプリソース
 
-[スタックオーバーフロー](https://stackoverflow.com/questions/tagged/office-scripts)は、コーディングに関する問題の解決に役立つ開発者のコミュニティです。 多くの場合、クイックスタックオーバーフロー検索を使用して、問題の解決策を見つけることができます。 そうでない場合は、質問して、「office スクリプト」タグでタグを付けてください。 Office*アドイン*ではなく、office*スクリプト*を作成していることを必ずお伝えください。
+[スタックオーバーフロー](https://stackoverflow.com/questions/tagged/office-scripts) は、コーディングに関する問題の解決に役立つ開発者のコミュニティです。 多くの場合、クイックスタックオーバーフロー検索を使用して、問題の解決策を見つけることができます。 そうでない場合は、質問して、「office スクリプト」タグでタグを付けてください。 Office*アドイン*ではなく、office*スクリプト*を作成していることを必ずお伝えください。
 
 Office JavaScript API で問題が発生した場合は、 [Officedev/Office/js](https://github.com/OfficeDev/office-js) GitHub リポジトリに問題を作成します。 製品チームのメンバーは問題に対応し、さらに支援を提供します。 **Officedev/office-js**リポジトリで問題を発生させることは、製品チームが対処する必要のある OFFICE JavaScript API ライブラリに問題が見つかったことを示しています。
 
-操作レコーダーまたは Editor に問題がある場合は、Excel の**ヘルプ > フィードバック**ボタンを使用してフィードバックを送信してください。
+操作レコーダーまたは Editor に問題がある場合は、Excel の **ヘルプ > フィードバック** ボタンを使用してフィードバックを送信してください。
 
 ## <a name="see-also"></a>関連項目
 
