@@ -1,14 +1,14 @@
 ---
 title: Excel on the web の Office スクリプト
 description: Office スクリプト用の操作レコーダーとコード エディターの概要をご紹介します。
-ms.date: 07/21/2020
+ms.date: 09/29/2020
 localization_priority: Priority
-ms.openlocfilehash: 6b60e46c13a211dc793638bcca6535f04a529096
-ms.sourcegitcommit: e9a8ef5f56177ea9a3d2fc5ac636368e5bdae1f4
+ms.openlocfilehash: 965e28be285d59d79d46fe005ab16f29b271041f
+ms.sourcegitcommit: ce72354381561dc167ea0092efd915642a9161b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "47321585"
+ms.lasthandoff: 09/30/2020
+ms.locfileid: "48319673"
 ---
 # <a name="office-scripts-in-excel-on-the-web-preview"></a>Excel on the web の Office スクリプト (プレビュー)
 
@@ -27,6 +27,7 @@ Excel on the web の Office スクリプトを使用すると、日常のタス�
 Office スクリプトを使用するには、以下が必要です。
 
 1. [Excel on the web](https://www.office.com/launch/excel) (デスクトップなどのその他のプラットフォームは、サポートされていません)。
+1. OneDrive for Business。
 1. [管理者によって有効にされた](/microsoft-365/admin/manage/manage-office-scripts-settings) Office スクリプト。
 1. Microsoft 365 Office デスクトップ アプリにアクセスできる、次のような商用または教育機関向けの Microsoft 365 ライセンス。
 
@@ -65,7 +66,10 @@ Office スクリプトの機能を学習する簡単な方法の 1 つは、Exce
 
 Office スクリプトは、Excel ブックの他のユーザーと共有できます。 スクリプトをブック内の他のユーザーと共有すると、スクリプトはブックに添付されます。 スクリプトは、OneDrive に保存され、共有すると、開いているブックにリンクが作成されます。
 
-共有および共有解除スクリプトの詳細については、「[Excel for the Web で Office スクリプトを共有する](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b?storagetype=live&ui=en-US&rs=en-US&ad=US)」の記事を参照してください。
+共有および共有解除スクリプトの詳細については、「[Excel for the Web で Office スクリプトを共有する](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)」の記事を参照してください。
+
+> [!NOTE]
+> Office スクリプトはユーザーの OneDrive に保存されるため、同じ保持ポリシーと削除ポリシーに従います。 組織から削除されるユーザーによって作成および共有されたスクリプトを処理する方法については、[OneDrive の保持と削除](/onedrive/retention-and-deletion)を参照してください。
 
 ## <a name="connecting-office-scripts-to-power-automate"></a>Office スクリプトを Power Automate に接続する
 
