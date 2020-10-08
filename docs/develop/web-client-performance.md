@@ -5,7 +5,7 @@ ms.date: 06/15/2020
 localization_priority: Normal
 ms.openlocfilehash: 4d5b7c70f14e3fc598b95a6226e3ef8caf89f651
 ms.sourcegitcommit: aec3c971c6640429f89b6bb99d2c95ea06725599
-ms.translationtype: Auto
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 06/25/2020
 ms.locfileid: "44878899"
@@ -74,7 +74,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="remove-unnecessary-consolelog-statements"></a>不要なステートメントを削除する `console.log`
 
-コンソールログは、[スクリプトをデバッグ](../testing/troubleshooting.md)するための非常に重要なツールです。 ただし、ログに記録された情報が最新であることを確認するために、スクリプトは強制的にブックと同期されます。 スクリプトを共有する前に、不要なログ記録ステートメント (テストに使用されるものなど) を削除することを検討してください。 これにより、 `console.log()` ステートメントがループ内にない限り、通常、パフォーマンスの問題が発生することはありません。
+コンソールログは、 [スクリプトをデバッグ](../testing/troubleshooting.md)するための非常に重要なツールです。 ただし、ログに記録された情報が最新であることを確認するために、スクリプトは強制的にブックと同期されます。 スクリプトを共有する前に、不要なログ記録ステートメント (テストに使用されるものなど) を削除することを検討してください。 これにより、 `console.log()` ステートメントがループ内にない限り、通常、パフォーマンスの問題が発生することはありません。
 
 ### <a name="avoid-using-trycatch-blocks"></a>Try/catch ブロックの使用を避ける
 
@@ -100,7 +100,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="case-by-case-help"></a>大文字と小文字を区別するヘルプ
 
-Office スクリプトプラットフォームが[パワー自動化](https://flow.microsoft.com/)、[アダプティブカード](https://docs.microsoft.com/adaptive-cards)、その他の製品間の機能に拡張されると、スクリプトブックの通信の詳細がより複雑になります。 スクリプトの実行速度を速くする必要がある場合は、[スタックオーバーフロー](https://stackoverflow.com/questions/tagged/office-scripts)を参照してください。 専門家が検索してヘルプを見つけられるように、質問に "office スクリプト" というタグを付けてください。
+Office スクリプトプラットフォームが [パワー自動化](https://flow.microsoft.com/)、 [アダプティブカード](https://docs.microsoft.com/adaptive-cards)、その他の製品間の機能に拡張されると、スクリプトブックの通信の詳細がより複雑になります。 スクリプトの実行速度を速くする必要がある場合は、 [スタックオーバーフロー](https://stackoverflow.com/questions/tagged/office-scripts)を参照してください。 専門家が検索してヘルプを見つけられるように、質問に "office スクリプト" というタグを付けてください。
 
 ## <a name="see-also"></a>関連項目
 
