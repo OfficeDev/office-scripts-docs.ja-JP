@@ -1,14 +1,14 @@
 ---
 title: Office スクリプトのトラブルシューティング
 description: Office スクリプトのヒントとテクニック、およびヘルプリソースをデバッグします。
-ms.date: 07/23/2020
+ms.date: 10/08/2020
 localization_priority: Normal
-ms.openlocfilehash: 0a2c9ab209bc36e8ba2bdb25a6ab79d9f900f29a
-ms.sourcegitcommit: e9a8ef5f56177ea9a3d2fc5ac636368e5bdae1f4
+ms.openlocfilehash: 9b3f4be778f3cdb4711d1e41d4d68f87ebca8152
+ms.sourcegitcommit: 42fa3b629c93930b4e73e9c4c01d0c8bdf6d7487
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "47321594"
+ms.lasthandoff: 10/09/2020
+ms.locfileid: "48411548"
 ---
 # <a name="troubleshooting-office-scripts"></a>Office スクリプトのトラブルシューティング
 
@@ -31,7 +31,7 @@ console.log(myRange.getAddress());
 
 Excel スクリプトで問題が発生すると、エラーが生成されます。 **ログを表示**するかどうかの確認を求めるポップアップが表示されます。 そのボタンを押してコンソールを開き、エラーを表示します。
 
-## <a name="automate-tab-not-appearing"></a>[自動タブを表示しない]
+## <a name="automate-tab-not-appearing-or-office-scripts-unavailable"></a>タブが表示されない、または Office スクリプトが利用できないことを自動化する
 
 次の手順は、web 上の Excel に表示されない [ **自動化** ] タブに関連する問題のトラブルシューティングに役立ちます。
 
@@ -39,6 +39,8 @@ Excel スクリプトで問題が発生すると、エラーが生成されま�
 1. [管理者に機能を有効にしてもらい](/microsoft-365/admin/manage/manage-office-scripts-settings)ます。
 1. [ブラウザーがサポートされていることを確認して](platform-limits.md#browser-support)ください。
 1. [サードパーティの cookie が有効になっていることを確認](platform-limits.md#third-party-cookies)します。
+
+[!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
 ## <a name="help-resources"></a>ヘルプリソース
 
