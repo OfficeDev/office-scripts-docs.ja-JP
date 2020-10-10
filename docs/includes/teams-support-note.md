@@ -1,0 +1,2 @@
+> [!IMPORTANT]
+> <span data-ttu-id="b0c65-101">Teams で Excel を使用する場合、Office スクリプトは web 上の Teams でのみサポートされます (Windows、Mac、iOS、または Android の Teams ではサポートされていません)。</span><span class="sxs-lookup"><span data-stu-id="b0c65-101">When using Excel with Teams, Office Scripts are only supported in Teams on the web (not Teams on Windows, Mac, iOS, or Android).</span></span>
