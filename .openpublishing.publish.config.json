@@ -1,17 +1,15 @@
 {
   "docsets_to_publish": [
     {
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
-        ]
-      },
       "docset_name": "office-scripts-docs",
       "build_source_folder": "docs",
       "build_output_subfolder": "office-scripts-docs",
       "locale": "ja-JP",
       "monikers": [],
-      "moniker_ranges": [],
+      "moniker_ranges": [
+        "office-scripts",
+        "office-scripts-async"
+      ],
       "open_to_public_contributors": false,
       "type_mapping": {
         "Conceptual": "Content",
@@ -19,13 +17,12 @@
         "LandingPage": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
-    }
-  ],
-  "JoinTOCPlugin": [
-    {
-      "ConceptualTOC": "docs/toc.yml",
-      "ReferenceTOCUrl": "/javascript/api/office-scripts/toc.json"
+      "template_folder": "_themes",
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+        ]
+      }
     }
   ],
   "notification_subscribers": [
@@ -78,6 +75,15 @@
       "template_folder": "_themes.pdf"
     }
   },
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  },
+  "JoinTOCPlugin": [
+    {
+      "ConceptualTOC": "docs/toc.yml",
+      "ReferenceTOCUrl": "/javascript/api/office-scripts/toc.json"
+    }
+  ],
   "dependent_packages": [
     {
       "id": "Microsoft.OpenPublishing.CommonPlugins",

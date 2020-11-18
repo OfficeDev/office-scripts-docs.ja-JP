@@ -1,3 +1,5 @@
+
+
 {
   "build": {
     "content": [
@@ -34,9 +36,10 @@
     "overwrite": [],
     "externalReference": [],
     "globalMetadata": {
+      "uhfHeaderId": "office-scripts",
       "breadcrumb_path": "/office/dev/scripts/breadcrumb/toc.json",
       "extendBreadcrumb": true,
-      "feedback_system": "None",
+      "feedback_system": "none",
       "hide_comments": true,
       "feedback_github_repo": "OfficeDev/office-scripts-docs",
       "feedback_product_url": "https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439",
@@ -50,8 +53,17 @@
       "bilingual_type": "hover over"
     },
     "fileMetadata": {
+      "ms.prod": {
+        "develop/*.md": "excel",
+        "overview/*.md": "excel",
+        "resources/*.md": "excel",
+        "testing/*.md": "excel"
+      },
       "ms.topic": {
         "tutorials/*.md": "tutorial"
+      },
+      "ms.custom": {
+        "tutorials/*.md": "scenarios:getting-started; languages:JavaScript,TypeScript"
       }
     },
     "template": [],
