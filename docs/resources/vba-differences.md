@@ -1,14 +1,14 @@
 ---
 title: Office スクリプトと VBA マクロの相違点
 description: Office スクリプトと Excel VBA マクロの動作と API の違い。
-ms.date: 06/30/2020
+ms.date: 11/13/2020
 localization_priority: Normal
-ms.openlocfilehash: 8c246545943341607a7aced4da792b8e49880cb0
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: 7b9186d03489a43836c6e9da7bd28e0abc135f63
+ms.sourcegitcommit: 82d3c0ef1e187bcdeceb2b5fc3411186674fe150
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616690"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49342886"
 ---
 # <a name="differences-between-office-scripts-and-vba-macros"></a>Office スクリプトと VBA マクロの相違点
 
@@ -27,11 +27,11 @@ Office スクリプトでは、JavaScript の汎用ランタイムを使用し�
 
 ## <a name="security"></a>セキュリティ
 
-VBA マクロには、Excel と同じセキュリティクリアランスがあります。 これにより、デスクトップへのフルアクセスが可能になります。 Office スクリプトは、ブックをホストするマシンではなく、ブックへのアクセスのみが可能です。 さらに、スクリプトでは、JavaScript 認証トークンを共有できないため、スクリプトは外部サービスで認証されません。
+VBA マクロには、Excel と同じセキュリティクリアランスがあります。 これにより、デスクトップへのフルアクセスが可能になります。 Office スクリプトは、ブックをホストするマシンではなく、ブックへのアクセスのみが可能です。 また、スクリプトで JavaScript 認証トークンを共有することはできません。 この場合、スクリプトには、サインインしているユーザーのトークンも、外部サービスにサインインするための API 機能もありません。そのため、ユーザーの代わりに既存のトークンを使用して外部呼び出しを行うことができません。
 
 管理者には、VBA マクロに関する3つのオプションがあります。テナントのすべてのマクロを許可するか、テナントにマクロを許可しないか、署名された証明書によるマクロのみを許可します。 このように細分化されていないと、1つの不良アクターを分離するのが困難になります。 現時点では、Office スクリプトはテナントに対してオンまたはオフになっています。 しかし、管理者が個々のスクリプトやスクリプト作成者をより詳細に制御できるようにしています。
 
-## <a name="coverage"></a>割合
+## <a name="coverage"></a>カバレッジ
 
 現時点では、VBA は、デスクトップクライアントで使用可能な Excel 機能の詳細な範囲を提供しています。 Office スクリプトでは、web 上の Excel のほぼすべてのシナリオについて説明します。 また、web 上の新機能の debut により、Office スクリプトはアクションレコーダーと JavaScript Api の両方に対してそれらをサポートします。
 
