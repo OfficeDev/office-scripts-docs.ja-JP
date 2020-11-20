@@ -28,6 +28,8 @@
           href: resources/add-ins-differences.md
         - name: Office スクリプトでの外部 API 呼び出しのサポート
           href: develop/external-calls.md
+        - name: ファイル ストレージと所有権
+          href: overview/script-storage.md
         - name: Power Automate でスクリプトを実行する
           href: develop/power-automate-integration.md
     - name: トラブルシューティング
