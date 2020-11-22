@@ -3,14 +3,14 @@ layout: LandingPage
 ms.topic: landing-page
 title: Office スクリプト ドキュメント
 description: チュートリアル、概念に関する記事、コード サンプルなどの、Excel on the web の Office スクリプトについて学習するためのリソース。
-ms.date: 01/22/2020
+ms.date: 10/30/2020
 localization_priority: Priority
-ms.openlocfilehash: 238f61adc48974714a110943f7e36e0d2040784c
-ms.sourcegitcommit: e9a8ef5f56177ea9a3d2fc5ac636368e5bdae1f4
+ms.openlocfilehash: 60eb5340e424617a3be87fea9d2a7ece3ca69c3b
+ms.sourcegitcommit: 82d3c0ef1e187bcdeceb2b5fc3411186674fe150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "47321601"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49342830"
 ---
 # <a name="office-scripts-documentation-preview"></a>Office スクリプト ドキュメント (プレビュー)
 
@@ -81,22 +81,6 @@ Excel on the web の Office スクリプトを使用すると、日常のタス�
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><img src="images/index-landing-page/i_upgrade.svg" alt="Enable Office Scripts" /></a>
-                        </div>
-                    </div>
-                    <div class="cardText">
-                        <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><h3>Office スクリプトを有効にする</h3></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </li>
-    <li>
-        <div class="cardSize">
-            <div class="cardPadding">
-                <div class="card">
-                    <div class="cardImageOuter">
-                        <div class="cardImage">
                             <a href="/javascript/api/office-scripts/overview" target="_blank"><img src="images/index-landing-page/i_reference.svg" alt="Office Scripts API reference" /></a>
                         </div>
                     </div>
@@ -129,11 +113,27 @@ Excel on the web の Office スクリプトを使用すると、日常のタス�
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
+                            <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><img src="images/index-landing-page/i_upgrade.svg" alt="Admin settings"/></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><h3>管理設定</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
                             <a href="https://stackoverflow.com/questions/tagged/office-scripts" target="_blank"><img src="images/index-landing-page/i_support.svg" alt="API questions" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="https://stackoverflow.com/questions/tagged/office-scripts" target="_blank"><h3>ご質問</h3></a>
+                        <a href="https://stackoverflow.com/questions/tagged/office-scripts" target="_blank"><h3>質問する</h3></a>
                     </div>
                 </div>
             </div>
