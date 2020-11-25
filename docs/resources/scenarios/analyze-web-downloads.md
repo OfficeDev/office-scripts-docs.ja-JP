@@ -3,18 +3,18 @@ title: 'Office スクリプトサンプルシナリオ: web ダウンロード�
 description: Excel ブックでインターネットトラフィックを生に取得し、その情報をテーブルに整理する前に元の場所を特定するサンプル。
 ms.date: 07/10/2020
 localization_priority: Normal
-ms.openlocfilehash: 20c52c4f26b5939fb5de5e04df504e6672dd4200
-ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
+ms.openlocfilehash: adc2cb401830b66b245c0dfcc4441b7ac9c8c61f
+ms.sourcegitcommit: 009935c5773761c5833e5857491af47e2c95d851
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45160454"
+ms.lasthandoff: 11/25/2020
+ms.locfileid: "49408967"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office スクリプトサンプルシナリオ: web ダウンロードを分析する
 
 このシナリオでは、企業の web サイトからダウンロードレポートを分析する作業を行っています。 この分析の目的は、web トラフィックが米国または世界の他の場所から送られてくるかどうかを判断することです。
 
-仕事仲間がブックに生データをアップロードします。 各週のデータセットには、独自のワークシートがあります。 また、週単位の傾向を示す表とグラフを含む**サマリー**ワークシートもあります。
+仕事仲間がブックに生データをアップロードします。 各週のデータセットには、独自のワークシートがあります。 また、週単位の傾向を示す表とグラフを含む **サマリー** ワークシートもあります。
 
 作業中のワークシートのデータを週単位でダウンロードするスクリプトを開発します。 各ダウンロードに関連付けられている IP アドレスを解析し、それが US からのものであるかどうかを判断します。 答えは、ワークシートのブール値 ("TRUE" または "FALSE") として挿入され、それらのセルに条件付き書式が適用されます。 IP アドレスの場所の結果がワークシートに合計され、サマリーテーブルにコピーされます。
 
@@ -36,13 +36,13 @@ ms.locfileid: "45160454"
 
 ## <a name="setup-instructions"></a>セットアップの手順
 
-1. OneDrive に<a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a>をダウンロードします。
+1. OneDrive に <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> をダウンロードします。
 
 2. Web 用の Excel でブックを開きます。
 
-3. [**自動化**] タブで、**コードエディター**を開きます。
+3. [ **自動化** ] タブで、 **コードエディター** を開きます。
 
-4. [**コードエディター** ] 作業ウィンドウで、[**新しいスクリプト**] をクリックし、次のスクリプトをエディターに貼り付けます。
+4. [ **コードエディター** ] 作業ウィンドウで、[ **新しいスクリプト** ] をクリックし、次のスクリプトをエディターに貼り付けます。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -182,8 +182,8 @@ ms.locfileid: "45160454"
         formula1: "=TRUE",
         operator: ExcelScript.ConditionalCellValueOperator.equalTo
       });
-      conditionalFormatTrue.getCellValue().getFormat().getFill().setColor("#F8CCAD");
-      conditionalFormatTrue.getCellValue().setRule({
+      conditionalFormatFalse.getCellValue().getFormat().getFill().setColor("#F8CCAD");
+      conditionalFormatFalse.getCellValue().setRule({
         formula1: "=FALSE",
         operator: ExcelScript.ConditionalCellValueOperator.equalTo
       });
@@ -220,11 +220,11 @@ ms.locfileid: "45160454"
     }
     ```
 
-5. スクリプトの名前を変更して**Web ダウンロードを分析**し、保存します。
+5. スクリプトの名前を変更して **Web ダウンロードを分析** し、保存します。
 
 ## <a name="running-the-script"></a>スクリプトを実行する
 
-任意の** \* \* 週**のワークシートに移動し、[Web 用の**ダウンロードの分析**] スクリプトを実行します。 このスクリプトは、現在のシートに条件付き書式と場所のラベルを適用します。 **サマリー**ワークシートも更新されます。
+任意の **\* \* 週** のワークシートに移動し、[Web 用の **ダウンロードの分析**] スクリプトを実行します。 このスクリプトは、現在のシートに条件付き書式と場所のラベルを適用します。 **サマリー** ワークシートも更新されます。
 
 ### <a name="before-running-the-script"></a>スクリプトを実行する前に
 
