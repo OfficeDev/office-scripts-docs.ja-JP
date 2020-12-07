@@ -1,21 +1,21 @@
 ---
 title: 手動 Power Automation フローからスクリプトを呼び出す
 description: Power Automate の Office スクリプトで、手動のトリガーを使う方法を説明します。
-ms.date: 07/24/2020
+ms.date: 11/30/2020
 localization_priority: Priority
-ms.openlocfilehash: f447e465bc0b09043d64752266bc9b6dbe5a5d89
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: 831812f5ead549ee3ea3b8c643fc16d5467edbe8
+ms.sourcegitcommit: af487756dffea0f8f0cd62710c586842cb08073c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616758"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49571473"
 ---
 # <a name="call-scripts-from-a-manual-power-automate-flow-preview"></a>手動 Power Automation フローからスクリプトを呼び出す (プレビュー)
 
 このチュートリアルでは、[Power Automate](https://flow.microsoft.com)を使用して、Excel on the web 用の Office スクリプトを実行する方法について説明します。 現在の時刻で 2 つのセルの値を更新するスクリプトを作成します。 次に、このスクリプトを手動でトリガーした Power Automate フローに接続し、Power Automate のボタンを押したときにいつでもこのスクリプトが実行されるようにします。 基本的なパターンを理解したら、フローを拡大して他のアプリケーションを含めることができ、毎日のワークフローの自動化を進めることが可能です。
 
 > [!TIP]
-> Office スクリプトを初めて使用する場合は、チュートリアルの「[Excel on the web で Office スクリプトを記録、編集、作成する](excel-tutorial.md)」から始めることをお勧めします。 [Office スクリプトは TypeScript を使用](../overview/code-editor-environment.md)します。このチュートリアルは、JavaScript や TypeScript について初級から中級レベルの知識を持つユーザーを対象としています。 JavaScript を使い慣れていない場合は、[Mozilla の JavaScript チュートリアル](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction)から始めることをお勧めします。
+> Office スクリプトを初めて使用する場合は、チュートリアルの「[Excel on the web で Office スクリプトを記録、編集、作成する](excel-tutorial.md)」から始めることをお勧めします。 [Office スクリプトは TypeScript を使用](../overview/code-editor-environment.md)します。このチュートリアルは、JavaScript や TypeScript について初級から中級レベルの知識を持つユーザーを対象としています。 JavaScript を使い慣れていない場合は、「[Mozilla の JavaScript チュートリアル](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction)」から始めることをお勧めします。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -89,11 +89,11 @@ Power Automate は、`Workbook.getActiveWorksheet` のような相対参照を�
 
     ![スクリプトの実行 (プレビュー)用の Power Automate アクションのオプション。](../images/power-automate-tutorial-5.png)
 
-8. 次に、フロー ステップで使用するブックおよびスクリプトを選択します。 このチュートリアルでは、OneDrive に作成したブックを使用しますが、OneDrive サイトまたは SharePoint サイトでは任意のブックを使用できます。 **スクリプトの実行**コネクタには、次の設定を指定します。
+8. 次に、フロー ステップで使用するブックおよびスクリプトを選択します。 このチュートリアルでは、OneDrive に作成したブックを使用しますが、OneDrive サイトまたは SharePoint サイトでは任意のブックを使用できます。 **スクリプトの実行** コネクタには、次の設定を指定します。
 
     - **場所**: OneDrive for Business
     - **ドキュメント ライブラリ**: OneDrive
-    - **ファイル**: MyWorkbook.xlsx
+    - **ファイル**: MyWorkbook.xlsx *(ファイル ブラウザーを使用して選択されています)*
     - **スクリプト**: 日時を設定
 
     ![Power Automate でスクリプトを実行するためのコネクタの設定。](../images/power-automate-tutorial-6.png)
@@ -114,7 +114,7 @@ Power Automate は、`Workbook.getActiveWorksheet` のような相対参照を�
 
     ![Power Automate の [実行] ボタン。](../images/power-automate-tutorial-8.png)
 
-4. フローを実行するための作業ウィンドウが表示されます。 Excel Online への**サインイン** を要求された場合は、**[続ける]** を押します。
+4. フローを実行するための作業ウィンドウが表示されます。 Excel Online への **サインイン** を要求された場合は、**[続ける]** を押します。
 
 5. **[フローの実行]** を押します。 これにより、関連する Office スクリプトを実行するフローが実行されます。
 

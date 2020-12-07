@@ -1,14 +1,14 @@
 ---
 title: Excel on the web の Office スクリプト
 description: Office スクリプト用の操作レコーダーとコード エディターの概要をご紹介します。
-ms.date: 09/29/2020
+ms.date: 11/13/2020
 localization_priority: Priority
-ms.openlocfilehash: 965e28be285d59d79d46fe005ab16f29b271041f
-ms.sourcegitcommit: ce72354381561dc167ea0092efd915642a9161b3
+ms.openlocfilehash: a065c8eb5fc52c7525383927b7e1490e703eb179
+ms.sourcegitcommit: 82d3c0ef1e187bcdeceb2b5fc3411186674fe150
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "48319673"
+ms.lasthandoff: 11/18/2020
+ms.locfileid: "49571463"
 ---
 # <a name="office-scripts-in-excel-on-the-web-preview"></a>Excel on the web の Office スクリプト (プレビュー)
 
@@ -28,7 +28,6 @@ Office スクリプトを使用するには、以下が必要です。
 
 1. [Excel on the web](https://www.office.com/launch/excel) (デスクトップなどのその他のプラットフォームは、サポートされていません)。
 1. OneDrive for Business。
-1. [管理者によって有効にされた](/microsoft-365/admin/manage/manage-office-scripts-settings) Office スクリプト。
 1. Microsoft 365 Office デスクトップ アプリにアクセスできる、次のような商用または教育機関向けの Microsoft 365 ライセンス。
 
     - Office 365 Business
@@ -39,6 +38,9 @@ Office スクリプトを使用するには、以下が必要です。
     - Office 365 Enterprise E5
     - Office 365 A3
     - Office 365 A5
+
+> [!NOTE]
+> これらの条件を満たしているにもかかわらず **[自動化]** タブが表示されない場合は、管理者が機能を無効にしているか、ご利用の環境に何らかの問題がある可能性があります。 「[Automate tab not appearing or Office Scripts unavailable (自動化タブが表示されない、または Office スクリプトを使用できない)](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable)」の手順に従い、Office スクリプトの使用を開始してください。
 
 ## <a name="when-to-use-office-scripts"></a>Office スクリプトの使用に適した状況
 
@@ -69,7 +71,7 @@ Office スクリプトは、Excel ブックの他のユーザーと共有でき�
 共有および共有解除スクリプトの詳細については、「[Excel for the Web で Office スクリプトを共有する](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)」の記事を参照してください。
 
 > [!NOTE]
-> Office スクリプトはユーザーの OneDrive に保存されるため、同じ保持ポリシーと削除ポリシーに従います。 組織から削除されるユーザーによって作成および共有されたスクリプトを処理する方法については、[OneDrive の保持と削除](/onedrive/retention-and-deletion)を参照してください。
+> 「[Office Scripts file storage and ownership (Office スクリプトのファイル ストレージと所有権)](script-storage.md)」では、OneDrive にスクリプトを保存する方法について詳しく説明しています。
 
 ## <a name="connecting-office-scripts-to-power-automate"></a>Office スクリプトを Power Automate に接続する
 
@@ -86,4 +88,4 @@ Office スクリプトは、Excel ブックの他のユーザーと共有でき�
 - [Office スクリプトのトラブルシューティング](../testing/troubleshooting.md)
 - [M365 での Office スクリプトの設定](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
 - [Excel の Office スクリプトの概要 (support.office.com)](https://support.office.com/article/introduction-to-office-scripts-in-excel-9fbe283d-adb8-4f13-a75b-a81c6baf163a)
-- [Excel on the web での Office スクリプトの共有](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b?storagetype=live&ui=en-US&rs=en-US&ad=US)
+- [Excel on the web での Office スクリプトの共有](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)
