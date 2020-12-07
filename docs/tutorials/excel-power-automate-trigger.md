@@ -1,14 +1,14 @@
 ---
 title: 自動で実行される Power Automate フロー内で、データをスクリプトに渡す
 description: メールを受信し、フロー データをスクリプトに渡すときに、Power Automate を使用して Excel on the web 用の Office スクリプトを実行する方法について説明します。
-ms.date: 07/24/2020
+ms.date: 11/30/2020
 localization_priority: Priority
-ms.openlocfilehash: f6842e27686909bad92138e6d2f9ac1892cac891
-ms.sourcegitcommit: ce72354381561dc167ea0092efd915642a9161b3
+ms.openlocfilehash: b73f40c70669fedbe8a0adcf346995cb20b62d37
+ms.sourcegitcommit: af487756dffea0f8f0cd62710c586842cb08073c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "48319680"
+ms.lasthandoff: 12/04/2020
+ms.locfileid: "49571480"
 ---
 # <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow-preview"></a>自動で実行される Power Automate フロー内で、データをスクリプトに渡す(プレビュー)
 
@@ -179,11 +179,11 @@ function main(
 
     ![スクリプトの実行 (プレビュー)用の Power Automate アクションのオプション。](../images/power-automate-tutorial-5.png)
 
-8. 次に、フロー ステップで使用するブック、スクリプト、およびスクリプトの入力引数を選択します。 このチュートリアルでは、OneDrive に作成したブックを使用しますが、OneDrive サイトまたは SharePoint サイトでは任意のブックを使用できます。 **スクリプトの実行**コネクタには、次の設定を指定します。
+8. 次に、フロー ステップで使用するブック、スクリプト、およびスクリプトの入力引数を選択します。 このチュートリアルでは、OneDrive に作成したブックを使用しますが、OneDrive サイトまたは SharePoint サイトでは任意のブックを使用できます。 **スクリプトの実行** コネクタには、次の設定を指定します。
 
     - **場所**: OneDrive for Business
     - **ドキュメント ライブラリ**: OneDrive
-    - **ファイル**: MyWorkbook.xlsx
+    - **ファイル**: MyWorkbook.xlsx *(ファイル ブラウザーを使用して選択されています)*
     - **スクリプト**: メールの記録
     - **から**: *(Outlook の動的コンテンツ)*
     - **dateReceived**: 受信時刻 *(Outlook の動的コンテンツ)*
