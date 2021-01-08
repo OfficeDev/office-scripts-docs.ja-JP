@@ -1,33 +1,34 @@
 ---
 title: Office スクリプトでの外部 API 呼び出しのサポート
-description: Office スクリプトで外部 API 呼び出しを行うためのサポートとガイダンス。
-ms.date: 09/24/2020
+description: 外部スクリプトで外部 API 呼び出しを行う場合のサポートOfficeガイダンス。
+ms.date: 01/05/2021
 localization_priority: Normal
-ms.openlocfilehash: fa77e606e2b3ab90144507660d71561b278e82e5
-ms.sourcegitcommit: ce72354381561dc167ea0092efd915642a9161b3
+ms.openlocfilehash: 1091031bc2e12f3e1e79b177c69874ee4ce61dd8
+ms.sourcegitcommit: 30c4b731dc8d18fca5aa74ce59e18a4a63eb4ffc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2020
-ms.locfileid: "48319631"
+ms.lasthandoff: 01/08/2021
+ms.locfileid: "49784145"
 ---
 # <a name="external-api-call-support-in-office-scripts"></a>Office スクリプトでの外部 API 呼び出しのサポート
 
-Office スクリプトプラットフォームは、 [外部 api](https://developer.mozilla.org/docs/Web/API)への呼び出しをサポートしていません。 ただし、これらの呼び出しは適切な状況で実行することができます。 外部呼び出しは、Excel クライアントを使用してのみ行うことができます。 [通常の状況で](#external-calls-from-power-automate)は、電力の自動処理は行われません。
+スクリプト作成者は、プラットフォームのプレビュー フェーズ中に外部 [API](https://developer.mozilla.org/docs/Web/API) を使用するときに一貫した動作を期待してはならない。 そのため、重要なスクリプト シナリオでは外部 API に依存しません。
 
-スクリプト作成者は、プラットフォームのプレビューフェーズ中に外部 Api を使用するときに、一貫した動作を期待する必要はありません。 これは、JavaScript ランタイムがブックとの対話を管理する方法に起因します。 このスクリプトは、API 呼び出しが完了する前に終了することができます (または `Promise` 完全に解決される)。 そのため、重要なスクリプトシナリオでは外部 Api に依存しません。
+外部 API への呼び出しは、通常の状況では Power Automate 経由ではなく、Excel アプリケーション [を介して行う必要があります](#external-calls-from-power-automate)。
 
 > [!CAUTION]
-> 外部呼び出しにより、機密データが望ましくないエンドポイントに公開される可能性があります。 管理者は、このような呼び出しに対してファイアウォール保護を確立できます。
+> 外部呼び出しでは、機密データが望ましくないエンドポイントに公開される可能性があります。 管理者は、このような呼び出しに対してファイアウォール保護を確立できます。
 
-## <a name="definition-files-for-external-apis"></a>外部 Api の定義ファイル
+## <a name="working-with-fetch"></a>操作 `fetch`
 
-Office スクリプトには、外部 Api の定義ファイルは含まれていません。 このような Api を使用すると、定義が欠落しているとコンパイル時エラーが生成されます。 次のスクリプトに示すように、Api は引き続き実行されます (ただし、Excel クライアントで実行する場合のみ)。
+フェッチ [API は、](https://developer.mozilla.org/docs/Web/API/Fetch_API) 外部サービスから情報を取得します。 これは `async` API なので、スクリプトの署名を `main` 調整する必要があります。 関数を `main` 作成 `async` し、それを返す `Promise<void>` 必要があります。 通話と取得も `await` `fetch` 必ず行う必要 `json` があります。 これにより、スクリプトが終了する前にこれらの操作が確実に完了します。
+
+次のスクリプトは、 `fetch` 指定された URL のテスト サーバーから JSON データを取得するために使用します。
 
 ```typescript
 async function main(workbook: ExcelScript.Workbook): Promise <void> {
-  /* The following line of code generates the error:
-   * "Cannot find name 'fetch'".
-   * It will still run and return the JSON from the testing service.
+  /* 
+   * Retrieve JSON data from a test server.
    */
   let fetchResult = await fetch('https://jsonplaceholder.typicode.com/todos/1');
   let json = await fetchResult.json();
@@ -37,13 +38,16 @@ async function main(workbook: ExcelScript.Workbook): Promise <void> {
 }
 ```
 
-## <a name="external-calls-from-power-automate"></a>電源自動化からの外部通話
+Office スクリプトのサンプル シナリオ [: NOAA](../resources/scenarios/noaa-data-fetch.md) からのグラフの水レベル データは、National National Wateric and の Administration の大島と現在のデータベースからレコードを取得するために使用されるフェッチ コマンドを示しています。
 
-電源自動化を使用してスクリプトを実行すると、外部 API 呼び出しは失敗します。 これは、Excel クライアントを使用してスクリプトを実行する場合と Power オートメーションを使用する場合の動作の違いです。 スクリプトをフローに組み込む前に、そのような参照について必ずチェックしてください。
+## <a name="external-calls-from-power-automate"></a>Power Automate からの外部通話
+
+Power Automate を使用してスクリプトを実行すると、外部 API 呼び出しは失敗します。 これは、Excel クライアントを使用してスクリプトを実行する場合と Power Automate を使用する場合の動作の違いです。 フローに組み込む前に、スクリプトでそのような参照を確認してください。
 
 > [!WARNING]
-> Power [Online](/connectors/excelonlinebusiness) の外部通話の失敗は、既存のデータ損失防止ポリシーを守るために役立ちます。 ただし、電源自動化によって実行されるスクリプトは、組織外、組織のファイアウォールの外側にあります。 この外部環境で悪意のあるユーザーからの保護を強化するために、管理者は Office スクリプトの使用を制御することができます。 管理者は、Power turn で Excel Online コネクタを無効にするか、 [Office scripts administrator コントロール](/microsoft-365/admin/manage/manage-office-scripts-settings)を使用して web 上の Excel の office スクリプトをオフにすることができます。
+> Power Automate [Excel Online](/connectors/excelonlinebusiness) コネクタを介して行われる外部呼び出しは、既存のデータ損失防止ポリシーをサポートするために失敗します。 ただし、Power Automate を介して実行されるスクリプトは、組織の外部および組織のファイアウォールの外側で実行されます。 この外部環境で悪意のあるユーザーからの保護を強化するために、管理者はスクリプトの使用Officeできます。 管理者は、Power Automate で Excel Online コネクタを無効にするか、Office Scripts 管理者による Web 上の Excel 用スクリプトの Office スクリプトを [無効にできます](/microsoft-365/admin/manage/manage-office-scripts-settings)。
 
 ## <a name="see-also"></a>関連項目
 
 - [Office スクリプトでの組み込みの JavaScript オブジェクトの使用](javascript-objects.md)
+- [Office スクリプトのサンプル シナリオ: NOAA からのグラフの水レベル データ](../resources/scenarios/noaa-data-fetch.md)
