@@ -1,14 +1,14 @@
 ---
 title: 自動で実行される Power Automate フロー内で、データをスクリプトに渡す
 description: メールを受信し、フロー データをスクリプトに渡すときに、Power Automate を使用して Excel on the web 用の Office スクリプトを実行する方法について説明します。
-ms.date: 11/30/2020
+ms.date: 12/28/2020
 localization_priority: Priority
-ms.openlocfilehash: b73f40c70669fedbe8a0adcf346995cb20b62d37
-ms.sourcegitcommit: af487756dffea0f8f0cd62710c586842cb08073c
+ms.openlocfilehash: 3f81ac13b0827f27adc611895d6bb090df10da5c
+ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49571480"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49772993"
 ---
 # <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow-preview"></a>自動で実行される Power Automate フロー内で、データをスクリプトに渡す(プレビュー)
 
@@ -23,11 +23,11 @@ ms.locfileid: "49571480"
 
 ## <a name="prepare-the-workbook"></a>ブックを準備する
 
-Power Automate は、`Workbook.getActiveWorksheet`のような[相対参照](../develop/power-automate-integration.md#avoid-using-relative-references)を使用して、ブック コンポーネントにアクセスすることはできません。 したがって、Power Automate が参照できるように、名前が統一されたブックとワークシートが必要です。
+Power Automate では、ブック コンポーネントにアクセスするために `Workbook.getActiveWorksheet` などの[相対参照](../testing/power-automate-troubleshooting.md#avoid-using-relative-references)を使わないようにする必要があります。 したがって、Power Automate が参照できるように、名前が統一されたブックとワークシートが必要です。
 
 1. **MyWorkbook** という名前の新しいブックを作成します。
 
-2. **[オートメーション]** タブに移動して **[コード エディター]** を選択します。
+2. **[オートメーション]** タブに移動して **[すべてのスクリプト]** を選択します。
 
 3. **[新しいスクリプト]** を選択します。
 
@@ -60,7 +60,7 @@ Power Automate は、`Workbook.getActiveWorksheet`のような[相対参照](../
 
 メールから情報をログに記録するスクリプトを作成してみましょう。 最も多くのメールを受信する曜日と、そのメールを送信する固有の送信者の数について知る必要があります。 ブックには、**[日付]**、**[曜日]**、**[メールアドレス]**、**[件名]** の列を含むテーブルがあります。 また、ワークシートには、 **[曜日]** と **メールアドレス** (行階層)にピボットしている、ピボットテーブルがあります。 一意の **[件名]** の数は、表示されている集計情報（データ階層）です。 メール テーブルを更新した後に、スクリプトがピボットテーブルを更新するようにします。
 
-1. **[コード エディター]** 内で、**[新しいスクリプト]** を選択します。
+1. **[コード エディター]** 作業ウィンドウ内で、**[新しいスクリプト]** を選択します。
 
 2. このチュートリアルの後半で作成するフローでは、受信した各メールに関するスクリプト情報を送信します。 スクリプトは、`main`関数のパラメーターを使用して、その入力を受け付ける必要があります。 既定のスクリプトを次のスクリプトに置き換えます。
 
@@ -156,15 +156,15 @@ function main(
 
 2. 画面の左側に表示されるメニューで、**[作成]** を押します。 これにより、新しいワークフローを作成する方法の一覧を表示できます。
 
-    ![Power Automate の [作成] ボタン。](../images/power-automate-tutorial-1.png)
+    ![Power Automate の [作成] ボタン](../images/power-automate-tutorial-1.png)
 
 3. **[白紙から初める]** セクションで、**[自動フロー]** を選択します。 これにより、メールの受信などのイベントによってトリガーされるワークフローが作成されます。
 
-    ![Power Automate の自動フロー オプション。](../images/power-automate-params-tutorial-1.png)
+    ![Power Automate の自動化したフロー オプション](../images/power-automate-params-tutorial-1.png)
 
 4. ダイアログ ウインドウが表示されたら、**[フロー名]** のテキスト ボックスに、フローの名前を入力します。 次に、**[フローのトリガーを選択]** の下のオプションの一覧から、**[新しいメールが届いたとき]** を選択します。 検索ボックスを使用して、オプションを検索することが必要になる場合があります。 最後に、**[作成]** を押します。
 
-    ![Power Automate の [自動フローの作成]ウィンドウの一部で、”新しいメールが届きました” オプションが表示されます。](../images/power-automate-params-tutorial-2.png)
+    ![Power Automate の [新しいメールが届いたとき] オプションが表示される [自動化したクラウド フローを構築する] ウィンドウの一部](../images/power-automate-params-tutorial-2.png)
 
     > [!NOTE]
     > このチュートリアルでは、Outlook を使用します。 代わりに、お好きなメール サービスを自由に使用することもできますが、一部のオプションは異なる場合があります。
@@ -173,11 +173,11 @@ function main(
 
 6. **[標準]** タブを選択し、**Excel Online (ビジネス)** を選択します。
 
-    ![Excel Online (ビジネス) 用の Power Automate オプション。](../images/power-automate-tutorial-4.png)
+    ![Power Automate の [Excel Online (Business)] オプション](../images/power-automate-tutorial-4.png)
 
 7. **[アクション]** の下から、**[スクリプトの実行 (プレビュー)]** を選択します。
 
-    ![スクリプトの実行 (プレビュー)用の Power Automate アクションのオプション。](../images/power-automate-tutorial-5.png)
+    ![Power Automate の [スクリプトの実行 (プレビュー)] アクションのオプション](../images/power-automate-tutorial-5.png)
 
 8. 次に、フロー ステップで使用するブック、スクリプト、およびスクリプトの入力引数を選択します。 このチュートリアルでは、OneDrive に作成したブックを使用しますが、OneDrive サイトまたは SharePoint サイトでは任意のブックを使用できます。 **スクリプトの実行** コネクタには、次の設定を指定します。
 
@@ -191,7 +191,7 @@ function main(
 
     *スクリプトのパラメーターは、スクリプトが選択された後にのみ表示されるので、注意してください。*
 
-    ![スクリプトの実行 (プレビュー)用の Power Automate アクションのオプションのパラメーター。](../images/power-automate-params-tutorial-3.png)
+    ![Power Automate の [スクリプトの実行 (プレビュー)] アクション オプションのパラメーター](../images/power-automate-params-tutorial-3.png)
 
 9. **[保存]** を押します。
 
@@ -201,18 +201,18 @@ function main(
 
 1. Power Automate のメイン ページで、**[自分のフロー]** を選択します。
 
-    ![Power Automate の [自分のフロー] ボタン。](../images/power-automate-tutorial-7.png)
+    ![Power Automate の [マイ フロー] ボタン](../images/power-automate-tutorial-7.png)
 
 2. フローを選択します。 ここでは、実行履歴を表示することができます。 ページを更新するか、**[すべての実行]** を更新するボタンを押して、履歴を更新することができます。 フローは、メールを受信するとすぐにトリガーされます。 メッセージを送信してフローをテストします。
 
 フローがトリガーされて、スクリプトが正常に実行されると、ブックのテーブルとピボットテーブルの更新が表示されます。
 
-![フローが数回実行された後の、メール テーブル。](../images/power-automate-params-tutorial-4.png)
+![フローが数回実行された後の、メール テーブル](../images/power-automate-params-tutorial-4.png)
 
-![フローが数回実行された後の、ピボットテーブル。](../images/power-automate-params-tutorial-5.png)
+![フローが数回実行された後の、ピボットテーブル](../images/power-automate-params-tutorial-5.png)
 
 ## <a name="next-steps"></a>次の手順
 
-Office スクリプトを Power Automate に接続する方法に関する詳細については、 [「Power Automate で Office スクリプトを実行する」](../develop/power-automate-integration.md)を参照してください。
+「[自動で実行される Power Automate フローにスクリプトからデータを返す](excel-power-automate-returns.md)」のチュートリアルを完了します。 このチュートリアルでは、スクリプトからフローにデータを返す方法を説明します。
 
 [「自動タスク リマインダーのサンプル シナリオ」](../resources/scenarios/task-reminders.md)では、Office スクリプトと Power Automate を Teams アダプティブ カードと組み合わせる方法についても説明します。
