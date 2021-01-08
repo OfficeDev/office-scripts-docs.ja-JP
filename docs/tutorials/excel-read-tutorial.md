@@ -1,14 +1,14 @@
 ---
 title: Excel on the web で Office スクリプトを使用してブックのデータを読み取る
 description: ブックのデータを読み取り、スクリプトでそのデータを評価する方法について説明した Office スクリプトのチュートリアル。
-ms.date: 07/20/2020
+ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: cdd09f13bb53cfff8c051360f2306cdb6956d86d
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: 0848a24e7333842b5b3b1f82ec8f270514c34d2f
+ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616709"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49772972"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを使用してブックのデータを読み取る
 
@@ -42,7 +42,7 @@ ms.locfileid: "46616709"
     |2019/10/25 |支払い |Best For You Organics Company | -85.64 | |
     |2019/11/01 |支払い |外部預金 | |1000 |
 
-3. **[コード エディター]** を開き、**[新しいスクリプト]** を選択します。
+3. **[すべてのスクリプト]** を開き、**[新しいスクリプト]** を選択します。 
 4. 書式設定をクリーンアップします。 これは財務ドキュメントなので、**[借方]** 列と **[貸方]** 列の数値の書式設定を変更して、値がドル金額として表示されるようにします。 さらに、列幅をデータに合わせます。
 
     スクリプトの内容を次のコードで置き換えます。
@@ -73,21 +73,22 @@ ms.locfileid: "46616709"
 8. 2 次元の配列がコンソールにログ記録すると、各行の下に列の値がグループ化されます。 青い三角形を押して、配列のログを展開します。
 9. 新たに表示された青い三角形を押して、配列の第 2 レベルを展開します。 次のように表示されるはずです。
 
-    ![出力 "-20.05" が 2 つの配列の下に入れ子になって表示されているコンソール ログ。](../images/tutorial-4.png)
+    ![出力 "-20.05" が 2 つの配列の下に入れ子になって表示されているコンソール ログ](../images/tutorial-4.png)
 
 ## <a name="modify-the-value-of-a-cell"></a>セルの値を変更する
 
 データを読み取れたので、そのデータを使用してブックを変更しましょう。 セル **D2** の値を、`Math.abs` 関数を使用して正の値にします。 [Math](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/math) オブジェクトには、スクリプトでアクセスできる多くの関数が含まれています。 `Math` および他の組み込みオブジェクトの詳細については、「[Office スクリプトでの組み込みの JavaScript オブジェクトの使用](../develop/javascript-objects.md)」を参照してください。
 
-1. 次のコードをスクリプトの最後に追加します。
+1. セルの値を変更するには、 `getValue` と `setValue` の方法を使用します。 これらの方法は、1 つのセルで使用できます。 複数のセル範囲を処理する場合は、`getValues` と `setValues` を使用します。 次のコードをスクリプトの最後に追加します。
 
     ```TypeScript
     // Run the `Math.abs` function with the value at D2 and apply that value back to D2.
-    let positiveValue = Math.abs(range.getValue());
+    let positiveValue = Math.abs(range.getValue() as number);
     range.setValue(positiveValue);
     ```
 
-    `getValue` と `setValue` を使用していることに注意してください。 これらの方法は、1 つのセルで使用できます。 複数のセル範囲を処理する場合は、`getValues` と `setValues` を使用します。
+    > [!NOTE]
+    > `as` のキーワードを使用して `range.getValue()` の返された値を `number` に [キャスト](https://www.typescripttutorial.net/typescript-tutorial/type-casting/) しています。 範囲は、文字列、数値、ブール値の可能性があるため、これは必須です。 この例では、明らかに番号が必要です。
 
 2. セル **D2** の値が正の値になります。
 
@@ -124,13 +125,13 @@ ms.locfileid: "46616709"
     for (let i = 1; i < rowCount; i++) {
         // The column at index 3 is column "4" in the worksheet.
         if (rangeValues[i][3] != 0) {
-            let positiveValue = Math.abs(rangeValues[i][3]);
+            let positiveValue = Math.abs(rangeValues[i][3] as number);
             selectedSheet.getCell(i, 3).setValue(positiveValue);
         }
 
         // The column at index 4 is column "5" in the worksheet.
         if (rangeValues[i][4] != 0) {
-            let positiveValue = Math.abs(rangeValues[i][4]);
+            let positiveValue = Math.abs(rangeValues[i][4] as number);
             selectedSheet.getCell(i, 4).setValue(positiveValue);
         }
     }
@@ -142,7 +143,7 @@ ms.locfileid: "46616709"
 
     銀行取引明細書は次のように表示されるはずです。
 
-    ![書式設定された正の値のみを含むテーブル形式の銀行取引明細書。](../images/tutorial-5.png)
+    ![書式設定された正の値のみを含む表形式の銀行取引明細書](../images/tutorial-5.png)
 
 ## <a name="next-steps"></a>次の手順
 
