@@ -1,60 +1,67 @@
-- name: Office スクリプト ドキュメント
-  href: index.md
-- name: Excel on the web の Office スクリプト
-  items:
-    - name: 概要
-      href: overview/excel.md
-    - name: チュートリアル
-      items:
-        - name: Office スクリプトの基本について説明します。
-          href: tutorials/excel-tutorial.md
-        - name: スクリプトを使用してブックのデータを読み取る
-          href: tutorials/excel-read-tutorial.md
-        - name: 手動 Power Automation フローからスクリプトを呼び出す
-          href: tutorials/excel-power-automate-manual.md
-        - name: 自動で実行される Power Automate フロー内でデータを渡す
-          href: tutorials/excel-power-automate-trigger.md
-    - name: スクリプトの基本事項
-      href: develop/scripting-fundamentals.md
-    - name: 概念
-      items:
-        - name: 組み込み JavaScript オブジェクト
-          href: develop/javascript-objects.md
-        - name: コード エディターの環境
-          href: overview/code-editor-environment.md
-        - name: Office スクリプトと VBA マクロの違い
-          href: resources/vba-differences.md
-        - name: Office スクリプトと Office アドインの違い
-          href: resources/add-ins-differences.md
-        - name: Office スクリプトでの外部 API 呼び出しのサポート
-          href: develop/external-calls.md
-        - name: ファイル ストレージと所有権
-          href: overview/script-storage.md
-        - name: Power Automate でスクリプトを実行する
-          href: develop/power-automate-integration.md
-    - name: トラブルシューティング
-      items:
-        - name: トラブルシューティングの基本
-          href: testing/troubleshooting.md
-        - name: スクリプトパフォーマンスの機能強化
-          href: develop/web-client-performance.md
-        - name: プラットフォームの制限
-          href: testing/platform-limits.md
-        - name: Office スクリプトの効果を元に戻す
-          href: testing/undo.md
-        - name: 古い Office スクリプトをサポートする
-          href: develop/excel-async-model.md
-    - name: サンプル
-      items:
-        - name: サンプル スクリプト
-          href: resources/excel-samples.md
-        - name: シナリオ
-          items:
-            - name: 概要
-              href: resources/scenarios/sample-scenario-overview.md
-            - name: Web ダウンロードの分析
-              href: resources/scenarios/analyze-web-downloads.md
-            - name: グレード計算機
-              href: resources/scenarios/grade-calculator.md
-            - name: 作業リマインダー (Power Automate付き)
-              href: resources/scenarios/task-reminders.md
+items:
+  - name: Office スクリプト ドキュメント
+    href: index.md
+  - name: Excel on the web の Office スクリプト
+    items:
+      - name: 概要
+        href: overview/excel.md
+      - name: チュートリアル
+        items:
+          - name: Office スクリプトの基本について説明します。
+            href: tutorials/excel-tutorial.md
+          - name: スクリプトを使用してブックのデータを読み取る
+            href: tutorials/excel-read-tutorial.md
+          - name: 手動 Power Automation フローからスクリプトを呼び出す
+            href: tutorials/excel-power-automate-manual.md
+          - name: 自動的に実行される Power Automate フローからのスクリプトでデータを使用する
+            href: tutorials/excel-power-automate-trigger.md
+          - name: スクリプトから Power Automate フローにデータを渡す
+            href: tutorials/excel-power-automate-returns.md
+      - name: スクリプトの基本事項
+        href: develop/scripting-fundamentals.md
+      - name: 概念
+        items:
+          - name: 組み込み JavaScript オブジェクト
+            href: develop/javascript-objects.md
+          - name: コード エディターの環境
+            href: overview/code-editor-environment.md
+          - name: Office スクリプトと VBA マクロの違い
+            href: resources/vba-differences.md
+          - name: Office スクリプトと Office アドインの違い
+            href: resources/add-ins-differences.md
+          - name: Office スクリプトでの外部 API 呼び出しのサポート
+            href: develop/external-calls.md
+          - name: ファイル ストレージと所有権
+            href: overview/script-storage.md
+          - name: Power Automate でスクリプトを実行する
+            href: develop/power-automate-integration.md
+      - name: トラブルシューティング
+        items:
+          - name: トラブルシューティングの基本
+            href: testing/troubleshooting.md
+          - name: Power Automate のトラブルシューティング
+            href: testing/power-automate-troubleshooting.md
+          - name: スクリプトパフォーマンスの機能強化
+            href: develop/web-client-performance.md
+          - name: プラットフォームの制限
+            href: testing/platform-limits.md
+          - name: Office スクリプトの効果を元に戻す
+            href: testing/undo.md
+          - name: 古い Office スクリプトをサポートする
+            href: develop/excel-async-model.md
+      - name: サンプル
+        items:
+          - name: サンプル スクリプト
+            href: resources/excel-samples.md
+          - name: シナリオ
+            items:
+              - name: 概要
+                href: resources/scenarios/sample-scenario-overview.md
+              - name: Web ダウンロードの分析
+                href: resources/scenarios/analyze-web-downloads.md
+              - name: グレード計算機
+                href: resources/scenarios/grade-calculator.md
+              - name: NOAA の水位データをグラフ化
+                href: resources/scenarios/noaa-data-fetch.md
+              - name: 作業リマインダー (Power Automate付き)
+                href: resources/scenarios/task-reminders.md
