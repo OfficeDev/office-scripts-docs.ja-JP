@@ -1,33 +1,37 @@
 ---
-title: Office スクリプトのサンプルシナリオ
-description: Web 上の Excel における Office スクリプトの大規模なシナリオ駆動型サンプルについて説明します。
-ms.date: 07/10/2020
+title: スクリプトのサンプル Officeシナリオ
+description: Excel on the web のスクリプトに関する大規模Officeベースのサンプルの説明です。
+ms.date: 01/11/2021
 localization_priority: Normal
-ms.openlocfilehash: 29fc925c0cd8eebe281e7384c7be3aa72111fa98
-ms.sourcegitcommit: ebd1079c7e2695ac0e7e4c616f2439975e196875
+ms.openlocfilehash: a772b085d1a58c4c4a1cda8dfd7a1f1840d07482
+ms.sourcegitcommit: 7580dcb8f2f97974c2a9cce25ea30d6526730e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2020
-ms.locfileid: "45160489"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "49867864"
 ---
-# <a name="sample-scenarios-for-office-scripts"></a>Office スクリプトのサンプルシナリオ
+# <a name="sample-scenarios-for-office-scripts"></a>スクリプトのサンプル Officeシナリオ
 
-Office スクリプトを使用すると、日常業務の一部を自動化できます。 これらの毎日のタスクは固有の ecosystems に存在し、特定の方法で設定された Excel ブックがあります。 これらの大規模なシナリオサンプルでは、このような現実世界の使用例を示します。 これらには、Office のスクリプトとブックの両方が含まれているので、シナリオをエンドツーエンドから確認できます。
+Officeスクリプトは、日常業務の一部を自動化できます。 これらの毎日のタスクは、多くの場合、固有のエコシステムに存在し、Excel ブックは特定の方法で設定されます。 これらの大規模なシナリオ サンプルは、このような実際の使用事例を示しています。 これらのスクリプトには、Office スクリプトとブックの両方が含まれるので、シナリオをエンドツーエンドで確認できます。
 
 ## <a name="scenarios"></a>シナリオ
 
 ### <a name="analyze-web-downloads"></a>Web ダウンロードの分析
 
-[「Web のダウンロードを分析](analyze-web-downloads.md)する」シナリオでは、web トラフィックレコードを解析してユーザーの原産国を決定するスクリプトを機能させることができます。 テキストの解析のスキル、スクリプトでのサブ関数の使用、条件付き書式の適用、およびテーブルの操作を示します。
+分析 [Web ダウンロード シナリオでは、Web](analyze-web-downloads.md) トラフィック レコードを解析してユーザーの元の国を特定するスクリプトが機能します。 テキスト解析、スクリプトでのサブ関数の使用、条件付き書式の適用、テーブルの操作のスキルを示します。
+
+### <a name="fetch-and-graph-water-level-data-from-noaa"></a>NOAA から水レベルのデータを取得およびグラフ化する
+
+[NOAA](noaa-data-fetch.md)シナリオからのデータのフェッチとグラフの水レベルのデータは、Office スクリプトを使用して外部ソース[(NOAA の制限](https://tidesandcurrents.noaa.gov/)と現在のデータベース) からデータを取得し、結果の情報をグラフ化します。 データを取得し、グラフを使用 `fetch` するスキルを強調します。
 
 ### <a name="grade-calculator"></a>グレード計算機
 
-[成績計算](grade-calculator.md)式のシナリオでは、クラスの成績の講師のレコードを検証するスクリプトを機能させることができます。 エラーチェック、セルの書式設定、正規表現のスキルを示します。
+成績 [計算機能の](grade-calculator.md) シナリオでは、授業の成績について講師の記録を検証するスクリプトが機能します。 エラー チェック、セルの書式設定、および正規表現のスキルを示します。
 
-### <a name="task-reminders"></a>タスクリマインダー
+### <a name="task-reminders"></a>タスクの事前通知
 
-[タスクリマインダー](task-reminders.md)のシナリオでは、電力の自動化フローで Office スクリプトを使用して、プロジェクトの状態を更新するために同僚に通知を送信します。 このトピックでは、Power 自動統合のスキルと、スクリプトとの間でのデータ転送を示しています。
+タスク [の事前通知](task-reminders.md) シナリオでは、Power Automate フロー Officeスクリプトを使用して、プロジェクトの状態を更新するリマインダーを同僚に送信します。 Power Automate の統合と、スクリプトとの間でのデータ転送のスキルが強調されています。
 
 ## <a name="see-also"></a>関連項目
 
-- [Excel on the web の Office スクリプトのサンプルスクリプト](../excel-samples.md)
+- [Excel on the web Officeスクリプトのサンプル スクリプト](../excel-samples.md)

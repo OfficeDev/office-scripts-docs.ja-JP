@@ -1,20 +1,20 @@
 ---
 title: 'Office スクリプトのサンプル シナリオ: NOAA からのグラフの水レベル データ'
 description: NOAA データベースから JSON データをフェッチし、それを使用してグラフを作成するサンプル。
-ms.date: 01/05/2021
+ms.date: 01/11/2021
 localization_priority: Normal
-ms.openlocfilehash: d2afcd05125ea66c028d8e21bcc878371c20fcc3
-ms.sourcegitcommit: 30c4b731dc8d18fca5aa74ce59e18a4a63eb4ffc
+ms.openlocfilehash: 5b0b4e3675cbe053368f63123d819f0dab626e60
+ms.sourcegitcommit: 7580dcb8f2f97974c2a9cce25ea30d6526730e28
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2021
-ms.locfileid: "49784184"
+ms.lasthandoff: 01/14/2021
+ms.locfileid: "49867878"
 ---
-# <a name="office-scripts-sample-scenario-graph-water-level-data-from-noaa"></a>Office スクリプトのサンプル シナリオ: NOAA からのグラフの水レベル データ
+# <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a>Office スクリプトのサンプル シナリオ: NOAA から水レベルのデータを取得およびグラフ化する
 
 このシナリオでは、National National Wateric and の の管理のシアトルステーションで、水レベル [をプロットする必要があります](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130)。 外部データを使用してスプレッドシートにデータを入力し、グラフを作成します。
 
-このコマンドを使用して NOAA の多用データベースと Currents データベースにクエリを実行するスクリプト `fetch` [を開発します](https://tidesandcurrents.noaa.gov/)。 この場合、指定した期間にわたって水位が記録されます。 情報は JSON として返されます。そのため、スクリプトの一部は、その情報を範囲の値に変換します。 データがスプレッドシートに入った後、グラフの作成に使用されます。
+このコマンドを使用して NOAA の多用データベースと Currents データベースにクエリを実行するスクリプト `fetch` [を開発します](https://tidesandcurrents.noaa.gov/)。 これは、指定した期間にわたって記録された水レベルを取得します。 情報は JSON として返されます。そのため、スクリプトの一部は、その情報を範囲の値に変換します。 データがスプレッドシートに入った後、グラフの作成に使用されます。
 
 ## <a name="scripting-skills-covered"></a>スクリプトのスキルの説明
 
