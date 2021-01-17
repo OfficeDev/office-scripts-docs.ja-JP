@@ -59,9 +59,9 @@ items:
                 href: resources/scenarios/sample-scenario-overview.md
               - name: Web ダウンロードの分析
                 href: resources/scenarios/analyze-web-downloads.md
+              - name: NOAA の水位データを取得してグラフ化する
+                href: resources/scenarios/noaa-data-fetch.md
               - name: グレード計算機
                 href: resources/scenarios/grade-calculator.md
-              - name: NOAA の水位データをグラフ化
-                href: resources/scenarios/noaa-data-fetch.md
               - name: 作業リマインダー (Power Automate付き)
                 href: resources/scenarios/task-reminders.md
