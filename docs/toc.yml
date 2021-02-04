@@ -45,6 +45,8 @@ items:
             href: develop/web-client-performance.md
           - name: プラットフォームの制限
             href: testing/platform-limits.md
+          - name: TypeScript の制限
+            href: develop/typescript-restrictions.md
           - name: Office スクリプトの効果を元に戻す
             href: testing/undo.md
           - name: 古い Office スクリプトをサポートする
