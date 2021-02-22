@@ -1,4 +1,4 @@
-このチュートリアルを開始するには、次のアプリケーションへのアクセスが必要です。
+このチュートリアルを開始するには、以下へのアクセスが必要です。
 
 - [Power Automate](/power-automate/organization-q-and-a)。
 - [Excel on the web](https://www.office.com/launch/excel)。
