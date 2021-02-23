@@ -1,34 +1,34 @@
 ---
-title: Excel on the web の Office スクリプトのサンプルスクリプト
-description: Web 上の Excel の Office スクリプトで使用するコードサンプルのコレクションです。
-ms.date: 08/04/2020
+title: Web 上の Excel Officeスクリプトのサンプル スクリプト
+description: Web 上の Excel のスクリプトOffice使用するコード サンプルのコレクション。
+ms.date: 12/21/2020
 localization_priority: Normal
-ms.openlocfilehash: 4f8d6f2395a841a8dcba2ea0e712e645a84a6d91
-ms.sourcegitcommit: 1c88abcf5df16a05913f12df89490ce843cfebe2
+ms.openlocfilehash: 35a7fdb4dcfa4c349aa594e5b13d1b7e4d33a178
+ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2020
-ms.locfileid: "46665230"
+ms.lasthandoff: 01/06/2021
+ms.locfileid: "49772967"
 ---
-# <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Web 上の Excel での Office スクリプトのサンプルスクリプト (プレビュー)
+# <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Web 上の Excel Officeスクリプトのサンプル スクリプト (プレビュー)
 
-次のサンプルは、独自のブックで試すことができる簡単なスクリプトです。 Web 上の Excel で使用するには、次のようにします。
+次のサンプルは、独自のブックで試す簡単なスクリプトです。 Web 上の Excel で使用するには、次のコマンドを実行します。
 
 1. **[自動化]** タブを開きます。
-2. **コードエディター**を押します。
-3. コードエディターの作業ウィンドウで、[ **新しいスクリプト** ] をクリックします。
-4. スクリプト全体を、選択したサンプルに置き換えます。
-5. コードエディターの作業ウィンドウで、[ **実行** ] をクリックします。
+2. [コード **エディター] を押します**。
+3. コード **エディターの作業** ウィンドウで [新しいスクリプト] を押します。
+4. スクリプト全体を、選択したサンプルに置き換える。
+5. コード **エディターの** 作業ウィンドウで [実行] を押します。
 
 [!INCLUDE [Preview note](../includes/preview-note.md)]
 
-## <a name="scripting-basics"></a>スクリプトの基礎
+## <a name="scripting-basics"></a>スクリプトの基本
 
-これらのサンプルでは、Office スクリプトの基本的な構成要素を示します。 これらをスクリプトに追加して、ソリューションを拡張し、一般的な問題を解決します。
+これらのサンプルでは、スクリプトの基本的な構成要素Office示します。 これらをスクリプトに追加して、ソリューションを拡張し、一般的な問題を解決します。
 
-### <a name="read-and-log-one-cell"></a>1つのセルを読み取り、ログに記録する
+### <a name="read-and-log-one-cell"></a>1 つのセルを読み取り、ログに記録する
 
-この例では、 **A1** の値を読み取り、コンソールに出力します。
+このサンプルでは **、A1 の値を読み** 取り、コンソールに出力します。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -43,9 +43,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="read-the-active-cell"></a>アクティブセルを読み取る
+### <a name="read-the-active-cell"></a>アクティブ セルの読み取り
 
-このスクリプトは、現在アクティブなセルの値を記録します。 複数のセルが選択されている場合は、一番左側のセルがログに記録されます。
+このスクリプトは、現在のアクティブ セルの値をログに記録します。 複数のセルが選択されている場合、左上のセルがログに記録されます。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -59,7 +59,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="change-an-adjacent-cell"></a>隣接するセルを変更する
 
-このスクリプトは、相対参照を使用して隣接するセルを取得します。 アクティブセルが一番上の行にある場合は、現在選択されているセルを参照しているため、スクリプトの一部が失敗することに注意してください。
+このスクリプトは、相対参照を使用して隣接するセルを取得します。 アクティブ セルが一番上の行にある場合、スクリプトの一部は、現在選択されているセルの上にあるセルを参照しますので、失敗します。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -84,9 +84,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="change-all-adjacent-cells"></a>隣接するすべてのセルを変更する
+### <a name="change-all-adjacent-cells"></a>隣接するセルを変更する
 
-このスクリプトは、アクティブセルの書式を隣接するセルにコピーします。 このスクリプトは、アクティブセルがワークシートの端にない場合にのみ機能することに注意してください。
+このスクリプトは、アクティブ セルの書式設定を隣接セルにコピーします。 このスクリプトは、アクティブ セルがワークシートの端にない場合にのみ機能します。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -109,7 +109,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="change-each-individual-cell-in-a-range"></a>範囲内の各セルを変更する
 
-このスクリプトは、現在の選択範囲をループします。 現在の書式をクリアし、各セルの塗りつぶしの色をランダムな色に設定します。
+このスクリプトは、現在選択されている範囲をループ処理します。 現在の書式設定をクリアし、各セルの塗りつぶしの色をランダムな色に設定します。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -136,13 +136,30 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
+### <a name="get-groups-of-cells-based-on-special-criteria"></a>特別な条件に基づいてセルのグループを取得する
+
+このスクリプトは、現在のワークシートの使用範囲内のすべての空白セルを取得します。 次に、これらのすべてのセルを黄色の背景で強調表示します。
+
+```typescript
+function main(workbook: ExcelScript.Workbook) {
+    // Get the current used range.
+    let range = workbook.getActiveWorksheet().getUsedRange();
+    
+    // Get all the blank cells.
+    let blankCells = range.getSpecialCells(ExcelScript.SpecialCellType.blanks);
+
+    // Highlight the blank cells with a yellow background.
+    blankCells.getFormat().getFill().setColor("yellow");
+}
+```
+
 ## <a name="collections"></a>コレクション
 
-これらのサンプルは、ブック内のオブジェクトのコレクションに対して機能します。
+これらのサンプルは、ブック内のオブジェクトのコレクションで動作します。
 
-### <a name="iterating-over-collections"></a>コレクションの反復処理
+### <a name="iterating-over-collections"></a>コレクションの反復
 
-このスクリプトは、ブック内のすべてのワークシートの名前を取得してログ記録します。 また、タブの色をランダムな色に設定します。
+このスクリプトは、ブック内のすべてのワークシートの名前を取得してログに記録します。 また、タブの色をランダムな色に設定します。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -167,9 +184,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="querying-and-deleting-from-a-collection"></a>コレクションを照会および削除する
+### <a name="querying-and-deleting-from-a-collection"></a>コレクションのクエリと削除
 
-このスクリプトは、新しいワークシートを作成します。 ワークシートの既存のコピーがあるかどうかを確認し、新しいシートを作成する前に削除します。
+このスクリプトは、新しいワークシートを作成します。 ワークシートの既存のコピーをチェックし、新しいシートを作成する前に削除します。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -198,9 +215,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="dates"></a>日付
 
-このセクションのサンプルは、JavaScript の [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) オブジェクトを使用する方法を示しています。
+このセクションのサンプルでは、JavaScript Date オブジェクトの使い方 [を示](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) します。
 
-次の例では、現在の日付と時刻を取得し、アクティブなワークシート内の2つのセルにこれらの値を書き込みます。
+次のサンプルでは、現在の日付と時刻を取得し、それらの値をアクティブワークシートの 2 つのセルに書き込みます。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -219,7 +236,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-次の例では、Excel に保存されている日付を読み取って、JavaScript の Date オブジェクトに変換します。 [日付のシリアル番号](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46)は、JavaScript 日付の入力として使用されます。
+次のサンプルでは、Excel に格納されている日付を読み取り、JavaScript Date オブジェクトに変換します。 日付の数値 [シリアル番号を](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) JavaScript Date の入力として使用します。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -227,7 +244,7 @@ function main(workbook: ExcelScript.Workbook) {
   let dateRange = workbook.getActiveWorksheet().getRange("A1");
 
   // Convert the Excel date to a JavaScript Date object.
-  let excelDateValue = dateRange.getValue();
+  let excelDateValue = dateRange.getValue() as number;
   let javaScriptDate = new Date(Math.round((excelDateValue - 25569) * 86400 * 1000));
   console.log(javaScriptDate);
 }
@@ -235,11 +252,11 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="display-data"></a>データの表示
 
-これらのサンプルは、ワークシートデータを操作し、ユーザーにより良い表示や組織を提供する方法を示しています。
+これらのサンプルでは、ワークシート データを処理し、より良いビューまたは組織をユーザーに提供する方法を示します。
 
 ### <a name="apply-conditional-formatting"></a>条件付き書式の適用
 
-この例では、ワークシートで現在使用されている範囲に条件付き書式を適用します。 条件付き書式は、値の上位10% の緑の塗りつぶしです。
+このサンプルでは、ワークシートで現在使用されている範囲に条件付き書式を適用します。 条件付き書式は、値の上位 10% の緑の塗りつぶしです。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -259,9 +276,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="create-a-sorted-table"></a>並べ替えられたテーブルを作成する
+### <a name="create-a-sorted-table"></a>並べ替えテーブルを作成する
 
-次の使用例は、現在のワークシートの使用範囲から表を作成し、最初の列に基づいて並べ替えます。
+このサンプルでは、現在のワークシートの使用範囲からテーブルを作成し、最初の列に基づいて並べ替えを行います。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -277,11 +294,11 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="log-the-grand-total-values-from-a-pivottable"></a>ピボットテーブルから "総計" 値を記録する
+### <a name="log-the-grand-total-values-from-a-pivottable"></a>ピボットテーブルから "Grand Total" 値をログに記録する
 
-次の例では、ブックの最初のピボットテーブルを検索し、次の図のように、[総計] セル (緑で強調表示されている) に値を記録します。
+このサンプルでは、ブック内の最初のピボットテーブルを検索し、値を "Grand Total" セルに記録します (下の図では緑色で強調表示されています)。
 
-![総計行が緑色で強調表示された果物 sales ピボットテーブル。](../images/sample-pivottable-grand-total-row.png)
+![[総計] 行が緑色で強調表示された、果物の販売ピボットテーブル。](../images/sample-pivottable-grand-total-row.png)
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -292,7 +309,7 @@ function main(workbook: ExcelScript.Workbook) {
   let pivotColumnLabelRange = pivotTable.getLayout().getColumnLabelRange();
 
   // Get the range displaying the pivoted data.
-  let pivotDataRange = pivotTable.getLayout().getRangeBetweenHeaderAndTotal();
+  let pivotDataRange = pivotTable.getLayout().getBodyAndTotalRange();
 
   // Get the range with the "grand totals" for the PivotTable columns.
   let grandTotalRange = pivotDataRange.getLastRow();
@@ -305,13 +322,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="formulas"></a>式
+## <a name="formulas"></a>数式
 
-これらのサンプルでは、Excel の数式を使用して、スクリプト内でそれらを操作する方法を示します。
+これらのサンプルでは、Excel の数式を使用し、スクリプトで使用する方法を示します。
 
-## <a name="single-formula"></a>単一の数式
+### <a name="single-formula"></a>単一の数式
 
-次のスクリプトは、セルの数式を設定し、Excel がセルの数式と値を個別に格納する方法を表示します。
+このスクリプトは、セルの数式を設定し、Excel がセルの数式と値を個別に格納する方法を表示します。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -330,9 +347,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="spilling-results-from-a-formula"></a>数式からの結果を Spilling する
+### <a name="spilling-results-from-a-formula"></a>数式からの結果のこぼれ
 
-このスクリプトは、転置関数を使用して、範囲 "A1: D2" を "A4: B7" に置き換えます。 転置した結果、#SPILL エラーが発生した場合は、対象範囲をクリアし、数式を再度適用します。
+このスクリプトは、TRANSPOSE 関数を使用して範囲 "A1:D2" を "A4:B7" にトランスポーズします。 トランスポーズによってエラーが発生#SPILL、ターゲット範囲がクリアされ、数式が再度適用されます。
 
 ```typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -364,10 +381,10 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="scenario-samples"></a>シナリオサンプル
+## <a name="scenario-samples"></a>シナリオ サンプル
 
-大規模な現実世界のソリューションを紹介するサンプルについては、「 [Office スクリプトのサンプルシナリオ](scenarios/sample-scenario-overview.md)」を参照してください。
+大規模な実際のソリューションを示すサンプルについては、「サンプル シナリオ for [Office」を参照してください](scenarios/sample-scenario-overview.md)。
 
-## <a name="suggest-new-samples"></a>新しいサンプルを提案する
+## <a name="suggest-new-samples"></a>新しいサンプルの提案
 
-新しいサンプルの提案を歓迎します。 他のスクリプト開発者を支援する一般的なシナリオがある場合は、以下のフィードバックセクションでご連絡ください。
+新しいサンプルの提案を歓迎します。 他のスクリプト開発者に役立つ一般的なシナリオがある場合は、以下のフィードバック セクションで教えて下さい。
