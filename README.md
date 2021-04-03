@@ -1,35 +1,35 @@
-# <a name="office-scripts-in-excel-on-the-web-documentation"></a>Web ドキュメント上の Excel の Office スクリプト
+# <a name="office-scripts-in-excel-on-the-web-documentation"></a>Office Excel のスクリプトを Web ドキュメントに追加する
 
-Office Scripts ドキュメントリポジトリへようこそ。 このリポジトリでは、「Office スクリプトのドキュメントソースファイル」のチュートリアルと使い方ガイドを参照できます。 最適にご利用いただくには、このコンテンツを [docs.microsoft.com](https://docs.microsoft.com/office/dev/scripts) で表示することをお勧めします。
+スクリプトドキュメント リポジトリOfficeへようこそ。 このレポでは、スクリプトのチュートリアルと使い方ガイドOfficeドキュメント ソース ファイルを検索できます。 最適にご利用いただくには、このコンテンツを [docs.microsoft.com](https://docs.microsoft.com/office/dev/scripts) で表示することをお勧めします。
 
-> **注**: OFFICE スクリプト API のリファレンスドキュメントソースファイルは、 [office スクリプト](https://github.com/OfficeDev/office-scripts-docs-reference) のドキュメント参照リポジトリにあります。 これらの Api には、スクリプトに対して発生する可能性があるすべての Excel 操作が含まれています。
+> **注**: [office-scripts-docs-reference](https://github.com/OfficeDev/office-scripts-docs-reference) リポジトリには、Officeスクリプト API の参照ドキュメント ソース ファイルがあります。 これらの API には、スクリプトのすべての潜在的な Excel 操作が含まれています。
 
 ## <a name="give-us-your-feedback"></a>フィードバックをお寄せください
 
-リポジトリの目的は、Office スクリプトに関する開発者教育を提供することです。 そのため、問題はその教育コンテンツに関連する必要があります。 次のシナリオについて、 [問題を送信](https://github.com/OfficeDev/office-scripts-docs/issues) してください。
+repo の目的は、スクリプトに関する開発者教育を提供Officeです。 そのため、問題は、その教育コンテンツに関連する必要があります。 次 [のシナリオに関する](https://github.com/OfficeDev/office-scripts-docs/issues) 問題を提出してください。
 
-- Office スクリプトの開発を成功させるために必要な情報が不足しているか、不完全です。
-- 情報が不正確であるか、または古くなっています。
-- 入力ミス、文法上の誤り、またはその他の問題が記事に表示されます。
-- 記事は、紛らわしいまたは直感的のような方法で整理されています。
+- スクリプトの開発に成功するために必要Officeが見つからないか、不完全です。
+- 情報が不正確または古くなっています。
+- 記事の入力ミス、文法上の間違い、その他の問題があります。
+- 記事は、わかりにくいか直感のない方法で整理されます。
 
-ドキュメントと異なる製品の動作が確認されている場合は、次の情報をできるだけ多く提供してください。
+ドキュメントとは異なる製品の動作が表示される場合は、可能な限り、および関連する次の情報を提供してください。
 
 - 使用しているクライアントのバージョンとビルド番号。
 - 問題を再現する手順。
-- コンソール出力とエラーメッセージ
+- コンソール出力とエラー メッセージ。
 
 また、フォーク、修正、提案される変更のプル リクエストもお願いしています。詳細については、「[このドキュメントに投稿する](Contributing.md)」を参照してください。
 
-問題が Office スクリプトのドキュメントに関連していない場合は、代わりに次のいずれかのチャネルに投稿してください。
+問題がスクリプトのドキュメントに関連Office場合は、代わりに次のいずれかのチャネルに投稿してください。
 
-- Office スクリプトまたは Office スクリプトを実行する Office.js API の設計について質問がある場合は、その質問に対してスタックオーバーフローを発生させて、「office-Scripts」タグ (でタグを付け https://stackoverflow.com/questions/tagged/office-scripts) ます。
-- Office.js API に関する問題を報告するには、 [Officedev/office-js リポジトリ](https://github.com/OfficeDev/office-js)に問題を作成します。これは、製品チームのメンバーが顧客から報告された問題を監視するために使用します。
-- Office スクリプトの機能の要求を送信し、 [ユーザーの音声ページ](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439)にアイデアを投稿するか、または機能要求が既に存在する場合は、投票を追加します。
+- Office スクリプトまたは Office スクリプトを実行する Office.js API の設計に関する質問をするには、質問をスタック オーバーフローに投稿し、"office-scripts" タグ ( https://stackoverflow.com/questions/tagged/office-scripts) .
+- Office.js API で問題を報告するには、製品チームのメンバーが顧客から報告された問題を監視する [OfficeDev/office-js](https://github.com/OfficeDev/office-js)リポジトリに問題を作成します。
+- Office スクリプトの機能要求を送信するには、アイデアを [Microsoft Q&A](https://docs.microsoft.com/answers/products/m365)に投稿するか、機能要求が既に存在する場合は、その質問に対する投票を追加します。 機能の入力を求めるOffice"Office-Scripts-Dev" タグを使用してください。
 
 ## <a name="copyright"></a>著作権
 
-Copyright (c) 2019 Microsoft Corporation。 All rights reserved。
+Copyright (c) 2019 Microsoft Corporation. All rights reserved。
 
 ## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Open Source Code of Conduct
 

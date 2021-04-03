@@ -1,44 +1,44 @@
 ---
-title: 'Office スクリプトのサンプルシナリオ: 自動化されたタスクの事前通知'
-description: Power オートメーションとアダプティブカードを使用するサンプルは、プロジェクト管理スプレッドシートでタスクリマインダーを自動化します。
+title: 'Office スクリプトのサンプル シナリオ: タスクの自動アラーム'
+description: Power Automate カードとアダプティブ カードを使用するサンプルは、プロジェクト管理スプレッドシートのタスク リマインダーを自動化します。
 ms.date: 11/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 90769eca0201e450e25778db0eb5c62284b9feb0
-ms.sourcegitcommit: af487756dffea0f8f0cd62710c586842cb08073c
+ms.openlocfilehash: 342abced09119ff286f87c1425e44f9186dc4488
+ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49571452"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "51570228"
 ---
-# <a name="office-scripts-sample-scenario-automated-task-reminders"></a>Office スクリプトのサンプルシナリオ: 自動化されたタスクの事前通知
+# <a name="office-scripts-sample-scenario-automated-task-reminders"></a>Office スクリプトのサンプル シナリオ: タスクの自動アラーム
 
-このシナリオでは、プロジェクトを管理しています。 毎月、従業員の状態を追跡するには、Excel ワークシートを使用します。 そのような場合、アラーム処理を自動化することを決定したので、ユーザーに状態を記入するように通知する必要があります。
+このシナリオでは、プロジェクトを管理しています。 Excel ワークシートを使用して、毎月従業員の状態を追跡します。 多くの場合、ユーザーに自分の状態を入力することを通知する必要があります。そのため、そのリマインダー プロセスを自動化することを決めました。
 
-状態フィールドが不足しているメッセージユーザーへの電力自動化フローを作成し、その応答をスプレッドシートに適用します。 これを行うには、ブックの操作を処理するためのスクリプトを作成します。 最初のスクリプトは、空の状態のユーザーのリストを取得し、2番目のスクリプトは、右側の行にステータス文字列を追加します。 また、 [Teams のアダプティブカード](/microsoftteams/platform/task-modules-and-cards/what-are-cards) を使用して、従業員が通知から直接状態を入力できるようにします。
+不足している状態フィールドを持つユーザーにメッセージを送信し、その応答をスプレッドシートに適用するための Power Automate フローを作成します。 これを行うには、ブックの操作を処理するためのスクリプトのペアを開発します。 最初のスクリプトは、空の状態を持つユーザーの一覧を取得し、2 番目のスクリプトは、右側の行に状態文字列を追加します。 また、Teams アダプティブ カード [を使用](/microsoftteams/platform/task-modules-and-cards/what-are-cards) して、従業員が通知から直接ステータスを入力することもできます。
 
-## <a name="scripting-skills-covered"></a>スクリプト作成スキルの説明
+## <a name="scripting-skills-covered"></a>スクリプティングのスキルをカバー
 
-- パワー自動化でフローを作成する
+- Power Automate でフローを作成する
 - スクリプトにデータを渡す
 - スクリプトからデータを返す
-- Teams のアダプティブカード
+- Teams アダプティブ カード
 - テーブル
 
 ## <a name="prerequisites"></a>前提条件
 
-このシナリオでは、 [Power オートメーション](https://flow.microsoft.com) と [Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software)を使用します。 Office スクリプトの開発に使用するアカウントに両方が関連付けられている必要があります。 Microsoft 開発者向けサブスクリプションに無料でアクセスし、これらのアプリケーションについて学習して作業するには、 [microsoft 365 開発者プログラム](https://developer.microsoft.com/microsoft-365/dev-program)に参加することを検討してください。
+このシナリオでは [、Power Automate と](https://flow.microsoft.com) [Microsoft Teams を使用します](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software)。 両方とも、スクリプトの開発に使用するアカウントに関連付Officeがあります。 これらのアプリケーションについて学び、作業するために Microsoft Developer サブスクリプションに無料でアクセスするには [、Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)開発者プログラムへの参加を検討してください。
 
-## <a name="setup-instructions"></a>セットアップの手順
+## <a name="setup-instructions"></a>セットアップ手順
 
-1. OneDrive に <a href="task-reminders.xlsx">task-reminders.xlsx</a> をダウンロードします。
+1. OneDrive <a href="task-reminders.xlsx">task-reminders.xlsx</a> をダウンロードします。
 
 2. Web 上の Excel でブックを開きます。
 
-3. [ **自動化** ] タブで、 **コードエディター** を開きます。
+3. [自動化] **タブで** 、[すべてのスクリプト] **を開きます**。
 
-4. 最初に、すべての従業員に対して、スプレッドシートから不足している状態レポートを取得するためのスクリプトが必要です。 [ **コードエディター** ] 作業ウィンドウで、[ **新しいスクリプト** ] をクリックし、次のスクリプトをエディターに貼り付けます。
+4. まず、スプレッドシートに不足している状態レポートを持つすべての従業員を取得するスクリプトが必要です。 [コード **エディター] 作業ウィンドウ** で、[新しいスクリプト] **を押** して、次のスクリプトをエディターに貼り付けます。
 
-    ```typescript
+    ```TypeScript
     /**
      * This script looks for missing status reports in a project management table.
      *
@@ -87,11 +87,11 @@ ms.locfileid: "49571452"
     }
     ```
 
-5. 「 **Get People**」という名前のスクリプトを保存します。
+5. [ユーザーの取得] という名前のスクリプト **を保存します**。
 
-6. 次に、進捗レポートカードを処理し、新しい情報をスプレッドシートに格納するための2番目のスクリプトが必要です。 [ **コードエディター** ] 作業ウィンドウで、[ **新しいスクリプト** ] をクリックし、次のスクリプトをエディターに貼り付けます。
+6. 次に、ステータス レポート カードを処理し、新しい情報をスプレッドシートに入れる 2 番目のスクリプトが必要です。 [コード **エディター] 作業ウィンドウ** で、[新しいスクリプト] **を押** して、次のスクリプトをエディターに貼り付けます。
 
-    ```typescript
+    ```TypeScript
     /**
      * This script applies the results of a Teams Adaptive Card about
      * a status update to a project management table.
@@ -143,31 +143,31 @@ ms.locfileid: "49571452"
     }
     ```
 
-7. **Save Status** という名前でスクリプトを保存します。
+7. [状態の保存] という名前のスクリプト **を保存します**。
 
-8. 次に、フローを作成する必要があります。 [電源自動化](https://flow.microsoft.com/)を開きます。
+8. 次に、フローを作成する必要があります。 電源 [の自動化を開きます](https://flow.microsoft.com/)。
 
     > [!TIP]
-    > 以前にフローを作成していない場合は、チュートリアル「 [Power オートメーションを使用したスクリプトの使用を開始](../../tutorials/excel-power-automate-manual.md) する」を参照して、基本事項を確認してください。
+    > 前にフローを作成していない場合は、チュートリアル [「Power Automate](../../tutorials/excel-power-automate-manual.md) でスクリプトを使用して開始する」を参照して、基本を学習してください。
 
-9. 新しい **インスタントフロー** を作成します。
+9. 新しいインスタント フロー **を作成します**。
 
-10. [オプションから **フローを手動でトリガーする** ] を選択し、[ **作成**] をクリックします。
+10. [オプション **からフローを手動でトリガーする** ] を選択し、[作成] を **押します**。
 
-11. このフローでは、すべての従業員に空の状態フィールドを取得するために、 **Get People** スクリプトを呼び出す必要があります。 [ **新しい手順** ] をクリックし、[ **Excel Online (Business)**] を選択します。 **[アクション]** の下から、**[スクリプトの実行 (プレビュー)]** を選択します。 フローステップに対して次のエントリを指定します。
+11. フローは、空の状態フィールドを持つすべての従業員を取得するために Get **People** スクリプトを呼び出す必要があります。 [新 **しい手順] を押** し **、[Excel Online] (ビジネス) を選択します**。 **[アクション]** の下の **[スクリプトの実行 (プレビュー)]** を選択します。 フロー ステップに次のエントリを指定します。
 
     - **場所**: OneDrive for Business
     - **ドキュメント ライブラリ**: OneDrive
-    - **ファイル**: task-reminders.xlsx *(ファイルブラウザーから選択)*
+    - **ファイル**: task-reminders.xlsx *(ファイル ブラウザーから選択)*
     - **スクリプト**: ユーザーを取得する
 
-    ![最初に実行するスクリプトフローステップ。](../../images/scenario-task-reminders-first-flow-step.png)
+    ![最初のスクリプト フローの実行手順。](../../images/scenario-task-reminders-first-flow-step.png)
 
-12. 次に、このフローは、スクリプトから返される配列内の各従業員を処理する必要があります。 [ **新規作成** ] をクリックして、[ **Teams ユーザーにアダプティブカードを送信** し、応答を待つ] を選択します。
+12. 次に、フローは、スクリプトによって返される配列内の各 Employee を処理する必要があります。 [ **新しい手順]** を押し、[Teams ユーザーにアダプティブ カードを投稿する] を選択 **し、応答を待ちます**。
 
-13. [ **受信者** ] フィールドでは、動的コンテンツから **電子メール** を追加します (選択範囲には Excel ロゴが表示されます)。 **電子メール** を追加すると、**各ブロックに適用** されるフローステップが囲まれます。 これは、アレイが電力自動化によって反復処理されることを意味します。
+13. [受信者 **] フィールド** で **、動的** コンテンツから電子メールを追加します (選択すると Excel ロゴが表示されます)。 メール **を** 追加すると、フロー ステップは各ブロックに **適用されます** 。 つまり、配列は Power Automate によって反復処理されます。
 
-14. アダプティブカードを送信するには、 **メッセージ** としてカードの JSON を提供する必要があります。 [アダプティブカードデザイナー](https://adaptivecards.io/designer/)を使用して、カスタムカードを作成できます。 この例では、次の JSON を使用します。  
+14. アダプティブ カードを送信するには、カードの JSON をメッセージとして提供する必要 **があります**。 アダプティブ カード デザイナーを [使用してカスタム](https://adaptivecards.io/designer/) カードを作成できます。 このサンプルでは、次の JSON を使用します。  
 
     ```json
     {
@@ -208,38 +208,38 @@ ms.locfileid: "49571452"
     }
     ```
 
-15. 残りのフィールドに、次のように入力します。
+15. 残りのフィールドに次のように入力します。
 
-    - **メッセージの更新**: 進捗レポートを提出していただきありがとうございます。 応答が正常にスプレッドシートに追加されました。
-    - **カードを更新する必要があり** ます。はい
+    - **更新メッセージ**: ステータス レポートを提出してありがとうございます。 応答がスプレッドシートに正常に追加されました。
+    - **カードを更新する必要があります**: はい
 
-16. [ **各ブロックに適用** ] で、[ **Teams ユーザーにアダプティブカードを投稿** し、応答を待機する] の下にある [アクションの **追加**] をクリックします。 [ **Excel Online (Business)**] を選択します。 **[アクション]** の下から、**[スクリプトの実行 (プレビュー)]** を選択します。 フローステップに対して次のエントリを指定します。
+16. [各 **ブロックに適用] で**、Teams ユーザーにアダプティブ カードを投稿し、応答を待つ後、[アクションの追加 **] を押します**。  [Excel **Online] (ビジネス) を選択します**。 **[アクション]** の下の **[スクリプトの実行 (プレビュー)]** を選択します。 フロー ステップに次のエントリを指定します。
 
     - **場所**: OneDrive for Business
     - **ドキュメント ライブラリ**: OneDrive
-    - **ファイル**: task-reminders.xlsx *(ファイルブラウザーから選択)*
+    - **ファイル**: task-reminders.xlsx *(ファイル ブラウザーから選択)*
     - **スクリプト**: 状態の保存
-    - **senderEmail**: 電子メール *(Excel の動的コンテンツ)*
-    - **Statusreportresponse**: Response *(Teams からの動的コンテンツ)*
+    - **senderEmail**: メール *(Excel からの動的コンテンツ)*
+    - **statusReportResponse**: 応答 *(Teams の動的コンテンツ)*
 
-    ![各フローステップに適用されます。](../../images/scenario-task-reminders-last-flow-step.png)
+    ![各フローステップへの適用。](../../images/scenario-task-reminders-last-flow-step.png)
 
 17. フローを保存します。
 
 ## <a name="running-the-flow"></a>フローの実行
 
-フローをテストするには、空の状態の表の行が Teams アカウントに関連付けられた電子メールアドレスを使用していることを確認してください (テスト中は、自分の電子メールアドレスを使用する必要があります)。
+フローをテストするには、空の状態のテーブル行で Teams アカウントに関連付けられている電子メール アドレスを使用します (テスト中は、独自の電子メール アドレスを使用する必要があります)。
 
-フローデザイナーで [ **テスト** ] を選択するか、[ **自分** のフロー] ページからフローを実行することができます。 フローを開始し、必要な接続の使用を承諾した後、Teams を通じて省電力処理カードを受信する必要があります。 カードで [状態] フィールドに入力すると、フローは続行され、指定した状態でスプレッドシートが更新されます。
+フロー デザイナーから **[テスト]** を選択するか、[マイ フロー] ページから **フローを実行** できます。 フローを開始し、必要な接続の使用を受け入れた後、Power Automate から Teams を介してアダプティブ カードを受け取る必要があります。 カードの状態フィールドに入力すると、フローは続行され、指定した状態でスプレッドシートが更新されます。
 
 ### <a name="before-running-the-flow"></a>フローを実行する前に
 
-![進捗レポートを含むワークシートに、不足しているステータスエントリが1つ含まれています。](../../images/scenario-task-reminders-spreadsheet-before.png)
+![不足している状態エントリが 1 つ含まれる状態レポートを含むワークシート。](../../images/scenario-task-reminders-spreadsheet-before.png)
 
-### <a name="receiving-the-adaptive-card"></a>アダプティブカードの受信
+### <a name="receiving-the-adaptive-card"></a>アダプティブ カードの受信
 
-![従業員に進捗の更新を求める、Teams のアダプティブカード。](../../images/scenario-task-reminders-adaptive-card.png)
+![ステータスの更新を従業員に求める Teams のアダプティブ カード。](../../images/scenario-task-reminders-adaptive-card.png)
 
 ### <a name="after-running-the-flow"></a>フローの実行後
 
-![現在入力されている進捗レポートを含むワークシート。](../../images/scenario-task-reminders-spreadsheet-after.png)
+![現在入力されている状態エントリを持つ状態レポートを含むワークシート。](../../images/scenario-task-reminders-spreadsheet-after.png)

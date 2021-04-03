@@ -1,16 +1,16 @@
 ---
-title: Web 上の Excel Officeスクリプトのサンプル スクリプト
+title: Web 上の Excel Officeスクリプトの基本的なスクリプト
 description: Web 上の Excel のスクリプトOffice使用するコード サンプルのコレクション。
-ms.date: 02/12/2021
+ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: 4f1f6d4e160c42524df3c69228d182f1cb4838c8
-ms.sourcegitcommit: 5bde455b06ee2ed007f3e462d8ad485b257774ef
+ms.openlocfilehash: f52500f480b7e7fa637a606b99de035da326a4ba
+ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "50837281"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "51570517"
 ---
-# <a name="sample-scripts-for-office-scripts-in-excel-on-the-web-preview"></a>Web 上の Excel Officeスクリプトのサンプル スクリプト (プレビュー)
+# <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Web 上の Excel Officeスクリプトの基本的なスクリプト
 
 次のサンプルは、独自のブックで試す簡単なスクリプトです。 Web 上の Excel で使用するには、次のコマンドを実行します。
 
@@ -20,8 +20,6 @@ ms.locfileid: "50837281"
 4. スクリプト全体を、選択したサンプルに置き換える。
 5. コード **エディターの** 作業ウィンドウで [実行] を押します。
 
-[!INCLUDE [Preview note](../includes/preview-note.md)]
-
 ## <a name="scripting-basics"></a>スクリプトの基本
 
 これらのサンプルでは、スクリプトの基本的な構成要素Office示します。 これらをスクリプトに追加して、ソリューションを拡張し、一般的な問題を解決します。
@@ -30,7 +28,7 @@ ms.locfileid: "50837281"
 
 このサンプルでは **、A1 の値を読み** 取り、コンソールに出力します。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the current worksheet.
   let selectedSheet = workbook.getActiveWorksheet();
@@ -47,7 +45,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 このスクリプトは、現在のアクティブ セルの値をログに記録します。 複数のセルが選択されている場合は、左上のセルがログに記録されます。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the current active cell in the workbook.
   let cell = workbook.getActiveCell();
@@ -61,7 +59,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 このスクリプトは、相対参照を使用して隣接するセルを取得します。 アクティブ セルが一番上の行にある場合、スクリプトの一部は、現在選択されているセルの上にあるセルを参照しますので、失敗します。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the currently active cell in the workbook.
   let activeCell = workbook.getActiveCell();
@@ -88,7 +86,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 このスクリプトは、アクティブ セルの書式設定を隣接セルにコピーします。 このスクリプトは、アクティブ セルがワークシートの端にない場合にのみ機能します。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the active cell.
   let activeCell = workbook.getActiveCell();
@@ -111,7 +109,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 このスクリプトは、現在選択されている範囲をループ処理します。 現在の書式設定をクリアし、各セルの塗りつぶしの色をランダムな色に設定します。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the currently selected range.
   let range = workbook.getSelectedRange();
@@ -140,7 +138,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 このスクリプトは、現在のワークシートの使用範囲内のすべての空白セルを取得します。 次に、これらのすべてのセルを黄色の背景で強調表示します。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the current used range.
     let range = workbook.getActiveWorksheet().getUsedRange();
@@ -161,7 +159,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 このスクリプトは、ブック内のすべてのワークシートの名前を取得してログに記録します。 また、タブの色をランダムな色に設定します。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get all the worksheets in the workbook.
   let sheets = workbook.getWorksheets();
@@ -188,7 +186,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 このスクリプトは、新しいワークシートを作成します。 ワークシートの既存のコピーをチェックし、新しいシートを作成する前に削除します。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Name of the worksheet to be added.
   let name = "Index";
@@ -328,7 +326,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ![範囲に 3 つの単語を表示し、ドロップダウン リストに同じ単語を表示する、前と後のスクリーンショットのセット。](../images/sample-data-validation.png)
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Get the values for data validation.
   let selectedRange = workbook.getSelectedRange();
@@ -367,7 +365,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 このスクリプトは、セルの数式を設定し、Excel がセルの数式と値を個別に格納する方法を表示します。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   let selectedSheet = workbook.getActiveWorksheet();
 
@@ -388,7 +386,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 このスクリプトは、TRANSPOSE 関数を使用して範囲 "A1:D2" を "A4:B7" にトランスポーズします。 トランスポーズによってエラーが発生#SPILL、ターゲット範囲がクリアされ、数式が再度適用されます。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   let sheet = workbook.getActiveWorksheet();
   // Use the data in A1:D2 for the sample.
@@ -417,10 +415,6 @@ function main(workbook: ExcelScript.Workbook) {
   targetRange.select();
 }
 ```
-
-## <a name="scenario-samples"></a>シナリオ サンプル
-
-大規模な実際のソリューションを示すサンプルについては、「サンプル シナリオ for [Office」を参照してください](scenarios/sample-scenario-overview.md)。
 
 ## <a name="suggest-new-samples"></a>新しいサンプルの提案
 

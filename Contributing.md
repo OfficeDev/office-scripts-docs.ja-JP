@@ -15,8 +15,8 @@
 
 * 記事に小さな変更を加える方法については、「[GitHub を使用して投稿する](#contribute-using-github)」を参照してください。
 * 大きな変更やコードが関係する変更を加える方法については、「[Git を使用して投稿する](#contribute-using-git)」を参照してください。
-* GitHub の [問題] を使用してドキュメントの不具合を報告します。
-* [Web UserVoice サイトの Excel](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439)で新しいドキュメントを要求します。
+* GitHub の問題に関 [するドキュメントのバグを報告します](https://github.com/OfficeDev/office-scripts-docs/issues)。
+* GitHub の問題を [使用して新しいドキュメントを要求します](https://github.com/OfficeDev/office-scripts-docs/issues)。
 
 ## <a name="contribute-using-github"></a>GitHub を使用して投稿する
 
@@ -141,7 +141,7 @@ One of the site administrators will process your pull request. Your pull request
 
 分岐が正常にマージされた (つまり、プル リクエストが承諾された) 後は、ローカル分岐で作業を継続しないでください。別のプル リクエストを提出する場合にマージの競合が発生する可能性があります。別の更新を行うには、正常にマージされたアップストリーム分岐から新しいローカル分岐を作成した後、最初のローカル分岐を削除します。
 
-たとえば、ローカルブランチ X が正常に OfficeDev/office スクリプトのマスター分岐にマージされていて、マージされたコンテンツに対して追加の更新を行う必要がある場合などです。 OfficeDev/office スクリプト-docs master ブランチから、新しいローカルブランチ (X2) を作成します。 これを行うには、GitBash を開き、次のコマンドを実行します。
+たとえば、ローカル ブランチ X が正常に OfficeDev/office-scripts-docs マスター ブランチにマージされた場合、マージされたコンテンツを追加で更新する必要があります。 OfficeDev/office-scripts-docs マスター ブランチから新しいローカル ブランチ X2 を作成します。 これを行うには、GitBash を開き、次のコマンドを実行します。
 
     cd office-scripts-docs
     git pull upstream master:X2
