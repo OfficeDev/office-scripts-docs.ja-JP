@@ -1,44 +1,44 @@
 ---
-title: 'Office スクリプトのサンプルシナリオ: 自動化されたタスクの事前通知'
-description: Power オートメーションとアダプティブカードを使用するサンプルは、プロジェクト管理スプレッドシートでタスクリマインダーを自動化します。
+title: 'Office スクリプトのサンプル シナリオ: タスクの自動アラーム'
+description: Power Automate カードとアダプティブ カードを使用するサンプルは、プロジェクト管理スプレッドシートのタスク リマインダーを自動化します。
 ms.date: 11/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 90769eca0201e450e25778db0eb5c62284b9feb0
-ms.sourcegitcommit: af487756dffea0f8f0cd62710c586842cb08073c
+ms.openlocfilehash: 342abced09119ff286f87c1425e44f9186dc4488
+ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2020
-ms.locfileid: "49571452"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "51570228"
 ---
-# <a name="office-scripts-sample-scenario-automated-task-reminders"></a><span data-ttu-id="4a440-103">Office スクリプトのサンプルシナリオ: 自動化されたタスクの事前通知</span><span class="sxs-lookup"><span data-stu-id="4a440-103">Office Scripts sample scenario: Automated task reminders</span></span>
+# <a name="office-scripts-sample-scenario-automated-task-reminders"></a><span data-ttu-id="d8e64-103">Office スクリプトのサンプル シナリオ: タスクの自動アラーム</span><span class="sxs-lookup"><span data-stu-id="d8e64-103">Office Scripts sample scenario: Automated task reminders</span></span>
 
-<span data-ttu-id="4a440-104">このシナリオでは、プロジェクトを管理しています。</span><span class="sxs-lookup"><span data-stu-id="4a440-104">In this scenario you're managing a project.</span></span> <span data-ttu-id="4a440-105">毎月、従業員の状態を追跡するには、Excel ワークシートを使用します。</span><span class="sxs-lookup"><span data-stu-id="4a440-105">You use an Excel worksheet to track your employees' status every month.</span></span> <span data-ttu-id="4a440-106">そのような場合、アラーム処理を自動化することを決定したので、ユーザーに状態を記入するように通知する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4a440-106">You often need to remind people to fill out their status, so you've decided to automate that reminder process.</span></span>
+<span data-ttu-id="d8e64-104">このシナリオでは、プロジェクトを管理しています。</span><span class="sxs-lookup"><span data-stu-id="d8e64-104">In this scenario you're managing a project.</span></span> <span data-ttu-id="d8e64-105">Excel ワークシートを使用して、毎月従業員の状態を追跡します。</span><span class="sxs-lookup"><span data-stu-id="d8e64-105">You use an Excel worksheet to track your employees' status every month.</span></span> <span data-ttu-id="d8e64-106">多くの場合、ユーザーに自分の状態を入力することを通知する必要があります。そのため、そのリマインダー プロセスを自動化することを決めました。</span><span class="sxs-lookup"><span data-stu-id="d8e64-106">You often need to remind people to fill out their status, so you've decided to automate that reminder process.</span></span>
 
-<span data-ttu-id="4a440-107">状態フィールドが不足しているメッセージユーザーへの電力自動化フローを作成し、その応答をスプレッドシートに適用します。</span><span class="sxs-lookup"><span data-stu-id="4a440-107">You'll create a Power Automate flow to message people with missing status fields and apply their responses to the spreadsheet.</span></span> <span data-ttu-id="4a440-108">これを行うには、ブックの操作を処理するためのスクリプトを作成します。</span><span class="sxs-lookup"><span data-stu-id="4a440-108">To do this, you'll develop a pair of scripts to handle the working with the workbook.</span></span> <span data-ttu-id="4a440-109">最初のスクリプトは、空の状態のユーザーのリストを取得し、2番目のスクリプトは、右側の行にステータス文字列を追加します。</span><span class="sxs-lookup"><span data-stu-id="4a440-109">The first script gets a list of people with blank statuses and the second script adds a status string to the right row.</span></span> <span data-ttu-id="4a440-110">また、 [Teams のアダプティブカード](/microsoftteams/platform/task-modules-and-cards/what-are-cards) を使用して、従業員が通知から直接状態を入力できるようにします。</span><span class="sxs-lookup"><span data-stu-id="4a440-110">You'll also make use of [Teams Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/what-are-cards) to have employees enter their status directly from the notification.</span></span>
+<span data-ttu-id="d8e64-107">不足している状態フィールドを持つユーザーにメッセージを送信し、その応答をスプレッドシートに適用するための Power Automate フローを作成します。</span><span class="sxs-lookup"><span data-stu-id="d8e64-107">You'll create a Power Automate flow to message people with missing status fields and apply their responses to the spreadsheet.</span></span> <span data-ttu-id="d8e64-108">これを行うには、ブックの操作を処理するためのスクリプトのペアを開発します。</span><span class="sxs-lookup"><span data-stu-id="d8e64-108">To do this, you'll develop a pair of scripts to handle the working with the workbook.</span></span> <span data-ttu-id="d8e64-109">最初のスクリプトは、空の状態を持つユーザーの一覧を取得し、2 番目のスクリプトは、右側の行に状態文字列を追加します。</span><span class="sxs-lookup"><span data-stu-id="d8e64-109">The first script gets a list of people with blank statuses and the second script adds a status string to the right row.</span></span> <span data-ttu-id="d8e64-110">また、Teams アダプティブ カード [を使用](/microsoftteams/platform/task-modules-and-cards/what-are-cards) して、従業員が通知から直接ステータスを入力することもできます。</span><span class="sxs-lookup"><span data-stu-id="d8e64-110">You'll also make use of [Teams Adaptive Cards](/microsoftteams/platform/task-modules-and-cards/what-are-cards) to have employees enter their status directly from the notification.</span></span>
 
-## <a name="scripting-skills-covered"></a><span data-ttu-id="4a440-111">スクリプト作成スキルの説明</span><span class="sxs-lookup"><span data-stu-id="4a440-111">Scripting skills covered</span></span>
+## <a name="scripting-skills-covered"></a><span data-ttu-id="d8e64-111">スクリプティングのスキルをカバー</span><span class="sxs-lookup"><span data-stu-id="d8e64-111">Scripting skills covered</span></span>
 
-- <span data-ttu-id="4a440-112">パワー自動化でフローを作成する</span><span class="sxs-lookup"><span data-stu-id="4a440-112">Create flows in Power Automate</span></span>
-- <span data-ttu-id="4a440-113">スクリプトにデータを渡す</span><span class="sxs-lookup"><span data-stu-id="4a440-113">Pass data to scripts</span></span>
-- <span data-ttu-id="4a440-114">スクリプトからデータを返す</span><span class="sxs-lookup"><span data-stu-id="4a440-114">Return data from scripts</span></span>
-- <span data-ttu-id="4a440-115">Teams のアダプティブカード</span><span class="sxs-lookup"><span data-stu-id="4a440-115">Teams Adaptive Cards</span></span>
-- <span data-ttu-id="4a440-116">テーブル</span><span class="sxs-lookup"><span data-stu-id="4a440-116">Tables</span></span>
+- <span data-ttu-id="d8e64-112">Power Automate でフローを作成する</span><span class="sxs-lookup"><span data-stu-id="d8e64-112">Create flows in Power Automate</span></span>
+- <span data-ttu-id="d8e64-113">スクリプトにデータを渡す</span><span class="sxs-lookup"><span data-stu-id="d8e64-113">Pass data to scripts</span></span>
+- <span data-ttu-id="d8e64-114">スクリプトからデータを返す</span><span class="sxs-lookup"><span data-stu-id="d8e64-114">Return data from scripts</span></span>
+- <span data-ttu-id="d8e64-115">Teams アダプティブ カード</span><span class="sxs-lookup"><span data-stu-id="d8e64-115">Teams Adaptive Cards</span></span>
+- <span data-ttu-id="d8e64-116">テーブル</span><span class="sxs-lookup"><span data-stu-id="d8e64-116">Tables</span></span>
 
-## <a name="prerequisites"></a><span data-ttu-id="4a440-117">前提条件</span><span class="sxs-lookup"><span data-stu-id="4a440-117">Prerequisites</span></span>
+## <a name="prerequisites"></a><span data-ttu-id="d8e64-117">前提条件</span><span class="sxs-lookup"><span data-stu-id="d8e64-117">Prerequisites</span></span>
 
-<span data-ttu-id="4a440-118">このシナリオでは、 [Power オートメーション](https://flow.microsoft.com) と [Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software)を使用します。</span><span class="sxs-lookup"><span data-stu-id="4a440-118">This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software).</span></span> <span data-ttu-id="4a440-119">Office スクリプトの開発に使用するアカウントに両方が関連付けられている必要があります。</span><span class="sxs-lookup"><span data-stu-id="4a440-119">You will need both associated with the account that you use for developing Office Scripts.</span></span> <span data-ttu-id="4a440-120">Microsoft 開発者向けサブスクリプションに無料でアクセスし、これらのアプリケーションについて学習して作業するには、 [microsoft 365 開発者プログラム](https://developer.microsoft.com/microsoft-365/dev-program)に参加することを検討してください。</span><span class="sxs-lookup"><span data-stu-id="4a440-120">For free access to a Microsoft Developer subscription to learn about and work with these applications, consider joining the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).</span></span>
+<span data-ttu-id="d8e64-118">このシナリオでは [、Power Automate と](https://flow.microsoft.com) [Microsoft Teams を使用します](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software)。</span><span class="sxs-lookup"><span data-stu-id="d8e64-118">This scenario uses [Power Automate](https://flow.microsoft.com) and [Microsoft Teams](https://www.microsoft.com/microsoft-365/microsoft-teams/group-chat-software).</span></span> <span data-ttu-id="d8e64-119">両方とも、スクリプトの開発に使用するアカウントに関連付Officeがあります。</span><span class="sxs-lookup"><span data-stu-id="d8e64-119">You will need both associated with the account that you use for developing Office Scripts.</span></span> <span data-ttu-id="d8e64-120">これらのアプリケーションについて学び、作業するために Microsoft Developer サブスクリプションに無料でアクセスするには [、Microsoft 365](https://developer.microsoft.com/microsoft-365/dev-program)開発者プログラムへの参加を検討してください。</span><span class="sxs-lookup"><span data-stu-id="d8e64-120">For free access to a Microsoft Developer subscription to learn about and work with these applications, consider joining the [Microsoft 365 Developer Program](https://developer.microsoft.com/microsoft-365/dev-program).</span></span>
 
-## <a name="setup-instructions"></a><span data-ttu-id="4a440-121">セットアップの手順</span><span class="sxs-lookup"><span data-stu-id="4a440-121">Setup instructions</span></span>
+## <a name="setup-instructions"></a><span data-ttu-id="d8e64-121">セットアップ手順</span><span class="sxs-lookup"><span data-stu-id="d8e64-121">Setup instructions</span></span>
 
-1. <span data-ttu-id="4a440-122">OneDrive に <a href="task-reminders.xlsx">task-reminders.xlsx</a> をダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="4a440-122">Download <a href="task-reminders.xlsx">task-reminders.xlsx</a> to your OneDrive.</span></span>
+1. <span data-ttu-id="d8e64-122">OneDrive <a href="task-reminders.xlsx">task-reminders.xlsx</a> をダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="d8e64-122">Download <a href="task-reminders.xlsx">task-reminders.xlsx</a> to your OneDrive.</span></span>
 
-2. <span data-ttu-id="4a440-123">Web 上の Excel でブックを開きます。</span><span class="sxs-lookup"><span data-stu-id="4a440-123">Open the workbook in Excel on the web.</span></span>
+2. <span data-ttu-id="d8e64-123">Web 上の Excel でブックを開きます。</span><span class="sxs-lookup"><span data-stu-id="d8e64-123">Open the workbook in Excel on the web.</span></span>
 
-3. <span data-ttu-id="4a440-124">[ **自動化** ] タブで、 **コードエディター** を開きます。</span><span class="sxs-lookup"><span data-stu-id="4a440-124">Under the **Automate** tab, open the **Code Editor**.</span></span>
+3. <span data-ttu-id="d8e64-124">[自動化] **タブで** 、[すべてのスクリプト] **を開きます**。</span><span class="sxs-lookup"><span data-stu-id="d8e64-124">Under the **Automate** tab, open **All Scripts**.</span></span>
 
-4. <span data-ttu-id="4a440-125">最初に、すべての従業員に対して、スプレッドシートから不足している状態レポートを取得するためのスクリプトが必要です。</span><span class="sxs-lookup"><span data-stu-id="4a440-125">First, we need a script to get all the employees with status reports that are missing from the spreadsheet.</span></span> <span data-ttu-id="4a440-126">[ **コードエディター** ] 作業ウィンドウで、[ **新しいスクリプト** ] をクリックし、次のスクリプトをエディターに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="4a440-126">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
+4. <span data-ttu-id="d8e64-125">まず、スプレッドシートに不足している状態レポートを持つすべての従業員を取得するスクリプトが必要です。</span><span class="sxs-lookup"><span data-stu-id="d8e64-125">First, we need a script to get all the employees with status reports that are missing from the spreadsheet.</span></span> <span data-ttu-id="d8e64-126">[コード **エディター] 作業ウィンドウ** で、[新しいスクリプト] **を押** して、次のスクリプトをエディターに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="d8e64-126">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
 
-    ```typescript
+    ```TypeScript
     /**
      * This script looks for missing status reports in a project management table.
      *
@@ -87,11 +87,11 @@ ms.locfileid: "49571452"
     }
     ```
 
-5. <span data-ttu-id="4a440-127">「 **Get People**」という名前のスクリプトを保存します。</span><span class="sxs-lookup"><span data-stu-id="4a440-127">Save the script with the name **Get People**.</span></span>
+5. <span data-ttu-id="d8e64-127">[ユーザーの取得] という名前のスクリプト **を保存します**。</span><span class="sxs-lookup"><span data-stu-id="d8e64-127">Save the script with the name **Get People**.</span></span>
 
-6. <span data-ttu-id="4a440-128">次に、進捗レポートカードを処理し、新しい情報をスプレッドシートに格納するための2番目のスクリプトが必要です。</span><span class="sxs-lookup"><span data-stu-id="4a440-128">Next, we need a second script to process the status report cards and put the new information in the spreadsheet.</span></span> <span data-ttu-id="4a440-129">[ **コードエディター** ] 作業ウィンドウで、[ **新しいスクリプト** ] をクリックし、次のスクリプトをエディターに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="4a440-129">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
+6. <span data-ttu-id="d8e64-128">次に、ステータス レポート カードを処理し、新しい情報をスプレッドシートに入れる 2 番目のスクリプトが必要です。</span><span class="sxs-lookup"><span data-stu-id="d8e64-128">Next, we need a second script to process the status report cards and put the new information in the spreadsheet.</span></span> <span data-ttu-id="d8e64-129">[コード **エディター] 作業ウィンドウ** で、[新しいスクリプト] **を押** して、次のスクリプトをエディターに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="d8e64-129">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
 
-    ```typescript
+    ```TypeScript
     /**
      * This script applies the results of a Teams Adaptive Card about
      * a status update to a project management table.
@@ -143,31 +143,31 @@ ms.locfileid: "49571452"
     }
     ```
 
-7. <span data-ttu-id="4a440-130">**Save Status** という名前でスクリプトを保存します。</span><span class="sxs-lookup"><span data-stu-id="4a440-130">Save the script with the name **Save Status**.</span></span>
+7. <span data-ttu-id="d8e64-130">[状態の保存] という名前のスクリプト **を保存します**。</span><span class="sxs-lookup"><span data-stu-id="d8e64-130">Save the script with the name **Save Status**.</span></span>
 
-8. <span data-ttu-id="4a440-131">次に、フローを作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4a440-131">Now, we need to create the flow.</span></span> <span data-ttu-id="4a440-132">[電源自動化](https://flow.microsoft.com/)を開きます。</span><span class="sxs-lookup"><span data-stu-id="4a440-132">Open [Power Automate](https://flow.microsoft.com/).</span></span>
+8. <span data-ttu-id="d8e64-131">次に、フローを作成する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8e64-131">Now, we need to create the flow.</span></span> <span data-ttu-id="d8e64-132">電源 [の自動化を開きます](https://flow.microsoft.com/)。</span><span class="sxs-lookup"><span data-stu-id="d8e64-132">Open [Power Automate](https://flow.microsoft.com/).</span></span>
 
     > [!TIP]
-    > <span data-ttu-id="4a440-133">以前にフローを作成していない場合は、チュートリアル「 [Power オートメーションを使用したスクリプトの使用を開始](../../tutorials/excel-power-automate-manual.md) する」を参照して、基本事項を確認してください。</span><span class="sxs-lookup"><span data-stu-id="4a440-133">If you haven't created a flow before, please check out our tutorial [Start using scripts with Power Automate](../../tutorials/excel-power-automate-manual.md) to learn the basics.</span></span>
+    > <span data-ttu-id="d8e64-133">前にフローを作成していない場合は、チュートリアル [「Power Automate](../../tutorials/excel-power-automate-manual.md) でスクリプトを使用して開始する」を参照して、基本を学習してください。</span><span class="sxs-lookup"><span data-stu-id="d8e64-133">If you haven't created a flow before, please check out our tutorial [Start using scripts with Power Automate](../../tutorials/excel-power-automate-manual.md) to learn the basics.</span></span>
 
-9. <span data-ttu-id="4a440-134">新しい **インスタントフロー** を作成します。</span><span class="sxs-lookup"><span data-stu-id="4a440-134">Create a new **Instant flow**.</span></span>
+9. <span data-ttu-id="d8e64-134">新しいインスタント フロー **を作成します**。</span><span class="sxs-lookup"><span data-stu-id="d8e64-134">Create a new **Instant flow**.</span></span>
 
-10. <span data-ttu-id="4a440-135">[オプションから **フローを手動でトリガーする** ] を選択し、[ **作成**] をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4a440-135">Choose **Manually trigger a flow** from the options and press **Create**.</span></span>
+10. <span data-ttu-id="d8e64-135">[オプション **からフローを手動でトリガーする** ] を選択し、[作成] を **押します**。</span><span class="sxs-lookup"><span data-stu-id="d8e64-135">Choose **Manually trigger a flow** from the options and press **Create**.</span></span>
 
-11. <span data-ttu-id="4a440-136">このフローでは、すべての従業員に空の状態フィールドを取得するために、 **Get People** スクリプトを呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="4a440-136">The flow needs to call the **Get People** script to get all the employees with empty status fields.</span></span> <span data-ttu-id="4a440-137">[ **新しい手順** ] をクリックし、[ **Excel Online (Business)**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="4a440-137">Press **New step** and select **Excel Online (Business)**.</span></span> <span data-ttu-id="4a440-138">**[アクション]** の下から、**[スクリプトの実行 (プレビュー)]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="4a440-138">Under **Actions**, select **Run script (preview)**.</span></span> <span data-ttu-id="4a440-139">フローステップに対して次のエントリを指定します。</span><span class="sxs-lookup"><span data-stu-id="4a440-139">Provide the following entries for the flow step:</span></span>
+11. <span data-ttu-id="d8e64-136">フローは、空の状態フィールドを持つすべての従業員を取得するために Get **People** スクリプトを呼び出す必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8e64-136">The flow needs to call the **Get People** script to get all the employees with empty status fields.</span></span> <span data-ttu-id="d8e64-137">[新 **しい手順] を押** し **、[Excel Online] (ビジネス) を選択します**。</span><span class="sxs-lookup"><span data-stu-id="d8e64-137">Press **New step** and select **Excel Online (Business)**.</span></span> <span data-ttu-id="d8e64-138">**[アクション]** の下の **[スクリプトの実行 (プレビュー)]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="d8e64-138">Under **Actions**, select **Run script (preview)**.</span></span> <span data-ttu-id="d8e64-139">フロー ステップに次のエントリを指定します。</span><span class="sxs-lookup"><span data-stu-id="d8e64-139">Provide the following entries for the flow step:</span></span>
 
-    - <span data-ttu-id="4a440-140">**場所**: OneDrive for Business</span><span class="sxs-lookup"><span data-stu-id="4a440-140">**Location**: OneDrive for Business</span></span>
-    - <span data-ttu-id="4a440-141">**ドキュメント ライブラリ**: OneDrive</span><span class="sxs-lookup"><span data-stu-id="4a440-141">**Document Library**: OneDrive</span></span>
-    - <span data-ttu-id="4a440-142">**ファイル**: task-reminders.xlsx *(ファイルブラウザーから選択)*</span><span class="sxs-lookup"><span data-stu-id="4a440-142">**File**: task-reminders.xlsx *(Chosen through the file browser)*</span></span>
-    - <span data-ttu-id="4a440-143">**スクリプト**: ユーザーを取得する</span><span class="sxs-lookup"><span data-stu-id="4a440-143">**Script**: Get People</span></span>
+    - <span data-ttu-id="d8e64-140">**場所**: OneDrive for Business</span><span class="sxs-lookup"><span data-stu-id="d8e64-140">**Location**: OneDrive for Business</span></span>
+    - <span data-ttu-id="d8e64-141">**ドキュメント ライブラリ**: OneDrive</span><span class="sxs-lookup"><span data-stu-id="d8e64-141">**Document Library**: OneDrive</span></span>
+    - <span data-ttu-id="d8e64-142">**ファイル**: task-reminders.xlsx *(ファイル ブラウザーから選択)*</span><span class="sxs-lookup"><span data-stu-id="d8e64-142">**File**: task-reminders.xlsx *(Chosen through the file browser)*</span></span>
+    - <span data-ttu-id="d8e64-143">**スクリプト**: ユーザーを取得する</span><span class="sxs-lookup"><span data-stu-id="d8e64-143">**Script**: Get People</span></span>
 
-    ![最初に実行するスクリプトフローステップ。](../../images/scenario-task-reminders-first-flow-step.png)
+    ![最初のスクリプト フローの実行手順。](../../images/scenario-task-reminders-first-flow-step.png)
 
-12. <span data-ttu-id="4a440-145">次に、このフローは、スクリプトから返される配列内の各従業員を処理する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4a440-145">Next, the flow needs to process each Employee in the array returned by the script.</span></span> <span data-ttu-id="4a440-146">[ **新規作成** ] をクリックして、[ **Teams ユーザーにアダプティブカードを送信** し、応答を待つ] を選択します。</span><span class="sxs-lookup"><span data-stu-id="4a440-146">Press **New step** and select **Post an Adaptive Card to a Teams user and wait for a response**.</span></span>
+12. <span data-ttu-id="d8e64-145">次に、フローは、スクリプトによって返される配列内の各 Employee を処理する必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8e64-145">Next, the flow needs to process each Employee in the array returned by the script.</span></span> <span data-ttu-id="d8e64-146">[ **新しい手順]** を押し、[Teams ユーザーにアダプティブ カードを投稿する] を選択 **し、応答を待ちます**。</span><span class="sxs-lookup"><span data-stu-id="d8e64-146">Press **New step** and select **Post an Adaptive Card to a Teams user and wait for a response**.</span></span>
 
-13. <span data-ttu-id="4a440-147">[ **受信者** ] フィールドでは、動的コンテンツから **電子メール** を追加します (選択範囲には Excel ロゴが表示されます)。</span><span class="sxs-lookup"><span data-stu-id="4a440-147">For the **Recipient** field, add **email** from the dynamic content (the selection will have the Excel logo by it).</span></span> <span data-ttu-id="4a440-148">**電子メール** を追加すると、**各ブロックに適用** されるフローステップが囲まれます。</span><span class="sxs-lookup"><span data-stu-id="4a440-148">Adding **email** causes the flow step to be surrounded by an **Apply to each** block.</span></span> <span data-ttu-id="4a440-149">これは、アレイが電力自動化によって反復処理されることを意味します。</span><span class="sxs-lookup"><span data-stu-id="4a440-149">That means the array will be iterated over by Power Automate.</span></span>
+13. <span data-ttu-id="d8e64-147">[受信者 **] フィールド** で **、動的** コンテンツから電子メールを追加します (選択すると Excel ロゴが表示されます)。</span><span class="sxs-lookup"><span data-stu-id="d8e64-147">For the **Recipient** field, add **email** from the dynamic content (the selection will have the Excel logo by it).</span></span> <span data-ttu-id="d8e64-148">メール **を** 追加すると、フロー ステップは各ブロックに **適用されます** 。</span><span class="sxs-lookup"><span data-stu-id="d8e64-148">Adding **email** causes the flow step to be surrounded by an **Apply to each** block.</span></span> <span data-ttu-id="d8e64-149">つまり、配列は Power Automate によって反復処理されます。</span><span class="sxs-lookup"><span data-stu-id="d8e64-149">That means the array will be iterated over by Power Automate.</span></span>
 
-14. <span data-ttu-id="4a440-150">アダプティブカードを送信するには、 **メッセージ** としてカードの JSON を提供する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4a440-150">Sending an Adaptive Card requires the card's JSON to be provided as the **Message**.</span></span> <span data-ttu-id="4a440-151">[アダプティブカードデザイナー](https://adaptivecards.io/designer/)を使用して、カスタムカードを作成できます。</span><span class="sxs-lookup"><span data-stu-id="4a440-151">You can use the [Adaptive Card Designer](https://adaptivecards.io/designer/) to create custom cards.</span></span> <span data-ttu-id="4a440-152">この例では、次の JSON を使用します。</span><span class="sxs-lookup"><span data-stu-id="4a440-152">For this sample, use the following JSON.</span></span>  
+14. <span data-ttu-id="d8e64-150">アダプティブ カードを送信するには、カードの JSON をメッセージとして提供する必要 **があります**。</span><span class="sxs-lookup"><span data-stu-id="d8e64-150">Sending an Adaptive Card requires the card's JSON to be provided as the **Message**.</span></span> <span data-ttu-id="d8e64-151">アダプティブ カード デザイナーを [使用してカスタム](https://adaptivecards.io/designer/) カードを作成できます。</span><span class="sxs-lookup"><span data-stu-id="d8e64-151">You can use the [Adaptive Card Designer](https://adaptivecards.io/designer/) to create custom cards.</span></span> <span data-ttu-id="d8e64-152">このサンプルでは、次の JSON を使用します。</span><span class="sxs-lookup"><span data-stu-id="d8e64-152">For this sample, use the following JSON.</span></span>  
 
     ```json
     {
@@ -208,38 +208,38 @@ ms.locfileid: "49571452"
     }
     ```
 
-15. <span data-ttu-id="4a440-153">残りのフィールドに、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="4a440-153">Fill out the remaining fields as follows:</span></span>
+15. <span data-ttu-id="d8e64-153">残りのフィールドに次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="d8e64-153">Fill out the remaining fields as follows:</span></span>
 
-    - <span data-ttu-id="4a440-154">**メッセージの更新**: 進捗レポートを提出していただきありがとうございます。</span><span class="sxs-lookup"><span data-stu-id="4a440-154">**Update message**: Thank you for submitting your status report.</span></span> <span data-ttu-id="4a440-155">応答が正常にスプレッドシートに追加されました。</span><span class="sxs-lookup"><span data-stu-id="4a440-155">Your response has been successfully added to the spreadsheet.</span></span>
-    - <span data-ttu-id="4a440-156">**カードを更新する必要があり** ます。はい</span><span class="sxs-lookup"><span data-stu-id="4a440-156">**Should update card**: Yes</span></span>
+    - <span data-ttu-id="d8e64-154">**更新メッセージ**: ステータス レポートを提出してありがとうございます。</span><span class="sxs-lookup"><span data-stu-id="d8e64-154">**Update message**: Thank you for submitting your status report.</span></span> <span data-ttu-id="d8e64-155">応答がスプレッドシートに正常に追加されました。</span><span class="sxs-lookup"><span data-stu-id="d8e64-155">Your response has been successfully added to the spreadsheet.</span></span>
+    - <span data-ttu-id="d8e64-156">**カードを更新する必要があります**: はい</span><span class="sxs-lookup"><span data-stu-id="d8e64-156">**Should update card**: Yes</span></span>
 
-16. <span data-ttu-id="4a440-157">[ **各ブロックに適用** ] で、[ **Teams ユーザーにアダプティブカードを投稿** し、応答を待機する] の下にある [アクションの **追加**] をクリックします。</span><span class="sxs-lookup"><span data-stu-id="4a440-157">In the **Apply to each** block, following the **Post an Adaptive Card to a Teams user and wait for a response**, press **Add an action**.</span></span> <span data-ttu-id="4a440-158">[ **Excel Online (Business)**] を選択します。</span><span class="sxs-lookup"><span data-stu-id="4a440-158">Select **Excel Online (Business)**.</span></span> <span data-ttu-id="4a440-159">**[アクション]** の下から、**[スクリプトの実行 (プレビュー)]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="4a440-159">Under **Actions**, select **Run script (preview)**.</span></span> <span data-ttu-id="4a440-160">フローステップに対して次のエントリを指定します。</span><span class="sxs-lookup"><span data-stu-id="4a440-160">Provide the following entries for the flow step:</span></span>
+16. <span data-ttu-id="d8e64-157">[各 **ブロックに適用] で**、Teams ユーザーにアダプティブ カードを投稿し、応答を待つ後、[アクションの追加 **] を押します**。 </span><span class="sxs-lookup"><span data-stu-id="d8e64-157">In the **Apply to each** block, following the **Post an Adaptive Card to a Teams user and wait for a response**, press **Add an action**.</span></span> <span data-ttu-id="d8e64-158">[Excel **Online] (ビジネス) を選択します**。</span><span class="sxs-lookup"><span data-stu-id="d8e64-158">Select **Excel Online (Business)**.</span></span> <span data-ttu-id="d8e64-159">**[アクション]** の下の **[スクリプトの実行 (プレビュー)]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="d8e64-159">Under **Actions**, select **Run script (preview)**.</span></span> <span data-ttu-id="d8e64-160">フロー ステップに次のエントリを指定します。</span><span class="sxs-lookup"><span data-stu-id="d8e64-160">Provide the following entries for the flow step:</span></span>
 
-    - <span data-ttu-id="4a440-161">**場所**: OneDrive for Business</span><span class="sxs-lookup"><span data-stu-id="4a440-161">**Location**: OneDrive for Business</span></span>
-    - <span data-ttu-id="4a440-162">**ドキュメント ライブラリ**: OneDrive</span><span class="sxs-lookup"><span data-stu-id="4a440-162">**Document Library**: OneDrive</span></span>
-    - <span data-ttu-id="4a440-163">**ファイル**: task-reminders.xlsx *(ファイルブラウザーから選択)*</span><span class="sxs-lookup"><span data-stu-id="4a440-163">**File**: task-reminders.xlsx *(Chosen through the file browser)*</span></span>
-    - <span data-ttu-id="4a440-164">**スクリプト**: 状態の保存</span><span class="sxs-lookup"><span data-stu-id="4a440-164">**Script**: Save Status</span></span>
-    - <span data-ttu-id="4a440-165">**senderEmail**: 電子メール *(Excel の動的コンテンツ)*</span><span class="sxs-lookup"><span data-stu-id="4a440-165">**senderEmail**: email *(dynamic content from Excel)*</span></span>
-    - <span data-ttu-id="4a440-166">**Statusreportresponse**: Response *(Teams からの動的コンテンツ)*</span><span class="sxs-lookup"><span data-stu-id="4a440-166">**statusReportResponse**: response *(dynamic content from Teams)*</span></span>
+    - <span data-ttu-id="d8e64-161">**場所**: OneDrive for Business</span><span class="sxs-lookup"><span data-stu-id="d8e64-161">**Location**: OneDrive for Business</span></span>
+    - <span data-ttu-id="d8e64-162">**ドキュメント ライブラリ**: OneDrive</span><span class="sxs-lookup"><span data-stu-id="d8e64-162">**Document Library**: OneDrive</span></span>
+    - <span data-ttu-id="d8e64-163">**ファイル**: task-reminders.xlsx *(ファイル ブラウザーから選択)*</span><span class="sxs-lookup"><span data-stu-id="d8e64-163">**File**: task-reminders.xlsx *(Chosen through the file browser)*</span></span>
+    - <span data-ttu-id="d8e64-164">**スクリプト**: 状態の保存</span><span class="sxs-lookup"><span data-stu-id="d8e64-164">**Script**: Save Status</span></span>
+    - <span data-ttu-id="d8e64-165">**senderEmail**: メール *(Excel からの動的コンテンツ)*</span><span class="sxs-lookup"><span data-stu-id="d8e64-165">**senderEmail**: email *(dynamic content from Excel)*</span></span>
+    - <span data-ttu-id="d8e64-166">**statusReportResponse**: 応答 *(Teams の動的コンテンツ)*</span><span class="sxs-lookup"><span data-stu-id="d8e64-166">**statusReportResponse**: response *(dynamic content from Teams)*</span></span>
 
-    ![各フローステップに適用されます。](../../images/scenario-task-reminders-last-flow-step.png)
+    ![各フローステップへの適用。](../../images/scenario-task-reminders-last-flow-step.png)
 
-17. <span data-ttu-id="4a440-168">フローを保存します。</span><span class="sxs-lookup"><span data-stu-id="4a440-168">Save the flow.</span></span>
+17. <span data-ttu-id="d8e64-168">フローを保存します。</span><span class="sxs-lookup"><span data-stu-id="d8e64-168">Save the flow.</span></span>
 
-## <a name="running-the-flow"></a><span data-ttu-id="4a440-169">フローの実行</span><span class="sxs-lookup"><span data-stu-id="4a440-169">Running the flow</span></span>
+## <a name="running-the-flow"></a><span data-ttu-id="d8e64-169">フローの実行</span><span class="sxs-lookup"><span data-stu-id="d8e64-169">Running the flow</span></span>
 
-<span data-ttu-id="4a440-170">フローをテストするには、空の状態の表の行が Teams アカウントに関連付けられた電子メールアドレスを使用していることを確認してください (テスト中は、自分の電子メールアドレスを使用する必要があります)。</span><span class="sxs-lookup"><span data-stu-id="4a440-170">To test the flow, make sure any table rows with blank status use an email address tied to a Teams account (you should probably use your own email address while testing).</span></span>
+<span data-ttu-id="d8e64-170">フローをテストするには、空の状態のテーブル行で Teams アカウントに関連付けられている電子メール アドレスを使用します (テスト中は、独自の電子メール アドレスを使用する必要があります)。</span><span class="sxs-lookup"><span data-stu-id="d8e64-170">To test the flow, make sure any table rows with blank status use an email address tied to a Teams account (you should probably use your own email address while testing).</span></span>
 
-<span data-ttu-id="4a440-171">フローデザイナーで [ **テスト** ] を選択するか、[ **自分** のフロー] ページからフローを実行することができます。</span><span class="sxs-lookup"><span data-stu-id="4a440-171">You can either select **Test** from the flow designer, or run the flow from the **My flows** page.</span></span> <span data-ttu-id="4a440-172">フローを開始し、必要な接続の使用を承諾した後、Teams を通じて省電力処理カードを受信する必要があります。</span><span class="sxs-lookup"><span data-stu-id="4a440-172">After starting the flow and accepting the use of the required connections, you should receive an Adaptive Card from Power Automate through Teams.</span></span> <span data-ttu-id="4a440-173">カードで [状態] フィールドに入力すると、フローは続行され、指定した状態でスプレッドシートが更新されます。</span><span class="sxs-lookup"><span data-stu-id="4a440-173">Once you fill out the status field in the card, the flow will continue and update the spreadsheet with the status you provide.</span></span>
+<span data-ttu-id="d8e64-171">フロー デザイナーから **[テスト]** を選択するか、[マイ フロー] ページから **フローを実行** できます。</span><span class="sxs-lookup"><span data-stu-id="d8e64-171">You can either select **Test** from the flow designer, or run the flow from the **My flows** page.</span></span> <span data-ttu-id="d8e64-172">フローを開始し、必要な接続の使用を受け入れた後、Power Automate から Teams を介してアダプティブ カードを受け取る必要があります。</span><span class="sxs-lookup"><span data-stu-id="d8e64-172">After starting the flow and accepting the use of the required connections, you should receive an Adaptive Card from Power Automate through Teams.</span></span> <span data-ttu-id="d8e64-173">カードの状態フィールドに入力すると、フローは続行され、指定した状態でスプレッドシートが更新されます。</span><span class="sxs-lookup"><span data-stu-id="d8e64-173">Once you fill out the status field in the card, the flow will continue and update the spreadsheet with the status you provide.</span></span>
 
-### <a name="before-running-the-flow"></a><span data-ttu-id="4a440-174">フローを実行する前に</span><span class="sxs-lookup"><span data-stu-id="4a440-174">Before running the flow</span></span>
+### <a name="before-running-the-flow"></a><span data-ttu-id="d8e64-174">フローを実行する前に</span><span class="sxs-lookup"><span data-stu-id="d8e64-174">Before running the flow</span></span>
 
-![進捗レポートを含むワークシートに、不足しているステータスエントリが1つ含まれています。](../../images/scenario-task-reminders-spreadsheet-before.png)
+![不足している状態エントリが 1 つ含まれる状態レポートを含むワークシート。](../../images/scenario-task-reminders-spreadsheet-before.png)
 
-### <a name="receiving-the-adaptive-card"></a><span data-ttu-id="4a440-176">アダプティブカードの受信</span><span class="sxs-lookup"><span data-stu-id="4a440-176">Receiving the Adaptive Card</span></span>
+### <a name="receiving-the-adaptive-card"></a><span data-ttu-id="d8e64-176">アダプティブ カードの受信</span><span class="sxs-lookup"><span data-stu-id="d8e64-176">Receiving the Adaptive Card</span></span>
 
-![従業員に進捗の更新を求める、Teams のアダプティブカード。](../../images/scenario-task-reminders-adaptive-card.png)
+![ステータスの更新を従業員に求める Teams のアダプティブ カード。](../../images/scenario-task-reminders-adaptive-card.png)
 
-### <a name="after-running-the-flow"></a><span data-ttu-id="4a440-178">フローの実行後</span><span class="sxs-lookup"><span data-stu-id="4a440-178">After running the flow</span></span>
+### <a name="after-running-the-flow"></a><span data-ttu-id="d8e64-178">フローの実行後</span><span class="sxs-lookup"><span data-stu-id="d8e64-178">After running the flow</span></span>
 
-![現在入力されている進捗レポートを含むワークシート。](../../images/scenario-task-reminders-spreadsheet-after.png)
+![現在入力されている状態エントリを持つ状態レポートを含むワークシート。](../../images/scenario-task-reminders-spreadsheet-after.png)
