@@ -3,12 +3,12 @@ title: Excel on the web での Office スクリプトのスクリプトの基本
 description: Office スクリプトを作成する前に理解しておくべきオブジェクト モデルの情報と他の基本事項について説明します。
 ms.date: 07/08/2020
 localization_priority: Priority
-ms.openlocfilehash: acbeec69a5d9ae9e3ebfa95c9070033d1cca2265
-ms.sourcegitcommit: e7e019ba36c2f49451ec08c71a1679eb6dba4268
+ms.openlocfilehash: 4609dce617d18f7a7c9d2868a24792c51fb048c6
+ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2021
-ms.locfileid: "49933274"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "51570235"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Excel on the web での Office スクリプトのスクリプトの基本事項 (プレビュー)
 
@@ -20,7 +20,7 @@ ms.locfileid: "49933274"
 
 各 Office スクリプトには、最初のパラメーターとして `ExcelScript.Workbook` 型の `main` 関数を含める必要があります。 関数が実行されると、Excel アプリケーションはブックを最初のパラメーターとして指定して、この `main` 関数を呼び出します。 そのため、スクリプトを記録した後、またはコード エディターで新しいスクリプトを作成した後に、`main` 関数の基本シグネチャを変更しないようにすることが重要です。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   // Your code goes here
 }
@@ -48,7 +48,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 次のスクリプトは、アクティブなワークシートをブックから取得し、その名前を記録します。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the active worksheet.
     let sheet = workbook.getActiveWorksheet();
@@ -169,7 +169,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 次のスクリプトは、ブック内のすべてのテーブルを取得します。 これにより、ヘッダーが表示され、フィルター ボタンが表示され、テーブル スタイルが「TableStyleLight1」に設定されていることを確認します。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
   /* Get table collection */
   const tables = workbook.getTables();
@@ -191,7 +191,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 次のスクリプトは、ブック内の最初のワークシートに Excel のテーブルを作成します。 作成されたテーブルは、`addTable` メソッドによって返されます。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the first worksheet.
     let sheet = workbook.getWorksheets()[0];
@@ -213,7 +213,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 次のスクリプトは、ブック内の最初のワークシートを削除します。
 
-```typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get first worksheet.
     let sheet = workbook.getWorksheets()[0];

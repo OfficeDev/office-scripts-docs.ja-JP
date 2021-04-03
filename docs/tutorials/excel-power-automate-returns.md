@@ -3,12 +3,12 @@ title: 自動で実行される Power Automate フローにスクリプトから
 description: Power Automate を使用して Excel on the web 用の Office スクリプトを実行してリマインダー メールを送信する方法を示すチュートリアル。
 ms.date: 12/15/2020
 localization_priority: Priority
-ms.openlocfilehash: 1925a95938837707eacddff6832180b12cd2011c
-ms.sourcegitcommit: 5f79e5ba9935edb8a890012f2cde3b89fe80faa0
+ms.openlocfilehash: 31ba31ddbfb36f20087be6aa7d83b1b896a698d1
+ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2020
-ms.locfileid: "49727085"
+ms.lasthandoff: 04/02/2021
+ms.locfileid: "51570531"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow-preview"></a>自動で実行される Power Automate フローにスクリプトからデータを返す (プレビュー)
 
@@ -48,14 +48,14 @@ ms.locfileid: "49727085"
 
 1. これで空のスクリプトができました。 スクリプトを使用して、スプレッドシートからメール アドレスを取得します。 文字列が返されるように、`main` を次のように変更します。
 
-    ```typescript
+    ```TypeScript
     function main(workbook: ExcelScript.Workbook) : string {
     }
     ```
 
 1. 続いて、テーブルからすべてのデータを取得する必要があります。 それにより、スクリプトを使用して各行を確認できます。 `main` 関数に次のコードを追加します。
 
-    ```typescript
+    ```TypeScript
     // Get the H1 worksheet.
     let worksheet = workbook.getWorksheet("H1");
 
@@ -68,7 +68,7 @@ ms.locfileid: "49727085"
 
 1. テーブル内の日付は、[Excel の日付システム](https://support.microsoft.com/office/date-systems-in-excel-e7fe7167-48a9-4b96-bb53-5612a800b487)を使用して保存されます。 これらの日付は、比較できるように JavaScript の日付に変換する必要があります。 ヘルパー関数をスクリプトに追加します。 `main` 関数の外に次のコードを追加します。
 
-    ```typescript
+    ```TypeScript
     // Convert the Excel date to a JavaScript Date object.
     function convertDate(excelDateValue: number) {
         let javaScriptDate = new Date(Math.round((excelDateValue - 25569) * 86400 * 1000));
@@ -78,7 +78,7 @@ ms.locfileid: "49727085"
 
 1. 次に、現在誰が呼び出し期間中かを把握する必要があります。 それらの行では、開始日と終了日の間に現在の日付が含まれています。 ここでは、一度に 1 人だけが呼び出し期間であると想定してスクリプトを作成します。 スクリプトで配列を返して複数の値を処理することもできますが、現時点では、最初に一致するメール アドレスを返すようにします。 次の関数を `main` 関数の最後に追加します。
 
-    ```typescript
+    ```TypeScript
     // Look for the first row where today's date is between the row's start and end dates.
     let currentDate = new Date();
     for (let row = 0; row < tableValues.length; row++) {
@@ -93,7 +93,7 @@ ms.locfileid: "49727085"
 
 1. 最終的なスクリプトは、次のようになります。
 
-    ```typescript
+    ```TypeScript
     function main(workbook: ExcelScript.Workbook) : string {
         // Get the H1 worksheet.
         let worksheet = workbook.getWorksheet("H1");
