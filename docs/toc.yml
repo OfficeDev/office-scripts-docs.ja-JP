@@ -53,12 +53,44 @@ items:
             href: develop/excel-async-model.md
       - name: サンプル
         items:
-          - name: サンプル スクリプト
-            href: resources/excel-samples.md
+          - name: 概要
+            href: resources/samples/samples-overview.md
+          - name: 基本事項
+            items:
+              - name: スクリプトの基本
+                href: resources/excel-samples.md
+              - name: 範囲の基本
+                href: resources/samples/range-basics.md
+          - name: 応用
+            items:
+              - name: コメントを追加する
+                href: resources/samples/add-excel-comments.md
+              - name: 複数のテーブルを 1 つのテーブルにコピーする
+                href: resources/samples/copy-tables-combine.md
+              - name: ワークシートの空白行を数える
+                href: resources/samples/count-blank-rows.md
+              - name: Excel ファイルの相互参照とフォーマット
+                href: resources/samples/excel-cross-reference.md
+              - name: ドキュメント番号ジェネレーター
+                href: resources/samples/document-number-generator.md
+              - name: チャートとテーブルの画像をメールで送信
+                href: resources/samples/email-images-chart-table.md
+              - name: テーブルをフィルター処理し、可視範囲を取得する
+                href: resources/samples/filter-table-get-visible-range.md
+              - name: 計算モードの管理
+                href: resources/samples/excel-calculation.md
+              - name: 選択した行をテーブル間で移動する
+                href: resources/samples/move-rows-across-tables.md
+              - name: テーブル データを JSON として出力
+                href: resources/samples/get-table-data.md
+              - name: Excel セルからハイパーリンクを削除する
+                href: resources/samples/remove-hyperlinks-from-cells.md
+              - name: フォルダー内のすべての Excel ファイルでスクリプトを実行する
+                href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
+              - name: Excel データから Teams の出席依頼を送信する
+                href: resources/samples/send-teams-invite-from-excel-data.md
           - name: シナリオ
             items:
-              - name: 概要
-                href: resources/scenarios/sample-scenario-overview.md
               - name: Web ダウンロードの分析
                 href: resources/scenarios/analyze-web-downloads.md
               - name: NOAA の水位データを取得してグラフ化する
@@ -67,3 +99,7 @@ items:
                 href: resources/scenarios/grade-calculator.md
               - name: 作業リマインダー (Power Automate付き)
                 href: resources/scenarios/task-reminders.md
+          - name: コミュニティの投稿
+            items:
+              - name: 季節のご挨拶
+                href: resources/samples/community-seasons-greetings.md
