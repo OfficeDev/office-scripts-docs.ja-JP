@@ -3,12 +3,12 @@ title: 非同期 API をOffice古いスクリプトをサポートする
 description: スクリプト非同期 API のOffice、古いスクリプトに対して読み込み/同期パターンを使用する方法について説明します。
 ms.date: 02/08/2021
 localization_priority: Normal
-ms.openlocfilehash: d61a5d8affae2077b23e140645c19dac977ff0d2
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 143f52a7ffefb4f19ee36ba4343fd7c2f1cbdffe
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570284"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755078"
 ---
 # <a name="support-older-office-scripts-that-use-the-async-apis"></a>非同期 API をOffice古いスクリプトをサポートする
 
@@ -42,7 +42,7 @@ async function main(context: Excel.RequestContext) {
 
 次の図に、スクリプトとブックの間の制御フローの例を示します。
 
-![スクリプトからブックに対して実行される読み取りおよび書き込み操作を示す図。](../images/load-sync.png)
+:::image type="content" source="../images/load-sync.png" alt-text="スクリプトからブックに対して実行される読み取りおよび書き込み操作を示す図。":::
 
 ### <a name="sync"></a>同期
 

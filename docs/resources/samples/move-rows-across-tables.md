@@ -3,12 +3,12 @@ title: スクリプトを使用してテーブル間で行Officeする
 description: フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する方法について学習します。
 ms.date: 03/30/2021
 localization_priority: Normal
-ms.openlocfilehash: 0a66c8ff0f8e0e7b7f074ad77e8c660fc80b50a9
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 1adaeee1c8307d7775529496df115563831aed4d
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571300"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755043"
 ---
 # <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a>フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する
 
@@ -18,7 +18,7 @@ ms.locfileid: "51571300"
 * 選択した行を別のワークシートの別の (ターゲット) テーブルに移動します。
 * ソース テーブルに関連するフィルターを再適用します。
 
-![ブックの前と後のスクリーンショット](../../images/table-filter-before-after.png)
+:::image type="content" source="../../images/table-filter-before-after.png" alt-text="ブックの前と後のスクリーンショット":::
 
 このソリューションには 2 つのスクリプトがあります。 主な違いは、行の選択方法です。
 

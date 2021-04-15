@@ -1,34 +1,34 @@
 ---
-title: Office スクリプトファイルの保存と所有権
-description: Office スクリプトが Microsoft OneDrive に格納され、所有者間で転送される方法について説明します。
+title: Office スクリプト ファイルのストレージと所有権
+description: Microsoft OneDrive にOfficeし、所有者間で転送する方法に関する情報。
 ms.date: 11/13/2020
 localization_priority: Normal
-ms.openlocfilehash: 648f3b2cf7e7d8d3bab2cf07a090e116e267a99a
-ms.sourcegitcommit: 82d3c0ef1e187bcdeceb2b5fc3411186674fe150
+ms.openlocfilehash: bd868c1dbfd0b33d3cd9fc4ee774c654d86f9b07
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/18/2020
-ms.locfileid: "49346866"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755106"
 ---
-# <a name="office-scripts-file-storage-and-ownership"></a>Office スクリプトファイルの保存と所有権
+# <a name="office-scripts-file-storage-and-ownership"></a>Office スクリプト ファイルのストレージと所有権
 
-Office スクリプトは、Microsoft OneDrive に **ost** ファイルとして保存されます。 これにより、スクリプトは特定のブックの外に存在することができます。 OneDrive の設定は、すべてのスクリプトの **ost** ファイルの共有アクセスとアクセス許可を制御します。Excel のすべての設定に依存しません。
+Officeスクリプトは **、Microsoft OneDrive に .osts** ファイルとして保存されます。 これにより、スクリプトを特定のブックの外部に存在できます。 OneDrive 設定は、すべてのスクリプト **.osts** ファイルの共有アクセスとアクセス許可を制御します。Excel の設定とは独立しています。
 
 ## <a name="file-storage"></a>ファイルの記憶域
 
-Office スクリプトは OneDrive に保存されています。 この **ost** ファイルは、/ **ドキュメント/Office スクリプト/** フォルダーにあります。 ファイル名の変更や削除など、これらの **ost** ファイルに対して行われた編集は、コードエディターとスクリプトギャラリーに反映されます。
+スクリプトOffice OneDrive に保存されます。 **.osts ファイル** は **、/Documents/Officeフォルダーにあります**。 ファイルの名前の変更や削除など、これらの **.osts** ファイルに対して行われた編集は、コード エディターとスクリプト ギャラリーに反映されます。
 
-ブックの1つと共有されているスクリプトは、スクリプト作成者の OneDrive に残ります。 これらのフォルダーは、Excel で共有スクリプトを実行しても、ローカルフォルダーや OneDrive フォルダーにはコピーされません。 コードエディターの [ **コピーの作成** ] ボタンをクリックすると、スクリプトの別のコピーが OneDrive に保存されます。 コピーを変更しても、元のスクリプトには影響しません。
+ブックの 1 つと共有されているスクリプトは、スクリプト作成者の OneDrive に残ります。 Excel で共有スクリプトを実行すると、ローカル フォルダーまたは OneDrive フォルダーにはコピーされません。 コード **エディターの [コピーの** 作成] ボタンは、OneDrive にスクリプトの個別のコピーを保存します。 コピーに対する変更は、元のスクリプトには影響を与えかねない。
 
-### <a name="script-folders"></a>スクリプトフォルダー
+### <a name="script-folders"></a>スクリプト フォルダー
 
-OneDrive にフォルダーを追加すると、スクリプトを整理できます。 / **ドキュメント/Office スクリプト/** の下のフォルダーは、コードエディターの [ **マイスクリプト** ] セクションの下に表示されます。 これらのフォルダーは、コードエディターを使用して作成または削除できないことに注意してください。 同様に、スクリプトはフォルダーに配置したり、コードエディターを使用してフォルダー間で移動したりすることはできません。
+OneDrive にフォルダーを追加すると、スクリプトを整理し続けるのに役立ちます。 **/Documents/Office スクリプト/ の下の** フォルダーは、コード エディターの **[マイ スクリプト**] セクションに表示されます。 これらのフォルダーは、コード エディターを使用して作成または削除することはできません。 同様に、スクリプトをフォルダーに配置したり、コード エディターを使用してフォルダー間で移動したりすることはできません。
 
-![[コードエディター] 作業ウィンドウに表示されているフォルダー内の一部のスクリプト](../images/script-folders.png)
+:::image type="content" source="../images/script-folders.png" alt-text="作業ウィンドウに表示されるフォルダーに含まれるスクリプトを表示するコード エディターの [新しいスクリプト] ダイアログ。":::
 
 ## <a name="file-ownership-and-retention"></a>ファイルの所有権と保持
 
-Office スクリプトは、ユーザーの OneDrive に保存されます。 これらは、Microsoft OneDrive で指定されているアイテム保持ポリシーと削除ポリシーに従います。 組織から削除されるユーザーによって作成および共有されたスクリプトを処理する方法については、[OneDrive の保持と削除](/onedrive/retention-and-deletion)を参照してください。
+Officeスクリプトは、ユーザーの OneDrive に格納されます。 Microsoft OneDrive で指定された保持ポリシーと削除ポリシーに従います。 組織から削除されるユーザーによって作成および共有されたスクリプトを処理する方法については、[OneDrive の保持と削除](/onedrive/retention-and-deletion)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

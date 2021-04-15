@@ -3,12 +3,12 @@ title: Excel グラフと表の画像をメールで送信する
 description: Excel のグラフとテーブルのOfficeを抽出して電子メールで送信するには、スクリプトと Power Automate を使用する方法について学習します。
 ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: 7eb12526f97d72de31acdc3c9a4228c670875e2b
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: de3cf16537cb12db45d4d465d367d797d053afc4
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571375"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51754811"
 ---
 # <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>グラフOffice表の画像を電子メールで送信するには、スクリプトと Power Automate を使用します。
 
@@ -23,15 +23,15 @@ ms.locfileid: "51571375"
 
 _入力データ_
 
-![入力データ](../../images/input-data.png)
+:::image type="content" source="../../images/input-data.png" alt-text="入力データの表を示すワークシート。":::
 
 _出力グラフ_
 
-![作成されたグラフ](../../images/chart-created.png)
+:::image type="content" source="../../images/chart-created.png" alt-text="顧客による金額を示す列グラフが作成されました。":::
 
 _Power Automate フローを通じて受信された電子メール_
 
-![受信したメール](../../images/email-received.png)
+:::image type="content" source="../../images/email-received.png" alt-text="本文に埋め込まれた Excel グラフを示すフローによって送信される電子メール。":::
 
 ## <a name="solution"></a>ソリューション
 

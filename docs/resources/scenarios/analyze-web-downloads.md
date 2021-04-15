@@ -1,54 +1,54 @@
 ---
-title: 'Office スクリプトサンプルシナリオ: web ダウンロードを分析する'
-description: Excel ブックでインターネットトラフィックを生に取得し、その情報をテーブルに整理する前に元の場所を特定するサンプル。
-ms.date: 07/10/2020
+title: 'Office スクリプトのサンプル シナリオ: Web ダウンロードの分析'
+description: Excel ブックで生のインターネット トラフィック データを取得し、その情報をテーブルに整理する前に、発生元の場所を決定するサンプル。
+ms.date: 12/17/2020
 localization_priority: Normal
-ms.openlocfilehash: adc2cb401830b66b245c0dfcc4441b7ac9c8c61f
-ms.sourcegitcommit: 009935c5773761c5833e5857491af47e2c95d851
+ms.openlocfilehash: e351cd6c4a12e83a07a2f4ce5678d7aa10625118
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/25/2020
-ms.locfileid: "49408967"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755036"
 ---
-# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office スクリプトサンプルシナリオ: web ダウンロードを分析する
+# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office スクリプトのサンプル シナリオ: Web ダウンロードの分析
 
-このシナリオでは、企業の web サイトからダウンロードレポートを分析する作業を行っています。 この分析の目的は、web トラフィックが米国または世界の他の場所から送られてくるかどうかを判断することです。
+このシナリオでは、会社の Web サイトからダウンロード レポートを分析する必要があります。 この分析の目的は、Web トラフィックが米国または世界の他の場所から送信されるかどうかを判断します。
 
-仕事仲間がブックに生データをアップロードします。 各週のデータセットには、独自のワークシートがあります。 また、週単位の傾向を示す表とグラフを含む **サマリー** ワークシートもあります。
+同僚が生データをブックにアップロードします。 毎週のデータ セットには、独自のワークシートがあります。 また、週 **別の傾向を** 示す表とグラフを含むサマリー ワークシートがあります。
 
-作業中のワークシートのデータを週単位でダウンロードするスクリプトを開発します。 各ダウンロードに関連付けられている IP アドレスを解析し、それが US からのものであるかどうかを判断します。 答えは、ワークシートのブール値 ("TRUE" または "FALSE") として挿入され、それらのセルに条件付き書式が適用されます。 IP アドレスの場所の結果がワークシートに合計され、サマリーテーブルにコピーされます。
+アクティブなワークシートの毎週のダウンロード データを分析するスクリプトを開発します。 各ダウンロードに関連付けられた IP アドレスを解析し、それが米国から送信されたかどうかを判断します。 答えは、ブール値 ("TRUE" または "FALSE") としてワークシートに挿入され、条件付き書式がそれらのセルに適用されます。 IP アドレスの場所の結果はワークシートで合計され、サマリー テーブルにコピーされます。
 
-## <a name="scripting-skills-covered"></a>スクリプト作成スキルの説明
+## <a name="scripting-skills-covered"></a>スクリプティングのスキルをカバー
 
-- テキストの解析
-- スクリプト内の subfunctions
+- テキスト解析
+- スクリプトのサブ機能
 - 条件付き書式
 - テーブル
 
-## <a name="demo-video"></a>デモビデオ
+## <a name="demo-video"></a>デモ ビデオ
 
-このサンプルは、2020年2月に、Office アドインの開発者コミュニティコールの一部として使用されています。
+このサンプルは、2020 年 2 月Officeアドイン開発者コミュニティ呼び出しの一部としてデモされました。
 
 > [!VIDEO https://www.youtube.com/embed/vPEqbb7t6-Y?start=154]
 
 > [!NOTE]
-> このビデオに示されているコードは、古い API モデル ( [Office スクリプト非同期 api](../../develop/excel-async-model.md)) を使用しています。 このページに示されているサンプルは更新されていますが、コードは録音とは少し異なります。 この変更は、プレゼンターのデモのスクリプトまたはその他のコンテンツの動作には影響しません。
+> このビデオに示すコードでは、古い API モデル (スクリプト Async API の [Office) を使用します](../../develop/excel-async-model.md)。 このページに表示されるサンプルは更新されましたが、コードは記録とは少し異なります。 この変更は、発表者のデモのスクリプトや他のコンテンツの動作には影響しません。
 
-## <a name="setup-instructions"></a>セットアップの手順
+## <a name="setup-instructions"></a>セットアップ手順
 
-1. OneDrive に <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> をダウンロードします。
+1. OneDrive <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> をダウンロードします。
 
-2. Web 用の Excel でブックを開きます。
+2. Web 用の Excel を使用してブックを開きます。
 
-3. [ **自動化** ] タブで、 **コードエディター** を開きます。
+3. [自動化] **タブで** 、[すべてのスクリプト] **を開きます**。
 
-4. [ **コードエディター** ] 作業ウィンドウで、[ **新しいスクリプト** ] をクリックし、次のスクリプトをエディターに貼り付けます。
+4. [コード **エディター] 作業ウィンドウ** で、[新しいスクリプト] **を押** して、次のスクリプトをエディターに貼り付けます。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
       /* Get the Summary worksheet and table.
-       * End the script early if either object is not in the workbook.
-       */
+        * End the script early if either object is not in the workbook.
+        */
       let summaryWorksheet = workbook.getWorksheet("Summary");
       if (!summaryWorksheet) {
         console.log("The script expects a worksheet named \"Summary\". Please download the correct template and try again.");
@@ -59,39 +59,39 @@ ms.locfileid: "49408967"
         console.log("The script expects a summary table named \"Table1\". Please download the correct template and try again.");
         return;
       }
-
+  
       // Get the current worksheet.
       let currentWorksheet = workbook.getActiveWorksheet();
       if (currentWorksheet.getName().toLocaleLowerCase().indexOf("week") !== 0) {
         console.log("Please switch worksheet to one of the weekly data sheets and try again.")
         return;
       }
-
+  
       // Get the values of the active range of the active worksheet.
       let logRange = currentWorksheet.getUsedRange();
-
+  
       if (logRange.getColumnCount() !== 8) {
         console.log(`Verify that you are on the correct worksheet. Either the week's data has been already processed or the content is incorrect. The following columns are expected: ${[
-          "Time Stamp", "IP Address", "kilobytes", "user agent code", "milliseconds", "Request", "Results", "Referrer"
+            "Time Stamp", "IP Address", "kilobytes", "user agent code", "milliseconds", "Request", "Results", "Referrer"
         ]}`);
         return;
       }
       // Get the range that will contain TRUE/FALSE if the IP address is from the United States (US).
       let isUSColumn = logRange
-        .getLastColumn()
-        .getOffsetRange(0, 1);
-
+          .getLastColumn()
+          .getOffsetRange(0, 1);
+  
       // Get the values of all the US IP addresses.
       let ipRange = workbook.getWorksheet("USIPAddresses").getUsedRange();
-      let ipRangeValues = ipRange.getValues();
-      let logRangeValues = logRange.getValues();
+      let ipRangeValues = ipRange.getValues() as number[][];
+      let logRangeValues = logRange.getValues() as string[][];
       // Remove the first row.
       let topRow = logRangeValues.shift();
       console.log(`Analyzing ${logRangeValues.length} entries.`);
-
+  
       // Create a new array to contain the boolean representing if this is a US IP address.
       let newCol = [];
-
+  
       // Go through each row in worksheet and add Boolean.
       for (let i = 0; i < logRangeValues.length; i++) {
         let curRowIP = logRangeValues[i][1];
@@ -101,43 +101,43 @@ ms.locfileid: "49408967"
           newCol.push([false]);
         }
       }
-
+  
       // Remove the empty column header and add proper heading.
       newCol = [["Is US IP"], ...newCol];
-
+  
       // Write the result to the spreadsheet.
       console.log(`Adding column to indicate whether IP belongs to US region or not at address: ${isUSColumn.getAddress()}`);
       console.log(newCol.length);
       console.log(newCol);
       isUSColumn.setValues(newCol);
-
+  
       // Call the local function to add summary data to the worksheet.
       addSummaryData();
-
+  
       // Call the local function to apply conditional formatting.
       applyConditionalFormatting(isUSColumn);
-
+  
       // Autofit columns.
       currentWorksheet.getUsedRange().getFormat().autofitColumns();
-
+  
       // Get the calculated summary data.
       let summaryRangeValues = currentWorksheet.getRange("J2:M2").getValues();
-
+  
       // Add the corresponding row to the summary table.
       summaryTable.addRow(null, summaryRangeValues[0]);
       console.log("Complete.");
       return;
-
+  
       /**
        * A function to add summary data on the worksheet.
-       */
+        */
       function addSummaryData() {
         // Add a summary row and table.
         let summaryHeader = [["Year", "Week", "US", "Other"]];
         let countTrueFormula =
-          "=COUNTIF(" + isUSColumn.getAddress() + ', "=TRUE")/' + (newCol.length - 1);
+            "=COUNTIF(" + isUSColumn.getAddress() + ', "=TRUE")/' + (newCol.length - 1);
         let countFalseFormula =
-          "=COUNTIF(" + isUSColumn.getAddress() + ', "=FALSE")/' + (newCol.length - 1);
+            "=COUNTIF(" + isUSColumn.getAddress() + ', "=FALSE")/' + (newCol.length - 1);
 
         let summaryContent = [
           [
@@ -147,10 +147,8 @@ ms.locfileid: "49408967"
             countFalseFormula
           ]
         ];
-        let summaryHeaderRow = currentWorksheet
-          .getRange("J1:M1");
-        let summaryContentRow = currentWorksheet
-          .getRange("J2:M2");
+        let summaryHeaderRow = currentWorksheet.getRange("J1:M1");
+        let summaryContentRow = currentWorksheet.getRange("J2:M2");
         console.log("2");
 
         summaryHeaderRow.setValues(summaryHeader);
@@ -161,8 +159,8 @@ ms.locfileid: "49408967"
 
         let formats = [[".000", ".000"]];
         summaryContentRow
-          .getOffsetRange(0, 2)
-          .getResizedRange(0, -2).setNumberFormats(formats);
+            .getOffsetRange(0, 2)
+            .getResizedRange(0, -2).setNumberFormats(formats);
       }
     }
     /**
@@ -171,21 +169,21 @@ ms.locfileid: "49408967"
     function applyConditionalFormatting(isUSColumn: ExcelScript.Range) {
       // Add conditional formatting to the new column.
       let conditionalFormatTrue = isUSColumn.addConditionalFormat(
-        ExcelScript.ConditionalFormatType.cellValue
+          ExcelScript.ConditionalFormatType.cellValue
       );
       let conditionalFormatFalse = isUSColumn.addConditionalFormat(
-        ExcelScript.ConditionalFormatType.cellValue
+          ExcelScript.ConditionalFormatType.cellValue
       );
       // Set TRUE to light blue and FALSE to light orange.
       conditionalFormatTrue.getCellValue().getFormat().getFill().setColor("#8FA8DB");
       conditionalFormatTrue.getCellValue().setRule({
-        formula1: "=TRUE",
-        operator: ExcelScript.ConditionalCellValueOperator.equalTo
+          formula1: "=TRUE",
+          operator: ExcelScript.ConditionalCellValueOperator.equalTo
       });
       conditionalFormatFalse.getCellValue().getFormat().getFill().setColor("#F8CCAD");
       conditionalFormatFalse.getCellValue().setRule({
-        formula1: "=FALSE",
-        operator: ExcelScript.ConditionalCellValueOperator.equalTo
+          formula1: "=FALSE",
+          operator: ExcelScript.ConditionalCellValueOperator.equalTo
       });
     }
     /**
@@ -195,14 +193,14 @@ ms.locfileid: "49408967"
     function ipAddressToInteger(ipAddress: string): number {
       // Split the IP address into octets.
       let octets = ipAddress.split(".");
-
+  
       // Create a number for each octet and do the math to create the integer value of the IP address.
       let fullNum =
-        // Define an arbitrary number for the last octet.
-        111 +
-        parseInt(octets[2]) * 256 +
-        parseInt(octets[1]) * 65536 +
-        parseInt(octets[0]) * 16777216;
+          // Define an arbitrary number for the last octet.
+          111 +
+          parseInt(octets[2]) * 256 +
+          parseInt(octets[1]) * 65536 +
+          parseInt(octets[0]) * 16777216;
       return fullNum;
     }
     /**
@@ -220,18 +218,18 @@ ms.locfileid: "49408967"
     }
     ```
 
-5. スクリプトの名前を変更して **Web ダウンロードを分析** し、保存します。
+5. スクリプトの名前を **[Web ダウンロードの分析] に変更し** 、保存します。
 
 ## <a name="running-the-script"></a>スクリプトを実行する
 
-任意の **\* \* 週** のワークシートに移動し、[Web 用の **ダウンロードの分析**] スクリプトを実行します。 このスクリプトは、現在のシートに条件付き書式と場所のラベルを適用します。 **サマリー** ワークシートも更新されます。
+[週] ワークシート **に \* \* 移動** し、[Web ダウンロードの分析]**スクリプトを実行** します。 スクリプトは、現在のシートに条件付き書式と場所のラベル付けを適用します。 また、[概要] ワークシート **も更新** されます。
 
 ### <a name="before-running-the-script"></a>スクリプトを実行する前に
 
-![生の web トラフィックデータを示すワークシート。](../../images/scenario-analyze-web-downloads-before.png)
+:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="生の Web トラフィック データを表示するワークシート。":::
 
-### <a name="after-running-the-script"></a>スクリプトを実行した後
+### <a name="after-running-the-script"></a>スクリプトの実行後
 
-![以前の web トラフィック行で書式設定された IP 位置情報を示すワークシート。](../../images/scenario-analyze-web-downloads-after.png)
+:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="前の Web トラフィック行で書式設定された IP 場所情報を表示するワークシート。":::
 
-![スクリプトが実行されたワークシートの要約を示す表とグラフ。](../../images/scenario-analyze-web-downloads-table.png)
+:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="スクリプトが実行されたワークシートをまとめたサマリー テーブルとグラフ。":::

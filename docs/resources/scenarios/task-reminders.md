@@ -3,12 +3,12 @@ title: 'Office スクリプトのサンプル シナリオ: タスクの自動�
 description: Power Automate カードとアダプティブ カードを使用するサンプルは、プロジェクト管理スプレッドシートのタスク リマインダーを自動化します。
 ms.date: 11/30/2020
 localization_priority: Normal
-ms.openlocfilehash: 342abced09119ff286f87c1425e44f9186dc4488
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: a229a06e9f1f9118d57dadac8864bbc7eae7315b
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570228"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755155"
 ---
 # <a name="office-scripts-sample-scenario-automated-task-reminders"></a>Office スクリプトのサンプル シナリオ: タスクの自動アラーム
 
@@ -161,7 +161,7 @@ ms.locfileid: "51570228"
     - **ファイル**: task-reminders.xlsx *(ファイル ブラウザーから選択)*
     - **スクリプト**: ユーザーを取得する
 
-    ![最初のスクリプト フローの実行手順。](../../images/scenario-task-reminders-first-flow-step.png)
+    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="最初のスクリプト フローステップの実行を示す Power Automate フロー。":::
 
 12. 次に、フローは、スクリプトによって返される配列内の各 Employee を処理する必要があります。 [ **新しい手順]** を押し、[Teams ユーザーにアダプティブ カードを投稿する] を選択 **し、応答を待ちます**。
 
@@ -222,7 +222,7 @@ ms.locfileid: "51570228"
     - **senderEmail**: メール *(Excel からの動的コンテンツ)*
     - **statusReportResponse**: 応答 *(Teams の動的コンテンツ)*
 
-    ![各フローステップへの適用。](../../images/scenario-task-reminders-last-flow-step.png)
+    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="各ステップへの適用を示す Power Automate フロー。":::
 
 17. フローを保存します。
 
@@ -234,12 +234,12 @@ ms.locfileid: "51570228"
 
 ### <a name="before-running-the-flow"></a>フローを実行する前に
 
-![不足している状態エントリが 1 つ含まれる状態レポートを含むワークシート。](../../images/scenario-task-reminders-spreadsheet-before.png)
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-before.png" alt-text="不足している状態エントリが 1 つ含まれる状態レポートを含むワークシート。":::
 
 ### <a name="receiving-the-adaptive-card"></a>アダプティブ カードの受信
 
-![ステータスの更新を従業員に求める Teams のアダプティブ カード。](../../images/scenario-task-reminders-adaptive-card.png)
+:::image type="content" source="../../images/scenario-task-reminders-adaptive-card.png" alt-text="ステータスの更新を従業員に求める Teams のアダプティブ カード。":::
 
 ### <a name="after-running-the-flow"></a>フローの実行後
 
-![現在入力されている状態エントリを持つ状態レポートを含むワークシート。](../../images/scenario-task-reminders-spreadsheet-after.png)
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-after.png" alt-text="現在入力されている状態エントリを持つ状態レポートを含むワークシート。":::

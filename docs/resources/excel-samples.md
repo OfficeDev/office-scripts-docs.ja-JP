@@ -3,12 +3,12 @@ title: Web 上の Excel Officeスクリプトの基本的なスクリプト
 description: Web 上の Excel のスクリプトOffice使用するコード サンプルのコレクション。
 ms.date: 04/01/2021
 localization_priority: Normal
-ms.openlocfilehash: f52500f480b7e7fa637a606b99de035da326a4ba
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 32c380a2abdb0596bbfdb387768735fbfdcf7c08
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570517"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755092"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Web 上の Excel Officeスクリプトの基本的なスクリプト
 
@@ -296,7 +296,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 このサンプルでは、ブック内の最初のピボットテーブルを検索し、値を "Grand Total" セルに記録します (下の図では緑色で強調表示されています)。
 
-![[総計] 行が緑色で強調表示された、果物の販売ピボットテーブル。](../images/sample-pivottable-grand-total-row.png)
+:::image type="content" source="../images/sample-pivottable-grand-total-row.png" alt-text="[総合計] 行が緑色で強調表示された、果物の売上を示すピボットテーブル。":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -324,7 +324,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 このスクリプトは、セルのドロップダウン選択リストを作成します。 選択した範囲の既存の値をリストの選択肢として使用します。
 
-![範囲に 3 つの単語を表示し、ドロップダウン リストに同じ単語を表示する、前と後のスクリーンショットのセット。](../images/sample-data-validation.png)
+:::image type="content" source="../images/sample-data-validation.png" alt-text="色の選択肢 '赤、青、緑' を含む 3 つのセルの範囲を示すワークシートで、ドロップダウン リストに表示されるのと同じ選択肢を示します。":::
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

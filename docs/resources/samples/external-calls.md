@@ -3,12 +3,12 @@ title: スクリプトで外部 API 呼び出Officeする
 description: スクリプトで外部 API 呼び出しを行うOfficeします。
 ms.date: 03/30/2021
 localization_priority: Normal
-ms.openlocfilehash: d0abfa0bb1adedc7535059ed359b8053d9f1c84d
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 0ed57ed3b97309dbb7ea196695dcc347e133b3cf
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571471"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51754804"
 ---
 # <a name="external-api-calls-from-office-scripts"></a>スクリプトからの外部 API Office呼び出し
 
@@ -40,8 +40,6 @@ Officeスクリプトを使用すると、 [外部 API 呼び出しのサポー�
 ## <a name="scenario"></a>シナリオ
 
 このスクリプトは、ユーザーの GitHub リポジトリに関する基本情報を取得します。
-
-![リポジトリ情報の取得例](../../images/git.png)
 
 ## <a name="resources-used-in-the-sample"></a>サンプルで使用されるリソース
 

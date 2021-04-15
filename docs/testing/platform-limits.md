@@ -3,12 +3,12 @@ title: プラットフォームの制限と要件 (スクリプトOffice)
 description: Web 上の Excel で使用する場合Officeスクリプトのリソース制限とブラウザーのサポート
 ms.date: 03/12/2021
 localization_priority: Normal
-ms.openlocfilehash: 93307b6204f409f26c77b5ead33188205d5c4b4d
-ms.sourcegitcommit: 5bde455b06ee2ed007f3e462d8ad485b257774ef
+ms.openlocfilehash: ef733562fb3caa8261fbbd8382923927a46cb7d4
+ms.sourcegitcommit: 5ca286615a11d282e3f80023d22d36a039800eed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/17/2021
-ms.locfileid: "50837266"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51689767"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>プラットフォームの制限と要件 (スクリプトOffice)
 
@@ -49,7 +49,7 @@ Web 上の Excel で [自動化] タブを表示するには、ブラウザー�
 
 ### <a name="power-automate"></a>Power Automate
 
-Power Automate で Office スクリプトを使用する場合、各ユーザーは **1 日あたり 200 回の呼び出しに制限されます**。 この制限は、UTC の午前 12:00 にリセットされます。
+Power Automate で Office スクリプトを使用する場合、各ユーザーは 1 日にスクリプトの実行アクションに対して 400 回の呼び **出しに制限されます**。 この制限は、UTC の午前 12:00 にリセットされます。
 
 Power Automate プラットフォームには使用上の制限があります。これは次の記事で確認できます。
 

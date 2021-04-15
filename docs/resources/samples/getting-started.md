@@ -4,12 +4,12 @@ description: アクセス、環境Officeスクリプト パターンを含むス
 ms.date: 04/01/2021
 localization_priority: Normal
 ROBOTS: NOINDEX
-ms.openlocfilehash: c1c4675b2fdc1f5ebd9e86f04f5fb011c27a3f1b
-ms.sourcegitcommit: 190ae1c071243f4638d0d650e35f1425914b0156
+ms.openlocfilehash: 42b71a21470ac38535e3e95f091ec6267806e54a
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2021
-ms.locfileid: "51650368"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755057"
 ---
 # <a name="getting-started"></a>はじめに
 
@@ -97,7 +97,7 @@ Officeスクリプトの実行は関数から始 `main` まります。 スク�
 * 関数 `main` は、任意のスクリプトのエントリ ポイントです。 関数が実行されると、Excel アプリケーションはブックを最初のパラメーターとして指定して、このメイン関数を呼び出します。
 * 最初の引数とその型宣言は、表示 `workbook` された状態で保持することが重要です。 関数に新しい引数を追加できますが (次のセクションを参照)、最初の引数は変更 `main` しません。
 
-![主な関数は、スクリプトのエントリ ポイントです。](../../images/getting-started-main-introduction.png)
+:::image type="content" source="../../images/getting-started-main-introduction.png" alt-text="主な関数は、スクリプトのエントリ ポイントです。":::
 
 #### <a name="send-or-receive-data-from-other-apps"></a>他のアプリからのデータの送受信
 
@@ -105,13 +105,13 @@ Power Automate でスクリプトを実行すると、Excel を組織の他の�
 
 Excel と Excel の間でデータを受信または送信する方法は、関数を介 `main` して行います。 これは、受信データと送信データをスクリプトで記述および使用できる情報ゲートウェイと考えてください。 データ型を使用して、スクリプトの外部からデータを受け取り、TypeScript で認識されるデータ (、など) を返したり、スクリプトで定義したインターフェイスの形式のオブジェクトを `string` `string` `number` `boolean` 返したりできます。
 
-![スクリプトの入力と出力](../../images/getting-started-data-in-out.png)
+:::image type="content" source="../../images/getting-started-data-in-out.png" alt-text="スクリプトの入力と出力":::
 
 #### <a name="use-functions-to-organize-and-reuse-code"></a>関数を使用してコードを整理および再利用する
 
 関数を使用して、スクリプト内でコードを整理および再利用できます。
 
-![スクリプトでの関数の使用](../../images/getting-started-use-functions.png)
+:::image type="content" source="../../images/getting-started-use-functions.png" alt-text="スクリプトでの関数の使用":::
 
 ### <a name="objects-hierarchy-methods-properties-collections"></a>オブジェクト、階層、メソッド、プロパティ、コレクション
 
@@ -496,9 +496,9 @@ let someVariable: any;
 
 この `any` 型は、スクリプトが Excel API をOffice方法に課題を提示します。 変数を Excel API に送信して処理すると、問題が発生します。 スクリプトで使用される変数の種類を知ることは、スクリプトの処理に不可欠であるため、型を持つ変数の明示的な定義 `any` は禁止されています。 スクリプトで型が宣言された変数がある場合は、コンパイル時エラー (スクリプトを実行する前のエラー) `any` が表示されます。 エディターにもエラーが表示されます。
 
-![明示的な 'any' エラー](../../images/getting-started-eanyi.png)
+:::image type="content" source="../../images/getting-started-eanyi.png" alt-text="明示的な 'any' エラー":::
 
-![Output に表示される明示的な 'any' エラー](../../images/getting-started-expany.png)
+:::image type="content" source="../../images/getting-started-expany.png" alt-text="Output に表示される明示的な 'any' エラー":::
 
 前の図に表示されたコードでは、 `[5, 16] Explicit Any is not allowed` 行 5 列 16 が型を宣言します `any` 。 これにより、エラーを含むコード行を見つけるのに役立ちます。
 
@@ -529,7 +529,7 @@ let x = 3;
 
 スクリプトでは、明示的または暗黙的に宣言するために使用される変数の種類が必要です。 TypeScript コンパイラが変数の種類を特定できない場合 (型が明示的に宣言されていないか、型の推論ができないため)、コンパイル時間エラーが発生します (スクリプトを実行する前にエラーが発生します)。 エディターにもエラーが表示されます。
 
-![エディターに表示される暗黙的な 'any' エラー](../../images/getting-started-iany.png)
+:::image type="content" source="../../images/getting-started-iany.png" alt-text="エディターに表示される暗黙的な 'any' エラー。":::
 
 変数は型なしで宣言され、TypeScript は宣言時に型を特定できないので、次のスクリプトではコンパイル時間エラーが発生します。
 
@@ -590,15 +590,15 @@ Officeスクリプト エラーは、次のいずれかのカテゴリに分類�
 
 エディターの警告は、エディターの波状の赤い下線を使用して識別できます。
 
-![エディターに表示されるコンパイル時の警告](../../images/getting-started-eanyi.png)
+:::image type="content" source="../../images/getting-started-eanyi.png" alt-text="エディターに表示されるコンパイル時の警告":::
 
 オレンジ色の警告の下線と灰色の情報メッセージが表示される場合があります。 エラーは発生しませんが、密接に調べる必要があります。
 
 両方のエラー メッセージが同一に見えるので、コンパイル時エラーと実行時エラーを区別することはできません。 これらはどちらも、実際にスクリプトを実行するときに発生します。 次の図は、コンパイル時エラーと実行時エラーの例を示しています。
 
-![コンパイル時エラーの例](../../images/getting-started-expany.png)
+:::image type="content" source="../../images/getting-started-expany.png" alt-text="コンパイル時エラーの例":::
 
-![実行時エラーの例](../../images/getting-started-error-basic.png)
+:::image type="content" source="../../images/getting-started-error-basic.png" alt-text="実行時エラーの例":::
 
 どちらの場合も、エラーが発生した行番号が表示されます。 その後、コードを確認し、問題を解決し、もう一度実行できます。
 

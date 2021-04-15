@@ -1,62 +1,62 @@
 ---
-title: パワー自動化を使用して Office スクリプトを実行する
-description: Power 自動ワークフローを使用して、web 上の Excel で Office スクリプトを取得する方法について説明します。
-ms.date: 07/24/2020
+title: Power Automate Officeスクリプトを実行する
+description: Power Automate ワークフロー Office操作する Web 上の Excel スクリプトを取得する方法。
+ms.date: 12/16/2020
 localization_priority: Normal
-ms.openlocfilehash: 87bd4e15ef7680a7456077494e3fda8208d6b9d8
-ms.sourcegitcommit: e9a8ef5f56177ea9a3d2fc5ac636368e5bdae1f4
+ms.openlocfilehash: 1ca9aa14efe7cf2c91100a32fbc9a69054012f06
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/01/2020
-ms.locfileid: "47321573"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755071"
 ---
-# <a name="run-office-scripts-with-power-automate"></a>パワー自動化を使用して Office スクリプトを実行する
+# <a name="run-office-scripts-with-power-automate"></a>Power Automate Officeスクリプトを実行する
 
-[Power オートメーション](https://flow.microsoft.com) を使用すると、より大きな自動化されたワークフローに Office スクリプトを追加することができます。 Power オートメーションでは、ワークシートのテーブルに電子メールの内容を追加したり、ブックのコメントに基づいてプロジェクト管理ツールでアクションを作成したりするなどの操作を実行できます。
+[Power Automate を](https://flow.microsoft.com) 使用すると、Officeスクリプトを大規模で自動化されたワークフローに追加できます。 Power Automate を使用すると、ワークシートのテーブルに電子メールの内容を追加したり、ブックのコメントに基づいてプロジェクト管理ツールでアクションを作成したりすることができます。
 
 ## <a name="getting-started"></a>はじめに
 
-電力を自動自動化することが初めての場合は、「 [Power オートメーションの使用を開始](/power-automate/getting-started)する」を参照することをお勧めします。 ここでは、使用可能な自動化のすべての機能について詳しく知ることができます。 ここでは、Office スクリプトが電力自動化とどのように機能するか、および Excel の操作を改善する方法に重点を置いてドキュメントを作成します。
+Power Automate を使用する場合は、「Power Automate の使用を開始 [する」にアクセスすることをお勧めします](/power-automate/getting-started)。 そこで、利用可能なすべてのオートメーションの可能性について詳しくは、ご覧ください。 このドキュメントでは、Power Automate Officeスクリプトがどのように動作し、Excel エクスペリエンスを向上させるのに役立つのかについて重点的に取り上っています。
 
-Power オートメーションと Office のスクリプトの組み合わせを開始するには、チュートリアルの次の手順を実行し [て、Power 自動化を使用したスクリプトの使用を開始](../tutorials/excel-power-automate-manual.md)します。 これにより、簡単なスクリプトを呼び出すフローを作成する方法を学習できます。 そのチュートリアルを完了した後、 [自動実行電源自動化フローチュートリアルで [スクリプトにデータを渡す](../tutorials/excel-power-automate-trigger.md) ] を参照してください。 Office スクリプトを power オートメーションフローに接続する方法について詳しくは、こちらを参照してください。
+Power Automate スクリプトと Officeスクリプトの組み合Office、Power Automate を使用したスクリプトの [使用を開始するチュートリアルに従います](../tutorials/excel-power-automate-manual.md)。 これにより、単純なスクリプトを呼び出すフローを作成する方法を説明します。 このチュートリアルと、自動的に実行される [Power Automate](../tutorials/excel-power-automate-trigger.md) フロー チュートリアルのスクリプトへのデータの渡しを完了したら、Office スクリプトを Power Automate フローに接続する方法の詳細については、ここに戻します。
 
 ## <a name="excel-online-business-connector"></a>Excel Online (Business) コネクタ
 
-[コネクタ](/connectors/connectors) は、電力の自動化とアプリケーションの間のブリッジです。 [Excel Online (Business) コネクタ](/connectors/excelonlinebusiness)を使用すると、excel ブックへのアクセスがフローに付与されます。 "スクリプトを実行する" アクションを使用すると、選択したブックからアクセス可能な Office スクリプトを呼び出すことができます。 また、フローによってデータが提供されるように、スクリプトの入力パラメーターを指定することもできます。または、スクリプトで後の手順に関する情報を返すようにします。
+[コネクタは](/connectors/connectors) 、Power Automate とアプリケーションの間のブリッジです。 [Excel Online (Business) コネクタを使用すると](/connectors/excelonlinebusiness)、フローから Excel ブックにアクセスできます。 "スクリプトの実行" アクションでは、選択したブックからアクセスOfficeスクリプトを呼び出します。 また、フローによってデータを提供できるようスクリプトにパラメーターを入力したり、フロー内の後の手順に関する情報をスクリプトから返したりすることもできます。
 
 > [!IMPORTANT]
-> "スクリプトを実行する" アクションを実行すると、Excel コネクタを使用するユーザーに、ブックとそのデータに対して重要なアクセス権が与えられます。 また、外部の [呼び出しからの外部呼び出し](external-calls.md)について説明するように、外部 API を呼び出すスクリプトにはセキュリティリスクがあります。 管理者が非常に機密性の高いデータの公開を懸念している場合は、Excel Online コネクタをオフにするか、 [Office スクリプト管理者コントロール](/microsoft-365/admin/manage/manage-office-scripts-settings)を使用して office スクリプトへのアクセスを制限することができます。
+> "スクリプトの実行" アクションにより、Excel コネクタを使用するユーザーはブックとそのデータに重要なアクセス権を与えます。 さらに [、「Power Automate](external-calls.md)からの外部呼び出し」で説明したように、外部 API 呼び出しを行うスクリプトにはセキュリティリスクがあります。 管理者が機密性の高いデータの露出に関心がある場合は、Excel Online コネクタをオフにするか、Office スクリプト管理者コントロールを使用して Office スクリプトへのアクセス [を制限できます](/microsoft-365/admin/manage/manage-office-scripts-settings)。
 
 ## <a name="data-transfer-in-flows-for-scripts"></a>スクリプトのフローでのデータ転送
 
-電源自動化を使用すると、フローの手順間でデータを渡すことができます。 必要な種類の情報を受け入れるようにスクリプトを構成して、フローに必要なブックから任意のものを返すことができます。 スクリプトへの入力は、関数にパラメーターを追加することによって指定され `main` ます (に加えて `workbook: ExcelScript.Workbook` )。 スクリプトからの出力は、戻り値の型をに追加することによって宣言され `main` ます。
+Power Automate を使用すると、フローのステップ間でデータを渡します。 必要な情報の種類を受け入れ、フローで必要な情報をブックから返すスクリプトを構成できます。 スクリプトの入力は、(に加えて) 関数にパラメーター `main` を追加することで指定されます `workbook: ExcelScript.Workbook` 。 スクリプトからの出力は、 に戻り値の型を追加することで宣言されます `main` 。
 
 > [!NOTE]
-> フローに "実行スクリプト" ブロックを作成すると、受け入れられるパラメーターと返される型が設定されます。 スクリプトのパラメーターまたは戻り値の型を変更する場合は、フローの "Run script" ブロックをやり直す必要があります。 これにより、データが正しく解析されるようになります。
+> フローで "スクリプトの実行" ブロックを作成すると、受け入れられるパラメーターと返される型が設定されます。 スクリプトのパラメーターまたは戻り値の種類を変更する場合は、フローの "スクリプトの実行" ブロックをやり直す必要があります。 これにより、データが正しく解析されます。
 
-次のセクションでは、電力の自動化に使用されるスクリプトの入力と出力の詳細について説明します。 このトピックを学習するための実践的なアプローチを希望される場合は、「自動 [実行パワー自動フローのチュートリアルで、スクリプトにデータを渡す」](../tutorials/excel-power-automate-trigger.md) をお試しください。または、 [自動タスクリマインダー](../resources/scenarios/task-reminders.md) サンプルシナリオを参照してください。
+次のセクションでは、Power Automate で使用されるスクリプトの入力と出力の詳細について説明します。 このトピックの学習に関する実践的なアプローチが必要な場合は、自動実行の[Power Automate](../tutorials/excel-power-automate-trigger.md)フローチュートリアルでスクリプトにデータを渡すチュートリアル[](../resources/scenarios/task-reminders.md)を試してみるか、自動タスク リマインダーのサンプル シナリオを参照してください。
 
 ### <a name="main-parameters-passing-data-to-a-script"></a>`main` パラメーター: スクリプトにデータを渡す
 
-すべてのスクリプトの入力は、関数の追加パラメーターとして指定され `main` ます。 たとえば、入力として名前を表すを受け入れるスクリプトが必要な場合は、 `string` `main` 署名をに変更し `function main(workbook: ExcelScript.Workbook, name: string)` ます。
+すべてのスクリプト入力は、関数の追加パラメーターとして指定 `main` されます。 たとえば、名前を入力として表すスクリプトを受け入れる場合は、署名 `string` を `main` に変更します `function main(workbook: ExcelScript.Workbook, name: string)` 。
 
-Power 自動化でフローを構成するときは、スクリプトの入力を静的な値、 [式](/power-automate/use-expressions-in-conditions)、または動的コンテンツとして指定できます。 個々のサービスのコネクタの詳細については、「 [電源自動化コネクタ](/connectors/)」のドキュメントを参照してください。
+Power Automate でフローを構成する場合は、スクリプト入力を静的な値、式、または動的 [コンテンツとして指定](/power-automate/use-expressions-in-conditions)できます。 個々のサービスのコネクタの詳細については [、「Power Automate Connector」のドキュメントを参照してください](/connectors/)。
 
-入力パラメーターをスクリプトの関数に追加するときは `main` 、次の制限と制限事項を考慮してください。
+スクリプトの関数に入力パラメーターを追加する場合は、次の許容値と `main` 制限を考慮してください。
 
-1. 最初のパラメーターの型はでなければなりません `ExcelScript.Workbook` 。 そのパラメーター名は重要ではありません。
+1. 最初のパラメーターは型である必要があります `ExcelScript.Workbook` 。 パラメーター名は関係ありません。
 
-2. すべてのパラメーターには、型 (またはなど) を指定する必要があり `string` `number` ます。
+2. すべてのパラメーターには、型 (または `string` など) が必要 `number` です。
 
-3. 基本的な型、、、、、、 `string` `number` `boolean` `any` `unknown` `object` 、 `undefined` がサポートされています。
+3. 基本的な型 `string` `number` `boolean` `any` 、、、、 `unknown` `object` `undefined` がサポートされています。
 
-4. 前にリストされていた基本的な種類の配列がサポートされています。
+4. 前に示した基本型の配列がサポートされています。
 
-5. 入れ子になった配列は、パラメーターとしてサポートされます (戻り値の型としてではありません)。
+5. 入れ子になった配列はパラメーターとしてサポートされます (ただし、戻り値の型としてサポートされません)。
 
-6. 共用体型は、1つの型 (など) に属するリテラルの和集合である場合に使用でき `"Left" | "Right"` ます。 未定義のサポートされている型の共用体もサポートされています (など `string | undefined` )。
+6. 共用体の型は、単一の型 (など) に属するリテラルの共用体である場合に使用できます `"Left" | "Right"` 。 未定義のサポートされている型の共用体もサポートされています (など `string | undefined` )。
 
-7. オブジェクトの種類は、型 `string` 、 `number` 、、 `boolean` サポートされている配列、またはその他のサポートされているオブジェクトのプロパティが含まれている場合に許可されます。 次の例は、パラメータタイプとしてサポートされているネストされたオブジェクトを示しています。
+7. オブジェクト型は、型、、サポートされている配列、または他のサポートされているオブジェクトのプロパティが含まれている `string` `number` `boolean` 場合に使用できます。 次の例は、パラメーターの種類としてサポートされている入れ子になったオブジェクトを示しています。
 
     ```TypeScript
     // Office Scripts can return an Employee object because Position only contains strings and numbers.
@@ -71,55 +71,37 @@ Power 自動化でフローを構成するときは、スクリプトの入力�
     }
     ```
 
-8. オブジェクトのインターフェイスまたはクラス定義は、スクリプトで定義されている必要があります。 また、次の例に示すように、オブジェクトを匿名でインラインで定義することもできます。
+8. オブジェクトには、スクリプトで定義されているインターフェイスまたはクラス定義が必要です。 次の例のように、オブジェクトをインラインで匿名で定義できます。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook): {name: string, email: string}
     ```
 
-9. 省略可能なパラメーターを指定できます。オプションの修飾子 (たとえば、) を使用することもでき `?` `function main(workbook: ExcelScript.Workbook, Name?: string)` ます。
+9. 省略可能なパラメーターは許可され、省略可能な修飾子 (たとえば) を使用して `?` 指定できます `function main(workbook: ExcelScript.Workbook, Name?: string)` 。
 
-10. 既定のパラメーター値を使用できます (例 `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')` :
+10. 既定のパラメーター値を使用できます (たとえば `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')` .
 
 ### <a name="returning-data-from-a-script"></a>スクリプトからデータを返す
 
-スクリプトは、Power オートメーションフローで動的コンテンツとして使用するブックからのデータを返すことができます。 入力パラメーターと同様に、Power オートメーションでは戻り値の型にいくつかの制限が課されます。
+スクリプトは、Power Automate フローで動的コンテンツとして使用するブックからデータを返します。 入力パラメーターと同様に、Power Automate は戻り値の種類にいくつかの制限を設定します。
 
-1. 基本的な型、、、、、 `string` `number` がサポートされてい `boolean` `void` `undefined` ます。
+1. 基本の型 `string` `number` `boolean` `void` 、、、 `undefined` がサポートされています。
 
-2. 戻り値の型として使用される共用体型は、スクリプトパラメーターとして使用する場合と同じ制限に従います。
+2. 戻り値の型として使用される Union 型は、スクリプト パラメーターとして使用する場合と同じ制限に従います。
 
-3. 配列型は `string` 、型、、またはのいずれかである場合に使用でき `number` `boolean` ます。 また、型がサポートされている共用体型またはサポートされているリテラル型の場合にも使用できます。
+3. 配列型は、型 、、または `string` の場合 `number` に使用できます `boolean` 。 また、この型がサポートされている共用体またはサポートされているリテラル型である場合にも使用できます。
 
-4. 戻り値の型として使用されるオブジェクトの種類は、スクリプトパラメーターとして使用する場合と同じ制限に従います。
+4. 戻り値の型として使用されるオブジェクトの種類は、スクリプト パラメーターとして使用する場合と同じ制限に従います。
 
-5. 暗黙的な入力はサポートされていますが、定義された型と同じルールに従う必要があります。
-
-## <a name="avoid-using-relative-references"></a>相対参照の使用を避ける
-
-Power オートメーションは、ユーザーの代わりに、選択した Excel ブックでスクリプトを実行します。 これが発生すると、ブックが閉じられる場合があります。 など、ユーザーの現在の状態に依存する API は、 `Workbook.getActiveWorksheet` 電力の自動処理によって実行されると失敗します。 スクリプトを設計するときは、必ずワークシートおよび範囲の絶対参照を使用してください。
-
-次のメソッドは、Power オートメーションフローでスクリプトから呼び出されたときにエラーをスローして失敗します。
-
-| クラス | メソッド |
-|--|--|
-| [グラフ](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
-| [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
-| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveCell` |
-| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveChart` |
-| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
-| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` |
-| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRange` |
-| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRanges` |
-| [ワークシート](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `activate` |
+5. 暗黙的な型指定はサポートされています。定義された型と同じルールに従う必要があります。
 
 ## <a name="example"></a>例
 
-次のスクリーンショットは、 [GitHub](https://github.com/) の問題がユーザーに割り当てられたときにトリガーされる電源自動化フローを示しています。 このフローは、Excel ブックのテーブルに問題を追加するスクリプトを実行します。 そのテーブルに5つ以上の問題がある場合、フローはメール事前通知を送信します。
+次のスクリーンショットは、GitHub の問題が割り当てられるたびにトリガーされる [Power Automate](https://github.com/) フローを示しています。 フローは、Excel ブック内のテーブルに問題を追加するスクリプトを実行します。 そのテーブルに 5 つ以上の問題がある場合、フローはメールリマインダーを送信します。
 
-![電源自動化フローエディターに示されている例のフロー。](../images/power-automate-parameter-return-sample.png)
+:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="例のフローを示す Power Automate フロー エディター。":::
 
-`main`スクリプトの関数は、[案件 ID] と [issue title] を入力パラメーターとして指定し、スクリプトは issue テーブル内の行数を返します。
+スクリプトの関数は、問題 ID と発行タイトルを入力パラメーターとして指定し、スクリプトは問題テーブル内の行数 `main` を返します。
 
 ```TypeScript
 function main(
@@ -142,8 +124,9 @@ function main(
 
 ## <a name="see-also"></a>関連項目
 
-- [Power オートメーションを使用して web 上の Excel で Office スクリプトを実行する](../tutorials/excel-power-automate-manual.md)
+- [Power Automate Office Excel で Web 上のスクリプトを実行する](../tutorials/excel-power-automate-manual.md)
 - [自動で実行される Power Automate フロー内で、データをスクリプトに渡す](../tutorials/excel-power-automate-trigger.md)
-- [Excel on the web での Office スクリプトのスクリプトの基本事項](scripting-fundamentals.md)
+- [自動で実行される Power Automate フローにスクリプトからデータを返す](../tutorials/excel-power-automate-returns.md)
+- [Power Automate with Office スクリプト](../testing/power-automate-troubleshooting.md)
 - [Power Automate の使用を開始する](/power-automate/getting-started)
-- [Excel Online (ビジネス向け) コネクタのリファレンスドキュメント](/connectors/excelonlinebusiness/)
+- [Excel Online (Business) コネクタリファレンス ドキュメント](/connectors/excelonlinebusiness/)

@@ -3,12 +3,12 @@ title: スクリプトの TypeScript Office
 description: スクリプト コード エディターで使用される TypeScript コンパイラと linter Office詳細です。
 ms.date: 02/05/2021
 localization_priority: Normal
-ms.openlocfilehash: 8c9d1beafb236e7ba10dedf00fab944c40fb954d
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 88d0b5873a2f7350f88417d2e340343dbd183606
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570277"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755050"
 ---
 # <a name="typescript-restrictions-in-office-scripts"></a>スクリプトの TypeScript Office
 
@@ -22,11 +22,11 @@ Officeは TypeScript 言語を使用します。 ほとんどの場合、TypeScr
 
 スクリプト (つまり) で変数を明示的に型 `any` Office宣言することはできません `let someVariable: any;` 。 Excel `any` で処理すると、この型によって問題が発生します。 たとえば、値が 、 、 または である必要 `Range` `string` `number` があります `boolean` 。 スクリプト内の型として変数が明示的に定義されている場合は、コンパイル時エラー (スクリプトを実行する前のエラー) `any` が表示されます。
 
-![コード エディターのホバー テキスト内の明示的なメッセージ](../images/explicit-any-editor-message.png)
+:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="コード エディターのホバー テキストの明示的な 'any' メッセージ":::
 
-![コンソール ウィンドウでの明示的なエラー](../images/explicit-any-error-message.png)
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="コンソール ウィンドウの明示的な Any エラー。":::
 
-上のスクリーンショットでは `[5, 16] Explicit Any is not allowed` 、行の種類を#5列#16示 `any` しています。 これにより、エラーを見つけるのに役立ちます。
+前のスクリーンショットでは `[5, 16] Explicit Any is not allowed` 、行の種類を#5列#16示 `any` しています。 これにより、エラーを見つけるのに役立ちます。
 
 この問題を回避するには、常に変数の種類を定義します。 変数の種類が不明な場合は、共用体の型を [使用できます](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html)。 これは、型 、または (値の型は、それらの共用体です) の値を保持する変数 `Range` `string` `number` `boolean` `Range` に役立ちます `string | number | boolean` 。
 
