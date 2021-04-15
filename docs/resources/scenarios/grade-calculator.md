@@ -1,37 +1,37 @@
 ---
-title: 'Office スクリプトサンプルシナリオ: 成績計算ツール'
-description: 学生のクラスのパーセンテージおよび文字成績を決定するサンプルです。
-ms.date: 07/24/2020
+title: 'Office スクリプトのサンプル シナリオ: 成績計算'
+description: 学生のクラスのパーセンテージとレターの成績を決定するサンプル。
+ms.date: 12/17/2020
 localization_priority: Normal
-ms.openlocfilehash: 4e488c6cc67bda9122b88c55070654632d9c7fa2
-ms.sourcegitcommit: ff7fde04ce5a66d8df06ed505951c8111e2e9833
+ms.openlocfilehash: b8c45ad405c06a943c75e76391c1160ecb1bd18e
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2020
-ms.locfileid: "46616743"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755029"
 ---
-# <a name="office-scripts-sample-scenario-grade-calculator"></a><span data-ttu-id="f5695-103">Office スクリプトサンプルシナリオ: 成績計算ツール</span><span class="sxs-lookup"><span data-stu-id="f5695-103">Office Scripts sample scenario: Grade calculator</span></span>
+# <a name="office-scripts-sample-scenario-grade-calculator"></a><span data-ttu-id="860d9-103">Office スクリプトのサンプル シナリオ: 成績計算</span><span class="sxs-lookup"><span data-stu-id="860d9-103">Office Scripts sample scenario: Grade calculator</span></span>
 
-<span data-ttu-id="f5695-104">このシナリオでは、生徒のすべての学生の期末等級を集計しています。</span><span class="sxs-lookup"><span data-stu-id="f5695-104">In this scenario, you're an instructor tallying every student's end-of-term grades.</span></span> <span data-ttu-id="f5695-105">自分の割り当てとテストのスコアを入力したことがあります。</span><span class="sxs-lookup"><span data-stu-id="f5695-105">You've been entering the scores for their assignments and tests as you go.</span></span> <span data-ttu-id="f5695-106">ここで、学生の fates を決定します。</span><span class="sxs-lookup"><span data-stu-id="f5695-106">Now, it is time to determine the students' fates.</span></span>
+<span data-ttu-id="860d9-104">このシナリオでは、すべての学生の学期終了の成績を集計する講師です。</span><span class="sxs-lookup"><span data-stu-id="860d9-104">In this scenario, you're an instructor tallying every student's end-of-term grades.</span></span> <span data-ttu-id="860d9-105">課題とテストのスコアを入力しています。</span><span class="sxs-lookup"><span data-stu-id="860d9-105">You've been entering the scores for their assignments and tests as you go.</span></span> <span data-ttu-id="860d9-106">それでは、学生の運命を決定する時間です。</span><span class="sxs-lookup"><span data-stu-id="860d9-106">Now, it is time to determine the students' fates.</span></span>
 
-<span data-ttu-id="f5695-107">各ポイントカテゴリの成績を合計するスクリプトを開発します。</span><span class="sxs-lookup"><span data-stu-id="f5695-107">You'll develop a script that totals the grades for each point category.</span></span> <span data-ttu-id="f5695-108">その後、合計数に基づいて各生徒にレター成績を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="f5695-108">It will then assign a letter grade to each student based on the total.</span></span> <span data-ttu-id="f5695-109">精度を高めるために、個別のスコアが低すぎるか高すぎるかを確認するための2つのチェックを追加します。</span><span class="sxs-lookup"><span data-stu-id="f5695-109">To help ensure accuracy, you'll add a couple checks to see if any individual scores are too low or high.</span></span> <span data-ttu-id="f5695-110">生徒のスコアが0未満であるか、または可能な point 値よりも大きい場合、スクリプトは、そのセルに赤の塗りつぶしを設定し、生徒のポイントを合計しないようにします。</span><span class="sxs-lookup"><span data-stu-id="f5695-110">If a student's score is less than zero or more than the possible point value, the script will flag the cell with a red fill and not total that student's points.</span></span> <span data-ttu-id="f5695-111">これは、どのレコードが再チェックする必要があるかを明確に示します。</span><span class="sxs-lookup"><span data-stu-id="f5695-111">This will be a clear indication of which records you need to double-check.</span></span> <span data-ttu-id="f5695-112">また、クラスの上部と下部をすばやく表示できるように、いくつかの基本的な書式設定を成績に追加します。</span><span class="sxs-lookup"><span data-stu-id="f5695-112">You'll also add some basic formatting to the grades so you can quickly view the top and bottom of the class.</span></span>
+<span data-ttu-id="860d9-107">各ポイント カテゴリの成績を合計するスクリプトを開発します。</span><span class="sxs-lookup"><span data-stu-id="860d9-107">You'll develop a script that totals the grades for each point category.</span></span> <span data-ttu-id="860d9-108">その後、合計に基づいて各学生にレターグレードを割り当てる。</span><span class="sxs-lookup"><span data-stu-id="860d9-108">It will then assign a letter grade to each student based on the total.</span></span> <span data-ttu-id="860d9-109">精度を確保するために、複数のチェックを追加して、個々のスコアが低すぎるか高すぎるか確認します。</span><span class="sxs-lookup"><span data-stu-id="860d9-109">To help ensure accuracy, you'll add a couple checks to see if any individual scores are too low or high.</span></span> <span data-ttu-id="860d9-110">学生のスコアが 0 未満または指定できるポイント値より大きい場合、スクリプトはセルに赤い塗りつぶしを付け、その学生のポイントの合計にはフラグを設定します。</span><span class="sxs-lookup"><span data-stu-id="860d9-110">If a student's score is less than zero or more than the possible point value, the script will flag the cell with a red fill and not total that student's points.</span></span> <span data-ttu-id="860d9-111">これは、ダブル チェックする必要があるレコードを明確に示します。</span><span class="sxs-lookup"><span data-stu-id="860d9-111">This will be a clear indication of which records you need to double-check.</span></span> <span data-ttu-id="860d9-112">また、クラスの上部と下部をすばやく表示するために、いくつかの基本的な書式を成績に追加します。</span><span class="sxs-lookup"><span data-stu-id="860d9-112">You'll also add some basic formatting to the grades so you can quickly view the top and bottom of the class.</span></span>
 
-## <a name="scripting-skills-covered"></a><span data-ttu-id="f5695-113">スクリプト作成スキルの説明</span><span class="sxs-lookup"><span data-stu-id="f5695-113">Scripting skills covered</span></span>
+## <a name="scripting-skills-covered"></a><span data-ttu-id="860d9-113">スクリプティングのスキルをカバー</span><span class="sxs-lookup"><span data-stu-id="860d9-113">Scripting skills covered</span></span>
 
-- <span data-ttu-id="f5695-114">セルの書式設定</span><span class="sxs-lookup"><span data-stu-id="f5695-114">Cell formatting</span></span>
-- <span data-ttu-id="f5695-115">エラーチェック</span><span class="sxs-lookup"><span data-stu-id="f5695-115">Error checking</span></span>
-- <span data-ttu-id="f5695-116">正規表現</span><span class="sxs-lookup"><span data-stu-id="f5695-116">Regular expressions</span></span>
-- <span data-ttu-id="f5695-117">条件付き書式</span><span class="sxs-lookup"><span data-stu-id="f5695-117">Conditional formatting</span></span>
+- <span data-ttu-id="860d9-114">セルの書式設定</span><span class="sxs-lookup"><span data-stu-id="860d9-114">Cell formatting</span></span>
+- <span data-ttu-id="860d9-115">エラー チェック</span><span class="sxs-lookup"><span data-stu-id="860d9-115">Error checking</span></span>
+- <span data-ttu-id="860d9-116">正規表現</span><span class="sxs-lookup"><span data-stu-id="860d9-116">Regular expressions</span></span>
+- <span data-ttu-id="860d9-117">条件付き書式</span><span class="sxs-lookup"><span data-stu-id="860d9-117">Conditional formatting</span></span>
 
-## <a name="setup-instructions"></a><span data-ttu-id="f5695-118">セットアップの手順</span><span class="sxs-lookup"><span data-stu-id="f5695-118">Setup instructions</span></span>
+## <a name="setup-instructions"></a><span data-ttu-id="860d9-118">セットアップ手順</span><span class="sxs-lookup"><span data-stu-id="860d9-118">Setup instructions</span></span>
 
-1. <span data-ttu-id="f5695-119">OneDrive に<a href="grade-calculator.xlsx">grade-calculator.xlsx</a>をダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="f5695-119">Download <a href="grade-calculator.xlsx">grade-calculator.xlsx</a> to your OneDrive.</span></span>
+1. <span data-ttu-id="860d9-119">OneDrive <a href="grade-calculator.xlsx">grade-calculator.xlsx</a> をダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="860d9-119">Download <a href="grade-calculator.xlsx">grade-calculator.xlsx</a> to your OneDrive.</span></span>
 
-2. <span data-ttu-id="f5695-120">Web 用の Excel でブックを開きます。</span><span class="sxs-lookup"><span data-stu-id="f5695-120">Open the workbook with Excel for the web.</span></span>
+2. <span data-ttu-id="860d9-120">Web 用の Excel を使用してブックを開きます。</span><span class="sxs-lookup"><span data-stu-id="860d9-120">Open the workbook with Excel for the web.</span></span>
 
-3. <span data-ttu-id="f5695-121">[**自動化**] タブで、**コードエディター**を開きます。</span><span class="sxs-lookup"><span data-stu-id="f5695-121">Under the **Automate** tab, open the **Code Editor**.</span></span>
+3. <span data-ttu-id="860d9-121">[自動化] **タブで** 、[すべてのスクリプト] **を開きます**。</span><span class="sxs-lookup"><span data-stu-id="860d9-121">Under the **Automate** tab, open **All Scripts**.</span></span>
 
-4. <span data-ttu-id="f5695-122">[**コードエディター** ] 作業ウィンドウで、[**新しいスクリプト**] をクリックし、次のスクリプトをエディターに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="f5695-122">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
+4. <span data-ttu-id="860d9-122">[コード **エディター] 作業ウィンドウ** で、[新しいスクリプト] **を押** して、次のスクリプトをエディターに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="860d9-122">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -51,9 +51,9 @@ ms.locfileid: "46616743"
 
       // Use regular expressions to read the max score from the assignment, mid-term, and final scores columns.
       let maxScores: string[] = [];
-      const assignmentMaxMatches = studentData[0][1].match(/\d+/);
-      const midtermMaxMatches = studentData[0][2].match(/\d+/);
-      const finalMaxMatches = studentData[0][3].match(/\d+/);
+      const assignmentMaxMatches = (studentData[0][1] as string).match(/\d+/);
+      const midtermMaxMatches = (studentData[0][2] as string).match(/\d+/);
+      const finalMaxMatches = (studentData[0][3] as string).match(/\d+/);
 
       // Check the matches happened before proceeding.
       if (!(assignmentMaxMatches && midtermMaxMatches && finalMaxMatches)) {
@@ -89,7 +89,7 @@ ms.locfileid: "46616743"
           studentData[i][3] > maxScores[2]) {
           continue;
         }
-        const total = studentData[i][1] + studentData[i][2] + studentData[i][3];
+        const total = (studentData[i][1] as number) + (studentData[i][2] as number) + (studentData[i][3] as number);
         let grade: string;
         switch (true) {
           case total < 60:
@@ -108,7 +108,7 @@ ms.locfileid: "46616743"
             grade = "A";
             break;
         }
-
+    
         // Set total score formula.
         studentsRangeFormulas[i][0] = '=RC[-2]+RC[-1]';
         // Set grade cell.
@@ -166,24 +166,24 @@ ms.locfileid: "46616743"
       }
 
       // Apply conditional formatting.
-      let conditionalFormatting : ExcelScript.ConditionalFormat;
+      let conditionalFormatting: ExcelScript.ConditionalFormat;
       conditionalFormatting = range.addConditionalFormat(ExcelScript.ConditionalFormatType.cellValue);
       conditionalFormatting.getCellValue().getFormat().getFont().setColor(fontColor);
       conditionalFormatting.getCellValue().getFormat().getFill().setColor(fillColor);
-      conditionalFormatting.getCellValue().setRule({formula1, operator});
+      conditionalFormatting.getCellValue().setRule({ formula1, operator });
     }
     ```
 
-5. <span data-ttu-id="f5695-123">スクリプトの名前を [**成績電卓**] に変更し、保存します。</span><span class="sxs-lookup"><span data-stu-id="f5695-123">Rename the script to **Grade Calculator** and save it.</span></span>
+5. <span data-ttu-id="860d9-123">スクリプトの名前を [ **成績計算] に変更** し、保存します。</span><span class="sxs-lookup"><span data-stu-id="860d9-123">Rename the script to **Grade Calculator** and save it.</span></span>
 
-## <a name="running-the-script"></a><span data-ttu-id="f5695-124">スクリプトを実行する</span><span class="sxs-lookup"><span data-stu-id="f5695-124">Running the script</span></span>
+## <a name="running-the-script"></a><span data-ttu-id="860d9-124">スクリプトを実行する</span><span class="sxs-lookup"><span data-stu-id="860d9-124">Running the script</span></span>
 
-<span data-ttu-id="f5695-125">唯一のワークシートで**成績計算ツール**のスクリプトを実行します。</span><span class="sxs-lookup"><span data-stu-id="f5695-125">Run the **Grade Calculator** script on the only worksheet.</span></span> <span data-ttu-id="f5695-126">このスクリプトは成績を合計し、各学生にレターの成績を割り当てます。</span><span class="sxs-lookup"><span data-stu-id="f5695-126">The script will total the grades and assign each student a letter grade.</span></span> <span data-ttu-id="f5695-127">個々の成績の数が、割り当てまたはテストの価値を超える場合は、問題のある成績が赤で示され、合計が計算されません。</span><span class="sxs-lookup"><span data-stu-id="f5695-127">If any individual grades have more points than the assignment or test is worth, then the offending grade is marked red and the total is not calculated.</span></span> <span data-ttu-id="f5695-128">また、"A" という成績は緑色で強調表示されていますが、「d」と「F」の成績は黄色で強調表示されています。</span><span class="sxs-lookup"><span data-stu-id="f5695-128">Also, any 'A' grades are highlighted in green, while 'D' and 'F' grades are highlighted in yellow.</span></span>
+<span data-ttu-id="860d9-125">唯一の **ワークシートで成績計算** スクリプトを実行します。</span><span class="sxs-lookup"><span data-stu-id="860d9-125">Run the **Grade Calculator** script on the only worksheet.</span></span> <span data-ttu-id="860d9-126">スクリプトは、成績を合計し、各学生にレターグレードを割り当てる。</span><span class="sxs-lookup"><span data-stu-id="860d9-126">The script will total the grades and assign each student a letter grade.</span></span> <span data-ttu-id="860d9-127">個々の成績に割り当てまたはテストよりも多くのポイントがある場合、問題のある成績は赤でマークされ、合計は計算されません。</span><span class="sxs-lookup"><span data-stu-id="860d9-127">If any individual grades have more points than the assignment or test is worth, then the offending grade is marked red and the total is not calculated.</span></span> <span data-ttu-id="860d9-128">また、'A' の成績は緑色で強調表示され、'D' と 'F' の成績は黄色で強調表示されます。</span><span class="sxs-lookup"><span data-stu-id="860d9-128">Also, any 'A' grades are highlighted in green, while 'D' and 'F' grades are highlighted in yellow.</span></span>
 
-### <a name="before-running-the-script"></a><span data-ttu-id="f5695-129">スクリプトを実行する前に</span><span class="sxs-lookup"><span data-stu-id="f5695-129">Before running the script</span></span>
+### <a name="before-running-the-script"></a><span data-ttu-id="860d9-129">スクリプトを実行する前に</span><span class="sxs-lookup"><span data-stu-id="860d9-129">Before running the script</span></span>
 
-![生徒のスコアの行を示すワークシート。](../../images/scenario-grade-calculator-before.png)
+:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="学生のスコアの行を表示するワークシート。":::
 
-### <a name="after-running-the-script"></a><span data-ttu-id="f5695-131">スクリプトを実行した後</span><span class="sxs-lookup"><span data-stu-id="f5695-131">After running the script</span></span>
+### <a name="after-running-the-script"></a><span data-ttu-id="860d9-131">スクリプトの実行後</span><span class="sxs-lookup"><span data-stu-id="860d9-131">After running the script</span></span>
 
-![有効な生徒の行の赤の合計で、無効なセルの生徒スコアデータを示すワークシート。](../../images/scenario-grade-calculator-after.png)
+:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="有効な学生行の赤い合計に無効なセルを含む学生スコア データを示すワークシート。":::
