@@ -3,12 +3,12 @@ title: Excel on the web での Office スクリプトのスクリプトの基本
 description: Office スクリプトを作成する前に理解しておくべきオブジェクト モデルの情報と他の基本事項について説明します。
 ms.date: 07/08/2020
 localization_priority: Priority
-ms.openlocfilehash: 4609dce617d18f7a7c9d2868a24792c51fb048c6
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 2c2fd683e77a0dfbfd3e9df8c79db31e78ceee8b
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570235"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51755064"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Excel on the web での Office スクリプトのスクリプトの基本事項 (プレビュー)
 
@@ -109,7 +109,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 このスクリプトを実行すると、現在のワークシートに次のデータが作成されます。
 
-![値の行、数式の列、書式設定されたヘッダーを示す売上記録。](../images/range-sample.png)
+:::image type="content" source="../images/range-sample.png" alt-text="値の行、数式の列、フォーマットされたヘッダーを含む売上記録を含むワークシート。":::
 
 ### <a name="charts-tables-and-other-data-objects"></a>グラフ、表、およびその他のデータ オブジェクト
 
@@ -133,7 +133,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 前のデータを含むワークシート上でこのスクリプトを実行すると、次のテーブルが作成されます。
 
-![前の売上記録から作成された表。](../images/table-sample.png)
+:::image type="content" source="../images/table-sample.png" alt-text="前の売上記録から作成された表を含むワークシート。":::
 
 #### <a name="creating-a-chart"></a>グラフの作成
 
@@ -159,7 +159,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 前の表を含むワークシート上でこのスクリプトを実行すると、次のグラフが作成されます。
 
-![前の売上記録の 3 つの品目の数量が表示されている縦棒グラフ。](../images/chart-sample.png)
+:::image type="content" source="../images/chart-sample.png" alt-text="前の売上記録の 3 つの品目の数量が表示されている縦棒グラフ。":::
 
 ### <a name="collections-and-other-object-relations"></a>コレクションとその他のオブジェクトの関係
 

@@ -3,12 +3,12 @@ title: 手動 Power Automation フローからスクリプトを呼び出す
 description: Power Automate の Office スクリプトで、手動のトリガーを使う方法を説明します。
 ms.date: 12/28/2020
 localization_priority: Priority
-ms.openlocfilehash: 763a61f65afbdbb55346bb3d99f216da33e8419c
-ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
+ms.openlocfilehash: fd3a4758e9d90f5eb40de9c9665c197cfae93740
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "49772986"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51754916"
 ---
 # <a name="call-scripts-from-a-manual-power-automate-flow-preview"></a>手動 Power Automation フローからスクリプトを呼び出す (プレビュー)
 
@@ -67,15 +67,15 @@ Power Automate では、ブック コンポーネントにアクセスするた�
 
 2. 画面の左側に表示されるメニューで、**[作成]** を押します。 これにより、新しいワークフローを作成する方法の一覧を表示できます。
 
-    ![Power Automate の [作成] ボタン](../images/power-automate-tutorial-1.png)
+    :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="Power Automate の [作成] ボタン。":::
 
 3. **[白紙から初める]** セクションで、**[インスタント フロー]** を選択します。 これで、手動でアクティベートされたワークフローが作成されます。
 
-    ![新しいワークフローを作成するためのインスタント フロー オプション](../images/power-automate-tutorial-2.png)
+    :::image type="content" source="../images/power-automate-tutorial-2.png" alt-text="新しいワークフローを作成するための Power Automate インスタント フロー オプション":::
 
 4. 表示されたダイアログ ウィンドウで、フローの名前を **[フロー名]** テキスト ボックスに入力し、**[フローをトリガーする方法の選択]** 内のオプションの一覧から **[手動でフローをトリガーする]** を選択し、**[作成]** を押します。
 
-    ![新しいインスタント フローを作成するための手動トリガー オプション](../images/power-automate-tutorial-3.png)
+    :::image type="content" source="../images/power-automate-tutorial-3.png" alt-text="Power Automate の[手動でフローをトリガーする] オプション。":::
 
     手動でトリガーするフローは、いくつかあるフローの種類のうちの 1 つです。 次のチュートリアルでは、メールを受信したときに自動的に実行されるフローを作成します。
 
@@ -83,11 +83,11 @@ Power Automate では、ブック コンポーネントにアクセスするた�
 
 6. **[標準]** タブを選択し、**Excel Online (ビジネス)** を選択します。
 
-    ![Power Automate の [Excel Online (Business)] オプション](../images/power-automate-tutorial-4.png)
+    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate の [Excel Online (Business)] オプション":::
 
-7. **[アクション]** の下から、**[スクリプトの実行 (プレビュー)]** を選択します。
+7. **[アクション]** の下の **[スクリプトの実行 (プレビュー)]** を選択します。
 
-    ![Power Automate の [スクリプトの実行 (プレビュー)] アクションのオプション](../images/power-automate-tutorial-5.png)
+    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Power Automate の [スクリプトの実行 (プレビュー)] アクションのオプション":::
 
 8. 次に、フロー ステップで使用するブックおよびスクリプトを選択します。 このチュートリアルでは、OneDrive に作成したブックを使用しますが、OneDrive サイトまたは SharePoint サイトでは任意のブックを使用できます。 **スクリプトの実行** コネクタには、次の設定を指定します。
 
@@ -96,7 +96,7 @@ Power Automate では、ブック コンポーネントにアクセスするた�
     - **ファイル**: MyWorkbook.xlsx *(ファイル ブラウザーを使用して選択されています)*
     - **スクリプト**: 日時を設定
 
-    ![Power Automate でスクリプトを実行するためのコネクタの設定](../images/power-automate-tutorial-6.png)
+    :::image type="content" source="../images/power-automate-tutorial-6.png" alt-text="スクリプトを実行するための Power Automate コネクタの設定。":::
 
 9. **[保存]** を押します。
 
@@ -106,13 +106,13 @@ Power Automate では、ブック コンポーネントにアクセスするた�
 
 1. Power Automate のメイン ページで、**[自分のフロー]** を選択します。
 
-    ![Power Automate の [マイ フロー] ボタン](../images/power-automate-tutorial-7.png)
+    :::image type="content" source="../images/power-automate-tutorial-7.png" alt-text="Power Automate の [自分のフロー] ボタン":::
 
 2. **[自分のフロー]** タブに表示されているフローの一覧から、**[自分のチュートリアル フロー]** を選択すると、以前に作成したフローの詳細が表示されます。
 
 3. **[実行]** を押します。
 
-    ![Power Automate の [実行] ボタン](../images/power-automate-tutorial-8.png)
+    :::image type="content" source="../images/power-automate-tutorial-8.png" alt-text="Power Automate の [実行] ボタン":::
 
 4. フローを実行するための作業ウィンドウが表示されます。 Excel Online への **サインイン** を要求された場合は、**[続ける]** を押します。
 
@@ -122,7 +122,7 @@ Power Automate では、ブック コンポーネントにアクセスするた�
 
 7. ページを更新して、Power Automate の結果を表示します。 成功した場合は、ワークブックに移動して、更新されたセルを確認します。 エラーが発生した場合は、フローの設定を確認し、もう一度実行します。
 
-    ![正常にフローが発生したことを示す Power Automate の出力](../images/power-automate-tutorial-9.png)
+    :::image type="content" source="../images/power-automate-tutorial-9.png" alt-text="正常にフローが発生したことを示す Power Automate 出力":::
 
 ## <a name="next-steps"></a>次の手順
 
