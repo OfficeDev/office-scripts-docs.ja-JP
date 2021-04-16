@@ -3,19 +3,19 @@ title: Excel on the web で Office スクリプトを使用してブックのデ
 description: ブックのデータを読み取り、スクリプトでそのデータを評価する方法について説明した Office スクリプトのチュートリアル。
 ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: 0848a24e7333842b5b3b1f82ec8f270514c34d2f
-ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
+ms.openlocfilehash: d6321cb91a425da3fd45329d5171f1d5694b2b99
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "49772972"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51754858"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを使用してブックのデータを読み取る
 
 このチュートリアルでは、Excel on the web 用の Office スクリプトを使用してブックのデータを読み取る方法について説明します。 口座取引明細書の書式設定を行う新しいスクリプトを作成し、明細書のデータを標準化します。 データのクリーンアップの一環として、スクリプトは取引セルの値を読み取り、それぞれの値に簡単な数式を適用し、導き出された回答をブックに書き込みます。 ブックからデータを読み取ることで、スクリプト内の意思決定プロセスの一部を自動化することができます。
 
 > [!TIP]
-> Office スクリプトを初めて使用する場合は、チュートリアルの「[Excel on the web で Office スクリプトを記録、編集、作成する](excel-tutorial.md)」から始めることをお勧めします。 [Office スクリプトは TypeScript を使用](../overview/code-editor-environment.md)します。このチュートリアルは、JavaScript や TypeScript について初級から中級レベルの知識を持つユーザーを対象としています。 JavaScript を使い慣れていない場合は、[Mozilla の JavaScript チュートリアル](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction)から始めることをお勧めします。
+> Office スクリプトを初めて使用する場合は、チュートリアルの「[Excel on the web で Office スクリプトを記録、編集、作成する](excel-tutorial.md)」から始めることをお勧めします。 [Office スクリプトは TypeScript を使用](../overview/code-editor-environment.md)します。このチュートリアルは、JavaScript や TypeScript について初級から中級レベルの知識を持つユーザーを対象としています。 JavaScript を使い慣れていない場合は、「[Mozilla の JavaScript チュートリアル](https://developer.mozilla.org/docs/Web/JavaScript/Guide/Introduction)」から始めることをお勧めします。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -73,7 +73,7 @@ ms.locfileid: "49772972"
 8. 2 次元の配列がコンソールにログ記録すると、各行の下に列の値がグループ化されます。 青い三角形を押して、配列のログを展開します。
 9. 新たに表示された青い三角形を押して、配列の第 2 レベルを展開します。 次のように表示されるはずです。
 
-    ![出力 "-20.05" が 2 つの配列の下に入れ子になって表示されているコンソール ログ](../images/tutorial-4.png)
+    :::image type="content" source="../images/tutorial-4.png" alt-text="出力 '-20.05' が 2 つの配列の下に入れ子になって表示されているコンソール ログ":::
 
 ## <a name="modify-the-value-of-a-cell"></a>セルの値を変更する
 
@@ -143,7 +143,7 @@ ms.locfileid: "49772972"
 
     銀行取引明細書は次のように表示されるはずです。
 
-    ![書式設定された正の値のみを含む表形式の銀行取引明細書](../images/tutorial-5.png)
+    :::image type="content" source="../images/tutorial-5.png" alt-text="書式設定された正の値のみを含む表形式の銀行取引明細書を示すワークシート。":::
 
 ## <a name="next-steps"></a>次の手順
 

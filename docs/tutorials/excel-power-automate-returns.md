@@ -3,12 +3,12 @@ title: 自動で実行される Power Automate フローにスクリプトから
 description: Power Automate を使用して Excel on the web 用の Office スクリプトを実行してリマインダー メールを送信する方法を示すチュートリアル。
 ms.date: 12/15/2020
 localization_priority: Priority
-ms.openlocfilehash: 31ba31ddbfb36f20087be6aa7d83b1b896a698d1
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 0c8d8f308147d727a0a5880c11c9c0d924149fb2
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570531"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51754902"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow-preview"></a>自動で実行される Power Automate フローにスクリプトからデータを返す (プレビュー)
 
@@ -36,7 +36,7 @@ ms.locfileid: "51570531"
     > [!IMPORTANT]
     > これから作成するスクリプトは、テーブル内の最初に一致するエントリを使用するため、自分の名前が現在の週のどの行よりも上にあることを確認してください。
 
-    ![Excel スプレッドシートの on-call rotation テーブルのスクリーンショット](../images/power-automate-return-tutorial-1.png)
+    :::image type="content" source="../images/power-automate-return-tutorial-1.png" alt-text="呼び出し時の回転テーブルのデータを含むワークシート。":::
 
 ## <a name="create-an-office-script"></a>Office スクリプトを作成する
 
@@ -129,11 +129,11 @@ ms.locfileid: "51570531"
 
 1. 画面の左側に表示されるメニューで、**[作成]** を押します。 これにより、新しいワークフローを作成する方法の一覧を表示できます。
 
-    ![Power Automate の [作成] ボタン](../images/power-automate-tutorial-1.png)
+    :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="Power Automate の [作成] ボタン":::
 
 1. **[空白から開始]** セクションで **[スケジュール済みクラウド フロー]** を選択します。
 
-    ![Power Automate の [スケジュール済みクラウド フロー] ボタン](../images/power-automate-return-tutorial-2.png)
+    :::image type="content" source="../images/power-automate-return-tutorial-2.png" alt-text="Power Automate の [スケジュール済みクラウド フロー] ボタン":::
 
 1. 続いて、このフローのスケジュールを設定します。 使用しているスプレッドシートには、2021 年前半の毎週月曜日から始まる新しい呼び出し期間の割り当てが含まれています。 月曜日の朝一番に実行するようにフローを設定します。 次のオプションを使用して、毎週月曜日に実行するようにフローを構成します。
 
@@ -142,7 +142,7 @@ ms.locfileid: "51570531"
     - **繰り返し間隔**: 1 週
     - **設定曜日**: 月
 
-    ![スケジュール済みフローに指定されたオプションを表示するウィンドウ](../images/power-automate-return-tutorial-3.png)
+    :::image type="content" source="../images/power-automate-return-tutorial-3.png" alt-text="オプションが表示された Power Automate の [スケジュールされたクラウド フローを作成する] ダイアログ。オプションには、フロー名、開始時刻、繰り返しの頻度、フローを実行する曜日が含まれます。":::
 
 1. **[作成]** を押します。
 
@@ -150,11 +150,11 @@ ms.locfileid: "51570531"
 
 1. **[標準]** タブを選択し、**Excel Online (ビジネス)** を選択します。
 
-    ![Power Automate の [Excel Online (Business)] オプション](../images/power-automate-tutorial-4.png)
+    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate の [Excel Online (Business)] オプション":::
 
 1. **[アクション]** の下の **[スクリプトの実行 (プレビュー)]** を選択します。
 
-    ![Power Automate の [スクリプトの実行 (プレビュー)] アクションのオプション](../images/power-automate-tutorial-5.png)
+    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Power Automate の [スクリプトの実行 (プレビュー)] アクションのオプション":::
 
 1. 次に、フロー ステップで使用するブックとスクリプトを選択します。 自分の OneDrive で作成したブック **on-call-rotation.xlsx** を使用します。 **スクリプトの実行** コネクタには、次の設定を指定します。
 
@@ -163,13 +163,13 @@ ms.locfileid: "51570531"
     - **ファイル**: on-call-rotation.xlsx *(ファイル ブラウザーを使用して選択されています)*
     - **スクリプト**: Get On-Call Person
 
-    ![Power Automate でスクリプトを実行するためのコネクタの設定](../images/power-automate-return-tutorial-4.png)
+    :::image type="content" source="../images/power-automate-return-tutorial-4.png" alt-text="スクリプトを実行するための Power Automate コネクタの設定。":::
 
 1. **[新しいステップ]** を押します。
 
 1. リマインダー メールを送信してフローを終了します。 コネクタの検索バーを使用して、**[メールの送信 (V2)]** を選択します。 スクリプトによって返されるメール アドレスを追加するために、**動的なコンテンツの追加** コントロールを使用します。 これは、**result** というラベル付きの Excel アイコンで示されます。 件名、本文は自由に入力できます。
 
-    ![Power Automate でメールを送信するためのコネクタの設定](../images/power-automate-return-tutorial-5.png)
+    :::image type="content" source="../images/power-automate-return-tutorial-5.png" alt-text="メールを送信するための Power Automate Outlook コネクタの設定。オプションには、送信するファイル、メールの件名、メールの本文、および詳細オプションが含まれます。":::
 
     > [!NOTE]
     > このチュートリアルでは、Outlook を使用します。 代わりに、お好きなメール サービスを自由に使用することもできますが、一部のオプションは異なる場合があります。
@@ -180,7 +180,7 @@ ms.locfileid: "51570531"
 
 作成したフローは毎週月曜日に実行されます。 画面の右上隅にある **[テスト]** ボタンを押すと、スクリプトをテストできます。 **[手動]** を選択し、**[テストの実行]** を押して直ちにフローを実行し、動作をテストします。 続行するには、Excel と Outlook にアクセス許可を付与する必要がある場合があります。
 
-![Power Automate の [テスト] ボタン](../images/power-automate-return-tutorial-6.png)
+:::image type="content" source="../images/power-automate-return-tutorial-6.png" alt-text="Power Automate の [テスト] ボタン":::
 
 > [!TIP]
 > フローでメールを送信できない場合は、スプレッドシートで、有効なメールが現在の日付範囲用としてテーブルの先頭にリストされていることを再確認してください。

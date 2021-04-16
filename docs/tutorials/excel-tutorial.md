@@ -3,12 +3,12 @@ title: Excel on the web で Office スクリプトを記録、編集、作成す
 description: 操作レコーダーを使用したスクリプトの記録、ブックへのデータの書き込みなど、Office スクリプトの基本について説明したチュートリアル。
 ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: fa2fec54cdb0289590868ee6848a942401f21665
-ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
+ms.openlocfilehash: ae864cc08453a9c8a2538f15ceee1275e131725d
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "49772979"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51754846"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを記録、編集、作成する
 
@@ -49,7 +49,7 @@ ms.locfileid: "49772979"
 
     ワークシートは次のようになります (色が違っていても問題ありません)。
 
-    !["オレンジ" の行がオレンジ色で強調表示されている果物売上データの行](../images/tutorial-1.png)
+    :::image type="content" source="../images/tutorial-1.png" alt-text="&quot;オレンジ&quot; を含む行がオレンジ色で強調表示された、フルーツの売上データ行を示すワークシート。":::
 
 ## <a name="edit-an-existing-script"></a>既存のスクリプトを編集する
 
@@ -78,7 +78,7 @@ ms.locfileid: "49772979"
 
 4. **[実行]** を押して、スクリプトをテストします。 ブックは次のように表示されるはずです。
 
-    !["オレンジ" の行はオレンジ色、"レモン" の行は黄色で強調表示されている果物売上データの行](../images/tutorial-2.png)
+    :::image type="content" source="../images/tutorial-2.png" alt-text="&quot;オレンジ&quot; の行はオレンジ色、&quot;レモン&quot; の行は黄色で強調表示されている果物売上データの行を示すワークシート。":::
 
 ## <a name="create-a-table"></a>テーブルを作成する
 
@@ -113,7 +113,7 @@ ms.locfileid: "49772979"
 
 3. スクリプトを実行します。 テーブルが次のように表示されます。
 
-    ![並べ替えられた果物売上テーブル](../images/tutorial-3.png)
+    :::image type="content" source="../images/tutorial-3.png" alt-text="並べ替えされたフルーツの販売テーブルを示すワークシート。":::
 
     > [!NOTE]
     > スクリプトを再実行すると、エラーが表示されます。 これは、テーブルの上に別のテーブルを重ねて作成することはできないためです。 ただし、別のワークシートやブックでスクリプトを実行することはできます。

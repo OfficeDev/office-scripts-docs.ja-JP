@@ -3,12 +3,12 @@ title: 自動で実行される Power Automate フロー内で、データをス
 description: メールを受信し、フロー データをスクリプトに渡すときに、Power Automate を使用して Excel on the web 用の Office スクリプトを実行する方法について説明します。
 ms.date: 12/28/2020
 localization_priority: Priority
-ms.openlocfilehash: 3f81ac13b0827f27adc611895d6bb090df10da5c
-ms.sourcegitcommit: 9df67e007ddbfec79a7360df9f4ea5ac6c86fb08
+ms.openlocfilehash: c67c1f958099698201db91f368a287805d5aea0d
+ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2021
-ms.locfileid: "49772993"
+ms.lasthandoff: 04/14/2021
+ms.locfileid: "51754895"
 ---
 # <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow-preview"></a>自動で実行される Power Automate フロー内で、データをスクリプトに渡す(プレビュー)
 
@@ -156,15 +156,15 @@ function main(
 
 2. 画面の左側に表示されるメニューで、**[作成]** を押します。 これにより、新しいワークフローを作成する方法の一覧を表示できます。
 
-    ![Power Automate の [作成] ボタン](../images/power-automate-tutorial-1.png)
+    :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="Power Automate の [作成] ボタン。":::
 
 3. **[白紙から初める]** セクションで、**[自動フロー]** を選択します。 これにより、メールの受信などのイベントによってトリガーされるワークフローが作成されます。
 
-    ![Power Automate の自動化したフロー オプション](../images/power-automate-params-tutorial-1.png)
+    :::image type="content" source="../images/power-automate-params-tutorial-1.png" alt-text="Power Automate の自動化したフロー オプション":::
 
 4. ダイアログ ウインドウが表示されたら、**[フロー名]** のテキスト ボックスに、フローの名前を入力します。 次に、**[フローのトリガーを選択]** の下のオプションの一覧から、**[新しいメールが届いたとき]** を選択します。 検索ボックスを使用して、オプションを検索することが必要になる場合があります。 最後に、**[作成]** を押します。
 
-    ![Power Automate の [新しいメールが届いたとき] オプションが表示される [自動化したクラウド フローを構築する] ウィンドウの一部](../images/power-automate-params-tutorial-2.png)
+    :::image type="content" source="../images/power-automate-params-tutorial-2.png" alt-text="[フロー名] と [choose your folow’s trigger (フローのトリガーを選択する)] オプションを示す Power Automate Flow の一部。フロー名は &quot;メール フローの記録&quot; で、トリガーは [When a new email arrives in Outlook (Outlook で新しいメールを受信する場合)] オプションです。":::
 
     > [!NOTE]
     > このチュートリアルでは、Outlook を使用します。 代わりに、お好きなメール サービスを自由に使用することもできますが、一部のオプションは異なる場合があります。
@@ -173,11 +173,11 @@ function main(
 
 6. **[標準]** タブを選択し、**Excel Online (ビジネス)** を選択します。
 
-    ![Power Automate の [Excel Online (Business)] オプション](../images/power-automate-tutorial-4.png)
+    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate の [Excel Online (Business)] オプション":::
 
-7. **[アクション]** の下から、**[スクリプトの実行 (プレビュー)]** を選択します。
+7. **[アクション]** の下の **[スクリプトの実行 (プレビュー)]** を選択します。
 
-    ![Power Automate の [スクリプトの実行 (プレビュー)] アクションのオプション](../images/power-automate-tutorial-5.png)
+    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Power Automate の [スクリプトの実行 (プレビュー)] アクションのオプション":::
 
 8. 次に、フロー ステップで使用するブック、スクリプト、およびスクリプトの入力引数を選択します。 このチュートリアルでは、OneDrive に作成したブックを使用しますが、OneDrive サイトまたは SharePoint サイトでは任意のブックを使用できます。 **スクリプトの実行** コネクタには、次の設定を指定します。
 
@@ -191,7 +191,7 @@ function main(
 
     *スクリプトのパラメーターは、スクリプトが選択された後にのみ表示されるので、注意してください。*
 
-    ![Power Automate の [スクリプトの実行 (プレビュー)] アクション オプションのパラメーター](../images/power-automate-params-tutorial-3.png)
+    :::image type="content" source="../images/power-automate-params-tutorial-3.png" alt-text="スクリプトを選択すると表示されるオプションを示す Power Automate のスクリプトを実行するアクション。":::
 
 9. **[保存]** を押します。
 
@@ -201,15 +201,15 @@ function main(
 
 1. Power Automate のメイン ページで、**[自分のフロー]** を選択します。
 
-    ![Power Automate の [マイ フロー] ボタン](../images/power-automate-tutorial-7.png)
+    :::image type="content" source="../images/power-automate-tutorial-7.png" alt-text="Power Automate の [自分のフロー] ボタン":::
 
 2. フローを選択します。 ここでは、実行履歴を表示することができます。 ページを更新するか、**[すべての実行]** を更新するボタンを押して、履歴を更新することができます。 フローは、メールを受信するとすぐにトリガーされます。 メッセージを送信してフローをテストします。
 
 フローがトリガーされて、スクリプトが正常に実行されると、ブックのテーブルとピボットテーブルの更新が表示されます。
 
-![フローが数回実行された後の、メール テーブル](../images/power-automate-params-tutorial-4.png)
+:::image type="content" source="../images/power-automate-params-tutorial-4.png" alt-text="フローの実行を 3 回行った後のメール テーブルを示すワークシート。":::
 
-![フローが数回実行された後の、ピボットテーブル](../images/power-automate-params-tutorial-5.png)
+:::image type="content" source="../images/power-automate-params-tutorial-5.png" alt-text="フローの実行を 3 回行った後のピボット テーブルを示すワークシート。":::
 
 ## <a name="next-steps"></a>次の手順
 
