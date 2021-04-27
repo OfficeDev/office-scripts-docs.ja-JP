@@ -990,9 +990,9 @@ Copyright (c) 2008 Ariel Flesler Copyright (c) 2009 John Resig, Jorn Zaefferer
 
 @hapi/アドレス 2.1.4 - BSD-3-Clause https://github.com/hapijs/address#readme
 
-Copyright (c) 2019, Project contributors Copyright (c) 2008-2019, Eli Skeggs, Dominic Sayers, GlobeSherpa
+Copyright (c) 2019, Project投稿者 Copyright (c) 2008-2019, Eli Skeggs, Dominic Sayers, GlobeSherpa
 
-Copyright (c) 2019, Project contributors All rights reserved.
+Copyright (c) 2019, Project投稿者 すべての権利予約。
 
 次の条件を満たした場合、変更の付きまたは変更なしのソースフォームおよびバイナリ フォームでの再配布と使用が許可されます。
  * ソース コードの再配布は、上記の著作権に関する通知、この条件の一覧、および以下の免責事項を保持する必要があります。
@@ -1540,7 +1540,7 @@ CC0 1.0 ユニバーサル
 
   c. アファーは、著作物に適用される可能性がある他の人物の権利をクリアする責任を負いません。また、著作物におけるいかなる人物の著作権および関連する権利も含みますが、その使用は一切責任を負いません。 さらに、アファーは、ワークの使用に必要な同意、アクセス許可、その他の権利を取得する責任を負いません。
 
-  d.  アファーマーは、クリエイティブ・コモンズが本ドキュメントの当事者ではなく、この CC0 またはワークの使用に関して義務や義務を負うのを理解し、認める。
+  d. アファーマーは、クリエイティブ・コモンズが本ドキュメントの当事者ではなく、この CC0 またはワークの使用に関して義務や義務を負うのを理解し、認める。
 
 詳細については、以下を参照してください。 <http://creativecommons.org/publicdomain/zero/1.0/>
 
@@ -1590,7 +1590,7 @@ CC0 1.0 ユニバーサル
 
   c. アファーは、著作物に適用される可能性がある他の人物の権利をクリアする責任を負いません。また、著作物におけるいかなる人物の著作権および関連する権利も含みますが、その使用は一切責任を負いません。 さらに、アファーは、ワークの使用に必要な同意、アクセス許可、その他の権利を取得する責任を負いません。
 
-  d.  アファーマーは、クリエイティブ・コモンズが本ドキュメントの当事者ではなく、この CC0 またはワークの使用に関して義務や義務を負うのを理解し、認める。
+  d. アファーマーは、クリエイティブ・コモンズが本ドキュメントの当事者ではなく、この CC0 またはワークの使用に関して義務や義務を負うのを理解し、認める。
 
 詳細については、以下を参照してください。 <http://creativecommons.org/publicdomain/zero/1.0/>
 
@@ -2378,9 +2378,9 @@ caniuse-lite 1.0.30001165 - CC-BY-4.0 https://github.com/ben-eb/caniuse-lite#rea
 
   c. 著作権および類似の権利とは、権利のラベル付けまたは分類方法に関係なく、パフォーマンス、ブロードキャスト、サウンドレコーディング、および Sui Generis Database Rights など、著作権に密接に関連する著作権および/または類似の権利を意味します。 このパブリック ライセンスの目的上、セクション 2(b)(1)-(2) で指定されている権利は、著作権および類似の権利ではありません。
 
-  d.  有効な技術的措置とは、適切な権限がない場合、1996 年 12 月 20 日に採択された WIPO 著作権条約第 11 条に基づく義務を果たす法律、および/または類似の国際協定の下で回避されない可能性がある措置を意味します。
+  d. 有効な技術的措置とは、適切な権限がない場合、1996 年 12 月 20 日に採択された WIPO 著作権条約第 11 条に基づく義務を果たす法律、および/または類似の国際協定の下で回避されない可能性がある措置を意味します。
 
-  e.  例外と制限とは、ライセンス素材の使用に適用される著作権および類似の権利に対する公正な使用、公正な取引、その他の例外または制限を意味します。
+  e. 例外と制限とは、ライセンス素材の使用に適用される著作権および類似の権利に対する公正な使用、公正な取引、その他の例外または制限を意味します。
 
   f. ライセンス資料とは、ライセンサーが本パブリック ライセンスを適用した芸術作品または文学作品、データベース、その他の資料を意味します。
 
@@ -2563,7 +2563,7 @@ caniuse-lite 1.0.30001165 - CC-BY-4.0 https://github.com/ben-eb/caniuse-lite#rea
 
   c. 疑いの回避のため、ライセンサーは、ライセンスマテリアルを個別の条件で提供したり、ライセンスされたマテリアルの配布をいつでも停止したりする場合があります。ただし、この場合、このパブリック ライセンスは終了しません。
 
-  d.  セクション 1、5、6、7、および 8 は、このパブリック ライセンスの終了後も存続します。
+  d. セクション 1、5、6、7、および 8 は、このパブリック ライセンスの終了後も存続します。
 
 
 セクション 7 -- その他の利用規約。
@@ -2581,7 +2581,7 @@ caniuse-lite 1.0.30001165 - CC-BY-4.0 https://github.com/ben-eb/caniuse-lite#rea
 
   c. このパブリック ライセンスの用語または条件は放棄されません。また、ライセンサーが明示的に同意しない限り、同意に従わない場合。
 
-  d.  このパブリック ライセンスのいかなるものも、ライセンサーまたはお客様に適用される特権および免除に対する制限、または権利放棄を構成するもの、または解釈される可能性があります。これには、管轄権または権限の法的プロセスも含め、含まれるものはありません。
+  d. このパブリック ライセンスのいかなるものも、ライセンサーまたはお客様に適用される特権および免除に対する制限、または権利放棄を構成するもの、または解釈される可能性があります。これには、管轄権または権限の法的プロセスも含め、含まれるものはありません。
 
 
 =======================================================================
@@ -4011,7 +4011,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI React で参照されるフォントとアイコンの使用法は、以下に示す用語の対象です。 https://aka.ms/fluentui-assets-license
+注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4036,7 +4036,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI React で参照されるフォントとアイコンの使用法は、以下に示す用語の対象です。 https://aka.ms/fluentui-assets-license
+注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4061,7 +4061,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI React で参照されるフォントとアイコンの使用法は、以下に示す用語の対象です。 https://aka.ms/fluentui-assets-license
+注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4473,7 +4473,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI React で参照されるフォントとアイコンの使用法は、以下に示す用語の対象です。 https://aka.ms/fluentui-assets-license
+注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4498,7 +4498,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI React で参照されるフォントとアイコンの使用法は、以下に示す用語の対象です。 https://aka.ms/fluentui-assets-license
+注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4523,7 +4523,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI React で参照されるフォントとアイコンの使用法は、以下に示す用語の対象です。 https://aka.ms/fluentui-assets-license
+注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4548,7 +4548,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI React で参照されるフォントとアイコンの使用法は、以下に示す用語の対象です。 https://aka.ms/fluentui-assets-license
+注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4573,7 +4573,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI React で参照されるフォントとアイコンの使用法は、以下に示す用語の対象です。 https://aka.ms/fluentui-assets-license
+注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4598,7 +4598,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI React で参照されるフォントとアイコンの使用法は、以下に示す用語の対象です。 https://aka.ms/fluentui-assets-license
+注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4623,7 +4623,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI React で参照されるフォントとアイコンの使用法は、以下に示す用語の対象です。 https://aka.ms/fluentui-assets-license
+注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -8035,11 +8035,11 @@ Copyright Joyent, Inc. および他の Node 投稿者。
 
 eventsource 1.0.7 - MIT http://github.com/EventSource/eventsource
 
-Copyright (c) EventSource GitHub Copyright Joyent, Inc. および他の Node 投稿者。
+Copyright (c) EventSource GitHub Joyent, Inc. および他の Node 投稿者。
 
 MIT ライセンス
 
-Copyright (c) EventSource GitHub 組織
+Copyright (c) EventSource GitHub組織
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -9012,11 +9012,11 @@ Copyright (c) 2015 [Charlike Make 試薬](http://j.mp/1stW47C)
 
 history 4.10.1 - MIT https://github.com/ReactTraining/history#readme
 
-Copyright (c) React Training 2016-2018
+Copyright (c) React トレーニング 2016-2018
 
 MIT ライセンス
 
-Copyright (c) React Training 2016-2018
+Copyright (c) React トレーニング 2016-2018
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -11397,7 +11397,7 @@ Copyright 2010 James Halliday (mail@substack.net)
 
 ---------------------------------------------------------
 
-monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015 Copyright (c) Joshaven Potter Copyright (c) 2014 Taylor Hakes Copyright (c) Artyom Shalkhakov.
 Copyright (c) 2015 David Owens II Copyright (c) 2014 Forbes Lindesay Copyright (c) 2015 Nicolas Bevacqua Copyright (c) Microsoft Corporation.
@@ -11423,7 +11423,7 @@ Copyright (c) 2016 - 現在の Microsoft Corporation
 
 ---------------------------------------------------------
 
-monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015 Copyright (c) Joshaven Potter Copyright (c) 2014 Taylor Hakes Copyright (c) Artyom Shalkhakov.
 Copyright (c) 2015 David Owens II Copyright (c) 2014 Forbes Lindesay Copyright (c) 2015 Nicolas Bevacqua Copyright (c) Microsoft Corporation.
@@ -12032,7 +12032,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI React で参照されるフォントとアイコンの使用法は、以下に示す用語の対象です。 https://aka.ms/fluentui-assets-license
+注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -13576,6 +13576,54 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
+prettier 2.0.5 - MIT https://prettier.io/
+
+Copyright Google Inc. Copyright (c) 2014-2016 Teambition Copyright (c) Microsoft Corporation.
+Copyright (c) 2014-2015, Jon Schlinkert.
+Copyright (c) 2014-2016, Jon Schlinkert.
+Copyright (c) 2014-2017, Jon Schlinkert.
+Copyright (c) 2015-2017, Jon Schlinkert.
+Copyright (c) James Long and contributors Copyright (c) 2014-present, Jon Schlinkert.
+著作権 (c) Facebook, Inc. とその関連会社。
+Copyright (c) 2014 Ivan Nikulin <ifaaan@gmail.com> Copyright 2014, 2015, 2016, 2017, 2018 Simon Lydell Copyright (c) 2013 鈴木 優介 <utatane.tea@gmail.com> Copyright (c) 2013-2014 鈴木 友介 <utatane.tea@gmail.com>
+
+James Long ©と投稿者の著作権
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+prettier 2.2.1 - MIT https://prettier.io/
+
+(c) bv u Copyright Google LLC Copyright Google Inc. (c) bv(u,t),function t,r (c) Kr Cr t,zr Cr a,Your Cr (c) Kr Tr t,zr Tr a,Your Tr Copyright (c) Microsoft Corporation.
+Copyright (c) 2014-2015, Jon Schlinkert.
+Copyright (c) 2014-2016, Jon Schlinkert.
+Copyright (c) 2014-2017, Jon Schlinkert.
+Copyright (c) 2015-2017, Jon Schlinkert.
+Copyright (c) James Long and contributors Copyright (c) 2014-present, Jon Schlinkert.
+著作権 (c) Facebook, Inc. とその関連会社。
+Copyright (c) 2014 Ivan Nikulin <ifaaan@gmail.com> Copyright 2014, 2015, 2016, 2017, 2018 Simon Lydell Copyright (c) 2013 鈴木 優介 <utatane.tea@gmail.com> Copyright (c) 2013-2014 鈴木 友介 <utatane.tea@gmail.com>
+
+James Long ©と投稿者の著作権
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
 pretty-bytes 5.3.0 - MIT https://github.com/sindresorhus/pretty-bytes#readme
 
 (c) Sindre Sorhus ( https://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
@@ -14137,11 +14185,11 @@ Copyright (c) 2015-present Dan Abramov
 
 react-router 5.2.0 - MIT https://github.com/ReactTraining/react-router#readme
 
-(c) Sindre Sorhus Copyright 2015, Yahoo! Inc. Copyright (c) React Training 2016-2018 Copyright (c) 2013-present, Facebook, Inc. Copyright (c) Facebook, Inc. and its affiliates.
+(c) Sindre Sorhus Copyright 2015, Yahoo! Inc. Copyright (c) React トレーニング 2016-2018 Copyright (c) 2013-present, Facebook, Inc. Copyright (c) Facebook, Inc. とその関連会社。
 
 MIT ライセンス
 
-Copyright (c) React Training 2016-2018
+Copyright (c) React トレーニング 2016-2018
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -14156,11 +14204,11 @@ Copyright (c) React Training 2016-2018
 
 react-router-dom 5.2.0 - MIT https://github.com/ReactTraining/react-router#readme
 
-(c) Sindre Sorhus Copyright 2015, Yahoo! Inc. Copyright (c) React Training 2016-2018 Copyright (c) 2013-present, Facebook, Inc. Copyright (c) Facebook, Inc. and its affiliates.
+(c) Sindre Sorhus Copyright 2015, Yahoo! Inc. Copyright (c) React トレーニング 2016-2018 Copyright (c) 2013-present, Facebook, Inc. Copyright (c) Facebook, Inc. とその関連会社。
 
 MIT ライセンス
 
-Copyright (c) React Training 2016-2018
+Copyright (c) React トレーニング 2016-2018
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -16622,7 +16670,7 @@ Copyright (c) 2015 Unshift.io、Arnout Kazemier、投稿者。
 
 ---------------------------------------------------------
 
-url-polyfill 1.1.9 - MIT https://github.com/lifaon74/url-polyfill#readme
+url-polyfill 1.1.12 - MIT https://github.com/lifaon74/url-polyfill#readme
 
 Copyright (c) 2017 Valentin Richard
 

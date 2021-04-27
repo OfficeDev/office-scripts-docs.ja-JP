@@ -1,23 +1,25 @@
 ---
 title: フォルダー内のすべての Excel ファイルでスクリプトを実行する
-description: OneDrive for Business のフォルダー内のすべての Excel ファイルでスクリプトを実行する方法について説明します。
-ms.date: 03/31/2021
+description: フォルダー内のすべてのファイルに対してスクリプトExcel実行する方法について説明OneDrive for Business。
+ms.date: 04/02/2021
 localization_priority: Normal
-ms.openlocfilehash: a11876e8241a069a7c640bbcf2c36b4842d3bd90
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 6376dcac0eb36c04c2b60b2717d18cd730a0a8ee
+ms.sourcegitcommit: 1f003c9924e651600c913d84094506125f1055ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571489"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52026858"
 ---
 # <a name="run-a-script-on-all-excel-files-in-a-folder"></a>フォルダー内のすべての Excel ファイルでスクリプトを実行する
 
-このプロジェクトは、OneDrive for Business のフォルダー内のすべてのファイルに対して一連の自動化タスクを実行します。 SharePoint フォルダーでも使用できます。
-Excel ファイルの計算を実行し、書式設定を追加し、同僚にコメント [@mentions](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) 挿入します。
+このプロジェクトは、フォルダー内のすべてのファイルに対して一連の自動化タスクを実行OneDrive for Business。 また、フォルダー内のフォルダー SharePointすることもできます。
+このプロパティは、Excelファイルに対して計算を実行し、書式設定を追加し、同僚にコメント[@mentions](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7)挿入します。
+
+ファイルをダウンロード<a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip</a>サンプルで使用されている Sales というタイトルのフォルダーにファイルを抽出し、自分で試してみてください。
 
 ## <a name="sample-code-add-formatting-and-insert-comment"></a>サンプル コード: 書式の追加とコメントの挿入
 
-ファイルをダウンロード<a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip</a>サンプルで使用されている Sales というタイトルのフォルダーにファイルを抽出し、自分で試してみてください。
+これは、個々のブックで実行されるスクリプトです。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -61,6 +63,31 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="training-video-run-a-script-on-all-excel-files-in-a-folder"></a>トレーニング ビデオ: フォルダー内のすべての Excel ファイルでスクリプトを実行する
+## <a name="power-automate-flow-run-the-script-on-every-workbook-in-the-folder"></a>Power Automateフロー: フォルダー内のすべてのブックでスクリプトを実行する
 
-[](https://youtu.be/xMg711o7k6w) OneDrive for Business または SharePoint フォルダー内のすべての Excel ファイルでスクリプトを実行する方法の詳細なビデオをご覧ください。
+このフローは、"Sales" フォルダー内のすべてのブックでスクリプトを実行します。
+
+1. 新しいインスタント クラウド **フローを作成します**。
+1. [フロー **を手動でトリガーする] を選択し** 、[作成] を **押します**。
+1. [フォルダー内 **のファイルの一** 覧] **OneDrive for Businessを使用** する新 **しい手順を追加** します。
+
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="完了したOneDrive for BusinessコネクタをPower Automate。":::
+1. 抽出されたブックを含む "Sales" フォルダーを選択します。
+1. ブックのみを選択するには、[新しい手順] を選択し、[条件]**を選択****し**、次の値を設定します。
+    1. **名前**(ファイルOneDrive値)
+    1. "ends with"
+    1. "xlsx"
+
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="後続Power Automateを各ファイルに適用する条件ブロックを指定します。":::
+1. [**はい] ブランチの** 下に、[スクリプトの実行 (プレビュー) アクションExcel **オンライン (Business)** コネクタ **を追加** します。 アクションには、次の値を使用します。
+    1. **場所**: OneDrive for Business
+    1. **ドキュメント ライブラリ**: OneDrive
+    1. **ファイル**: **Id** (OneDrive ID 値)
+    1. **スクリプト**: スクリプト名
+
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="オンライン (Excel) コネクタの完成Power Automate。":::
+1. フローを保存し、試してみてください。
+
+## <a name="training-video-run-a-script-on-all-excel-files-in-a-folder"></a>トレーニング ビデオ: フォルダー内のすべてのファイルExcelスクリプトを実行する
+
+[1 つのフォルダーまたは](https://youtu.be/xMg711o7k6w)フォルダー内のすべての Excel ファイルでスクリプトを実行OneDrive for BusinessビデオをSharePointします。

@@ -1,25 +1,45 @@
 ---
 title: Office スクリプトでの外部 API 呼び出しのサポート
 description: スクリプトで外部 API 呼び出しを行うOffice。
-ms.date: 01/05/2021
+ms.date: 04/05/2021
 localization_priority: Normal
-ms.openlocfilehash: 74b8750f609370370759ca4a4a1daa998363ac2e
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 7e6054fc50723dfbd95ded2e6e83eea3d38d2660
+ms.sourcegitcommit: 1f003c9924e651600c913d84094506125f1055ab
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570312"
+ms.lasthandoff: 04/26/2021
+ms.locfileid: "52026815"
 ---
 # <a name="external-api-call-support-in-office-scripts"></a>Office スクリプトでの外部 API 呼び出しのサポート
 
 スクリプト作成者は、プラットフォームのプレビュー 段階で外部 [API](https://developer.mozilla.org/docs/Web/API) を使用する場合、一貫した動作を期待してはならない。 そのため、重要なスクリプト シナリオでは外部 API に依存しません。
 
-外部 API への呼び出しは、通常の状況では Power Automate 経由ではなく、Excel アプリケーション経由 [でのみ実行できます](#external-calls-from-power-automate)。
+外部 API への呼び出しは、通常の状況Excelアプリケーションを介Power Automate[実行できます](#external-calls-from-power-automate)。
 
 > [!CAUTION]
 > 外部呼び出しにより、機密データが望ましくないエンドポイントに公開される可能性があります。 管理者は、このような呼び出しに対するファイアウォール保護を確立できます。
 
-## <a name="working-with-fetch"></a>操作 `fetch`
+## <a name="configure-your-script-for-external-calls"></a>外部呼び出し用にスクリプトを構成する
+
+外部呼び出 [しは非同期](https://developer.mozilla.org/docs/Learn/JavaScript/Asynchronous/Async_await) であり、スクリプトがとしてマークされている必要があります `async` 。 次に示すように、プレフィックスを関数に追加 `async` `main` し、それを `Promise` 返すようにします。
+
+```typescript
+async function main(workbook: ExcelScript.Workbook) : Promise <void>
+```
+
+> [!NOTE]
+> 他の情報を返すスクリプトは、その種類の `Promise` 1 つを返す可能性があります。 たとえば、スクリプトでオブジェクトを返す必要がある場合、 `Employee` 戻り値の署名は次のようになります。 `: Promise <Employee>`
+
+そのサービスを呼び出すには、外部サービスのインターフェイスを学習する必要があります。 REST API を使用 `fetch` [している場合](https://wikipedia.org/wiki/Representational_state_transfer)は、返されるデータの JSON 構造を決定する必要があります。 スクリプトの入力と出力の両方について、必要な JSON 構造に一致 `interface` するを検討してください。 これにより、スクリプトの型の安全性が向上します。 この例については、「スクリプトからフェッチを使用する[」でOfficeできます](../resources/samples/external-fetch-calls.md)。
+
+### <a name="limitations-with-external-calls-from-office-scripts"></a>スクリプトからの外部呼び出しOffice制限
+
+* OAuth2 タイプの認証フローをサインインまたは使用する方法はありません。 すべてのキーと資格情報をハードコード (または別のソースから読み取る) 必要があります。
+* API の資格情報とキーを格納するインフラストラクチャはありません。 これは、ユーザーが管理する必要があります。
+* 外部呼び出しにより、機密データが望ましくないエンドポイントに公開される場合や、内部ブックに外部データが取り込まれたりする場合があります。 管理者は、このような呼び出しに対するファイアウォール保護を確立できます。 外部通話に依存する前に、必ずローカル ポリシーに確認してください。
+* 依存関係を取得する前に、データ スループットの量を確認してください。 たとえば、外部データセット全体を引き下げないのが最適な選択肢ではなく、代わりにページネーションを使用してデータをチャンク単位で取得する必要があります。
+
+### <a name="working-with-fetch"></a>操作 `fetch`
 
 フェッチ [API は、](https://developer.mozilla.org/docs/Web/API/Fetch_API) 外部サービスから情報を取得します。 これは `async` API なので、スクリプトの署名を `main` 調整する必要があります。 関数を `main` 作成 `async` し、 を返します `Promise<void>` 。 また、呼び出しと取得 `await` `fetch` も確認する必要 `json` があります。 これにより、スクリプトが終了する前にこれらの操作が確実に完了します。
 
@@ -38,16 +58,19 @@ async function main(workbook: ExcelScript.Workbook): Promise <void> {
 }
 ```
 
-Office スクリプトのサンプル シナリオ [: NOAA](../resources/scenarios/noaa-data-fetch.md) の水位データをグラフ化すると、国立海洋大気局の潮流データベースからレコードを取得するために使用されるフェッチ コマンドが示されています。
+Office スクリプトのサンプル シナリオ[: NOAA](../resources/scenarios/noaa-data-fetch.md)の Graph 水レベルデータは、国立海洋大気局のタイドと Currents データベースからレコードを取得するために使用されるフェッチ コマンドを示しています。
 
-## <a name="external-calls-from-power-automate"></a>Power Automate からの外部通話
+## <a name="external-calls-from-power-automate"></a>外部からの外部通話Power Automate
 
-Power Automate を使用してスクリプトを実行すると、外部 API 呼び出しは失敗します。 これは、Excel クライアントを使用してスクリプトを実行する場合と Power Automate を使用する場合の動作の違いです。 フローに組み込む前に、スクリプトでそのような参照を確認してください。
+スクリプトを使用してスクリプトを実行すると、外部 API 呼び出しPower Automate。 これは、スクリプトをクライアント経由で実行する場合と、Excelスクリプトを実行Power Automate。 フローに組み込む前に、スクリプトでそのような参照を確認してください。
+
+データを外部サービスから取得または外部サービスにプッシュするには [、Azure AD](/connectors/webcontents/) または他の同等のアクションで HTTP を使用する必要があります。
 
 > [!WARNING]
-> Power [Automate Excel Online](/connectors/excelonlinebusiness) コネクタを介して行われた外部呼び出しは、既存のデータ損失防止ポリシーを支持するために失敗します。 ただし、Power Automate を介して実行されるスクリプトは、組織外および組織のファイアウォールの外部で実行されます。 この外部環境で悪意のあるユーザーから保護するために、管理者はスクリプトの使用Officeできます。 管理者は、Power Automate で Excel Online コネクタを無効にするか、Office スクリプト管理者コントロールを使用して Web 上の Excel Office [を無効にできます](/microsoft-365/admin/manage/manage-office-scripts-settings)。
+> 既存のデータ損失防止ポリシーを[Power Automate Excel、オンライン](/connectors/excelonlinebusiness)コネクタを介して行われた外部通話は失敗します。 ただし、組織の外部Power Automate、組織のファイアウォールの外部で実行されるスクリプトは実行されます。 この外部環境で悪意のあるユーザーからの保護を強化するために、管理者はスクリプトの使用Officeできます。 管理者は、Excel で Excel Power Automate Online コネクタを無効にするか、Office スクリプト管理者Excel on the webを使用して Office スクリプトを[無効にできます](/microsoft-365/admin/manage/manage-office-scripts-settings)。
 
 ## <a name="see-also"></a>関連項目
 
-- [Office スクリプトでの組み込みの JavaScript オブジェクトの使用](javascript-objects.md)
-- [Office スクリプトのサンプル シナリオ: NOAA からの水位データのグラフ](../resources/scenarios/noaa-data-fetch.md)
+* [Office スクリプトでの組み込みの JavaScript オブジェクトの使用](javascript-objects.md)
+* [スクリプトで外部フェッチ呼び出しOfficeする](../resources/samples/external-fetch-calls.md)
+* [Officeスクリプトのサンプル シナリオ: noAA Graphデータを使用する](../resources/scenarios/noaa-data-fetch.md)
