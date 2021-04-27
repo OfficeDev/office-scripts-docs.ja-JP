@@ -89,6 +89,8 @@ items:
                 href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
               - name: Excel データから Teams の出席依頼を送信する
                 href: resources/samples/send-teams-invite-from-excel-data.md
+              - name: Office スクリプトで外部取得呼び出しを使用する
+                href: resources/samples/external-fetch-calls.md
           - name: シナリオ
             items:
               - name: Web ダウンロードの分析
