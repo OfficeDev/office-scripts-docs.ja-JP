@@ -1,16 +1,16 @@
 ---
-title: 'Office スクリプトのサンプル シナリオ: 成績計算'
+title: 'Officeスクリプトのサンプル シナリオ: 成績計算'
 description: 学生のクラスのパーセンテージとレターの成績を決定するサンプル。
 ms.date: 12/17/2020
 localization_priority: Normal
-ms.openlocfilehash: b8c45ad405c06a943c75e76391c1160ecb1bd18e
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: e2ef6e7522fc88219bf6ba40900a1ecceecb263b
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755029"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232698"
 ---
-# <a name="office-scripts-sample-scenario-grade-calculator"></a>Office スクリプトのサンプル シナリオ: 成績計算
+# <a name="office-scripts-sample-scenario-grade-calculator"></a>Officeスクリプトのサンプル シナリオ: 成績計算
 
 このシナリオでは、すべての学生の学期終了の成績を集計する講師です。 課題とテストのスコアを入力しています。 それでは、学生の運命を決定する時間です。
 
@@ -25,9 +25,9 @@ ms.locfileid: "51755029"
 
 ## <a name="setup-instructions"></a>セットアップ手順
 
-1. OneDrive <a href="grade-calculator.xlsx">grade-calculator.xlsx</a> をダウンロードします。
+1. ユーザー <a href="grade-calculator.xlsx">grade-calculator.xlsx</a>にダウンロードOneDrive。
 
-2. Web 用の Excel を使用してブックを開きます。
+2. Web 用のブックExcel開きます。
 
 3. [自動化] **タブで** 、[すべてのスクリプト] **を開きます**。
 
@@ -182,8 +182,8 @@ ms.locfileid: "51755029"
 
 ### <a name="before-running-the-script"></a>スクリプトを実行する前に
 
-:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="学生のスコアの行を表示するワークシート。":::
+:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="学生のスコアの行を表示するワークシート":::
 
 ### <a name="after-running-the-script"></a>スクリプトの実行後
 
-:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="有効な学生行の赤い合計に無効なセルを含む学生スコア データを示すワークシート。":::
+:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="有効な学生行の赤い合計で無効なセルを持つ学生スコア データを示すワークシート":::

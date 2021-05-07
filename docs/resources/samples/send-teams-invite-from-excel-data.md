@@ -1,34 +1,34 @@
 ---
-title: Excel データから Teams 会議を送信する
-description: Excel データから Teams 会議Office送信するには、スクリプトを使用する方法について学習します。
-ms.date: 03/30/2021
+title: データからTeams会議をExcelする
+description: '[スクリプト] を使用してOfficeデータから会議Teams送信するExcelします。'
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 807c9228049504c089c8dafe63a5d9ccaab94399
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: b0a3d5732727fd399fe34f3645336840ba4c156d
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571534"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232733"
 ---
-# <a name="send-teams-meeting-from-excel-data"></a>Excel データから Teams 会議を送信する
+# <a name="send-teams-meeting-from-excel-data"></a>会議TeamsデータからExcel送信する
 
-このソリューションでは、Excel ファイルから行Officeを選択し、Teams 会議の招待を送信して Excel を更新するために、スクリプトと Power Automate アクションを使用する方法を示します。
+このソリューションでは、Office スクリプトと Power Automate アクションを使用して Excel ファイルから行を選択し、Teams 会議の招待を送信し、Excel を更新する方法を示します。
 
 ## <a name="example-scenario"></a>シナリオ例
 
-* 人事採用担当者は、Excel ファイル内の候補者の面接スケジュールを管理します。
-* 採用担当者は、Teams 会議の招待を候補者と面接官に送信する必要があります。 ビジネス ルールは、次の項目を選択します。
+* 人事採用担当者は、候補者の面接スケジュールを管理し、Excelします。
+* 採用担当者は、候補者と面接官にTeams会議の招待を送信する必要があります。 ビジネス ルールは、次の項目を選択します。
 
     (a) 招待がファイル列に記録されているとして送信されていないユーザーにのみ招待します。
 
     (b) 将来の面接日 (過去の日付なし)。
 
-* 採用担当者は、対象レコードに対してすべての Teams 会議が送信されたという確認で Excel ファイルを更新する必要があります。
+* 採用担当者は、対象となるレコードExcelすべての会議が送信されたTeamsファイルを更新する必要があります。
 
 ソリューションには 3 つのパーツがあります。
 
-1. Officeスクリプトを使用して、条件に基づいてテーブルからデータを抽出し、オブジェクトの配列を JSON データとして返します。
-1. その後、データは Teams の [チームの作成] 会議アクション **に送信** され、招待を送信します。 JSON 配列内のインスタンスごとに 1 つの Teams 会議を送信します。
+1. Office条件に基づいてテーブルからデータを抽出し、オブジェクトの配列を JSON データとして返すスクリプト。
+1. 次に、データが [会議の作成] Teamsに送信Teams **に** 送信されます。 JSON 配列内Teams 1 つの会議を送信します。
 1. 同じ JSON データを別の Officeスクリプトに送信して、招待の状態を更新します。
 
 ## <a name="sample-excel-file"></a>サンプル Excel ファイル
@@ -228,6 +228,6 @@ interface InterviewInvite  {
 }
 ```
 
-## <a name="training-video-send-a-teams-meeting-from-excel-data"></a>トレーニング ビデオ: Excel データから Teams 会議を送信する
+## <a name="training-video-send-a-teams-meeting-from-excel-data"></a>トレーニング ビデオ: データからTeams会議をExcelする
 
-[![Excel データから Teams 会議を送信する方法について、ステップバイステップのビデオを見る](../../images/teams-invite-vid.jpg)](https://youtu.be/HyBdx52NOE8 "Excel データから Teams 会議を送信する方法に関するステップバイステップのビデオ")
+[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/HyBdx52NOE8).

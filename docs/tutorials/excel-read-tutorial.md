@@ -3,12 +3,12 @@ title: Excel on the web で Office スクリプトを使用してブックのデ
 description: ブックのデータを読み取り、スクリプトでそのデータを評価する方法について説明した Office スクリプトのチュートリアル。
 ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: d6321cb91a425da3fd45329d5171f1d5694b2b99
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 979ad949f999f67ee9de750c53ba4690ce6294e6
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754858"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232852"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを使用してブックのデータを読み取る
 
@@ -71,7 +71,7 @@ ms.locfileid: "51754858"
 6. スクリプトを実行します。
 7. コンソールに `[Array[1]]` が表示されます。 範囲は 2 次元のデータ配列であるため、これは数値ではありません。 この 2 次元の範囲は、コンソールに直接ログ記録されます。 コード エディターを使用すると、この配列の内容を表示できます。
 8. 2 次元の配列がコンソールにログ記録すると、各行の下に列の値がグループ化されます。 青い三角形を押して、配列のログを展開します。
-9. 新たに表示された青い三角形を押して、配列の第 2 レベルを展開します。 次のように表示されるはずです。
+9. 新たに表示された青い三角形を押して、配列の第 2 レベルを展開すると、次の情報が表示されます。
 
     :::image type="content" source="../images/tutorial-4.png" alt-text="出力 '-20.05' が 2 つの配列の下に入れ子になって表示されているコンソール ログ":::
 
@@ -143,10 +143,10 @@ ms.locfileid: "51754858"
 
     銀行取引明細書は次のように表示されるはずです。
 
-    :::image type="content" source="../images/tutorial-5.png" alt-text="書式設定された正の値のみを含む表形式の銀行取引明細書を示すワークシート。":::
+    :::image type="content" source="../images/tutorial-5.png" alt-text="書式設定された正の値のみを含む表形式の銀行取引明細書を示すワークシート":::
 
 ## <a name="next-steps"></a>次の手順
 
-コード エディターを開き、「[Excel on the web での Office スクリプトのサンプル スクリプト](../resources/excel-samples.md)」をいくつか試してみます。 Office スクリプトの作成について詳しくは、「[Excel on the web での Office スクリプトのスクリプトの基本事項](../develop/scripting-fundamentals.md)」も参照してください。
+コード エディターを開き、「[Excel on the web での Office スクリプトのサンプル スクリプト](../resources/samples/excel-samples.md)」をいくつか試してみます。 Office スクリプトの作成について詳しくは、「[Excel on the web での Office スクリプトのスクリプトの基本事項](../develop/scripting-fundamentals.md)」も参照してください。
 
 次の一連の Office スクリプトのチュートリアルでは、Power Automate を使用した Office スクリプトの使用法について説明します。 2 つのプラットフォームを組み合わせる利点の詳細については、「[Power Automate を使用した Office スクリプトの実行](../develop/power-automate-integration.md) または [手動による Power Automate フローからのスクリプトの呼び出し](excel-power-automate-manual.md) チュートリアルを試して、Office スクリプトを使用した Power Automate フローを作成する」を参照してください。

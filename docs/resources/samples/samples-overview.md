@@ -1,14 +1,14 @@
 ---
 title: Officeスクリプトのサンプル
 description: 使用可能なOfficeスクリプトのサンプルとシナリオです。
-ms.date: 04/05/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: dc09db00cb63e6873b255360aff17ad2a56fa89e
-ms.sourcegitcommit: 1f003c9924e651600c913d84094506125f1055ab
+ms.openlocfilehash: 625db792763606e8db77abdc4665b7db2732892f
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52026829"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232740"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Officeスクリプトのサンプルとシナリオ
 
@@ -27,15 +27,15 @@ ms.locfileid: "52026829"
 | Project | 詳細 |
 |---------|---------|
 | [スクリプトの基本](../excel-samples.md) | これらのサンプルでは、スクリプトの基本的な構成要素Office示します。 |
-| [[スクリプト] で Range オブジェクトを使用するOffice説明します。](range-basics.md) | この記事では、Range オブジェクトとその API の使用の基本について説明します。 これは、他のすべてのプロジェクトで使用される基礎トピックです。 |
+| [コメントを追加Excel](add-excel-comments.md) | このサンプルでは、同僚を含むセルにコメントを追加@mentioning示します。 |
+| [複数のテーブルExcel 1 つのテーブルにコピーする](copy-tables-combine.md) | このサンプルでは、複数のテーブルExcelデータを、すべての行を含む 1 つのテーブルに結合します。 |
 
 ## <a name="beyond-the-basics"></a>応用
 
-完全なスクリプト、使用されているサンプル ファイル、ビデオと共にサンプル シナリオを自動化する次Excelを確認[してください](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0)。
+完全なスクリプト、使用されているサンプル Excel ファイル、およびビデオ[(YouTube](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0)でホストされる) と共にサンプル シナリオを自動化する次のエンドツーエンド プロジェクトを確認してください。
 
 | Project | 詳細 |
 |---------|---------|
-| [コメントを追加Excel](add-excel-comments.md) | このサンプルでは、同僚を含むセルにコメントを追加@mentioning示します。 |
 | [特定のシートまたはすべてのシートの空白行を数える](count-blank-rows.md) | このサンプルでは、データが存在すると予測されるシート内に空白行が存在する場合を検出し、データ フローで使用するために空白行数をPower Automateします。 |
 | [ファイルを相互参照してExcelする](excel-cross-reference.md) | このソリューションは、2 つの Excel ファイルを相互参照および書式設定する方法を、スクリプトとスクリプトを使用Office示Power Automate。 |
 | [電子メール グラフと表の画像](email-images-chart-table.md) | このサンプルでは、OfficeスクリプトとPower Automateアクションを使用してグラフを作成し、そのグラフを画像として電子メールで送信します。 |
@@ -43,7 +43,6 @@ ms.locfileid: "52026829"
 | [テーブルをExcelし、表示範囲を取得する](filter-table-get-visible-range.md) | 次のサンプルでは、Excelをフィルター処理し、表示範囲を JSON オブジェクトとして返します。 この JSON は、大規模なソリューションの一部Power Automateフローに提供できます。 |
 | [ブックで一意の識別子を生成する](document-number-generator.md) | このシナリオは、ユーザーが特定の形式の一意の文書番号を生成し、範囲またはテーブルにエントリを追加するのに役立ちます。 |
 | [計算モードを管理Excel](excel-calculation.md) | このサンプルでは、スクリプトを使用して計算モードを使用し、Excel on the webメソッドOffice示します。 |
-| [複数のテーブルExcelを 1 つのテーブルに結合する](copy-tables-combine.md) | このサンプルでは、複数のテーブルExcelデータを、すべての行を含む 1 つのテーブルに結合します。 |
 | [テーブル間で行を移動する](move-rows-across-tables.md) | このサンプルでは、フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する方法を示します。 |
 | [JSON Excelデータを出力する](get-table-data.md) | このソリューションは、テーブル データExcel JSON として出力する方法を示Power Automate。 |
 | [ワークシート内の各セルからハイパーリンクをExcelする](remove-hyperlinks-from-cells.md) | このサンプルでは、現在のワークシートからすべてのハイパーリンクをクリアします。 |

@@ -1,32 +1,32 @@
 ---
-title: Excel データを JSON として出力する
-description: Power Automate で使用する EXCEL テーブル データを JSON として出力する方法について説明します。
+title: JSON Excelデータを出力する
+description: テーブル データを JSON Excelとして出力する方法について説明します。Power Automate。
 ms.date: 03/18/2021
 localization_priority: Normal
-ms.openlocfilehash: db6eb8f8645079eebc369e0a0622539075853953
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: c6b033a68fdbde2b053f65d1a54db58da6c93b2e
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754797"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232537"
 ---
-# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Power Automate で使用するための JSON として Excel テーブル データを出力する
+# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>テーブルExcelを JSON として出力して、テーブルの使用状況をPower Automate
 
-Excel テーブル データは、JSON 形式のオブジェクトの配列として表されます。 各オブジェクトは、テーブル内の行を表します。 これにより、ユーザーに表示される一貫性のある形式で Excel からデータを抽出できます。 その後、Power Automate フローを使用して他のシステムにデータを与えできます。
+Excelデータは、JSON 形式のオブジェクトの配列として表されます。 各オブジェクトは、テーブル内の行を表します。 これにより、ユーザーに表示されるExcel形式でデータを抽出できます。 その後、データを他のシステムに与え、Power Automateできます。
 
 _入力テーブル のデータ_
 
-:::image type="content" source="../../images/table-input.png" alt-text="入力テーブル データを示すワークシート。":::
+:::image type="content" source="../../images/table-input.png" alt-text="入力テーブル のデータを示すワークシート":::
 
 このサンプルのバリエーションには、表の列の 1 つにもハイパーリンクが含まれています。 これにより、追加レベルのセル データを JSON に表示できます。
 
 _ハイパーリンクを含む入力テーブル データ_
 
-:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="ハイパーリンクとして書式設定されたテーブル データの列を示すワークシート。":::
+:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="ハイパーリンクとして書式設定されたテーブル データの列を示すワークシート":::
 
 _ハイパーリンクを編集するダイアログ_
 
-:::image type="content" source="../../images/table-hyperlink-edit.png" alt-text="ハイパーリンクを変更するためのオプションを表示する [ハイパーリンクの編集] ダイアログ ボックス。":::
+:::image type="content" source="../../images/table-hyperlink-edit.png" alt-text="ハイパーリンクを変更するためのオプションを表示する [ハイパーリンクの編集] ダイアログ ボックス":::
 
 ## <a name="sample-excel-file"></a>サンプル Excel ファイル
 
@@ -253,6 +253,6 @@ interface TableData {
 }]
 ```
 
-## <a name="use-in-power-automate"></a>Power Automate での使用
+## <a name="use-in-power-automate"></a>[Power Automate
 
-Power Automate でこのようなスクリプトを使用する方法については、「Power Automate を使用して自動化されたワークフローを作成する [」を参照してください](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)。
+このようなスクリプトを使用する方法については、「Power Automateを使用して自動化されたワークフローを作成する」[を参照Power Automate。](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)

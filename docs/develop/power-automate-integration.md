@@ -3,12 +3,12 @@ title: Power Automate を使用した Office スクリプトの実行
 description: Power Automate ワークフローを使用して Excel on the web の Office スクリプトを取得する方法。
 ms.date: 12/16/2020
 localization_priority: Normal
-ms.openlocfilehash: 1ca9aa14efe7cf2c91100a32fbc9a69054012f06
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
-ms.translationtype: HT
+ms.openlocfilehash: fd2622880f08c253f4333e642d1ebb0410bce681
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755071"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232418"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>Power Automate を使用した Office スクリプトの実行
 
@@ -99,7 +99,7 @@ Power Automate でフローを構成する場合、スクリプト入力を静�
 
 次のスクリーンショットは、[GitHub](https://github.com/) の問題がお客様に割り当てられるたびにトリガーされる Power Automate フローを示しています。 このフローでは、Excel ブックのテーブルに問題を追加するスクリプトが実行されます。 そのテーブルに 5 つ以上の問題がある場合、フローでメール アラームが送信されます。
 
-:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="サンプルのフローを示す Power Automate フロー エディター。":::
+:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="フロー Power Automate示すフロー エディターの例":::
 
 スクリプトの `main` 関数では、問題の ID と問題のタイトルが入力パラメーターとして指定され、スクリプトによって問題テーブルの行数が返されます。
 

@@ -1,67 +1,67 @@
 ---
-title: Power Automate with Office スクリプト
-description: スクリプトと Power Automate の間の統合に関するヒント、プラットフォーム情報、既知Office問題。
+title: Office スクリプトを使用した Power Automate のトラブルシューティング情報
+description: ヒント、プラットフォーム情報、および既知の問題と、スクリプトとスクリプトのOffice統合Power Automate。
 ms.date: 01/14/2021
 localization_priority: Normal
-ms.openlocfilehash: 59f4cd8b3476c2ee2a1a862f136173a543ba8a15
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: bcfedb8db88d74f16e46c604121bceff3c7c7382
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755008"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232649"
 ---
-# <a name="troubleshooting-information-for-power-automate-with-office-scripts"></a>Power Automate with Office スクリプト
+# <a name="troubleshooting-information-for-power-automate-with-office-scripts"></a>Office スクリプトを使用した Power Automate のトラブルシューティング情報
 
-Power Automation を使用すると、スクリプトOfficeを次のレベルに進めできます。 ただし、Power Automate は独立した Excel セッションでスクリプトを代理で実行しますので、いくつかの重要な点に注意してください。
+Power Automateスクリプトオートメーションを次Officeレベルに移動できます。 ただし、Power Automateに独立したセッションでスクリプトを実行Excel、いくつかの重要な点に注意してください。
 
 > [!TIP]
-> Power Automate を使用して Office スクリプトを使い始める場合は、「Power [Automate](../develop/power-automate-integration.md) を使用して Office スクリプトを実行する」から始め、プラットフォームについて学習してください。
+> Power Automate で Office スクリプトを使用する場合は、Office スクリプトを Power Automate で実行[](../develop/power-automate-integration.md)して、プラットフォームについて説明します。
 
 ## <a name="avoid-using-relative-references"></a>相対参照の使用を避ける
 
-Power Automate は、選択した Excel ブックでスクリプトを代理で実行します。 この場合、ブックが閉じられます。 Power Automate では、ユーザーの現在の状態 (など) に依存する API の動作 `Workbook.getActiveWorksheet` が異なる場合があります。 これは、API がユーザーのビューまたはカーソルの相対位置に基づいており、その参照が Power Automate フローに存在しないのでです。
+Power Automate、選択したブックでスクリプトをExcel代わりに実行します。 この場合、ブックが閉じられます。 ユーザーの現在の状態 (など) に依存する API は、ユーザーの動作 `Workbook.getActiveWorksheet` が異Power Automate。 これは、API がユーザーのビューまたはカーソルの相対位置に基づいており、その参照がビュー フロー内に存在Power Automateです。
 
-一部の相対参照 API は、Power Automate でエラーをスローします。 他のユーザーは、ユーザーの状態を意味する既定の動作を持っています。 スクリプトを設計する場合は、ワークシートと範囲に絶対参照を使用してください。 これにより、ワークシートが再配置された場合でも、Power Automate フローの整合性が保たれる。
+一部の相対参照 API は、エラーをスロー Power Automate。 他のユーザーは、ユーザーの状態を意味する既定の動作を持っています。 スクリプトを設計する場合は、ワークシートと範囲に絶対参照を使用してください。 これにより、ワークシートPower Automate場合でも、一貫性のあるフローを作成できます。
 
-### <a name="script-methods-that-fail-when-run-power-automate-flows"></a>Power Automate フローの実行時に失敗するスクリプト メソッド
+### <a name="script-methods-that-fail-when-run-power-automate-flows"></a>フローの実行時に失敗するスクリプト メソッドPower Automateします。
 
-次のメソッドは、Power Automate フローのスクリプトから呼び出された場合にエラーをスローし、失敗します。
+次のメソッドは、エラーをスローし、エラー フロー内のスクリプトから呼び出Power Automateします。
 
-| クラス | Method |
+| クラス | メソッド |
 |--|--|
-| [Chart](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
+| [グラフ](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
 | [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveCell` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveChart` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRange` |
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRanges` |
+| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveCell` |
+| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveChart` |
+| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
+| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRange` |
+| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRanges` |
 
-### <a name="script-methods-with-a-default-behavior-in-power-automate-flows"></a>Power Automate フローの既定の動作を持つスクリプト メソッド
+### <a name="script-methods-with-a-default-behavior-in-power-automate-flows"></a>スクリプト フローの既定の動作を持つスクリプト メソッドPower Automateします。
 
 次のメソッドは、ユーザーの現在の状態の代りとして、既定の動作を使用します。
 
-| クラス | Method | Power Automate の動作 |
+| クラス | メソッド | Power Automate動作 |
 |--|--|--|
-| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | ブックの最初のワークシート、またはメソッドによって現在アクティブ化されているワークシートのいずれかを返 `Worksheet.activate` します。 |
-| [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | の目的でワークシートをアクティブなワークシートとしてマークします `Workbook.getActiveWorksheet` 。 |
+| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | ブックの最初のワークシート、またはメソッドによって現在アクティブ化されているワークシートのいずれかを返 `Worksheet.activate` します。 |
+| [ワークシート](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | の目的でワークシートをアクティブなワークシートとしてマークします `Workbook.getActiveWorksheet` 。 |
 
 ## <a name="select-workbooks-with-the-file-browser-control"></a>ファイル ブラウザー コントロールを使用してブックを選択する
 
-Power Automate フローの **スクリプト** の実行ステップを作成する場合は、フローの一部であるブックを選択する必要があります。 ブックの名前を手動で入力する代わりに、ファイル ブラウザーを使用してブックを選択します。
+アプリケーション フローの **スクリプトの実行** ステップをPower Automate、フローの一部であるブックを選択する必要があります。 ブックの名前を手動で入力する代わりに、ファイル ブラウザーを使用してブックを選択します。
 
-:::image type="content" source="../images/power-automate-file-browser.png" alt-text="[選択ウィンドウのファイル ブラウザーを表示する] オプションを示す Power Automate Run スクリプト アクション。":::
+:::image type="content" source="../images/power-automate-file-browser.png" alt-text="[Power Automateファイル ブラウザーの表示] オプションを示すスクリプトの実行アクション":::
 
-Power Automate の制限に関する詳細なコンテキストと、ブックの動的選択に関する潜在的な回避策の説明については、Microsoft Power Automate コミュニティのこのスレッド [を参照してください](https://powerusers.microsoft.com/t5/Power-Automate-Ideas/Allow-for-dynamic-quot-file-quot-value-for-excel-quot-get-a-row/idi-p/103091#)。
+ブックの動的選択に関するPower Automateの制限と潜在的な回避策に関する詳細なコンテキストについては、Microsoft Power Automate Community のこのスレッドを[参照してください](https://powerusers.microsoft.com/t5/Power-Automate-Ideas/Allow-for-dynamic-quot-file-quot-value-for-excel-quot-get-a-row/idi-p/103091#)。
 
 ## <a name="time-zone-differences"></a>タイム ゾーンの違い
 
-Excel ファイルには、固有の場所やタイム ゾーンが存在しない。 ユーザーがブックを開くたび、そのユーザーのローカル タイム ゾーンを日付の計算に使用します。 Power Automate は常に UTC を使用します。
+Excelファイルに固有の場所やタイム ゾーンが存在しない。 ユーザーがブックを開くたび、そのユーザーのローカル タイム ゾーンを日付の計算に使用します。 Power Automateは常に UTC を使用します。
 
-スクリプトで日付または時刻を使用する場合、スクリプトがローカルでテストされる場合と Power Automate を使用して実行する場合の動作の違いがあります。 Power Automate を使用すると、変換、書式設定、および調整を行います。 「Power [Automate」](https://flow.microsoft.com/blog/working-with-dates-and-times/)および[ `main` 「Parameters: Passing](../develop/power-automate-integration.md#main-parameters-passing-data-to-a-script) data to a script」のこれらの関数の使い方については、「フロー内の日付と時刻を操作する」を参照してください。
+スクリプトで日付または時刻を使用する場合、スクリプトがローカルでテストされる場合と、スクリプトを実行するときに動作の違いPower Automate。 Power Automateを使用すると、変換、書式設定、調整を行います。 Power Automate[](https://flow.microsoft.com/blog/working-with-dates-and-times/)および[ `main` Parameters で](../develop/power-automate-integration.md#main-parameters-passing-data-to-a-script)これらの関数を使用する方法の手順については、「フロー内の日付と時刻を操作する:スクリプトにデータを渡す」を参照して、スクリプトの時間情報を提供する方法について説明します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [Office スクリプトのトラブルシューティング](troubleshooting.md)
-- [Power Automate Officeスクリプトを実行する](../develop/power-automate-integration.md)
-- [Excel Online (Business) コネクタリファレンス ドキュメント](/connectors/excelonlinebusiness/)
+- [Power Automate を使用した Office スクリプトの実行](../develop/power-automate-integration.md)
+- [Excel Online (Business) コネクタ リファレンス ドキュメント](/connectors/excelonlinebusiness/)

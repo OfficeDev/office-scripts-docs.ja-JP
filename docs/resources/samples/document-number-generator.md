@@ -1,14 +1,14 @@
 ---
 title: ブックで一意の識別子を生成する
-description: Office スクリプトを使用して一意の識別子を生成し、テーブルと範囲に行を追加する方法について学習します。
+description: スクリプトを使用して一Office識別子を生成し、テーブルと範囲に行を追加する方法について学習します。
 ms.date: 03/18/2021
 localization_priority: Normal
-ms.openlocfilehash: c75eba551cc1c05426db613c78d41431b5177842
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 62c930bfc638dc46b36daf81b6d1ec976c90a8d0
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754839"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232481"
 ---
 # <a name="generate-a-unique-identifier-in-a-workbook"></a>ブックで一意の識別子を生成する
 
@@ -20,21 +20,21 @@ ms.locfileid: "51754839"
 
     _新しい行を追加する前に_
 
-    :::image type="content" source="../../images/document-number-generator-range-before.png" alt-text="行が追加される前のデータ範囲を示すワークシート。":::
+    :::image type="content" source="../../images/document-number-generator-range-before.png" alt-text="行が追加される前のデータ範囲を示すワークシート":::
 
     _新しい行が追加された後_
 
-    :::image type="content" source="../../images/document-number-generator-range-after.png" alt-text="行が追加された後のデータ範囲を示すワークシート。":::
+    :::image type="content" source="../../images/document-number-generator-range-after.png" alt-text="行が追加された後のデータ範囲を示すワークシート":::
 
 * [バージョン 2: テーブルに行を読み取って追加する](#sample-code-generate-key-and-add-row-to-table)
 
     _新しい行を追加する前に_
 
-    :::image type="content" source="../../images/document-number-generator-table-before.png" alt-text="行が追加される前の表を示すワークシート。":::
+    :::image type="content" source="../../images/document-number-generator-table-before.png" alt-text="行を追加する前に表を示すワークシート":::
 
     _新しい行が追加された後_
 
-    :::image type="content" source="../../images/document-number-generator-table-after.png" alt-text="行が追加された後のテーブルを示すワークシート。":::
+    :::image type="content" source="../../images/document-number-generator-table-after.png" alt-text="行が追加された後のテーブルを示すワークシート":::
 
 ## <a name="sample-excel-file"></a>サンプル Excel ファイル
 

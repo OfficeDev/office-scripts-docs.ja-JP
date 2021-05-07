@@ -1,16 +1,16 @@
 ---
-title: 'Office スクリプトのサンプル シナリオ: Web ダウンロードの分析'
-description: Excel ブックで生のインターネット トラフィック データを取得し、その情報をテーブルに整理する前に、発生元の場所を決定するサンプル。
-ms.date: 12/17/2020
+title: 'Officeスクリプトのサンプル シナリオ: Web ダウンロードの分析'
+description: ブック内の生のインターネット トラフィック データをExcel、その情報をテーブルに整理する前に、元の場所を決定するサンプル。
+ms.date: 04/27/2021
 localization_priority: Normal
-ms.openlocfilehash: e351cd6c4a12e83a07a2f4ce5678d7aa10625118
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 6c5958e9957ca49c370ae34456236bdd15f41c44
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755036"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232712"
 ---
-# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office スクリプトのサンプル シナリオ: Web ダウンロードの分析
+# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Officeスクリプトのサンプル シナリオ: Web ダウンロードの分析
 
 このシナリオでは、会社の Web サイトからダウンロード レポートを分析する必要があります。 この分析の目的は、Web トラフィックが米国または世界の他の場所から送信されるかどうかを判断します。
 
@@ -25,20 +25,11 @@ ms.locfileid: "51755036"
 - 条件付き書式
 - テーブル
 
-## <a name="demo-video"></a>デモ ビデオ
-
-このサンプルは、2020 年 2 月Officeアドイン開発者コミュニティ呼び出しの一部としてデモされました。
-
-> [!VIDEO https://www.youtube.com/embed/vPEqbb7t6-Y?start=154]
-
-> [!NOTE]
-> このビデオに示すコードでは、古い API モデル (スクリプト Async API の [Office) を使用します](../../develop/excel-async-model.md)。 このページに表示されるサンプルは更新されましたが、コードは記録とは少し異なります。 この変更は、発表者のデモのスクリプトや他のコンテンツの動作には影響しません。
-
 ## <a name="setup-instructions"></a>セットアップ手順
 
-1. OneDrive <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> をダウンロードします。
+1. ユーザー <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a>にダウンロードOneDrive。
 
-2. Web 用の Excel を使用してブックを開きます。
+2. Web 用のブックExcel開きます。
 
 3. [自動化] **タブで** 、[すべてのスクリプト] **を開きます**。
 
@@ -226,10 +217,10 @@ ms.locfileid: "51755036"
 
 ### <a name="before-running-the-script"></a>スクリプトを実行する前に
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="生の Web トラフィック データを表示するワークシート。":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="生の Web トラフィック データを表示するワークシート":::
 
 ### <a name="after-running-the-script"></a>スクリプトの実行後
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="前の Web トラフィック行で書式設定された IP 場所情報を表示するワークシート。":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="前の Web トラフィック行で書式設定された IP 場所情報を表示するワークシート":::
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="スクリプトが実行されたワークシートをまとめたサマリー テーブルとグラフ。":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="スクリプトが実行されたワークシートをまとめたサマリー テーブルとグラフ":::

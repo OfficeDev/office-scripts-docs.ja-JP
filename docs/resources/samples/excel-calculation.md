@@ -1,26 +1,26 @@
 ---
-title: Excel で計算モードを管理する
-description: Web 上の Excel でOfficeスクリプトを使用して計算モードを管理する方法について説明します。
-ms.date: 03/18/2021
+title: 計算モードを管理Excel
+description: スクリプトを使用してOfficeモードを管理する方法について説明Excel on the web。
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 0239437c7b52dca1fd8d1a4fc66bab7965cbd91a
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 34a14874197ffda8487df5e450e3dcab980f7ed5
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571528"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232453"
 ---
-# <a name="manage-calculation-mode-in-excel"></a>Excel で計算モードを管理する
+# <a name="manage-calculation-mode-in-excel"></a>計算モードを管理Excel
 
-このサンプルでは、スクリプトを使用[](/javascript/api/office-scripts/excelscript/excelscript.calculationmode)して、計算モードを使用し、Web 上の Excel でメソッドOfficeします。 任意の Excel ファイルでスクリプトを試してみてください。
+このサンプルでは、スクリプトを使用[して計算](/javascript/api/office-scripts/excelscript/excelscript.calculationmode)モードを使用し、計算モードでメソッドExcel on the web Officeします。 スクリプトは、任意のファイルでExcelできます。
 
 ## <a name="scenario"></a>シナリオ
 
-Web 上の Excel では、API を使用してファイルの計算モードをプログラムで制御できます。 次のアクションは、スクリプトを使用Officeできます。
+このExcel on the web、API を使用してファイルの計算モードをプログラムで制御できます。 次のアクションは、スクリプトを使用Officeできます。
 
 1. 計算モードを取得します。
 1. 計算モードを設定します。
-1. 手動モード (再計算とも呼ばれます) に設定されているファイルの Excel 数式を計算します。
+1. 手動Excel (再計算とも呼ばれます) に設定されているファイルの数式を計算します。
 
 ## <a name="sample-code-control-calculation-mode"></a>サンプル コード: コントロールの計算モード
 
@@ -38,4 +38,4 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="training-video-manage-calculation-mode"></a>トレーニング ビデオ: 計算モードの管理
 
-[![Web 上の Excel で計算モードを管理する方法について、ステップバイステップのビデオを見る](../../images/calc-mode-vid.jpg)](https://youtu.be/iw6O8QH01CI "Web 上の Excel で計算モードを管理する方法に関するステップバイステップのビデオ")
+[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/iw6O8QH01CI).

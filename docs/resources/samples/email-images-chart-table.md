@@ -1,14 +1,14 @@
 ---
 title: グラフと表の画像Excelメールで送信する
 description: '[スクリプト] と [Office] Power Automateを使用して、グラフと表の画像Excelメールを送信する方法について学習します。'
-ms.date: 04/05/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 0265250f7fd885cb4899d0b9493b4285496965ff
-ms.sourcegitcommit: 1f003c9924e651600c913d84094506125f1055ab
+ms.openlocfilehash: b49b6670562d117bb3dd6dcf894c54432bc5ceaa
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52026870"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232593"
 ---
 # <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>グラフOfficeの画像をPower Automateする場合は、スクリプトとスクリプトを使用してメールを送信します。
 
@@ -23,15 +23,15 @@ ms.locfileid: "52026870"
 
 _入力データ_
 
-:::image type="content" source="../../images/input-data.png" alt-text="入力データの表を示すワークシート。":::
+:::image type="content" source="../../images/input-data.png" alt-text="入力データの表を示すワークシート":::
 
 _出力グラフ_
 
-:::image type="content" source="../../images/chart-created.png" alt-text="顧客による金額を示す列グラフが作成されました。":::
+:::image type="content" source="../../images/chart-created.png" alt-text="顧客による支払い金額を示す作成された列グラフ":::
 
 _メール フローを通じて受信Power Automateメール_
 
-:::image type="content" source="../../images/email-received.png" alt-text="本文に埋め込まれたグラフのExcelによって送信される電子メール。":::
+:::image type="content" source="../../images/email-received.png" alt-text="本文に埋め込まれたグラフのExcelによって送信される電子メール":::
 
 ## <a name="solution"></a>ソリューション
 
@@ -101,7 +101,7 @@ interface ReportImages {
     * **ファイル**: ブック ([ファイル選択ウィンドウで選択)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
     * **スクリプト**: スクリプト名
 
-    :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="オンライン (Excel) コネクタの完成Power Automate。":::
+    :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="オンライン (Excel) コネクタの完成Power Automate":::
 1. このサンプルでは、Outlookクライアントとして使用します。 サポートされている任意の電子メール コネクタPower Automate使用できますが、残りの手順では、メール コネクタを選択Outlook。 新しい **手順を追加** して、Office 365 Outlook **および電子** メール **(V2) アクションを使用** します。 アクションには、次の値を使用します。
     * **To**: テスト用メール アカウント (または個人用メール)
     * **件名**: レポート データを確認してください
@@ -121,9 +121,9 @@ interface ReportImages {
     </p>
     ```
 
-    :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="Office 365 OutlookでPower Automate。":::
+    :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="Office 365 OutlookでPower Automate":::
 1. フローを保存し、試してみてください。
 
 ## <a name="training-video-extract-and-email-images-of-chart-and-table"></a>トレーニング ビデオ: グラフとテーブルの画像を抽出して電子メールで送信する
 
-[![グラフとテーブルの画像を抽出して電子メールで送信する方法について、ステップバイステップのビデオを見る](../../images/charts-image-vid.jpg)](https://youtu.be/152GJyqc-Kw "グラフとテーブルの画像を抽出して電子メールで送信する方法に関するステップバイステップのビデオ")
+[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/152GJyqc-Kw).

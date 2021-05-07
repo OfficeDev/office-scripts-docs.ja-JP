@@ -1,26 +1,26 @@
 ---
-title: Excel ファイルの相互参照と書式設定
-description: Excel ファイルを相互参照Office書式設定するには、スクリプトと Power Automate を使用する方法について説明します。
-ms.date: 03/18/2021
+title: ファイルを相互参照してExcelする
+description: スクリプトとスクリプトを使用Office、Power Automateファイルを相互参照して書式設定するExcelします。
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 287de604733b7e6a126d0c81cb4e23351e558c61
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 858fe561c1a82f471bc3c0f43d81e457fb02b627
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571513"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232383"
 ---
-# <a name="cross-reference-and-format-an-excel-file"></a>Excel ファイルの相互参照と書式設定
+# <a name="cross-reference-and-format-an-excel-file"></a>ファイルを相互参照してExcelする
 
-このソリューションは、スクリプトと Power Automate を使用して 2 つの Excel ファイルを相互参照および書式設定Office示します。
+このソリューションは、2 つの Excel ファイルを相互参照および書式設定する方法を、スクリプトとスクリプトを使用Office示Power Automate。
 
 プロジェクトでは、次の結果が得されます。
 
 1. 1 つのスクリプトの <a href="events.xlsx"> 実行アクションevents.xlsx</a> を使用して、イベント データを抽出します。
-1. イベント トランザクション データを含む 2 番目の Excel ファイルにデータを渡し、そのデータを使用してデータの基本的な検証を行い、Office スクリプトを使用してデータの不足または誤ったデータの書式設定を行います。
+1. そのデータをイベント トランザクション データを含む 2 番目の Excel ファイルに渡し、そのデータを使用して、Office Scripts を使用して、データの基本的な検証と、不足しているデータまたは不正確なデータの書式設定を行います。
 1. 結果をレビュー者に電子メールで送信します。
 
-詳細については、「クロス リファレンス」を参照し、スクリプトを使用して 2 つの [Excel ファイルOfficeしてください](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)。
+詳細については、「クロス リファレンス」[を参照し、](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)スクリプトを使用して 2 Excel ファイルOfficeしてください。
 
 ## <a name="sample-excel-files"></a>サンプル Excel ファイル
 
@@ -125,6 +125,6 @@ capacity: number
 }
 ```
 
-## <a name="training-video-cross-reference-and-format-an-excel-file"></a>トレーニング ビデオ: Excel ファイルの相互参照と書式設定
+## <a name="training-video-cross-reference-and-format-an-excel-file"></a>トレーニング ビデオ: クロスリファレンスと書式設定を行Excelファイル
 
-[![Excel ファイルを相互参照して書式設定する方法の詳細なビデオを見る](../../images/cross-ref-tables-vid.jpg)](https://youtu.be/dVwqBf483qo "Excel ファイルを相互参照して書式設定する方法の詳細なビデオ")
+[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/dVwqBf483qo").

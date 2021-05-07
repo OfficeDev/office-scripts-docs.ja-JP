@@ -1,16 +1,16 @@
 ---
-title: Excel でコメントを追加する
+title: コメントを追加Excel
 description: ワークシートにコメントを追加Officeスクリプトを使用する方法について説明します。
-ms.date: 03/29/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: aaaf26df6973bd081290b0fbb67edecad8627e53
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: d592b37c3af8e475c81e8650dda44921fee7aeaf
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571531"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232509"
 ---
-# <a name="add-comments-in-excel"></a>Excel でコメントを追加する
+# <a name="add-comments-in-excel"></a>コメントを追加Excel
 
 このサンプルでは、同僚のコメントを含むセルに [コメント@mentioning](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) 示します。
 
@@ -72,4 +72,4 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="training-video-add-comments"></a>トレーニング ビデオ: コメントの追加
 
-[![Excel ファイルにコメントを追加する方法について詳しいビデオを見る](../../images/comments-vid.jpg)](https://youtu.be/CpR78nkaOFw "Excel ファイルにコメントを追加する方法に関するステップバイステップのビデオ")
+[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/CpR78nkaOFw).

@@ -3,12 +3,12 @@ title: Excel on the web での Office スクリプトのスクリプトの基本
 description: Office スクリプトを作成する前に理解しておくべきオブジェクト モデルの情報と他の基本事項について説明します。
 ms.date: 07/08/2020
 localization_priority: Priority
-ms.openlocfilehash: 2c2fd683e77a0dfbfd3e9df8c79db31e78ceee8b
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 685f83952fa6aecc660524a95dec57e149522820
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755064"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232390"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Excel on the web での Office スクリプトのスクリプトの基本事項 (プレビュー)
 
@@ -109,7 +109,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 このスクリプトを実行すると、現在のワークシートに次のデータが作成されます。
 
-:::image type="content" source="../images/range-sample.png" alt-text="値の行、数式の列、フォーマットされたヘッダーを含む売上記録を含むワークシート。":::
+:::image type="content" source="../images/range-sample.png" alt-text="値の行、数式の列、フォーマットされたヘッダーを含む売上記録を含むワークシート":::
 
 ### <a name="charts-tables-and-other-data-objects"></a>グラフ、表、およびその他のデータ オブジェクト
 
@@ -117,7 +117,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 #### <a name="creating-a-table"></a>表の作成
 
-データが入力された範囲を使用することにより、表を作成します。 書式設定とテーブル コントロール (フィルターなど) が自動的に範囲に適用されます。
+データ入力範囲を使ってテーブルを作成します。書式設定とテーブル コントロール (フィルターなど) が自動的に範囲に適用されます。
 
 次のスクリプトでは、前のサンプルの範囲を使用して表を作成します。
 
@@ -133,7 +133,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 前のデータを含むワークシート上でこのスクリプトを実行すると、次のテーブルが作成されます。
 
-:::image type="content" source="../images/table-sample.png" alt-text="前の売上記録から作成された表を含むワークシート。":::
+:::image type="content" source="../images/table-sample.png" alt-text="前の売上記録から作成された表を含むワークシート":::
 
 #### <a name="creating-a-chart"></a>グラフの作成
 
@@ -167,7 +167,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 コレクションを取得したら、`length` を取得したり、`for`、`for..of`、`while` ループを使用して反復処理を行ったり、`map`や `forEach` などの TypeScript 配列メソッドを使用したりするなど、通常の配列操作を利用できます。 配列のインデックス値を使用して、コレクション内の個々のオブジェクトにアクセスすることもできます。 たとえば、`workbook.getTables()[0]` はコレクション内の最初のテーブルを返します。 Office スクリプト フレームワークで組み込みの配列機能を使用する方法の詳細については、[「Office スクリプトでの組み込み JavaScript オブジェクトの使用のコレクション操作のセクション」](javascript-objects.md#working-with-collections) を参照してください。
 
-次のスクリプトは、ブック内のすべてのテーブルを取得します。 これにより、ヘッダーが表示され、フィルター ボタンが表示され、テーブル スタイルが「TableStyleLight1」に設定されていることを確認します。
+次のスクリプトはブック内のすべてのテーブルを取得します。これにより、ヘッダーが表示され、フィルター ボタンが表示され、テーブル スタイルが "TableStyleLight1" に設定されます。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

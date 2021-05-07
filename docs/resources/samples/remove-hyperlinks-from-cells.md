@@ -1,16 +1,16 @@
 ---
-title: Excel ワークシートの各セルからハイパーリンクを削除する
-description: Excel ワークシートの各セルOfficeハイパーリンクを削除するには、スクリプトを使用する方法について説明します。
-ms.date: 03/18/2021
+title: ワークシート内の各セルからハイパーリンクをExcelする
+description: '[スクリプト] を使用してOfficeワークシートの各セルからハイパーリンクを削除するExcelします。'
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 07b670aac3368e38b9b93283404befee608391a7
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: eb5f486cb5228e639727c5ee7e6c335d5e94239f
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571294"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232747"
 ---
-# <a name="remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>Excel ワークシートの各セルからハイパーリンクを削除する
+# <a name="remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>ワークシート内の各セルからハイパーリンクをExcelする
 
  このサンプルでは、現在のワークシートからすべてのハイパーリンクをクリアします。 ワークシートを走査し、セルに関連付けられているハイパーリンクがある場合は、ハイパーリンクをクリアしますが、セルの値は保持されます。 また、トラバーサルの完了に要する時間も記録します。
 
@@ -80,6 +80,6 @@ function removeHyperLink(targetRange: ExcelScript.Range): void {
 }
 ```
 
-## <a name="training-video-remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>トレーニング ビデオ: Excel ワークシートの各セルからハイパーリンクを削除する
+## <a name="training-video-remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>トレーニング ビデオ: ワークシート内の各セルからハイパーリンクをExcelする
 
-[![Excel ワークシートの各セルからハイパーリンクを削除する方法について、ステップバイステップのビデオを見る](../../images/hyperlinks-vid.jpg)](https://youtu.be/v20fdinxpHU "Excel ワークシートの各セルからハイパーリンクを削除する方法に関するステップバイステップのビデオ")
+[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/v20fdinxpHU).

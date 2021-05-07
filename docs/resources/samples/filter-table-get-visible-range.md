@@ -1,18 +1,18 @@
 ---
-title: Excel テーブルをフィルター処理し、表示範囲を取得する
-description: Excel テーブルをフィルター処理しOfficeオブジェクトの配列として表示範囲を取得するには、スクリプトを使用する方法について学習します。
-ms.date: 03/16/2021
+title: テーブルをExcelし、表示範囲を取得する
+description: スクリプトを使用してOfficeテーブルをフィルター処理しExcelオブジェクトの配列として表示範囲を取得する方法について学習します。
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: c0a5842af4a62162225e3fc10203c261b91e010a
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: a310857e6055b3da57c353dc7ad78a6fbdd86d4e
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571468"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232376"
 ---
-# <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>Excel テーブルをフィルター処理し、JSON オブジェクトとして表示範囲を取得する
+# <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>テーブルExcelし、JSON オブジェクトとして表示範囲を取得する
 
-このサンプルでは、Excel テーブルをフィルター処理し、表示範囲を JSON オブジェクトとして返します。 この JSON は、大規模なソリューションの一部として Power Automate フローに提供できます。
+次のサンプルでは、Excelをフィルター処理し、表示範囲を JSON オブジェクトとして返します。 この JSON は、大規模なソリューションの一部Power Automateフローに提供できます。
 
 ## <a name="example-scenario"></a>シナリオ例
 
@@ -83,43 +83,43 @@ interface ReturnTemplate {
     "Shift": "Morning",
     "Date": "27-Oct-20",
     "Responsible": "Debra Berger",
-    "Reason": ""
+    "Reason&quot;: &quot;"
   }, {
     "Station": "Station-1",
     "Shift": "Afternoon",
     "Date": "27-Oct-20",
     "Responsible": "Delia Dennis",
-    "Reason": ""
+    "Reason&quot;: &quot;"
   }, {
     "Station": "Station-1",
     "Shift": "Afternoon",
     "Date": "28-Oct-20",
     "Responsible": "Lidia Holloway",
-    "Reason": ""
+    "Reason&quot;: &quot;"
   }],
   "Station-2": [{
     "Station": "Station-2",
     "Shift": "Morning",
     "Date": "27-Oct-20",
     "Responsible": "Gerhart Moller",
-    "Reason": ""
+    "Reason&quot;: &quot;"
   }, {
     "Station": "Station-2",
     "Shift": "Afternoon",
     "Date": "28-Oct-20",
     "Responsible": "Grady Archie",
-    "Reason": ""
+    "Reason&quot;: &quot;"
   }],
   "Station-3": [{
     "Station": "Station-3",
     "Shift": "Morning",
     "Date": "27-Oct-20",
     "Responsible": "Isaiah Langer",
-    "Reason": ""
+    "Reason&quot;: &quot;"
   }]
 }
 ```
 
-## <a name="training-video-filter-an-excel-table-and-get-the-visible-range"></a>トレーニング ビデオ: Excel テーブルをフィルター処理し、表示範囲を取得する
+## <a name="training-video-filter-an-excel-table-and-get-the-visible-range"></a>トレーニング ビデオ: テーブルのExcelし、表示範囲を取得する
 
-[![Excel テーブルをフィルター処理して表示範囲を取得する方法について、ステップバイステップのビデオを見る](../../images/visible-range-as-objects-vid.jpg)](https://youtu.be/Mv7BrvPq84A "Excel テーブルをフィルター処理し、表示範囲を取得する方法に関するステップバイステップのビデオ")
+[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/Mv7BrvPq84A).

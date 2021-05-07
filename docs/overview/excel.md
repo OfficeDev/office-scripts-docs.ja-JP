@@ -3,12 +3,12 @@ title: Excel on the web の Office スクリプト
 description: Office スクリプト用の操作レコーダーとコード エディターの概要をご紹介します。
 ms.date: 11/13/2020
 localization_priority: Priority
-ms.openlocfilehash: 726d5e2ea44f6e61708c9692826f37a526250670
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 233baf33648f5fc8358b2aa8ce063ad5cdd68499
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755139"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232663"
 ---
 # <a name="office-scripts-in-excel-on-the-web-preview"></a>Excel on the web の Office スクリプト (プレビュー)
 
@@ -50,13 +50,13 @@ Office スクリプトを使用するには、以下が必要です。
 
 ## <a name="action-recorder"></a>操作レコーダー
 
-:::image type="content" source="../images/action-recorder-intro.png" alt-text="アクション レコーダーによって記録されたアクションの一覧。":::
+:::image type="content" source="../images/action-recorder-intro.png" alt-text="アクション レコーダーによって記録されたアクションの一覧":::
 
 操作レコーダーは、ユーザーが Excel で実行した操作を記録して、スクリプトとして保存します。 操作レコーダーを実行すると、セルの編集、書式の変更、テーブルの作成などの Excel の操作をキャプチャできます。 作成されたスクリプトは、他のワークシートやブックで実行して、ユーザーが実行した元の操作を再現することもできます。
 
 ## <a name="code-editor"></a>コード エディター
 
-:::image type="content" source="../images/code-editor-intro.png" alt-text="このチュートリアルで使用しているスクリプト コードを表示しているコード エディター。":::
+:::image type="content" source="../images/code-editor-intro.png" alt-text="このチュートリアルで使用しているスクリプト コードを表示しているコード エディター":::
 
 操作レコーダーで記録したすべてのスクリプトは、コード エディターで編集できます。 これにより、ニーズにぴったり合うようにスクリプトを微調整したり、カスタマイズしたりできます。 また、条件付きステートメント (if/else) やループなど、Excel の UI からでは直接アクセスできないロジックや機能を追加することもできます。
 
@@ -64,7 +64,7 @@ Office スクリプトの機能を学習する簡単な方法の 1 つは、Exce
 
 ## <a name="sharing-scripts"></a>スクリプトの共有
 
-:::image type="content" source="../images/script-sharing.png" alt-text="[このブックで他のユーザーと共有する] オプションを表示するスクリプトの詳細ページ。":::
+:::image type="content" source="../images/script-sharing.png" alt-text="[このブックで他のユーザーと共有する] オプションを表示するスクリプトの詳細ページ":::
 
 Office スクリプトは、Excel ブックの他のユーザーと共有できます。 スクリプトをブック内の他のユーザーと共有すると、スクリプトはブックに添付されます。 スクリプトは、OneDrive に保存され、共有すると、開いているブックにリンクが作成されます。
 

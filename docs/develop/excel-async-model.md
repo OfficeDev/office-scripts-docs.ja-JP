@@ -3,12 +3,12 @@ title: 非同期 API をOffice古いスクリプトをサポートする
 description: スクリプト非同期 API のOffice、古いスクリプトに対して読み込み/同期パターンを使用する方法について説明します。
 ms.date: 02/08/2021
 localization_priority: Normal
-ms.openlocfilehash: 143f52a7ffefb4f19ee36ba4343fd7c2f1cbdffe
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 437fb2e389d6d3963f93cdb44c5529749c4d3569
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755078"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232411"
 ---
 # <a name="support-older-office-scripts-that-use-the-async-apis"></a>非同期 API をOffice古いスクリプトをサポートする
 
@@ -42,7 +42,7 @@ async function main(context: Excel.RequestContext) {
 
 次の図に、スクリプトとブックの間の制御フローの例を示します。
 
-:::image type="content" source="../images/load-sync.png" alt-text="スクリプトからブックに対して実行される読み取りおよび書き込み操作を示す図。":::
+:::image type="content" source="../images/load-sync.png" alt-text="スクリプトからブックに行く読み取りおよび書き込み操作を示す図":::
 
 ### <a name="sync"></a>同期
 
@@ -55,7 +55,7 @@ await context.sync();
 > [!NOTE]
 > スクリプトが終了すると、`context.sync()` が暗黙的に呼び出されます。
 
-`sync` 操作が完了すると、ブックが更新され、スクリプトが指定した書き込み操作が反映されます。 書き込み操作は、Excel オブジェクト上の任意のプロパティ (例: ) を設定するか、プロパティを変更するメソッド (例: ) を呼び `range.format.fill.color = "red"` 出します `range.format.autoFitColumns()` 。 また、`sync` 操作では、スクリプトが `load` 操作または `ClientResult` を返すメソッドを使用して要求したブックから任意の値が読み取られます (次のセクションを参照)。
+`sync` 操作が完了すると、ブックが更新され、スクリプトが指定した書き込み操作が反映されます。 書き込み操作は、Excel オブジェクト (例:) のプロパティを設定するか、プロパティを変更するメソッド (例: ) を呼び `range.format.fill.color = "red"` 出します `range.format.autoFitColumns()` 。 また、`sync` 操作では、スクリプトが `load` 操作または `ClientResult` を返すメソッドを使用して要求したブックから任意の値が読み取られます (次のセクションを参照)。
 
 ネットワークによっては、スクリプトとブックを同期するのに時間がかかる場合があります。 スクリプトの高速実行 `sync` に役立つ呼び出しの数を最小限に抑える。 それ以外の場合、非同期 API は標準の同期 API より高速ではありません。
 
@@ -149,8 +149,8 @@ async function main(context: Excel.RequestContext) {
 
 4. コレクション クラスは配列に置き換えされています。 これらのコレクション クラスの and メソッドは、コレクションを所有するオブジェクトに移動されたので、参照を更新 `add` `get` する必要があります。 たとえば、ブックの最初のワークシートから "MyChart" という名前のグラフを取得するには、次のコードを使用します `workbook.getWorksheets()[0].getChart("MyChart");` 。 によって返 `[0]` される値の最初の値に `Worksheet[]` アクセスする点に注意してください `getWorksheets()` 。
 
-5. 一部のメソッドは、わかりやすくするために名前が変更され、便宜上追加されています。 詳細については [、「Officeスクリプト API リファレンス」](/javascript/api/office-scripts/overview) を参照してください。
+5. 一部のメソッドは、わかりやすくするために名前が変更され、便宜上追加されています。 詳細については[、「Officeスクリプト API リファレンス」](/javascript/api/office-scripts/overview)を参照してください。
 
-## <a name="office-scripts-async-api-reference-documentation"></a>Officeスクリプト非同期 API リファレンス ドキュメント
+## <a name="office-scripts-async-api-reference-documentation"></a>Officeスクリプト async API リファレンス ドキュメント
 
-非同期 API は、アドインで使用Officeと同じです。リファレンス ドキュメントは、アドイン JavaScript API リファレンスOffice [Excel セクションに含まれています](/javascript/api/excel?view=excel-js-online&preserve-view=true)。
+非同期 API は、アドインで使用Officeと同じです。リファレンス ドキュメントは、Excel [JavaScript API リファレンスの Officeセクションに含まれています](/javascript/api/excel?view=excel-js-online&preserve-view=true)。

@@ -1,30 +1,30 @@
 ---
-title: スクリプトの TypeScript Office
-description: スクリプト コード エディターで使用される TypeScript コンパイラと linter Office詳細です。
+title: スクリプトの TypeScript の制限Officeスクリプト
+description: スクリプト コード エディターで使用される TypeScript コンパイラと linter のOfficeします。
 ms.date: 02/05/2021
 localization_priority: Normal
-ms.openlocfilehash: 88d0b5873a2f7350f88417d2e340343dbd183606
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 40eb6923d7b0c47dfeb4c846cdcc745e5d893c13
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755050"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232460"
 ---
-# <a name="typescript-restrictions-in-office-scripts"></a>スクリプトの TypeScript Office
+# <a name="typescript-restrictions-in-office-scripts"></a>スクリプトの TypeScript の制限Officeスクリプト
 
-Officeは TypeScript 言語を使用します。 ほとんどの場合、TypeScript または JavaScript のコードは、スクリプトスクリプトでOfficeされます。 ただし、スクリプトが Excel ブックで意図した通り一貫して動作することを確認するために、コード エディターによっていくつかの制限が適用されています。
+Officeスクリプトは TypeScript 言語を使用します。 ほとんどの場合、TypeScript または JavaScript のコードは、スクリプトスクリプトOfficeされます。 ただし、コード エディターによって、スクリプトが一貫して動作し、ブックの目的に合Excelがあります。
 
 ## <a name="no-any-type-in-office-scripts"></a>スクリプトに 'any' 型Officeはありません
 
-[TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)では、型を推論できるので、書き込み型は省略可能です。 ただし、Officeスクリプトでは、変数を任意の型に [できない必要があります](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)。 明示的および暗黙的の両方 `any` は、スクリプト内でOfficeされません。 これらのケースはエラーとして報告されます。
+[TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)では、型を推論できるので、書き込み型は省略可能です。 ただし、Officeスクリプトでは、変数を任意の型に[できない必要があります](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)。 明示的および暗黙的の両方 `any` は、スクリプト内でOfficeされません。 これらのケースはエラーとして報告されます。
 
 ### <a name="explicit-any"></a>明示的 `any`
 
-スクリプト (つまり) で変数を明示的に型 `any` Office宣言することはできません `let someVariable: any;` 。 Excel `any` で処理すると、この型によって問題が発生します。 たとえば、値が 、 、 または である必要 `Range` `string` `number` があります `boolean` 。 スクリプト内の型として変数が明示的に定義されている場合は、コンパイル時エラー (スクリプトを実行する前のエラー) `any` が表示されます。
+変数をスクリプト (つまり) の型Office `any` 明示的に宣言することはできません `let someVariable: any;` 。 この `any` 型は、ユーザーが処理した場合に問題Excel。 たとえば、値が 、 、 または である必要 `Range` `string` `number` があります `boolean` 。 スクリプト内の型として変数が明示的に定義されている場合は、コンパイル時エラー (スクリプトを実行する前のエラー) `any` が表示されます。
 
 :::image type="content" source="../images/explicit-any-editor-message.png" alt-text="コード エディターのホバー テキストの明示的な 'any' メッセージ":::
 
-:::image type="content" source="../images/explicit-any-error-message.png" alt-text="コンソール ウィンドウの明示的な Any エラー。":::
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="コンソール ウィンドウの明示的な Any エラー":::
 
 前のスクリーンショットでは `[5, 16] Explicit Any is not allowed` 、行の種類を#5列#16示 `any` しています。 これにより、エラーを見つけるのに役立ちます。
 
@@ -41,7 +41,7 @@ TypeScript 変数の型は暗黙的 [に定義](https://www.typescriptlang.org/d
 
 ## <a name="no-inheriting-office-script-classes-or-interfaces"></a>スクリプト クラスまたはOffice継承なし
 
-スクリプトで作成されたクラスとインターフェイスはOfficeスクリプト クラスまたはインターフェイス [Office](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance) 拡張または実装できません。 つまり、名前空間にサブクラスやサブインターフェイス `ExcelScript` を含め得るものは何もありません。
+スクリプトで作成されたクラスとインターフェイスOffice Script クラスまたはインターフェイスOffice[](https://www.typescriptlang.org/docs/handbook/classes.html#inheritance)拡張または実装できません。 つまり、名前空間にサブクラスやサブインターフェイス `ExcelScript` を含め得るものは何もありません。
 
 ## <a name="incompatible-typescript-functions"></a>互換性のない TypeScript 関数
 
@@ -81,11 +81,11 @@ let filteredArray = myArray.filter((x) => {
 
 ## <a name="performance-warnings"></a>パフォーマンスに関する警告
 
-コード エディターの [linter は、](https://wikipedia.org/wiki/Lint_(software)) スクリプトにパフォーマンスの問題が発生する可能性がある場合に警告を表示します。 ケースとその回避方法については、「スクリプトのパフォーマンスを向上させる」 [にOfficeされています](web-client-performance.md)。
+コード エディターの [linter は、](https://wikipedia.org/wiki/Lint_(software)) スクリプトにパフォーマンスの問題が発生する可能性がある場合に警告を表示します。 ケースとその回避方法については、「スクリプトのパフォーマンスを向上させる」[にOfficeされています](web-client-performance.md)。
 
 ## <a name="external-api-calls"></a>外部 API 呼び出し
 
-詳細 [については、「外部 API 呼び出しOfficeスクリプト」](external-calls.md) を参照してください。
+詳細[については、「外部 API 呼び出しOfficeスクリプト」](external-calls.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -3,12 +3,12 @@ title: Excel on the web で Office スクリプトを記録、編集、作成す
 description: 操作レコーダーを使用したスクリプトの記録、ブックへのデータの書き込みなど、Office スクリプトの基本について説明したチュートリアル。
 ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: ae864cc08453a9c8a2538f15ceee1275e131725d
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 9f1b2e29d60ec0e370bdb29fde0f04be831a222b
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754846"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232866"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを記録、編集、作成する
 
@@ -49,7 +49,7 @@ ms.locfileid: "51754846"
 
     ワークシートは次のようになります (色が違っていても問題ありません)。
 
-    :::image type="content" source="../images/tutorial-1.png" alt-text="&quot;オレンジ&quot; を含む行がオレンジ色で強調表示された、フルーツの売上データ行を示すワークシート。":::
+    :::image type="content" source="../images/tutorial-1.png" alt-text="&quot;オレンジ&quot; を含む行がオレンジ色で強調表示された、フルーツの売上データ行を示すワークシート":::
 
 ## <a name="edit-an-existing-script"></a>既存のスクリプトを編集する
 
@@ -78,7 +78,7 @@ ms.locfileid: "51754846"
 
 4. **[実行]** を押して、スクリプトをテストします。 ブックは次のように表示されるはずです。
 
-    :::image type="content" source="../images/tutorial-2.png" alt-text="&quot;オレンジ&quot; の行はオレンジ色、&quot;レモン&quot; の行は黄色で強調表示されている果物売上データの行を示すワークシート。":::
+    :::image type="content" source="../images/tutorial-2.png" alt-text="&quot;オレンジ&quot; の行はオレンジ色、&quot;レモン&quot; の行は黄色で強調表示されているフルーツの売上データ行を示すワークシート":::
 
 ## <a name="create-a-table"></a>テーブルを作成する
 
@@ -111,9 +111,9 @@ ms.locfileid: "51754846"
 
     テーブルには `TableSort` オブジェクトがあり、`Table.getSort` メソッドを使用してアクセスできます。 そのオブジェクトに並べ替え条件を適用できます。 `apply` メソッドは、`SortField` オブジェクトの配列を受け取ります。 今回は、並べ替え条件が 1 つだけなので、`SortField` を 1 つだけ使用します。 `key: 0` は、並べ替えを定義する値を含む列を "0" (テーブルの 1 列目。この例では **A**) に設定します。 `ascending: true` は、昇順 (降順ではなく) にデータを並べ替えます。
 
-3. スクリプトを実行します。 テーブルが次のように表示されます。
+3. スクリプトを実行します。テーブルが次のように表示されます。
 
-    :::image type="content" source="../images/tutorial-3.png" alt-text="並べ替えされたフルーツの販売テーブルを示すワークシート。":::
+    :::image type="content" source="../images/tutorial-3.png" alt-text="並べ替えされたフルーツの売上テーブルを示すワークシート":::
 
     > [!NOTE]
     > スクリプトを再実行すると、エラーが表示されます。 これは、テーブルの上に別のテーブルを重ねて作成することはできないためです。 ただし、別のワークシートやブックでスクリプトを実行することはできます。

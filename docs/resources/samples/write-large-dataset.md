@@ -1,20 +1,20 @@
 ---
 title: 大規模なデータセットを記述する場合のパフォーマンスの最適化
-description: 大規模なデータセットをスクリプトに記述するときにパフォーマンスを最適化するOfficeします。
-ms.date: 03/04/2021
+description: 大規模なデータセットをスクリプトで記述するときにパフォーマンスを最適化するOfficeします。
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 190072e58238be95a2939f73dcda077ed91db848
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: dcbcf156ef624c4c5ce35c44d501286d507d9c40
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571495"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232719"
 ---
 # <a name="performance-optimization-when-writing-a-large-dataset"></a>大規模なデータセットを記述する場合のパフォーマンスの最適化
 
 ## <a name="basic-performance-optimization"></a>基本的なパフォーマンスの最適化
 
-スクリプトのパフォーマンスの基本Office、「Getting Started」[](getting-started.md#basic-performance-considerations)の記事の「パフォーマンス」セクションを参照してください。
+スクリプトのパフォーマンスのOfficeについては、「Getting Started」の[](getting-started.md#basic-performance-considerations)「パフォーマンス」セクションを参照してください。
 
 ## <a name="sample-code-optimize-performance-of-a-large-dataset"></a>サンプル コード: 大規模なデータセットのパフォーマンスを最適化する
 
@@ -153,4 +153,4 @@ function getRandomString(length: number): string {
 
 ## <a name="training-video-optimize-performance-when-writing-a-large-dataset"></a>トレーニング ビデオ: 大規模なデータセットを記述するときにパフォーマンスを最適化する
 
-[![大規模なデータセットを記述するときにパフォーマンスを最適化する方法に関するビデオを見る](../../images/largedata-vid.png)](https://youtu.be/BP9Kp0Ltj7U "大規模なデータセットを記述するときにパフォーマンスを最適化する方法に関するビデオ")
+[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/BP9Kp0Ltj7U).

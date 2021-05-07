@@ -5,12 +5,12 @@ title: Office スクリプト ドキュメント
 description: チュートリアル、概念に関する記事、コード サンプルなどの、Excel on the web の Office スクリプトについて学習するためのリソース。
 ms.date: 10/30/2020
 localization_priority: Priority
-ms.openlocfilehash: 2e31cc52c9dbc5ebe23428773aa686fc93207d29
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 0d75d1326db0399f64f53b0b25bd6c7b49296e0b
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51570270"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232670"
 ---
 # <a name="office-scripts-documentation-preview"></a>Office スクリプト ドキュメント (プレビュー)
 
@@ -97,11 +97,11 @@ Excel on the web の Office スクリプトを使用すると、日常のタス�
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="resources/excel-samples.md" target="_blank"><img src="images/index-landing-page/i_code-samples.svg" alt="Sample scripts" /></a>
+                            <a href="resources/samples/excel-samples.md" target="_blank"><img src="images/index-landing-page/i_code-samples.svg" alt="Sample scripts" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="resources/excel-samples.md" target="_blank"><h3>サンプル スクリプト</h3></a>
+                        <a href="resources/samples/excel-samples.md" target="_blank"><h3>サンプル スクリプト</h3></a>
                     </div>
                 </div>
             </div>
@@ -145,11 +145,11 @@ Excel on the web の Office スクリプトを使用すると、日常のタス�
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="/answers/products/m365" target="_blank"><img src="images/index-landing-page/i_feedback.svg" alt="Feature requests" /></a>
+                            <a href="https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439" target="_blank"><img src="images/index-landing-page/i_feedback.svg" alt="Feature requests" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="/answers/products/m365" target="_blank"><h3>機能のリクエスト</h3></a>
+                        <a href="https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439" target="_blank"><h3>機能のリクエスト</h3></a>
                     </div>
                 </div>
             </div>

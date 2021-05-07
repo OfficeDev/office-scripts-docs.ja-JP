@@ -3,12 +3,12 @@ title: 手動 Power Automation フローからスクリプトを呼び出す
 description: Power Automate の Office スクリプトで、手動のトリガーを使う方法を説明します。
 ms.date: 12/28/2020
 localization_priority: Priority
-ms.openlocfilehash: fd3a4758e9d90f5eb40de9c9665c197cfae93740
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 0a5fc93dbad1ee9804840fa11a06b689b7e7abda
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754916"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232873"
 ---
 # <a name="call-scripts-from-a-manual-power-automate-flow-preview"></a>手動 Power Automation フローからスクリプトを呼び出す (プレビュー)
 
@@ -67,7 +67,7 @@ Power Automate では、ブック コンポーネントにアクセスするた�
 
 2. 画面の左側に表示されるメニューで、**[作成]** を押します。 これにより、新しいワークフローを作成する方法の一覧を表示できます。
 
-    :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="Power Automate の [作成] ボタン。":::
+    :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="Power Automate の [作成] ボタン":::
 
 3. **[白紙から初める]** セクションで、**[インスタント フロー]** を選択します。 これで、手動でアクティベートされたワークフローが作成されます。
 
@@ -75,7 +75,7 @@ Power Automate では、ブック コンポーネントにアクセスするた�
 
 4. 表示されたダイアログ ウィンドウで、フローの名前を **[フロー名]** テキスト ボックスに入力し、**[フローをトリガーする方法の選択]** 内のオプションの一覧から **[手動でフローをトリガーする]** を選択し、**[作成]** を押します。
 
-    :::image type="content" source="../images/power-automate-tutorial-3.png" alt-text="Power Automate の[手動でフローをトリガーする] オプション。":::
+    :::image type="content" source="../images/power-automate-tutorial-3.png" alt-text="Power Automate の [手動でフローをトリガーする] オプション":::
 
     手動でトリガーするフローは、いくつかあるフローの種類のうちの 1 つです。 次のチュートリアルでは、メールを受信したときに自動的に実行されるフローを作成します。
 
@@ -96,7 +96,7 @@ Power Automate では、ブック コンポーネントにアクセスするた�
     - **ファイル**: MyWorkbook.xlsx *(ファイル ブラウザーを使用して選択されています)*
     - **スクリプト**: 日時を設定
 
-    :::image type="content" source="../images/power-automate-tutorial-6.png" alt-text="スクリプトを実行するための Power Automate コネクタの設定。":::
+    :::image type="content" source="../images/power-automate-tutorial-6.png" alt-text="スクリプトを実行するための Power Automate コネクタの設定":::
 
 9. **[保存]** を押します。
 

@@ -3,12 +3,12 @@ title: 自動で実行される Power Automate フローにスクリプトから
 description: Power Automate を使用して Excel on the web 用の Office スクリプトを実行してリマインダー メールを送信する方法を示すチュートリアル。
 ms.date: 12/15/2020
 localization_priority: Priority
-ms.openlocfilehash: 0c8d8f308147d727a0a5880c11c9c0d924149fb2
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 54fcfc773d4d2a8d352f7bd22593ac817e7ded0e
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754902"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232880"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow-preview"></a>自動で実行される Power Automate フローにスクリプトからデータを返す (プレビュー)
 
@@ -36,7 +36,7 @@ ms.locfileid: "51754902"
     > [!IMPORTANT]
     > これから作成するスクリプトは、テーブル内の最初に一致するエントリを使用するため、自分の名前が現在の週のどの行よりも上にあることを確認してください。
 
-    :::image type="content" source="../images/power-automate-return-tutorial-1.png" alt-text="呼び出し時の回転テーブルのデータを含むワークシート。":::
+    :::image type="content" source="../images/power-automate-return-tutorial-1.png" alt-text="呼び出し時の回転テーブルのデータを含むワークシート":::
 
 ## <a name="create-an-office-script"></a>Office スクリプトを作成する
 
@@ -142,7 +142,7 @@ ms.locfileid: "51754902"
     - **繰り返し間隔**: 1 週
     - **設定曜日**: 月
 
-    :::image type="content" source="../images/power-automate-return-tutorial-3.png" alt-text="オプションが表示された Power Automate の [スケジュールされたクラウド フローを作成する] ダイアログ。オプションには、フロー名、開始時刻、繰り返しの頻度、フローを実行する曜日が含まれます。":::
+    :::image type="content" source="../images/power-automate-return-tutorial-3.png" alt-text="オプションが表示された Power Automate の [スケジュールされたクラウド フローを作成する] ダイアログ。オプションには、フロー名、開始時刻、繰り返しの頻度、フローを実行する曜日が含まれます":::
 
 1. **[作成]** を押します。
 
@@ -163,16 +163,16 @@ ms.locfileid: "51754902"
     - **ファイル**: on-call-rotation.xlsx *(ファイル ブラウザーを使用して選択されています)*
     - **スクリプト**: Get On-Call Person
 
-    :::image type="content" source="../images/power-automate-return-tutorial-4.png" alt-text="スクリプトを実行するための Power Automate コネクタの設定。":::
+    :::image type="content" source="../images/power-automate-return-tutorial-4.png" alt-text="スクリプトを実行するための Power Automate コネクタの設定":::
 
 1. **[新しいステップ]** を押します。
 
 1. リマインダー メールを送信してフローを終了します。 コネクタの検索バーを使用して、**[メールの送信 (V2)]** を選択します。 スクリプトによって返されるメール アドレスを追加するために、**動的なコンテンツの追加** コントロールを使用します。 これは、**result** というラベル付きの Excel アイコンで示されます。 件名、本文は自由に入力できます。
 
-    :::image type="content" source="../images/power-automate-return-tutorial-5.png" alt-text="メールを送信するための Power Automate Outlook コネクタの設定。オプションには、送信するファイル、メールの件名、メールの本文、および詳細オプションが含まれます。":::
+    :::image type="content" source="../images/power-automate-return-tutorial-5.png" alt-text="メールを送信するための Power Automate Outlook コネクタの設定。オプションには、送信するファイル、メールの件名、メールの本文、および詳細オプションが含まれます":::
 
     > [!NOTE]
-    > このチュートリアルでは、Outlook を使用します。 代わりに、お好きなメール サービスを自由に使用することもできますが、一部のオプションは異なる場合があります。
+    > このチュートリアルでは、Outlook を使用します。代わりに、お好きなメール サービスを自由に使用することもできますが、一部のオプションは異なる場合があります。
 
 1. **[保存]** を押します。
 

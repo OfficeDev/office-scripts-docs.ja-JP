@@ -3,12 +3,12 @@ title: アクティブ セルの場所に基づいてテーブル列フィルタ
 description: アクティブ セルの場所に基づいてテーブル列フィルターをクリアする方法について学習します。
 ms.date: 03/04/2021
 localization_priority: Normal
-ms.openlocfilehash: 4f8353fb5480812b7b63e7a9b3ffb11ece2a8c6c
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: bbca4adce1de2cfade2c4f84273bf0bc06b5cc4b
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755085"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232502"
 ---
 # <a name="clear-table-column-filter-based-on-active-cell-location"></a>アクティブ セルの場所に基づいてテーブル列フィルターをクリアする
 
@@ -18,15 +18,15 @@ ms.locfileid: "51755085"
 
 _列フィルターをクリアする前に (アクティブ セルに注意してください)_
 
-:::image type="content" source="../../images/before-filter-applied.png" alt-text="列フィルターをクリアする前のアクティブ セル。":::
+:::image type="content" source="../../images/before-filter-applied.png" alt-text="列フィルターをクリアする前のアクティブ セル":::
 
 _列フィルターをクリアした後_
 
-:::image type="content" source="../../images/after-filter-cleared.png" alt-text="列フィルターをクリアした後のアクティブ なセル。":::
+:::image type="content" source="../../images/after-filter-cleared.png" alt-text="列フィルターをクリアした後のアクティブ セル":::
 
 ## <a name="sample-code-clear-table-column-filter-based-on-active-cell"></a>サンプル コード: アクティブ セルに基づいてテーブル列フィルターをクリアする
 
-次のスクリプトは、アクティブセルの場所に基づいてテーブル列フィルターをクリアし、テーブルを持つ任意の Excel ファイルに適用できます。 便宜上、このファイルをダウンロード<a href="table-with-filter.xlsx">して使用table-with-filter.xlsx。 </a>
+次のスクリプトは、アクティブなセルの場所に基づいてテーブル列フィルターをクリアし、テーブルを持つ任意のExcelに適用できます。 便宜上、このファイルをダウンロード<a href="table-with-filter.xlsx">して使用table-with-filter.xlsx。 </a>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -63,7 +63,3 @@ function main(workbook: ExcelScript.Workbook) {
     col.getFilter().clear();
 }
 ```
-
-## <a name="training-video-clear-table-column-filter-based-on-active-cell-location"></a>トレーニング ビデオ: アクティブ セルの場所に基づいてテーブル列フィルターをクリアする
-
-範囲を操作する方法の例については [、「Range basics training videos」を参照してください](range-basics.md#training-videos-range-basics)。
