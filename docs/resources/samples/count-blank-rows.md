@@ -1,34 +1,34 @@
 ---
 title: シートの空白行を数える
-description: Office スクリプトを使用して、ワークシートにデータの代わりに空白行が含まれていますを検出し、Power Automate フローで使用する空白行数を報告する方法について説明します。
+description: Office スクリプトを使用して、ワークシート内のデータの代わりに空白行が含まれていますを検出し、空白の行数をレポートして、Power Automate フローで使用する方法について説明します。
 ms.date: 03/31/2021
 localization_priority: Normal
-ms.openlocfilehash: 088ab97c686484ca5c13c875b80431ac28d20736
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: db84f2446c168f867c325a05129fe982c9645731
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51754832"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232586"
 ---
-# <a name="count-blank-rows-on-sheets"></a><span data-ttu-id="49bcf-103">シートの空白行を数える</span><span class="sxs-lookup"><span data-stu-id="49bcf-103">Count blank rows on sheets</span></span>
+# <a name="count-blank-rows-on-sheets"></a><span data-ttu-id="71a0d-103">シートの空白行を数える</span><span class="sxs-lookup"><span data-stu-id="71a0d-103">Count blank rows on sheets</span></span>
 
-<span data-ttu-id="49bcf-104">このプロジェクトには、次の 2 つのスクリプトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="49bcf-104">This project includes two scripts:</span></span>
+<span data-ttu-id="71a0d-104">このプロジェクトには、次の 2 つのスクリプトが含まれています。</span><span class="sxs-lookup"><span data-stu-id="71a0d-104">This project includes two scripts:</span></span>
 
-* <span data-ttu-id="49bcf-105">[指定したシートの空白行を](#sample-code-count-blank-rows-on-a-given-sheet)数える: 指定したワークシートの使用範囲を走査し、空白の行数を返します。</span><span class="sxs-lookup"><span data-stu-id="49bcf-105">[Count blank rows on a given sheet](#sample-code-count-blank-rows-on-a-given-sheet): Traverses the used range on a given worksheet and returns a blank row count.</span></span>
-* <span data-ttu-id="49bcf-106">[すべてのシートで空白行](#sample-code-count-blank-rows-on-all-sheets)を数える : すべてのワークシートの使用範囲を走査し、空白の行数を返します。</span><span class="sxs-lookup"><span data-stu-id="49bcf-106">[Count blank rows on all sheets](#sample-code-count-blank-rows-on-all-sheets): Traverses the used range on _all of the worksheets_ and returns a blank row count.</span></span>
+* <span data-ttu-id="71a0d-105">[指定したシートの空白行を](#sample-code-count-blank-rows-on-a-given-sheet)数える: 指定したワークシートの使用範囲を走査し、空白の行数を返します。</span><span class="sxs-lookup"><span data-stu-id="71a0d-105">[Count blank rows on a given sheet](#sample-code-count-blank-rows-on-a-given-sheet): Traverses the used range on a given worksheet and returns a blank row count.</span></span>
+* <span data-ttu-id="71a0d-106">[すべてのシートで空白行](#sample-code-count-blank-rows-on-all-sheets)を数える : すべてのワークシートの使用範囲を走査し、空白の行数を返します。</span><span class="sxs-lookup"><span data-stu-id="71a0d-106">[Count blank rows on all sheets](#sample-code-count-blank-rows-on-all-sheets): Traverses the used range on _all of the worksheets_ and returns a blank row count.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="49bcf-107">スクリプトの場合、空白の行はデータがない任意の行です。</span><span class="sxs-lookup"><span data-stu-id="49bcf-107">For our script, a blank row is any row where there's no data.</span></span> <span data-ttu-id="49bcf-108">行には書式設定を指定できます。</span><span class="sxs-lookup"><span data-stu-id="49bcf-108">The row can have formatting.</span></span>
+> <span data-ttu-id="71a0d-107">スクリプトの場合、空白の行はデータがない任意の行です。</span><span class="sxs-lookup"><span data-stu-id="71a0d-107">For our script, a blank row is any row where there's no data.</span></span> <span data-ttu-id="71a0d-108">行には書式設定を指定できます。</span><span class="sxs-lookup"><span data-stu-id="71a0d-108">The row can have formatting.</span></span>
 
-<span data-ttu-id="49bcf-109">_このシートは、4 つの空白行の数を返します_</span><span class="sxs-lookup"><span data-stu-id="49bcf-109">_This sheet returns count of 4 blank rows_</span></span>
+<span data-ttu-id="71a0d-109">_このシートは、4 つの空白行の数を返します_</span><span class="sxs-lookup"><span data-stu-id="71a0d-109">_This sheet returns count of 4 blank rows_</span></span>
 
-:::image type="content" source="../../images/blank-rows.png" alt-text="空白行を含むデータを示すワークシート。":::
+:::image type="content" source="../../images/blank-rows.png" alt-text="空白行を含むデータを示すワークシート":::
 
-<span data-ttu-id="49bcf-111">_このシートは、0 行の数を返します (すべての行にいくつかのデータがあります)_</span><span class="sxs-lookup"><span data-stu-id="49bcf-111">_This sheet returns count of 0 blank rows (all rows have some data)_</span></span>
+<span data-ttu-id="71a0d-111">_このシートは、0 行の数を返します (すべての行にいくつかのデータがあります)_</span><span class="sxs-lookup"><span data-stu-id="71a0d-111">_This sheet returns count of 0 blank rows (all rows have some data)_</span></span>
 
-:::image type="content" source="../../images/no-blank-rows.png" alt-text="空白行のないデータを示すワークシート。":::
+:::image type="content" source="../../images/no-blank-rows.png" alt-text="空白行のないデータを示すワークシート":::
 
-## <a name="sample-code-count-blank-rows-on-a-given-sheet"></a><span data-ttu-id="49bcf-113">サンプル コード: 特定のシートの空白行を数える</span><span class="sxs-lookup"><span data-stu-id="49bcf-113">Sample code: Count blank rows on a given sheet</span></span>
+## <a name="sample-code-count-blank-rows-on-a-given-sheet"></a><span data-ttu-id="71a0d-113">サンプル コード: 特定のシートの空白行を数える</span><span class="sxs-lookup"><span data-stu-id="71a0d-113">Sample code: Count blank rows on a given sheet</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): number
@@ -59,7 +59,7 @@ function main(workbook: ExcelScript.Workbook): number
 }
 ```
 
-## <a name="sample-code-count-blank-rows-on-all-sheets"></a><span data-ttu-id="49bcf-114">サンプル コード: すべてのシートで空白行をカウントする</span><span class="sxs-lookup"><span data-stu-id="49bcf-114">Sample code: Count blank rows on all sheets</span></span>
+## <a name="sample-code-count-blank-rows-on-all-sheets"></a><span data-ttu-id="71a0d-114">サンプル コード: すべてのシートで空白行をカウントする</span><span class="sxs-lookup"><span data-stu-id="71a0d-114">Sample code: Count blank rows on all sheets</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): number
@@ -90,6 +90,6 @@ function main(workbook: ExcelScript.Workbook): number
 }
 ```
 
-## <a name="use-with-power-automate"></a><span data-ttu-id="49bcf-115">Power Automate での使用</span><span class="sxs-lookup"><span data-stu-id="49bcf-115">Use with Power Automate</span></span>
+## <a name="use-with-power-automate"></a><span data-ttu-id="71a0d-115">[ユーザーと一緒にPower Automate</span><span class="sxs-lookup"><span data-stu-id="71a0d-115">Use with Power Automate</span></span>
 
-:::image type="content" source="../../images/use-in-power-automate.png" alt-text="Power Automate フローは、スクリプトを実行するためにセットアップする方法をOfficeします。":::
+:::image type="content" source="../../images/use-in-power-automate.png" alt-text="スクリプトPower Automate実行をセットアップする方法を示すOfficeフロー":::

@@ -1,48 +1,39 @@
 ---
-title: 'Office スクリプトのサンプル シナリオ: Web ダウンロードの分析'
-description: Excel ブックで生のインターネット トラフィック データを取得し、その情報をテーブルに整理する前に、発生元の場所を決定するサンプル。
-ms.date: 12/17/2020
+title: 'Officeスクリプトのサンプル シナリオ: Web ダウンロードの分析'
+description: ブック内の生のインターネット トラフィック データをExcel、その情報をテーブルに整理する前に、元の場所を決定するサンプル。
+ms.date: 04/27/2021
 localization_priority: Normal
-ms.openlocfilehash: e351cd6c4a12e83a07a2f4ce5678d7aa10625118
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 6c5958e9957ca49c370ae34456236bdd15f41c44
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755036"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232712"
 ---
-# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a><span data-ttu-id="3aa49-103">Office スクリプトのサンプル シナリオ: Web ダウンロードの分析</span><span class="sxs-lookup"><span data-stu-id="3aa49-103">Office Scripts sample scenario: Analyze web downloads</span></span>
+# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a><span data-ttu-id="8b549-103">Officeスクリプトのサンプル シナリオ: Web ダウンロードの分析</span><span class="sxs-lookup"><span data-stu-id="8b549-103">Office Scripts sample scenario: Analyze web downloads</span></span>
 
-<span data-ttu-id="3aa49-104">このシナリオでは、会社の Web サイトからダウンロード レポートを分析する必要があります。</span><span class="sxs-lookup"><span data-stu-id="3aa49-104">In this scenario, you're tasked with analyzing download reports from your company's website.</span></span> <span data-ttu-id="3aa49-105">この分析の目的は、Web トラフィックが米国または世界の他の場所から送信されるかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="3aa49-105">The goal of this analysis is to determine if the web traffic is coming from the United States or elsewhere in the world.</span></span>
+<span data-ttu-id="8b549-104">このシナリオでは、会社の Web サイトからダウンロード レポートを分析する必要があります。</span><span class="sxs-lookup"><span data-stu-id="8b549-104">In this scenario, you're tasked with analyzing download reports from your company's website.</span></span> <span data-ttu-id="8b549-105">この分析の目的は、Web トラフィックが米国または世界の他の場所から送信されるかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="8b549-105">The goal of this analysis is to determine if the web traffic is coming from the United States or elsewhere in the world.</span></span>
 
-<span data-ttu-id="3aa49-106">同僚が生データをブックにアップロードします。</span><span class="sxs-lookup"><span data-stu-id="3aa49-106">Your colleagues upload the raw data to your workbook.</span></span> <span data-ttu-id="3aa49-107">毎週のデータ セットには、独自のワークシートがあります。</span><span class="sxs-lookup"><span data-stu-id="3aa49-107">Each week's set of data has its own worksheet.</span></span> <span data-ttu-id="3aa49-108">また、週 **別の傾向を** 示す表とグラフを含むサマリー ワークシートがあります。</span><span class="sxs-lookup"><span data-stu-id="3aa49-108">There is also the **Summary** worksheet with a table and chart that shows week-over-week trends.</span></span>
+<span data-ttu-id="8b549-106">同僚が生データをブックにアップロードします。</span><span class="sxs-lookup"><span data-stu-id="8b549-106">Your colleagues upload the raw data to your workbook.</span></span> <span data-ttu-id="8b549-107">毎週のデータ セットには、独自のワークシートがあります。</span><span class="sxs-lookup"><span data-stu-id="8b549-107">Each week's set of data has its own worksheet.</span></span> <span data-ttu-id="8b549-108">また、週 **別の傾向を** 示す表とグラフを含むサマリー ワークシートがあります。</span><span class="sxs-lookup"><span data-stu-id="8b549-108">There is also the **Summary** worksheet with a table and chart that shows week-over-week trends.</span></span>
 
-<span data-ttu-id="3aa49-109">アクティブなワークシートの毎週のダウンロード データを分析するスクリプトを開発します。</span><span class="sxs-lookup"><span data-stu-id="3aa49-109">You'll develop a script that analyzes weekly downloads data in the active worksheet.</span></span> <span data-ttu-id="3aa49-110">各ダウンロードに関連付けられた IP アドレスを解析し、それが米国から送信されたかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="3aa49-110">It will parse the IP address associated with each download and determine whether or not it came from the US.</span></span> <span data-ttu-id="3aa49-111">答えは、ブール値 ("TRUE" または "FALSE") としてワークシートに挿入され、条件付き書式がそれらのセルに適用されます。</span><span class="sxs-lookup"><span data-stu-id="3aa49-111">The answer will be inserted in the worksheet as a boolean value ("TRUE" or "FALSE") and conditional formatting will be applied to those cells.</span></span> <span data-ttu-id="3aa49-112">IP アドレスの場所の結果はワークシートで合計され、サマリー テーブルにコピーされます。</span><span class="sxs-lookup"><span data-stu-id="3aa49-112">The IP address location results will be totaled on the worksheet and copied to the summary table.</span></span>
+<span data-ttu-id="8b549-109">アクティブなワークシートの毎週のダウンロード データを分析するスクリプトを開発します。</span><span class="sxs-lookup"><span data-stu-id="8b549-109">You'll develop a script that analyzes weekly downloads data in the active worksheet.</span></span> <span data-ttu-id="8b549-110">各ダウンロードに関連付けられた IP アドレスを解析し、それが米国から送信されたかどうかを判断します。</span><span class="sxs-lookup"><span data-stu-id="8b549-110">It will parse the IP address associated with each download and determine whether or not it came from the US.</span></span> <span data-ttu-id="8b549-111">答えは、ブール値 ("TRUE" または "FALSE") としてワークシートに挿入され、条件付き書式がそれらのセルに適用されます。</span><span class="sxs-lookup"><span data-stu-id="8b549-111">The answer will be inserted in the worksheet as a boolean value ("TRUE" or "FALSE") and conditional formatting will be applied to those cells.</span></span> <span data-ttu-id="8b549-112">IP アドレスの場所の結果はワークシートで合計され、サマリー テーブルにコピーされます。</span><span class="sxs-lookup"><span data-stu-id="8b549-112">The IP address location results will be totaled on the worksheet and copied to the summary table.</span></span>
 
-## <a name="scripting-skills-covered"></a><span data-ttu-id="3aa49-113">スクリプティングのスキルをカバー</span><span class="sxs-lookup"><span data-stu-id="3aa49-113">Scripting skills covered</span></span>
+## <a name="scripting-skills-covered"></a><span data-ttu-id="8b549-113">スクリプティングのスキルをカバー</span><span class="sxs-lookup"><span data-stu-id="8b549-113">Scripting skills covered</span></span>
 
-- <span data-ttu-id="3aa49-114">テキスト解析</span><span class="sxs-lookup"><span data-stu-id="3aa49-114">Text parsing</span></span>
-- <span data-ttu-id="3aa49-115">スクリプトのサブ機能</span><span class="sxs-lookup"><span data-stu-id="3aa49-115">Subfunctions in scripts</span></span>
-- <span data-ttu-id="3aa49-116">条件付き書式</span><span class="sxs-lookup"><span data-stu-id="3aa49-116">Conditional formatting</span></span>
-- <span data-ttu-id="3aa49-117">テーブル</span><span class="sxs-lookup"><span data-stu-id="3aa49-117">Tables</span></span>
+- <span data-ttu-id="8b549-114">テキスト解析</span><span class="sxs-lookup"><span data-stu-id="8b549-114">Text parsing</span></span>
+- <span data-ttu-id="8b549-115">スクリプトのサブ機能</span><span class="sxs-lookup"><span data-stu-id="8b549-115">Subfunctions in scripts</span></span>
+- <span data-ttu-id="8b549-116">条件付き書式</span><span class="sxs-lookup"><span data-stu-id="8b549-116">Conditional formatting</span></span>
+- <span data-ttu-id="8b549-117">テーブル</span><span class="sxs-lookup"><span data-stu-id="8b549-117">Tables</span></span>
 
-## <a name="demo-video"></a><span data-ttu-id="3aa49-118">デモ ビデオ</span><span class="sxs-lookup"><span data-stu-id="3aa49-118">Demo video</span></span>
+## <a name="setup-instructions"></a><span data-ttu-id="8b549-118">セットアップ手順</span><span class="sxs-lookup"><span data-stu-id="8b549-118">Setup instructions</span></span>
 
-<span data-ttu-id="3aa49-119">このサンプルは、2020 年 2 月Officeアドイン開発者コミュニティ呼び出しの一部としてデモされました。</span><span class="sxs-lookup"><span data-stu-id="3aa49-119">This sample was demoed as part of the Office Add-ins developer community call for February 2020.</span></span>
+1. <span data-ttu-id="8b549-119">ユーザー <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a>にダウンロードOneDrive。</span><span class="sxs-lookup"><span data-stu-id="8b549-119">Download <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> to your OneDrive.</span></span>
 
-> [!VIDEO https://www.youtube.com/embed/vPEqbb7t6-Y?start=154]
+2. <span data-ttu-id="8b549-120">Web 用のブックExcel開きます。</span><span class="sxs-lookup"><span data-stu-id="8b549-120">Open the workbook with Excel for the web.</span></span>
 
-> [!NOTE]
-> <span data-ttu-id="3aa49-120">このビデオに示すコードでは、古い API モデル (スクリプト Async API の [Office) を使用します](../../develop/excel-async-model.md)。</span><span class="sxs-lookup"><span data-stu-id="3aa49-120">The code shown in this video uses an older API model (the [Office Scripts Async APIs](../../develop/excel-async-model.md)).</span></span> <span data-ttu-id="3aa49-121">このページに表示されるサンプルは更新されましたが、コードは記録とは少し異なります。</span><span class="sxs-lookup"><span data-stu-id="3aa49-121">The sample presented on this page has been updated, but the code looks a little different from the recording.</span></span> <span data-ttu-id="3aa49-122">この変更は、発表者のデモのスクリプトや他のコンテンツの動作には影響しません。</span><span class="sxs-lookup"><span data-stu-id="3aa49-122">The changes don't affect the behavior of the script or the other content in the presenter's demo.</span></span>
+3. <span data-ttu-id="8b549-121">[自動化] **タブで** 、[すべてのスクリプト] **を開きます**。</span><span class="sxs-lookup"><span data-stu-id="8b549-121">Under the **Automate** tab, open **All Scripts**.</span></span>
 
-## <a name="setup-instructions"></a><span data-ttu-id="3aa49-123">セットアップ手順</span><span class="sxs-lookup"><span data-stu-id="3aa49-123">Setup instructions</span></span>
-
-1. <span data-ttu-id="3aa49-124">OneDrive <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> をダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="3aa49-124">Download <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a> to your OneDrive.</span></span>
-
-2. <span data-ttu-id="3aa49-125">Web 用の Excel を使用してブックを開きます。</span><span class="sxs-lookup"><span data-stu-id="3aa49-125">Open the workbook with Excel for the web.</span></span>
-
-3. <span data-ttu-id="3aa49-126">[自動化] **タブで** 、[すべてのスクリプト] **を開きます**。</span><span class="sxs-lookup"><span data-stu-id="3aa49-126">Under the **Automate** tab, open **All Scripts**.</span></span>
-
-4. <span data-ttu-id="3aa49-127">[コード **エディター] 作業ウィンドウ** で、[新しいスクリプト] **を押** して、次のスクリプトをエディターに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="3aa49-127">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
+4. <span data-ttu-id="8b549-122">[コード **エディター] 作業ウィンドウ** で、[新しいスクリプト] **を押** して、次のスクリプトをエディターに貼り付けます。</span><span class="sxs-lookup"><span data-stu-id="8b549-122">In the **Code Editor** task pane, press **New Script** and paste the following script into the editor.</span></span>
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -218,18 +209,18 @@ ms.locfileid: "51755036"
     }
     ```
 
-5. <span data-ttu-id="3aa49-128">スクリプトの名前を **[Web ダウンロードの分析] に変更し** 、保存します。</span><span class="sxs-lookup"><span data-stu-id="3aa49-128">Rename the script to **Analyze Web Downloads** and save it.</span></span>
+5. <span data-ttu-id="8b549-123">スクリプトの名前を **[Web ダウンロードの分析] に変更し** 、保存します。</span><span class="sxs-lookup"><span data-stu-id="8b549-123">Rename the script to **Analyze Web Downloads** and save it.</span></span>
 
-## <a name="running-the-script"></a><span data-ttu-id="3aa49-129">スクリプトを実行する</span><span class="sxs-lookup"><span data-stu-id="3aa49-129">Running the script</span></span>
+## <a name="running-the-script"></a><span data-ttu-id="8b549-124">スクリプトを実行する</span><span class="sxs-lookup"><span data-stu-id="8b549-124">Running the script</span></span>
 
-<span data-ttu-id="3aa49-130">[週] ワークシート **に \* \* 移動** し、[Web ダウンロードの分析]**スクリプトを実行** します。</span><span class="sxs-lookup"><span data-stu-id="3aa49-130">Navigate to any of the **Week\*\*** worksheets and run the **Analyze Web Downloads** script.</span></span> <span data-ttu-id="3aa49-131">スクリプトは、現在のシートに条件付き書式と場所のラベル付けを適用します。</span><span class="sxs-lookup"><span data-stu-id="3aa49-131">The script will apply the conditional formatting and location labelling on the current sheet.</span></span> <span data-ttu-id="3aa49-132">また、[概要] ワークシート **も更新** されます。</span><span class="sxs-lookup"><span data-stu-id="3aa49-132">It will also update the **Summary** worksheet.</span></span>
+<span data-ttu-id="8b549-125">[週] ワークシート **に \* \* 移動** し、[Web ダウンロードの分析]**スクリプトを実行** します。</span><span class="sxs-lookup"><span data-stu-id="8b549-125">Navigate to any of the **Week\*\*** worksheets and run the **Analyze Web Downloads** script.</span></span> <span data-ttu-id="8b549-126">スクリプトは、現在のシートに条件付き書式と場所のラベル付けを適用します。</span><span class="sxs-lookup"><span data-stu-id="8b549-126">The script will apply the conditional formatting and location labelling on the current sheet.</span></span> <span data-ttu-id="8b549-127">また、[概要] ワークシート **も更新** されます。</span><span class="sxs-lookup"><span data-stu-id="8b549-127">It will also update the **Summary** worksheet.</span></span>
 
-### <a name="before-running-the-script"></a><span data-ttu-id="3aa49-133">スクリプトを実行する前に</span><span class="sxs-lookup"><span data-stu-id="3aa49-133">Before running the script</span></span>
+### <a name="before-running-the-script"></a><span data-ttu-id="8b549-128">スクリプトを実行する前に</span><span class="sxs-lookup"><span data-stu-id="8b549-128">Before running the script</span></span>
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="生の Web トラフィック データを表示するワークシート。":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="生の Web トラフィック データを表示するワークシート":::
 
-### <a name="after-running-the-script"></a><span data-ttu-id="3aa49-135">スクリプトの実行後</span><span class="sxs-lookup"><span data-stu-id="3aa49-135">After running the script</span></span>
+### <a name="after-running-the-script"></a><span data-ttu-id="8b549-130">スクリプトの実行後</span><span class="sxs-lookup"><span data-stu-id="8b549-130">After running the script</span></span>
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="前の Web トラフィック行で書式設定された IP 場所情報を表示するワークシート。":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="前の Web トラフィック行で書式設定された IP 場所情報を表示するワークシート":::
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="スクリプトが実行されたワークシートをまとめたサマリー テーブルとグラフ。":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="スクリプトが実行されたワークシートをまとめたサマリー テーブルとグラフ":::

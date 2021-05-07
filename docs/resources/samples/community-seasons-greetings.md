@@ -1,26 +1,26 @@
 ---
 title: 季節のご挨拶
 description: スクリプトを使用して、Officeの歌のツリーを表示する方法についてExcel on the web。
-ms.date: 04/02/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: d0f50cf32c3b5c9b098813b3e8dc07dbb4367c25
-ms.sourcegitcommit: 1f003c9924e651600c913d84094506125f1055ab
+ms.openlocfilehash: a328ba66fedc245ff73300d7f47cd339ec87234f
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/26/2021
-ms.locfileid: "52026913"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232579"
 ---
-# <a name="seasons-greetings"></a><span data-ttu-id="3f221-103">季節のご挨拶</span><span class="sxs-lookup"><span data-stu-id="3f221-103">Seasons greetings</span></span>
+# <a name="seasons-greetings"></a><span data-ttu-id="6a82d-103">季節のご挨拶</span><span class="sxs-lookup"><span data-stu-id="6a82d-103">Seasons greetings</span></span>
 
-<span data-ttu-id="3f221-104">このスクリプトは、ホリデー シーズンの精神 [でレス](https://www.linkedin.com/in/lesblackconsultant/) リー ブラックによって投稿されました。</span><span class="sxs-lookup"><span data-stu-id="3f221-104">This script was contributed by [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) in the spirit of the holiday season!</span></span> <span data-ttu-id="3f221-105">このスクリプトは、新しいスクリプトを使用して、Excel on the webのOfficeです。</span><span class="sxs-lookup"><span data-stu-id="3f221-105">It's a fun script that shows a singing tree in Excel on the web using Office Scripts.</span></span>
+<span data-ttu-id="6a82d-104">このスクリプトは、ホリデー シーズンの精神 [でレス](https://www.linkedin.com/in/lesblackconsultant/) リー ブラックによって投稿されました。</span><span class="sxs-lookup"><span data-stu-id="6a82d-104">This script was contributed by [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) in the spirit of the holiday season!</span></span> <span data-ttu-id="6a82d-105">このスクリプトは、新しいスクリプトを使用して、Excel on the webのOfficeです。</span><span class="sxs-lookup"><span data-stu-id="6a82d-105">It's a fun script that shows a singing tree in Excel on the web using Office Scripts.</span></span>
 
-<span data-ttu-id="3f221-106">お楽しみください!</span><span class="sxs-lookup"><span data-stu-id="3f221-106">Enjoy!</span></span>
+<span data-ttu-id="6a82d-106">お楽しみください!</span><span class="sxs-lookup"><span data-stu-id="6a82d-106">Enjoy!</span></span>
 
-<span data-ttu-id="3f221-107">[![シーズンの案内応答スクリプトの動作を確認する](../../images/community-seasons.png)](https://youtu.be/HBiGEkzmkgo "シーズンの案内応答スクリプトが動作中!")</span><span class="sxs-lookup"><span data-stu-id="3f221-107">[![Watch the Seasons greetings script in action](../../images/community-seasons.png)](https://youtu.be/HBiGEkzmkgo "Seasons greetings script in action!")</span></span>
+<span data-ttu-id="6a82d-107">["Les's IT Blog" YouTube](https://youtu.be/HBiGEkzmkgo)チャンネルで、シーズンの案内応答スクリプトの動作を確認します。</span><span class="sxs-lookup"><span data-stu-id="6a82d-107">[Watch the Seasons greetings script in action on the "Les's IT Blog" YouTube channel](https://youtu.be/HBiGEkzmkgo).</span></span>
 
-## <a name="script"></a><span data-ttu-id="3f221-108">Script</span><span class="sxs-lookup"><span data-stu-id="3f221-108">Script</span></span>
+## <a name="script"></a><span data-ttu-id="6a82d-108">Script</span><span class="sxs-lookup"><span data-stu-id="6a82d-108">Script</span></span>
 
-<span data-ttu-id="3f221-109">このソリューションで <a href="happy-tree.xlsx">happy-tree.xlsx</a> ファイルをダウンロードして、自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="3f221-109">Download the file <a href="happy-tree.xlsx">happy-tree.xlsx</a> used in this solution to try it out yourself!</span></span>
+<span data-ttu-id="6a82d-109">このソリューションで <a href="happy-tree.xlsx">happy-tree.xlsx</a> ファイルをダウンロードして、自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="6a82d-109">Download the file <a href="happy-tree.xlsx">happy-tree.xlsx</a> used in this solution to try it out yourself!</span></span>
 
 ```TypeScript
 /* Original version by Leslie Black.  */

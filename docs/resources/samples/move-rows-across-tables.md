@@ -1,35 +1,35 @@
 ---
 title: スクリプトを使用してテーブル間で行Officeする
 description: フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する方法について学習します。
-ms.date: 03/30/2021
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 1adaeee1c8307d7775529496df115563831aed4d
-ms.sourcegitcommit: 45ffe3dbd2c834b78592ad35928cf8096f5e80bc
+ms.openlocfilehash: 959fb002b0ba485b43f4de7de3004e1074f768a7
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2021
-ms.locfileid: "51755043"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232754"
 ---
-# <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a><span data-ttu-id="3dcfd-103">フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する</span><span class="sxs-lookup"><span data-stu-id="3dcfd-103">Move rows across tables by saving filters, then processing and reapplying the filters</span></span>
+# <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a><span data-ttu-id="b04de-103">フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する</span><span class="sxs-lookup"><span data-stu-id="b04de-103">Move rows across tables by saving filters, then processing and reapplying the filters</span></span>
 
-<span data-ttu-id="3dcfd-104">このスクリプトでは、次のことが行われます。</span><span class="sxs-lookup"><span data-stu-id="3dcfd-104">This script does the following:</span></span>
+<span data-ttu-id="b04de-104">このスクリプトでは、次のことが行われます。</span><span class="sxs-lookup"><span data-stu-id="b04de-104">This script does the following:</span></span>
 
-* <span data-ttu-id="3dcfd-105">列の値が一部の値と等しいソース テーブルから行を _選択します_。</span><span class="sxs-lookup"><span data-stu-id="3dcfd-105">Selects rows from the source table where the value in a column is equal to _some value_.</span></span>
-* <span data-ttu-id="3dcfd-106">選択した行を別のワークシートの別の (ターゲット) テーブルに移動します。</span><span class="sxs-lookup"><span data-stu-id="3dcfd-106">Moves all selected rows into another (target) table on another worksheet.</span></span>
-* <span data-ttu-id="3dcfd-107">ソース テーブルに関連するフィルターを再適用します。</span><span class="sxs-lookup"><span data-stu-id="3dcfd-107">Reapplies the relevant filters on the source table.</span></span>
+* <span data-ttu-id="b04de-105">列の値が一部の値と等しいソース テーブルから行を _選択します_。</span><span class="sxs-lookup"><span data-stu-id="b04de-105">Selects rows from the source table where the value in a column is equal to _some value_.</span></span>
+* <span data-ttu-id="b04de-106">選択した行を別のワークシートの別の (ターゲット) テーブルに移動します。</span><span class="sxs-lookup"><span data-stu-id="b04de-106">Moves all selected rows into another (target) table on another worksheet.</span></span>
+* <span data-ttu-id="b04de-107">ソース テーブルに関連するフィルターを再適用します。</span><span class="sxs-lookup"><span data-stu-id="b04de-107">Reapplies the relevant filters on the source table.</span></span>
 
 :::image type="content" source="../../images/table-filter-before-after.png" alt-text="ブックの前と後のスクリーンショット":::
 
-<span data-ttu-id="3dcfd-109">このソリューションには 2 つのスクリプトがあります。</span><span class="sxs-lookup"><span data-stu-id="3dcfd-109">There are two scripts in this solution.</span></span> <span data-ttu-id="3dcfd-110">主な違いは、行の選択方法です。</span><span class="sxs-lookup"><span data-stu-id="3dcfd-110">The main difference is how the rows are selected.</span></span>
+<span data-ttu-id="b04de-109">このソリューションには 2 つのスクリプトがあります。</span><span class="sxs-lookup"><span data-stu-id="b04de-109">There are two scripts in this solution.</span></span> <span data-ttu-id="b04de-110">主な違いは、行の選択方法です。</span><span class="sxs-lookup"><span data-stu-id="b04de-110">The main difference is how the rows are selected.</span></span>
 
-* <span data-ttu-id="3dcfd-111">1 [つ目のバリアント](#sample-code-move-rows-using-table-filter)では、テーブル フィルターを適用し、表示範囲を読み取って行を選択します。</span><span class="sxs-lookup"><span data-stu-id="3dcfd-111">In the [first variant](#sample-code-move-rows-using-table-filter), the rows are selected by applying the table filter and reading the visible range.</span></span>
-* <span data-ttu-id="3dcfd-112">2 [番目の](#sample-code-move-rows-using-range-values)行は、値を読み取り、行の値を抽出して選択されます。</span><span class="sxs-lookup"><span data-stu-id="3dcfd-112">In the [second](#sample-code-move-rows-using-range-values), the rows are selected by reading the values and extracting the row values.</span></span>
+* <span data-ttu-id="b04de-111">1 [つ目のバリアント](#sample-code-move-rows-using-table-filter)では、テーブル フィルターを適用し、表示範囲を読み取って行を選択します。</span><span class="sxs-lookup"><span data-stu-id="b04de-111">In the [first variant](#sample-code-move-rows-using-table-filter), the rows are selected by applying the table filter and reading the visible range.</span></span>
+* <span data-ttu-id="b04de-112">2 [番目の](#sample-code-move-rows-using-range-values)行は、値を読み取り、行の値を抽出して選択されます。</span><span class="sxs-lookup"><span data-stu-id="b04de-112">In the [second](#sample-code-move-rows-using-range-values), the rows are selected by reading the values and extracting the row values.</span></span>
 
-## <a name="sample-excel-file"></a><span data-ttu-id="3dcfd-113">サンプル Excel ファイル</span><span class="sxs-lookup"><span data-stu-id="3dcfd-113">Sample Excel file</span></span>
+## <a name="sample-excel-file"></a><span data-ttu-id="b04de-113">サンプル Excel ファイル</span><span class="sxs-lookup"><span data-stu-id="b04de-113">Sample Excel file</span></span>
 
-<span data-ttu-id="3dcfd-114">このソリューションで <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> ファイルをダウンロードして、自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="3dcfd-114">Download the file <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> used in this solution to try it out yourself!</span></span>
+<span data-ttu-id="b04de-114">このソリューションで <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> ファイルをダウンロードして、自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="b04de-114">Download the file <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> used in this solution to try it out yourself!</span></span>
 
-## <a name="sample-code-move-rows-using-table-filter"></a><span data-ttu-id="3dcfd-115">サンプル コード: テーブル フィルターを使用して行を移動する</span><span class="sxs-lookup"><span data-stu-id="3dcfd-115">Sample code: Move rows using table filter</span></span>
+## <a name="sample-code-move-rows-using-table-filter"></a><span data-ttu-id="b04de-115">サンプル コード: テーブル フィルターを使用して行を移動する</span><span class="sxs-lookup"><span data-stu-id="b04de-115">Sample code: Move rows using table filter</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -146,7 +146,7 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
 }
 ```
 
-## <a name="sample-code-move-rows-using-range-values"></a><span data-ttu-id="3dcfd-116">サンプル コード: 範囲の値を使用して行を移動する</span><span class="sxs-lookup"><span data-stu-id="3dcfd-116">Sample code: Move rows using range values</span></span>
+## <a name="sample-code-move-rows-using-range-values"></a><span data-ttu-id="b04de-116">サンプル コード: 範囲の値を使用して行を移動する</span><span class="sxs-lookup"><span data-stu-id="b04de-116">Sample code: Move rows using range values</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -247,6 +247,6 @@ function reApplyFilters(sourceTable: ExcelScript.Table, columnNameFilteredOn: st
 }
 ```
 
-## <a name="training-video-move-rows-across-tables"></a><span data-ttu-id="3dcfd-117">トレーニング ビデオ: テーブル間で行を移動する</span><span class="sxs-lookup"><span data-stu-id="3dcfd-117">Training video: Move rows across tables</span></span>
+## <a name="training-video-move-rows-across-tables"></a><span data-ttu-id="b04de-117">トレーニング ビデオ: テーブル間で行を移動する</span><span class="sxs-lookup"><span data-stu-id="b04de-117">Training video: Move rows across tables</span></span>
 
-<span data-ttu-id="3dcfd-118">[![テーブル間で行を移動する方法に関するステップバイステップのビデオを見る](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "テーブル間で行を移動する方法に関するステップバイステップのビデオ")</span><span class="sxs-lookup"><span data-stu-id="3dcfd-118">[![Watch step-by-step video on how to move rows across tables](../../images/move-rows-filters-vid.jpg)](https://youtu.be/_3t3Pk4i2L0 "Step-by-step video on how to move rows across tables")</span></span>
+<span data-ttu-id="b04de-118">[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/_3t3Pk4i2L0).</span><span class="sxs-lookup"><span data-stu-id="b04de-118">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/_3t3Pk4i2L0).</span></span>

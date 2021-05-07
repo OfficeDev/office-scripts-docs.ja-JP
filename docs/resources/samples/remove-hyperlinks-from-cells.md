@@ -1,25 +1,25 @@
 ---
-title: Excel ワークシートの各セルからハイパーリンクを削除する
-description: Excel ワークシートの各セルOfficeハイパーリンクを削除するには、スクリプトを使用する方法について説明します。
-ms.date: 03/18/2021
+title: ワークシート内の各セルからハイパーリンクをExcelする
+description: '[スクリプト] を使用してOfficeワークシートの各セルからハイパーリンクを削除するExcelします。'
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 07b670aac3368e38b9b93283404befee608391a7
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: eb5f486cb5228e639727c5ee7e6c335d5e94239f
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571294"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232747"
 ---
-# <a name="remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a><span data-ttu-id="e2b97-103">Excel ワークシートの各セルからハイパーリンクを削除する</span><span class="sxs-lookup"><span data-stu-id="e2b97-103">Remove hyperlinks from each cell in an Excel worksheet</span></span>
+# <a name="remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a><span data-ttu-id="35f82-103">ワークシート内の各セルからハイパーリンクをExcelする</span><span class="sxs-lookup"><span data-stu-id="35f82-103">Remove hyperlinks from each cell in an Excel worksheet</span></span>
 
- <span data-ttu-id="e2b97-104">このサンプルでは、現在のワークシートからすべてのハイパーリンクをクリアします。</span><span class="sxs-lookup"><span data-stu-id="e2b97-104">This sample clears all of the hyperlinks from the current worksheet.</span></span> <span data-ttu-id="e2b97-105">ワークシートを走査し、セルに関連付けられているハイパーリンクがある場合は、ハイパーリンクをクリアしますが、セルの値は保持されます。</span><span class="sxs-lookup"><span data-stu-id="e2b97-105">It traverses the worksheet and if there is any hyperlink associated with the cell, it clears the hyperlink yet retains the cell value as is.</span></span> <span data-ttu-id="e2b97-106">また、トラバーサルの完了に要する時間も記録します。</span><span class="sxs-lookup"><span data-stu-id="e2b97-106">Also logs the time it takes to complete traversal.</span></span>
+ <span data-ttu-id="35f82-104">このサンプルでは、現在のワークシートからすべてのハイパーリンクをクリアします。</span><span class="sxs-lookup"><span data-stu-id="35f82-104">This sample clears all of the hyperlinks from the current worksheet.</span></span> <span data-ttu-id="35f82-105">ワークシートを走査し、セルに関連付けられているハイパーリンクがある場合は、ハイパーリンクをクリアしますが、セルの値は保持されます。</span><span class="sxs-lookup"><span data-stu-id="35f82-105">It traverses the worksheet and if there is any hyperlink associated with the cell, it clears the hyperlink yet retains the cell value as is.</span></span> <span data-ttu-id="35f82-106">また、トラバーサルの完了に要する時間も記録します。</span><span class="sxs-lookup"><span data-stu-id="35f82-106">Also logs the time it takes to complete traversal.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="e2b97-107">これは、セル数が 10k の場合<機能します。</span><span class="sxs-lookup"><span data-stu-id="e2b97-107">This only works if the cell count is < 10k.</span></span>
+> <span data-ttu-id="35f82-107">これは、セル数が 10k の場合<機能します。</span><span class="sxs-lookup"><span data-stu-id="35f82-107">This only works if the cell count is < 10k.</span></span>
 
-## <a name="sample-code-remove-hyperlinks"></a><span data-ttu-id="e2b97-108">サンプル コード: ハイパーリンクの削除</span><span class="sxs-lookup"><span data-stu-id="e2b97-108">Sample code: Remove hyperlinks</span></span>
+## <a name="sample-code-remove-hyperlinks"></a><span data-ttu-id="35f82-108">サンプル コード: ハイパーリンクの削除</span><span class="sxs-lookup"><span data-stu-id="35f82-108">Sample code: Remove hyperlinks</span></span>
 
-<span data-ttu-id="e2b97-109">このサンプルで <a href="remove-hyperlinks.xlsx">remove-hyperlinks.xlsx</a> ファイルをダウンロードして、自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="e2b97-109">Download the file <a href="remove-hyperlinks.xlsx">remove-hyperlinks.xlsx</a> used in this sample and try it out yourself!</span></span>
+<span data-ttu-id="35f82-109">このサンプルで <a href="remove-hyperlinks.xlsx">remove-hyperlinks.xlsx</a> ファイルをダウンロードして、自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="35f82-109">Download the file <a href="remove-hyperlinks.xlsx">remove-hyperlinks.xlsx</a> used in this sample and try it out yourself!</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, sheetName: string = 'Sheet1') {
@@ -80,6 +80,6 @@ function removeHyperLink(targetRange: ExcelScript.Range): void {
 }
 ```
 
-## <a name="training-video-remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a><span data-ttu-id="e2b97-110">トレーニング ビデオ: Excel ワークシートの各セルからハイパーリンクを削除する</span><span class="sxs-lookup"><span data-stu-id="e2b97-110">Training video: Remove hyperlinks from each cell in an Excel worksheet</span></span>
+## <a name="training-video-remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a><span data-ttu-id="35f82-110">トレーニング ビデオ: ワークシート内の各セルからハイパーリンクをExcelする</span><span class="sxs-lookup"><span data-stu-id="35f82-110">Training video: Remove hyperlinks from each cell in an Excel worksheet</span></span>
 
-<span data-ttu-id="e2b97-111">[![Excel ワークシートの各セルからハイパーリンクを削除する方法について、ステップバイステップのビデオを見る](../../images/hyperlinks-vid.jpg)](https://youtu.be/v20fdinxpHU "Excel ワークシートの各セルからハイパーリンクを削除する方法に関するステップバイステップのビデオ")</span><span class="sxs-lookup"><span data-stu-id="e2b97-111">[![Watch step-by-step video on how to remove hyperlinks from each cell in an Excel worksheet](../../images/hyperlinks-vid.jpg)](https://youtu.be/v20fdinxpHU "Step-by-step video on how to remove hyperlinks from each cell in an Excel worksheet")</span></span>
+<span data-ttu-id="35f82-111">[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/v20fdinxpHU).</span><span class="sxs-lookup"><span data-stu-id="35f82-111">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/v20fdinxpHU).</span></span>

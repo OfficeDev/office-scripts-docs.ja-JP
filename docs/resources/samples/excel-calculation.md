@@ -1,28 +1,28 @@
 ---
-title: Excel で計算モードを管理する
-description: Web 上の Excel でOfficeスクリプトを使用して計算モードを管理する方法について説明します。
-ms.date: 03/18/2021
+title: 計算モードを管理Excel
+description: スクリプトを使用してOfficeモードを管理する方法について説明Excel on the web。
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 0239437c7b52dca1fd8d1a4fc66bab7965cbd91a
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: 34a14874197ffda8487df5e450e3dcab980f7ed5
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571528"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232453"
 ---
-# <a name="manage-calculation-mode-in-excel"></a><span data-ttu-id="7433f-103">Excel で計算モードを管理する</span><span class="sxs-lookup"><span data-stu-id="7433f-103">Manage calculation mode in Excel</span></span>
+# <a name="manage-calculation-mode-in-excel"></a><span data-ttu-id="cefe6-103">計算モードを管理Excel</span><span class="sxs-lookup"><span data-stu-id="cefe6-103">Manage calculation mode in Excel</span></span>
 
-<span data-ttu-id="7433f-104">このサンプルでは、スクリプトを使用[](/javascript/api/office-scripts/excelscript/excelscript.calculationmode)して、計算モードを使用し、Web 上の Excel でメソッドOfficeします。</span><span class="sxs-lookup"><span data-stu-id="7433f-104">This sample shows how to use the [calculation mode](/javascript/api/office-scripts/excelscript/excelscript.calculationmode) and calculate methods in Excel on the web using Office Scripts.</span></span> <span data-ttu-id="7433f-105">任意の Excel ファイルでスクリプトを試してみてください。</span><span class="sxs-lookup"><span data-stu-id="7433f-105">You can try the script on any Excel file.</span></span>
+<span data-ttu-id="cefe6-104">このサンプルでは、スクリプトを使用[して計算](/javascript/api/office-scripts/excelscript/excelscript.calculationmode)モードを使用し、計算モードでメソッドExcel on the web Officeします。</span><span class="sxs-lookup"><span data-stu-id="cefe6-104">This sample shows how to use the [calculation mode](/javascript/api/office-scripts/excelscript/excelscript.calculationmode) and calculate methods in Excel on the web using Office Scripts.</span></span> <span data-ttu-id="cefe6-105">スクリプトは、任意のファイルでExcelできます。</span><span class="sxs-lookup"><span data-stu-id="cefe6-105">You can try the script on any Excel file.</span></span>
 
-## <a name="scenario"></a><span data-ttu-id="7433f-106">シナリオ</span><span class="sxs-lookup"><span data-stu-id="7433f-106">Scenario</span></span>
+## <a name="scenario"></a><span data-ttu-id="cefe6-106">シナリオ</span><span class="sxs-lookup"><span data-stu-id="cefe6-106">Scenario</span></span>
 
-<span data-ttu-id="7433f-107">Web 上の Excel では、API を使用してファイルの計算モードをプログラムで制御できます。</span><span class="sxs-lookup"><span data-stu-id="7433f-107">In Excel on the web, a file's calculation mode can be controlled programmatically using APIs.</span></span> <span data-ttu-id="7433f-108">次のアクションは、スクリプトを使用Officeできます。</span><span class="sxs-lookup"><span data-stu-id="7433f-108">The following actions are possible using Office Scripts.</span></span>
+<span data-ttu-id="cefe6-107">このExcel on the web、API を使用してファイルの計算モードをプログラムで制御できます。</span><span class="sxs-lookup"><span data-stu-id="cefe6-107">In Excel on the web, a file's calculation mode can be controlled programmatically using APIs.</span></span> <span data-ttu-id="cefe6-108">次のアクションは、スクリプトを使用Officeできます。</span><span class="sxs-lookup"><span data-stu-id="cefe6-108">The following actions are possible using Office Scripts.</span></span>
 
-1. <span data-ttu-id="7433f-109">計算モードを取得します。</span><span class="sxs-lookup"><span data-stu-id="7433f-109">Get the calculation mode.</span></span>
-1. <span data-ttu-id="7433f-110">計算モードを設定します。</span><span class="sxs-lookup"><span data-stu-id="7433f-110">Set the calculation mode.</span></span>
-1. <span data-ttu-id="7433f-111">手動モード (再計算とも呼ばれます) に設定されているファイルの Excel 数式を計算します。</span><span class="sxs-lookup"><span data-stu-id="7433f-111">Calculate Excel formulas for files that are set to the manual mode (also referred to as recalculate).</span></span>
+1. <span data-ttu-id="cefe6-109">計算モードを取得します。</span><span class="sxs-lookup"><span data-stu-id="cefe6-109">Get the calculation mode.</span></span>
+1. <span data-ttu-id="cefe6-110">計算モードを設定します。</span><span class="sxs-lookup"><span data-stu-id="cefe6-110">Set the calculation mode.</span></span>
+1. <span data-ttu-id="cefe6-111">手動Excel (再計算とも呼ばれます) に設定されているファイルの数式を計算します。</span><span class="sxs-lookup"><span data-stu-id="cefe6-111">Calculate Excel formulas for files that are set to the manual mode (also referred to as recalculate).</span></span>
 
-## <a name="sample-code-control-calculation-mode"></a><span data-ttu-id="7433f-112">サンプル コード: コントロールの計算モード</span><span class="sxs-lookup"><span data-stu-id="7433f-112">Sample code: Control calculation mode</span></span>
+## <a name="sample-code-control-calculation-mode"></a><span data-ttu-id="cefe6-112">サンプル コード: コントロールの計算モード</span><span class="sxs-lookup"><span data-stu-id="cefe6-112">Sample code: Control calculation mode</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -36,6 +36,6 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="training-video-manage-calculation-mode"></a><span data-ttu-id="7433f-113">トレーニング ビデオ: 計算モードの管理</span><span class="sxs-lookup"><span data-stu-id="7433f-113">Training video: Manage calculation mode</span></span>
+## <a name="training-video-manage-calculation-mode"></a><span data-ttu-id="cefe6-113">トレーニング ビデオ: 計算モードの管理</span><span class="sxs-lookup"><span data-stu-id="cefe6-113">Training video: Manage calculation mode</span></span>
 
-<span data-ttu-id="7433f-114">[![Web 上の Excel で計算モードを管理する方法について、ステップバイステップのビデオを見る](../../images/calc-mode-vid.jpg)](https://youtu.be/iw6O8QH01CI "Web 上の Excel で計算モードを管理する方法に関するステップバイステップのビデオ")</span><span class="sxs-lookup"><span data-stu-id="7433f-114">[![Watch step-by-step video on how to manage calculation mode in Excel on the web](../../images/calc-mode-vid.jpg)](https://youtu.be/iw6O8QH01CI "Step-by-step video on how to manage calculation mode in Excel on the web")</span></span>
+<span data-ttu-id="cefe6-114">[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/iw6O8QH01CI).</span><span class="sxs-lookup"><span data-stu-id="cefe6-114">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/iw6O8QH01CI).</span></span>

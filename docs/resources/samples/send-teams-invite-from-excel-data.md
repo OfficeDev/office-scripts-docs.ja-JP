@@ -1,41 +1,41 @@
 ---
-title: Excel データから Teams 会議を送信する
-description: Excel データから Teams 会議Office送信するには、スクリプトを使用する方法について学習します。
-ms.date: 03/30/2021
+title: データからTeams会議をExcelする
+description: '[スクリプト] を使用してOfficeデータから会議Teams送信するExcelします。'
+ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: 807c9228049504c089c8dafe63a5d9ccaab94399
-ms.sourcegitcommit: 5d24e77df70aa2c1c982275d53213c2a9323ff86
+ms.openlocfilehash: b0a3d5732727fd399fe34f3645336840ba4c156d
+ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2021
-ms.locfileid: "51571534"
+ms.lasthandoff: 05/06/2021
+ms.locfileid: "52232733"
 ---
-# <a name="send-teams-meeting-from-excel-data"></a><span data-ttu-id="78da7-103">Excel データから Teams 会議を送信する</span><span class="sxs-lookup"><span data-stu-id="78da7-103">Send Teams meeting from Excel data</span></span>
+# <a name="send-teams-meeting-from-excel-data"></a><span data-ttu-id="e663e-103">会議TeamsデータからExcel送信する</span><span class="sxs-lookup"><span data-stu-id="e663e-103">Send Teams meeting from Excel data</span></span>
 
-<span data-ttu-id="78da7-104">このソリューションでは、Excel ファイルから行Officeを選択し、Teams 会議の招待を送信して Excel を更新するために、スクリプトと Power Automate アクションを使用する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="78da7-104">This solution shows how to use Office Scripts and Power Automate actions to select rows from Excel file and use it to send a Teams meeting invite then update Excel.</span></span>
+<span data-ttu-id="e663e-104">このソリューションでは、Office スクリプトと Power Automate アクションを使用して Excel ファイルから行を選択し、Teams 会議の招待を送信し、Excel を更新する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="e663e-104">This solution shows how to use Office Scripts and Power Automate actions to select rows from Excel file and use it to send a Teams meeting invite then update Excel.</span></span>
 
-## <a name="example-scenario"></a><span data-ttu-id="78da7-105">シナリオ例</span><span class="sxs-lookup"><span data-stu-id="78da7-105">Example scenario</span></span>
+## <a name="example-scenario"></a><span data-ttu-id="e663e-105">シナリオ例</span><span class="sxs-lookup"><span data-stu-id="e663e-105">Example scenario</span></span>
 
-* <span data-ttu-id="78da7-106">人事採用担当者は、Excel ファイル内の候補者の面接スケジュールを管理します。</span><span class="sxs-lookup"><span data-stu-id="78da7-106">An HR recruiter manages the interview schedule of candidates in an Excel file.</span></span>
-* <span data-ttu-id="78da7-107">採用担当者は、Teams 会議の招待を候補者と面接官に送信する必要があります。</span><span class="sxs-lookup"><span data-stu-id="78da7-107">The recruiter needs to send the Teams meeting invite to the candidate and interviewers.</span></span> <span data-ttu-id="78da7-108">ビジネス ルールは、次の項目を選択します。</span><span class="sxs-lookup"><span data-stu-id="78da7-108">The business rules are to select:</span></span>
+* <span data-ttu-id="e663e-106">人事採用担当者は、候補者の面接スケジュールを管理し、Excelします。</span><span class="sxs-lookup"><span data-stu-id="e663e-106">An HR recruiter manages the interview schedule of candidates in an Excel file.</span></span>
+* <span data-ttu-id="e663e-107">採用担当者は、候補者と面接官にTeams会議の招待を送信する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e663e-107">The recruiter needs to send the Teams meeting invite to the candidate and interviewers.</span></span> <span data-ttu-id="e663e-108">ビジネス ルールは、次の項目を選択します。</span><span class="sxs-lookup"><span data-stu-id="e663e-108">The business rules are to select:</span></span>
 
-    <span data-ttu-id="78da7-109">(a) 招待がファイル列に記録されているとして送信されていないユーザーにのみ招待します。</span><span class="sxs-lookup"><span data-stu-id="78da7-109">(a) Invites to only those for whom the invite isn't already sent as recorded in the file column.</span></span>
+    <span data-ttu-id="e663e-109">(a) 招待がファイル列に記録されているとして送信されていないユーザーにのみ招待します。</span><span class="sxs-lookup"><span data-stu-id="e663e-109">(a) Invites to only those for whom the invite isn't already sent as recorded in the file column.</span></span>
 
-    <span data-ttu-id="78da7-110">(b) 将来の面接日 (過去の日付なし)。</span><span class="sxs-lookup"><span data-stu-id="78da7-110">(b) Interview dates in the future (no past dates).</span></span>
+    <span data-ttu-id="e663e-110">(b) 将来の面接日 (過去の日付なし)。</span><span class="sxs-lookup"><span data-stu-id="e663e-110">(b) Interview dates in the future (no past dates).</span></span>
 
-* <span data-ttu-id="78da7-111">採用担当者は、対象レコードに対してすべての Teams 会議が送信されたという確認で Excel ファイルを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="78da7-111">The recruiter needs to update the Excel file with the confirmation that all Teams meetings have been sent for the eligible records.</span></span>
+* <span data-ttu-id="e663e-111">採用担当者は、対象となるレコードExcelすべての会議が送信されたTeamsファイルを更新する必要があります。</span><span class="sxs-lookup"><span data-stu-id="e663e-111">The recruiter needs to update the Excel file with the confirmation that all Teams meetings have been sent for the eligible records.</span></span>
 
-<span data-ttu-id="78da7-112">ソリューションには 3 つのパーツがあります。</span><span class="sxs-lookup"><span data-stu-id="78da7-112">The solution has 3 parts:</span></span>
+<span data-ttu-id="e663e-112">ソリューションには 3 つのパーツがあります。</span><span class="sxs-lookup"><span data-stu-id="e663e-112">The solution has 3 parts:</span></span>
 
-1. <span data-ttu-id="78da7-113">Officeスクリプトを使用して、条件に基づいてテーブルからデータを抽出し、オブジェクトの配列を JSON データとして返します。</span><span class="sxs-lookup"><span data-stu-id="78da7-113">Office Script to extract data from a table based on conditions and returns an array of objects as JSON data.</span></span>
-1. <span data-ttu-id="78da7-114">その後、データは Teams の [チームの作成] 会議アクション **に送信** され、招待を送信します。</span><span class="sxs-lookup"><span data-stu-id="78da7-114">The data is then sent to the Teams **Create a Teams meeting** action to send invites.</span></span> <span data-ttu-id="78da7-115">JSON 配列内のインスタンスごとに 1 つの Teams 会議を送信します。</span><span class="sxs-lookup"><span data-stu-id="78da7-115">Send one Teams meeting per instance in the JSON array.</span></span>
-1. <span data-ttu-id="78da7-116">同じ JSON データを別の Officeスクリプトに送信して、招待の状態を更新します。</span><span class="sxs-lookup"><span data-stu-id="78da7-116">Send the same JSON data to another Office Script to update the status of the invitation.</span></span>
+1. <span data-ttu-id="e663e-113">Office条件に基づいてテーブルからデータを抽出し、オブジェクトの配列を JSON データとして返すスクリプト。</span><span class="sxs-lookup"><span data-stu-id="e663e-113">Office Script to extract data from a table based on conditions and returns an array of objects as JSON data.</span></span>
+1. <span data-ttu-id="e663e-114">次に、データが [会議の作成] Teamsに送信Teams **に** 送信されます。</span><span class="sxs-lookup"><span data-stu-id="e663e-114">The data is then sent to the Teams **Create a Teams meeting** action to send invites.</span></span> <span data-ttu-id="e663e-115">JSON 配列内Teams 1 つの会議を送信します。</span><span class="sxs-lookup"><span data-stu-id="e663e-115">Send one Teams meeting per instance in the JSON array.</span></span>
+1. <span data-ttu-id="e663e-116">同じ JSON データを別の Officeスクリプトに送信して、招待の状態を更新します。</span><span class="sxs-lookup"><span data-stu-id="e663e-116">Send the same JSON data to another Office Script to update the status of the invitation.</span></span>
 
-## <a name="sample-excel-file"></a><span data-ttu-id="78da7-117">サンプル Excel ファイル</span><span class="sxs-lookup"><span data-stu-id="78da7-117">Sample Excel file</span></span>
+## <a name="sample-excel-file"></a><span data-ttu-id="e663e-117">サンプル Excel ファイル</span><span class="sxs-lookup"><span data-stu-id="e663e-117">Sample Excel file</span></span>
 
-<span data-ttu-id="78da7-118">このソリューションで <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> ファイルをダウンロードして、自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="78da7-118">Download the file <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> used in this solution and try it out yourself!</span></span>
+<span data-ttu-id="e663e-118">このソリューションで <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> ファイルをダウンロードして、自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="e663e-118">Download the file <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> used in this solution and try it out yourself!</span></span>
 
-## <a name="sample-code-select-filtered-rows-from-table-as-json"></a><span data-ttu-id="78da7-119">サンプル コード: テーブルから JSON としてフィルター処理された行を選択する</span><span class="sxs-lookup"><span data-stu-id="78da7-119">Sample code: Select filtered rows from table as JSON</span></span>
+## <a name="sample-code-select-filtered-rows-from-table-as-json"></a><span data-ttu-id="e663e-119">サンプル コード: テーブルから JSON としてフィルター処理された行を選択する</span><span class="sxs-lookup"><span data-stu-id="e663e-119">Sample code: Select filtered rows from table as JSON</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): InterviewInvite[] {
@@ -174,7 +174,7 @@ interface InterviewInvite extends BasicObj {
 }
 ```
 
-## <a name="sample-code-mark-as-invited"></a><span data-ttu-id="78da7-120">サンプル コード: 招待済みとしてマークする</span><span class="sxs-lookup"><span data-stu-id="78da7-120">Sample code: Mark as invited</span></span>
+## <a name="sample-code-mark-as-invited"></a><span data-ttu-id="e663e-120">サンプル コード: 招待済みとしてマークする</span><span class="sxs-lookup"><span data-stu-id="e663e-120">Sample code: Mark as invited</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, completedInvitesString: string) {
@@ -228,6 +228,6 @@ interface InterviewInvite  {
 }
 ```
 
-## <a name="training-video-send-a-teams-meeting-from-excel-data"></a><span data-ttu-id="78da7-121">トレーニング ビデオ: Excel データから Teams 会議を送信する</span><span class="sxs-lookup"><span data-stu-id="78da7-121">Training video: Send a Teams meeting from Excel data</span></span>
+## <a name="training-video-send-a-teams-meeting-from-excel-data"></a><span data-ttu-id="e663e-121">トレーニング ビデオ: データからTeams会議をExcelする</span><span class="sxs-lookup"><span data-stu-id="e663e-121">Training video: Send a Teams meeting from Excel data</span></span>
 
-<span data-ttu-id="78da7-122">[![Excel データから Teams 会議を送信する方法について、ステップバイステップのビデオを見る](../../images/teams-invite-vid.jpg)](https://youtu.be/HyBdx52NOE8 "Excel データから Teams 会議を送信する方法に関するステップバイステップのビデオ")</span><span class="sxs-lookup"><span data-stu-id="78da7-122">[![Watch step-by-step video on how to send a Teams meeting from Excel data](../../images/teams-invite-vid.jpg)](https://youtu.be/HyBdx52NOE8 "Step-by-step video on how to send a Teams meeting from Excel data")</span></span>
+<span data-ttu-id="e663e-122">[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/HyBdx52NOE8).</span><span class="sxs-lookup"><span data-stu-id="e663e-122">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/HyBdx52NOE8).</span></span>
