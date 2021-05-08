@@ -69,8 +69,6 @@ items:
                 href: resources/samples/count-blank-rows.md
               - name: Excel ファイルの相互参照とフォーマット
                 href: resources/samples/excel-cross-reference.md
-              - name: ドキュメント番号ジェネレーター
-                href: resources/samples/document-number-generator.md
               - name: チャートとテーブルの画像をメールで送信
                 href: resources/samples/email-images-chart-table.md
               - name: テーブルをフィルター処理し、可視範囲を取得する
