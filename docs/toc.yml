@@ -58,15 +58,13 @@ items:
           - name: 基本事項
             items:
               - name: スクリプトの基本
-                href: resources/excel-samples.md
-              - name: 範囲の基本
-                href: resources/samples/range-basics.md
-          - name: 応用
-            items:
+                href: resources/samples/excel-samples.md
               - name: コメントを追加する
                 href: resources/samples/add-excel-comments.md
               - name: 複数のテーブルを 1 つのテーブルにコピーする
                 href: resources/samples/copy-tables-combine.md
+          - name: 応用
+            items:
               - name: ワークシートの空白行を数える
                 href: resources/samples/count-blank-rows.md
               - name: Excel ファイルの相互参照とフォーマット
