@@ -1,14 +1,14 @@
 ---
 title: Officeスクリプトのサンプル
 description: 使用可能なOfficeスクリプトのサンプルとシナリオです。
-ms.date: 04/28/2021
+ms.date: 05/07/2021
 localization_priority: Normal
-ms.openlocfilehash: 625db792763606e8db77abdc4665b7db2732892f
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 6df28f3b9d88f202b3b16661a36296bb8bee6c73
+ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232740"
+ms.lasthandoff: 05/08/2021
+ms.locfileid: "52285844"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Officeスクリプトのサンプルとシナリオ
 
@@ -41,7 +41,6 @@ ms.locfileid: "52232740"
 | [電子メール グラフと表の画像](email-images-chart-table.md) | このサンプルでは、OfficeスクリプトとPower Automateアクションを使用してグラフを作成し、そのグラフを画像として電子メールで送信します。 |
 | [外部フェッチ呼び出し](external-fetch-calls.md) | このサンプルでは、 `fetch` スクリプトのデータからGitHubを取得します。 |
 | [テーブルをExcelし、表示範囲を取得する](filter-table-get-visible-range.md) | 次のサンプルでは、Excelをフィルター処理し、表示範囲を JSON オブジェクトとして返します。 この JSON は、大規模なソリューションの一部Power Automateフローに提供できます。 |
-| [ブックで一意の識別子を生成する](document-number-generator.md) | このシナリオは、ユーザーが特定の形式の一意の文書番号を生成し、範囲またはテーブルにエントリを追加するのに役立ちます。 |
 | [計算モードを管理Excel](excel-calculation.md) | このサンプルでは、スクリプトを使用して計算モードを使用し、Excel on the webメソッドOffice示します。 |
 | [テーブル間で行を移動する](move-rows-across-tables.md) | このサンプルでは、フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する方法を示します。 |
 | [JSON Excelデータを出力する](get-table-data.md) | このソリューションは、テーブル データExcel JSON として出力する方法を示Power Automate。 |

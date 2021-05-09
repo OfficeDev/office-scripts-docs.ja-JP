@@ -1,14 +1,14 @@
 ---
 title: コメントを追加Excel
 description: ワークシートにコメントを追加Officeスクリプトを使用する方法について説明します。
-ms.date: 04/28/2021
+ms.date: 05/03/2021
 localization_priority: Normal
-ms.openlocfilehash: d592b37c3af8e475c81e8650dda44921fee7aeaf
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: e5e5d17c076eceaf06fddeea1a67d31ee3581f31
+ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232509"
+ms.lasthandoff: 05/08/2021
+ms.locfileid: "52285935"
 ---
 # <a name="add-comments-in-excel"></a>コメントを追加Excel
 
@@ -32,41 +32,46 @@ ms.locfileid: "52232509"
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
-    const employees = workbook.getWorksheet('Employees').getUsedRange().getTexts();
-    console.log(employees); 
+  // Get the list of employees.
+  const employees = workbook.getWorksheet('Employees').getUsedRange().getTexts();
+  console.log(employees); 
+  
+  // Get the schedule information from the schedule table.
+  const scheduleSheet = workbook.getWorksheet('Schedule');
+  const table = scheduleSheet.getTables()[0];
+  const range = table.getRangeBetweenHeaderAndTotal();
+  const scheduleData = range.getTexts();
 
-    const scheduleSheet = workbook.getWorksheet('Schedule');
-    const table = scheduleSheet.getTables()[0];
-    const range = table.getRangeBetweenHeaderAndTotal();
-    const scheduleData = range.getTexts();
+  // Look through the schedule for a matching employee.
+  for (let i = 0; i < scheduleData.length; i++) {
+    let employeeId = scheduleData[i][3];
 
-    for (let i=0; i < scheduleData.length; i++) {
-      let eId = scheduleData[i][3];
+    // Compare the employee ID in the schedule against the employee information table.
+    let employeeInfo = employees.find(employeeRow => employeeRow[0] === employeeId);
+    if (employeeInfo) {
+      console.log("Found a match " + employeeInfo);
+      let adminNotes = scheduleData[i][4];
 
-      let employeeInfo = employees.find(e => e[0] === eId);
-      if (employeeInfo) {
-        console.log("Found a match " + employeeInfo);
-        let adminNotes = scheduleData[i][4];
-        try { 
-          let comment = workbook.getCommentByCell(range.getCell(i, 5));
-          comment.delete();
-        } catch {
-            console.log("Ignore if there is no existing comment in the cell");
-        }
-        workbook.addComment(range.getCell(i,5), {
-          mentions: [{
-            email: employeeInfo[1],
-            id: 0,
-            name: employeeInfo[2]
-          }],
-          richContent: `<at id=\"0\">${employeeInfo[2]}</at> ${adminNotes}`
-        }, ExcelScript.ContentType.mention);        
-        
-      } else {
-        console.log("No match for: " + eId);
+      // Look for and delete old comments, so we avoid conflicts.
+      let comment = workbook.getCommentByCell(range.getCell(i, 5));
+      if (comment) {
+        comment.delete();
       }
+
+      // Add a comment using the admin notes as the text.
+      workbook.addComment(range.getCell(i,5), {
+        mentions: [{
+          email: employeeInfo[1],
+          id: 0, // This ID maps this mention to the `id=0` text in the comment.
+          name: employeeInfo[2]
+        }],
+        richContent: `<at id=\"0\">${employeeInfo[2]}</at> ${adminNotes}`
+      }, ExcelScript.ContentType.mention);        
+      
+    } else {
+      console.log("No match for: " + employeeId);
     }
-    return;
+  }
 }
 ```
 
