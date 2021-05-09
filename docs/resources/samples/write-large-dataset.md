@@ -3,24 +3,24 @@ title: 大規模なデータセットを記述する場合のパフォーマン�
 description: 大規模なデータセットをスクリプトで記述するときにパフォーマンスを最適化するOfficeします。
 ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: dcbcf156ef624c4c5ce35c44d501286d507d9c40
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 9622494378a24db16ea43b5500d6efa156726ff8
+ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232719"
+ms.lasthandoff: 05/08/2021
+ms.locfileid: "52285949"
 ---
-# <a name="performance-optimization-when-writing-a-large-dataset"></a><span data-ttu-id="e6c77-103">大規模なデータセットを記述する場合のパフォーマンスの最適化</span><span class="sxs-lookup"><span data-stu-id="e6c77-103">Performance optimization when writing a large dataset</span></span>
+# <a name="performance-optimization-when-writing-a-large-dataset"></a><span data-ttu-id="c26a1-103">大規模なデータセットを記述する場合のパフォーマンスの最適化</span><span class="sxs-lookup"><span data-stu-id="c26a1-103">Performance optimization when writing a large dataset</span></span>
 
-## <a name="basic-performance-optimization"></a><span data-ttu-id="e6c77-104">基本的なパフォーマンスの最適化</span><span class="sxs-lookup"><span data-stu-id="e6c77-104">Basic performance optimization</span></span>
+## <a name="basic-performance-optimization"></a><span data-ttu-id="c26a1-104">基本的なパフォーマンスの最適化</span><span class="sxs-lookup"><span data-stu-id="c26a1-104">Basic performance optimization</span></span>
 
-<span data-ttu-id="e6c77-105">スクリプトのパフォーマンスのOfficeについては、「Getting Started」の[](getting-started.md#basic-performance-considerations)「パフォーマンス」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="e6c77-105">For performance basics in Office Scripts, see the [performance section](getting-started.md#basic-performance-considerations) of the Getting Started article.</span></span>
+<span data-ttu-id="c26a1-105">スクリプトのパフォーマンスのOfficeについては、「Getting Started」の[](getting-started.md#basic-performance-considerations)「パフォーマンス」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c26a1-105">For performance basics in Office Scripts, see the [performance section](getting-started.md#basic-performance-considerations) of the Getting Started article.</span></span>
 
-## <a name="sample-code-optimize-performance-of-a-large-dataset"></a><span data-ttu-id="e6c77-106">サンプル コード: 大規模なデータセットのパフォーマンスを最適化する</span><span class="sxs-lookup"><span data-stu-id="e6c77-106">Sample code: Optimize performance of a large dataset</span></span>
+## <a name="sample-code-optimize-performance-of-a-large-dataset"></a><span data-ttu-id="c26a1-106">サンプル コード: 大規模なデータセットのパフォーマンスを最適化する</span><span class="sxs-lookup"><span data-stu-id="c26a1-106">Sample code: Optimize performance of a large dataset</span></span>
 
-<span data-ttu-id="e6c77-107">Range `setValues()` API では、範囲の値を設定できます。</span><span class="sxs-lookup"><span data-stu-id="e6c77-107">The `setValues()` Range API allows setting the values of a range.</span></span> <span data-ttu-id="e6c77-108">この API には、データ サイズ、ネットワーク設定など、さまざまな要因に応じてデータの制限があります。大量のデータを確実に更新するには、より小さなチャンクでデータ更新を行う方法を考える必要があります。</span><span class="sxs-lookup"><span data-stu-id="e6c77-108">This API has data limitations depending on various factors such as data size, network settings, etc. In order to reliably update a large range of data, you'll need to think about doing data updates in smaller chunks.</span></span> <span data-ttu-id="e6c77-109">このスクリプトはこれを実行し、範囲の行をチャンク単位で書き込み、大きな範囲を更新する必要がある場合は、小さな部分で行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="e6c77-109">This script attempts to do this and writes rows of a range in chunks so that if a large range needs to be updated, it can be done in smaller parts.</span></span> <span data-ttu-id="e6c77-110">**警告**: さまざまなサイズでテストされていないので、スクリプトでこれを使用する場合は注意してください。</span><span class="sxs-lookup"><span data-stu-id="e6c77-110">**Warning**: It has not been tested across various sizes so be aware of that if you want to use this in your script.</span></span> <span data-ttu-id="e6c77-111">テストの機会が得たので、さまざまなデータ サイズに対するパフォーマンスに関する結果を更新します。</span><span class="sxs-lookup"><span data-stu-id="e6c77-111">As we have opportunity to test, we'll update with findings around how it performs for various data sizes.</span></span>
+<span data-ttu-id="c26a1-107">Range `setValues()` API では、範囲の値を設定できます。</span><span class="sxs-lookup"><span data-stu-id="c26a1-107">The `setValues()` Range API allows setting the values of a range.</span></span> <span data-ttu-id="c26a1-108">この API には、データ サイズ、ネットワーク設定など、さまざまな要因に応じてデータの制限があります。大量のデータを確実に更新するには、より小さなチャンクでデータ更新を行う方法を考える必要があります。</span><span class="sxs-lookup"><span data-stu-id="c26a1-108">This API has data limitations depending on various factors such as data size, network settings, etc. In order to reliably update a large range of data, you'll need to think about doing data updates in smaller chunks.</span></span> <span data-ttu-id="c26a1-109">このスクリプトはこれを実行し、範囲の行をチャンク単位で書き込み、大きな範囲を更新する必要がある場合は、小さな部分で行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="c26a1-109">This script attempts to do this and writes rows of a range in chunks so that if a large range needs to be updated, it can be done in smaller parts.</span></span> <span data-ttu-id="c26a1-110">**警告**: さまざまなサイズでテストされていないので、スクリプトでこれを使用する場合は注意してください。</span><span class="sxs-lookup"><span data-stu-id="c26a1-110">**Warning**: It has not been tested across various sizes so be aware of that if you want to use this in your script.</span></span> <span data-ttu-id="c26a1-111">テストの機会が得たので、さまざまなデータ サイズに対するパフォーマンスに関する結果を更新します。</span><span class="sxs-lookup"><span data-stu-id="c26a1-111">As we have opportunity to test, we'll update with findings around how it performs for various data sizes.</span></span>
 
-<span data-ttu-id="e6c77-112">このスクリプトはチャンクごとに 1K セルを選択しますが、上書きして、その動作をテストできます。</span><span class="sxs-lookup"><span data-stu-id="e6c77-112">This script selects 1K cells per chunk but you can override to test out how it works for you.</span></span> <span data-ttu-id="e6c77-113">6 列のデータを含む 100k 行を更新します。</span><span class="sxs-lookup"><span data-stu-id="e6c77-113">It updates 100k rows with 6 columns of data.</span></span> <span data-ttu-id="e6c77-114">空白のシートでこれを実行して調べてください。</span><span class="sxs-lookup"><span data-stu-id="e6c77-114">Run this on a blank sheet to examine.</span></span>
+<span data-ttu-id="c26a1-112">このスクリプトはチャンクごとに 1K セルを選択しますが、上書きして、その動作をテストできます。</span><span class="sxs-lookup"><span data-stu-id="c26a1-112">This script selects 1K cells per chunk but you can override to test out how it works for you.</span></span> <span data-ttu-id="c26a1-113">6 列のデータを含む 100k 行を更新します。</span><span class="sxs-lookup"><span data-stu-id="c26a1-113">It updates 100k rows with 6 columns of data.</span></span> <span data-ttu-id="c26a1-114">空白のシートでこれを実行して調べてください。</span><span class="sxs-lookup"><span data-stu-id="c26a1-114">Run this on a blank sheet to examine.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -39,10 +39,8 @@ function main(workbook: ExcelScript.Workbook) {
   console.log(`Calling update range function...`);
   const updated = updateRangeInChunks(sheet.getRange("B2"), data);
   if (!updated) {
-    console.log(`Update did not take place or complete. Check and run again.`)
+    console.log(`Update did not take place or complete. Check and run again.`);
   }
-
-  return;
 }
 
 function updateRangeInChunks(
@@ -151,6 +149,6 @@ function getRandomString(length: number): string {
 }
 ```
 
-## <a name="training-video-optimize-performance-when-writing-a-large-dataset"></a><span data-ttu-id="e6c77-115">トレーニング ビデオ: 大規模なデータセットを記述するときにパフォーマンスを最適化する</span><span class="sxs-lookup"><span data-stu-id="e6c77-115">Training video: Optimize performance when writing a large dataset</span></span>
+## <a name="training-video-optimize-performance-when-writing-a-large-dataset"></a><span data-ttu-id="c26a1-115">トレーニング ビデオ: 大規模なデータセットを記述するときにパフォーマンスを最適化する</span><span class="sxs-lookup"><span data-stu-id="c26a1-115">Training video: Optimize performance when writing a large dataset</span></span>
 
-<span data-ttu-id="e6c77-116">[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/BP9Kp0Ltj7U).</span><span class="sxs-lookup"><span data-stu-id="e6c77-116">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/BP9Kp0Ltj7U).</span></span>
+<span data-ttu-id="c26a1-116">[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/BP9Kp0Ltj7U).</span><span class="sxs-lookup"><span data-stu-id="c26a1-116">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/BP9Kp0Ltj7U).</span></span>
