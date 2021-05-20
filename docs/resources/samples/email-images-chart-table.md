@@ -1,50 +1,50 @@
 ---
-title: グラフと表の画像Excelメールで送信する
-description: '[スクリプト] と [Office] Power Automateを使用して、グラフと表の画像Excelメールを送信する方法について学習します。'
+title: Excelのグラフと表の画像を電子メールで送信する
+description: OfficeスクリプトとPower Automateを使用して、Excelのグラフと表の画像を抽出して電子メールで送信する方法について説明します。
 ms.date: 05/06/2021
 localization_priority: Normal
-ms.openlocfilehash: f8b52cbf8c19b93c5fc4288fe97775a25e922ab9
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: 54b6b67a0f211f2dc6c881bab17ff23220619e6e
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285858"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545778"
 ---
-# <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>グラフOfficeの画像をPower Automateする場合は、スクリプトとスクリプトを使用してメールを送信します。
+# <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>OfficeスクリプトとPower Automateを使用して、チャートとテーブルの画像を電子メールで送信する
 
-このサンプルでは、OfficeスクリプトとPower Automateを使用してグラフを作成します。 次に、グラフとその基本テーブルの画像を電子メールで送信します。
+このサンプルでは、Office スクリプトとPower Automateを使用してグラフを作成します。 次に、チャートとそのベーステーブルの画像を電子メールで送信します。
 
 ## <a name="example-scenario"></a>シナリオ例
 
-* 最新の結果を取得するために計算します。
+* 計算して最新の結果を得る。
 * グラフを作成します。
-* グラフと表の画像を取得します。
-* 画像にメールを送信Power Automate。
+* チャートとテーブルの画像を取得します。
+* Power Automateで画像を電子メールで送信します。
 
 _入力データ_
 
-:::image type="content" source="../../images/input-data.png" alt-text="入力データの表を示すワークシート":::
+:::image type="content" source="../../images/input-data.png" alt-text="入力データのテーブルを示すワークシート":::
 
-_出力グラフ_
+_出力チャート_
 
-:::image type="content" source="../../images/chart-created.png" alt-text="顧客による支払い金額を示す作成された列グラフ":::
+:::image type="content" source="../../images/chart-created.png" alt-text="顧客別の支払額を示して作成された縦棒グラフ":::
 
-_メール フローを通じて受信Power Automateメール_
+_Power Automateフローを通じて受信された電子メール_
 
-:::image type="content" source="../../images/email-received.png" alt-text="本文に埋め込まれたグラフのExcelによって送信される電子メール":::
+:::image type="content" source="../../images/email-received.png" alt-text="本文に埋め込まれたExcelチャートを示すフローによって送信された電子メール":::
 
 ## <a name="solution"></a>ソリューション
 
 このソリューションには、次の 2 つの部分があります。
 
-1. [グラフOfficeテーブルを計算して抽出するExcelスクリプト](#sample-code-calculate-and-extract-excel-chart-and-table)
-1. スクリプトPower Automate結果を電子メールで送信するフローを示します。 これを行う方法の例については、「自動ワークフローを作成[する」を参照Power Automate。](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)
+1. [グラフと表を計算して抽出Excel Officeスクリプト](#sample-code-calculate-and-extract-excel-chart-and-table)
+1. スクリプトを呼び出して結果を電子メールで送信するPower Automateフロー。 この方法の例については、「 [Power Automate を使用した自動化ワークフローの作成](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)」を参照してください。
 
-## <a name="sample-code-calculate-and-extract-excel-chart-and-table"></a>サンプル コード: グラフと表のExcel抽出する
+## <a name="sample-code-calculate-and-extract-excel-chart-and-table"></a>サンプル コード: グラフとテーブルExcel計算および抽出
 
-次のスクリプトは、グラフと表のExcel抽出します。
+次のスクリプトは、Excelのグラフと表を計算して抽出します。
 
-サンプル ファイルをダウンロード <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> このスクリプトで使用して、自分で試してみてください。
+サンプルファイル <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> をダウンロードし、このスクリプトで使用して自分で試してみてください!
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReportImages {
@@ -89,23 +89,23 @@ interface ReportImages {
 }
 ```
 
-## <a name="power-automate-flow-email-the-chart-and-table-images"></a>Power Automateフロー: グラフと表の画像をメールで送信する
+## <a name="power-automate-flow-email-the-chart-and-table-images"></a>Power Automateフロー: チャートとテーブルの画像を電子メールで送信する
 
 このフローはスクリプトを実行し、返された画像を電子メールで送信します。
 
-1. 新しいインスタント クラウド **フローを作成します**。
-1. [フロー **を手動でトリガーする] を選択し** 、[作成] を **押します**。
-1. [スクリプト **の実行 (** プレビュー) アクションExcel **オンライン (Business)** コネクタを使用する新しい手順 **を追加** します。 アクションには、次の値を使用します。
+1. 新しい **インスタント クラウド フロー** を作成する :
+1. [ **フローを手動でトリガーする] を** 選択し、[ **作成]** を押します。
+1. **[スクリプトの実行**] アクションで **、オンライン (ビジネス)** コネクタExcelを使用する **新しいステップ** を追加します。 アクションには次の値を使用します。
     * **場所**: OneDrive for Business
     * **ドキュメント ライブラリ**: OneDrive
-    * **ファイル**: ブック ([ファイル選択ウィンドウで選択)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
+    * **ファイル**: ワークブック ([ファイル選択で選択 )](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
     * **スクリプト**: スクリプト名
 
-    :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="オンライン (Excel) コネクタの完成Power Automate":::
-1. このサンプルでは、Outlookクライアントとして使用します。 サポートされている任意の電子メール コネクタPower Automate使用できますが、残りの手順では、メール コネクタを選択Outlook。 新しい **手順を追加** して、Office 365 Outlook **および電子** メール **(V2) アクションを使用** します。 アクションには、次の値を使用します。
-    * **To**: テスト用メール アカウント (または個人用メール)
-    * **件名**: レポート データを確認してください
-    * [本文 **] フィールドで** 、[コード ビュー] ( ) を選択 `</>` し、次の値を入力します。
+    :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="Power Automateの完了Excelオンライン (ビジネス) コネクタ":::
+1. このサンプルでは、電子メール クライアントとしてOutlookを使用します。 サポートする任意の電子メール コネクタPower Automateを使用できますが、残りの手順では、Outlook選択したと想定しています。 **Office 365 Outlook** コネクタと **送信と電子メール (V2)** アクションを使用する **新しい手順** を追加します。 アクションには次の値を使用します。
+    * **To**: テスト用の電子メール アカウント (または個人用メール)
+    * **件名**: レポートデータを確認してください
+    * [ **本文** ] フィールドで 、[コード ビュー] ( `</>` ) を選択し、次のように入力します。
 
     ```HTML
     <p>Please review the following report data:<br>
@@ -121,9 +121,9 @@ interface ReportImages {
     </p>
     ```
 
-    :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="Office 365 OutlookでPower Automate":::
-1. フローを保存し、試してみてください。
+    :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="Power Automateの完成したOffice 365 Outlook コネクタ":::
+1. フローを保存し、それを試してみてください。
 
-## <a name="training-video-extract-and-email-images-of-chart-and-table"></a>トレーニング ビデオ: グラフとテーブルの画像を抽出して電子メールで送信する
+## <a name="training-video-extract-and-email-images-of-chart-and-table"></a>トレーニングビデオ:チャートとテーブルの画像を抽出して電子メールで送信する
 
-[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/152GJyqc-Kw).
+[スーディ・ラマムルティがこのサンプルをYouTubeで歩くのを見てください](https://youtu.be/152GJyqc-Kw)。

@@ -1,41 +1,42 @@
 ---
-title: データからTeams会議をExcelする
-description: '[スクリプト] を使用してOfficeデータから会議Teams送信するExcelします。'
+title: ExcelデータからTeams会議を送信する
+description: Officeスクリプトを使用して、データからTeams会議を送信する方法Excel説明します。
 ms.date: 05/06/2021
 localization_priority: Normal
-ms.openlocfilehash: d366da45618f211450a4779bc3a1aec4297eb376
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ROBOTS: NOINDEX
+ms.openlocfilehash: 85b39d7e3d1008dee01e7fe9c690116be1d7e5d8
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285830"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545631"
 ---
-# <a name="send-teams-meeting-from-excel-data"></a>会議TeamsデータからExcel送信する
+# <a name="send-teams-meeting-from-excel-data"></a>Excelデータから会議Teams送信
 
-このソリューションでは、Office スクリプトと Power Automate アクションを使用して Excel ファイルから行を選択し、Teams 会議の招待を送信し、Excel を更新する方法を示します。
+このソリューションでは、OfficeスクリプトとPower Automateアクションを使用してファイルから行Excel選択し、それを使用してTeamsの会議の招待を送信し、Excelを更新する方法を示します。
 
 ## <a name="example-scenario"></a>シナリオ例
 
-* 人事採用担当者は、候補者の面接スケジュールを管理し、Excelします。
+* 人事採用担当者は、Excelファイルで候補者の面接スケジュールを管理します。
 * 採用担当者は、候補者と面接官にTeams会議の招待を送信する必要があります。 ビジネス ルールは、次の項目を選択します。
 
-    (a) 招待がファイル列に記録されているとして送信されていないユーザーにのみ招待します。
+    (a) 招待がファイル列に記録されているとおりに送信されていない人にのみ招待します。
 
-    (b) 将来の面接日 (過去の日付なし)。
+    (b) 今後の面接日(過去の日付なし)
 
-* 採用担当者は、対象となるレコードExcelすべての会議が送信されたTeamsファイルを更新する必要があります。
+* 採用担当者は、対象となるレコードに対してすべてのTeams会議が送信されたことを確認して、Excel ファイルを更新する必要があります。
 
-ソリューションには 3 つのパーツがあります。
+このソリューションには、次の 3 つの部分があります。
 
 1. Office条件に基づいてテーブルからデータを抽出し、オブジェクトの配列を JSON データとして返すスクリプト。
-1. 次に、データが [会議の作成] Teamsに送信Teams **に** 送信されます。 JSON 配列内Teams 1 つの会議を送信します。
-1. 同じ JSON データを別の Officeスクリプトに送信して、招待の状態を更新します。
+1. その後、データは Teamsに送信されます Teams **会議を作成** するアクションを招待を送信します。 JSON 配列内のインスタンスごとに 1 つのTeams会議を送信します。
+1. 同じ JSON データを別のOfficeスクリプトに送信して、招待の状態を更新します。
 
 ## <a name="sample-excel-file"></a>サンプル Excel ファイル
 
-このソリューションで <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> ファイルをダウンロードして、自分で試してみてください。
+このソリューションで使用 <a href="hr-schedule.xlsx">hr-schedule.xlsx</a> ファイルをダウンロードして、自分で試してみてください!
 
-## <a name="sample-code-select-filtered-rows-from-table-as-json"></a>サンプル コード: テーブルから JSON としてフィルター処理された行を選択する
+## <a name="sample-code-select-filtered-rows-from-table-as-json"></a>サンプル コード: JSON としてテーブルからフィルター処理された行を選択します。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): InterviewInvite[] {
@@ -227,6 +228,6 @@ interface InterviewInvite  {
 }
 ```
 
-## <a name="training-video-send-a-teams-meeting-from-excel-data"></a>トレーニング ビデオ: データからTeams会議をExcelする
+## <a name="training-video-send-a-teams-meeting-from-excel-data"></a>トレーニング ビデオ: Excel データからTeams会議を送信する
 
-[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/HyBdx52NOE8).
+[スーディ・ラマムルティがこのサンプルをYouTubeで歩くのを見てください](https://youtu.be/HyBdx52NOE8)。

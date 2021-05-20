@@ -1,31 +1,31 @@
 ---
 title: Office スクリプトでの組み込みの JavaScript オブジェクトの使用
-description: 組み込みの JavaScript API を、Officeスクリプトから呼び出Excel on the web。
-ms.date: 07/16/2020
+description: Excel on the webのOfficeスクリプトから組み込みの JavaScript API を呼び出す方法
+ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: e3b36265f235678eee18fbf369058b165da46210
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 680dd326e357bd06e2fc66cba5bd6745bbd33c24
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232404"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545048"
 ---
-# <a name="using-built-in-javascript-objects-in-office-scripts"></a>Office スクリプトでの組み込みの JavaScript オブジェクトの使用
+# <a name="use-built-in-javascript-objects-in-office-scripts"></a>Officeスクリプトで組み込みの JavaScript オブジェクトを使用する
 
-JavaScript には、JavaScript または[TypeScript](../overview/code-editor-environment.md) (JavaScript のスーパーセット) でスクリプトを実行するかどうかに関係なく、Office スクリプトで使用できるいくつかの組み込みオブジェクトが提供されています。 この記事では、スクリプトで組み込みの JavaScript オブジェクトの一部を使用Office説明Excel on the web。
+JavaScript には、スクリプトを JavaScript または[TypeScript](../overview/code-editor-environment.md) (JavaScript のスーパーセット) に含めるかどうかに関係なく、Officeスクリプトで使用できるいくつかの組み込みオブジェクトが用意されています。 この記事では、Excel on the web用のスクリプトの組み込み JavaScript オブジェクトOffice使用する方法について説明します。
 
 > [!NOTE]
-> すべての組み込み JavaScript オブジェクトの完全な一覧については、Mozilla の Standard 組み込 [みオブジェクトの記事を参照](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects) してください。
+> 組み込み JavaScript オブジェクトの完全なリストについては、Mozilla の [標準組み込みオブジェクト](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects) の記事を参照してください。
 
 ## <a name="array"></a>配列
 
-[Array オブジェクト](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)は、スクリプト内の配列を扱う標準化された方法を提供します。 配列は標準的な JavaScript コンストラクトですが、Officeとコレクションの 2 つの主要な方法で関連付けされます。
+[Array](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)オブジェクトは、スクリプト内の配列を扱う標準化された方法を提供します。 配列は標準の JavaScript コンストラクトですが、範囲とコレクションの 2 つの主要な方法でスクリプトOfficeに関連しています。
 
-### <a name="working-with-ranges"></a>範囲の操作
+### <a name="work-with-ranges"></a>範囲の操作
 
-範囲には、その範囲内のセルに直接マップする複数の 2 次元配列が含まれます。 これらの配列には、その範囲内の各セルに関する特定の情報が含まれます。 たとえば、これらのセル内のすべての値を返します (2 次元配列の行と列は、そのワークシート のサブセクションの行と列 `Range.getValues` にマッピングされます)。 `Range.getFormulas` などの `Range.getNumberFormats` 配列を返す他の頻繁に使用されるメソッドです `Range.getValues` 。
+範囲には、その範囲内のセルに直接マップされる 2 次元配列が含まれます。 これらの配列には、その範囲内の各セルに関する特定の情報が含まれます。 たとえば、 `Range.getValues` これらのセルのすべての値を返します (2 次元配列の行と列は、そのワークシートのサブセクションの行と列にマッピングされます)。 `Range.getFormulas` と `Range.getNumberFormats` 同様に配列を返す他の頻繁に使用されるメソッドです `Range.getValues` 。
 
-次のスクリプトは **、A1:D4 範囲で** "$" を含む任意の数値形式を検索します。 スクリプトは、これらのセルの塗りつぶしの色を "黄色" に設定します。
+次のスクリプトは **、A1:D4** の範囲で"$" を含む任意の数値形式を検索します。 スクリプトは、それらのセルの塗りつぶしの色を "黄色" に設定します。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -48,14 +48,14 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="working-with-collections"></a>コレクションの操作
+### <a name="work-with-collections"></a>コレクションの操作
 
-多Excelオブジェクトはコレクションに含まれています。 このコレクションは、スクリプト API Officeによって管理され、配列として公開されます。 たとえば、ワークシート [内のすべての Shapes](/javascript/api/office-scripts/excelscript/excelscript.shape) は、メソッドによって返されるオブジェクト `Shape[]` に含 `Worksheet.getShapes` まれているとします。 この配列を使用して、コレクションから値を読み取ることができます。また、親オブジェクトのメソッドから特定のオブジェクトに `get*` アクセスすることもできます。
+コレクションには、Excelオブジェクトの多くが含まれています。 コレクションは、Officeスクリプト API によって管理され、配列として公開されます。 たとえば、ワークシート内のすべての [図形](/javascript/api/office-scripts/excelscript/excelscript.shape) は、 `Shape[]` メソッドによって返されるに含 `Worksheet.getShapes` まれています。 この配列を使用してコレクションから値を読み取ったり、親オブジェクトのメソッドから特定のオブジェクトにアクセスしたりできます `get*` 。
 
 > [!NOTE]
-> これらのコレクション配列からオブジェクトを手動で追加または削除しない。 親オブジェクト `add` のメソッドとコレクション型オブジェクト `delete` のメソッドを使用します。 たとえば、メソッドを使用して[ワークシートに Table](/javascript/api/office-scripts/excelscript/excelscript.table)を追加し[](/javascript/api/office-scripts/excelscript/excelscript.worksheet) `Worksheet.addTable` 、using を削除 `Table` します `Table.delete` 。
+> これらのコレクション配列からオブジェクトを手動で追加したり削除したりしないでください。 `add`親オブジェクトのメソッドと `delete` 、コレクション型オブジェクトのメソッドを使用します。 たとえば、メソッドを使用して[ワークシート](/javascript/api/office-scripts/excelscript/excelscript.worksheet)に[テーブル](/javascript/api/office-scripts/excelscript/excelscript.table)を追加 `Worksheet.addTable` し `Table` 、using を削除 `Table.delete` します。
 
-次のスクリプトは、現在のワークシートのすべての図形の種類をログに記録します。
+次のスクリプトは、現在のワークシート内のすべての図形の種類をログに記録します。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -72,7 +72,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-次のスクリプトは、現在のワークシートで最も古い図形を削除します。
+次のスクリプトは、現在のワークシート内の最も古い図形を削除します。
 
 ```Typescript
 function main(workbook: ExcelScript.Workbook) {
@@ -90,9 +90,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="date"></a>日付
 
-[Date オブジェクト](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)は、スクリプト内の日付を扱う標準化された方法を提供します。 `Date.now()` 現在の日付と時刻を持つオブジェクトを生成します。これは、スクリプトのデータ エントリにタイムスタンプを追加するときに便利です。
+[Date](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)オブジェクトは、スクリプト内の日付を処理するための標準化された方法を提供します。 `Date.now()` は、スクリプトのデータエントリにタイムスタンプを追加する場合に便利な、現在の日付と時刻を持つオブジェクトを生成します。
 
-次のスクリプトは、現在の日付をワークシートに追加します。 メソッドを使用すると、Excel日付として認識され、セルの数値形式 `toLocaleDateString` が自動的に変更されます。
+次のスクリプトは、ワークシートに現在の日付を追加します。 このメソッドを使用すると `toLocaleDateString` 、Excel値が日付として認識され、セルの数値書式が自動的に変更されます。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -107,13 +107,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-サンプル [の [日付の処理](../resources/samples/excel-samples.md#dates) ] セクションには、より多くの日付関連のスクリプトがあります。
+サンプルの [[日付の処理]](../resources/samples/excel-samples.md#dates) セクションには、日付に関連するスクリプトが追加されています。
 
 ## <a name="math"></a>数学
 
-[Math オブジェクトは](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)、一般的な数学演算のメソッドと定数を提供します。 ブックの計算エンジンを使用せずに、Excelで使用できる多くの機能を提供します。 これにより、スクリプトがブックにクエリを実行する必要が省き、パフォーマンスが向上します。
+[Math](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)オブジェクトは、一般的な数学演算のメソッドと定数を提供します。 これらは、ブックの計算エンジンを使用する必要なく、Excelでも多くの機能を提供します。 これにより、スクリプトがワークブックに対してクエリを実行する必要が生じなくなることが省かれ、パフォーマンスが向上します。
 
-次のスクリプトは `Math.min` **、A1:D4** 範囲の最小番号を検索してログに記録するために使用します。 このサンプルでは、文字列ではなく、範囲全体に数値だけが含まれていると想定しています。
+次のスクリプトは `Math.min` **、A1:D4** 範囲内の最小の数値を検索してログに記録するために使用します。 このサンプルでは、範囲全体に数値のみが含まれていることを前提とし、文字列は含まれません。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -142,9 +142,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="use-of-external-javascript-libraries-is-not-supported"></a>外部 JavaScript ライブラリの使用はサポートされていません
 
-Officeスクリプトは、外部のサード パーティ製ライブラリの使用をサポートしています。 スクリプトでは、組み込みの JavaScript オブジェクトとスクリプト API Office使用できます。
+Officeスクリプトは、外部のサードパーティ製ライブラリの使用をサポートしていません。 スクリプトは、組み込みの JavaScript オブジェクトとOfficeスクリプト API のみを使用できます。
 
-## <a name="see-also"></a>こちらもご覧ください
+## <a name="see-also"></a>関連項目
 
-- [標準の組み込みオブジェクト](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects)
-- [Officeスクリプト コード エディター環境](../overview/code-editor-environment.md)
+- [標準組み込みオブジェクト](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects)
+- [Officeスクリプト コード エディタ環境](../overview/code-editor-environment.md)

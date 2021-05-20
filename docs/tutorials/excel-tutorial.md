@@ -1,14 +1,14 @@
 ---
 title: Excel on the web で Office スクリプトを記録、編集、作成する
 description: 操作レコーダーを使用したスクリプトの記録、ブックへのデータの書き込みなど、Office スクリプトの基本について説明したチュートリアル。
-ms.date: 01/06/2021
+ms.date: 05/17/2021
 localization_priority: Priority
-ms.openlocfilehash: 9f1b2e29d60ec0e370bdb29fde0f04be831a222b
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 957a36d56af476bafe2c11e7c89a37e79b820cce
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232866"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545027"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを記録、編集、作成する
 
@@ -39,13 +39,6 @@ ms.locfileid: "52232866"
 4. **[操作を記録する]** ボタンを押します。
 5. セル **A2:C2** ("オレンジ" 行) を選択し、塗りつぶしの色をオレンジ色に設定します。
 6. **[停止]** ボタンを押して、記録を停止します。
-7. **[スクリプト名]** フィールドに覚えやすい名前を入力します。
-8. *オプション:* **[説明]** フィールドにわかりやすい説明を入力します。 このフィールドは、スクリプトの動作に関するコンテキストを提供するために使用します。 このチュートリアルでは、「テーブルの色コード行」を使用できます。
-
-   > [!TIP]
-   > スクリプトの説明は、**[スクリプトの詳細]** ウィンドウで後から編集できます。これは、コード エディターの **[...]** メニューの下にあります。
-
-9. **[保存]** ボタンを押して、スクリプトを保存します。
 
     ワークシートは次のようになります (色が違っていても問題ありません)。
 
