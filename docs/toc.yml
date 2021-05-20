@@ -21,6 +21,8 @@ items:
         href: develop/scripting-fundamentals.md
       - name: 概念
         items:
+          - name: Office スクリプトでのベスト プラクティス
+            href: develop/best-practices.md
           - name: 組み込み JavaScript オブジェクト
             href: develop/javascript-objects.md
           - name: コード エディターの環境
@@ -61,14 +63,14 @@ items:
                 href: resources/samples/excel-samples.md
               - name: コメントを追加する
                 href: resources/samples/add-excel-comments.md
+              - name: ブックに画像を追加する
+                href: resources/samples/add-image-to-workbook.md
               - name: 複数のテーブルを 1 つのテーブルにコピーする
                 href: resources/samples/copy-tables-combine.md
           - name: 応用
             items:
               - name: ワークシートの空白行を数える
                 href: resources/samples/count-blank-rows.md
-              - name: Excel ファイルの相互参照とフォーマット
-                href: resources/samples/excel-cross-reference.md
               - name: チャートとテーブルの画像をメールで送信
                 href: resources/samples/email-images-chart-table.md
               - name: テーブルをフィルター処理し、可視範囲を取得する
@@ -83,10 +85,10 @@ items:
                 href: resources/samples/remove-hyperlinks-from-cells.md
               - name: フォルダー内のすべての Excel ファイルでスクリプトを実行する
                 href: resources/samples/automate-tasks-on-all-excel-files-in-folder.md
-              - name: Excel データから Teams の出席依頼を送信する
-                href: resources/samples/send-teams-invite-from-excel-data.md
               - name: Office スクリプトで外部取得呼び出しを使用する
                 href: resources/samples/external-fetch-calls.md
+              - name: 大規模データセットを書き込む
+                href: resources/samples/write-large-dataset.md
           - name: シナリオ
             items:
               - name: Web ダウンロードの分析

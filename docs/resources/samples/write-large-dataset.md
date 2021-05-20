@@ -1,98 +1,97 @@
 ---
-title: 大規模なデータセットを記述する場合のパフォーマンスの最適化
-description: 大規模なデータセットをスクリプトで記述するときにパフォーマンスを最適化するOfficeします。
-ms.date: 04/28/2021
+title: 大規模なデータセットを記述する
+description: Office スクリプトで、大きなデータセットを小さな書き込み操作に分割する方法について説明します。
+ms.date: 05/13/2021
 localization_priority: Normal
-ms.openlocfilehash: 9622494378a24db16ea43b5500d6efa156726ff8
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: 06abb58c61c18620d638ab3eb61ea68398bf20aa
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285949"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545624"
 ---
-# <a name="performance-optimization-when-writing-a-large-dataset"></a><span data-ttu-id="c26a1-103">大規模なデータセットを記述する場合のパフォーマンスの最適化</span><span class="sxs-lookup"><span data-stu-id="c26a1-103">Performance optimization when writing a large dataset</span></span>
+# <a name="write-a-large-dataset"></a><span data-ttu-id="cebb5-103">大規模なデータセットを記述する</span><span class="sxs-lookup"><span data-stu-id="cebb5-103">Write a large dataset</span></span>
 
-## <a name="basic-performance-optimization"></a><span data-ttu-id="c26a1-104">基本的なパフォーマンスの最適化</span><span class="sxs-lookup"><span data-stu-id="c26a1-104">Basic performance optimization</span></span>
+<span data-ttu-id="cebb5-104">`Range.setValues()`API は、データを範囲に配置します。</span><span class="sxs-lookup"><span data-stu-id="cebb5-104">The `Range.setValues()` API puts data in a range.</span></span> <span data-ttu-id="cebb5-105">この API には、データ サイズやネットワーク設定など、さまざまな要因によって制限があります。</span><span class="sxs-lookup"><span data-stu-id="cebb5-105">This API has limitations depending on various factors, such as data size and network settings.</span></span> <span data-ttu-id="cebb5-106">つまり、大量の情報を 1 回の操作でブックに書き込もうとすると、 [大きな範囲](../../testing/platform-limits.md)を確実に更新するために、より小さなバッチでデータを書き込む必要があります。</span><span class="sxs-lookup"><span data-stu-id="cebb5-106">This means that if you attempt to write a massive amount of information to a workbook as a single operation, you'll need to write the data in smaller batches in order to reliably update a [large range](../../testing/platform-limits.md).</span></span>
 
-<span data-ttu-id="c26a1-105">スクリプトのパフォーマンスのOfficeについては、「Getting Started」の[](getting-started.md#basic-performance-considerations)「パフォーマンス」セクションを参照してください。</span><span class="sxs-lookup"><span data-stu-id="c26a1-105">For performance basics in Office Scripts, see the [performance section](getting-started.md#basic-performance-considerations) of the Getting Started article.</span></span>
+<span data-ttu-id="cebb5-107">Officeスクリプトのパフォーマンスの基本については、 [Office スクリプトのパフォーマンスを向上させるを](../../develop/web-client-performance.md)参照してください。</span><span class="sxs-lookup"><span data-stu-id="cebb5-107">For performance basics in Office Scripts, please read [Improve the performance of your Office Scripts](../../develop/web-client-performance.md).</span></span>
 
-## <a name="sample-code-optimize-performance-of-a-large-dataset"></a><span data-ttu-id="c26a1-106">サンプル コード: 大規模なデータセットのパフォーマンスを最適化する</span><span class="sxs-lookup"><span data-stu-id="c26a1-106">Sample code: Optimize performance of a large dataset</span></span>
+## <a name="sample-code-write-a-large-dataset"></a><span data-ttu-id="cebb5-108">サンプル コード: 大規模なデータセットを記述する</span><span class="sxs-lookup"><span data-stu-id="cebb5-108">Sample code: Write a large dataset</span></span>
 
-<span data-ttu-id="c26a1-107">Range `setValues()` API では、範囲の値を設定できます。</span><span class="sxs-lookup"><span data-stu-id="c26a1-107">The `setValues()` Range API allows setting the values of a range.</span></span> <span data-ttu-id="c26a1-108">この API には、データ サイズ、ネットワーク設定など、さまざまな要因に応じてデータの制限があります。大量のデータを確実に更新するには、より小さなチャンクでデータ更新を行う方法を考える必要があります。</span><span class="sxs-lookup"><span data-stu-id="c26a1-108">This API has data limitations depending on various factors such as data size, network settings, etc. In order to reliably update a large range of data, you'll need to think about doing data updates in smaller chunks.</span></span> <span data-ttu-id="c26a1-109">このスクリプトはこれを実行し、範囲の行をチャンク単位で書き込み、大きな範囲を更新する必要がある場合は、小さな部分で行う必要があります。</span><span class="sxs-lookup"><span data-stu-id="c26a1-109">This script attempts to do this and writes rows of a range in chunks so that if a large range needs to be updated, it can be done in smaller parts.</span></span> <span data-ttu-id="c26a1-110">**警告**: さまざまなサイズでテストされていないので、スクリプトでこれを使用する場合は注意してください。</span><span class="sxs-lookup"><span data-stu-id="c26a1-110">**Warning**: It has not been tested across various sizes so be aware of that if you want to use this in your script.</span></span> <span data-ttu-id="c26a1-111">テストの機会が得たので、さまざまなデータ サイズに対するパフォーマンスに関する結果を更新します。</span><span class="sxs-lookup"><span data-stu-id="c26a1-111">As we have opportunity to test, we'll update with findings around how it performs for various data sizes.</span></span>
+<span data-ttu-id="cebb5-109">このスクリプトは、範囲の行を小さい部分に書き込みます。</span><span class="sxs-lookup"><span data-stu-id="cebb5-109">This script writes rows of a range in smaller parts.</span></span> <span data-ttu-id="cebb5-110">一度に 1000 個のセルを選択して書き込みます。</span><span class="sxs-lookup"><span data-stu-id="cebb5-110">It selects 1000 cells to write at a time.</span></span> <span data-ttu-id="cebb5-111">空のワークシートでスクリプトを実行し、バッチの更新が実行されているのを確認します。</span><span class="sxs-lookup"><span data-stu-id="cebb5-111">Run the script on a blank worksheet to see the update batches in action.</span></span> <span data-ttu-id="cebb5-112">コンソール出力は、何が起こっているのかをさらに詳しく知ることができます。</span><span class="sxs-lookup"><span data-stu-id="cebb5-112">The console output gives further insight into what's happening.</span></span>
 
-<span data-ttu-id="c26a1-112">このスクリプトはチャンクごとに 1K セルを選択しますが、上書きして、その動作をテストできます。</span><span class="sxs-lookup"><span data-stu-id="c26a1-112">This script selects 1K cells per chunk but you can override to test out how it works for you.</span></span> <span data-ttu-id="c26a1-113">6 列のデータを含む 100k 行を更新します。</span><span class="sxs-lookup"><span data-stu-id="c26a1-113">It updates 100k rows with 6 columns of data.</span></span> <span data-ttu-id="c26a1-114">空白のシートでこれを実行して調べてください。</span><span class="sxs-lookup"><span data-stu-id="c26a1-114">Run this on a blank sheet to examine.</span></span>
+> [!NOTE]
+> <span data-ttu-id="cebb5-113">の値を変更することで、書き込まれる行の合計数を変更できます `SAMPLE_ROWS` 。</span><span class="sxs-lookup"><span data-stu-id="cebb5-113">You can change the number of total rows being written by changing the value of `SAMPLE_ROWS`.</span></span> <span data-ttu-id="cebb5-114">の値を変更することで、1 つのアクションとして書き込むセルの数を変更できます `CELLS_IN_BATCH` 。</span><span class="sxs-lookup"><span data-stu-id="cebb5-114">You can change the number of cells to write as a single action by changing the value of `CELLS_IN_BATCH`.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
+  const SAMPLE_ROWS = 100000;
+  const CELLS_IN_BATCH = 10000;
+
+  // Get the current worksheet.
   const sheet = workbook.getActiveWorksheet();
 
-  let data: (string | number | boolean)[][] = [];
-  // Number of rows in the random data (x 6 columns).
-  const sampleRows = 100000;
-
   console.log(`Generating data...`)
-  // Dynamically generate some random data for testing purpose. 
-  for (let i = 0; i < sampleRows; i++) {
+  let data: (string | number | boolean)[][] = [];
+  // Generate six columns of random data per row. 
+  for (let i = 0; i < SAMPLE_ROWS; i++) {
     data.push([i, ...[getRandomString(5), getRandomString(20), getRandomString(10), Math.random()], "Sample data"]);
   }
 
   console.log(`Calling update range function...`);
-  const updated = updateRangeInChunks(sheet.getRange("B2"), data);
+  const updated = updateRangeInBatches(sheet.getRange("B2"), data, CELLS_IN_BATCH);
   if (!updated) {
     console.log(`Update did not take place or complete. Check and run again.`);
   }
 }
 
-function updateRangeInChunks(
+function updateRangeInBatches(
   startCell: ExcelScript.Range,
   values: (string | boolean | number)[][],
-  cellsInChunk: number = 10000
+  cellsInBatch: number
 ): boolean {
 
   const startTime = new Date().getTime();
-  console.log(`Cells per chunk setting: ${cellsInChunk}`);
-  if (!values) {
-    console.log(`Invalid input values to update.`);
-    return false;
-  }
-  if (values.length === 0 || values[0].length === 0) {
-    console.log(`Empty data -- nothing to update.`);
-    return true;
-  }
-  const totalCells = values.length * values[0].length;
+  console.log(`Cells per batch setting: ${cellsInBatch}`);
 
+  // Determine the total number of cells to write.
+  const totalCells = values.length * values[0].length;
   console.log(`Total cells to update in the target range: ${totalCells}`);
-  if (totalCells <= cellsInChunk) {
-    console.log(`No need to chunk -- updating directly`);
+  if (totalCells <= cellsInBatch) {
+    console.log(`No need to batch -- updating directly`);
     updateTargetRange(startCell, values);
     return true;
   }
 
-  const rowsPerChunk = Math.floor(cellsInChunk / values[0].length);
-  console.log("Rows per chunk: " + rowsPerChunk);
+  // Determine how many rows to write at once.
+  const rowsPerBatch = Math.floor(cellsInBatch / values[0].length);
+  console.log("Rows per batch: " + rowsPerBatch);
   let rowCount = 0;
   let totalRowsUpdated = 0;
-  let chunkCount = 0;
+  let batchCount = 0;
 
+  // Write each batch of rows.
   for (let i = 0; i < values.length; i++) {
     rowCount++;
-    if (rowCount === rowsPerChunk) {
-      chunkCount++;
-      console.log(`Calling update next chunk function. Chunk#: ${chunkCount}`);
-      updateNextChunk(startCell, values, rowsPerChunk, totalRowsUpdated);
-      rowCount = 0;
-      totalRowsUpdated += rowsPerChunk;
-      console.log(`${((totalRowsUpdated / values.length) * 100).toFixed(1)}% Done`);
+    if (rowCount === rowsPerBatch) {
+      batchCount++;
+      console.log(`Calling update next batch function. Batch#: ${batchCount}`);
+      updateNextBatch(startCell, values, rowsPerBatch, totalRowsUpdated);
 
+      // Write a completion percentage to help the user understand the progress.
+      rowCount = 0;
+      totalRowsUpdated += rowsPerBatch;
+      console.log(`${((totalRowsUpdated / values.length) * 100).toFixed(1)}% Done`);
     }
   }
-  console.log(`Updating remaining rows -- last chunk: ${rowCount}`)
+  
+  console.log(`Updating remaining rows -- last batch: ${rowCount}`)
   if (rowCount > 0) {
-    updateNextChunk(startCell, values, rowCount, totalRowsUpdated);
+    updateNextBatch(startCell, values, rowCount, totalRowsUpdated);
   }
 
   let endTime = new Date().getTime();
-  console.log(`Completed ${totalCells} cells update. It took: ${((endTime - startTime) / 1000).toFixed(6)} seconds to complete. ${((((endTime  - startTime) / 1000)) / cellsInChunk).toFixed(8)} seconds per ${cellsInChunk} cells-chunk.`);
+  console.log(`Completed ${totalCells} cells update. It took: ${((endTime - startTime) / 1000).toFixed(6)} seconds to complete. ${((((endTime  - startTime) / 1000)) / cellsInBatch).toFixed(8)} seconds per ${cellsInBatch} cells-batch.`);
 
   return true;
 }
@@ -100,22 +99,20 @@ function updateRangeInChunks(
 /**
  * A helper function that computes the target range and updates. 
  */
-
-function updateNextChunk(
+function updateNextBatch(
   startingCell: ExcelScript.Range,
   data: (string | boolean | number)[][],
-  rowsPerChunk: number,
+  rowsPerBatch: number,
   totalRowsUpdated: number
 ) {
-
   const newStartCell = startingCell.getOffsetRange(totalRowsUpdated, 0);
-  const targetRange = newStartCell.getResizedRange(rowsPerChunk - 1, data[0].length - 1);
-  console.log(`Updating chunk at range ${targetRange.getAddress()}`);
-  const dataToUpdate = data.slice(totalRowsUpdated, totalRowsUpdated + rowsPerChunk);
+  const targetRange = newStartCell.getResizedRange(rowsPerBatch - 1, data[0].length - 1);
+  console.log(`Updating batch at range ${targetRange.getAddress()}`);
+  const dataToUpdate = data.slice(totalRowsUpdated, totalRowsUpdated + rowsPerBatch);
   try {
     targetRange.setValues(dataToUpdate);
   } catch (e) {
-    throw `Error while updating the chunk range: ${JSON.stringify(e)}`;
+    throw `Error while updating the batch range: ${JSON.stringify(e)}`;
   }
   return;
 }
@@ -149,6 +146,6 @@ function getRandomString(length: number): string {
 }
 ```
 
-## <a name="training-video-optimize-performance-when-writing-a-large-dataset"></a><span data-ttu-id="c26a1-115">トレーニング ビデオ: 大規模なデータセットを記述するときにパフォーマンスを最適化する</span><span class="sxs-lookup"><span data-stu-id="c26a1-115">Training video: Optimize performance when writing a large dataset</span></span>
+## <a name="training-video-write-a-large-dataset"></a><span data-ttu-id="cebb5-115">トレーニング ビデオ: 大規模なデータセットを記述する</span><span class="sxs-lookup"><span data-stu-id="cebb5-115">Training video: Write a large dataset</span></span>
 
-<span data-ttu-id="c26a1-116">[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/BP9Kp0Ltj7U).</span><span class="sxs-lookup"><span data-stu-id="c26a1-116">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/BP9Kp0Ltj7U).</span></span>
+<span data-ttu-id="cebb5-116">[スーディ・ラマムルティがこのサンプルをYouTubeで歩くのを見てください](https://youtu.be/BP9Kp0Ltj7U)。</span><span class="sxs-lookup"><span data-stu-id="cebb5-116">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/BP9Kp0Ltj7U).</span></span>
