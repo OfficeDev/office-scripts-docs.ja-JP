@@ -1,6 +1,6 @@
 ---
-title: 大規模なデータセットを記述する
-description: Office スクリプトで、大きなデータセットを小さな書き込み操作に分割する方法について説明します。
+title: 大規模データセットを書き込む
+description: 大規模なデータセットをスクリプト内の小さな書き込み操作に分割するOfficeします。
 ms.date: 05/13/2021
 localization_priority: Normal
 ms.openlocfilehash: 06abb58c61c18620d638ab3eb61ea68398bf20aa
@@ -10,18 +10,18 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52545624"
 ---
-# <a name="write-a-large-dataset"></a><span data-ttu-id="cebb5-103">大規模なデータセットを記述する</span><span class="sxs-lookup"><span data-stu-id="cebb5-103">Write a large dataset</span></span>
+# <a name="write-a-large-dataset"></a><span data-ttu-id="b4f21-103">大規模データセットを書き込む</span><span class="sxs-lookup"><span data-stu-id="b4f21-103">Write a large dataset</span></span>
 
-<span data-ttu-id="cebb5-104">`Range.setValues()`API は、データを範囲に配置します。</span><span class="sxs-lookup"><span data-stu-id="cebb5-104">The `Range.setValues()` API puts data in a range.</span></span> <span data-ttu-id="cebb5-105">この API には、データ サイズやネットワーク設定など、さまざまな要因によって制限があります。</span><span class="sxs-lookup"><span data-stu-id="cebb5-105">This API has limitations depending on various factors, such as data size and network settings.</span></span> <span data-ttu-id="cebb5-106">つまり、大量の情報を 1 回の操作でブックに書き込もうとすると、 [大きな範囲](../../testing/platform-limits.md)を確実に更新するために、より小さなバッチでデータを書き込む必要があります。</span><span class="sxs-lookup"><span data-stu-id="cebb5-106">This means that if you attempt to write a massive amount of information to a workbook as a single operation, you'll need to write the data in smaller batches in order to reliably update a [large range](../../testing/platform-limits.md).</span></span>
+<span data-ttu-id="b4f21-104">API `Range.setValues()` は、データを範囲に入れる。</span><span class="sxs-lookup"><span data-stu-id="b4f21-104">The `Range.setValues()` API puts data in a range.</span></span> <span data-ttu-id="b4f21-105">この API には、データ サイズやネットワーク設定など、さまざまな要因に応じて制限があります。</span><span class="sxs-lookup"><span data-stu-id="b4f21-105">This API has limitations depending on various factors, such as data size and network settings.</span></span> <span data-ttu-id="b4f21-106">つまり、大量の情報を 1 つの操作としてブックに書き込もうとすると、大きな範囲を確実に更新するために、より小さなバッチでデータを書き込む必要 [があります](../../testing/platform-limits.md)。</span><span class="sxs-lookup"><span data-stu-id="b4f21-106">This means that if you attempt to write a massive amount of information to a workbook as a single operation, you'll need to write the data in smaller batches in order to reliably update a [large range](../../testing/platform-limits.md).</span></span>
 
-<span data-ttu-id="cebb5-107">Officeスクリプトのパフォーマンスの基本については、 [Office スクリプトのパフォーマンスを向上させるを](../../develop/web-client-performance.md)参照してください。</span><span class="sxs-lookup"><span data-stu-id="cebb5-107">For performance basics in Office Scripts, please read [Improve the performance of your Office Scripts](../../develop/web-client-performance.md).</span></span>
+<span data-ttu-id="b4f21-107">スクリプトのパフォーマンスの基本については、「Office スクリプトのパフォーマンスの向上[」をOfficeしてください](../../develop/web-client-performance.md)。</span><span class="sxs-lookup"><span data-stu-id="b4f21-107">For performance basics in Office Scripts, please read [Improve the performance of your Office Scripts](../../develop/web-client-performance.md).</span></span>
 
-## <a name="sample-code-write-a-large-dataset"></a><span data-ttu-id="cebb5-108">サンプル コード: 大規模なデータセットを記述する</span><span class="sxs-lookup"><span data-stu-id="cebb5-108">Sample code: Write a large dataset</span></span>
+## <a name="sample-code-write-a-large-dataset"></a><span data-ttu-id="b4f21-108">サンプル コード: 大きなデータセットを記述する</span><span class="sxs-lookup"><span data-stu-id="b4f21-108">Sample code: Write a large dataset</span></span>
 
-<span data-ttu-id="cebb5-109">このスクリプトは、範囲の行を小さい部分に書き込みます。</span><span class="sxs-lookup"><span data-stu-id="cebb5-109">This script writes rows of a range in smaller parts.</span></span> <span data-ttu-id="cebb5-110">一度に 1000 個のセルを選択して書き込みます。</span><span class="sxs-lookup"><span data-stu-id="cebb5-110">It selects 1000 cells to write at a time.</span></span> <span data-ttu-id="cebb5-111">空のワークシートでスクリプトを実行し、バッチの更新が実行されているのを確認します。</span><span class="sxs-lookup"><span data-stu-id="cebb5-111">Run the script on a blank worksheet to see the update batches in action.</span></span> <span data-ttu-id="cebb5-112">コンソール出力は、何が起こっているのかをさらに詳しく知ることができます。</span><span class="sxs-lookup"><span data-stu-id="cebb5-112">The console output gives further insight into what's happening.</span></span>
+<span data-ttu-id="b4f21-109">このスクリプトは、範囲の行を小さい部分に書き込みます。</span><span class="sxs-lookup"><span data-stu-id="b4f21-109">This script writes rows of a range in smaller parts.</span></span> <span data-ttu-id="b4f21-110">一度に書き込む 1000 セルを選択します。</span><span class="sxs-lookup"><span data-stu-id="b4f21-110">It selects 1000 cells to write at a time.</span></span> <span data-ttu-id="b4f21-111">空白のワークシートでスクリプトを実行して、更新バッチの動作を確認します。</span><span class="sxs-lookup"><span data-stu-id="b4f21-111">Run the script on a blank worksheet to see the update batches in action.</span></span> <span data-ttu-id="b4f21-112">コンソール出力は、何が起こっているかについてさらに詳しい情報を提供します。</span><span class="sxs-lookup"><span data-stu-id="b4f21-112">The console output gives further insight into what's happening.</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="cebb5-113">の値を変更することで、書き込まれる行の合計数を変更できます `SAMPLE_ROWS` 。</span><span class="sxs-lookup"><span data-stu-id="cebb5-113">You can change the number of total rows being written by changing the value of `SAMPLE_ROWS`.</span></span> <span data-ttu-id="cebb5-114">の値を変更することで、1 つのアクションとして書き込むセルの数を変更できます `CELLS_IN_BATCH` 。</span><span class="sxs-lookup"><span data-stu-id="cebb5-114">You can change the number of cells to write as a single action by changing the value of `CELLS_IN_BATCH`.</span></span>
+> <span data-ttu-id="b4f21-113">の値を変更すると、書き込まれる行の総数を変更できます `SAMPLE_ROWS` 。</span><span class="sxs-lookup"><span data-stu-id="b4f21-113">You can change the number of total rows being written by changing the value of `SAMPLE_ROWS`.</span></span> <span data-ttu-id="b4f21-114">の値を変更することで、1 つのアクションとして書き込むセルの数を変更できます `CELLS_IN_BATCH` 。</span><span class="sxs-lookup"><span data-stu-id="b4f21-114">You can change the number of cells to write as a single action by changing the value of `CELLS_IN_BATCH`.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -146,6 +146,6 @@ function getRandomString(length: number): string {
 }
 ```
 
-## <a name="training-video-write-a-large-dataset"></a><span data-ttu-id="cebb5-115">トレーニング ビデオ: 大規模なデータセットを記述する</span><span class="sxs-lookup"><span data-stu-id="cebb5-115">Training video: Write a large dataset</span></span>
+## <a name="training-video-write-a-large-dataset"></a><span data-ttu-id="b4f21-115">トレーニング ビデオ: 大きなデータセットを記述する</span><span class="sxs-lookup"><span data-stu-id="b4f21-115">Training video: Write a large dataset</span></span>
 
-<span data-ttu-id="cebb5-116">[スーディ・ラマムルティがこのサンプルをYouTubeで歩くのを見てください](https://youtu.be/BP9Kp0Ltj7U)。</span><span class="sxs-lookup"><span data-stu-id="cebb5-116">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/BP9Kp0Ltj7U).</span></span>
+<span data-ttu-id="b4f21-116">[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/BP9Kp0Ltj7U).</span><span class="sxs-lookup"><span data-stu-id="b4f21-116">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/BP9Kp0Ltj7U).</span></span>

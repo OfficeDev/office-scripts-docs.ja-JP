@@ -1,6 +1,6 @@
 ---
-title: Excelのグラフと表の画像を電子メールで送信する
-description: OfficeスクリプトとPower Automateを使用して、Excelのグラフと表の画像を抽出して電子メールで送信する方法について説明します。
+title: グラフと表の画像Excelメールで送信する
+description: '[スクリプト] と [Office] Power Automateを使用して、グラフと表の画像Excelメールを送信する方法について学習します。'
 ms.date: 05/06/2021
 localization_priority: Normal
 ms.openlocfilehash: 54b6b67a0f211f2dc6c881bab17ff23220619e6e
@@ -10,41 +10,41 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52545778"
 ---
-# <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a><span data-ttu-id="5a6c2-103">OfficeスクリプトとPower Automateを使用して、チャートとテーブルの画像を電子メールで送信する</span><span class="sxs-lookup"><span data-stu-id="5a6c2-103">Use Office Scripts and Power Automate to email images of a chart and table</span></span>
+# <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a><span data-ttu-id="505ce-103">グラフOfficeの画像をPower Automateする場合は、スクリプトとスクリプトを使用してメールを送信します。</span><span class="sxs-lookup"><span data-stu-id="505ce-103">Use Office Scripts and Power Automate to email images of a chart and table</span></span>
 
-<span data-ttu-id="5a6c2-104">このサンプルでは、Office スクリプトとPower Automateを使用してグラフを作成します。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-104">This sample uses Office Scripts and Power Automate to create a chart.</span></span> <span data-ttu-id="5a6c2-105">次に、チャートとそのベーステーブルの画像を電子メールで送信します。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-105">It then emails images of the chart and its base table.</span></span>
+<span data-ttu-id="505ce-104">このサンプルでは、OfficeスクリプトとPower Automateを使用してグラフを作成します。</span><span class="sxs-lookup"><span data-stu-id="505ce-104">This sample uses Office Scripts and Power Automate to create a chart.</span></span> <span data-ttu-id="505ce-105">次に、グラフとその基本テーブルの画像を電子メールで送信します。</span><span class="sxs-lookup"><span data-stu-id="505ce-105">It then emails images of the chart and its base table.</span></span>
 
-## <a name="example-scenario"></a><span data-ttu-id="5a6c2-106">シナリオ例</span><span class="sxs-lookup"><span data-stu-id="5a6c2-106">Example scenario</span></span>
+## <a name="example-scenario"></a><span data-ttu-id="505ce-106">シナリオ例</span><span class="sxs-lookup"><span data-stu-id="505ce-106">Example scenario</span></span>
 
-* <span data-ttu-id="5a6c2-107">計算して最新の結果を得る。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-107">Calculate to get latest results.</span></span>
-* <span data-ttu-id="5a6c2-108">グラフを作成します。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-108">Create chart.</span></span>
-* <span data-ttu-id="5a6c2-109">チャートとテーブルの画像を取得します。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-109">Get chart and table images.</span></span>
-* <span data-ttu-id="5a6c2-110">Power Automateで画像を電子メールで送信します。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-110">Email the images with Power Automate.</span></span>
+* <span data-ttu-id="505ce-107">最新の結果を取得するために計算します。</span><span class="sxs-lookup"><span data-stu-id="505ce-107">Calculate to get latest results.</span></span>
+* <span data-ttu-id="505ce-108">グラフを作成します。</span><span class="sxs-lookup"><span data-stu-id="505ce-108">Create chart.</span></span>
+* <span data-ttu-id="505ce-109">グラフと表の画像を取得します。</span><span class="sxs-lookup"><span data-stu-id="505ce-109">Get chart and table images.</span></span>
+* <span data-ttu-id="505ce-110">画像にメールを送信Power Automate。</span><span class="sxs-lookup"><span data-stu-id="505ce-110">Email the images with Power Automate.</span></span>
 
-<span data-ttu-id="5a6c2-111">_入力データ_</span><span class="sxs-lookup"><span data-stu-id="5a6c2-111">_Input data_</span></span>
+<span data-ttu-id="505ce-111">_入力データ_</span><span class="sxs-lookup"><span data-stu-id="505ce-111">_Input data_</span></span>
 
-:::image type="content" source="../../images/input-data.png" alt-text="入力データのテーブルを示すワークシート":::
+:::image type="content" source="../../images/input-data.png" alt-text="入力データの表を示すワークシート":::
 
-<span data-ttu-id="5a6c2-113">_出力チャート_</span><span class="sxs-lookup"><span data-stu-id="5a6c2-113">_Output chart_</span></span>
+<span data-ttu-id="505ce-113">_出力グラフ_</span><span class="sxs-lookup"><span data-stu-id="505ce-113">_Output chart_</span></span>
 
-:::image type="content" source="../../images/chart-created.png" alt-text="顧客別の支払額を示して作成された縦棒グラフ":::
+:::image type="content" source="../../images/chart-created.png" alt-text="顧客による支払い金額を示す作成された列グラフ":::
 
-<span data-ttu-id="5a6c2-115">_Power Automateフローを通じて受信された電子メール_</span><span class="sxs-lookup"><span data-stu-id="5a6c2-115">_Email that was received through Power Automate flow_</span></span>
+<span data-ttu-id="505ce-115">_メール フローを通じて受信Power Automateメール_</span><span class="sxs-lookup"><span data-stu-id="505ce-115">_Email that was received through Power Automate flow_</span></span>
 
-:::image type="content" source="../../images/email-received.png" alt-text="本文に埋め込まれたExcelチャートを示すフローによって送信された電子メール":::
+:::image type="content" source="../../images/email-received.png" alt-text="本文に埋め込まれたグラフのExcelによって送信される電子メール":::
 
-## <a name="solution"></a><span data-ttu-id="5a6c2-117">ソリューション</span><span class="sxs-lookup"><span data-stu-id="5a6c2-117">Solution</span></span>
+## <a name="solution"></a><span data-ttu-id="505ce-117">ソリューション</span><span class="sxs-lookup"><span data-stu-id="505ce-117">Solution</span></span>
 
-<span data-ttu-id="5a6c2-118">このソリューションには、次の 2 つの部分があります。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-118">This solution has two parts:</span></span>
+<span data-ttu-id="505ce-118">このソリューションには、次の 2 つの部分があります。</span><span class="sxs-lookup"><span data-stu-id="505ce-118">This solution has two parts:</span></span>
 
-1. [<span data-ttu-id="5a6c2-119">グラフと表を計算して抽出Excel Officeスクリプト</span><span class="sxs-lookup"><span data-stu-id="5a6c2-119">An Office Script to calculate and extract Excel chart and table</span></span>](#sample-code-calculate-and-extract-excel-chart-and-table)
-1. <span data-ttu-id="5a6c2-120">スクリプトを呼び出して結果を電子メールで送信するPower Automateフロー。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-120">A Power Automate flow to invoke the script and email the results.</span></span> <span data-ttu-id="5a6c2-121">この方法の例については、「 [Power Automate を使用した自動化ワークフローの作成](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)」を参照してください。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-121">For an example on how to do this, see [Create an automated workflow with Power Automate](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate).</span></span>
+1. [<span data-ttu-id="505ce-119">グラフOfficeテーブルを計算して抽出するExcelスクリプト</span><span class="sxs-lookup"><span data-stu-id="505ce-119">An Office Script to calculate and extract Excel chart and table</span></span>](#sample-code-calculate-and-extract-excel-chart-and-table)
+1. <span data-ttu-id="505ce-120">スクリプトPower Automate結果を電子メールで送信するフローを示します。</span><span class="sxs-lookup"><span data-stu-id="505ce-120">A Power Automate flow to invoke the script and email the results.</span></span> <span data-ttu-id="505ce-121">これを行う方法の例については、「自動ワークフローを作成[する」を参照Power Automate。](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)</span><span class="sxs-lookup"><span data-stu-id="505ce-121">For an example on how to do this, see [Create an automated workflow with Power Automate](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate).</span></span>
 
-## <a name="sample-code-calculate-and-extract-excel-chart-and-table"></a><span data-ttu-id="5a6c2-122">サンプル コード: グラフとテーブルExcel計算および抽出</span><span class="sxs-lookup"><span data-stu-id="5a6c2-122">Sample code: Calculate and extract Excel chart and table</span></span>
+## <a name="sample-code-calculate-and-extract-excel-chart-and-table"></a><span data-ttu-id="505ce-122">サンプル コード: グラフと表のExcel抽出する</span><span class="sxs-lookup"><span data-stu-id="505ce-122">Sample code: Calculate and extract Excel chart and table</span></span>
 
-<span data-ttu-id="5a6c2-123">次のスクリプトは、Excelのグラフと表を計算して抽出します。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-123">The following script calculates and extracts an Excel chart and table.</span></span>
+<span data-ttu-id="505ce-123">次のスクリプトは、グラフと表のExcel抽出します。</span><span class="sxs-lookup"><span data-stu-id="505ce-123">The following script calculates and extracts an Excel chart and table.</span></span>
 
-<span data-ttu-id="5a6c2-124">サンプルファイル <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> をダウンロードし、このスクリプトで使用して自分で試してみてください!</span><span class="sxs-lookup"><span data-stu-id="5a6c2-124">Download the sample file <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> and use it with this script to try it out yourself!</span></span>
+<span data-ttu-id="505ce-124">サンプル ファイルをダウンロード <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> このスクリプトで使用して、自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="505ce-124">Download the sample file <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> and use it with this script to try it out yourself!</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReportImages {
@@ -89,23 +89,23 @@ interface ReportImages {
 }
 ```
 
-## <a name="power-automate-flow-email-the-chart-and-table-images"></a><span data-ttu-id="5a6c2-125">Power Automateフロー: チャートとテーブルの画像を電子メールで送信する</span><span class="sxs-lookup"><span data-stu-id="5a6c2-125">Power Automate flow: Email the chart and table images</span></span>
+## <a name="power-automate-flow-email-the-chart-and-table-images"></a><span data-ttu-id="505ce-125">Power Automateフロー: グラフと表の画像をメールで送信する</span><span class="sxs-lookup"><span data-stu-id="505ce-125">Power Automate flow: Email the chart and table images</span></span>
 
-<span data-ttu-id="5a6c2-126">このフローはスクリプトを実行し、返された画像を電子メールで送信します。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-126">This flow runs the script and emails the returned images.</span></span>
+<span data-ttu-id="505ce-126">このフローはスクリプトを実行し、返された画像を電子メールで送信します。</span><span class="sxs-lookup"><span data-stu-id="505ce-126">This flow runs the script and emails the returned images.</span></span>
 
-1. <span data-ttu-id="5a6c2-127">新しい **インスタント クラウド フロー** を作成する :</span><span class="sxs-lookup"><span data-stu-id="5a6c2-127">Create a new **Instant cloud flow**.</span></span>
-1. <span data-ttu-id="5a6c2-128">[ **フローを手動でトリガーする] を** 選択し、[ **作成]** を押します。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-128">Select **Manually trigger a flow** and press **Create**.</span></span>
-1. <span data-ttu-id="5a6c2-129">**[スクリプトの実行**] アクションで **、オンライン (ビジネス)** コネクタExcelを使用する **新しいステップ** を追加します。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-129">Add a **New step** that uses the **Excel Online (Business)** connector with the **Run script** action.</span></span> <span data-ttu-id="5a6c2-130">アクションには次の値を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-130">Use the following values for the action:</span></span>
-    * <span data-ttu-id="5a6c2-131">**場所**: OneDrive for Business</span><span class="sxs-lookup"><span data-stu-id="5a6c2-131">**Location**: OneDrive for Business</span></span>
-    * <span data-ttu-id="5a6c2-132">**ドキュメント ライブラリ**: OneDrive</span><span class="sxs-lookup"><span data-stu-id="5a6c2-132">**Document Library**: OneDrive</span></span>
-    * <span data-ttu-id="5a6c2-133">**ファイル**: ワークブック ([ファイル選択で選択 )](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)</span><span class="sxs-lookup"><span data-stu-id="5a6c2-133">**File**: Your workbook ([selected with the file chooser](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control))</span></span>
-    * <span data-ttu-id="5a6c2-134">**スクリプト**: スクリプト名</span><span class="sxs-lookup"><span data-stu-id="5a6c2-134">**Script**: Your script name</span></span>
+1. <span data-ttu-id="505ce-127">新しいインスタント クラウド **フローを作成します**。</span><span class="sxs-lookup"><span data-stu-id="505ce-127">Create a new **Instant cloud flow**.</span></span>
+1. <span data-ttu-id="505ce-128">[フロー **を手動でトリガーする] を選択し** 、[作成] を **押します**。</span><span class="sxs-lookup"><span data-stu-id="505ce-128">Select **Manually trigger a flow** and press **Create**.</span></span>
+1. <span data-ttu-id="505ce-129">[スクリプト **の実行]** アクションを使用して、Excel **(Business)** コネクタを使用する新しい **手順を追加** します。</span><span class="sxs-lookup"><span data-stu-id="505ce-129">Add a **New step** that uses the **Excel Online (Business)** connector with the **Run script** action.</span></span> <span data-ttu-id="505ce-130">アクションには、次の値を使用します。</span><span class="sxs-lookup"><span data-stu-id="505ce-130">Use the following values for the action:</span></span>
+    * <span data-ttu-id="505ce-131">**場所**: OneDrive for Business</span><span class="sxs-lookup"><span data-stu-id="505ce-131">**Location**: OneDrive for Business</span></span>
+    * <span data-ttu-id="505ce-132">**ドキュメント ライブラリ**: OneDrive</span><span class="sxs-lookup"><span data-stu-id="505ce-132">**Document Library**: OneDrive</span></span>
+    * <span data-ttu-id="505ce-133">**ファイル**: ブック ([ファイル選択ウィンドウで選択)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)</span><span class="sxs-lookup"><span data-stu-id="505ce-133">**File**: Your workbook ([selected with the file chooser](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control))</span></span>
+    * <span data-ttu-id="505ce-134">**スクリプト**: スクリプト名</span><span class="sxs-lookup"><span data-stu-id="505ce-134">**Script**: Your script name</span></span>
 
-    :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="Power Automateの完了Excelオンライン (ビジネス) コネクタ":::
-1. <span data-ttu-id="5a6c2-136">このサンプルでは、電子メール クライアントとしてOutlookを使用します。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-136">This sample uses Outlook as the email client.</span></span> <span data-ttu-id="5a6c2-137">サポートする任意の電子メール コネクタPower Automateを使用できますが、残りの手順では、Outlook選択したと想定しています。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-137">You could use any email connector Power Automate supports, but the rest of the steps assume that you chose Outlook.</span></span> <span data-ttu-id="5a6c2-138">**Office 365 Outlook** コネクタと **送信と電子メール (V2)** アクションを使用する **新しい手順** を追加します。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-138">Add a **New step** that uses the **Office 365 Outlook** connector and the **Send and email (V2)** action.</span></span> <span data-ttu-id="5a6c2-139">アクションには次の値を使用します。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-139">Use the following values for the action:</span></span>
-    * <span data-ttu-id="5a6c2-140">**To**: テスト用の電子メール アカウント (または個人用メール)</span><span class="sxs-lookup"><span data-stu-id="5a6c2-140">**To**: Your test email account (or personal email)</span></span>
-    * <span data-ttu-id="5a6c2-141">**件名**: レポートデータを確認してください</span><span class="sxs-lookup"><span data-stu-id="5a6c2-141">**Subject**: Please Review Report Data</span></span>
-    * <span data-ttu-id="5a6c2-142">[ **本文** ] フィールドで 、[コード ビュー] ( `</>` ) を選択し、次のように入力します。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-142">For the **Body** field, select "Code View" (`</>`) and enter the following:</span></span>
+    :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="オンライン (Excel) コネクタの完成Power Automate":::
+1. <span data-ttu-id="505ce-136">このサンプルでは、Outlookクライアントとして使用します。</span><span class="sxs-lookup"><span data-stu-id="505ce-136">This sample uses Outlook as the email client.</span></span> <span data-ttu-id="505ce-137">サポートされている任意の電子メール コネクタPower Automate使用できますが、残りの手順では、メール コネクタを選択Outlook。</span><span class="sxs-lookup"><span data-stu-id="505ce-137">You could use any email connector Power Automate supports, but the rest of the steps assume that you chose Outlook.</span></span> <span data-ttu-id="505ce-138">新しい **手順を追加** して、Office 365 Outlook **および電子** メール **(V2) アクションを使用** します。</span><span class="sxs-lookup"><span data-stu-id="505ce-138">Add a **New step** that uses the **Office 365 Outlook** connector and the **Send and email (V2)** action.</span></span> <span data-ttu-id="505ce-139">アクションには、次の値を使用します。</span><span class="sxs-lookup"><span data-stu-id="505ce-139">Use the following values for the action:</span></span>
+    * <span data-ttu-id="505ce-140">**To**: テスト用メール アカウント (または個人用メール)</span><span class="sxs-lookup"><span data-stu-id="505ce-140">**To**: Your test email account (or personal email)</span></span>
+    * <span data-ttu-id="505ce-141">**件名**: レポート データを確認してください</span><span class="sxs-lookup"><span data-stu-id="505ce-141">**Subject**: Please Review Report Data</span></span>
+    * <span data-ttu-id="505ce-142">[本文 **] フィールドで** 、[コード ビュー] ( ) を選択 `</>` し、次の値を入力します。</span><span class="sxs-lookup"><span data-stu-id="505ce-142">For the **Body** field, select "Code View" (`</>`) and enter the following:</span></span>
 
     ```HTML
     <p>Please review the following report data:<br>
@@ -121,9 +121,9 @@ interface ReportImages {
     </p>
     ```
 
-    :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="Power Automateの完成したOffice 365 Outlook コネクタ":::
-1. <span data-ttu-id="5a6c2-144">フローを保存し、それを試してみてください。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-144">Save the flow and try it out.</span></span>
+    :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="Office 365 OutlookでPower Automate":::
+1. <span data-ttu-id="505ce-144">フローを保存し、試してみてください。</span><span class="sxs-lookup"><span data-stu-id="505ce-144">Save the flow and try it out.</span></span>
 
-## <a name="training-video-extract-and-email-images-of-chart-and-table"></a><span data-ttu-id="5a6c2-145">トレーニングビデオ:チャートとテーブルの画像を抽出して電子メールで送信する</span><span class="sxs-lookup"><span data-stu-id="5a6c2-145">Training video: Extract and email images of chart and table</span></span>
+## <a name="training-video-extract-and-email-images-of-chart-and-table"></a><span data-ttu-id="505ce-145">トレーニング ビデオ: グラフとテーブルの画像を抽出して電子メールで送信する</span><span class="sxs-lookup"><span data-stu-id="505ce-145">Training video: Extract and email images of chart and table</span></span>
 
-<span data-ttu-id="5a6c2-146">[スーディ・ラマムルティがこのサンプルをYouTubeで歩くのを見てください](https://youtu.be/152GJyqc-Kw)。</span><span class="sxs-lookup"><span data-stu-id="5a6c2-146">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/152GJyqc-Kw).</span></span>
+<span data-ttu-id="505ce-146">[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/152GJyqc-Kw).</span><span class="sxs-lookup"><span data-stu-id="505ce-146">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/152GJyqc-Kw).</span></span>
