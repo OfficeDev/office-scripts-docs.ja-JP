@@ -1,6 +1,6 @@
 ---
-title: 大規模なデータセットを記述する
-description: Office スクリプトで、大きなデータセットを小さな書き込み操作に分割する方法について説明します。
+title: 大規模データセットを書き込む
+description: 大規模なデータセットをスクリプト内の小さな書き込み操作に分割するOfficeします。
 ms.date: 05/13/2021
 localization_priority: Normal
 ms.openlocfilehash: 06abb58c61c18620d638ab3eb61ea68398bf20aa
@@ -10,18 +10,18 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52545624"
 ---
-# <a name="write-a-large-dataset"></a>大規模なデータセットを記述する
+# <a name="write-a-large-dataset"></a>大規模データセットを書き込む
 
-`Range.setValues()`API は、データを範囲に配置します。 この API には、データ サイズやネットワーク設定など、さまざまな要因によって制限があります。 つまり、大量の情報を 1 回の操作でブックに書き込もうとすると、 [大きな範囲](../../testing/platform-limits.md)を確実に更新するために、より小さなバッチでデータを書き込む必要があります。
+API `Range.setValues()` は、データを範囲に入れる。 この API には、データ サイズやネットワーク設定など、さまざまな要因に応じて制限があります。 つまり、大量の情報を 1 つの操作としてブックに書き込もうとすると、大きな範囲を確実に更新するために、より小さなバッチでデータを書き込む必要 [があります](../../testing/platform-limits.md)。
 
-Officeスクリプトのパフォーマンスの基本については、 [Office スクリプトのパフォーマンスを向上させるを](../../develop/web-client-performance.md)参照してください。
+スクリプトのパフォーマンスの基本については、「Office スクリプトのパフォーマンスの向上[」をOfficeしてください](../../develop/web-client-performance.md)。
 
-## <a name="sample-code-write-a-large-dataset"></a>サンプル コード: 大規模なデータセットを記述する
+## <a name="sample-code-write-a-large-dataset"></a>サンプル コード: 大きなデータセットを記述する
 
-このスクリプトは、範囲の行を小さい部分に書き込みます。 一度に 1000 個のセルを選択して書き込みます。 空のワークシートでスクリプトを実行し、バッチの更新が実行されているのを確認します。 コンソール出力は、何が起こっているのかをさらに詳しく知ることができます。
+このスクリプトは、範囲の行を小さい部分に書き込みます。 一度に書き込む 1000 セルを選択します。 空白のワークシートでスクリプトを実行して、更新バッチの動作を確認します。 コンソール出力は、何が起こっているかについてさらに詳しい情報を提供します。
 
 > [!NOTE]
-> の値を変更することで、書き込まれる行の合計数を変更できます `SAMPLE_ROWS` 。 の値を変更することで、1 つのアクションとして書き込むセルの数を変更できます `CELLS_IN_BATCH` 。
+> の値を変更すると、書き込まれる行の総数を変更できます `SAMPLE_ROWS` 。 の値を変更することで、1 つのアクションとして書き込むセルの数を変更できます `CELLS_IN_BATCH` 。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -146,6 +146,6 @@ function getRandomString(length: number): string {
 }
 ```
 
-## <a name="training-video-write-a-large-dataset"></a>トレーニング ビデオ: 大規模なデータセットを記述する
+## <a name="training-video-write-a-large-dataset"></a>トレーニング ビデオ: 大きなデータセットを記述する
 
-[スーディ・ラマムルティがこのサンプルをYouTubeで歩くのを見てください](https://youtu.be/BP9Kp0Ltj7U)。
+[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/BP9Kp0Ltj7U).

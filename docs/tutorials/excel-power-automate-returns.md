@@ -3,14 +3,14 @@ title: 自動で実行される Power Automate フローにスクリプトから
 description: Power Automate を使用して Excel on the web 用の Office スクリプトを実行してリマインダー メールを送信する方法を示すチュートリアル。
 ms.date: 12/15/2020
 localization_priority: Priority
-ms.openlocfilehash: 54fcfc773d4d2a8d352f7bd22593ac817e7ded0e
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: e7f1051076bf84cfbbec0fcdd72777766dbcf152
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232880"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545007"
 ---
-# <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow-preview"></a>自動で実行される Power Automate フローにスクリプトからデータを返す (プレビュー)
+# <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow"></a>自動で実行される Power Automate フローにスクリプトからデータを返す
 
 このチュートリアルでは、自動化された [Power Automate](https://flow.microsoft.com) ワークフローの一部として、Excel on the web 用の Office スクリプトから情報を返す方法について説明します。 スケジュールを確認し、フローに従ってリマインダー メールを送信するスクリプトを作成します。 このフローは定期的に実行され、ユーザーに代わってこれらのリマインダーを提供します。
 
@@ -152,9 +152,9 @@ ms.locfileid: "52232880"
 
     :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate の [Excel Online (Business)] オプション":::
 
-1. **[アクション]** の下の **[スクリプトの実行 (プレビュー)]** を選択します。
+1. **[アクション]** で、**[スクリプトの実行]** を選択します。
 
-    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Power Automate の [スクリプトの実行 (プレビュー)] アクションのオプション":::
+    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Power Automate の [スクリプトの実行] アクションのオプション":::
 
 1. 次に、フロー ステップで使用するブックとスクリプトを選択します。 自分の OneDrive で作成したブック **on-call-rotation.xlsx** を使用します。 **スクリプトの実行** コネクタには、次の設定を指定します。
 

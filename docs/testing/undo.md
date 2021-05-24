@@ -1,6 +1,6 @@
 ---
-title: Office スクリプトによる変更を元に戻す
-description: Excel on the webのバージョン履歴を使用して、スクリプトを実行して行った変更を元に戻します。
+title: スクリプトによって行われた変更を元Officeする
+description: スクリプトを実行して行Excel on the webを元に戻すには、バージョン履歴を使用します。
 ms.date: 01/08/2019
 localization_priority: Normal
 ms.openlocfilehash: f9f22d4879f8a02c00a5bac9f58d9aa36ae03e38
@@ -10,19 +10,19 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52545547"
 ---
-# <a name="undo-the-changes-made-by-office-scripts"></a>Office スクリプトによる変更を元に戻す
+# <a name="undo-the-changes-made-by-office-scripts"></a>スクリプトによって行われた変更を元Officeする
 
-Excelの [元に戻す] コマンドを使用して、スクリプトによってExcelブックに加えられた変更 **を元に戻** すことはできません。 代わりに、クラウド ストレージからブックの以前のバージョンを復元する必要があります。
+[元に戻す] コマンドを使用してExcelブックに加えた変更をスクリプトExcel元に **戻** すことはできません。 代わりに、以前のバージョンのブックをクラウド ストレージから復元する必要があります。
 
 ## <a name="version-history"></a>バージョン履歴
 
-Officeのバージョン履歴は、Excel UI を使用して古いブックを復元する簡単な方法です。 この機能は、OneDriveまたはオンラインに保存されているファイルにのみ機能SharePoint。
+Officeのバージョン履歴は、新しい UI を使用して古いブックを簡単に復元Excelです。 この機能は、オンラインまたはオンラインにOneDriveファイルSharePoint機能です。
 
-スクリプトが実行されたExcelブックから、次の手順を使用して効果を元に戻します。
+スクリプトがExcelされたブックから、次の手順を使用して効果を元に戻します。
 
-1. **[ファイル**  >  **情報**  >  **のバージョン履歴]** に移動します。
+1. [ファイル情報 **のバージョン**  >  **履歴**  >  **] に移動します**。
 2. スクリプトを実行する前に保存されたバージョンを選択します。
-3. **を押します**。
+3. [復元 **] を押します**。
 
 ## <a name="see-also"></a>関連項目
 

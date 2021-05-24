@@ -1,6 +1,6 @@
 ---
-title: Office スクリプトを使用したプラットフォームの制限と要件
-description: Excel on the webで使用する場合のリソース制限とOfficeスクリプトのブラウザサポート
+title: プラットフォームの制限と要件 (スクリプトOffice)
+description: スクリプトと一緒に使用する場合Officeスクリプトのリソース制限とブラウザー Excel on the web
 ms.date: 05/17/2021
 localization_priority: Normal
 ms.openlocfilehash: 7e81aaf2f96faeb67c815814fe3b7f1795651318
@@ -10,24 +10,24 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52545582"
 ---
-# <a name="platform-limits-and-requirements-with-office-scripts"></a>Office スクリプトを使用したプラットフォームの制限と要件
+# <a name="platform-limits-and-requirements-with-office-scripts"></a>プラットフォームの制限と要件 (スクリプトOffice)
 
-Officeスクリプトを開発する際に注意する必要があるプラットフォームの制限事項がいくつかあります。 この記事では、ブラウザーのサポートとExcel on the web用のOffice スクリプトのデータ制限について詳しく説明します。
+スクリプトの開発時に注意する必要があるプラットフォームのOfficeがあります。 この記事では、ブラウザーのサポートとデータ制限について詳OfficeスクリプトのExcel on the web。
 
 ## <a name="browser-support"></a>ブラウザのサポート
 
-Officeスクリプトは、web の[Officeをサポート](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452)する任意のブラウザーで動作します。 ただし、一部の JavaScript 機能は、インターネット エクスプ ローラー 11 (IE 11) ではサポートされていません。 [ES6 以降](https://www.w3schools.com/Js/js_es6.asp)で導入された機能は、IE 11 では動作しません。 組織のユーザーがそのブラウザーを引き続き使用している場合は、スクリプトを共有するときに必ずその環境でスクリプトをテストしてください。
+Officeスクリプトは、Web のサポート[をサポートOfficeブラウザーで動作します](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452)。 ただし、JavaScript の一部の機能は、11 Internet Explorer (IE 11) ではサポートされていません。 [ES6](https://www.w3schools.com/Js/js_es6.asp)以降で導入された機能は、IE 11 では動作しません。 組織内のユーザーが引き続きそのブラウザーを使用している場合は、共有するときに、その環境でスクリプトをテストしてください。
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
-### <a name="third-party-cookies"></a>サードパーティのクッキー
+### <a name="third-party-cookies"></a>サードパーティの Cookie
 
-お使いのブラウザでは、Excel on the webの[**自動化**]タブを表示するためにサードパーティのクッキーを有効にする必要があります。 タブが表示されていない場合は、ブラウザの設定を確認してください。 プライベートブラウザセッションを使用している場合は、毎回この設定を再度有効にする必要があります。
+ブラウザーで [自動化] タブを表示するには、サードパーティの Cookie が **有効になっている必要** Excel on the web。 タブが表示されていない場合は、ブラウザーの設定を確認します。 プライベート ブラウザー セッションを使用している場合は、その度にこの設定を再び有効にする必要があります。
 
 > [!NOTE]
-> ブラウザによっては、この設定を「サードパーティのクッキー」ではなく「すべてのクッキー」と呼んでいます。
+> 一部のブラウザーでは、この設定を "サードパーティ Cookie" ではなく"すべての Cookie" と呼ぶ場合があります。
 
-#### <a name="instructions-for-adjusting-cookie-settings-in-popular-browsers"></a>一般的なブラウザでクッキーの設定を調整する手順
+#### <a name="instructions-for-adjusting-cookie-settings-in-popular-browsers"></a>一般的なブラウザーで Cookie 設定を調整する手順
 
 - [Chrome](https://support.google.com/chrome/answer/95647)
 - [Edge](https://support.microsoft.com/microsoft-edge/temporarily-allow-cookies-and-site-data-in-microsoft-edge-597f04f2-c0ce-f08c-7c2b-541086362bd2)
@@ -36,29 +36,29 @@ Officeスクリプトは、web の[Officeをサポート](https://support.micros
 
 ## <a name="data-limits"></a>データの上限
 
-一度に転送できるデータExcel量と、個々のPower Automateトランザクションの数には制限があります。
+データを一度にExcelできるデータの量と、トランザクションを実行できるPower Automate制限があります。
 
 ### <a name="excel"></a>Excel
 
-スクリプトを使用してブックを呼び出す場合、web のExcelには次の制限があります。
+Excelを使用してブックを呼び出す場合、Web の場合、次の制限があります。
 
-- 要求と応答は 5 **MB** に制限されています。
-- 範囲は **500 万個のセル** に制限されます。
+- 要求と応答は **5 MB に制限されています**。
+- 範囲は 500 万 **セルに制限されます**。
 
-大きなデータセットを扱うときにエラーが発生した場合は、より大きな範囲ではなく、複数の小さい範囲を使用してみてください。 例については、「 [大規模なデータセットの記述サンプル」](../resources/samples/write-large-dataset.md) を参照してください。 [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#getspecialcells-celltype--cellvaluetype-)などの API を使用して、大きな範囲ではなく特定のセルをターゲットにすることもできます。
+大規模なデータセットを扱う際にエラーが発生する場合は、より大きな範囲ではなく、複数の小さい範囲を使用してみてください。 例については、「大規模なデータセットを書 [き込む」サンプルを参照](../resources/samples/write-large-dataset.md) してください。 [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#getspecialcells-celltype--cellvaluetype-)のような API を使用して、大きな範囲ではなく特定のセルをターゲットにすることもできます。
 
 ### <a name="power-automate"></a>Power Automate
 
-Power AutomateでOfficeスクリプトを使用する場合、各ユーザーは **1 日あたりスクリプトの実行アクションに対して 400 回の呼び出しを行う** 必要があります。 この制限は、UTC の午前 12 時にリセットされます。
+ユーザーが OfficeスクリプトPower Automate使用する場合、各ユーザーは 1 日にスクリプトの実行アクションに対して **400 回の呼び出しに制限されます**。 この制限は、UTC の午前 12:00 にリセットされます。
 
-Power Automate プラットフォームには、次の記事で説明する使用制限もあります。
+このPower Automateには使用上の制限があります。これは次の記事で確認できます。
 
-- [Power Automateの制限と構成](/power-automate/limits-and-config)
-- [Excel オンライン (ビジネス) コネクタの既知の問題と制限事項](/connectors/excelonlinebusiness/#known-issues-and-limitations)
+- [サーバーの制限と構成Power Automate](/power-automate/limits-and-config)
+- [オンライン (Business) コネクタExcel既知の問題と制限事項](/connectors/excelonlinebusiness/#known-issues-and-limitations)
 
 ## <a name="see-also"></a>関連項目
 
-- [Office スクリプトのトラブルシューティング](troubleshooting.md)
+- [スクリプトOfficeトラブルシューティング](troubleshooting.md)
 - [Office スクリプトの効果を元に戻す](undo.md)
-- [Officeスクリプトのパフォーマンスを向上させる](../develop/web-client-performance.md)
-- [Excel on the webでのスクリプトのスクリプトOfficeの基礎](../develop/scripting-fundamentals.md)
+- [スクリプトのパフォーマンスをOfficeする](../develop/web-client-performance.md)
+- [スクリプトの基本OfficeスクリプトのExcel on the web](../develop/scripting-fundamentals.md)

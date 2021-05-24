@@ -1,6 +1,6 @@
 ---
-title: Excel ファイルの相互参照とフォーマット
-description: OfficeスクリプトとPower Automateを使用して、Excel ファイルを相互参照およびフォーマットする方法について説明します。
+title: ファイルを相互参照してExcelする
+description: スクリプトとスクリプトを使用Office、Power Automateファイルを相互参照して書式設定するExcelします。
 ms.date: 05/06/2021
 localization_priority: Normal
 ROBOTS: NOINDEX
@@ -11,26 +11,26 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/19/2021
 ms.locfileid: "52545767"
 ---
-# <a name="cross-reference-and-format-an-excel-file"></a>Excel ファイルの相互参照とフォーマット
+# <a name="cross-reference-and-format-an-excel-file"></a>ファイルを相互参照してExcelする
 
-このソリューションでは、OfficeスクリプトとPower Automateを使用して、2 つのExcel ファイルを相互参照およびフォーマットする方法を示します。
+このソリューションは、2 つの Excel ファイルを相互参照および書式設定する方法を、スクリプトとスクリプトを使用Office示Power Automate。
 
-プロジェクトは、次のことが実現します。
+プロジェクトでは、次の結果が得されます。
 
-1. 1 つのスクリプト実行アクションを使用して <a href="events.xlsx">events.xlsx</a> からイベント データを抽出します。
-1. そのデータをイベント トランザクション データを含む 2 番目のExcel ファイルに渡し、そのデータを使用して、Office スクリプトを使用してデータの基本的な検証と、欠落または不正なデータの書式設定を行います。
-1. 結果をレビュー担当者に電子メールで送信します。
+1. 1 つのスクリプトの <a href="events.xlsx"> 実行アクションevents.xlsx</a> を使用して、イベント データを抽出します。
+1. そのデータをイベント トランザクション データを含む 2 番目の Excel ファイルに渡し、そのデータを使用して、Office Scripts を使用して、データの基本的な検証と、不足しているデータまたは不正確なデータの書式設定を行います。
+1. 結果をレビュー者に電子メールで送信します。
 
-詳細については、「[クロス リファレンス」および「 Office スクリプトを使用した 2 つのExcel ファイルのフォーマット](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)」を参照してください。
+詳細については、「クロス リファレンス」[を参照し、](https://powerusers.microsoft.com/t5/Power-Automate-Cookbook/Cross-Reference-and-formatting-two-Excel-files-using-Office/td-p/728535)スクリプトを使用して 2 Excel ファイルOfficeしてください。
 
 ## <a name="sample-excel-files"></a>サンプル Excel ファイル
 
-このソリューションで使用されている以下のファイルをダウンロードして、自分で試してみてください!
+このソリューションで使用されている次のファイルをダウンロードして、自分で試してみてください。
 
 1. <a href="events.xlsx">events.xlsx</a>
 1. <a href="event-transactions.xlsx">event-transactions.xlsx</a>
 
-## <a name="sample-code-get-event-data"></a>サンプル コード: イベント データを取得する
+## <a name="sample-code-get-event-data"></a>サンプル コード: イベント データの取得
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): EventData[] {
@@ -150,6 +150,6 @@ interface EventData {
 }
 ```
 
-## <a name="training-video-cross-reference-and-format-an-excel-file"></a>トレーニング ビデオ: Excel ファイルの相互参照とフォーマット
+## <a name="training-video-cross-reference-and-format-an-excel-file"></a>トレーニング ビデオ: クロスリファレンスと書式設定を行Excelファイル
 
-[スーディ・ラマムルティがこのサンプルをYouTubeで歩くのを見てください](https://youtu.be/dVwqBf483qo")。
+[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/dVwqBf483qo").

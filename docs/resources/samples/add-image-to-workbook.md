@@ -1,32 +1,32 @@
 ---
-title: ブックにイメージを追加する
-description: Office スクリプトを使用して、ワークブックに画像を追加し、シート間でコピーする方法について説明します。
+title: ブックに画像を追加する
+description: '[スクリプト] を使用してOfficeをブックに追加し、シート間でコピーする方法について学習します。'
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 99c3cc2cacf6e535bdb882bb8414d23fd105be35
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 64c356b2d76a561276b2955263555b16de27b3ba
+ms.sourcegitcommit: a2b85168d2b5e2c4e6951f808368f7d726400df0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52546038"
+ms.lasthandoff: 05/21/2021
+ms.locfileid: "52592755"
 ---
-# <a name="add-images-to-a-workbook"></a>ブックにイメージを追加する
+# <a name="add-images-to-a-workbook"></a>ブックに画像を追加する
 
-このサンプルでは、ExcelのOffice スクリプトを使用してイメージを操作する方法を示します。
+このサンプルでは、スクリプト内のスクリプトを使用してイメージをOffice方法をExcel。
 
 ## <a name="scenario"></a>シナリオ
 
-イメージは、ブランド化、視覚的な ID、テンプレートに役立ちます。 彼らは単なる巨大なテーブル以上のワークブックを作るのに役立ちます。
+画像は、ブランド化、ビジュアル ID、テンプレートに役立ちます。 これらは、単なる巨大なテーブル以外のブックを作成するのに役立ちます。
 
-最初のサンプルでは、あるワークシートから別のワークシートにイメージをコピーします。 これは、すべてのシート上で会社のロゴを同じ位置に配置するために使用できます。
+最初のサンプルでは、あるワークシートから別のワークシートにイメージをコピーします。 これは、会社のロゴをすべてのシートで同じ位置に配置するために使用できます。
 
-2 番目のサンプルでは、URL からイメージをコピーします。 この機能を使用して、同僚が共有フォルダに保存した写真を関連するブックにコピーできます。
+2 番目のサンプルでは、URL からイメージをコピーします。 これは、同僚が共有フォルダーに保存した写真を関連するブックにコピーするために使用できます。
 
 ## <a name="sample-excel-file"></a>サンプル Excel ファイル
 
-これらのサンプルで使用 <a href="add-images.xlsx">add-images.xlsx</a> ファイルをダウンロードして、自分で試してみてください!
+これらのサンプルで <a href="add-images.xlsx">add-images.xlsx</a> ファイルをダウンロードして、自分で試してみてください。
 
-## <a name="sample-code-copy-an-image-across-worksheets"></a>サンプル コード: ワークシート間でイメージをコピーする
+## <a name="sample-code-copy-an-image-across-worksheets"></a>サンプル コード: ワークシート間で画像をコピーする
 
 ```TypeScript
 /**
@@ -57,7 +57,7 @@ function main(workbook: ExcelScript.Workbook)
 ```TypeScript
 async function main(workbook: ExcelScript.Workbook) {
   // Fetch the image from a URL.
-  const link = "https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/images/git-octocat.png";
+  const link = "https://raw.githubusercontent.com/OfficeDev/office-scripts-docs/master/docs/images/git-octocat.png";
   const response = await fetch(link);
 
   // Store the response as an ArrayBuffer, since it is a raw image file.

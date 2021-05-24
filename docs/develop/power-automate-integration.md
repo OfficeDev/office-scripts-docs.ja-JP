@@ -14,7 +14,7 @@ ms.locfileid: "52545041"
 
 [Power Automate](https://flow.microsoft.com) を使用すると、Office スクリプトを大規模で自動化されたワークフローに追加できます。 Power Automate を使って、メールの内容をワークシートのテーブルに追加したり、ブックのコメントに基づいてプロジェクト管理ツールでアクションを作成したりできます。
 
-## <a name="get-started"></a>概要
+## <a name="get-started"></a>作業の開始
 
 Power Automate を初めて使用する場合は、「[Power Automate に関する入門情報](/power-automate/getting-started)」にアクセスすることをお勧めします。 そちらで、利用可能なすべてのオートメーションの可能性について詳しく学ぶことができます。 このドキュメントでは、Power Automate での Office スクリプトの動作と、それが Excel エクスペリエンスの改善にどのように役立つかに重点が置かれています。
 
@@ -36,7 +36,7 @@ Power Automate を使用すると、フローのステップ間でデータの�
 
 次のセクションでは、Power Automate で使用されるスクリプトの入力と出力の詳細について説明します。 このトピックについて学ぶための実践的なアプローチが必要な場合は、「[自動で実行される Power Automate フロー内で、データをスクリプトに渡す](../tutorials/excel-power-automate-trigger.md)」チュートリアルを試すか、[タスクの自動アラーム](../resources/scenarios/task-reminders.md)のサンプル シナリオを確認してください。
 
-### <a name="main-parameters-pass-data-to-a-script"></a>`main` パラメータ: スクリプトにデータを渡す
+### <a name="main-parameters-pass-data-to-a-script"></a>`main` パラメーター: スクリプトにデータを渡す
 
 すべてのスクリプト入力は、`main` 関数の追加パラメーターとして指定されます。 たとえば、入力として名前を表す `string` をスクリプトで受け入れるようにする場合は、`main` 署名を `function main(workbook: ExcelScript.Workbook, name: string)` に変更します。
 
@@ -48,7 +48,7 @@ Power Automate でフローを構成する場合、スクリプト入力を静�
 
 2. すべてのパラメーターには、型 (`string` または `number` など) が必要です。
 
-3. 基本型 `string` 、 `number` `boolean` 、 、 、 、 `unknown` `object` および が `undefined` サポートされています。
+3. 基本的な型 `string` `number` `boolean` `unknown` 、、、、 `object` `undefined` がサポートされています。
 
 4. 以前に一覧表示された基本型の配列がサポートされています。
 
@@ -99,7 +99,7 @@ Power Automate でフローを構成する場合、スクリプト入力を静�
 
 次のスクリーンショットは、[GitHub](https://github.com/) の問題がお客様に割り当てられるたびにトリガーされる Power Automate フローを示しています。 このフローでは、Excel ブックのテーブルに問題を追加するスクリプトが実行されます。 そのテーブルに 5 つ以上の問題がある場合、フローでメール アラームが送信されます。
 
-:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="フローの例を示すPower Automateフローエディタ":::
+:::image type="content" source="../images/power-automate-parameter-return-sample.png" alt-text="フロー Power Automate示すフロー エディターの例":::
 
 スクリプトの `main` 関数では、問題の ID と問題のタイトルが入力パラメーターとして指定され、スクリプトによって問題テーブルの行数が返されます。
 

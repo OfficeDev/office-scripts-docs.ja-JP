@@ -1,16 +1,16 @@
 ---
 title: 手動 Power Automation フローからスクリプトを呼び出す
 description: Power Automate の Office スクリプトで、手動のトリガーを使う方法を説明します。
-ms.date: 12/28/2020
+ms.date: 05/17/2021
 localization_priority: Priority
-ms.openlocfilehash: 0a5fc93dbad1ee9804840fa11a06b689b7e7abda
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: f4feb14f70c43497f40dae3a521353dfee63c082
+ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232873"
+ms.lasthandoff: 05/19/2021
+ms.locfileid: "52545830"
 ---
-# <a name="call-scripts-from-a-manual-power-automate-flow-preview"></a>手動 Power Automation フローからスクリプトを呼び出す (プレビュー)
+# <a name="call-scripts-from-a-manual-power-automate-flow"></a>手動 Power Automation フローからスクリプトを呼び出す
 
 このチュートリアルでは、[Power Automate](https://flow.microsoft.com)を使用して、Excel on the web 用の Office スクリプトを実行する方法について説明します。 現在の時刻で 2 つのセルの値を更新するスクリプトを作成します。 次に、このスクリプトを手動でトリガーした Power Automate フローに接続し、Power Automate のボタンを押したときにいつでもこのスクリプトが実行されるようにします。 基本的なパターンを理解したら、フローを拡大して他のアプリケーションを含めることができ、毎日のワークフローの自動化を進めることが可能です。
 
@@ -23,7 +23,7 @@ ms.locfileid: "52232873"
 
 ## <a name="prepare-the-workbook"></a>ブックを準備する
 
-Power Automate では、ブック コンポーネントにアクセスするために `Workbook.getActiveWorksheet` などの[相対参照](../testing/power-automate-troubleshooting.md#avoid-using-relative-references)を使わないようにする必要があります。 したがって、Power Automate が参照できる、名前が統一されたワークブックとワークシートが必要です。
+Power Automate では、ブック コンポーネントにアクセスするために `Workbook.getActiveWorksheet` などの[相対参照](../testing/power-automate-troubleshooting.md#avoid-relative-references)を使わないようにする必要があります。 したがって、Power Automate が参照できる、名前が統一されたワークブックとワークシートが必要です。
 
 1. **MyWorkbook** という名前の新しいブックを作成します。
 
@@ -85,9 +85,9 @@ Power Automate では、ブック コンポーネントにアクセスするた�
 
     :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate の [Excel Online (Business)] オプション":::
 
-7. **[アクション]** の下の **[スクリプトの実行 (プレビュー)]** を選択します。
+7. **[アクション]** で、**[スクリプトの実行]** を選択します。
 
-    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Power Automate の [スクリプトの実行 (プレビュー)] アクションのオプション":::
+    :::image type="content" source="../images/power-automate-tutorial-5.png" alt-text="Power Automate の [スクリプトの実行] アクションのオプション":::
 
 8. 次に、フロー ステップで使用するブックおよびスクリプトを選択します。 このチュートリアルでは、OneDrive に作成したブックを使用しますが、OneDrive サイトまたは SharePoint サイトでは任意のブックを使用できます。 **スクリプトの実行** コネクタには、次の設定を指定します。
 
