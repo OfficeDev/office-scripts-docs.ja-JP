@@ -1,2 +1,0 @@
-> [!NOTE]
-> Excel on the web での Office スクリプトは、パブリック プレビュー中です。 ここで説明する機能は、機能の開発に応じて変更される可能性があります。 Excel の **[ヘルプ]、[フィードバック]** ボタンから Office スクリプトに関するフィードバックを送信できます。 ドキュメントに関するフィードバックは、[OfficeDev/office-scripts-docs](https://github.com/OfficeDev/office-scripts-docs/issues) GitHub リポジトリに送信できます。
