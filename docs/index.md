@@ -3,16 +3,16 @@ layout: LandingPage
 ms.topic: landing-page
 title: Office スクリプト ドキュメント
 description: チュートリアル、概念に関する記事、コード サンプルなどの、Excel on the web の Office スクリプトについて学習するためのリソース。
-ms.date: 10/30/2020
+ms.date: 05/24/2021
 localization_priority: Priority
-ms.openlocfilehash: 0d75d1326db0399f64f53b0b25bd6c7b49296e0b
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: baa015f7f6384ccc2cdd7d8a4cbadcbc16167828
+ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232670"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52639902"
 ---
-# <a name="office-scripts-documentation-preview"></a>Office スクリプト ドキュメント (プレビュー)
+# <a name="office-scripts-documentation"></a>Office スクリプト ドキュメント
 
 Excel on the web の Office スクリプトを使用すると、日常のタスクを自動化できます。 次の記事で、Office スクリプトの作成、編集、今すぐ自動化を開始する方法について説明します。
 

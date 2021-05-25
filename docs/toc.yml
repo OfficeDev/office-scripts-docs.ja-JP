@@ -51,8 +51,6 @@ items:
             href: develop/typescript-restrictions.md
           - name: Office スクリプトの効果を元に戻す
             href: testing/undo.md
-          - name: 古い Office スクリプトをサポートする
-            href: develop/excel-async-model.md
       - name: サンプル
         items:
           - name: 概要
