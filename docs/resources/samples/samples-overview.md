@@ -1,14 +1,14 @@
 ---
 title: Officeスクリプトのサンプル
 description: 使用可能なOfficeスクリプトのサンプルとシナリオです。
-ms.date: 05/17/2021
+ms.date: 05/24/2021
 localization_priority: Normal
-ms.openlocfilehash: 0ea9a8a8986681fca0e45784e2923c1d3b34576d
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 6b91e20586faa57c389459b7b8bccf18e5c3bbfa
+ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545710"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52639846"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Officeスクリプトのサンプルとシナリオ
 
@@ -19,8 +19,6 @@ ms.locfileid: "52545710"
 シナリオ [では](#scenarios)、実際の使用例を示すいくつかの大きなシナリオ サンプルが含まれています。
 
 コミュニティからの [投稿も歓迎します](#community-contributions-and-fun-samples)。
-
-[!INCLUDE [Preview note](../../includes/preview-note.md)]
 
 ## <a name="basics"></a>基本事項
 

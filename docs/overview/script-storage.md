@@ -1,14 +1,14 @@
 ---
 title: Officeスクリプト ファイルのストレージと所有権
 description: スクリプトを管理者Officeに格納し、所有者Microsoft OneDrive転送する方法に関する情報。
-ms.date: 05/17/2021
+ms.date: 05/21/2021
 localization_priority: Normal
-ms.openlocfilehash: 556d784dc1fe64873866c49ab2726a4c68abc1a7
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 25683d2b6ac2e8ac47b465b24fa087af83175806
+ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545802"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631658"
 ---
 # <a name="office-scripts-file-storage-and-ownership"></a>Officeスクリプト ファイルのストレージと所有権
 
@@ -27,6 +27,15 @@ Officeスクリプトは、ユーザーの **ファイルに .osts** ファイ�
 Officeスクリプトは、ユーザーのデータベースにOneDrive。 ユーザーは、ユーザーが指定した保持ポリシーと削除ポリシー Microsoft OneDrive。 組織から削除されるユーザーによって作成および共有されたスクリプトを処理する方法については、[OneDrive の保持と削除](/onedrive/retention-and-deletion)を参照してください。
 
 編集中、ファイルはブラウザーに一時的に保存されます。 スクリプトを保存してからウィンドウを閉じる前に、Excelの場所に保存OneDriveがあります。 編集後にファイルを保存することを忘れないでください。それ以外の場合、これらの編集はブラウザーのバージョンのファイルにのみ含されます。
+
+## <a name="audit-office-scripts-usage-at-the-admin-level"></a>管理者Officeスクリプトの使用状況を監査する
+
+コンプライアンス センターで監査ログOfficeスクリプトを使用しているテナントを確認します。 このツールの使い方については、「セキュリティ コンプライアンス センターで監査ログを検索する」 [を&してください](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide#search-the-audit-log)。
+
+検索ツールでスクリプトをOfficeするユーザーを検索するには、[ファイル]、フォルダー、またはサイト フィールド `.osts` **に追加** します。 これにより、スクリプト ファイル拡張子が Officeファイルが検索されます。 組織内のユーザーが [スクリプト] 機能を使用Office、監査ログの検索結果にユーザー アクティビティが表示されます。
+
+> [!NOTE]
+> スクリプトの実行は現在ログに記録されません。 作成、表示、および変更のアクションだけがログに記録されます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,26 +1,24 @@
 ---
 title: Excel on the web での Office スクリプトのスクリプトの基本事項
 description: Office スクリプトを作成する前に理解しておくべきオブジェクト モデルの情報と他の基本事項について説明します。
-ms.date: 05/10/2021
+ms.date: 05/24/2021
 localization_priority: Priority
-ms.openlocfilehash: d930c9ee36933cb0458de8cce4f1d1adc7b6a001
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 629e816ea988d6b8ffe5264c701e3a1eba6c6feb
+ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545102"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52639895"
 ---
-# <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web-preview"></a>Excel on the web での Office スクリプトのスクリプトの基本事項 (プレビュー)
+# <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Excel on the web での Office スクリプトのスクリプトの基本事項
 
 この記事では、Office スクリプトの技術的な側面について説明します。 Excel オブジェクトどうしが連携する仕組みや、コード エディターがブックと同期する仕組みについて説明します。
-
-[!INCLUDE [Preview note](../includes/preview-note.md)]
 
 ## <a name="typescript-the-language-of-office-scripts"></a>TypeScript: オフィス スクリプトの言語
 
 オフィス スクリプトは [TypeScript](https://www.typescriptlang.org/docs/home.html) で書かれており、[JavaScript](https://developer.mozilla.org/docs/Web/JavaScript) のスーパーセットです。 JavaScript に慣れている場合は、コードの多くが両言語で共通しているため、知識を引き継ぐことができます。 Office スクリプトのコーディング作業を始める前に、初心者レベルのプログラミング知識を身に付けておくことをお勧めします。 以下のリソースは、Office スクリプトのコーディング面を理解するのに役立ちます。
 
-[!INCLUDE [Preview note](../includes/coding-basics-references.md)]
+[!INCLUDE [Recommended coding resources](../includes/coding-basics-references.md)]
 
 ## <a name="main-function-the-scripts-starting-point"></a>`main` 機能: スクリプトの開始点
 
@@ -91,7 +89,7 @@ function main(workbook: ExcelScript.Workbook) {
     let productData = [
         ["Almonds", 6, 7.5],
         ["Coffee", 20, 34.5],
-        ["Chocolate", 10, 9.56],
+        ["Chocolate", 10, 9.54],
     ];
     let dataRange = sheet.getRange("B3:D5");
     dataRange.setValues(productData);
@@ -115,6 +113,32 @@ function main(workbook: ExcelScript.Workbook) {
 このスクリプトを実行すると、現在のワークシートに次のデータが作成されます。
 
 :::image type="content" source="../images/range-sample.png" alt-text="値の行、数式の列、フォーマットされたヘッダーを含む売上記録を含むワークシート":::
+
+### <a name="the-types-of-range-values"></a>レンジ値の種類
+
+各セルには値があります。 この値は、セルに入力された基本的な値であり、Excel で表示されるテキストとは異なる場合があります。 たとえば、セルに日付として "2021 年 5 月 2 日" が表示されていても、実際の値は「44318」であることがあります。 この表示は、数値表示形式で変更できますが、セル内の実際の値やタイプは、新しい値が設定されたときにのみ変更されます。
+
+セルの値を使用する場合には、セルや範囲からどのような値を得ることを期待しているのかを TypeScript に伝達することが重要です。 セルには、次のいずれかのタブの種類を選択します: `string`、`number`、または `boolean`。 スクリプトが返された値をこれらの型の 1 つとして処理するためには、その型を宣言する必要があります。
+
+次のスクリプトは、前のサンプルのテーブルから平均価格を取得します。 コード `priceRange.getValues() as number[][]` を確認します。 この[アサート](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#type-assertions)は、範囲の値の型が `number[][]` であることを主張します。 この配列のすべての値は、スクリプトで数字として処理されます。
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  // Get the active worksheet.
+  let sheet = workbook.getActiveWorksheet();
+
+  // Get the "Unit Price" column. 
+  // The result of calling getValues is declared to be a number[][] so that we can perform arithmetic operations.
+  let priceRange = sheet.getRange("D3:D5");
+  let prices = priceRange.getValues() as number[][];
+
+  // Get the average price.
+  let totalPrices = 0;
+  prices.forEach((price) => totalPrices += price[0]);
+  let averagePrice = totalPrices / prices.length;
+  console.log(averagePrice);
+}
+```
 
 ## <a name="charts-tables-and-other-data-objects"></a>グラフ、表、およびその他のデータ オブジェクト
 

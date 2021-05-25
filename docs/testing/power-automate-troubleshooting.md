@@ -1,14 +1,14 @@
 ---
 title: Officeで実行されているスクリプトのトラブルシューティングPower Automate
 description: ヒント、プラットフォーム情報、および既知の問題と、スクリプトとスクリプトのOffice統合Power Automate。
-ms.date: 05/17/2021
+ms.date: 05/18/2021
 localization_priority: Normal
-ms.openlocfilehash: e26378051c764d97b4e8d748abc85fbe095c7b03
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 3d114b8b9aceb95285ecfc78ddbd868541b9f04c
+ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545572"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631665"
 ---
 # <a name="troubleshoot-office-scripts-running-in-power-automate"></a>Officeで実行されているスクリプトのトラブルシューティングPower Automate
 
@@ -23,11 +23,11 @@ Power Automate、選択したブックでスクリプトをExcel代わりに実�
 
 一部の相対参照 API は、エラーをスロー Power Automate。 他のユーザーは、ユーザーの状態を意味する既定の動作を持っています。 スクリプトを設計する場合は、ワークシートと範囲に絶対参照を使用してください。 これにより、ワークシートPower Automate場合でも、一貫性のあるフローを作成できます。
 
-### <a name="script-methods-that-fail-when-run-power-automate-flows"></a>フローの実行時に失敗するスクリプト メソッドPower Automateします。
+### <a name="script-methods-that-fail-when-run-in-power-automate-flows"></a>スクリプト フローで実行すると失敗するスクリプト メソッドPower Automateします。
 
 次のメソッドは、エラーをスローし、エラー フロー内のスクリプトから呼び出Power Automateします。
 
-| クラス | メソッド |
+| クラス | Method |
 |--|--|
 | [グラフ](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
 | [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
@@ -41,10 +41,25 @@ Power Automate、選択したブックでスクリプトをExcel代わりに実�
 
 次のメソッドは、ユーザーの現在の状態の代りとして、既定の動作を使用します。
 
-| クラス | メソッド | Power Automate動作 |
+| クラス | Method | Power Automate動作 |
 |--|--|--|
 | [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | ブックの最初のワークシート、またはメソッドによって現在アクティブ化されているワークシートのいずれかを返 `Worksheet.activate` します。 |
 | [ワークシート](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | の目的でワークシートをアクティブなワークシートとしてマークします `Workbook.getActiveWorksheet` 。 |
+
+## <a name="data-refresh-not-supported-in-power-automate"></a>データ更新は、データ更新プログラムではPower Automate
+
+Officeスクリプトは、スクリプトで実行するとデータを更新Power Automate。 フローで呼び `PivotTable.refresh` 出された場合は何もしないなどのメソッド。 さらに、Power Automateリンクを使用する数式のデータ更新はトリガーされません。
+
+### <a name="script-methods-that-do-nothing-when-run-in-power-automate-flows"></a>スクリプト フローで実行するときに何もしないスクリプト メソッドPower Automateします。
+
+次のメソッドは、スクリプトを使用して呼び出した場合、スクリプトPower Automate。 それでも正常に返され、エラーはスローしません。
+
+| クラス | Method |
+|--|--|
+| [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) | `refresh` |
+| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` |
+| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllPivotTables` |
+| [ワークシート](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `refreshAllPivotTables` |
 
 ## <a name="select-workbooks-with-the-file-browser-control"></a>ファイル ブラウザー コントロールを使用してブックを選択する
 

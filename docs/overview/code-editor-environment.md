@@ -1,14 +1,14 @@
 ---
 title: Officeスクリプト コード エディター環境
 description: スクリプトの前提条件と環境情報は、OfficeスクリプトExcel on the web。
-ms.date: 05/10/2021
+ms.date: 05/24/2021
 localization_priority: Normal
-ms.openlocfilehash: aa54939826f8dda2a068df0f3fabf0fd3a2c842b
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: aca97c31ba970617a9fa270021a5b5b976ae4a57
+ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545823"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52639881"
 ---
 # <a name="office-scripts-code-editor-environment"></a>Officeスクリプト コード エディター環境
 
@@ -20,7 +20,7 @@ Officeスクリプトは TypeScript または JavaScript で記述され、Offic
 
 Officeスクリプトは、主に自己格納型のコードです。 TypeScript の機能の一部だけが使用されます。 したがって、TypeScript の内容を学習せずにスクリプトを編集できます。 コード エディターは、コードのインストール、コンパイル、および実行も処理します。そのため、スクリプト自体以外は心配する必要はありません。 言語を学び、以前のプログラミング知識なしでスクリプトを作成することができます。 ただし、プログラミングを始めてお勧めする場合は、次のスクリプトを実行する前に、いくつかのOffice勧めします。
 
-[!INCLUDE [Preview note](../includes/coding-basics-references.md)]
+[!INCLUDE [Recommended coding resources](../includes/coding-basics-references.md)]
 
 ## <a name="office-scripts-javascript-api"></a>Officeスクリプト JavaScript API
 

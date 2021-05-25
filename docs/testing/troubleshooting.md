@@ -3,12 +3,12 @@ title: スクリプトOfficeトラブルシューティング
 description: スクリプトのデバッグのヒントとOfficeヘルプ リソース。
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: ff0ac1e63084c7c541d2a4925f1f011d16fa4992
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 04ea0ea5d49d40667d249a6f4f4b109e03362940
+ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545558"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631704"
 ---
 # <a name="troubleshoot-office-scripts"></a>スクリプトOfficeトラブルシューティング
 
@@ -84,9 +84,11 @@ console.log(myRange.getAddress());
 
 [スタック オーバーフロー](https://stackoverflow.com/questions/tagged/office-scripts) は、コーディングの問題を支援する開発者のコミュニティです。 多くの場合、スタック オーバーフローのクイック検索を使用して、問題の解決策を見つける可能性があります。 そうでない場合は、質問をして"office-scripts" タグでタグ付けします。 アドインではなく、Office *スクリプト* を作成Office *してください*。
 
-JavaScript API で問題がOffice場合は[、OfficeDev/office-js](https://github.com/OfficeDev/office-js)リポジトリにGitHubしてください。 製品チームのメンバーは、問題に対応し、さらに支援を提供します。 **OfficeDev/office-js** リポジトリに問題を作成すると、製品チームが対処する必要がある javaScript API ライブラリOfficeに欠陥が見つかりました。
+Office スクリプトの機能要求を送信するには、アイデアを [ユーザー音声[](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439)] ページに投稿するか、機能要求が既に存在する場合は、そのユーザーに投票を追加します。 [マクロ、スクリプト、アドインExcel] カテゴリの Web の下に要求を送信してください。
 
-アクション レコーダーまたはエディターで問題が発生した場合は、ヘルプ ウィンドウの [フィードバック] >をExcel。
+アクション レコーダーまたはエディターに問題がある場合は、お知らせください。 [コード エディター] 作業ウィンドウの **...** メニューで、[フィードバックの送信] ボタンを選択して問題を共有します。
+
+:::image type="content" source="../images/code-editor-feedback.png" alt-text="[フィードバックの送信] ボタンを使用したコード エディターのオーバーフロー メニュー":::
 
 ## <a name="see-also"></a>関連項目
 

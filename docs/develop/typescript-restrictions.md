@@ -1,14 +1,14 @@
 ---
 title: スクリプトの TypeScript の制限Officeスクリプト
 description: スクリプト コード エディターで使用される TypeScript コンパイラと linter のOfficeします。
-ms.date: 02/05/2021
+ms.date: 05/24/2021
 localization_priority: Normal
-ms.openlocfilehash: a4198e0e56224ac5da89e89c43c8d2f3ef44d6d7
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 449a8abbcfdcfde53d0c9b96106f73259de368b1
+ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545020"
+ms.lasthandoff: 05/25/2021
+ms.locfileid: "52639870"
 ---
 # <a name="typescript-restrictions-in-office-scripts"></a>スクリプトの TypeScript の制限Officeスクリプト
 
@@ -20,19 +20,21 @@ Officeスクリプトは TypeScript 言語を使用します。 ほとんどの�
 
 ### <a name="explicit-any"></a>明示的 `any`
 
-変数をスクリプト (つまり) の型Office `any` 明示的に宣言することはできません `let someVariable: any;` 。 この `any` 型は、ユーザーが処理した場合に問題Excel。 たとえば、値が 、 、 または である必要 `Range` `string` `number` があります `boolean` 。 スクリプト内の型として変数が明示的に定義されている場合は、コンパイル時エラー (スクリプトを実行する前のエラー) `any` が表示されます。
+変数をスクリプト (つまり) の型Office `any` 明示的に宣言することはできません `let value: any;` 。 この `any` 型は、ユーザーが処理した場合に問題Excel。 たとえば、値が 、 、 または である必要 `Range` `string` `number` があります `boolean` 。 スクリプト内の型として変数が明示的に定義されている場合は、コンパイル時エラー (スクリプトを実行する前のエラー) `any` が表示されます。
 
 :::image type="content" source="../images/explicit-any-editor-message.png" alt-text="コード エディターのホバー テキストの明示的な 'any' メッセージ":::
 
 :::image type="content" source="../images/explicit-any-error-message.png" alt-text="コンソール ウィンドウの明示的な 'any' エラー":::
 
-前のスクリーンショットでは `[5, 16] Explicit Any is not allowed` 、行の種類を#5列#16示 `any` しています。 これにより、エラーを見つけるのに役立ちます。
+前のスクリーンショットでは `[2, 14] Explicit Any is not allowed` 、行の種類を#2列#14示 `any` します。 これにより、エラーを見つけるのに役立ちます。
 
 この問題を回避するには、常に変数の種類を定義します。 変数の種類が不明な場合は、共用体の型を [使用できます](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html)。 これは、型 、または (値の型は、それらの共用体です) の値を保持する変数 `Range` `string` `number` `boolean` `Range` に役立ちます `string | number | boolean` 。
 
 ### <a name="implicit-any"></a>暗黙的 `any`
 
 TypeScript 変数の型は暗黙的 [に定義](https://www.typescriptlang.org/docs/handbook/type-inference.html) できます。 TypeScript コンパイラが変数の種類を特定できない場合 (型が明示的に定義されていないか、型の推論ができない場合)、暗黙的な値であり、コンパイル時エラーが発生します。 `any`
+
+:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="コード エディターのホバー テキスト内の暗黙的な 'any' メッセージ":::
 
 暗黙的な場合の最も一般的 `any` なケースは、 などの変数宣言です `let value;` 。 これを回避するには、次の 2 つの方法があります。
 

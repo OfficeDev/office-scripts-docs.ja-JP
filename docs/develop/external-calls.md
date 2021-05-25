@@ -1,23 +1,24 @@
 ---
 title: Office スクリプトでの外部 API 呼び出しのサポート
 description: スクリプトで外部 API 呼び出しを行うOffice。
-ms.date: 05/17/2021
+ms.date: 05/21/2021
 localization_priority: Normal
-ms.openlocfilehash: fd6ba0c57bf4cabb2d07421355cacff373f6706c
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 5d768b53112473c1774f8fe8257b197ffead4a63
+ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545083"
+ms.lasthandoff: 05/24/2021
+ms.locfileid: "52631644"
 ---
 # <a name="external-api-call-support-in-office-scripts"></a>Office スクリプトでの外部 API 呼び出しのサポート
 
-スクリプト作成者は、プラットフォームのプレビュー 段階で外部 [API](https://developer.mozilla.org/docs/Web/API) を使用する場合、一貫した動作を期待してはならない。 そのため、重要なスクリプト シナリオでは外部 API に依存しません。
-
-外部 API への呼び出しは、通常の状況Excelアプリケーションを介Power Automate[実行できます](#external-calls-from-power-automate)。
+スクリプトは、外部サービスへの呼び出しをサポートします。 これらのサービスを使用して、ブックにデータなどの情報を提供します。
 
 > [!CAUTION]
 > 外部呼び出しにより、機密データが望ましくないエンドポイントに公開される可能性があります。 管理者は、このような呼び出しに対するファイアウォール保護を確立できます。
+
+> [!IMPORTANT]
+> 外部 API への呼び出しは、通常の状況Excelアプリケーションを介Power Automate[実行できます](#external-calls-from-power-automate)。
 
 ## <a name="configure-your-script-for-external-calls"></a>外部呼び出し用にスクリプトを構成する
 
@@ -36,7 +37,7 @@ async function main(workbook: ExcelScript.Workbook) : Promise <void>
 
 * OAuth2 タイプの認証フローをサインインまたは使用する方法はありません。 すべてのキーと資格情報をハードコード (または別のソースから読み取る) 必要があります。
 * API の資格情報とキーを格納するインフラストラクチャはありません。 これは、ユーザーが管理する必要があります。
-* ドキュメント Cookie、 `localStorage` および `sessionStorage` オブジェクトはサポートされていません。 
+* ドキュメント Cookie、 `localStorage` および `sessionStorage` オブジェクトはサポートされていません。
 * 外部呼び出しにより、機密データが望ましくないエンドポイントに公開される場合や、内部ブックに外部データが取り込まれたりする場合があります。 管理者は、このような呼び出しに対するファイアウォール保護を確立できます。 外部通話に依存する前に、必ずローカル ポリシーに確認してください。
 * 依存関係を取得する前に、データ スループットの量を確認してください。 たとえば、外部データセット全体を引き下げないのが最適な選択肢ではなく、代わりにページネーションを使用してデータをチャンク単位で取得する必要があります。
 
