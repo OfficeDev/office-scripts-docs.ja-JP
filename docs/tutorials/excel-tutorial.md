@@ -1,14 +1,14 @@
 ---
 title: Excel on the web で Office スクリプトを記録、編集、作成する
 description: 操作レコーダーを使用したスクリプトの記録、ブックへのデータの書き込みなど、Office スクリプトの基本について説明したチュートリアル。
-ms.date: 05/17/2021
+ms.date: 05/23/2021
 localization_priority: Priority
-ms.openlocfilehash: 957a36d56af476bafe2c11e7c89a37e79b820cce
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 19cd7bf6c3120d674553d37a36f45d36f46ee852
+ms.sourcegitcommit: 0343e4a9843f7ab6ec99d6ddf955050271b061c7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545027"
+ms.lasthandoff: 05/26/2021
+ms.locfileid: "52655906"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを記録、編集、作成する
 
@@ -35,7 +35,7 @@ ms.locfileid: "52545027"
     |ライム |600 |500 |
     |グレープフルーツ |900 |700 |
 
-3. **[自動化]** タブを開きます。**[自動化]** タブが表示されていない場合は、ドロップダウン矢印を押して、リボンのオーバーフローを確認します。
+3. **[自動化]** タブを開きます。**[自動化]** タブが表示されていない場合は、ドロップダウン矢印を押して、リボンのオーバーフローを確認します。 それでも表示されない場合は、[「Office スクリプトのトラブルシューティング」](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable)の記事の説明に従います。
 4. **[操作を記録する]** ボタンを押します。
 5. セル **A2:C2** ("オレンジ" 行) を選択し、塗りつぶしの色をオレンジ色に設定します。
 6. **[停止]** ボタンを押して、記録を停止します。
