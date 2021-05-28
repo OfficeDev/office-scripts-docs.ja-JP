@@ -1,14 +1,14 @@
 ---
 title: Officeスクリプトのサンプル
 description: 使用可能なOfficeスクリプトのサンプルとシナリオです。
-ms.date: 05/24/2021
+ms.date: 05/25/2021
 localization_priority: Normal
-ms.openlocfilehash: 6b91e20586faa57c389459b7b8bccf18e5c3bbfa
-ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
+ms.openlocfilehash: aac730fd8a0da76728e4a455339366a75b27a0b2
+ms.sourcegitcommit: 339ecbb9914d54f919e3475018888fb5d00abe89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52639846"
+ms.lasthandoff: 05/28/2021
+ms.locfileid: "52697659"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Officeスクリプトのサンプルとシナリオ
 
@@ -55,6 +55,7 @@ Officeスクリプトは、毎日のルーチンの一部を自動化できま�
 | [Web ダウンロードの分析](../scenarios/analyze-web-downloads.md) | このシナリオでは、Web トラフィック レコードを解析してユーザーの原産国を決定するスクリプトを備えます。 スクリプトのサブ関数の使用、条件付き書式の適用、テーブルの操作など、テキスト解析のスキルを紹介します。 |
 | [NOAA の水位データを取得してグラフ化する](../scenarios/noaa-data-fetch.md) | このシナリオでは、Office スクリプトを使用して、外部ソース[(NOAA Tides](https://tidesandcurrents.noaa.gov/)および Currents データベース) からデータを取得し、結果の情報をグラフ化します。 データを取得し、グラフを使用 `fetch` するスキルを強調します。 |
 | [グレード計算機](../scenarios/grade-calculator.md) | このシナリオでは、教員の成績を検証するスクリプトを備えます。 エラー チェック、セルの書式設定、および正規表現のスキルを紹介します。 |
+| [面接のスケジュールを設定Teams](../scenarios/schedule-interviews-in-teams.md) | このシナリオでは、スプレッドシートを使用してExcel会議の時間を管理し、会議をスケジュールするフローを作成する方法をTeams。 |
 | [タスクのリマインダー](../scenarios/task-reminders.md) | このシナリオでは、Officeフロー Power Automateスクリプトを使用して、同僚にリマインダーを送信してプロジェクトの状態を更新します。 スクリプトとの間の統合Power Automateデータ転送のスキルを強調します。 |
 
 ## <a name="community-contributions-and-fun-samples"></a>Communityと楽しいサンプル
