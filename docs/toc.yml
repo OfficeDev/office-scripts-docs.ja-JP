@@ -95,6 +95,8 @@ items:
                 href: resources/scenarios/noaa-data-fetch.md
               - name: グレード計算機
                 href: resources/scenarios/grade-calculator.md
+              - name: Teams で面接をスケジュールする
+                href: resources/scenarios/schedule-interviews-in-teams.md
               - name: 作業リマインダー (Power Automate付き)
                 href: resources/scenarios/task-reminders.md
           - name: コミュニティの投稿
