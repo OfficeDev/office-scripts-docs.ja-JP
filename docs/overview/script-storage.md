@@ -1,14 +1,14 @@
 ---
 title: Officeスクリプト ファイルのストレージと所有権
 description: スクリプトを管理者Officeに格納し、所有者Microsoft OneDrive転送する方法に関する情報。
-ms.date: 05/21/2021
+ms.date: 06/04/2021
 localization_priority: Normal
-ms.openlocfilehash: 25683d2b6ac2e8ac47b465b24fa087af83175806
-ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
+ms.openlocfilehash: b7ccb3ceae99a3a10bb56d5a4e56cc869d99850e
+ms.sourcegitcommit: 7dcb13daa3a765b87295e5a453a8f123e17ee24a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631658"
+ms.lasthandoff: 06/11/2021
+ms.locfileid: "52906788"
 ---
 # <a name="office-scripts-file-storage-and-ownership"></a>Officeスクリプト ファイルのストレージと所有権
 
@@ -22,6 +22,14 @@ Officeスクリプトは、ユーザーの **ファイルに .osts** ファイ�
 
 ブックの 1 つと共有されているスクリプトは、スクリプト作成者のデータベースに残OneDrive。 共有スクリプトを OneDrive で実行すると、ローカル フォルダーまたはローカル フォルダーにはコピー Excel。 コード **エディターの [コピー** を作成] ボタンをクリックすると、スクリプトの別のコピーがユーザーのページにOneDrive。 コピーに対する変更は、元のスクリプトには影響を与えかねない。
 
+### <a name="restore-deleted-scripts"></a>削除されたスクリプトを復元する
+
+スクリプトを削除すると、Excelごみ箱にOneDriveされます。 削除されたスクリプトを復元するには、「削除されたファイルまたはフォルダーを復元する」に記載されている手順に[従](https://support.microsoft.com/office/restore-deleted-files-or-folders-in-onedrive-949ada80-0026-4db3-a953-c99083e6a84f)OneDrive。 **.osts ファイルを復元すると**、[すべてのスクリプト] リスト **に戻** されます。
+
+削除されたスクリプトはブックと共有されません。 スクリプトを復元しても、スクリプト **へのアクセス** は保持されます。 スクリプトを再び共有する必要があります。
+
+復元されたスクリプトは、引き続き必要にPower Automateします。 フロー コネクタを再作成する必要はない。
+
 ## <a name="file-ownership-and-retention"></a>ファイルの所有権と保持
 
 Officeスクリプトは、ユーザーのデータベースにOneDrive。 ユーザーは、ユーザーが指定した保持ポリシーと削除ポリシー Microsoft OneDrive。 組織から削除されるユーザーによって作成および共有されたスクリプトを処理する方法については、[OneDrive の保持と削除](/onedrive/retention-and-deletion)を参照してください。
@@ -30,7 +38,7 @@ Officeスクリプトは、ユーザーのデータベースにOneDrive。 ユ�
 
 ## <a name="audit-office-scripts-usage-at-the-admin-level"></a>管理者Officeスクリプトの使用状況を監査する
 
-コンプライアンス センターで監査ログOfficeスクリプトを使用しているテナントを確認します。 このツールの使い方については、「セキュリティ コンプライアンス センターで監査ログを検索する」 [を&してください](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide#search-the-audit-log)。
+コンプライアンス センターで監査ログOfficeスクリプトを使用しているテナントを確認します。 このツールの使い方については、「セキュリティ コンプライアンス センターで監査ログを検索する」 [を&してください](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide&preserve-view=true#search-the-audit-log)。
 
 検索ツールでスクリプトをOfficeするユーザーを検索するには、[ファイル]、フォルダー、またはサイト フィールド `.osts` **に追加** します。 これにより、スクリプト ファイル拡張子が Officeファイルが検索されます。 組織内のユーザーが [スクリプト] 機能を使用Office、監査ログの検索結果にユーザー アクティビティが表示されます。
 
