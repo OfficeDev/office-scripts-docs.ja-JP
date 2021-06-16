@@ -4011,7 +4011,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
+注: UI ページで参照されるフォントFluentアイコンReactは、以下に示す用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4036,7 +4036,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
+注: UI ページで参照されるフォントFluentアイコンReactは、以下に示す用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4061,7 +4061,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
+注: UI ページで参照されるフォントFluentアイコンReactは、以下に示す用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4460,7 +4460,7 @@ MIT ライセンス
 
 Copyright (c) Microsoft Corporation。
 
-Fluent UI React Foundation
+FluentUI React Foundation
 
 著作権 (c) Microsoft Corporation
 
@@ -4474,7 +4474,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
+注: UI ページで参照されるフォントFluentアイコンReactは、以下に示す用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4485,7 +4485,7 @@ MIT ライセンス
 
 著作権 (c) Microsoft Corporation
 
-Fluent UI React - アイコン
+FluentUI React - アイコン
 
 著作権 (c) Microsoft Corporation
 
@@ -4499,7 +4499,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
+注: UI ページで参照されるフォントFluentアイコンReactは、以下に示す用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4510,7 +4510,7 @@ MIT ライセンス
 
 Copyright (c) Microsoft Corporation。
 
-Fluent UI React - マージ スタイル
+FluentUI React - マージ スタイル
 
 著作権 (c) Microsoft Corporation
 
@@ -4524,7 +4524,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
+注: UI ページで参照されるフォントFluentアイコンReactは、以下に示す用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4549,7 +4549,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
+注: UI ページで参照されるフォントFluentアイコンReactは、以下に示す用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4574,7 +4574,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
+注: UI ページで参照されるフォントFluentアイコンReactは、以下に示す用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4585,7 +4585,7 @@ MIT ライセンス
 
 著作権 (c) Microsoft Corporation
 
-Fluent UI React - スタイル設定
+FluentUI React - スタイル設定
 
 著作権 (c) Microsoft Corporation
 
@@ -4599,7 +4599,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
+注: UI ページで参照されるフォントFluentアイコンReactは、以下に示す用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -4610,7 +4610,7 @@ MIT ライセンス
 
 著作権 (c) Microsoft Corporation
 
-Fluent UI React - ユーティリティ
+FluentUI React - ユーティリティ
 
 著作権 (c) Microsoft Corporation
 
@@ -4624,7 +4624,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
+注: UI ページで参照されるフォントFluentアイコンReactは、以下に示す用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -5186,11 +5186,11 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-ansi-regex 2.1.1 - MIT https://github.com/chalk/ansi-regex#readme
+ansi-regex 3.0.0 - MIT https://github.com/chalk/ansi-regex#readme
 
-(c) Sindre Sorhus ( http://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-MIT ライセンス (MIT)
+MIT ライセンス
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -5205,11 +5205,11 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-ansi-regex 3.0.0 - MIT https://github.com/chalk/ansi-regex#readme
+ansi-regex 2.1.1 - MIT https://github.com/chalk/ansi-regex#readme
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+(c) Sindre Sorhus ( http://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-MIT ライセンス
+MIT ライセンス (MIT)
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -6305,7 +6305,7 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-camelcase 5.3.1 - MIT https://github.com/sindresorhus/camelcase#readme
+camelcase 5.0.0 - MIT https://github.com/sindresorhus/camelcase#readme
 
 (c) Sindre Sorhus ( https://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -6324,7 +6324,7 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-camelcase 5.0.0 - MIT https://github.com/sindresorhus/camelcase#readme
+camelcase 5.3.1 - MIT https://github.com/sindresorhus/camelcase#readme
 
 (c) Sindre Sorhus ( https://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -6736,7 +6736,7 @@ Copyright (c) 2011 Heather Arthur <fayearthur@gmail.com>
 
 ---------------------------------------------------------
 
-commander 2.19.0 - MIT https://github.com/tj/commander.js#readme
+commander 2.17.1 - MIT https://github.com/tj/commander.js#readme
 
 Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -6756,7 +6756,7 @@ Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
 
 ---------------------------------------------------------
 
-commander 2.17.1 - MIT https://github.com/tj/commander.js#readme
+commander 2.19.0 - MIT https://github.com/tj/commander.js#readme
 
 Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -7476,7 +7476,7 @@ Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
 
 ---------------------------------------------------------
 
-debug 3.2.6 - MIT https://github.com/visionmedia/debug#readme
+debug 4.1.1 - MIT https://github.com/visionmedia/debug#readme
 
 Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -7496,7 +7496,7 @@ Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
 
 ---------------------------------------------------------
 
-debug 4.1.1 - MIT https://github.com/visionmedia/debug#readme
+debug 3.2.6 - MIT https://github.com/visionmedia/debug#readme
 
 Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -8300,14 +8300,14 @@ Copyright (c) 2014 Nathan Rajlich <nathan@tootallnate.net>
 
 ---------------------------------------------------------
 
-fill-range 7.0.1 - MIT https://github.com/jonschlinkert/fill-range
+fill-range 4.0.0 - MIT https://github.com/jonschlinkert/fill-range
 
-Copyright (c) 2014-present, Jon Schlinkert.
-Copyright (c) 2019, Jon Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2014-2015, 2017, Jon Schlinkert.
+Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2014-2017, Jon Schlinkert
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -8320,14 +8320,14 @@ Copyright (c) 2014-present, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-fill-range 4.0.0 - MIT https://github.com/jonschlinkert/fill-range
+fill-range 7.0.1 - MIT https://github.com/jonschlinkert/fill-range
 
-Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2014-2015, 2017, Jon Schlinkert.
-Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
+Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2019, Jon Schlinkert ( https://github.com/jonschlinkert) .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-2017, Jon Schlinkert
+Copyright (c) 2014-present, Jon Schlinkert.
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -9508,7 +9508,7 @@ Copyright (c) 2015-2017, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-isarray 0.0.1 - MIT https://github.com/juliangruber/isarray
+isarray 1.0.0 - MIT https://github.com/juliangruber/isarray
 
 Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
 
@@ -9526,7 +9526,7 @@ MIT ライセンス
 
 ---------------------------------------------------------
 
-isarray 1.0.0 - MIT https://github.com/juliangruber/isarray
+isarray 0.0.1 - MIT https://github.com/juliangruber/isarray
 
 Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
 
@@ -9738,7 +9738,7 @@ Copyright (c) 2015 Jordan Harband
 
 ---------------------------------------------------------
 
-is-descriptor 1.0.2 - MIT https://github.com/jonschlinkert/is-descriptor
+is-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-descriptor
 
 Copyright (c) 2015-2017, Jon Schlinkert.
 Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
@@ -9757,7 +9757,7 @@ Copyright (c) 2015-2017, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-is-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-descriptor
+is-descriptor 1.0.2 - MIT https://github.com/jonschlinkert/is-descriptor
 
 Copyright (c) 2015-2017, Jon Schlinkert.
 Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
@@ -9932,14 +9932,14 @@ Copyright (c) 2014-2017, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-is-number 7.0.0 - MIT https://github.com/jonschlinkert/is-number
+is-number 3.0.0 - MIT https://github.com/jonschlinkert/is-number
 
-Copyright (c) 2014-present, Jon Schlinkert.
-Copyright (c) 2018, Jon Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-2016, Jon Schlinkert Copyright (c) 2014-2015, Jon Schlinkert.
+Copyright (c) 2016, Jon Schlinkert ( https://github.com/jonschlinkert) .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2014-2016, Jon Schlinkert
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -9952,14 +9952,14 @@ Copyright (c) 2014-present, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-is-number 3.0.0 - MIT https://github.com/jonschlinkert/is-number
+is-number 7.0.0 - MIT https://github.com/jonschlinkert/is-number
 
-Copyright (c) 2014-2016, Jon Schlinkert Copyright (c) 2014-2015, Jon Schlinkert.
-Copyright (c) 2016, Jon Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2018, Jon Schlinkert ( https://github.com/jonschlinkert) .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-2016, Jon Schlinkert
+Copyright (c) 2014-present, Jon Schlinkert.
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -10314,12 +10314,15 @@ Copyright Mathias Bynens <https://mathiasbynens.be/>
 
 ---------------------------------------------------------
 
-json3 3.3.0 - MIT http://bestiejs.github.io/json3
+json3 3.3.3 - MIT https://bestiejs.github.io/json3
 
-Copyright (c) 2012-2014 Kit Cambridge. http://kitcambridge.be Copyright 2012-2014、 Kit Cambridge http://kit.mit-license.org
+Copyright (c) 2013-2015 Benjamin Tan. https://d10.github.io Copyright (c) 2012-2015 Kit Cambridge. http://kitcambridge.be Copyright 2012-2015, Kit Cambridge, Benjamin Tan http://kit.mit-license.org (c) 2012-2015 http://kitcambridge.be/ ' Kit Cambridge, https://d10.github.io/ ' Benjamin Tan
 
-Copyright (c) 2012-2014 Kit Cambridge.
+Copyright (c) 2012-2015 Kit Cambridge.
 http://kitcambridge.be/
+
+Copyright (c) 2013-2015 Benjamin Tan.
+https://d10.github.io/
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -10331,15 +10334,12 @@ http://kitcambridge.be/
 
 ---------------------------------------------------------
 
-json3 3.3.3 - MIT https://bestiejs.github.io/json3
+json3 3.3.0 - MIT http://bestiejs.github.io/json3
 
-Copyright (c) 2013-2015 Benjamin Tan. https://d10.github.io Copyright (c) 2012-2015 Kit Cambridge. http://kitcambridge.be Copyright 2012-2015, Kit Cambridge, Benjamin Tan http://kit.mit-license.org (c) 2012-2015 http://kitcambridge.be/ ' Kit Cambridge, https://d10.github.io/ ' Benjamin Tan
+Copyright (c) 2012-2014 Kit Cambridge. http://kitcambridge.be Copyright 2012-2014、 Kit Cambridge http://kit.mit-license.org
 
-Copyright (c) 2012-2015 Kit Cambridge.
+Copyright (c) 2012-2014 Kit Cambridge.
 http://kitcambridge.be/
-
-Copyright (c) 2013-2015 Benjamin Tan.
-https://d10.github.io/
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -11398,7 +11398,7 @@ Copyright 2010 James Halliday (mail@substack.net)
 
 ---------------------------------------------------------
 
-monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015 Copyright (c) Joshaven Potter Copyright (c) 2014 Taylor Hakes Copyright (c) Artyom Shalkhakov.
 Copyright (c) 2015 David Owens II Copyright (c) 2014 Forbes Lindesay Copyright (c) 2015 Nicolas Bevacqua Copyright (c) Microsoft Corporation.
@@ -11424,7 +11424,7 @@ Copyright (c) 2016 - 現在の Microsoft Corporation
 
 ---------------------------------------------------------
 
-monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015 Copyright (c) Joshaven Potter Copyright (c) 2014 Taylor Hakes Copyright (c) Artyom Shalkhakov.
 Copyright (c) 2015 David Owens II Copyright (c) 2014 Forbes Lindesay Copyright (c) 2015 Nicolas Bevacqua Copyright (c) Microsoft Corporation.
@@ -12019,7 +12019,7 @@ office-ui-fabric-react 7.115.1 - MIT https://github.com/microsoft/fluentui#readm
 Copyright (c) Microsoft.
 Copyright (c) Microsoft Corporation。
 
-Fluent UI React
+FluentUI React
 
 著作権 (c) Microsoft Corporation
 
@@ -12033,7 +12033,7 @@ MIT ライセンス
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わずに、現状のまま提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-注: Fluent UI で参照されるフォントとアイコンの使用法は、Reactに記載されている用語の対象です。https://aka.ms/fluentui-assets-license
+注: UI ページで参照されるフォントFluentアイコンReactは、以下に示す用語の対象です。https://aka.ms/fluentui-assets-license
 
 
 ---------------------------------------------------------
@@ -14222,36 +14222,6 @@ Copyright (c) React トレーニング 2016-2018
 
 ---------------------------------------------------------
 
-readable-stream 3.6.0 - MIT https://github.com/nodejs/readable-stream#readme
-
-Copyright Joyent, Inc. および他の Node 投稿者。
-
-Node.jsは、次のように使用できます。
-
-""" 著作権Node.js投稿者。 All rights reserved。
-
-ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
-
-上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
-
-ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
-"""
-
-このライセンスは、リポジトリからNode.jsの一部に適用 https://github.com/joyent/node されます。
-
-""" Copyright Joyent, Inc. および他の Node 投稿者。 All rights reserved。
-ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
-
-上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
-
-ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
-"""
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 readable-stream 2.3.7 - MIT https://github.com/nodejs/readable-stream#readme
 
 Copyright Joyent, Inc. および他の Node 投稿者。
@@ -14282,19 +14252,30 @@ Node.jsは、次のように使用できます。
 
 ---------------------------------------------------------
 
-readdirp 3.4.0 - MIT https://github.com/paulmillr/readdirp
+readable-stream 3.6.0 - MIT https://github.com/nodejs/readable-stream#readme
 
-Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller ( https://paulmillr.com) Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller <https://paulmillr.com>
+Copyright Joyent, Inc. および他の Node 投稿者。
 
-MIT ライセンス
+Node.jsは、次のように使用できます。
 
-Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com)
+""" 著作権Node.js投稿者。 All rights reserved。
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
 上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+"""
+
+このライセンスは、リポジトリからNode.jsの一部に適用 https://github.com/joyent/node されます。
+
+""" Copyright Joyent, Inc. および他の Node 投稿者。 All rights reserved。
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+"""
 
 
 ---------------------------------------------------------
@@ -14308,6 +14289,25 @@ Copyright (c) 2012-2015 Thorsten Lorenz
 このソフトウェアは、MIT ライセンスの下でリリースされます。
 
 Copyright (c) 2012-2015 Thorsten Lorenz
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+readdirp 3.4.0 - MIT https://github.com/paulmillr/readdirp
+
+Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller ( https://paulmillr.com) Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller <https://paulmillr.com>
+
+MIT ライセンス
+
+Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com)
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -14979,7 +14979,7 @@ MIT ライセンス
 
 ---------------------------------------------------------
 
-schema-utils 1.0.0 - MIT https://github.com/webpack-contrib/schema-utils
+schema-utils 2.7.0 - MIT https://github.com/webpack/schema-utils
 
 Copyright JS Foundation および他の投稿者
 
@@ -14997,7 +14997,7 @@ Copyright JS Foundation および他の投稿者
 
 ---------------------------------------------------------
 
-schema-utils 2.7.0 - MIT https://github.com/webpack/schema-utils
+schema-utils 1.0.0 - MIT https://github.com/webpack-contrib/schema-utils
 
 Copyright JS Foundation および他の投稿者
 
@@ -15616,7 +15616,7 @@ Copyright (c) 2017 Khaled Al-Ansari
 
 ---------------------------------------------------------
 
-string_decoder 1.1.1 - MIT https://github.com/nodejs/string_decoder
+string_decoder 1.3.0 - MIT https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. および他の Node 投稿者。
 
@@ -15647,7 +15647,7 @@ Node.jsは、次のように使用できます。
 
 ---------------------------------------------------------
 
-string_decoder 1.3.0 - MIT https://github.com/nodejs/string_decoder
+string_decoder 1.1.1 - MIT https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. および他の Node 投稿者。
 
@@ -15697,7 +15697,7 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-strip-ansi 4.0.0 - MIT https://github.com/chalk/strip-ansi#readme
+strip-ansi 5.2.0 - MIT https://github.com/chalk/strip-ansi#readme
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -15716,7 +15716,7 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-strip-ansi 5.2.0 - MIT https://github.com/chalk/strip-ansi#readme
+strip-ansi 4.0.0 - MIT https://github.com/chalk/strip-ansi#readme
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 

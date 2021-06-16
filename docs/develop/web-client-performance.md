@@ -3,12 +3,12 @@ title: スクリプトのパフォーマンスをOfficeする
 description: ブックとスクリプトの間の通信を理解Excelスクリプトを作成します。
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 512e2108cb81cf9ac8ae98980951d5d01b3d2de9
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: a5bd879625b9c3bac0caa621dde312f7c961dd5c
+ms.sourcegitcommit: 2aaf7dc527cb6c9f1206550b2c5745280503b2a3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52544992"
+ms.lasthandoff: 06/16/2021
+ms.locfileid: "52957701"
 ---
 # <a name="improve-the-performance-of-your-office-scripts"></a>スクリプトのパフォーマンスをOfficeする
 
@@ -100,7 +100,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="case-by-case-help"></a>ケース バイ ケース のヘルプ
 
-Office スクリプト プラットフォームが[拡張され、Power Automate、](https://flow.microsoft.com/)[アダプティブ](/adaptive-cards)カード、その他のクロスプロダクト機能を使用する場合、スクリプト ブックの通信の詳細が複雑になります。 スクリプトの実行速度を上げ支援が必要な場合は [、Microsoft Q](/answers/topics/office-scripts-dev.html)&してください。 専門家が質問を見つけて支援できるよう、質問に "office-scripts-dev" をタグ付けしてください。
+Office スクリプト プラットフォームが[拡張され、Power Automate、](https://flow.microsoft.com/)[アダプティブ](/adaptive-cards)カード、その他のクロスプロダクト機能を使用する場合、スクリプト ブックの通信の詳細が複雑になります。 スクリプトの実行速度を上げ支援が必要な場合は [、Microsoft Q](/answers/topics/office-scripts-excel-dev.html)&してください。 専門家が質問を見つけて支援できるよう、質問に "office-scripts-dev" をタグ付けしてください。
 
 ## <a name="see-also"></a>関連項目
 
