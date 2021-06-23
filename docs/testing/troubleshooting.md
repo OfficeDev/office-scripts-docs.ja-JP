@@ -3,12 +3,12 @@ title: スクリプトOfficeトラブルシューティング
 description: スクリプトのデバッグのヒントとOfficeヘルプ リソース。
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 04ea0ea5d49d40667d249a6f4f4b109e03362940
-ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
+ms.openlocfilehash: 251ad72588422a86c52c81666164c2c4bd79bdb5
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631704"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074649"
 ---
 # <a name="troubleshoot-office-scripts"></a>スクリプトOfficeトラブルシューティング
 
@@ -25,7 +25,7 @@ Officeスクリプトエラーは、次の 2 つのカテゴリに分類され�
 
 コンパイル時のエラーと警告は、最初はコード エディターに表示されます。 これらは、エディターの波状の赤い下線で表示されます。 また、[コード エディター] 作業ウィンドウ **の** 下部にある [問題] タブにも表示されます。 エラーを選択すると、問題の詳細と解決策の提案が表示されます。 コンパイル時のエラーは、スクリプトを実行する前に対処する必要があります。
 
-:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="コード エディターのホバー テキストに表示されるコンパイラ エラー":::
+:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="コード エディターのホバー テキストに表示されるコンパイラ エラー。":::
 
 オレンジ色の警告の下線と灰色の情報メッセージが表示される場合があります。 これらは、スクリプトが意図しない効果を持つ可能性があるパフォーマンスの提案や他の可能性を示します。 このような警告は、却下する前に注意して調べる必要があります。
 
@@ -47,10 +47,10 @@ function main(workbook: ExcelScript.Workbook) {
 コンパイル時と実行時の両方のエラーは、スクリプトの実行時にコンソールにエラー メッセージを表示します。 問題が発生した行番号を指定します。 問題の根本原因は、コンソールで示されているコードとは異なるコード行である可能性があります。
 
 次の図は、明示的なコンパイラ エラーのコンソール[出力を `any` ](../develop/typescript-restrictions.md)示しています。 エラー文字列の `[5, 16]` 先頭にあるテキストに注意してください。 これは、エラーが 5 行目で、文字 16 から始まるかどうかを示します。
-:::image type="content" source="../images/explicit-any-error-message.png" alt-text="明示的な 'any' エラー メッセージを表示するコード エディター コンソール":::
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="明示的な 'any' エラー メッセージを表示するコード エディター コンソール。":::
 
 次の図は、実行時エラーのコンソール出力を示しています。 ここでは、既存のワークシートの名前を持つワークシートを追加します。 ここでも、エラーの前の "2 行目" に注意して、調査する行を表示します。
-:::image type="content" source="../images/runtime-error-console.png" alt-text="'addWorksheet' 呼び出しからのエラーを表示するコード エディター コンソール":::
+:::image type="content" source="../images/runtime-error-console.png" alt-text="'addWorksheet' 呼び出しからのエラーを表示するコード エディター コンソール。":::
 
 ## <a name="console-logs"></a>コンソール ログ
 
@@ -72,7 +72,7 @@ console.log(myRange.getAddress());
 1. [ライセンスにスクリプトMicrosoft 365含Officeしてください](../overview/excel.md#requirements)。
 1. [ブラウザーがサポートされていないことを確認します](platform-limits.md#browser-support)。
 1. [サードパーティの Cookie が有効になっているか確認します](platform-limits.md#third-party-cookies)。
-1. [管理者が管理センターのスクリプトOffice無効にMicrosoft 365します](/microsoft-365/admin/manage/manage-office-scripts-settings)。
+1. [管理者が[スクリプト] の [スクリプトOffice無効にMicrosoft 365 管理センター。](/microsoft-365/admin/manage/manage-office-scripts-settings)
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
@@ -84,11 +84,11 @@ console.log(myRange.getAddress());
 
 [スタック オーバーフロー](https://stackoverflow.com/questions/tagged/office-scripts) は、コーディングの問題を支援する開発者のコミュニティです。 多くの場合、スタック オーバーフローのクイック検索を使用して、問題の解決策を見つける可能性があります。 そうでない場合は、質問をして"office-scripts" タグでタグ付けします。 アドインではなく、Office *スクリプト* を作成Office *してください*。
 
-Office スクリプトの機能要求を送信するには、アイデアを [ユーザー音声[](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439)] ページに投稿するか、機能要求が既に存在する場合は、そのユーザーに投票を追加します。 [マクロ、スクリプト、アドインExcel] カテゴリの Web の下に要求を送信してください。
+Office スクリプトの機能要求を送信するには、アイデアを [ユーザー音声[](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439)] ページに投稿するか、機能要求が既に存在する場合は、そのユーザーに投票を追加します。 [マクロ、スクリプト、アドイン] Excel for the webで要求をファイルしてください。
 
 アクション レコーダーまたはエディターに問題がある場合は、お知らせください。 [コード エディター] 作業ウィンドウの **...** メニューで、[フィードバックの送信] ボタンを選択して問題を共有します。
 
-:::image type="content" source="../images/code-editor-feedback.png" alt-text="[フィードバックの送信] ボタンを使用したコード エディターのオーバーフロー メニュー":::
+:::image type="content" source="../images/code-editor-feedback.png" alt-text="[フィードバックの送信] ボタンを含むコード エディターのオーバーフロー メニュー。":::
 
 ## <a name="see-also"></a>関連項目
 

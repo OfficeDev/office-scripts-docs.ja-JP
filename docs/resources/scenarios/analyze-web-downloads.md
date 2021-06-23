@@ -3,12 +3,12 @@ title: 'Officeスクリプトのサンプル シナリオ: Web ダウンロー�
 description: ブック内の生のインターネット トラフィック データをExcel、その情報をテーブルに整理する前に、元の場所を決定するサンプル。
 ms.date: 04/27/2021
 localization_priority: Normal
-ms.openlocfilehash: 6c5958e9957ca49c370ae34456236bdd15f41c44
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: bdd6b43290e5432d87c4a85a35fbaf32967fbf03
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232712"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074460"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Officeスクリプトのサンプル シナリオ: Web ダウンロードの分析
 
@@ -29,7 +29,7 @@ ms.locfileid: "52232712"
 
 1. ユーザー <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a>にダウンロードOneDrive。
 
-2. Web 用のブックExcel開きます。
+2. ブックを開き、Excel for the web。
 
 3. [自動化] **タブで** 、[すべてのスクリプト] **を開きます**。
 
@@ -217,10 +217,10 @@ ms.locfileid: "52232712"
 
 ### <a name="before-running-the-script"></a>スクリプトを実行する前に
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="生の Web トラフィック データを表示するワークシート":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="生の Web トラフィック データを表示するワークシート。":::
 
 ### <a name="after-running-the-script"></a>スクリプトの実行後
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="前の Web トラフィック行で書式設定された IP 場所情報を表示するワークシート":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="前の Web トラフィック行で書式設定された IP 場所情報を表示するワークシート。":::
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="スクリプトが実行されたワークシートをまとめたサマリー テーブルとグラフ":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="スクリプトが実行されたワークシートをまとめたサマリー テーブルとグラフ。":::

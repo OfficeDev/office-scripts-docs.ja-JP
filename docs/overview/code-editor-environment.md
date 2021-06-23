@@ -3,12 +3,12 @@ title: Officeスクリプト コード エディター環境
 description: スクリプトの前提条件と環境情報は、OfficeスクリプトExcel on the web。
 ms.date: 05/27/2021
 localization_priority: Normal
-ms.openlocfilehash: 2334b0f98dfe03d97c35e6d1f54eeb45c06a134c
-ms.sourcegitcommit: c75f71b8abde962e922927a18145dd1d9b361b05
+ms.openlocfilehash: 4a8adc03e372bc769fb44b1c4e3e98c7a4531756
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/03/2021
-ms.locfileid: "52731142"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074467"
 ---
 # <a name="office-scripts-code-editor-environment"></a>Officeスクリプト コード エディター環境
 
@@ -34,11 +34,11 @@ Officeスクリプトは、外部のサードパーティの JavaScript ライ�
 
 IntelliSenseは、コードの記述に役立つ一連のコード エディター機能です。 オートコンプリート、構文エラー強調表示、インライン API ドキュメントを提供します。
 
-IntelliSense入力時に候補を表示します。入力時の候補テキストと同様Excel。 Tab キーまたは Enter キーを押すと、候補メンバーが挿入されます。 Ctrl IntelliSenseスペース キーを押して、現在のカーソル位置でトリガーします。 これらの提案は、メソッドを完了するときに特に便利です。 IntelliSense によって表示されるメソッドシグネチャには、必要な引数の一覧、各引数の型、指定した引数が必須か省略可能か、メソッドの戻り値の型が含まれる。
+IntelliSense入力時に、入力時の候補テキストと同様に、候補が表示Excel。 Tab キーまたは Enter キーを押すと、候補メンバーが挿入されます。 Ctrl IntelliSenseスペース キーを押して、現在のカーソル位置でトリガーします。 これらの提案は、メソッドを完了するときに特に便利です。 IntelliSense によって表示されるメソッドシグネチャには、必要な引数の一覧、各引数の型、指定した引数が必須か省略可能か、メソッドの戻り値の型が含まれる。
 
 メソッド、クラス、または他のコード オブジェクトの上にカーソルを置くと、詳細が表示されます。 赤または黄色の線で表される構文エラーまたはコード候補にカーソルを合わせると、問題の解決方法に関する提案が表示されます。 多くの場合IntelliSenseコードを自動的に変更するための "クイック修正" オプションが提供されます。
 
-:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="コード エディターのホバー テキストに [クイック修正] ボタンが表示されるエラー メッセージ":::
+:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="コード エディターのホバー テキストに 'Quick Fix' ボタンが表示されたエラー メッセージ。":::
 
 スクリプト Office コード エディターは、スクリプト コード エディターと同IntelliSenseエンジンをVisual Studio Code。 この機能の詳細については、「Visual Studio Code[機能」をIntelliSenseしてください](https://code.visualstudio.com/docs/editor/intellisense#_intellisense-features)。
 

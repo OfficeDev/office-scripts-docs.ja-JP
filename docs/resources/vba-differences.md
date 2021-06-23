@@ -3,19 +3,19 @@ title: スクリプトと VBA Officeの違い
 description: スクリプトと VBA マクロの動作Office API Excel違い。
 ms.date: 05/21/2021
 localization_priority: Normal
-ms.openlocfilehash: 8be7388221d0f1b9e8142177de526c5c7828b426
-ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
+ms.openlocfilehash: c934b546834e018e5bac1da4d90043eb3bb52e63
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631671"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074418"
 ---
 # <a name="differences-between-office-scripts-and-vba-macros"></a>スクリプトと VBA Officeの違い
 
 Officeスクリプトと VBA マクロには多くの共通点があります。 どちらも、ユーザーが使いやすいアクション レコーダーを使用してソリューションを自動化し、それらの記録の編集を許可します。 どちらのフレームワークも、プログラマが自分を考慮しない可能性があるユーザーに、小規模なプログラムを作成する権限を与Excel。
 基本的な違いは、VBA マクロがデスクトップ ソリューション用に開発され、スクリプトOfficeクラウドベースのソリューション用に設計されている点です。 現在、Officeスクリプトは、このスクリプトでのみExcel on the web。
 
-:::image type="content" source="../images/office-programmability-diagram.png" alt-text="さまざまな拡張ソリューションのフォーカス領域を示す 4 象限Office図。Office スクリプトと VBA マクロの両方は、エンド ユーザーがソリューションを作成するのに役立つ設計ですが、Office スクリプトは Web とコラボレーション用に構築されています (VBA はデスクトップ用です)。":::
+:::image type="content" source="../images/office-programmability-diagram.png" alt-text="さまざまな拡張ソリューションのフォーカス領域を示す 4 象限Office図。スクリプトOffice VBA マクロはどちらも、エンド ユーザーがソリューションを作成するのに役立つ設計ですが、Office スクリプトは Web とコラボレーション用に構築されています (VBA はデスクトップ用です)。":::
 
 この記事では、VBA マクロ (および VBA 全般) とスクリプトの主な違いOffice説明します。 このOfficeスクリプトは、Excelでしか使用できないので、ここで説明する唯一のホストです。
 

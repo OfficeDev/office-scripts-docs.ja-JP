@@ -3,12 +3,12 @@ title: フォルダー内のすべての Excel ファイルでスクリプトを
 description: フォルダー内のすべてのファイルに対してスクリプトExcel実行する方法について説明OneDrive for Business。
 ms.date: 05/03/2021
 localization_priority: Normal
-ms.openlocfilehash: fb9a4deb01b52ef031cb1ba3400bd6f10de9d9f5
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 83e091a8b009bac577da9ed53dcf4139c1b845c9
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545793"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074586"
 ---
 # <a name="run-a-script-on-all-excel-files-in-a-folder"></a>フォルダー内のすべての Excel ファイルでスクリプトを実行する
 
@@ -77,21 +77,21 @@ function main(workbook: ExcelScript.Workbook) {
 1. [フロー **を手動でトリガーする] を選択し** 、[作成] を **押します**。
 1. [フォルダー内 **のファイルの一** 覧] **OneDrive for Businessを使用** する新 **しい手順を追加** します。
 
-    :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="OneDrive for Businessの完成したコネクタPower Automate":::
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="完了したOneDrive for BusinessコネクタをPower Automate。":::
 1. 抽出されたブックを含む "Sales" フォルダーを選択します。
 1. ブックのみを選択するには、[新しい手順] を選択し、[条件]**を選択****し**、次の値を設定します。
     1. **名前**(ファイルOneDrive値)
     1. "ends with"
     1. "xlsx"
 
-    :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="各Power Automateに後続のアクションを適用する条件ブロック":::
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="後続Power Automateを各ファイルに適用する条件ブロックを指定します。":::
 1. [**はい] ブランチで**、[スクリプトの実行] アクションExcel **オンライン (Business)** コネクタ **を追加** します。 アクションには、次の値を使用します。
     1. **場所**: OneDrive for Business
     1. **ドキュメント ライブラリ**: OneDrive
     1. **ファイル**: **Id** (OneDrive ID 値)
     1. **スクリプト**: スクリプト名
 
-    :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="オンライン (Excel) コネクタの完成Power Automate":::
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="オンライン (Excel) コネクタの完成Power Automate。":::
 1. フローを保存し、試してみてください。
 
 ## <a name="training-video-run-a-script-on-all-excel-files-in-a-folder"></a>トレーニング ビデオ: フォルダー内のすべてのファイルExcelスクリプトを実行する

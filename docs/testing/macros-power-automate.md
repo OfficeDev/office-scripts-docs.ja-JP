@@ -3,12 +3,12 @@ title: データ フローでマクロ ファイルをPower Automateする
 description: これらのフローでマクロ ファイルまたは xlsm ファイルを使用するPower Automateします。
 ms.date: 04/28/2021
 localization_priority: Normal
-ms.openlocfilehash: b232a1d31a7ff6e28016c5e28fd8a83c8d3f1859
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 91e11424e4220a3e1f80cdd2711d05f219016147
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232656"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074642"
 ---
 # <a name="how-to-use-macro-files-in-power-automate-flows"></a>データ フローでマクロ ファイルをPower Automateする方法
 
@@ -16,7 +16,7 @@ ms.locfileid: "52232656"
 
 ただし、ファイル ドロップダウンでマクロ ファイルを選択できない (次のスクリーンショットの例を参照)。
 
-:::image type="content" source="../images/no-xlsm.png" alt-text="[Power Automateスクリプトの実行] アクションで、選択されているマクロ ファイルが表示されません。表示されるエラーは 'File' が必要です":::
+:::image type="content" source="../images/no-xlsm.png" alt-text="[Power Automateスクリプトの実行] アクションで、選択されているマクロ ファイルが表示されません。表示されるエラーは、'File' が必要です。":::
 
 この問題を回避する 1 つの方法は、次のスクリーンショットに示すように、"ファイル メタデータの取得" アクション (OneDrive または SharePoint) を含め、"スクリプトの実行" アクションで ID プロパティを使用することです。
 

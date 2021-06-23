@@ -3,18 +3,18 @@ title: Office スクリプトと Office アドインの違い
 description: スクリプトとアドインの動作Office API Office違い。
 ms.date: 06/02/2021
 localization_priority: Normal
-ms.openlocfilehash: 46f5f2ea6fea15e9506f5c7d30941311fc2e669e
-ms.sourcegitcommit: 0bfc9472d107e32c804029659317f8e81fec5d19
+ms.openlocfilehash: 17d66e37c7bf2b1263c0232bb0afb3ee4d29aa36
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2021
-ms.locfileid: "52779364"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074565"
 ---
 # <a name="differences-between-office-scripts-and-office-add-ins"></a>Office スクリプトと Office アドインの違い
 
 各スクリプトと OfficeアドインOfficeの違いを理解し、各アドインをいつ使用する必要が生じ得るのかについて理解します。 Officeスクリプトは、ワークフローの改善を探しているすべてのユーザーが迅速に作成するように設計されています。 Officeアドインは、リボン ボタンと作業ウィンドウOffice対話型の UI と統合します。 Officeアドインは、カスタム関数を提供することで、組み込Excel機能を拡張できます。
 
-:::image type="content" source="../images/office-programmability-diagram.png" alt-text="さまざまな拡張ソリューションのフォーカス領域を示す 4 象限Office図。Office スクリプトと Office Web アドインの両方が Web とコラボレーションに焦点を当て、Office スクリプトはエンド ユーザーに対応します (一方、Office Web アドインはプロの開発者を対象とします)":::
+:::image type="content" source="../images/office-programmability-diagram.png" alt-text="さまざまな拡張ソリューションのフォーカス領域を示す 4 象限Office図。Office スクリプトと Office Web アドインの両方が Web とコラボレーションに焦点を当て、Office スクリプトはエンド ユーザーに対応します (一方、Office Web アドインはプロフェッショナル開発者を対象としています)。":::
 
 Officeスクリプトは手動でボタンを押して実行するか[、Power Automate](https://flow.microsoft.com/)でステップとして実行しますが、Office アドインは構成方法に応じて実行を続行します。 たとえば、作業ウィンドウが閉Office実行を続行するアドインを構成できます。 つまり、Officeアドインはセッション中に状態を維持しますが、Officeスクリプトは実行の間に内部状態を維持します。 構築するソリューションに保守状態が必要な場合は、Office アドインの[](/office/dev/add-ins)ドキュメントを参照して、Office アドインの詳細を確認する必要があります。
 

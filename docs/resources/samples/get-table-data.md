@@ -3,12 +3,12 @@ title: JSON Excelデータを出力する
 description: テーブル データを JSON Excelとして出力する方法について説明します。Power Automate。
 ms.date: 05/06/2021
 localization_priority: Normal
-ms.openlocfilehash: 9b8c0c48b969cfd05750ca4a6703a5ecbb9d18d2
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: fefeda4f7e60880758f8f01e03f437a70c4111d4
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285816"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074572"
 ---
 # <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>テーブルExcelを JSON として出力して、テーブルの使用状況をPower Automate
 
@@ -16,17 +16,17 @@ Excelデータは、JSON 形式のオブジェクトの配列として表され�
 
 _入力テーブル のデータ_
 
-:::image type="content" source="../../images/table-input.png" alt-text="入力テーブル のデータを示すワークシート":::
+:::image type="content" source="../../images/table-input.png" alt-text="入力テーブル データを示すワークシート。":::
 
 このサンプルのバリエーションには、表の列の 1 つにもハイパーリンクが含まれています。 これにより、追加レベルのセル データを JSON に表示できます。
 
 _ハイパーリンクを含む入力テーブル データ_
 
-:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="ハイパーリンクとして書式設定されたテーブル データの列を示すワークシート":::
+:::image type="content" source="../../images/table-hyperlink-view.png" alt-text="ハイパーリンクとして書式設定されたテーブル データの列を示すワークシート。":::
 
 _ハイパーリンクを編集するダイアログ_
 
-:::image type="content" source="../../images/table-hyperlink-edit.png" alt-text="ハイパーリンクを変更するためのオプションを表示する [ハイパーリンクの編集] ダイアログ ボックス":::
+:::image type="content" source="../../images/table-hyperlink-edit.png" alt-text="ハイパーリンクを変更するためのオプションを表示する [ハイパーリンクの編集] ダイアログ ボックス。":::
 
 ## <a name="sample-excel-file"></a>サンプル Excel ファイル
 

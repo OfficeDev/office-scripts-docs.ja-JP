@@ -3,12 +3,12 @@ title: Excel on the web での Office スクリプトのスクリプトの基本
 description: Office スクリプトを作成する前に理解しておくべきオブジェクト モデルの情報と他の基本事項について説明します。
 ms.date: 05/24/2021
 localization_priority: Priority
-ms.openlocfilehash: 629e816ea988d6b8ffe5264c701e3a1eba6c6feb
-ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
+ms.openlocfilehash: 9c3c10e283e40f1e719e73106bcdacfcff44dbc9
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52639895"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074509"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Excel on the web での Office スクリプトのスクリプトの基本事項
 
@@ -112,7 +112,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 このスクリプトを実行すると、現在のワークシートに次のデータが作成されます。
 
-:::image type="content" source="../images/range-sample.png" alt-text="値の行、数式の列、フォーマットされたヘッダーを含む売上記録を含むワークシート":::
+:::image type="content" source="../images/range-sample.png" alt-text="値の行、数式の列、フォーマットされたヘッダーを含む売上記録を含むワークシート。":::
 
 ### <a name="the-types-of-range-values"></a>レンジ値の種類
 
@@ -162,7 +162,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 前のデータを含むワークシート上でこのスクリプトを実行すると、次のテーブルが作成されます。
 
-:::image type="content" source="../images/table-sample.png" alt-text="前の売上記録から作成された表を含むワークシート":::
+:::image type="content" source="../images/table-sample.png" alt-text="前の売上記録から作成された表を含むワークシート。":::
 
 ### <a name="create-a-chart"></a>グラフの作成
 

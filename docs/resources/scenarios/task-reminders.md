@@ -3,12 +3,12 @@ title: 'Officeスクリプトのサンプル シナリオ: タスクの自動ア
 description: プロジェクト管理スプレッドシートでPower Automateアダプティブ カードを使用するサンプルは、タスクリマインダーを自動化します。
 ms.date: 11/30/2020
 localization_priority: Normal
-ms.openlocfilehash: c254a627da8442c0974263908a41275182740b6e
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 1297f10e45c515079994d659378331fc4a2be744
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545611"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074663"
 ---
 # <a name="office-scripts-sample-scenario-automated-task-reminders"></a>Officeスクリプトのサンプル シナリオ: タスクの自動アラーム
 
@@ -154,14 +154,14 @@ ms.locfileid: "52545611"
 
 10. [オプション **からフローを手動でトリガーする** ] を選択し、[作成] を **押します**。
 
-11. フローは、空の状態フィールドを持つすべての従業員を取得するために Get **People** スクリプトを呼び出す必要があります。 [**新しい手順] を** 押し、[**オンラインExcel (Business) を選択します**。 [アクション **] で**、[スクリプトの **実行] を選択します**。 フロー ステップに次のエントリを指定します。
+11. フローは、空の状態フィールドを持つすべての従業員を取得するために Get **People** スクリプトを呼び出す必要があります。 [**新しい手順] を** 押し、[**オンラインExcel (Business) を選択します**。 **[アクション]** で、**[スクリプトの実行]** を選択します。 フロー ステップに次のエントリを指定します。
 
     - **場所**: OneDrive for Business
     - **ドキュメント ライブラリ**: OneDrive
     - **ファイル**: task-reminders.xlsx *(ファイル ブラウザーから選択)*
     - **スクリプト**: ユーザーを取得する
 
-    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="最初Power Automateスクリプト フロー の手順を示す手順の一部を示すフロー":::
+    :::image type="content" source="../../images/scenario-task-reminders-first-flow-step.png" alt-text="最初Power Automateスクリプト フロー の手順を示す手順を示す手順を示します。":::
 
 12. 次に、フローは、スクリプトによって返される配列内の各 Employee を処理する必要があります。 [**新しい手順]** を押し、[アダプティブ カードをユーザーにTeamsして応答を **待つ] を選択します**。
 
@@ -213,7 +213,7 @@ ms.locfileid: "52545611"
     - **更新メッセージ**: ステータス レポートを提出してありがとうございます。 応答がスプレッドシートに正常に追加されました。
     - **カードを更新する必要があります**: はい
 
-16. [各 **ブロックに適用]** で、[アダプティブ カードをユーザーに投稿Teams応答を待つ] の後、[アクションの追加 **] を押します**。 [オンライン **Excel (Business) を選択します**。 [アクション **] で**、[スクリプトの **実行] を選択します**。 フロー ステップに次のエントリを指定します。
+16. [各 **ブロックに適用]** で、[アダプティブ カードをユーザーに投稿Teams応答を待つ] の後、[アクションの追加 **] を押します**。 [オンライン **Excel (Business) を選択します**。 **[アクション]** で、**[スクリプトの実行]** を選択します。 フロー ステップに次のエントリを指定します。
 
     - **場所**: OneDrive for Business
     - **ドキュメント ライブラリ**: OneDrive
@@ -222,7 +222,7 @@ ms.locfileid: "52545611"
     - **senderEmail**: メール *(メールからの動的Excel)*
     - **statusReportResponse**: 応答 *(Teams)*
 
-    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="各Power Automate適用を示すデータ フロー":::
+    :::image type="content" source="../../images/scenario-task-reminders-last-flow-step.png" alt-text="各Power Automate適用を示すフローを示す手順を示します。":::
 
 17. フローを保存します。
 
@@ -234,12 +234,12 @@ ms.locfileid: "52545611"
 
 ### <a name="before-running-the-flow"></a>フローを実行する前に
 
-:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-before.png" alt-text="不足している状態エントリが 1 つ含まれる状態レポートを含むワークシート":::
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-before.png" alt-text="不足している状態エントリが 1 つ含まれる状態レポートを含むワークシート。":::
 
 ### <a name="receiving-the-adaptive-card"></a>アダプティブ カードの受信
 
-:::image type="content" source="../../images/scenario-task-reminders-adaptive-card.png" alt-text="ステータスの更新をTeamsするアダプティブ カード":::
+:::image type="content" source="../../images/scenario-task-reminders-adaptive-card.png" alt-text="ステータスの更新をTeamsするアダプティブ カード。":::
 
 ### <a name="after-running-the-flow"></a>フローの実行後
 
-:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-after.png" alt-text="現在入力されている状態エントリを持つ状態レポートを含むワークシート":::
+:::image type="content" source="../../images/scenario-task-reminders-spreadsheet-after.png" alt-text="現在入力されている状態エントリを持つ状態レポートを含むワークシート。":::

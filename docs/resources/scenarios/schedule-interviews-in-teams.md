@@ -1,14 +1,14 @@
 ---
-title: 面接のスケジュールを設定Teams
+title: Teams で面接をスケジュールする
 description: '[スクリプト] を使用してOfficeデータから会議Teams送信するExcelします。'
 ms.date: 05/25/2021
 localization_priority: Normal
-ms.openlocfilehash: f93d9ceca6603ddb9e7123a393787fcf54597cca
-ms.sourcegitcommit: 339ecbb9914d54f919e3475018888fb5d00abe89
+ms.openlocfilehash: 66dae536c4a51ff3e028f06bf3aef3c7509d83bb
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2021
-ms.locfileid: "52697785"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074432"
 ---
 # <a name="office-scripts-sample-scenario-schedule-interviews-in-teams"></a>Officeスクリプトのサンプル シナリオ: スケジュールの面接のスケジュールを設定Teams
 
@@ -140,7 +140,7 @@ interface InterviewInvite {
     1. **場所**: OneDrive for Business
     1. **ドキュメント ライブラリ**: OneDrive
     1. **ファイル**: hr-interviews.xlsx *(ファイル ブラウザーから選択)*
-    1. **スクリプト**: オンライン :::image type="content" source="../../images/schedule-interviews-1.png" alt-text="(Business)":::コネクタで完了したExcelのスケジュール のスクリーンショットを使用して、ブックからインタビュー データを取得Power Automate
+    1. **スクリプト**: オンライン :::image type="content" source="../../images/schedule-interviews-1.png" alt-text="(Business) コネクタExcel完了したインタビュー":::のスクリーンショットをスケジュールして、ブックからインタビュー データを取得Power Automate。
 1. [会議の **作成] アクション** を使用する **新しいTeams追加** します。 コネクタから動的コンテンツを選択Excel、フローに対して各ブロックに **適用** が生成されます。 コネクタに次の値を入力します。
     1. **予定表 ID**: Calendar
     1. **件名**: Contoso インタビュー
@@ -148,13 +148,13 @@ interface InterviewInvite {
     1. **タイム ゾーン**: 太平洋標準時
     1. **開始時刻**: **StartTime** (Excel値)
     1. **終了時刻**: **FinishTime** (Excel値)
-    1. **必須の出席者**: **CandidateEmail** ;**InterviewerEmail** (Excel値) 完了したコネクタのスクリーンショットTeamsで会議をスケジュール :::image type="content" source="../../images/schedule-interviews-2.png" alt-text="Power Automate":::
+    1. **必須の出席者**: **CandidateEmail** ;**InterviewerEmail** (Excel値) 完了したコネクタのスクリーンショットTeamsで会議をスケジュール :::image type="content" source="../../images/schedule-interviews-2.png" alt-text="Power Automate。":::
 1. 同じ [各 **ブロックに適用] で**、[スクリプトの実行] アクションExcel **オンライン (Business)** コネクタを **追加** します。 次の値を使用します。
     1. **場所**: OneDrive for Business
     1. **ドキュメント ライブラリ**: OneDrive
     1. **ファイル**: hr-interviews.xlsx *(ファイル ブラウザーから選択)*
     1. **スクリプト**: 送信された招待を記録する
-    1. **invites**: **result** (Excel 値) 完了した :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="Excel Online (Business)":::コネクタのスクリーンショットで、招待が送信されたと記録Power Automate
+    1. **invites**:**結果**(Excel 値) Excel Online (Business) コネクタのスクリーンショットで、招待が Power Automate で送信 :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="されたレコードを記録します。":::
 1. フローを保存し、試してみてください。
 
 ## <a name="training-video-send-a-teams-meeting-from-excel-data"></a>トレーニング ビデオ: データからTeams会議をExcelする

@@ -3,12 +3,12 @@ title: Officeで実行されているスクリプトのトラブルシューテ�
 description: ヒント、プラットフォーム情報、および既知の問題と、スクリプトとスクリプトのOffice統合Power Automate。
 ms.date: 05/18/2021
 localization_priority: Normal
-ms.openlocfilehash: 3d114b8b9aceb95285ecfc78ddbd868541b9f04c
-ms.sourcegitcommit: 09d8859d5269ada8f1d0e141f6b5a4f96d95a739
+ms.openlocfilehash: 7ba128314c0d632a3e77792b7ee545bfb7dca71d
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2021
-ms.locfileid: "52631665"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074635"
 ---
 # <a name="troubleshoot-office-scripts-running-in-power-automate"></a>Officeで実行されているスクリプトのトラブルシューティングPower Automate
 
@@ -27,7 +27,7 @@ Power Automate、選択したブックでスクリプトをExcel代わりに実�
 
 次のメソッドは、エラーをスローし、エラー フロー内のスクリプトから呼び出Power Automateします。
 
-| クラス | Method |
+| クラス | メソッド |
 |--|--|
 | [グラフ](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
 | [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
@@ -41,7 +41,7 @@ Power Automate、選択したブックでスクリプトをExcel代わりに実�
 
 次のメソッドは、ユーザーの現在の状態の代りとして、既定の動作を使用します。
 
-| クラス | Method | Power Automate動作 |
+| クラス | メソッド | Power Automate動作 |
 |--|--|--|
 | [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | ブックの最初のワークシート、またはメソッドによって現在アクティブ化されているワークシートのいずれかを返 `Worksheet.activate` します。 |
 | [ワークシート](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | の目的でワークシートをアクティブなワークシートとしてマークします `Workbook.getActiveWorksheet` 。 |
@@ -54,7 +54,7 @@ Officeスクリプトは、スクリプトで実行するとデータを更新Po
 
 次のメソッドは、スクリプトを使用して呼び出した場合、スクリプトPower Automate。 それでも正常に返され、エラーはスローしません。
 
-| クラス | Method |
+| クラス | メソッド |
 |--|--|
 | [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) | `refresh` |
 | [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` |
@@ -65,7 +65,7 @@ Officeスクリプトは、スクリプトで実行するとデータを更新Po
 
 アプリケーション フローの **スクリプトの実行** ステップをPower Automate、フローの一部であるブックを選択する必要があります。 ブックの名前を手動で入力する代わりに、ファイル ブラウザーを使用してブックを選択します。
 
-:::image type="content" source="../images/power-automate-file-browser.png" alt-text="[Power Automateファイル ブラウザーの表示] オプションを示すスクリプトの実行アクション":::
+:::image type="content" source="../images/power-automate-file-browser.png" alt-text="[Power Automateファイル ブラウザーの表示] オプションを示すスクリプトの実行アクションです。":::
 
 ブックの動的選択に関するPower Automateの制限と潜在的な回避策に関する詳細なコンテキストについては、Microsoft Power Automate Community のこのスレッドを[参照してください](https://powerusers.microsoft.com/t5/Power-Automate-Ideas/Allow-for-dynamic-quot-file-quot-value-for-excel-quot-get-a-row/idi-p/103091#)。
 

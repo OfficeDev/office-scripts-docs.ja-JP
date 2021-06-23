@@ -3,12 +3,12 @@ title: シートの空白行を数える
 description: Office スクリプトを使用して、ワークシート内のデータの代わりに空白行が含まれていますを検出し、空白の行数をレポートして、Power Automate フローで使用する方法について説明します。
 ms.date: 05/04/2021
 localization_priority: Normal
-ms.openlocfilehash: e636c9b1b24dedb73042cd9ee4d20688698ae8a7
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: 73fe0f995ee6ccaa1328b68983f0ec6887d96a09
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285851"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074579"
 ---
 # <a name="count-blank-rows-on-sheets"></a>シートの空白行を数える
 
@@ -22,11 +22,11 @@ ms.locfileid: "52285851"
 
 _このシートは、4 つの空白行の数を返します_
 
-:::image type="content" source="../../images/blank-rows.png" alt-text="空白行を含むデータを示すワークシート":::
+:::image type="content" source="../../images/blank-rows.png" alt-text="空白行を含むデータを示すワークシート。":::
 
 _このシートは、0 行の数を返します (すべての行にいくつかのデータがあります)_
 
-:::image type="content" source="../../images/no-blank-rows.png" alt-text="空白行のないデータを示すワークシート":::
+:::image type="content" source="../../images/no-blank-rows.png" alt-text="空白行のないデータを示すワークシート。":::
 
 ## <a name="sample-code-count-blank-rows-on-a-given-sheet"></a>サンプル コード: 特定のシートの空白行を数える
 
@@ -125,4 +125,4 @@ function main(workbook: ExcelScript.Workbook): number
 
 ## <a name="use-with-power-automate"></a>[ユーザーと一緒にPower Automate
 
-:::image type="content" source="../../images/use-in-power-automate.png" alt-text="スクリプトPower Automate実行をセットアップする方法を示すOfficeフロー":::
+:::image type="content" source="../../images/use-in-power-automate.png" alt-text="スクリプトPower Automateを実行するためにセットアップする方法を示すOfficeフロー。":::

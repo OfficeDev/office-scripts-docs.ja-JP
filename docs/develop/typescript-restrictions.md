@@ -3,12 +3,12 @@ title: スクリプトの TypeScript の制限Officeスクリプト
 description: スクリプト コード エディターで使用される TypeScript コンパイラと linter のOfficeします。
 ms.date: 05/24/2021
 localization_priority: Normal
-ms.openlocfilehash: 449a8abbcfdcfde53d0c9b96106f73259de368b1
-ms.sourcegitcommit: 90ca8cdf30f2065f63938f6bb6780d024c128467
+ms.openlocfilehash: 0bc6b4c0acaf9bb42f8200a0850dd7254632f965
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/25/2021
-ms.locfileid: "52639870"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074446"
 ---
 # <a name="typescript-restrictions-in-office-scripts"></a>スクリプトの TypeScript の制限Officeスクリプト
 
@@ -22,9 +22,9 @@ Officeスクリプトは TypeScript 言語を使用します。 ほとんどの�
 
 変数をスクリプト (つまり) の型Office `any` 明示的に宣言することはできません `let value: any;` 。 この `any` 型は、ユーザーが処理した場合に問題Excel。 たとえば、値が 、 、 または である必要 `Range` `string` `number` があります `boolean` 。 スクリプト内の型として変数が明示的に定義されている場合は、コンパイル時エラー (スクリプトを実行する前のエラー) `any` が表示されます。
 
-:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="コード エディターのホバー テキストの明示的な 'any' メッセージ":::
+:::image type="content" source="../images/explicit-any-editor-message.png" alt-text="コード エディターのホバー テキストの明示的な 'any' メッセージ。":::
 
-:::image type="content" source="../images/explicit-any-error-message.png" alt-text="コンソール ウィンドウの明示的な 'any' エラー":::
+:::image type="content" source="../images/explicit-any-error-message.png" alt-text="コンソール ウィンドウの明示的な 'any' エラー。":::
 
 前のスクリーンショットでは `[2, 14] Explicit Any is not allowed` 、行の種類を#2列#14示 `any` します。 これにより、エラーを見つけるのに役立ちます。
 
@@ -34,7 +34,7 @@ Officeスクリプトは TypeScript 言語を使用します。 ほとんどの�
 
 TypeScript 変数の型は暗黙的 [に定義](https://www.typescriptlang.org/docs/handbook/type-inference.html) できます。 TypeScript コンパイラが変数の種類を特定できない場合 (型が明示的に定義されていないか、型の推論ができない場合)、暗黙的な値であり、コンパイル時エラーが発生します。 `any`
 
-:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="コード エディターのホバー テキスト内の暗黙的な 'any' メッセージ":::
+:::image type="content" source="../images/implicit-any-editor-message.png" alt-text="コード エディターのホバー テキスト内の暗黙的な 'any' メッセージ。":::
 
 暗黙的な場合の最も一般的 `any` なケースは、 などの変数宣言です `let value;` 。 これを回避するには、次の 2 つの方法があります。
 

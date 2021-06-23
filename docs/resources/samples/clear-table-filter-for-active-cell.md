@@ -3,12 +3,12 @@ title: アクティブ セルの場所に基づいてテーブル列フィルタ
 description: アクティブ セルの場所に基づいてテーブル列フィルターをクリアする方法について学習します。
 ms.date: 05/03/2021
 localization_priority: Normal
-ms.openlocfilehash: 06fba191a79f4641d4d1017bda332c7559b50e6d
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: d6f267b433be9a0ddf44edf53ed92a136eb2ded6
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285928"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074439"
 ---
 # <a name="clear-table-column-filter-based-on-active-cell-location"></a>アクティブ セルの場所に基づいてテーブル列フィルターをクリアする
 
@@ -18,11 +18,11 @@ ms.locfileid: "52285928"
 
 _列フィルターをクリアする前に (アクティブ セルに注意してください)_
 
-:::image type="content" source="../../images/before-filter-applied.png" alt-text="列フィルターをクリアする前のアクティブ セル":::
+:::image type="content" source="../../images/before-filter-applied.png" alt-text="列フィルターをクリアする前のアクティブ セル。":::
 
 _列フィルターをクリアした後_
 
-:::image type="content" source="../../images/after-filter-cleared.png" alt-text="列フィルターをクリアした後のアクティブ セル":::
+:::image type="content" source="../../images/after-filter-cleared.png" alt-text="列フィルターをクリアした後のアクティブ なセル。":::
 
 ## <a name="sample-code-clear-table-column-filter-based-on-active-cell"></a>サンプル コード: アクティブ セルに基づいてテーブル列フィルターをクリアする
 
