@@ -3,23 +3,23 @@ title: フォルダー内のすべての Excel ファイルでスクリプトを
 description: フォルダー内のすべてのファイルに対してスクリプトExcel実行する方法について説明OneDrive for Business。
 ms.date: 05/03/2021
 localization_priority: Normal
-ms.openlocfilehash: fb9a4deb01b52ef031cb1ba3400bd6f10de9d9f5
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 83e091a8b009bac577da9ed53dcf4139c1b845c9
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545793"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074586"
 ---
-# <a name="run-a-script-on-all-excel-files-in-a-folder"></a><span data-ttu-id="ac491-103">フォルダー内のすべての Excel ファイルでスクリプトを実行する</span><span class="sxs-lookup"><span data-stu-id="ac491-103">Run a script on all Excel files in a folder</span></span>
+# <a name="run-a-script-on-all-excel-files-in-a-folder"></a><span data-ttu-id="14955-103">フォルダー内のすべての Excel ファイルでスクリプトを実行する</span><span class="sxs-lookup"><span data-stu-id="14955-103">Run a script on all Excel files in a folder</span></span>
 
-<span data-ttu-id="ac491-104">このプロジェクトは、フォルダー内のすべてのファイルに対して一連の自動化タスクを実行OneDrive for Business。</span><span class="sxs-lookup"><span data-stu-id="ac491-104">This project performs a set of automation tasks on all files situated in a folder on OneDrive for Business.</span></span> <span data-ttu-id="ac491-105">また、フォルダー内のフォルダー SharePointすることもできます。</span><span class="sxs-lookup"><span data-stu-id="ac491-105">It could also be used on a SharePoint folder.</span></span>
-<span data-ttu-id="ac491-106">このプロパティは、Excelファイルに対して計算を実行し、書式設定を追加し、同僚にコメント[@mentions](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7)挿入します。</span><span class="sxs-lookup"><span data-stu-id="ac491-106">It performs calculations on the Excel files, adds formatting, and inserts a comment that [@mentions](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) a colleague.</span></span>
+<span data-ttu-id="14955-104">このプロジェクトは、フォルダー内のすべてのファイルに対して一連の自動化タスクを実行OneDrive for Business。</span><span class="sxs-lookup"><span data-stu-id="14955-104">This project performs a set of automation tasks on all files situated in a folder on OneDrive for Business.</span></span> <span data-ttu-id="14955-105">また、フォルダー内のフォルダー SharePointすることもできます。</span><span class="sxs-lookup"><span data-stu-id="14955-105">It could also be used on a SharePoint folder.</span></span>
+<span data-ttu-id="14955-106">このプロパティは、Excelファイルに対して計算を実行し、書式設定を追加し、同僚にコメント[@mentions](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7)挿入します。</span><span class="sxs-lookup"><span data-stu-id="14955-106">It performs calculations on the Excel files, adds formatting, and inserts a comment that [@mentions](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) a colleague.</span></span>
 
-<span data-ttu-id="ac491-107">ファイルをダウンロード<a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip</a>サンプルで使用されている Sales というタイトルのフォルダーにファイルを抽出し、自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="ac491-107">Download the file <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip</a>, extract the files to a folder titled **Sales** used in this sample, and try it out yourself!</span></span>
+<span data-ttu-id="14955-107">ファイルをダウンロード<a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip</a>サンプルで使用されている Sales というタイトルのフォルダーにファイルを抽出し、自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="14955-107">Download the file <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip</a>, extract the files to a folder titled **Sales** used in this sample, and try it out yourself!</span></span>
 
-## <a name="sample-code-add-formatting-and-insert-comment"></a><span data-ttu-id="ac491-108">サンプル コード: 書式の追加とコメントの挿入</span><span class="sxs-lookup"><span data-stu-id="ac491-108">Sample code: Add formatting and insert comment</span></span>
+## <a name="sample-code-add-formatting-and-insert-comment"></a><span data-ttu-id="14955-108">サンプル コード: 書式の追加とコメントの挿入</span><span class="sxs-lookup"><span data-stu-id="14955-108">Sample code: Add formatting and insert comment</span></span>
 
-<span data-ttu-id="ac491-109">これは、個々のブックで実行されるスクリプトです。</span><span class="sxs-lookup"><span data-stu-id="ac491-109">This is the script that runs on each individual workbook.</span></span>
+<span data-ttu-id="14955-109">これは、個々のブックで実行されるスクリプトです。</span><span class="sxs-lookup"><span data-stu-id="14955-109">This is the script that runs on each individual workbook.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -69,31 +69,31 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="power-automate-flow-run-the-script-on-every-workbook-in-the-folder"></a><span data-ttu-id="ac491-110">Power Automateフロー: フォルダー内のすべてのブックでスクリプトを実行する</span><span class="sxs-lookup"><span data-stu-id="ac491-110">Power Automate flow: Run the script on every workbook in the folder</span></span>
+## <a name="power-automate-flow-run-the-script-on-every-workbook-in-the-folder"></a><span data-ttu-id="14955-110">Power Automateフロー: フォルダー内のすべてのブックでスクリプトを実行する</span><span class="sxs-lookup"><span data-stu-id="14955-110">Power Automate flow: Run the script on every workbook in the folder</span></span>
 
-<span data-ttu-id="ac491-111">このフローは、"Sales" フォルダー内のすべてのブックでスクリプトを実行します。</span><span class="sxs-lookup"><span data-stu-id="ac491-111">This flow runs the script on every workbook in the "Sales" folder.</span></span>
+<span data-ttu-id="14955-111">このフローは、"Sales" フォルダー内のすべてのブックでスクリプトを実行します。</span><span class="sxs-lookup"><span data-stu-id="14955-111">This flow runs the script on every workbook in the "Sales" folder.</span></span>
 
-1. <span data-ttu-id="ac491-112">新しいインスタント クラウド **フローを作成します**。</span><span class="sxs-lookup"><span data-stu-id="ac491-112">Create a new **Instant cloud flow**.</span></span>
-1. <span data-ttu-id="ac491-113">[フロー **を手動でトリガーする] を選択し** 、[作成] を **押します**。</span><span class="sxs-lookup"><span data-stu-id="ac491-113">Select **Manually trigger a flow** and press **Create**.</span></span>
-1. <span data-ttu-id="ac491-114">[フォルダー内 **のファイルの一** 覧] **OneDrive for Businessを使用** する新 **しい手順を追加** します。</span><span class="sxs-lookup"><span data-stu-id="ac491-114">Add a **New step** that uses the **OneDrive for Business** connector and the **List files in folder** action.</span></span>
+1. <span data-ttu-id="14955-112">新しいインスタント クラウド **フローを作成します**。</span><span class="sxs-lookup"><span data-stu-id="14955-112">Create a new **Instant cloud flow**.</span></span>
+1. <span data-ttu-id="14955-113">[フロー **を手動でトリガーする] を選択し** 、[作成] を **押します**。</span><span class="sxs-lookup"><span data-stu-id="14955-113">Select **Manually trigger a flow** and press **Create**.</span></span>
+1. <span data-ttu-id="14955-114">[フォルダー内 **のファイルの一** 覧] **OneDrive for Businessを使用** する新 **しい手順を追加** します。</span><span class="sxs-lookup"><span data-stu-id="14955-114">Add a **New step** that uses the **OneDrive for Business** connector and the **List files in folder** action.</span></span>
 
-    :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="OneDrive for Businessの完成したコネクタPower Automate":::
-1. <span data-ttu-id="ac491-116">抽出されたブックを含む "Sales" フォルダーを選択します。</span><span class="sxs-lookup"><span data-stu-id="ac491-116">Select the "Sales" folder with the extracted workbooks.</span></span>
-1. <span data-ttu-id="ac491-117">ブックのみを選択するには、[新しい手順] を選択し、[条件]**を選択\*\*\*\*し**、次の値を設定します。</span><span class="sxs-lookup"><span data-stu-id="ac491-117">To ensure only workbooks are selected, choose **New step**, then select **Condition** and set the following values:</span></span>
-    1. <span data-ttu-id="ac491-118">**名前**(ファイルOneDrive値)</span><span class="sxs-lookup"><span data-stu-id="ac491-118">**Name** (the OneDrive file name value)</span></span>
-    1. <span data-ttu-id="ac491-119">"ends with"</span><span class="sxs-lookup"><span data-stu-id="ac491-119">"ends with"</span></span>
-    1. <span data-ttu-id="ac491-120">"xlsx"</span><span class="sxs-lookup"><span data-stu-id="ac491-120">"xlsx".</span></span>
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="完了したOneDrive for BusinessコネクタをPower Automate。":::
+1. <span data-ttu-id="14955-116">抽出されたブックを含む "Sales" フォルダーを選択します。</span><span class="sxs-lookup"><span data-stu-id="14955-116">Select the "Sales" folder with the extracted workbooks.</span></span>
+1. <span data-ttu-id="14955-117">ブックのみを選択するには、[新しい手順] を選択し、[条件]**を選択\*\*\*\*し**、次の値を設定します。</span><span class="sxs-lookup"><span data-stu-id="14955-117">To ensure only workbooks are selected, choose **New step**, then select **Condition** and set the following values:</span></span>
+    1. <span data-ttu-id="14955-118">**名前**(ファイルOneDrive値)</span><span class="sxs-lookup"><span data-stu-id="14955-118">**Name** (the OneDrive file name value)</span></span>
+    1. <span data-ttu-id="14955-119">"ends with"</span><span class="sxs-lookup"><span data-stu-id="14955-119">"ends with"</span></span>
+    1. <span data-ttu-id="14955-120">"xlsx"</span><span class="sxs-lookup"><span data-stu-id="14955-120">"xlsx".</span></span>
 
-    :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="各Power Automateに後続のアクションを適用する条件ブロック":::
-1. <span data-ttu-id="ac491-122">[**はい] ブランチで**、[スクリプトの実行] アクションExcel **オンライン (Business)** コネクタ **を追加** します。</span><span class="sxs-lookup"><span data-stu-id="ac491-122">Under the **If yes** branch, add the **Excel Online (Business)** connector with the **Run script** action.</span></span> <span data-ttu-id="ac491-123">アクションには、次の値を使用します。</span><span class="sxs-lookup"><span data-stu-id="ac491-123">Use the following values for the action:</span></span>
-    1. <span data-ttu-id="ac491-124">**場所**: OneDrive for Business</span><span class="sxs-lookup"><span data-stu-id="ac491-124">**Location**: OneDrive for Business</span></span>
-    1. <span data-ttu-id="ac491-125">**ドキュメント ライブラリ**: OneDrive</span><span class="sxs-lookup"><span data-stu-id="ac491-125">**Document Library**: OneDrive</span></span>
-    1. <span data-ttu-id="ac491-126">**ファイル**: **Id** (OneDrive ID 値)</span><span class="sxs-lookup"><span data-stu-id="ac491-126">**File**: **Id** (the OneDrive file ID value)</span></span>
-    1. <span data-ttu-id="ac491-127">**スクリプト**: スクリプト名</span><span class="sxs-lookup"><span data-stu-id="ac491-127">**Script**: Your script name</span></span>
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-2.png" alt-text="後続Power Automateを各ファイルに適用する条件ブロックを指定します。":::
+1. <span data-ttu-id="14955-122">[**はい] ブランチで**、[スクリプトの実行] アクションExcel **オンライン (Business)** コネクタ **を追加** します。</span><span class="sxs-lookup"><span data-stu-id="14955-122">Under the **If yes** branch, add the **Excel Online (Business)** connector with the **Run script** action.</span></span> <span data-ttu-id="14955-123">アクションには、次の値を使用します。</span><span class="sxs-lookup"><span data-stu-id="14955-123">Use the following values for the action:</span></span>
+    1. <span data-ttu-id="14955-124">**場所**: OneDrive for Business</span><span class="sxs-lookup"><span data-stu-id="14955-124">**Location**: OneDrive for Business</span></span>
+    1. <span data-ttu-id="14955-125">**ドキュメント ライブラリ**: OneDrive</span><span class="sxs-lookup"><span data-stu-id="14955-125">**Document Library**: OneDrive</span></span>
+    1. <span data-ttu-id="14955-126">**ファイル**: **Id** (OneDrive ID 値)</span><span class="sxs-lookup"><span data-stu-id="14955-126">**File**: **Id** (the OneDrive file ID value)</span></span>
+    1. <span data-ttu-id="14955-127">**スクリプト**: スクリプト名</span><span class="sxs-lookup"><span data-stu-id="14955-127">**Script**: Your script name</span></span>
 
-    :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="オンライン (Excel) コネクタの完成Power Automate":::
-1. <span data-ttu-id="ac491-129">フローを保存し、試してみてください。</span><span class="sxs-lookup"><span data-stu-id="ac491-129">Save the flow and try it out.</span></span>
+    :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="オンライン (Excel) コネクタの完成Power Automate。":::
+1. <span data-ttu-id="14955-129">フローを保存し、試してみてください。</span><span class="sxs-lookup"><span data-stu-id="14955-129">Save the flow and try it out.</span></span>
 
-## <a name="training-video-run-a-script-on-all-excel-files-in-a-folder"></a><span data-ttu-id="ac491-130">トレーニング ビデオ: フォルダー内のすべてのファイルExcelスクリプトを実行する</span><span class="sxs-lookup"><span data-stu-id="ac491-130">Training video: Run a script on all Excel files in a folder</span></span>
+## <a name="training-video-run-a-script-on-all-excel-files-in-a-folder"></a><span data-ttu-id="14955-130">トレーニング ビデオ: フォルダー内のすべてのファイルExcelスクリプトを実行する</span><span class="sxs-lookup"><span data-stu-id="14955-130">Training video: Run a script on all Excel files in a folder</span></span>
 
-<span data-ttu-id="ac491-131">[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/xMg711o7k6w).</span><span class="sxs-lookup"><span data-stu-id="ac491-131">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/xMg711o7k6w).</span></span>
+<span data-ttu-id="14955-131">[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/xMg711o7k6w).</span><span class="sxs-lookup"><span data-stu-id="14955-131">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/xMg711o7k6w).</span></span>
