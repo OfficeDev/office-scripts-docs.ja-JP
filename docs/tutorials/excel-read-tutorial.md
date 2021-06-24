@@ -3,12 +3,12 @@ title: Excel on the web で Office スクリプトを使用してブックのデ
 description: ブックのデータを読み取り、スクリプトでそのデータを評価する方法について説明した Office スクリプトのチュートリアル。
 ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: 979ad949f999f67ee9de750c53ba4690ce6294e6
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: aa05533f0d7cd3b53e4eb616ae3216d672d026f9
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232852"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074691"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを使用してブックのデータを読み取る
 
@@ -73,7 +73,7 @@ ms.locfileid: "52232852"
 8. 2 次元の配列がコンソールにログ記録すると、各行の下に列の値がグループ化されます。 青い三角形を押して、配列のログを展開します。
 9. 新たに表示された青い三角形を押して、配列の第 2 レベルを展開すると、次の情報が表示されます。
 
-    :::image type="content" source="../images/tutorial-4.png" alt-text="出力 '-20.05' が 2 つの配列の下に入れ子になって表示されているコンソール ログ":::
+    :::image type="content" source="../images/tutorial-4.png" alt-text="出力 '-20.05' が 2 つの配列の下に入れ子になって表示されているコンソール ログ。":::
 
 ## <a name="modify-the-value-of-a-cell"></a>セルの値を変更する
 
@@ -143,7 +143,7 @@ ms.locfileid: "52232852"
 
     銀行取引明細書は次のように表示されるはずです。
 
-    :::image type="content" source="../images/tutorial-5.png" alt-text="書式設定された正の値のみを含む表形式の銀行取引明細書を示すワークシート":::
+    :::image type="content" source="../images/tutorial-5.png" alt-text="書式設定された正の値のみを含む表形式の銀行取引明細書を示すワークシート。":::
 
 ## <a name="next-steps"></a>次の手順
 
