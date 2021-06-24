@@ -3,12 +3,12 @@ title: Excel on the web で Office スクリプトを記録、編集、作成す
 description: 操作レコーダーを使用したスクリプトの記録、ブックへのデータの書き込みなど、Office スクリプトの基本について説明したチュートリアル。
 ms.date: 05/23/2021
 localization_priority: Priority
-ms.openlocfilehash: 19cd7bf6c3120d674553d37a36f45d36f46ee852
-ms.sourcegitcommit: 0343e4a9843f7ab6ec99d6ddf955050271b061c7
+ms.openlocfilehash: f9290a3d7dc723b72bfb4913171052472f2361c5
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2021
-ms.locfileid: "52655906"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074670"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを記録、編集、作成する
 
@@ -42,7 +42,7 @@ ms.locfileid: "52655906"
 
     ワークシートは次のようになります (色が違っていても問題ありません)。
 
-    :::image type="content" source="../images/tutorial-1.png" alt-text="&quot;オレンジ&quot; を含む行がオレンジ色で強調表示された、フルーツの売上データ行を示すワークシート":::
+    :::image type="content" source="../images/tutorial-1.png" alt-text="&quot;オレンジ&quot; を含む行がオレンジ色で強調表示された、フルーツの売上データ行を示すワークシート。":::
 
 ## <a name="edit-an-existing-script"></a>既存のスクリプトを編集する
 
@@ -71,7 +71,7 @@ ms.locfileid: "52655906"
 
 4. **[実行]** を押して、スクリプトをテストします。 ブックは次のように表示されるはずです。
 
-    :::image type="content" source="../images/tutorial-2.png" alt-text="&quot;オレンジ&quot; の行はオレンジ色、&quot;レモン&quot; の行は黄色で強調表示されているフルーツの売上データ行を示すワークシート":::
+    :::image type="content" source="../images/tutorial-2.png" alt-text="&quot;オレンジ&quot; の行はオレンジ色、&quot;レモン&quot; の行は黄色で強調表示されている果物売上データの行を示すワークシート。":::
 
 ## <a name="create-a-table"></a>テーブルを作成する
 
@@ -106,7 +106,7 @@ ms.locfileid: "52655906"
 
 3. スクリプトを実行します。テーブルが次のように表示されます。
 
-    :::image type="content" source="../images/tutorial-3.png" alt-text="並べ替えされたフルーツの売上テーブルを示すワークシート":::
+    :::image type="content" source="../images/tutorial-3.png" alt-text="並べ替えされたフルーツの販売テーブルを示すワークシート。":::
 
     > [!NOTE]
     > スクリプトを再実行すると、エラーが表示されます。 これは、テーブルの上に別のテーブルを重ねて作成することはできないためです。 ただし、別のワークシートやブックでスクリプトを実行することはできます。

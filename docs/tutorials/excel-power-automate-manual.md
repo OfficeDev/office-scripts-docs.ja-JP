@@ -3,12 +3,12 @@ title: 手動 Power Automation フローからスクリプトを呼び出す
 description: Power Automate の Office スクリプトで、手動のトリガーを使う方法を説明します。
 ms.date: 05/17/2021
 localization_priority: Priority
-ms.openlocfilehash: f4feb14f70c43497f40dae3a521353dfee63c082
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 6da852fd93599753592ea61eef443ef674ead8ef
+ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545830"
+ms.lasthandoff: 06/23/2021
+ms.locfileid: "53074502"
 ---
 # <a name="call-scripts-from-a-manual-power-automate-flow"></a>手動 Power Automation フローからスクリプトを呼び出す
 
@@ -67,7 +67,7 @@ Power Automate では、ブック コンポーネントにアクセスするた�
 
 2. 画面の左側に表示されるメニューで、**[作成]** を押します。 これにより、新しいワークフローを作成する方法の一覧を表示できます。
 
-    :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="Power Automate の [作成] ボタン":::
+    :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="Power Automate の [作成] ボタン。":::
 
 3. **[白紙から初める]** セクションで、**[インスタント フロー]** を選択します。 これで、手動でアクティベートされたワークフローが作成されます。
 
@@ -75,7 +75,7 @@ Power Automate では、ブック コンポーネントにアクセスするた�
 
 4. 表示されたダイアログ ウィンドウで、フローの名前を **[フロー名]** テキスト ボックスに入力し、**[フローをトリガーする方法の選択]** 内のオプションの一覧から **[手動でフローをトリガーする]** を選択し、**[作成]** を押します。
 
-    :::image type="content" source="../images/power-automate-tutorial-3.png" alt-text="Power Automate の [手動でフローをトリガーする] オプション":::
+    :::image type="content" source="../images/power-automate-tutorial-3.png" alt-text="Power Automate の[手動でフローをトリガーする] オプション。":::
 
     手動でトリガーするフローは、いくつかあるフローの種類のうちの 1 つです。 次のチュートリアルでは、メールを受信したときに自動的に実行されるフローを作成します。
 
@@ -83,7 +83,7 @@ Power Automate では、ブック コンポーネントにアクセスするた�
 
 6. **[標準]** タブを選択し、**Excel Online (ビジネス)** を選択します。
 
-    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate の [Excel Online (Business)] オプション":::
+    :::image type="content" source="../images/power-automate-tutorial-4.png" alt-text="Power Automate の [Excel Online (Business)] オプション。":::
 
 7. **[アクション]** で、**[スクリプトの実行]** を選択します。
 
@@ -96,7 +96,7 @@ Power Automate では、ブック コンポーネントにアクセスするた�
     - **ファイル**: MyWorkbook.xlsx *(ファイル ブラウザーを使用して選択されています)*
     - **スクリプト**: 日時を設定
 
-    :::image type="content" source="../images/power-automate-tutorial-6.png" alt-text="スクリプトを実行するための Power Automate コネクタの設定":::
+    :::image type="content" source="../images/power-automate-tutorial-6.png" alt-text="スクリプトを実行するための Power Automate コネクタの設定。":::
 
 9. **[保存]** を押します。
 
@@ -106,13 +106,13 @@ Power Automate では、ブック コンポーネントにアクセスするた�
 
 1. Power Automate のメイン ページで、**[自分のフロー]** を選択します。
 
-    :::image type="content" source="../images/power-automate-tutorial-7.png" alt-text="Power Automate の [自分のフロー] ボタン":::
+    :::image type="content" source="../images/power-automate-tutorial-7.png" alt-text="Power Automate の [自分のフロー] ボタン。":::
 
 2. **[自分のフロー]** タブに表示されているフローの一覧から、**[自分のチュートリアル フロー]** を選択すると、以前に作成したフローの詳細が表示されます。
 
 3. **[実行]** を押します。
 
-    :::image type="content" source="../images/power-automate-tutorial-8.png" alt-text="Power Automate の [実行] ボタン":::
+    :::image type="content" source="../images/power-automate-tutorial-8.png" alt-text="Power Automate の [実行] ボタン。":::
 
 4. フローを実行するための作業ウィンドウが表示されます。 Excel Online への **サインイン** を要求された場合は、**[続ける]** を押します。
 
@@ -122,7 +122,7 @@ Power Automate では、ブック コンポーネントにアクセスするた�
 
 7. ページを更新して、Power Automate の結果を表示します。 成功した場合は、ワークブックに移動して、更新されたセルを確認します。 エラーが発生した場合は、フローの設定を確認し、もう一度実行します。
 
-    :::image type="content" source="../images/power-automate-tutorial-9.png" alt-text="正常にフローが発生したことを示す Power Automate 出力":::
+    :::image type="content" source="../images/power-automate-tutorial-9.png" alt-text="正常にフローが発生したことを示す Power Automate 出力。":::
 
 ## <a name="next-steps"></a>次の手順
 
