@@ -67,6 +67,8 @@ items:
                 href: resources/samples/copy-tables-combine.md
           - name: 応用
             items:
+              - name: 相互参照ワークシート
+                href: resources/samples/excel-cross-reference.md
               - name: ワークシートの空白行を数える
                 href: resources/samples/count-blank-rows.md
               - name: チャートとテーブルの画像をメールで送信
