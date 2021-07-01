@@ -653,7 +653,7 @@ Copyright (c) Felix Böhm All rights reserved.
 
 ---------------------------------------------------------
 
-domutils 1.5.1 - BSD-2-Clause https://github.com/FB55/domutils
+domutils 1.7.0 - BSD-2-Clause https://github.com/FB55/domutils#readme
 
 Copyright (c) Felix Bohm
 
@@ -672,7 +672,7 @@ Copyright (c) Felix Böhm All rights reserved.
 
 ---------------------------------------------------------
 
-domutils 1.7.0 - BSD-2-Clause https://github.com/FB55/domutils#readme
+domutils 1.5.1 - BSD-2-Clause https://github.com/FB55/domutils
 
 Copyright (c) Felix Bohm
 
@@ -1197,6 +1197,28 @@ Copyright 2014 Yahoo! Inc.すべての権限が予約済みです。
 
 ---------------------------------------------------------
 
+source-map 0.6.1 - BSD-3-Clause https://github.com/mozilla/source-map
+
+Copyright 2011 The closure Compiler Copyright 2011 Mozilla Foundation and contributors Copyright 2014 Mozilla Foundation and contributors Copyright 2009-2011 Mozilla Foundation and contributors Copyright (c) 2009-2011, Mozilla Foundation and contributors
+
+
+Copyright (c) 2009-2011, Mozilla Foundation and contributors All rights reserved.
+
+次の条件を満たした場合、変更の付きまたは変更なしのソースフォームおよびバイナリ フォームでの再配布と使用が許可されます。
+
+* ソース コードの再配布は、上記の著作権に関する通知、この条件の一覧、および以下の免責事項を保持する必要があります。
+
+* バイナリ形式の再配布は、上記の著作権に関する通知、この条件の一覧、および配布に付属するドキュメントおよび/または他の資料の免責事項を再現する必要があります。
+
+* Mozilla Foundation の名前もプロジェクト投稿者の名前も、このソフトウェアから派生した製品を、事前に特定の書面による許可なしに承認または宣伝するために使用することはできません。
+
+このソフトウェアは、著作権者および投稿者が「現状のまま」提供し、商品性および特定の目的への適性に関する黙示の保証を含むがこれらに限定されない明示的または黙示的な保証は一切否認されます。 いかなる場合も、著作権者または投稿者は、直接的、間接的、偶発的、特別な、模範的、または結果的な損害(代替品またはサービスの調達を含むがこれに限定されない)について責任を負う。使用、データ、または利益の損失。またはビジネスの中断) ただし、契約、厳格な責任、または不法使用 (過失その他を含む) のいかなる方法でも、そのような損害の可能性について助言を受けた場合でも、責任の理論に基いて発生します。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
 source-map 0.5.7 - BSD-3-Clause https://github.com/mozilla/source-map
 
 Copyright 2011 The closure Compiler Copyright 2011 Mozilla Foundation and contributors Copyright 2014 Mozilla Foundation and contributors Copyright 2009-2011 Mozilla Foundation and contributors Copyright (c) 2009-2011, Mozilla Foundation and contributors
@@ -1220,28 +1242,6 @@ Copyright (c) 2009-2011, Mozilla Foundation and contributors All rights reserved
 ---------------------------------------------------------
 
 source-map 0.7.3 - BSD-3-Clause https://github.com/mozilla/source-map
-
-Copyright 2011 The closure Compiler Copyright 2011 Mozilla Foundation and contributors Copyright 2014 Mozilla Foundation and contributors Copyright 2009-2011 Mozilla Foundation and contributors Copyright (c) 2009-2011, Mozilla Foundation and contributors
-
-
-Copyright (c) 2009-2011, Mozilla Foundation and contributors All rights reserved.
-
-次の条件を満たした場合、変更の付きまたは変更なしのソースフォームおよびバイナリ フォームでの再配布と使用が許可されます。
-
-* ソース コードの再配布は、上記の著作権に関する通知、この条件の一覧、および以下の免責事項を保持する必要があります。
-
-* バイナリ形式の再配布は、上記の著作権に関する通知、この条件の一覧、および配布に付属するドキュメントおよび/または他の資料の免責事項を再現する必要があります。
-
-* Mozilla Foundation の名前もプロジェクト投稿者の名前も、このソフトウェアから派生した製品を、事前に特定の書面による許可なしに承認または宣伝するために使用することはできません。
-
-このソフトウェアは、著作権者および投稿者が「現状のまま」提供し、商品性および特定の目的への適性に関する黙示の保証を含むがこれらに限定されない明示的または黙示的な保証は一切否認されます。 いかなる場合も、著作権者または投稿者は、直接的、間接的、偶発的、特別な、模範的、または結果的な損害(代替品またはサービスの調達を含むがこれに限定されない)について責任を負う。使用、データ、または利益の損失。またはビジネスの中断) ただし、契約、厳格な責任、または不法使用 (過失その他を含む) のいかなる方法でも、そのような損害の可能性について助言を受けた場合でも、責任の理論に基いて発生します。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
-source-map 0.6.1 - BSD-3-Clause https://github.com/mozilla/source-map
 
 Copyright 2011 The closure Compiler Copyright 2011 Mozilla Foundation and contributors Copyright 2014 Mozilla Foundation and contributors Copyright 2009-2011 Mozilla Foundation and contributors Copyright (c) 2009-2011, Mozilla Foundation and contributors
 
@@ -3498,7 +3498,7 @@ Copyright (c) npm, Inc.
 
 ---------------------------------------------------------
 
-タイプ 2.0.0 - ISC https://github.com/medikoo/type#readme
+タイプ 1.2.0 - ISC https://github.com/medikoo/type#readme
 
 Copyright (c) 2019, Mariusz Nowak, medikoo, medikoo.com
 
@@ -3515,7 +3515,7 @@ Copyright (c) 2019, Mariusz Nowak, @medikoo, medikoo.com
 
 ---------------------------------------------------------
 
-タイプ 1.2.0 - ISC https://github.com/medikoo/type#readme
+タイプ 2.0.0 - ISC https://github.com/medikoo/type#readme
 
 Copyright (c) 2019, Mariusz Nowak, medikoo, medikoo.com
 
@@ -4323,7 +4323,7 @@ MIT ライセンス
 
 ---------------------------------------------------------
 
-@types/office-js-preview 1.0.224 - MIT https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
+@types/office-js-preview 1.0.226 - MIT https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
 
 Copyright (c) Microsoft Corporation。
 
@@ -5166,7 +5166,7 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-ansi-regex 4.1.0 - MIT https://github.com/chalk/ansi-regex#readme
+ansi-regex 3.0.0 - MIT https://github.com/chalk/ansi-regex#readme
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -5204,7 +5204,7 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-ansi-regex 3.0.0 - MIT https://github.com/chalk/ansi-regex#readme
+ansi-regex 4.1.0 - MIT https://github.com/chalk/ansi-regex#readme
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -6470,24 +6470,6 @@ Copyright (C) 2018 Dmitry Shirokov
 
 ---------------------------------------------------------
 
-chokidar 2.1.8 - MIT https://github.com/paulmillr/chokidar
-
-Copyright (c) 2012-2019 Paul Miller ( & https://paulmillr.com) Elan シャンカー
-
-MIT ライセンス
-
-著作権 (c) <year><copyright holders>
-
-ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
-
-上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
-
-ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 chokidar 3.4.0 - MIT https://github.com/paulmillr/chokidar
 
 (c) Paul Miller <https://paulmillr.com> Copyright (c) 2012-2019 Paul Miller ( https://paulmillr.com) , Elan Shanker
@@ -6502,6 +6484,24 @@ Copyright (c) 2012-2019 Paul Miller ( https://paulmillr.com) , Elan Shanker
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+chokidar 2.1.8 - MIT https://github.com/paulmillr/chokidar
+
+Copyright (c) 2012-2019 Paul Miller ( & https://paulmillr.com) Elan シャンカー
+
+MIT ライセンス
+
+著作権 (c) <year><copyright holders>
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
 ---------------------------------------------------------
 
@@ -6735,7 +6735,7 @@ Copyright (c) 2011 Heather Arthur <fayearthur@gmail.com>
 
 ---------------------------------------------------------
 
-commander 2.17.1 - MIT https://github.com/tj/commander.js#readme
+commander 2.19.0 - MIT https://github.com/tj/commander.js#readme
 
 Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -6755,7 +6755,7 @@ Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
 
 ---------------------------------------------------------
 
-commander 2.19.0 - MIT https://github.com/tj/commander.js#readme
+commander 2.17.1 - MIT https://github.com/tj/commander.js#readme
 
 Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -7194,7 +7194,7 @@ Copyright 2016 Selwyn <talk@selwyn.cc>
 
 ---------------------------------------------------------
 
-cssesc 3.0.0 - MIT https://mths.be/cssesc
+cssesc 2.0.0 - MIT https://mths.be/cssesc
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 
@@ -7211,7 +7211,7 @@ Copyright Mathias Bynens <https://mathiasbynens.be/>
 
 ---------------------------------------------------------
 
-cssesc 2.0.0 - MIT https://mths.be/cssesc
+cssesc 3.0.0 - MIT https://mths.be/cssesc
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 
@@ -7455,6 +7455,26 @@ Copyright (c) 2015 Mathias Buus
 
 ---------------------------------------------------------
 
+debug 4.1.1 - MIT https://github.com/visionmedia/debug#readme
+
+Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
+
+(MIT ライセンス)
+
+Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ('Software') のコピーを取得するユーザーに対して、無料で付与されます。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も含めずに「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
 debug 2.6.9 - MIT https://github.com/visionmedia/debug#readme
 
 Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2016 TJ Holowaychuk <tj@vision-media.ca>
@@ -7476,26 +7496,6 @@ Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
 ---------------------------------------------------------
 
 debug 3.2.6 - MIT https://github.com/visionmedia/debug#readme
-
-Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
-
-(MIT ライセンス)
-
-Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
-
-ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ('Software') のコピーを取得するユーザーに対して、無料で付与されます。
-
-上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
-
-ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も含めずに「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
-
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
-debug 4.1.1 - MIT https://github.com/visionmedia/debug#readme
 
 Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -7552,26 +7552,6 @@ Copyright (C) 2015 Jordan Harband
 
 ---------------------------------------------------------
 
-define-property 2.0.2 - MIT https://github.com/jonschlinkert/define-property
-
-Copyright (c) 2015-2018, Jon Schlinkert.
-Copyright (c) 2018, Jon Schlinkert ( https://github.com/jonschlinkert) .
-
-MIT ライセンス (MIT)
-
-Copyright (c) 2015-2018, Jon Schlinkert.
-
-ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
-
-上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
-
-ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 define-property 1.0.0 - MIT https://github.com/jonschlinkert/define-property
 
 Copyright (c) 2015, 2017, Jon Schlinkert.
@@ -7599,6 +7579,26 @@ Copyright (c) 2015 Jon Schlinkert Copyright (c) 2015, Jon Schlinkert.
 MIT ライセンス (MIT)
 
 Copyright (c) 2015, Jon Schlinkert.
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+define-property 2.0.2 - MIT https://github.com/jonschlinkert/define-property
+
+Copyright (c) 2015-2018, Jon Schlinkert.
+Copyright (c) 2018, Jon Schlinkert ( https://github.com/jonschlinkert) .
+
+MIT ライセンス (MIT)
+
+Copyright (c) 2015-2018, Jon Schlinkert.
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -8358,11 +8358,11 @@ Copyright (c) James Talmage <james@talmage.io> (github.com/jamestalmage)
 
 ---------------------------------------------------------
 
-検索 3.0.0 - MIT https://github.com/sindresorhus/find-up#readme
+検索 2.1.0 - MIT https://github.com/sindresorhus/find-up#readme
 
 (c) Sindre Sorhus ( https://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-MIT ライセンス
+MIT ライセンス (MIT)
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -8377,11 +8377,11 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-検索 2.1.0 - MIT https://github.com/sindresorhus/find-up#readme
+検索 3.0.0 - MIT https://github.com/sindresorhus/find-up#readme
 
 (c) Sindre Sorhus ( https://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-MIT ライセンス (MIT)
+MIT ライセンス
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -8933,15 +8933,14 @@ Copyright (c) 2014-2016, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-has-values 0.1.4 - MIT https://github.com/jonschlinkert/has-values
+has-values 1.0.0 - MIT https://github.com/jonschlinkert/has-values
 
-Copyright (c) 2014-2015, Jon Schlinkert.
-Copyright (c) 2014-2016, Jon Schlinkert.
-Copyright (c) 2016, Jon Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2014-2015, 2017, Jon Schlinkert.
+Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-2016, Jon Schlinkert.
+Copyright (c) 2014-2017, Jon Schlinkert
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -8954,14 +8953,15 @@ Copyright (c) 2014-2016, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-has-values 1.0.0 - MIT https://github.com/jonschlinkert/has-values
+has-values 0.1.4 - MIT https://github.com/jonschlinkert/has-values
 
-Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2014-2015, 2017, Jon Schlinkert.
-Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
+Copyright (c) 2014-2015, Jon Schlinkert.
+Copyright (c) 2014-2016, Jon Schlinkert.
+Copyright (c) 2016, Jon Schlinkert ( https://github.com/jonschlinkert) .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-2017, Jon Schlinkert
+Copyright (c) 2014-2016, Jon Schlinkert.
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -9467,26 +9467,6 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-is-accessor-descriptor 1.0.0 - MIT https://github.com/jonschlinkert/is-accessor-descriptor
-
-Copyright (c) 2015-2017, Jon Schlinkert.
-Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
-
-MIT ライセンス (MIT)
-
-Copyright (c) 2015-2017, Jon Schlinkert.
-
-ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
-
-上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
-
-ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 is-accessor-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-accessor-descriptor
 
 Copyright (c) 2015, Jon Schlinkert.
@@ -9507,19 +9487,21 @@ Copyright (c) 2015, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-isarray 0.0.1 - MIT https://github.com/juliangruber/isarray
+is-accessor-descriptor 1.0.0 - MIT https://github.com/jonschlinkert/is-accessor-descriptor
 
-Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
+Copyright (c) 2015-2017, Jon Schlinkert.
+Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
 
-MIT ライセンス
+MIT ライセンス (MIT)
 
-著作権 (c) <year><copyright holders>
+Copyright (c) 2015-2017, Jon Schlinkert.
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
 上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
 
 ---------------------------------------------------------
 
@@ -9543,7 +9525,25 @@ MIT ライセンス
 
 ---------------------------------------------------------
 
-is-arrayish 0.3.2 - MIT https://github.com/qix-/node-is-arrayish#readme
+isarray 0.0.1 - MIT https://github.com/juliangruber/isarray
+
+Copyright (c) 2013 Julian Gruber <julian@juliangruber.com>
+
+MIT ライセンス
+
+著作権 (c) <year><copyright holders>
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+is-arrayish 0.2.1 - MIT https://github.com/qix-/node-is-arrayish#readme
 
 Copyright (c) 2015 JD Ballard
 
@@ -9562,7 +9562,7 @@ Copyright (c) 2015 JD Ballard
 
 ---------------------------------------------------------
 
-is-arrayish 0.2.1 - MIT https://github.com/qix-/node-is-arrayish#readme
+is-arrayish 0.3.2 - MIT https://github.com/qix-/node-is-arrayish#readme
 
 Copyright (c) 2015 JD Ballard
 
@@ -9737,7 +9737,7 @@ Copyright (c) 2015 Jordan Harband
 
 ---------------------------------------------------------
 
-is-descriptor 1.0.2 - MIT https://github.com/jonschlinkert/is-descriptor
+is-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-descriptor
 
 Copyright (c) 2015-2017, Jon Schlinkert.
 Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
@@ -9756,7 +9756,7 @@ Copyright (c) 2015-2017, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-is-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-descriptor
+is-descriptor 1.0.2 - MIT https://github.com/jonschlinkert/is-descriptor
 
 Copyright (c) 2015-2017, Jon Schlinkert.
 Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
@@ -9931,14 +9931,14 @@ Copyright (c) 2014-2017, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-is-number 7.0.0 - MIT https://github.com/jonschlinkert/is-number
+is-number 3.0.0 - MIT https://github.com/jonschlinkert/is-number
 
-Copyright (c) 2014-present, Jon Schlinkert.
-Copyright (c) 2018, Jon Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-2016, Jon Schlinkert Copyright (c) 2014-2015, Jon Schlinkert.
+Copyright (c) 2016, Jon Schlinkert ( https://github.com/jonschlinkert) .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2014-2016, Jon Schlinkert
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -9951,14 +9951,14 @@ Copyright (c) 2014-present, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-is-number 3.0.0 - MIT https://github.com/jonschlinkert/is-number
+is-number 7.0.0 - MIT https://github.com/jonschlinkert/is-number
 
-Copyright (c) 2014-2016, Jon Schlinkert Copyright (c) 2014-2015, Jon Schlinkert.
-Copyright (c) 2016, Jon Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2018, Jon Schlinkert ( https://github.com/jonschlinkert) .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-2016, Jon Schlinkert
+Copyright (c) 2014-present, Jon Schlinkert.
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -10313,12 +10313,15 @@ Copyright Mathias Bynens <https://mathiasbynens.be/>
 
 ---------------------------------------------------------
 
-json3 3.3.0 - MIT http://bestiejs.github.io/json3
+json3 3.3.3 - MIT https://bestiejs.github.io/json3
 
-Copyright (c) 2012-2014 Kit Cambridge. http://kitcambridge.be Copyright 2012-2014、 Kit Cambridge http://kit.mit-license.org
+Copyright (c) 2013-2015 Benjamin Tan. https://d10.github.io Copyright (c) 2012-2015 Kit Cambridge. http://kitcambridge.be Copyright 2012-2015, Kit Cambridge, Benjamin Tan http://kit.mit-license.org (c) 2012-2015 http://kitcambridge.be/ ' Kit Cambridge, https://d10.github.io/ ' Benjamin Tan
 
-Copyright (c) 2012-2014 Kit Cambridge.
+Copyright (c) 2012-2015 Kit Cambridge.
 http://kitcambridge.be/
+
+Copyright (c) 2013-2015 Benjamin Tan.
+https://d10.github.io/
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -10330,15 +10333,12 @@ http://kitcambridge.be/
 
 ---------------------------------------------------------
 
-json3 3.3.3 - MIT https://bestiejs.github.io/json3
+json3 3.3.0 - MIT http://bestiejs.github.io/json3
 
-Copyright (c) 2013-2015 Benjamin Tan. https://d10.github.io Copyright (c) 2012-2015 Kit Cambridge. http://kitcambridge.be Copyright 2012-2015, Kit Cambridge, Benjamin Tan http://kit.mit-license.org (c) 2012-2015 http://kitcambridge.be/ ' Kit Cambridge, https://d10.github.io/ ' Benjamin Tan
+Copyright (c) 2012-2014 Kit Cambridge. http://kitcambridge.be Copyright 2012-2014、 Kit Cambridge http://kit.mit-license.org
 
-Copyright (c) 2012-2015 Kit Cambridge.
+Copyright (c) 2012-2014 Kit Cambridge.
 http://kitcambridge.be/
-
-Copyright (c) 2013-2015 Benjamin Tan.
-https://d10.github.io/
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -10461,25 +10461,6 @@ json-stable-stringify 1.0.1 - MIT https://github.com/substack/json-stable-string
 
 ---------------------------------------------------------
 
-js-tokens 3.0.2 - MIT https://github.com/lydell/js-tokens#readme
-
-Copyright 2014, 2015, 2016, 2017 Simon Lydell Copyright (c) 2014, 2015, 2016, 2017 Simon Lydell
-
-MIT ライセンス (MIT)
-
-Copyright (c) 2014, 2015, 2016, 2017 Simon Lydell
-
-ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
-
-上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
-
-ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 js-tokens 4.0.0 - MIT https://github.com/lydell/js-tokens#readme
 
 Copyright 2014, 2015, 2016, 2017, 2018 Simon Lydell Copyright (c) 2014, 2015, 2016, 2017, 2018 Simon Lydell
@@ -10499,13 +10480,13 @@ Copyright (c) 2014, 2015, 2016, 2017, 2018 Simon Lydell
 
 ---------------------------------------------------------
 
-js-yaml 3.14.0 - MIT https://github.com/nodeca/js-yaml
+js-tokens 3.0.2 - MIT https://github.com/lydell/js-tokens#readme
 
-Copyright (c) 2011-2015 by Vitaly Puzrin
+Copyright 2014, 2015, 2016, 2017 Simon Lydell Copyright (c) 2014, 2015, 2016, 2017 Simon Lydell
 
-(MIT ライセンス)
+MIT ライセンス (MIT)
 
-Copyright (C) 2011-2015 by Vitaly Puzrin
+Copyright (c) 2014, 2015, 2016, 2017 Simon Lydell
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -10518,13 +10499,13 @@ Copyright (C) 2011-2015 by Vitaly Puzrin
 
 ---------------------------------------------------------
 
-4.0.0 の種類 - MIT https://github.com/jonschlinkert/kind-of
+js-yaml 3.14.0 - MIT https://github.com/nodeca/js-yaml
 
-Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2017, Jon Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2011-2015 by Vitaly Puzrin
 
-MIT ライセンス (MIT)
+(MIT ライセンス)
 
-Copyright (c) 2014-2017, Jon Schlinkert
+Copyright (C) 2011-2015 by Vitaly Puzrin
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -10558,6 +10539,25 @@ Copyright (c) 2014-2017, Jon Schlinkert.
 ---------------------------------------------------------
 
 3.2.2 の種類 - MIT https://github.com/jonschlinkert/kind-of
+
+Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2017, Jon Schlinkert ( https://github.com/jonschlinkert) .
+
+MIT ライセンス (MIT)
+
+Copyright (c) 2014-2017, Jon Schlinkert
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+4.0.0 の種類 - MIT https://github.com/jonschlinkert/kind-of
 
 Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2017, Jon Schlinkert ( https://github.com/jonschlinkert) .
 
@@ -10633,24 +10633,6 @@ Copyright (c) Tobias Koppers @sokra
 
 ---------------------------------------------------------
 
-loader-utils 1.4.0 - MIT https://github.com/webpack/loader-utils#readme
-
-Copyright JS Foundation および他の投稿者
-
-Copyright JS Foundation および他の投稿者
-
-ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ('Software') のコピーを取得するユーザーに対して、無料で付与されます。
-
-上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
-
-ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も含めずに「現状のまま」提供されます。
-いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 loader-utils 1.2.3 - MIT https://github.com/webpack/loader-utils#readme
 
 Copyright JS Foundation および他の投稿者
@@ -10669,11 +10651,29 @@ Copyright JS Foundation および他の投稿者
 
 ---------------------------------------------------------
 
-locate-path 3.0.0 - MIT https://github.com/sindresorhus/locate-path#readme
+loader-utils 1.4.0 - MIT https://github.com/webpack/loader-utils#readme
+
+Copyright JS Foundation および他の投稿者
+
+Copyright JS Foundation および他の投稿者
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ('Software') のコピーを取得するユーザーに対して、無料で付与されます。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も含めずに「現状のまま」提供されます。
+いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+locate-path 2.0.0 - MIT https://github.com/sindresorhus/locate-path#readme
 
 (c) Sindre Sorhus ( https://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-MIT ライセンス
+MIT ライセンス (MIT)
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -10688,11 +10688,11 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-locate-path 2.0.0 - MIT https://github.com/sindresorhus/locate-path#readme
+locate-path 3.0.0 - MIT https://github.com/sindresorhus/locate-path#readme
 
 (c) Sindre Sorhus ( https://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-MIT ライセンス (MIT)
+MIT ライセンス
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -11725,11 +11725,11 @@ Copyright (c) James Talmage <james@talmage.io> (github.com/jamestalmage)
 
 ---------------------------------------------------------
 
-normalize-url 1.9.1 - MIT https://github.com/sindresorhus/normalize-url#readme
+normalize-url 3.3.0 - MIT https://github.com/sindresorhus/normalize-url#readme
 
 (c) Sindre Sorhus ( https://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-MIT ライセンス (MIT)
+MIT ライセンス
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -11744,11 +11744,11 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-normalize-url 3.3.0 - MIT https://github.com/sindresorhus/normalize-url#readme
+normalize-url 1.9.1 - MIT https://github.com/sindresorhus/normalize-url#readme
 
 (c) Sindre Sorhus ( https://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-MIT ライセンス
+MIT ライセンス (MIT)
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -11939,7 +11939,7 @@ Copyright (c) 2013 James Halliday
 
 ---------------------------------------------------------
 
-object-keys 0.5.0 - MIT https://github.com/ljharb/object-keys
+object-keys 1.1.1 - MIT https://github.com/ljharb/object-keys#readme
 
 Copyright (c) 2013 Jordan Harband
 
@@ -11957,7 +11957,7 @@ Copyright (C) 2013 Jordan Harband
 
 ---------------------------------------------------------
 
-object-keys 1.1.1 - MIT https://github.com/ljharb/object-keys#readme
+object-keys 0.5.0 - MIT https://github.com/ljharb/object-keys
 
 Copyright (c) 2013 Jordan Harband
 
@@ -13506,7 +13506,7 @@ Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info)
 
 ---------------------------------------------------------
 
-postcss-value-parser 4.1.0 - MIT https://github.com/TrySound/postcss-value-parser
+postcss-value-parser 3.3.1 - MIT https://github.com/TrySound/postcss-value-parser
 
 (c) ボグダン チャドキン著作権 (c) ボグダン チャドキン <trysound@yandex.ru>
 
@@ -13523,7 +13523,7 @@ postcss-value-parser 4.1.0 - MIT https://github.com/TrySound/postcss-value-parse
 
 ---------------------------------------------------------
 
-postcss-value-parser 3.3.1 - MIT https://github.com/TrySound/postcss-value-parser
+postcss-value-parser 4.1.0 - MIT https://github.com/TrySound/postcss-value-parser
 
 (c) ボグダン チャドキン著作権 (c) ボグダン チャドキン <trysound@yandex.ru>
 
@@ -14337,7 +14337,7 @@ MIT ライセンス (MIT)
 
 ---------------------------------------------------------
 
-redux 4.0.5 - MIT http://redux.js.org/
+redux 4.0.1 - MIT http://redux.js.org/
 
 Copyright (c) 2015-present Dan Abramov
 
@@ -14356,7 +14356,7 @@ Copyright (c) 2015-present Dan Abramov
 
 ---------------------------------------------------------
 
-redux 4.0.1 - MIT http://redux.js.org/
+redux 4.0.5 - MIT http://redux.js.org/
 
 Copyright (c) 2015-present Dan Abramov
 
@@ -14431,6 +14431,25 @@ Copyright (c) 2016 Jeremy Fairbank
 
 ---------------------------------------------------------
 
+regenerator-runtime 0.11.1 - MIT
+
+
+Copyright (c) 2014-present, Facebook, Inc.
+
+MIT ライセンス
+
+著作権 (c) <year><copyright holders>
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
 regenerator-runtime 0.13.5 - MIT
 
 
@@ -14446,25 +14465,6 @@ Copyright (c) 2014-present, Facebook, Inc.
 
 ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
-
----------------------------------------------------------
-
----------------------------------------------------------
-
-regenerator-runtime 0.11.1 - MIT
-
-
-Copyright (c) 2014-present, Facebook, Inc.
-
-MIT ライセンス
-
-著作権 (c) <year><copyright holders>
-
-ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
-
-上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
-
-ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
 
 ---------------------------------------------------------
 
@@ -14978,7 +14978,7 @@ MIT ライセンス
 
 ---------------------------------------------------------
 
-schema-utils 1.0.0 - MIT https://github.com/webpack-contrib/schema-utils
+schema-utils 0.4.7 - MIT https://github.com/webpack-contrib/schema-utils
 
 Copyright JS Foundation および他の投稿者
 
@@ -14996,7 +14996,7 @@ Copyright JS Foundation および他の投稿者
 
 ---------------------------------------------------------
 
-schema-utils 0.4.7 - MIT https://github.com/webpack-contrib/schema-utils
+schema-utils 1.0.0 - MIT https://github.com/webpack-contrib/schema-utils
 
 Copyright JS Foundation および他の投稿者
 
@@ -15615,7 +15615,7 @@ Copyright (c) 2017 Khaled Al-Ansari
 
 ---------------------------------------------------------
 
-string_decoder 1.3.0 - MIT https://github.com/nodejs/string_decoder
+string_decoder 1.1.1 - MIT https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. および他の Node 投稿者。
 
@@ -15646,7 +15646,7 @@ Node.jsは、次のように使用できます。
 
 ---------------------------------------------------------
 
-string_decoder 1.1.1 - MIT https://github.com/nodejs/string_decoder
+string_decoder 1.3.0 - MIT https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. および他の Node 投稿者。
 
@@ -15696,6 +15696,25 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
+strip-ansi 3.0.1 - MIT https://github.com/chalk/strip-ansi
+
+(c) Sindre Sorhus ( http://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+
+MIT ライセンス (MIT)
+
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
 strip-ansi 4.0.0 - MIT https://github.com/chalk/strip-ansi#readme
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
@@ -15720,25 +15739,6 @@ strip-ansi 5.2.0 - MIT https://github.com/chalk/strip-ansi#readme
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 MIT ライセンス
-
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-
-ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
-
-上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
-
-ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
-strip-ansi 3.0.1 - MIT https://github.com/chalk/strip-ansi
-
-(c) Sindre Sorhus ( http://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
-
-MIT ライセンス (MIT)
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -15863,7 +15863,7 @@ MIT ライセンス
 
 ---------------------------------------------------------
 
-supports-color 6.1.0 - MIT https://github.com/chalk/supports-color#readme
+supports-color 5.5.0 - MIT https://github.com/chalk/supports-color#readme
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -15882,7 +15882,7 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-supports-color 5.5.0 - MIT https://github.com/chalk/supports-color#readme
+supports-color 6.1.0 - MIT https://github.com/chalk/supports-color#readme
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -16709,7 +16709,7 @@ Copyright (c) 2015-present, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-util 0.10.3 - MIT https://github.com/defunctzombie/node-util
+util 0.11.1 - MIT https://github.com/defunctzombie/node-util
 
 Copyright Joyent, Inc. および他の Node 投稿者。
 
@@ -16725,7 +16725,7 @@ Copyright Joyent, Inc. および他の Node 投稿者。 All rights reserved。
 
 ---------------------------------------------------------
 
-util 0.11.1 - MIT https://github.com/defunctzombie/node-util
+util 0.10.3 - MIT https://github.com/defunctzombie/node-util
 
 Copyright Joyent, Inc. および他の Node 投稿者。
 
