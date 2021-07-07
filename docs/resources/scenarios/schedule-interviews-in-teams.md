@@ -1,14 +1,14 @@
 ---
 title: Teams で面接をスケジュールする
 description: '[スクリプト] を使用してOfficeデータから会議Teams送信するExcelします。'
-ms.date: 05/25/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 66dae536c4a51ff3e028f06bf3aef3c7509d83bb
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: cb24da12637add805d86da4d07ce878509c6a5f6
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074432"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313730"
 ---
 # <a name="office-scripts-sample-scenario-schedule-interviews-in-teams"></a>Officeスクリプトのサンプル シナリオ: スケジュールの面接のスケジュールを設定Teams
 
@@ -32,7 +32,7 @@ ms.locfileid: "53074432"
 
 ## <a name="sample-code-extract-table-data-to-schedule-invites"></a>サンプル コード: テーブル データを抽出して招待をスケジュールする
 
-このスクリプトに、 **フローのインタビューのスケジュール** を指定します。
+スクリプト コレクションにこのスクリプトを追加します。 フローの **[面接のスケジュール]** という名前を付けします。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): InterviewInvite[] {
@@ -93,7 +93,7 @@ interface InterviewInvite {
 
 ## <a name="sample-code-mark-rows-as-invited"></a>サンプル コード: 行を招待済みとしてマークする
 
-このスクリプトに **、フローの [送信された招待を記録する]** という名前を指定します。
+スクリプト コレクションにこのスクリプトを追加します。 フローの **[送信された招待を記録する** ] という名前を付けします。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, invites: InterviewInvite[]) {
@@ -135,7 +135,7 @@ interface InterviewInvite {
 ## <a name="sample-flow-run-the-interview-scheduling-scripts-and-send-the-teams-meetings"></a>サンプル フロー: 面接スケジュール スクリプトを実行し、会議にTeamsする
 
 1. 新しいインスタント クラウド **フローを作成します**。
-1. [フロー **を手動でトリガーする] を選択し** 、[作成] を **押します**。
+1. [フロー **を手動でトリガーする] を選択し** 、[作成] を **選択します**。
 1. オンライン **(Business)** コネクタと [スクリプト **Excel実行]** アクションを使用する新しい **手順を追加** します。 コネクタに次の値を入力します。
     1. **場所**: OneDrive for Business
     1. **ドキュメント ライブラリ**: OneDrive
@@ -155,7 +155,7 @@ interface InterviewInvite {
     1. **ファイル**: hr-interviews.xlsx *(ファイル ブラウザーから選択)*
     1. **スクリプト**: 送信された招待を記録する
     1. **invites**:**結果**(Excel 値) Excel Online (Business) コネクタのスクリーンショットで、招待が Power Automate で送信 :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="されたレコードを記録します。":::
-1. フローを保存し、試してみてください。
+1. フローを保存し、試してみてください。[フロー エディター **] ページ** の [テスト] ボタンを使用するか、[マイ フロー] タブでフロー **を実行** します。メッセージが表示されたら、必ずアクセスを許可してください。
 
 ## <a name="training-video-send-a-teams-meeting-from-excel-data"></a>トレーニング ビデオ: データからTeams会議をExcelする
 

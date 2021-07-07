@@ -1,14 +1,14 @@
 ---
 title: 'Officeスクリプトのサンプル シナリオ: Web ダウンロードの分析'
 description: ブック内の生のインターネット トラフィック データをExcel、その情報をテーブルに整理する前に、元の場所を決定するサンプル。
-ms.date: 04/27/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: bdd6b43290e5432d87c4a85a35fbaf32967fbf03
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: ec7ccd2a4f534be825ee4aa358f5d81becc53937
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074460"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313933"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Officeスクリプトのサンプル シナリオ: Web ダウンロードの分析
 
@@ -29,11 +29,9 @@ ms.locfileid: "53074460"
 
 1. ユーザー <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a>にダウンロードOneDrive。
 
-2. ブックを開き、Excel for the web。
+1. ブックを開き、Excel for the web。
 
-3. [自動化] **タブで** 、[すべてのスクリプト] **を開きます**。
-
-4. [コード **エディター] 作業ウィンドウ** で、[新しいスクリプト] **を押** して、次のスクリプトをエディターに貼り付けます。
+1. [自動化] **タブで** 、[新しい **スクリプト] を選択** し、次のスクリプトをエディターに貼り付けます。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -209,7 +207,7 @@ ms.locfileid: "53074460"
     }
     ```
 
-5. スクリプトの名前を **[Web ダウンロードの分析] に変更し** 、保存します。
+1. スクリプトの名前を **[Web ダウンロードの分析] に変更し** 、保存します。
 
 ## <a name="running-the-script"></a>スクリプトを実行する
 

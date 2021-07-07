@@ -1,14 +1,14 @@
 ---
 title: コメントを追加Excel
 description: ワークシートにコメントを追加Officeスクリプトを使用する方法について説明します。
-ms.date: 05/03/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: e5e5d17c076eceaf06fddeea1a67d31ee3581f31
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: 77e308d020281c71751e2652f8dbaec00c263e44
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285935"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313912"
 ---
 # <a name="add-comments-in-excel"></a>コメントを追加Excel
 
@@ -26,9 +26,11 @@ ms.locfileid: "52285935"
 1. スクリプトは、シフト レコードの適切なセルにコメント (関連する従業員の電子メールを含む) を追加します。
 1. セル内の既存のコメントは、新しいコメントを追加する前に削除されます。
 
-## <a name="sample-code-add-comments"></a>サンプル コード: コメントの追加
+## <a name="sample-excel-file"></a>サンプル Excel ファイル
 
-このサンプルで <a href="excel-comments.xlsx">excel-comments.xlsx</a> ファイルをダウンロードして、自分で試してみてください。
+すぐに <a href="excel-comments.xlsx"> 使用excel-comments.xlsx</a> ブックのブックをダウンロードします。 次のスクリプトを追加して、サンプルを自分で試してみてください。
+
+## <a name="sample-code-add-comments"></a>サンプル コード: コメントの追加
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

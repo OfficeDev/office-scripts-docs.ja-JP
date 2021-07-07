@@ -1,14 +1,14 @@
 ---
 title: スクリプトを使用してテーブル間で行Officeする
 description: フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する方法について学習します。
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: c850ed055457f6733694027469a96a87e74ef66a
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 860521de166108d5a8355ea246c1bfe77e0e064b
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074453"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313758"
 ---
 # <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a>フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する
 
@@ -22,7 +22,7 @@ ms.locfileid: "53074453"
 
 ## <a name="sample-excel-file"></a>サンプル Excel ファイル
 
-このソリューションで <a href="input-table-filters.xlsx">input-table-filters.xlsx</a> ファイルをダウンロードして、自分で試してみてください。
+すぐに使用できる <a href="input-table-filters.xlsx"> ブックinput-table-filters.xlsx</a> ファイル をダウンロードします。 次のスクリプトを追加して、サンプルを自分で試してみてください。
 
 ## <a name="sample-code-move-rows-using-range-values"></a>サンプル コード: 範囲の値を使用して行を移動する
 

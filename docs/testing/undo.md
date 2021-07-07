@@ -1,14 +1,14 @@
 ---
 title: スクリプトによって行われた変更を元Officeする
 description: スクリプトを実行して行Excel on the webを元に戻すには、バージョン履歴を使用します。
-ms.date: 01/08/2019
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: f9f22d4879f8a02c00a5bac9f58d9aa36ae03e38
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 86ce59ea4715ac6d8b56ca8d165a1e0451e4ee22
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545547"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313968"
 ---
 # <a name="undo-the-changes-made-by-office-scripts"></a>スクリプトによって行われた変更を元Officeする
 
@@ -22,7 +22,7 @@ Officeのバージョン履歴は、新しい UI を使用して古いブック�
 
 1. [ファイル情報 **のバージョン**  >  **履歴**  >  **] に移動します**。
 2. スクリプトを実行する前に保存されたバージョンを選択します。
-3. [復元 **] を押します**。
+3. [復元 **] を選択します**。
 
 ## <a name="see-also"></a>関連項目
 

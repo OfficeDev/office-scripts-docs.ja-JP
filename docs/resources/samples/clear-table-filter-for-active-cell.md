@@ -1,14 +1,14 @@
 ---
 title: アクティブ セルの場所に基づいてテーブル列フィルターをクリアする
 description: アクティブ セルの場所に基づいてテーブル列フィルターをクリアする方法について学習します。
-ms.date: 05/03/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: d6f267b433be9a0ddf44edf53ed92a136eb2ded6
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: f10e23b4ad948a28c5b749533ddedefe164d7142
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074439"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313891"
 ---
 # <a name="clear-table-column-filter-based-on-active-cell-location"></a>アクティブ セルの場所に基づいてテーブル列フィルターをクリアする
 
@@ -24,9 +24,13 @@ _列フィルターをクリアした後_
 
 :::image type="content" source="../../images/after-filter-cleared.png" alt-text="列フィルターをクリアした後のアクティブ なセル。":::
 
+## <a name="sample-excel-file"></a>サンプル Excel ファイル
+
+すぐに <a href="table-with-filter.xlsx"> 使用table-with-filter.xlsx</a> ブックのブックをダウンロードします。 次のスクリプトを追加して、サンプルを自分で試してみてください。
+
 ## <a name="sample-code-clear-table-column-filter-based-on-active-cell"></a>サンプル コード: アクティブ セルに基づいてテーブル列フィルターをクリアする
 
-次のスクリプトは、アクティブなセルの場所に基づいてテーブル列フィルターをクリアし、テーブルを持つ任意のExcelに適用できます。 便宜上、このファイルをダウンロード<a href="table-with-filter.xlsx">して使用table-with-filter.xlsx。 </a>
+次のスクリプトは、アクティブなセルの場所に基づいてテーブル列フィルターをクリアし、テーブルを持つ任意のExcelに適用できます。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

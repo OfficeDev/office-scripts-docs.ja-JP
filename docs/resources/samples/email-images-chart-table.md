@@ -1,14 +1,14 @@
 ---
 title: グラフと表の画像Excelメールで送信する
 description: '[スクリプト] と [Office] Power Automateを使用して、グラフと表の画像Excelメールを送信する方法について学習します。'
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 5eb20025462614d62774ae6c088bdf397dcfb39d
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 50bc65c82df7f5fc68dbebf942c4f607bb6af60a
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074593"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313842"
 ---
 # <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>グラフOfficeの画像をPower Automateする場合は、スクリプトとスクリプトを使用してメールを送信します。
 
@@ -40,11 +40,11 @@ _メール フローを通じて受信Power Automateメール_
 1. [グラフOfficeテーブルを計算して抽出するExcelスクリプト](#sample-code-calculate-and-extract-excel-chart-and-table)
 1. スクリプトPower Automate結果を電子メールで送信するフローを示します。 これを行う方法の例については、「自動ワークフローを作成[する」を参照Power Automate。](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)
 
+## <a name="sample-excel-file"></a>サンプル Excel ファイル
+
+すぐに <a href="email-chart-table.xlsx"> 使用email-chart-table.xlsx</a> ブックのブックをダウンロードします。 次のスクリプトを追加して、サンプルを自分で試してみてください。
+
 ## <a name="sample-code-calculate-and-extract-excel-chart-and-table"></a>サンプル コード: グラフと表のExcel抽出する
-
-次のスクリプトは、グラフと表のExcel抽出します。
-
-サンプル ファイルをダウンロード <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> このスクリプトで使用して、自分で試してみてください。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReportImages {
@@ -94,7 +94,7 @@ interface ReportImages {
 このフローはスクリプトを実行し、返された画像を電子メールで送信します。
 
 1. 新しいインスタント クラウド **フローを作成します**。
-1. [フロー **を手動でトリガーする] を選択し** 、[作成] を **押します**。
+1. [フロー **を手動でトリガーする] を選択し** 、[作成] を **選択します**。
 1. [スクリプト **の実行]** アクションを使用して、Excel **(Business)** コネクタを使用する新しい **手順を追加** します。 アクションには、次の値を使用します。
     * **場所**: OneDrive for Business
     * **ドキュメント ライブラリ**: OneDrive
@@ -122,7 +122,7 @@ interface ReportImages {
     ```
 
     :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="Office 365 OutlookでPower Automate。":::
-1. フローを保存し、試してみてください。
+1. フローを保存し、試してみてください。[フロー エディター **] ページ** の [テスト] ボタンを使用するか、[マイ フロー] タブでフロー **を実行** します。メッセージが表示されたら、必ずアクセスを許可してください。
 
 ## <a name="training-video-extract-and-email-images-of-chart-and-table"></a>トレーニング ビデオ: グラフとテーブルの画像を抽出して電子メールで送信する
 

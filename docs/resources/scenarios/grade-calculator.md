@@ -1,14 +1,14 @@
 ---
 title: 'Officeスクリプトのサンプル シナリオ: 成績計算'
 description: 学生のクラスのパーセンテージとレターの成績を決定するサンプル。
-ms.date: 12/17/2020
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: e2ef6e7522fc88219bf6ba40900a1ecceecb263b
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: 2d98e68f37418ade238a707cb74cc7ccf47e8f59
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232698"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313793"
 ---
 # <a name="office-scripts-sample-scenario-grade-calculator"></a>Officeスクリプトのサンプル シナリオ: 成績計算
 
@@ -27,11 +27,9 @@ ms.locfileid: "52232698"
 
 1. ユーザー <a href="grade-calculator.xlsx">grade-calculator.xlsx</a>にダウンロードOneDrive。
 
-2. Web 用のブックExcel開きます。
+1. ブックを開き、Excel for the web。
 
-3. [自動化] **タブで** 、[すべてのスクリプト] **を開きます**。
-
-4. [コード **エディター] 作業ウィンドウ** で、[新しいスクリプト] **を押** して、次のスクリプトをエディターに貼り付けます。
+1. [自動化] **タブで** 、[新しい **スクリプト] を選択** し、次のスクリプトをエディターに貼り付けます。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -174,7 +172,7 @@ ms.locfileid: "52232698"
     }
     ```
 
-5. スクリプトの名前を [ **成績計算] に変更** し、保存します。
+1. スクリプトの名前を [ **成績計算] に変更** し、保存します。
 
 ## <a name="running-the-script"></a>スクリプトを実行する
 
@@ -182,8 +180,8 @@ ms.locfileid: "52232698"
 
 ### <a name="before-running-the-script"></a>スクリプトを実行する前に
 
-:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="学生のスコアの行を表示するワークシート":::
+:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="学生のスコアの行を表示するワークシート。":::
 
 ### <a name="after-running-the-script"></a>スクリプトの実行後
 
-:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="有効な学生行の赤い合計で無効なセルを持つ学生スコア データを示すワークシート":::
+:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="有効な学生行の赤い合計に無効なセルを含む学生スコア データを示すワークシート。":::

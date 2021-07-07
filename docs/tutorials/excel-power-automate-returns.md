@@ -1,14 +1,14 @@
 ---
 title: 自動で実行される Power Automate フローにスクリプトからデータを返す
 description: Power Automate を使用して Excel on the web 用の Office スクリプトを実行してリマインダー メールを送信する方法を示すチュートリアル。
-ms.date: 12/15/2020
+ms.date: 06/29/2021
 localization_priority: Priority
-ms.openlocfilehash: 6c1041ede630319f75ccdad453734828eaa8bd3d
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 6c94ba4382f9d481c0064e89b5f7afa147ab23f4
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074677"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53314003"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow"></a>自動で実行される Power Automate フローにスクリプトからデータを返す
 
@@ -127,7 +127,7 @@ ms.locfileid: "53074677"
 
 1. [「Power Automate のサイト」](https://flow.microsoft.com)にサインインします。
 
-1. 画面の左側に表示されるメニューで、**[作成]** を押します。 これにより、新しいワークフローを作成する方法の一覧を表示できます。
+1. 画面の左側に表示されるメニューで、**[作成]** を選択します。 これにより、新しいワークフローを作成する方法の一覧を表示できます。
 
     :::image type="content" source="../images/power-automate-tutorial-1.png" alt-text="Power Automate の [作成] ボタン。":::
 
@@ -144,9 +144,9 @@ ms.locfileid: "53074677"
 
     :::image type="content" source="../images/power-automate-return-tutorial-3.png" alt-text="オプションが表示された Power Automate の [スケジュールされたクラウド フローを作成する] ダイアログ。オプションには、フロー名、開始時刻、繰り返しの頻度、フローを実行する曜日が含まれます。":::
 
-1. **[作成]** を押します。
+1. **[作成]** を選択します。
 
-1. **[新しいステップ]** を押します。
+1. **[新しい手順]** を選択します。
 
 1. **[標準]** タブを選択し、**Excel Online (ビジネス)** を選択します。
 
@@ -165,7 +165,7 @@ ms.locfileid: "53074677"
 
     :::image type="content" source="../images/power-automate-return-tutorial-4.png" alt-text="スクリプトを実行するための Power Automate コネクタの設定。":::
 
-1. **[新しいステップ]** を押します。
+1. **[新しい手順]** を選択します。
 
 1. リマインダー メールを送信してフローを終了します。 コネクタの検索バーを使用して、**[メールの送信 (V2)]** を選択します。 スクリプトによって返されるメール アドレスを追加するために、**動的なコンテンツの追加** コントロールを使用します。 これは、**result** というラベル付きの Excel アイコンで示されます。 件名、本文は自由に入力できます。
 
@@ -174,11 +174,11 @@ ms.locfileid: "53074677"
     > [!NOTE]
     > このチュートリアルでは、Outlook を使用します。代わりに、お好きなメール サービスを自由に使用することもできますが、一部のオプションは異なる場合があります。
 
-1. **[保存]** を押します。
+1. **[保存]** を選択します。
 
 ## <a name="test-the-script-in-power-automate"></a>Power Automate でスクリプトをテストする
 
-作成したフローは毎週月曜日に実行されます。 画面の右上隅にある **[テスト]** ボタンを押すと、スクリプトをテストできます。 **[手動]** を選択し、**[テストの実行]** を押して直ちにフローを実行し、動作をテストします。 続行するには、Excel と Outlook にアクセス許可を付与する必要がある場合があります。
+作成したフローは毎週月曜日に実行されます。 画面の右上隅にある **[テスト]** ボタンを選択すると、スクリプトをテストできます。 **[手動]** を選択し、**[テストの実行]** を選択して直ちにフローを実行し、動作をテストします。 続行するには、Excel と Outlook にアクセス許可を付与する必要がある場合があります。
 
 :::image type="content" source="../images/power-automate-return-tutorial-6.png" alt-text="Power Automate の [テスト] ボタン。":::
 

@@ -1,21 +1,23 @@
 ---
 title: フォルダー内のすべての Excel ファイルでスクリプトを実行する
 description: フォルダー内のすべてのファイルに対してスクリプトExcel実行する方法について説明OneDrive for Business。
-ms.date: 05/03/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 83e091a8b009bac577da9ed53dcf4139c1b845c9
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: bf9c0c486dacced5c3017b267ea65dfd215a5197
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074586"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313898"
 ---
 # <a name="run-a-script-on-all-excel-files-in-a-folder"></a>フォルダー内のすべての Excel ファイルでスクリプトを実行する
 
 このプロジェクトは、フォルダー内のすべてのファイルに対して一連の自動化タスクを実行OneDrive for Business。 また、フォルダー内のフォルダー SharePointすることもできます。
 このプロパティは、Excelファイルに対して計算を実行し、書式設定を追加し、同僚にコメント[@mentions](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7)挿入します。
 
-ファイルをダウンロード<a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip</a>サンプルで使用されている Sales というタイトルのフォルダーにファイルを抽出し、自分で試してみてください。
+## <a name="sample-excel-files"></a>サンプル Excel ファイル
+
+この <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/docs/resources/samples/highlight-alert-excel-files.zip?raw=true">highlight-alert-excel-files.zip</a> 必要なすべてのブックの詳細をダウンロードします。 これらのファイルを Sales というタイトルのフォルダーに **展開します**。 次のスクリプトをスクリプト コレクションに追加して、サンプルを自分で試してみてください。
 
 ## <a name="sample-code-add-formatting-and-insert-comment"></a>サンプル コード: 書式の追加とコメントの挿入
 
@@ -74,7 +76,7 @@ function main(workbook: ExcelScript.Workbook) {
 このフローは、"Sales" フォルダー内のすべてのブックでスクリプトを実行します。
 
 1. 新しいインスタント クラウド **フローを作成します**。
-1. [フロー **を手動でトリガーする] を選択し** 、[作成] を **押します**。
+1. [フロー **を手動でトリガーする] を選択し** 、[作成] を **選択します**。
 1. [フォルダー内 **のファイルの一** 覧] **OneDrive for Businessを使用** する新 **しい手順を追加** します。
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="完了したOneDrive for BusinessコネクタをPower Automate。":::
@@ -92,7 +94,7 @@ function main(workbook: ExcelScript.Workbook) {
     1. **スクリプト**: スクリプト名
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-3.png" alt-text="オンライン (Excel) コネクタの完成Power Automate。":::
-1. フローを保存し、試してみてください。
+1. フローを保存し、試してみてください。[フロー エディター **] ページ** の [テスト] ボタンを使用するか、[マイ フロー] タブでフロー **を実行** します。メッセージが表示されたら、必ずアクセスを許可してください。
 
 ## <a name="training-video-run-a-script-on-all-excel-files-in-a-folder"></a>トレーニング ビデオ: フォルダー内のすべてのファイルExcelスクリプトを実行する
 

@@ -1,14 +1,14 @@
 ---
 title: ワークシート内の各セルからハイパーリンクをExcelする
 description: '[スクリプト] を使用してOfficeワークシートの各セルからハイパーリンクを削除するExcelします。'
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 048d01691377a7086bdba9ceb87ca98839cfa4d1
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: dc33eb639edac8ada29824a53440031942e59179
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285802"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313751"
 ---
 # <a name="remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>ワークシート内の各セルからハイパーリンクをExcelする
 
@@ -17,9 +17,11 @@ ms.locfileid: "52285802"
 > [!NOTE]
 > これは、セル数が 10k の場合<機能します。
 
-## <a name="sample-code-remove-hyperlinks"></a>サンプル コード: ハイパーリンクの削除
+## <a name="sample-excel-file"></a>サンプル Excel ファイル
 
-このサンプルで <a href="remove-hyperlinks.xlsx">remove-hyperlinks.xlsx</a> ファイルをダウンロードして、自分で試してみてください。
+すぐに使用できる <a href="remove-hyperlinks.xlsx"> ブックremove-hyperlinks.xlsx</a> ファイル をダウンロードします。 次のスクリプトを追加して、サンプルを自分で試してみてください。
+
+## <a name="sample-code-remove-hyperlinks"></a>サンプル コード: ハイパーリンクの削除
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, sheetName: string = 'Sheet1') {

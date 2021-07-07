@@ -1,14 +1,14 @@
 ---
 title: テーブルをExcelし、表示範囲を取得する
 description: スクリプトを使用してOfficeテーブルをフィルター処理しExcelオブジェクトの配列として表示範囲を取得する方法について学習します。
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 196e39ffdfb7e6ff2d0898802665d3c2eccc7dbe
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: b19b826f95c7e7aeb331130fde05afaafe500c3d
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285795"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313954"
 ---
 # <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>テーブルExcelし、JSON オブジェクトとして表示範囲を取得する
 
@@ -20,11 +20,11 @@ ms.locfileid: "52285795"
 * フィルター処理後に表示範囲を抽出します。
 * 特定の JSON 構造を持つオブジェクトを [アセンブルして返します](#sample-json)。
 
+## <a name="sample-excel-file"></a>サンプル Excel ファイル
+
+すぐに <a href="table-filter.xlsx"> 使用table-filter.xlsx</a> ブックのブックをダウンロードします。 次のスクリプトを追加して、サンプルを自分で試してみてください。
+
 ## <a name="sample-code-filter-a-table-and-get-visible-range"></a>サンプル コード: テーブルをフィルター処理し、表示範囲を取得する
-
-次のスクリプトは、テーブルをフィルター処理し、表示範囲を取得します。
-
-サンプル ファイルをダウンロード <a href="table-filter.xlsx">table-filter.xlsx</a> このスクリプトで使用して、自分で試してみてください。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReturnTemplate {

@@ -1,14 +1,14 @@
 ---
 title: Office スクリプトと Office アドインの違い
 description: スクリプトとアドインの動作Office API Office違い。
-ms.date: 06/02/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 17d66e37c7bf2b1263c0232bb0afb3ee4d29aa36
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: c45fa12369ed8333df0c8f85a2b49900e7079eba
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074565"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313919"
 ---
 # <a name="differences-between-office-scripts-and-office-add-ins"></a>Office スクリプトと Office アドインの違い
 
@@ -32,7 +32,7 @@ OfficeアドインOffice Office スクリプト API の JavaScript API はいく
 
 ### <a name="events"></a>イベント
 
-Officeスクリプトは、ブック レベルのイベントを[サポートしていない](/office/dev/add-ins/excel/excel-add-ins-events)。 スクリプトは、ユーザーがスクリプトの [**実行**] ボタンを押すか、スクリプトを使用してトリガー Power Automate。 すべてのスクリプトでコードが 1 つのメソッドで `main` 実行され、終了します。
+Officeスクリプトは、ブック レベルのイベントを[サポートしていない](/office/dev/add-ins/excel/excel-add-ins-events)。 スクリプトは、スクリプトの [実行]ボタンを選択するか、スクリプトを使用して実行Power Automate。 すべてのスクリプトでコードが 1 つのメソッドで `main` 実行され、終了します。
 
 ### <a name="common-apis"></a>共通 API
 

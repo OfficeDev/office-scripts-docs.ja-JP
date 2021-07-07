@@ -1,14 +1,14 @@
 ---
 title: ファイルとファイルExcel相互参照Power Automate
 description: スクリプトとスクリプトを使用Office、Power Automateファイルを相互参照して書式設定するExcelします。
-ms.date: 06/25/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 89c4a5fa5dcff21681fa20cd4118447d39d9b6da
-ms.sourcegitcommit: a063b3faf6c1b7c294bd6a73e46845b352f2a22d
+ms.openlocfilehash: 0776ce49cacecfa15339cc7c0cd4866daad789ff
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53202876"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313961"
 ---
 # <a name="cross-reference-excel-files-with-power-automate"></a>ファイルとファイルExcel相互参照Power Automate
 
@@ -20,10 +20,12 @@ ms.locfileid: "53202876"
 
 ## <a name="sample-excel-files"></a>サンプル Excel ファイル
 
-このソリューションで使用されている次のファイルをダウンロードして、自分で試してみてください。
+次のファイルをダウンロードして、サンプルのすぐに使用できるブックを取得します。
 
 1. <a href="event-data.xlsx">event-data.xlsx</a>
 1. <a href="speaker-registrations.xlsx">speaker-registrations.xlsx</a>
+
+次のスクリプトを追加して、サンプルを自分で試してみてください。
 
 ## <a name="sample-code-get-event-data"></a>サンプル コード: イベント データの取得
 
@@ -147,7 +149,7 @@ interface EventData {
 このフローは、最初のブックからイベント情報を抽出し、そのデータを使用して 2 番目のブックを検証します。
 
 1. 新しいインスタント [Power Automate](https://flow.microsoft.com)にサインインし、**新しいインスタント クラウド フローを作成します**。
-1. [フロー **を手動でトリガーする] を選択し** 、[作成] を **押します**。
+1. [フロー **を手動でトリガーする] を選択し** 、[作成] を **選択します**。
 1. [スクリプト **の実行]** アクションを使用して、Excel **(Business)** コネクタを使用する新しい **手順を追加** します。 アクションには、次の値を使用します。
     * **場所**: OneDrive for Business
     * **ドキュメント ライブラリ**: OneDrive
@@ -169,4 +171,5 @@ interface EventData {
     * **本文**: result (_Run スクリプト 2 からの **動的コンテンツ**_)
 
     :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="Office 365 OutlookでPower Automate。":::
-1. フローを保存し、[テスト] **を選択** して試します。"不一致が見つかりました" というメールを受信する必要があります。 データにはレビューが必要です。 これは、グループ内の行と **speaker-registrations.xlsx行の** 間に違 **いevent-data.xlsx。** [speaker-registrations.xlsxを **開** き、スピーカー登録リストに潜在的な問題があるいくつかの強調表示されたセルを表示します。
+1. フローを保存します。 [フロー エディター **] ページ** の [テスト] ボタンを使用するか、[マイ フロー] タブでフロー **を実行** します。メッセージが表示されたら、必ずアクセスを許可してください。
+1. "不一致が見つかりました" というメールを受信する必要があります。 データにはレビューが必要です。 これは、グループ内の行と **speaker-registrations.xlsx行の** 間に違 **いevent-data.xlsx。** [speaker-registrations.xlsxを **開** き、スピーカー登録リストに潜在的な問題があるいくつかの強調表示されたセルを表示します。

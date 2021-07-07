@@ -1,14 +1,14 @@
 ---
 title: 'Officeスクリプトのサンプル シナリオ: noAA Graphデータを使用する'
 description: NOAA データベースから JSON データをフェッチし、それを使用してグラフを作成するサンプル。
-ms.date: 04/26/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: d35af59d9eed1abc9f3844834c92752ed80de80f
-ms.sourcegitcommit: f7a7aebfb687f2a35dbed07ed62ff352a114525a
+ms.openlocfilehash: aca2a966e6a0588c597d6f01f52f2c73354de0c1
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2021
-ms.locfileid: "52232691"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313765"
 ---
 # <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a>Officeスクリプトのサンプル シナリオ: NOAA からの水位データの取得とグラフ化
 
@@ -26,9 +26,7 @@ ms.locfileid: "52232691"
 
 1. ブックを開き、Excel on the web。
 
-1. [自動化] **タブで** 、[すべてのスクリプト] **を選択します**。
-
-1. [コード **エディター] 作業ウィンドウ** で、[ **新しいスクリプト** ] を選択し、次のスクリプトをエディターに貼り付けます。
+1. [自動化] **タブで** 、[新しい **スクリプト] を選択** し、次のスクリプトをエディターに貼り付けます。
 
     ```TypeScript
     /**

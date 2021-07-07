@@ -3,12 +3,12 @@ title: Excel on the web で Office スクリプトを使用してブックのデ
 description: ブックのデータを読み取り、スクリプトでそのデータを評価する方法について説明した Office スクリプトのチュートリアル。
 ms.date: 01/06/2021
 localization_priority: Priority
-ms.openlocfilehash: aa05533f0d7cd3b53e4eb616ae3216d672d026f9
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 38a8c64fcf0ed998049c2b95c6d4ede148b6925b
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074691"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313989"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを使用してブックのデータを読み取る
 
@@ -70,8 +70,8 @@ ms.locfileid: "53074691"
 
 6. スクリプトを実行します。
 7. コンソールに `[Array[1]]` が表示されます。 範囲は 2 次元のデータ配列であるため、これは数値ではありません。 この 2 次元の範囲は、コンソールに直接ログ記録されます。 コード エディターを使用すると、この配列の内容を表示できます。
-8. 2 次元の配列がコンソールにログ記録すると、各行の下に列の値がグループ化されます。 青い三角形を押して、配列のログを展開します。
-9. 新たに表示された青い三角形を押して、配列の第 2 レベルを展開すると、次の情報が表示されます。
+8. 2 次元の配列がコンソールにログ記録すると、各行の下に列の値がグループ化されます。 青い三角形を選択して、配列のログを展開します。
+9. 新たに表示された青い三角形を選択して、配列の第 2 レベルを展開すると、次の情報が表示されます。
 
     :::image type="content" source="../images/tutorial-4.png" alt-text="出力 '-20.05' が 2 つの配列の下に入れ子になって表示されているコンソール ログ。":::
 

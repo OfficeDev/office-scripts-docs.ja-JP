@@ -1,28 +1,27 @@
 ---
 title: Office スクリプトの基本的なExcel on the web
 description: スクリプト内のスクリプトと一緒にOfficeコード サンプルのコレクションExcel on the web。
-ms.date: 05/17/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 3bf3bd5acd10bc5999db4746a2ed62af85237e48
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 3aaaa7fe8769f6dcd658ae91c577956b56033051
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074558"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313940"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Office スクリプトの基本的なExcel on the web
 
 次のサンプルは、独自のブックで試す簡単なスクリプトです。 次の方法で使用Excel on the web。
 
 1. **[自動化]** タブを開きます。
-2. [コード **エディター] を押します**。
-3. コード **エディターの作業** ウィンドウで [新しいスクリプト] を押します。
-4. スクリプト全体を、選択したサンプルに置き換える。
-5. コード **エディターの** 作業ウィンドウで [実行] を押します。
+1. **[新しいスクリプト]** を選択します。
+1. スクリプト全体を、選択したサンプルに置き換える。
+1. コード **エディターの** 作業ウィンドウで [実行] を選択します。
 
 ## <a name="script-basics"></a>スクリプトの基本
 
-これらのサンプルでは、スクリプトの基本的な構成要素Office示します。 これらをスクリプトに追加して、ソリューションを拡張し、一般的な問題を解決します。
+これらのサンプルでは、スクリプトの基本的な構成要素Office示します。 これらのスクリプトを展開してソリューションを拡張し、一般的な問題を解決します。
 
 ### <a name="read-and-log-one-cell"></a>1 つのセルを読み取り、ログに記録する
 
@@ -424,4 +423,4 @@ function main(workbook: ExcelScript.Workbook) {
 
 * [Sudhi Ramamurthy の YouTube の "Range basics"](https://youtu.be/4emjkOFdLBA)
 * [Officeスクリプトのサンプルとシナリオ](samples-overview.md)
-* [Excel on the web で Office スクリプトを記録、編集、作成する](../../tutorials/excel-tutorial.md)
+* [Excel on the web で Office スクリプト を記録、編集、そして作成する](../../tutorials/excel-tutorial.md)
