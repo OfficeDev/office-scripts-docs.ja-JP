@@ -1,32 +1,31 @@
 ---
 title: Office スクリプトの基本的なExcel on the web
 description: スクリプト内のスクリプトと一緒にOfficeコード サンプルのコレクションExcel on the web。
-ms.date: 05/17/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 3bf3bd5acd10bc5999db4746a2ed62af85237e48
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 3aaaa7fe8769f6dcd658ae91c577956b56033051
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074558"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313940"
 ---
-# <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a><span data-ttu-id="cd50e-103">Office スクリプトの基本的なExcel on the web</span><span class="sxs-lookup"><span data-stu-id="cd50e-103">Basic scripts for Office Scripts in Excel on the web</span></span>
+# <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a><span data-ttu-id="c36b3-103">Office スクリプトの基本的なExcel on the web</span><span class="sxs-lookup"><span data-stu-id="c36b3-103">Basic scripts for Office Scripts in Excel on the web</span></span>
 
-<span data-ttu-id="cd50e-104">次のサンプルは、独自のブックで試す簡単なスクリプトです。</span><span class="sxs-lookup"><span data-stu-id="cd50e-104">The following samples are simple scripts for you to try on your own workbooks.</span></span> <span data-ttu-id="cd50e-105">次の方法で使用Excel on the web。</span><span class="sxs-lookup"><span data-stu-id="cd50e-105">To use them in Excel on the web:</span></span>
+<span data-ttu-id="c36b3-104">次のサンプルは、独自のブックで試す簡単なスクリプトです。</span><span class="sxs-lookup"><span data-stu-id="c36b3-104">The following samples are simple scripts for you to try on your own workbooks.</span></span> <span data-ttu-id="c36b3-105">次の方法で使用Excel on the web。</span><span class="sxs-lookup"><span data-stu-id="c36b3-105">To use them in Excel on the web:</span></span>
 
-1. <span data-ttu-id="cd50e-106">**[自動化]** タブを開きます。</span><span class="sxs-lookup"><span data-stu-id="cd50e-106">Open the **Automate** tab.</span></span>
-2. <span data-ttu-id="cd50e-107">[コード **エディター] を押します**。</span><span class="sxs-lookup"><span data-stu-id="cd50e-107">Press **Code Editor**.</span></span>
-3. <span data-ttu-id="cd50e-108">コード **エディターの作業** ウィンドウで [新しいスクリプト] を押します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-108">Press **New Script** in the Code Editor's task pane.</span></span>
-4. <span data-ttu-id="cd50e-109">スクリプト全体を、選択したサンプルに置き換える。</span><span class="sxs-lookup"><span data-stu-id="cd50e-109">Replace the entire script with the sample of your choice.</span></span>
-5. <span data-ttu-id="cd50e-110">コード **エディターの** 作業ウィンドウで [実行] を押します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-110">Press **Run** in the Code Editor's task pane.</span></span>
+1. <span data-ttu-id="c36b3-106">**[自動化]** タブを開きます。</span><span class="sxs-lookup"><span data-stu-id="c36b3-106">Open the **Automate** tab.</span></span>
+1. <span data-ttu-id="c36b3-107">**[新しいスクリプト]** を選択します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-107">Select **New Script**.</span></span>
+1. <span data-ttu-id="c36b3-108">スクリプト全体を、選択したサンプルに置き換える。</span><span class="sxs-lookup"><span data-stu-id="c36b3-108">Replace the entire script with the sample of your choice.</span></span>
+1. <span data-ttu-id="c36b3-109">コード **エディターの** 作業ウィンドウで [実行] を選択します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-109">Select **Run** in the Code Editor's task pane.</span></span>
 
-## <a name="script-basics"></a><span data-ttu-id="cd50e-111">スクリプトの基本</span><span class="sxs-lookup"><span data-stu-id="cd50e-111">Script basics</span></span>
+## <a name="script-basics"></a><span data-ttu-id="c36b3-110">スクリプトの基本</span><span class="sxs-lookup"><span data-stu-id="c36b3-110">Script basics</span></span>
 
-<span data-ttu-id="cd50e-112">これらのサンプルでは、スクリプトの基本的な構成要素Office示します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-112">These samples demonstrate fundamental building blocks for Office Scripts.</span></span> <span data-ttu-id="cd50e-113">これらをスクリプトに追加して、ソリューションを拡張し、一般的な問題を解決します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-113">Add these to your scripts to extend your solution and solve common problems.</span></span>
+<span data-ttu-id="c36b3-111">これらのサンプルでは、スクリプトの基本的な構成要素Office示します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-111">These samples demonstrate fundamental building blocks for Office Scripts.</span></span> <span data-ttu-id="c36b3-112">これらのスクリプトを展開してソリューションを拡張し、一般的な問題を解決します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-112">Expand these scripts to extend your solution and solve common problems.</span></span>
 
-### <a name="read-and-log-one-cell"></a><span data-ttu-id="cd50e-114">1 つのセルを読み取り、ログに記録する</span><span class="sxs-lookup"><span data-stu-id="cd50e-114">Read and log one cell</span></span>
+### <a name="read-and-log-one-cell"></a><span data-ttu-id="c36b3-113">1 つのセルを読み取り、ログに記録する</span><span class="sxs-lookup"><span data-stu-id="c36b3-113">Read and log one cell</span></span>
 
-<span data-ttu-id="cd50e-115">このサンプルでは **、A1 の値を読み** 取り、コンソールに出力します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-115">This sample reads the value of **A1** and prints it to the console.</span></span>
+<span data-ttu-id="c36b3-114">このサンプルでは **、A1 の値を読み** 取り、コンソールに出力します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-114">This sample reads the value of **A1** and prints it to the console.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -41,9 +40,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="read-the-active-cell"></a><span data-ttu-id="cd50e-116">アクティブ セルの読み取り</span><span class="sxs-lookup"><span data-stu-id="cd50e-116">Read the active cell</span></span>
+### <a name="read-the-active-cell"></a><span data-ttu-id="c36b3-115">アクティブ セルの読み取り</span><span class="sxs-lookup"><span data-stu-id="c36b3-115">Read the active cell</span></span>
 
-<span data-ttu-id="cd50e-117">このスクリプトは、現在のアクティブ セルの値をログに記録します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-117">This script logs the value of the current active cell.</span></span> <span data-ttu-id="cd50e-118">複数のセルが選択されている場合は、左上のセルがログに記録されます。</span><span class="sxs-lookup"><span data-stu-id="cd50e-118">If multiple cells are selected, the top-leftmost cell will be logged.</span></span>
+<span data-ttu-id="c36b3-116">このスクリプトは、現在のアクティブ セルの値をログに記録します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-116">This script logs the value of the current active cell.</span></span> <span data-ttu-id="c36b3-117">複数のセルが選択されている場合は、左上のセルがログに記録されます。</span><span class="sxs-lookup"><span data-stu-id="c36b3-117">If multiple cells are selected, the top-leftmost cell will be logged.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -55,9 +54,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="change-an-adjacent-cell"></a><span data-ttu-id="cd50e-119">隣接するセルを変更する</span><span class="sxs-lookup"><span data-stu-id="cd50e-119">Change an adjacent cell</span></span>
+### <a name="change-an-adjacent-cell"></a><span data-ttu-id="c36b3-118">隣接するセルを変更する</span><span class="sxs-lookup"><span data-stu-id="c36b3-118">Change an adjacent cell</span></span>
 
-<span data-ttu-id="cd50e-120">このスクリプトは、相対参照を使用して隣接するセルを取得します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-120">This script gets adjacent cells using relative references.</span></span> <span data-ttu-id="cd50e-121">アクティブ セルが一番上の行にある場合、スクリプトの一部は、現在選択されているセルの上にあるセルを参照しますので、失敗します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-121">Note that if the active cell is on the top row, part of the script fails, because it references the cell above the currently selected one.</span></span>
+<span data-ttu-id="c36b3-119">このスクリプトは、相対参照を使用して隣接するセルを取得します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-119">This script gets adjacent cells using relative references.</span></span> <span data-ttu-id="c36b3-120">アクティブ セルが一番上の行にある場合、スクリプトの一部は、現在選択されているセルの上にあるセルを参照しますので、失敗します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-120">Note that if the active cell is on the top row, part of the script fails, because it references the cell above the currently selected one.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -82,9 +81,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="change-all-adjacent-cells"></a><span data-ttu-id="cd50e-122">隣接するセルを変更する</span><span class="sxs-lookup"><span data-stu-id="cd50e-122">Change all adjacent cells</span></span>
+### <a name="change-all-adjacent-cells"></a><span data-ttu-id="c36b3-121">隣接するセルを変更する</span><span class="sxs-lookup"><span data-stu-id="c36b3-121">Change all adjacent cells</span></span>
 
-<span data-ttu-id="cd50e-123">このスクリプトは、アクティブ セルの書式設定を隣接セルにコピーします。</span><span class="sxs-lookup"><span data-stu-id="cd50e-123">This script copies the formatting in the active cell to the neighboring cells.</span></span> <span data-ttu-id="cd50e-124">このスクリプトは、アクティブ セルがワークシートの端にない場合にのみ機能します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-124">Note that this script only works when the active cell isn't on an edge of the worksheet.</span></span>
+<span data-ttu-id="c36b3-122">このスクリプトは、アクティブ セルの書式設定を隣接セルにコピーします。</span><span class="sxs-lookup"><span data-stu-id="c36b3-122">This script copies the formatting in the active cell to the neighboring cells.</span></span> <span data-ttu-id="c36b3-123">このスクリプトは、アクティブ セルがワークシートの端にない場合にのみ機能します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-123">Note that this script only works when the active cell isn't on an edge of the worksheet.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -105,9 +104,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="change-each-individual-cell-in-a-range"></a><span data-ttu-id="cd50e-125">範囲内の各セルを変更する</span><span class="sxs-lookup"><span data-stu-id="cd50e-125">Change each individual cell in a range</span></span>
+### <a name="change-each-individual-cell-in-a-range"></a><span data-ttu-id="c36b3-124">範囲内の各セルを変更する</span><span class="sxs-lookup"><span data-stu-id="c36b3-124">Change each individual cell in a range</span></span>
 
-<span data-ttu-id="cd50e-126">このスクリプトは、現在選択されている範囲をループ処理します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-126">This script loops over the currently select range.</span></span> <span data-ttu-id="cd50e-127">現在の書式設定をクリアし、各セルの塗りつぶしの色をランダムな色に設定します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-127">It clears the current formatting and sets the fill color in each cell to a random color.</span></span>
+<span data-ttu-id="c36b3-125">このスクリプトは、現在選択されている範囲をループ処理します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-125">This script loops over the currently select range.</span></span> <span data-ttu-id="c36b3-126">現在の書式設定をクリアし、各セルの塗りつぶしの色をランダムな色に設定します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-126">It clears the current formatting and sets the fill color in each cell to a random color.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -134,9 +133,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="get-groups-of-cells-based-on-special-criteria"></a><span data-ttu-id="cd50e-128">特別な条件に基づいてセルのグループを取得する</span><span class="sxs-lookup"><span data-stu-id="cd50e-128">Get groups of cells based on special criteria</span></span>
+### <a name="get-groups-of-cells-based-on-special-criteria"></a><span data-ttu-id="c36b3-127">特別な条件に基づいてセルのグループを取得する</span><span class="sxs-lookup"><span data-stu-id="c36b3-127">Get groups of cells based on special criteria</span></span>
 
-<span data-ttu-id="cd50e-129">このスクリプトは、現在のワークシートの使用範囲内のすべての空白セルを取得します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-129">This script gets all the blank cells in the current worksheet's used range.</span></span> <span data-ttu-id="cd50e-130">次に、これらのすべてのセルを黄色の背景で強調表示します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-130">It then highlights all those cells with a yellow background.</span></span>
+<span data-ttu-id="c36b3-128">このスクリプトは、現在のワークシートの使用範囲内のすべての空白セルを取得します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-128">This script gets all the blank cells in the current worksheet's used range.</span></span> <span data-ttu-id="c36b3-129">次に、これらのすべてのセルを黄色の背景で強調表示します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-129">It then highlights all those cells with a yellow background.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -151,13 +150,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="collections"></a><span data-ttu-id="cd50e-131">コレクション</span><span class="sxs-lookup"><span data-stu-id="cd50e-131">Collections</span></span>
+## <a name="collections"></a><span data-ttu-id="c36b3-130">コレクション</span><span class="sxs-lookup"><span data-stu-id="c36b3-130">Collections</span></span>
 
-<span data-ttu-id="cd50e-132">これらのサンプルは、ブック内のオブジェクトのコレクションで動作します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-132">These samples work with collections of objects in the workbook.</span></span>
+<span data-ttu-id="c36b3-131">これらのサンプルは、ブック内のオブジェクトのコレクションで動作します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-131">These samples work with collections of objects in the workbook.</span></span>
 
-### <a name="iterate-over-collections"></a><span data-ttu-id="cd50e-133">コレクションを反復処理する</span><span class="sxs-lookup"><span data-stu-id="cd50e-133">Iterate over collections</span></span>
+### <a name="iterate-over-collections"></a><span data-ttu-id="c36b3-132">コレクションを反復処理する</span><span class="sxs-lookup"><span data-stu-id="c36b3-132">Iterate over collections</span></span>
 
-<span data-ttu-id="cd50e-134">このスクリプトは、ブック内のすべてのワークシートの名前を取得してログに記録します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-134">This script gets and logs the names of all the worksheets in the workbook.</span></span> <span data-ttu-id="cd50e-135">また、タブの色をランダムな色に設定します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-135">It also sets the their tab colors to a random color.</span></span>
+<span data-ttu-id="c36b3-133">このスクリプトは、ブック内のすべてのワークシートの名前を取得してログに記録します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-133">This script gets and logs the names of all the worksheets in the workbook.</span></span> <span data-ttu-id="c36b3-134">また、タブの色をランダムな色に設定します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-134">It also sets the their tab colors to a random color.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -182,9 +181,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="query-and-delete-from-a-collection"></a><span data-ttu-id="cd50e-136">コレクションのクエリと削除</span><span class="sxs-lookup"><span data-stu-id="cd50e-136">Query and delete from a collection</span></span>
+### <a name="query-and-delete-from-a-collection"></a><span data-ttu-id="c36b3-135">コレクションのクエリと削除</span><span class="sxs-lookup"><span data-stu-id="c36b3-135">Query and delete from a collection</span></span>
 
-<span data-ttu-id="cd50e-137">このスクリプトは、新しいワークシートを作成します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-137">This script creates a new worksheet.</span></span> <span data-ttu-id="cd50e-138">ワークシートの既存のコピーをチェックし、新しいシートを作成する前に削除します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-138">It checks for an existing copy of the worksheet and deletes it before making a new sheet.</span></span>
+<span data-ttu-id="c36b3-136">このスクリプトは、新しいワークシートを作成します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-136">This script creates a new worksheet.</span></span> <span data-ttu-id="c36b3-137">ワークシートの既存のコピーをチェックし、新しいシートを作成する前に削除します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-137">It checks for an existing copy of the worksheet and deletes it before making a new sheet.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -211,11 +210,11 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="dates"></a><span data-ttu-id="cd50e-139">日付</span><span class="sxs-lookup"><span data-stu-id="cd50e-139">Dates</span></span>
+## <a name="dates"></a><span data-ttu-id="c36b3-138">日付</span><span class="sxs-lookup"><span data-stu-id="c36b3-138">Dates</span></span>
 
-<span data-ttu-id="cd50e-140">このセクションのサンプルでは、JavaScript Date オブジェクトの使い方 [を示](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-140">The samples in this section show how to use the JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) object.</span></span>
+<span data-ttu-id="c36b3-139">このセクションのサンプルでは、JavaScript Date オブジェクトの使い方 [を示](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-139">The samples in this section show how to use the JavaScript [Date](https://developer.mozilla.org/docs/web/javascript/reference/global_objects/date) object.</span></span>
 
-<span data-ttu-id="cd50e-141">次のサンプルでは、現在の日付と時刻を取得し、それらの値をアクティブワークシートの 2 つのセルに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="cd50e-141">The following sample gets the current date and time and then writes those values to two cells in the active worksheet.</span></span>
+<span data-ttu-id="c36b3-140">次のサンプルでは、現在の日付と時刻を取得し、それらの値をアクティブワークシートの 2 つのセルに書き込みます。</span><span class="sxs-lookup"><span data-stu-id="c36b3-140">The following sample gets the current date and time and then writes those values to two cells in the active worksheet.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -234,7 +233,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-<span data-ttu-id="cd50e-142">次のサンプルでは、データに格納されている日付を読みExcel JavaScript Date オブジェクトに変換します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-142">The next sample reads a date that's stored in Excel and translates it to a JavaScript Date object.</span></span> <span data-ttu-id="cd50e-143">日付の数値 [シリアル番号を](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) JavaScript Date の入力として使用します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-143">It uses the [date's numeric serial number](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) as input for the JavaScript Date.</span></span>
+<span data-ttu-id="c36b3-141">次のサンプルでは、データに格納されている日付を読みExcel JavaScript Date オブジェクトに変換します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-141">The next sample reads a date that's stored in Excel and translates it to a JavaScript Date object.</span></span> <span data-ttu-id="c36b3-142">日付の数値 [シリアル番号を](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) JavaScript Date の入力として使用します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-142">It uses the [date's numeric serial number](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) as input for the JavaScript Date.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -248,13 +247,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="display-data"></a><span data-ttu-id="cd50e-144">データの表示</span><span class="sxs-lookup"><span data-stu-id="cd50e-144">Display data</span></span>
+## <a name="display-data"></a><span data-ttu-id="c36b3-143">データの表示</span><span class="sxs-lookup"><span data-stu-id="c36b3-143">Display data</span></span>
 
-<span data-ttu-id="cd50e-145">これらのサンプルでは、ワークシート データを処理し、より良いビューまたは組織をユーザーに提供する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-145">These samples demonstrate how to work with worksheet data and provide users with a better view or organization.</span></span>
+<span data-ttu-id="c36b3-144">これらのサンプルでは、ワークシート データを処理し、より良いビューまたは組織をユーザーに提供する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-144">These samples demonstrate how to work with worksheet data and provide users with a better view or organization.</span></span>
 
-### <a name="apply-conditional-formatting"></a><span data-ttu-id="cd50e-146">条件付き書式の適用</span><span class="sxs-lookup"><span data-stu-id="cd50e-146">Apply conditional formatting</span></span>
+### <a name="apply-conditional-formatting"></a><span data-ttu-id="c36b3-145">条件付き書式の適用</span><span class="sxs-lookup"><span data-stu-id="c36b3-145">Apply conditional formatting</span></span>
 
-<span data-ttu-id="cd50e-147">このサンプルでは、ワークシートで現在使用されている範囲に条件付き書式を適用します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-147">This sample applies conditional formatting to the currently used range in the worksheet.</span></span> <span data-ttu-id="cd50e-148">条件付き書式は、値の上位 10% の緑の塗りつぶしです。</span><span class="sxs-lookup"><span data-stu-id="cd50e-148">The conditional formatting is a green fill for the top 10% of values.</span></span>
+<span data-ttu-id="c36b3-146">このサンプルでは、ワークシートで現在使用されている範囲に条件付き書式を適用します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-146">This sample applies conditional formatting to the currently used range in the worksheet.</span></span> <span data-ttu-id="c36b3-147">条件付き書式は、値の上位 10% の緑の塗りつぶしです。</span><span class="sxs-lookup"><span data-stu-id="c36b3-147">The conditional formatting is a green fill for the top 10% of values.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -274,9 +273,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="create-a-sorted-table"></a><span data-ttu-id="cd50e-149">並べ替えテーブルを作成する</span><span class="sxs-lookup"><span data-stu-id="cd50e-149">Create a sorted table</span></span>
+### <a name="create-a-sorted-table"></a><span data-ttu-id="c36b3-148">並べ替えテーブルを作成する</span><span class="sxs-lookup"><span data-stu-id="c36b3-148">Create a sorted table</span></span>
 
-<span data-ttu-id="cd50e-150">このサンプルでは、現在のワークシートの使用範囲からテーブルを作成し、最初の列に基づいて並べ替えを行います。</span><span class="sxs-lookup"><span data-stu-id="cd50e-150">This sample creates a table from the current worksheet's used range, then sorts it based on the first column.</span></span>
+<span data-ttu-id="c36b3-149">このサンプルでは、現在のワークシートの使用範囲からテーブルを作成し、最初の列に基づいて並べ替えを行います。</span><span class="sxs-lookup"><span data-stu-id="c36b3-149">This sample creates a table from the current worksheet's used range, then sorts it based on the first column.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -292,9 +291,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="log-the-grand-total-values-from-a-pivottable"></a><span data-ttu-id="cd50e-151">ピボットテーブルから "Grand Total" 値をログに記録する</span><span class="sxs-lookup"><span data-stu-id="cd50e-151">Log the "Grand Total" values from a PivotTable</span></span>
+### <a name="log-the-grand-total-values-from-a-pivottable"></a><span data-ttu-id="c36b3-150">ピボットテーブルから "Grand Total" 値をログに記録する</span><span class="sxs-lookup"><span data-stu-id="c36b3-150">Log the "Grand Total" values from a PivotTable</span></span>
 
-<span data-ttu-id="cd50e-152">このサンプルでは、ブック内の最初のピボットテーブルを検索し、値を "Grand Total" セルに記録します (下の図では緑色で強調表示されています)。</span><span class="sxs-lookup"><span data-stu-id="cd50e-152">This sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).</span></span>
+<span data-ttu-id="c36b3-151">このサンプルでは、ブック内の最初のピボットテーブルを検索し、値を "Grand Total" セルに記録します (下の図では緑色で強調表示されています)。</span><span class="sxs-lookup"><span data-stu-id="c36b3-151">This sample finds the first PivotTable in the workbook and logs the values in the "Grand Total" cells (as highlighted in green in the image below).</span></span>
 
 :::image type="content" source="../../images/sample-pivottable-grand-total-row.png" alt-text="[総合計] 行が緑色で強調表示された、果物の売上を示すピボットテーブル。":::
 
@@ -320,9 +319,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="create-a-drop-down-list-using-data-validation"></a><span data-ttu-id="cd50e-154">データ検証を使用してドロップダウン リストを作成する</span><span class="sxs-lookup"><span data-stu-id="cd50e-154">Create a drop-down list using data validation</span></span>
+### <a name="create-a-drop-down-list-using-data-validation"></a><span data-ttu-id="c36b3-153">データ検証を使用してドロップダウン リストを作成する</span><span class="sxs-lookup"><span data-stu-id="c36b3-153">Create a drop-down list using data validation</span></span>
 
-<span data-ttu-id="cd50e-155">このスクリプトは、セルのドロップダウン選択リストを作成します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-155">This script creates a drop-down selection list for a cell.</span></span> <span data-ttu-id="cd50e-156">選択した範囲の既存の値をリストの選択肢として使用します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-156">It uses the existing values of the selected range as the choices for the list.</span></span>
+<span data-ttu-id="c36b3-154">このスクリプトは、セルのドロップダウン選択リストを作成します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-154">This script creates a drop-down selection list for a cell.</span></span> <span data-ttu-id="c36b3-155">選択した範囲の既存の値をリストの選択肢として使用します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-155">It uses the existing values of the selected range as the choices for the list.</span></span>
 
 :::image type="content" source="../../images/sample-data-validation.png" alt-text="色の選択肢 '赤、青、緑' を含む 3 つのセルの範囲を示すワークシートで、ドロップダウン リストに表示されるのと同じ選択肢を示します。":::
 
@@ -357,13 +356,13 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="formulas"></a><span data-ttu-id="cd50e-158">数式</span><span class="sxs-lookup"><span data-stu-id="cd50e-158">Formulas</span></span>
+## <a name="formulas"></a><span data-ttu-id="c36b3-157">数式</span><span class="sxs-lookup"><span data-stu-id="c36b3-157">Formulas</span></span>
 
-<span data-ttu-id="cd50e-159">これらのサンプルでは、Excelを使用し、スクリプトで使用する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-159">These samples use Excel formulas and show how to work with them in scripts.</span></span>
+<span data-ttu-id="c36b3-158">これらのサンプルでは、Excelを使用し、スクリプトで使用する方法を示します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-158">These samples use Excel formulas and show how to work with them in scripts.</span></span>
 
-### <a name="single-formula"></a><span data-ttu-id="cd50e-160">単一の数式</span><span class="sxs-lookup"><span data-stu-id="cd50e-160">Single formula</span></span>
+### <a name="single-formula"></a><span data-ttu-id="c36b3-159">単一の数式</span><span class="sxs-lookup"><span data-stu-id="c36b3-159">Single formula</span></span>
 
-<span data-ttu-id="cd50e-161">このスクリプトは、セルの数式を設定し、セルExcel値を個別に格納する方法を表示します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-161">This script sets a cell's formula, then displays how Excel stores the cell's formula and value separately.</span></span>
+<span data-ttu-id="c36b3-160">このスクリプトは、セルの数式を設定し、セルExcel値を個別に格納する方法を表示します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-160">This script sets a cell's formula, then displays how Excel stores the cell's formula and value separately.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -382,9 +381,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-### <a name="handle-a-spill-error-returned-from-a-formula"></a><span data-ttu-id="cd50e-162">数式から `#SPILL!` 返されるエラーを処理する</span><span class="sxs-lookup"><span data-stu-id="cd50e-162">Handle a `#SPILL!` error returned from a formula</span></span>
+### <a name="handle-a-spill-error-returned-from-a-formula"></a><span data-ttu-id="c36b3-161">数式から `#SPILL!` 返されるエラーを処理する</span><span class="sxs-lookup"><span data-stu-id="c36b3-161">Handle a `#SPILL!` error returned from a formula</span></span>
 
-<span data-ttu-id="cd50e-163">このスクリプトは、TRANSPOSE 関数を使用して範囲 "A1:D2" を "A4:B7" にトランスポーズします。</span><span class="sxs-lookup"><span data-stu-id="cd50e-163">This script transposes the range "A1:D2" to "A4:B7" by using the TRANSPOSE function.</span></span> <span data-ttu-id="cd50e-164">トランスポーズでエラーが発生した場合は、ターゲット範囲をクリアし `#SPILL` 、数式を再度適用します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-164">If the transpose results in a `#SPILL` error, it clears the target range and applies the formula again.</span></span>
+<span data-ttu-id="c36b3-162">このスクリプトは、TRANSPOSE 関数を使用して範囲 "A1:D2" を "A4:B7" にトランスポーズします。</span><span class="sxs-lookup"><span data-stu-id="c36b3-162">This script transposes the range "A1:D2" to "A4:B7" by using the TRANSPOSE function.</span></span> <span data-ttu-id="c36b3-163">トランスポーズでエラーが発生した場合は、ターゲット範囲をクリアし `#SPILL` 、数式を再度適用します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-163">If the transpose results in a `#SPILL` error, it clears the target range and applies the formula again.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -416,12 +415,12 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="suggest-new-samples"></a><span data-ttu-id="cd50e-165">新しいサンプルの提案</span><span class="sxs-lookup"><span data-stu-id="cd50e-165">Suggest new samples</span></span>
+## <a name="suggest-new-samples"></a><span data-ttu-id="c36b3-164">新しいサンプルの提案</span><span class="sxs-lookup"><span data-stu-id="c36b3-164">Suggest new samples</span></span>
 
-<span data-ttu-id="cd50e-166">新しいサンプルの提案を歓迎します。</span><span class="sxs-lookup"><span data-stu-id="cd50e-166">We welcome suggestions for new samples.</span></span> <span data-ttu-id="cd50e-167">他のスクリプト開発者に役立つ一般的なシナリオがある場合は、ページの下部にあるフィードバック セクションで教えて下さい。</span><span class="sxs-lookup"><span data-stu-id="cd50e-167">If there is a common scenario that would help other script developers, please tell us in the feedback section at the bottom of the page.</span></span>
+<span data-ttu-id="c36b3-165">新しいサンプルの提案を歓迎します。</span><span class="sxs-lookup"><span data-stu-id="c36b3-165">We welcome suggestions for new samples.</span></span> <span data-ttu-id="c36b3-166">他のスクリプト開発者に役立つ一般的なシナリオがある場合は、ページの下部にあるフィードバック セクションで教えて下さい。</span><span class="sxs-lookup"><span data-stu-id="c36b3-166">If there is a common scenario that would help other script developers, please tell us in the feedback section at the bottom of the page.</span></span>
 
-## <a name="see-also"></a><span data-ttu-id="cd50e-168">関連項目</span><span class="sxs-lookup"><span data-stu-id="cd50e-168">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c36b3-167">関連項目</span><span class="sxs-lookup"><span data-stu-id="c36b3-167">See also</span></span>
 
-* [<span data-ttu-id="cd50e-169">Sudhi Ramamurthy の YouTube の "Range basics"</span><span class="sxs-lookup"><span data-stu-id="cd50e-169">Sudhi Ramamurthy's "Range basics" on YouTube</span></span>](https://youtu.be/4emjkOFdLBA)
-* [<span data-ttu-id="cd50e-170">Officeスクリプトのサンプルとシナリオ</span><span class="sxs-lookup"><span data-stu-id="cd50e-170">Office Scripts samples and scenarios</span></span>](samples-overview.md)
-* [<span data-ttu-id="cd50e-171">Excel on the web で Office スクリプトを記録、編集、作成する</span><span class="sxs-lookup"><span data-stu-id="cd50e-171">Record, edit, and create Office Scripts in Excel on the web</span></span>](../../tutorials/excel-tutorial.md)
+* [<span data-ttu-id="c36b3-168">Sudhi Ramamurthy の YouTube の "Range basics"</span><span class="sxs-lookup"><span data-stu-id="c36b3-168">Sudhi Ramamurthy's "Range basics" on YouTube</span></span>](https://youtu.be/4emjkOFdLBA)
+* [<span data-ttu-id="c36b3-169">Officeスクリプトのサンプルとシナリオ</span><span class="sxs-lookup"><span data-stu-id="c36b3-169">Office Scripts samples and scenarios</span></span>](samples-overview.md)
+* [<span data-ttu-id="c36b3-170">Excel on the web で Office スクリプト を記録、編集、そして作成する</span><span class="sxs-lookup"><span data-stu-id="c36b3-170">Record, edit, and create Office Scripts in Excel on the web</span></span>](../../tutorials/excel-tutorial.md)

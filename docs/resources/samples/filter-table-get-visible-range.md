@@ -1,30 +1,30 @@
 ---
 title: テーブルをExcelし、表示範囲を取得する
 description: スクリプトを使用してOfficeテーブルをフィルター処理しExcelオブジェクトの配列として表示範囲を取得する方法について学習します。
-ms.date: 05/06/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 196e39ffdfb7e6ff2d0898802665d3c2eccc7dbe
-ms.sourcegitcommit: 763d341857bcb209b2f2c278a82fdb63d0e18f0a
+ms.openlocfilehash: b19b826f95c7e7aeb331130fde05afaafe500c3d
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2021
-ms.locfileid: "52285795"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313954"
 ---
-# <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a><span data-ttu-id="35a5f-103">テーブルExcelし、JSON オブジェクトとして表示範囲を取得する</span><span class="sxs-lookup"><span data-stu-id="35a5f-103">Filter Excel table and get visible range as a JSON object</span></span>
+# <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a><span data-ttu-id="0f537-103">テーブルExcelし、JSON オブジェクトとして表示範囲を取得する</span><span class="sxs-lookup"><span data-stu-id="0f537-103">Filter Excel table and get visible range as a JSON object</span></span>
 
-<span data-ttu-id="35a5f-104">次のサンプルでは、Excelをフィルター処理し、表示範囲を JSON オブジェクトとして返します。</span><span class="sxs-lookup"><span data-stu-id="35a5f-104">This sample filters an Excel table and returns the visible range as a JSON object.</span></span> <span data-ttu-id="35a5f-105">この JSON は、大規模なソリューションの一部Power Automateフローに提供できます。</span><span class="sxs-lookup"><span data-stu-id="35a5f-105">This JSON could be provided to a Power Automate flow as part of a larger solution.</span></span>
+<span data-ttu-id="0f537-104">次のサンプルでは、Excelをフィルター処理し、表示範囲を JSON オブジェクトとして返します。</span><span class="sxs-lookup"><span data-stu-id="0f537-104">This sample filters an Excel table and returns the visible range as a JSON object.</span></span> <span data-ttu-id="0f537-105">この JSON は、大規模なソリューションの一部Power Automateフローに提供できます。</span><span class="sxs-lookup"><span data-stu-id="0f537-105">This JSON could be provided to a Power Automate flow as part of a larger solution.</span></span>
 
-## <a name="example-scenario"></a><span data-ttu-id="35a5f-106">シナリオ例</span><span class="sxs-lookup"><span data-stu-id="35a5f-106">Example scenario</span></span>
+## <a name="example-scenario"></a><span data-ttu-id="0f537-106">シナリオ例</span><span class="sxs-lookup"><span data-stu-id="0f537-106">Example scenario</span></span>
 
-* <span data-ttu-id="35a5f-107">テーブル列にフィルターを適用します。</span><span class="sxs-lookup"><span data-stu-id="35a5f-107">Apply a filter to a table column.</span></span>
-* <span data-ttu-id="35a5f-108">フィルター処理後に表示範囲を抽出します。</span><span class="sxs-lookup"><span data-stu-id="35a5f-108">Extract the visible range after filtering.</span></span>
-* <span data-ttu-id="35a5f-109">特定の JSON 構造を持つオブジェクトを [アセンブルして返します](#sample-json)。</span><span class="sxs-lookup"><span data-stu-id="35a5f-109">Assemble and return an object with a [specific JSON structure](#sample-json).</span></span>
+* <span data-ttu-id="0f537-107">テーブル列にフィルターを適用します。</span><span class="sxs-lookup"><span data-stu-id="0f537-107">Apply a filter to a table column.</span></span>
+* <span data-ttu-id="0f537-108">フィルター処理後に表示範囲を抽出します。</span><span class="sxs-lookup"><span data-stu-id="0f537-108">Extract the visible range after filtering.</span></span>
+* <span data-ttu-id="0f537-109">特定の JSON 構造を持つオブジェクトを [アセンブルして返します](#sample-json)。</span><span class="sxs-lookup"><span data-stu-id="0f537-109">Assemble and return an object with a [specific JSON structure](#sample-json).</span></span>
 
-## <a name="sample-code-filter-a-table-and-get-visible-range"></a><span data-ttu-id="35a5f-110">サンプル コード: テーブルをフィルター処理し、表示範囲を取得する</span><span class="sxs-lookup"><span data-stu-id="35a5f-110">Sample code: Filter a table and get visible range</span></span>
+## <a name="sample-excel-file"></a><span data-ttu-id="0f537-110">サンプル Excel ファイル</span><span class="sxs-lookup"><span data-stu-id="0f537-110">Sample Excel file</span></span>
 
-<span data-ttu-id="35a5f-111">次のスクリプトは、テーブルをフィルター処理し、表示範囲を取得します。</span><span class="sxs-lookup"><span data-stu-id="35a5f-111">The following script filters a table and gets the visible range.</span></span>
+<span data-ttu-id="0f537-111">すぐに <a href="table-filter.xlsx"> 使用table-filter.xlsx</a> ブックのブックをダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="0f537-111">Download <a href="table-filter.xlsx">table-filter.xlsx</a> for a ready-to-use workbook.</span></span> <span data-ttu-id="0f537-112">次のスクリプトを追加して、サンプルを自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="0f537-112">Add the following script to try the sample yourself!</span></span>
 
-<span data-ttu-id="35a5f-112">サンプル ファイルをダウンロード <a href="table-filter.xlsx">table-filter.xlsx</a> このスクリプトで使用して、自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="35a5f-112">Download the sample file <a href="table-filter.xlsx">table-filter.xlsx</a> and use it with this script to try it out yourself!</span></span>
+## <a name="sample-code-filter-a-table-and-get-visible-range"></a><span data-ttu-id="0f537-113">サンプル コード: テーブルをフィルター処理し、表示範囲を取得する</span><span class="sxs-lookup"><span data-stu-id="0f537-113">Sample code: Filter a table and get visible range</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReturnTemplate {
@@ -88,9 +88,9 @@ interface ReturnTemplate {
 }
 ```
 
-### <a name="sample-json"></a><span data-ttu-id="35a5f-113">サンプル JSON</span><span class="sxs-lookup"><span data-stu-id="35a5f-113">Sample JSON</span></span>
+### <a name="sample-json"></a><span data-ttu-id="0f537-114">サンプル JSON</span><span class="sxs-lookup"><span data-stu-id="0f537-114">Sample JSON</span></span>
 
-<span data-ttu-id="35a5f-114">各キーは、テーブルの一意の値を表します。</span><span class="sxs-lookup"><span data-stu-id="35a5f-114">Each key represents a unique value of a table.</span></span> <span data-ttu-id="35a5f-115">各配列インスタンスは、対応するフィルターを適用するときに表示される行を表します。</span><span class="sxs-lookup"><span data-stu-id="35a5f-115">Each array instance represents the row that is visible when the corresponding filter is applied.</span></span>
+<span data-ttu-id="0f537-115">各キーは、テーブルの一意の値を表します。</span><span class="sxs-lookup"><span data-stu-id="0f537-115">Each key represents a unique value of a table.</span></span> <span data-ttu-id="0f537-116">各配列インスタンスは、対応するフィルターを適用するときに表示される行を表します。</span><span class="sxs-lookup"><span data-stu-id="0f537-116">Each array instance represents the row that is visible when the corresponding filter is applied.</span></span>
 
 ```json
 {
@@ -136,6 +136,6 @@ interface ReturnTemplate {
 }
 ```
 
-## <a name="training-video-filter-an-excel-table-and-get-the-visible-range"></a><span data-ttu-id="35a5f-116">トレーニング ビデオ: テーブルのExcelし、表示範囲を取得する</span><span class="sxs-lookup"><span data-stu-id="35a5f-116">Training video: Filter an Excel table and get the visible range</span></span>
+## <a name="training-video-filter-an-excel-table-and-get-the-visible-range"></a><span data-ttu-id="0f537-117">トレーニング ビデオ: テーブルのExcelし、表示範囲を取得する</span><span class="sxs-lookup"><span data-stu-id="0f537-117">Training video: Filter an Excel table and get the visible range</span></span>
 
-<span data-ttu-id="35a5f-117">[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/Mv7BrvPq84A).</span><span class="sxs-lookup"><span data-stu-id="35a5f-117">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/Mv7BrvPq84A).</span></span>
+<span data-ttu-id="0f537-118">[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/Mv7BrvPq84A).</span><span class="sxs-lookup"><span data-stu-id="0f537-118">[Watch Sudhi Ramamurthy walk through this sample on YouTube](https://youtu.be/Mv7BrvPq84A).</span></span>

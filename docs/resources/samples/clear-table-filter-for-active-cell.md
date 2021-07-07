@@ -1,32 +1,36 @@
 ---
 title: アクティブ セルの場所に基づいてテーブル列フィルターをクリアする
 description: アクティブ セルの場所に基づいてテーブル列フィルターをクリアする方法について学習します。
-ms.date: 05/03/2021
+ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: d6f267b433be9a0ddf44edf53ed92a136eb2ded6
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: f10e23b4ad948a28c5b749533ddedefe164d7142
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074439"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313891"
 ---
-# <a name="clear-table-column-filter-based-on-active-cell-location"></a><span data-ttu-id="839db-103">アクティブ セルの場所に基づいてテーブル列フィルターをクリアする</span><span class="sxs-lookup"><span data-stu-id="839db-103">Clear table column filter based on active cell location</span></span>
+# <a name="clear-table-column-filter-based-on-active-cell-location"></a><span data-ttu-id="29873-103">アクティブ セルの場所に基づいてテーブル列フィルターをクリアする</span><span class="sxs-lookup"><span data-stu-id="29873-103">Clear table column filter based on active cell location</span></span>
 
-<span data-ttu-id="839db-104">このサンプルでは、アクティブセルの場所に基づいてテーブル列フィルターをクリアします。</span><span class="sxs-lookup"><span data-stu-id="839db-104">This sample clears the table column filter based on the active cell location.</span></span> <span data-ttu-id="839db-105">このスクリプトは、セルがテーブルの一部かどうかを検出し、テーブル列を決定し、そのセルに適用されているフィルターをクリアします。</span><span class="sxs-lookup"><span data-stu-id="839db-105">The script detects if the cell is part of a table, determines the table column, and clears any filter that are applied on it.</span></span>
+<span data-ttu-id="29873-104">このサンプルでは、アクティブセルの場所に基づいてテーブル列フィルターをクリアします。</span><span class="sxs-lookup"><span data-stu-id="29873-104">This sample clears the table column filter based on the active cell location.</span></span> <span data-ttu-id="29873-105">このスクリプトは、セルがテーブルの一部かどうかを検出し、テーブル列を決定し、そのセルに適用されているフィルターをクリアします。</span><span class="sxs-lookup"><span data-stu-id="29873-105">The script detects if the cell is part of a table, determines the table column, and clears any filter that are applied on it.</span></span>
 
-<span data-ttu-id="839db-106">フィルターをクリアする前に (および後で再適用する) 前にフィルターを保存する方法の[](move-rows-across-tables.md)詳細については、「フィルターを保存してテーブル間で行を移動する」、より高度なサンプルを参照してください。</span><span class="sxs-lookup"><span data-stu-id="839db-106">If you wish to learn more about how to save the filter prior to clearing it (and re-apply later), see [Move rows across tables by saving filters](move-rows-across-tables.md), a more advanced sample.</span></span>
+<span data-ttu-id="29873-106">フィルターをクリアする前に (および後で再適用する) 前にフィルターを保存する方法の[](move-rows-across-tables.md)詳細については、「フィルターを保存してテーブル間で行を移動する」、より高度なサンプルを参照してください。</span><span class="sxs-lookup"><span data-stu-id="29873-106">If you wish to learn more about how to save the filter prior to clearing it (and re-apply later), see [Move rows across tables by saving filters](move-rows-across-tables.md), a more advanced sample.</span></span>
 
-<span data-ttu-id="839db-107">_列フィルターをクリアする前に (アクティブ セルに注意してください)_</span><span class="sxs-lookup"><span data-stu-id="839db-107">_Before clearing column filter (notice the active cell)_</span></span>
+<span data-ttu-id="29873-107">_列フィルターをクリアする前に (アクティブ セルに注意してください)_</span><span class="sxs-lookup"><span data-stu-id="29873-107">_Before clearing column filter (notice the active cell)_</span></span>
 
 :::image type="content" source="../../images/before-filter-applied.png" alt-text="列フィルターをクリアする前のアクティブ セル。":::
 
-<span data-ttu-id="839db-109">_列フィルターをクリアした後_</span><span class="sxs-lookup"><span data-stu-id="839db-109">_After clearing column filter_</span></span>
+<span data-ttu-id="29873-109">_列フィルターをクリアした後_</span><span class="sxs-lookup"><span data-stu-id="29873-109">_After clearing column filter_</span></span>
 
 :::image type="content" source="../../images/after-filter-cleared.png" alt-text="列フィルターをクリアした後のアクティブ なセル。":::
 
-## <a name="sample-code-clear-table-column-filter-based-on-active-cell"></a><span data-ttu-id="839db-111">サンプル コード: アクティブ セルに基づいてテーブル列フィルターをクリアする</span><span class="sxs-lookup"><span data-stu-id="839db-111">Sample code: Clear table column filter based on active cell</span></span>
+## <a name="sample-excel-file"></a><span data-ttu-id="29873-111">サンプル Excel ファイル</span><span class="sxs-lookup"><span data-stu-id="29873-111">Sample Excel file</span></span>
 
-<span data-ttu-id="839db-112">次のスクリプトは、アクティブなセルの場所に基づいてテーブル列フィルターをクリアし、テーブルを持つ任意のExcelに適用できます。</span><span class="sxs-lookup"><span data-stu-id="839db-112">The following script clears the table column filter based on active cell location and can be applied to any Excel file with a table.</span></span> <span data-ttu-id="839db-113">便宜上、このファイルをダウンロード<a href="table-with-filter.xlsx">して使用table-with-filter.xlsx。 </a></span><span class="sxs-lookup"><span data-stu-id="839db-113">For convenience, you can download and use <a href="table-with-filter.xlsx">table-with-filter.xlsx</a>.</span></span>
+<span data-ttu-id="29873-112">すぐに <a href="table-with-filter.xlsx"> 使用table-with-filter.xlsx</a> ブックのブックをダウンロードします。</span><span class="sxs-lookup"><span data-stu-id="29873-112">Download <a href="table-with-filter.xlsx">table-with-filter.xlsx</a> for a ready-to-use workbook.</span></span> <span data-ttu-id="29873-113">次のスクリプトを追加して、サンプルを自分で試してみてください。</span><span class="sxs-lookup"><span data-stu-id="29873-113">Add the following script to try the sample yourself!</span></span>
+
+## <a name="sample-code-clear-table-column-filter-based-on-active-cell"></a><span data-ttu-id="29873-114">サンプル コード: アクティブ セルに基づいてテーブル列フィルターをクリアする</span><span class="sxs-lookup"><span data-stu-id="29873-114">Sample code: Clear table column filter based on active cell</span></span>
+
+<span data-ttu-id="29873-115">次のスクリプトは、アクティブなセルの場所に基づいてテーブル列フィルターをクリアし、テーブルを持つ任意のExcelに適用できます。</span><span class="sxs-lookup"><span data-stu-id="29873-115">The following script clears the table column filter based on active cell location and can be applied to any Excel file with a table.</span></span>
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
