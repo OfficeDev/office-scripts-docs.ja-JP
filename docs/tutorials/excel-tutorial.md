@@ -3,12 +3,12 @@ title: Excel on the web で Office スクリプトを記録、編集、作成す
 description: 操作レコーダーを使用したスクリプトの記録、ブックへのデータの書き込みなど、Office スクリプトの基本について説明したチュートリアル。
 ms.date: 05/23/2021
 localization_priority: Priority
-ms.openlocfilehash: f9290a3d7dc723b72bfb4913171052472f2361c5
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 6bcf603211aa07920e99178c35c6f405224c29bd
+ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074670"
+ms.lasthandoff: 07/07/2021
+ms.locfileid: "53313926"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを記録、編集、作成する
 
@@ -35,10 +35,10 @@ ms.locfileid: "53074670"
     |ライム |600 |500 |
     |グレープフルーツ |900 |700 |
 
-3. **[自動化]** タブを開きます。**[自動化]** タブが表示されていない場合は、ドロップダウン矢印を押して、リボンのオーバーフローを確認します。 それでも表示されない場合は、[「Office スクリプトのトラブルシューティング」](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable)の記事の説明に従います。
-4. **[操作を記録する]** ボタンを押します。
+3. **[自動化]** タブを開きます。**[自動化]** タブが表示されていない場合は、ドロップダウン矢印を選択して、リボンのオーバーフローを確認します。 それでも表示されない場合は、「[Office スクリプトのトラブルシューティング](../testing/troubleshooting.md#automate-tab-not-appearing-or-office-scripts-unavailable)」の記事の説明に従います。
+4. **[操作を記録]** ボタンを選択します。
 5. セル **A2:C2** ("オレンジ" 行) を選択し、塗りつぶしの色をオレンジ色に設定します。
-6. **[停止]** ボタンを押して、記録を停止します。
+6. **[停止]** ボタンを選択して、記録を停止します。
 
     ワークシートは次のようになります (色が違っていても問題ありません)。
 
@@ -48,7 +48,7 @@ ms.locfileid: "53074670"
 
 前のスクリプトでは、"オレンジ" の行がオレンジ色になります。 "レモン" の行に黄色を追加しましょう。
 
-1. [**詳細**] ウィンドウを開き、[**編集**] ボタンを押します。
+1. **[詳細]** ウィンドウで、**[編集]** ボタンを選択します。
 2. 次のようなコードが表示されるはずです。
 
     ```TypeScript
@@ -69,7 +69,7 @@ ms.locfileid: "53074670"
     selectedSheet.getRange("A3:C3").getFormat().getFill().setColor("yellow");
     ```
 
-4. **[実行]** を押して、スクリプトをテストします。 ブックは次のように表示されるはずです。
+4. **[実行]** を選択して、スクリプトをテストします。 ブックは次のように表示されるはずです。
 
     :::image type="content" source="../images/tutorial-2.png" alt-text="&quot;オレンジ&quot; の行はオレンジ色、&quot;レモン&quot; の行は黄色で強調表示されている果物売上データの行を示すワークシート。":::
 
