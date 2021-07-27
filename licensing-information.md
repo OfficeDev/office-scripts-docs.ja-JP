@@ -1540,7 +1540,7 @@ CC0 1.0 ユニバーサル
 
   c. アファーは、著作物に適用される可能性がある他の人物の権利をクリアする責任を負いません。また、著作物におけるいかなる人物の著作権および関連する権利も含みますが、その使用は一切責任を負いません。 さらに、アファーは、ワークの使用に必要な同意、アクセス許可、その他の権利を取得する責任を負いません。
 
-  d.  アファーマーは、クリエイティブ・コモンズが本ドキュメントの当事者ではなく、この CC0 またはワークの使用に関して義務や義務を負うのを理解し、認める。
+  d. アファーマーは、クリエイティブ・コモンズが本ドキュメントの当事者ではなく、この CC0 またはワークの使用に関して義務や義務を負うのを理解し、認める。
 
 詳細については、以下を参照してください。 <http://creativecommons.org/publicdomain/zero/1.0/>
 
@@ -1590,7 +1590,7 @@ CC0 1.0 ユニバーサル
 
   c. アファーは、著作物に適用される可能性がある他の人物の権利をクリアする責任を負いません。また、著作物におけるいかなる人物の著作権および関連する権利も含みますが、その使用は一切責任を負いません。 さらに、アファーは、ワークの使用に必要な同意、アクセス許可、その他の権利を取得する責任を負いません。
 
-  d.  アファーマーは、クリエイティブ・コモンズが本ドキュメントの当事者ではなく、この CC0 またはワークの使用に関して義務や義務を負うのを理解し、認める。
+  d. アファーマーは、クリエイティブ・コモンズが本ドキュメントの当事者ではなく、この CC0 またはワークの使用に関して義務や義務を負うのを理解し、認める。
 
 詳細については、以下を参照してください。 <http://creativecommons.org/publicdomain/zero/1.0/>
 
@@ -2378,7 +2378,7 @@ caniuse-lite 1.0.30001165 - CC-BY-4.0 https://github.com/ben-eb/caniuse-lite#rea
 
   c. 著作権および類似の権利とは、権利のラベル付けまたは分類方法に関係なく、パフォーマンス、ブロードキャスト、サウンドレコーディング、および Sui Generis Database Rights など、著作権に密接に関連する著作権および/または類似の権利を意味します。 このパブリック ライセンスの目的上、セクション 2(b)(1)-(2) で指定されている権利は、著作権および類似の権利ではありません。
 
-  d.  有効な技術的措置とは、適切な権限がない場合、1996 年 12 月 20 日に採択された WIPO 著作権条約第 11 条に基づく義務を果たす法律、および/または類似の国際協定の下で回避されない可能性がある措置を意味します。
+  d. 有効な技術的措置とは、適切な権限がない場合、1996 年 12 月 20 日に採択された WIPO 著作権条約第 11 条に基づく義務を果たす法律、および/または類似の国際協定の下で回避されない可能性がある措置を意味します。
 
   e. 例外と制限とは、ライセンス素材の使用に適用される著作権および類似の権利に対する公正な使用、公正な取引、その他の例外または制限を意味します。
 
@@ -2563,7 +2563,7 @@ caniuse-lite 1.0.30001165 - CC-BY-4.0 https://github.com/ben-eb/caniuse-lite#rea
 
   c. 疑いの回避のため、ライセンサーは、ライセンスマテリアルを個別の条件で提供したり、ライセンスされたマテリアルの配布をいつでも停止したりする場合があります。ただし、この場合、このパブリック ライセンスは終了しません。
 
-  d.  セクション 1、5、6、7、および 8 は、このパブリック ライセンスの終了後も存続します。
+  d. セクション 1、5、6、7、および 8 は、このパブリック ライセンスの終了後も存続します。
 
 
 セクション 7 -- その他の利用規約。
@@ -2581,7 +2581,7 @@ caniuse-lite 1.0.30001165 - CC-BY-4.0 https://github.com/ben-eb/caniuse-lite#rea
 
   c. このパブリック ライセンスの用語または条件は放棄されません。また、ライセンサーが明示的に同意しない限り、同意に従わない場合。
 
-  d.  このパブリック ライセンスのいかなるものも、ライセンサーまたはお客様に適用される特権および免除に対する制限、または権利放棄を構成するもの、または解釈される可能性があります。これには、管轄権または権限の法的プロセスも含め、含まれるものはありません。
+  d. このパブリック ライセンスのいかなるものも、ライセンサーまたはお客様に適用される特権および免除に対する制限、または権利放棄を構成するもの、または解釈される可能性があります。これには、管轄権または権限の法的プロセスも含め、含まれるものはありません。
 
 
 =======================================================================
@@ -4323,7 +4323,7 @@ MIT ライセンス
 
 ---------------------------------------------------------
 
-@types/office-js-preview 1.0.227 - MIT https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
+@types/office-js-preview 1.0.231 - MIT https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
 
 Copyright (c) Microsoft Corporation。
 
@@ -6735,26 +6735,6 @@ Copyright (c) 2011 Heather Arthur <fayearthur@gmail.com>
 
 ---------------------------------------------------------
 
-commander 2.20.3 - MIT https://github.com/tj/commander.js#readme
-
-Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
-
-(MIT ライセンス)
-
-Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
-
-ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ('Software') のコピーを取得するユーザーに対して、無料で付与されます。
-
-上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
-
-ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も含めずに「現状のまま」提供されます。
-いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 commander 2.17.1 - MIT https://github.com/tj/commander.js#readme
 
 Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
@@ -6776,6 +6756,26 @@ Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
 ---------------------------------------------------------
 
 commander 2.19.0 - MIT https://github.com/tj/commander.js#readme
+
+Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
+
+(MIT ライセンス)
+
+Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ('Software') のコピーを取得するユーザーに対して、無料で付与されます。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も含めずに「現状のまま」提供されます。
+いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+commander 2.20.3 - MIT https://github.com/tj/commander.js#readme
 
 Copyright (c) 2011 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -7194,7 +7194,7 @@ Copyright 2016 Selwyn <talk@selwyn.cc>
 
 ---------------------------------------------------------
 
-cssesc 2.0.0 - MIT https://mths.be/cssesc
+cssesc 3.0.0 - MIT https://mths.be/cssesc
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 
@@ -7211,7 +7211,7 @@ Copyright Mathias Bynens <https://mathiasbynens.be/>
 
 ---------------------------------------------------------
 
-cssesc 3.0.0 - MIT https://mths.be/cssesc
+cssesc 2.0.0 - MIT https://mths.be/cssesc
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 
@@ -7552,14 +7552,14 @@ Copyright (C) 2015 Jordan Harband
 
 ---------------------------------------------------------
 
-define-property 1.0.0 - MIT https://github.com/jonschlinkert/define-property
+define-property 2.0.2 - MIT https://github.com/jonschlinkert/define-property
 
-Copyright (c) 2015, 2017, Jon Schlinkert.
-Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
+Copyright (c) 2015-2018, Jon Schlinkert.
+Copyright (c) 2018, Jon Schlinkert ( https://github.com/jonschlinkert) .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2015, 2017, Jon Schlinkert
+Copyright (c) 2015-2018, Jon Schlinkert.
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -7572,14 +7572,14 @@ Copyright (c) 2015, 2017, Jon Schlinkert
 
 ---------------------------------------------------------
 
-define-property 2.0.2 - MIT https://github.com/jonschlinkert/define-property
+define-property 1.0.0 - MIT https://github.com/jonschlinkert/define-property
 
-Copyright (c) 2015-2018, Jon Schlinkert.
-Copyright (c) 2018, Jon Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2015, 2017, Jon Schlinkert.
+Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2015-2018, Jon Schlinkert.
+Copyright (c) 2015, 2017, Jon Schlinkert
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -9931,14 +9931,14 @@ Copyright (c) 2014-2017, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-is-number 3.0.0 - MIT https://github.com/jonschlinkert/is-number
+is-number 7.0.0 - MIT https://github.com/jonschlinkert/is-number
 
-Copyright (c) 2014-2016, Jon Schlinkert Copyright (c) 2014-2015, Jon Schlinkert.
-Copyright (c) 2016, Jon Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2018, Jon Schlinkert ( https://github.com/jonschlinkert) .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-2016, Jon Schlinkert
+Copyright (c) 2014-present, Jon Schlinkert.
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -9951,14 +9951,14 @@ Copyright (c) 2014-2016, Jon Schlinkert
 
 ---------------------------------------------------------
 
-is-number 7.0.0 - MIT https://github.com/jonschlinkert/is-number
+is-number 3.0.0 - MIT https://github.com/jonschlinkert/is-number
 
-Copyright (c) 2014-present, Jon Schlinkert.
-Copyright (c) 2018, Jon Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-2016, Jon Schlinkert Copyright (c) 2014-2015, Jon Schlinkert.
+Copyright (c) 2016, Jon Schlinkert ( https://github.com/jonschlinkert) .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2014-2016, Jon Schlinkert
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含め、制限なくソフトウェアを処理し、次の条件に従って本ソフトウェアを提供する人物を許可する権限は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得するユーザーに対して、無料で付与されます。
 
@@ -13421,7 +13421,7 @@ Copyright (c) 2017 Maxime Thirouin
 
 ---------------------------------------------------------
 
-postcss-selector-parser 5.0.0 - MIT https://github.com/postcss/postcss-selector-parser
+postcss-selector-parser 6.0.2 - MIT https://github.com/postcss/postcss-selector-parser
 
 Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info)
 
@@ -13438,7 +13438,7 @@ Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info)
 
 ---------------------------------------------------------
 
-postcss-selector-parser 6.0.2 - MIT https://github.com/postcss/postcss-selector-parser
+postcss-selector-parser 5.0.0 - MIT https://github.com/postcss/postcss-selector-parser
 
 Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info)
 
@@ -13881,7 +13881,7 @@ Copyright Mathias Bynens <https://mathiasbynens.be/>
 
 ---------------------------------------------------------
 
-punycode 1.4.1 - MIT https://mths.be/punycode
+punycode 1.3.2 - MIT https://mths.be/punycode
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 
@@ -13898,7 +13898,7 @@ Copyright Mathias Bynens <https://mathiasbynens.be/>
 
 ---------------------------------------------------------
 
-punycode 1.3.2 - MIT https://mths.be/punycode
+punycode 1.4.1 - MIT https://mths.be/punycode
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 
@@ -15615,7 +15615,7 @@ Copyright (c) 2017 Khaled Al-Ansari
 
 ---------------------------------------------------------
 
-string_decoder 1.1.1 - MIT https://github.com/nodejs/string_decoder
+string_decoder 1.3.0 - MIT https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. および他の Node 投稿者。
 
@@ -15646,7 +15646,7 @@ Node.jsは、次のように使用できます。
 
 ---------------------------------------------------------
 
-string_decoder 1.3.0 - MIT https://github.com/nodejs/string_decoder
+string_decoder 1.1.1 - MIT https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. および他の Node 投稿者。
 
