@@ -5,7 +5,7 @@ ms.date: 05/24/2021
 localization_priority: Priority
 ms.openlocfilehash: 8c153a6e9d5202a2c1f5a7db5c6bad760d211994
 ms.sourcegitcommit: de25e0657e7404bb780851b52633222bc3f80e52
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/22/2021
 ms.locfileid: "53529233"
