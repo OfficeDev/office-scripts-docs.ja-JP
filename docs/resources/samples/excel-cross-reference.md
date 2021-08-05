@@ -3,12 +3,12 @@ title: ファイルとファイルExcel相互参照Power Automate
 description: スクリプトとスクリプトを使用Office、Power Automateファイルを相互参照して書式設定するExcelします。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 0776ce49cacecfa15339cc7c0cd4866daad789ff
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 3ee3b7851773384c9a51a041c0e93c70accbab7d
+ms.sourcegitcommit: 9d00ee1c11cdf897410e5232692ee985f01ee098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313961"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53772317"
 ---
 # <a name="cross-reference-excel-files-with-power-automate"></a>ファイルとファイルExcel相互参照Power Automate
 

@@ -3,12 +3,12 @@ title: プラットフォームの制限と要件 (スクリプトOffice)
 description: スクリプトと一緒に使用する場合Officeスクリプトのリソース制限とブラウザー Excel on the web
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 7e81aaf2f96faeb67c815814fe3b7f1795651318
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 8b7afa02f73476e6e98f231a7a7162ad87607b37
+ms.sourcegitcommit: 9d00ee1c11cdf897410e5232692ee985f01ee098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545582"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53772359"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>プラットフォームの制限と要件 (スクリプトOffice)
 
@@ -16,7 +16,7 @@ ms.locfileid: "52545582"
 
 ## <a name="browser-support"></a>ブラウザのサポート
 
-Officeスクリプトは、Web のサポート[をサポートOfficeブラウザーで動作します](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452)。 ただし、JavaScript の一部の機能は、11 Internet Explorer (IE 11) ではサポートされていません。 [ES6](https://www.w3schools.com/Js/js_es6.asp)以降で導入された機能は、IE 11 では動作しません。 組織内のユーザーが引き続きそのブラウザーを使用している場合は、共有するときに、その環境でスクリプトをテストしてください。
+Officeスクリプトは、スクリプトをサポートするブラウザー [Office for the web。](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452) ただし、JavaScript の一部の機能は、11 Internet Explorer (IE 11) ではサポートされていません。 [ES6](https://www.w3schools.com/Js/js_es6.asp)以降で導入された機能は、IE 11 では動作しません。 組織内のユーザーが引き続きそのブラウザーを使用している場合は、共有するときに、その環境でスクリプトをテストしてください。
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
@@ -40,12 +40,12 @@ Officeスクリプトは、Web のサポート[をサポートOfficeブラウザ
 
 ### <a name="excel"></a>Excel
 
-Excelを使用してブックを呼び出す場合、Web の場合、次の制限があります。
+Excel for the webを使用してブックを呼び出す場合、次の制限があります。
 
 - 要求と応答は **5 MB に制限されています**。
 - 範囲は 500 万 **セルに制限されます**。
 
-大規模なデータセットを扱う際にエラーが発生する場合は、より大きな範囲ではなく、複数の小さい範囲を使用してみてください。 例については、「大規模なデータセットを書 [き込む」サンプルを参照](../resources/samples/write-large-dataset.md) してください。 [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#getspecialcells-celltype--cellvaluetype-)のような API を使用して、大きな範囲ではなく特定のセルをターゲットにすることもできます。
+大規模なデータセットを扱う際にエラーが発生する場合は、より大きな範囲ではなく、複数の小さい範囲を使用してみてください。 例については、「大規模なデータセットを書 [き込む」サンプルを参照](../resources/samples/write-large-dataset.md) してください。 [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#getSpecialCells_cellType__cellValueType_)のような API を使用して、大きな範囲ではなく特定のセルをターゲットにすることもできます。
 
 ### <a name="power-automate"></a>Power Automate
 

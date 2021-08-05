@@ -3,12 +3,12 @@ title: フォルダー内のすべての Excel ファイルでスクリプトを
 description: フォルダー内のすべてのファイルに対してスクリプトExcel実行する方法について説明OneDrive for Business。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: bf9c0c486dacced5c3017b267ea65dfd215a5197
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: a595c31c9e0fa7066d6e18aff4d3778f727714b6
+ms.sourcegitcommit: 9d00ee1c11cdf897410e5232692ee985f01ee098
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313898"
+ms.lasthandoff: 08/05/2021
+ms.locfileid: "53772324"
 ---
 # <a name="run-a-script-on-all-excel-files-in-a-folder"></a>フォルダー内のすべての Excel ファイルでスクリプトを実行する
 
@@ -81,7 +81,7 @@ function main(workbook: ExcelScript.Workbook) {
 
     :::image type="content" source="../../images/all-files-in-folder-sample-flow-1.png" alt-text="完了したOneDrive for BusinessコネクタをPower Automate。":::
 1. 抽出されたブックを含む "Sales" フォルダーを選択します。
-1. ブックのみを選択するには、[新しい手順] を選択し、[条件]**を選択****し**、次の値を設定します。
+1. ブックのみを選択するには、[新しい手順]を選択し、[条件] を **選択します**。 条件には、次の値を使用します。
     1. **名前**(ファイルOneDrive値)
     1. "ends with"
     1. "xlsx"
