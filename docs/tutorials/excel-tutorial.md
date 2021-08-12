@@ -3,12 +3,12 @@ title: Excel on the web で Office スクリプトを記録、編集、作成す
 description: 操作レコーダーを使用したスクリプトの記録、ブックへのデータの書き込みなど、Office スクリプトの基本について説明したチュートリアル。
 ms.date: 05/23/2021
 localization_priority: Priority
-ms.openlocfilehash: 6bcf603211aa07920e99178c35c6f405224c29bd
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
-ms.translationtype: MT
+ms.openlocfilehash: b29d9a5e95f510f63c2c71fc10bb68bc7b5430077a0be09327fc07675bb41f94
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313926"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847322"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを記録、編集、作成する
 

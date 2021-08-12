@@ -3,12 +3,12 @@ title: スクリプトの TypeScript の制限Officeスクリプト
 description: スクリプト コード エディターで使用される TypeScript コンパイラと linter のOfficeします。
 ms.date: 07/14/2021
 localization_priority: Normal
-ms.openlocfilehash: 530314b624ef4674de60e5cfac7735c90044fb56
-ms.sourcegitcommit: de25e0657e7404bb780851b52633222bc3f80e52
+ms.openlocfilehash: ea7b9e34b09409fbe7b4cfdab221a59d50246773167fbe6d1c64bbd61fd0b2df
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "53529226"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847049"
 ---
 # <a name="typescript-restrictions-in-office-scripts"></a>スクリプトの TypeScript の制限Officeスクリプト
 

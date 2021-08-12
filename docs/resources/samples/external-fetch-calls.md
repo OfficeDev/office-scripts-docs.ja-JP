@@ -3,12 +3,12 @@ title: Office スクリプトで外部取得呼び出しを使用する
 description: スクリプトで外部 API 呼び出しを行うOfficeします。
 ms.date: 05/14/2021
 localization_priority: Normal
-ms.openlocfilehash: df8814cbab16969a1140aecfe526fd68e609d43c
-ms.sourcegitcommit: 4687693f02fc90a57ba30c461f35046e02e6f5fb
+ms.openlocfilehash: 46e83e290224d03cdb1f87eeb6215e2fb9510189c210a7dfa330f438ced0a53e
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2021
-ms.locfileid: "52545753"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847530"
 ---
 # <a name="use-external-fetch-calls-in-office-scripts"></a>Office スクリプトで外部取得呼び出しを使用する
 

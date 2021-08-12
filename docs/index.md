@@ -5,12 +5,12 @@ title: Office スクリプト ドキュメント
 description: チュートリアル、概念に関する記事、コード サンプルなどの、Excel on the web の Office スクリプトについて学習するためのリソース。
 ms.date: 05/24/2021
 localization_priority: Priority
-ms.openlocfilehash: 095fffbc0b92f4efb5dcdcde1cd5970d6fd3c3f1
-ms.sourcegitcommit: de25e0657e7404bb780851b52633222bc3f80e52
+ms.openlocfilehash: 108642efda29aa9d794b1202befda0854f5db6305f6c93ee4038727016acebb0
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/22/2021
-ms.locfileid: "53529219"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847139"
 ---
 # <a name="office-scripts-documentation"></a>Office スクリプト ドキュメント
 
@@ -74,7 +74,7 @@ Excel on the web の Office スクリプトを使用すると、日常のタス�
 
 <h2>その他のリソース</h2>
 <p>Excel on the web のブックを操作するために Office スクリプトが使用する API の説明、Excel on the web の Office スクリプトに関する質問、Excel on the web の Office スクリプトに関する機能のリクエストについては、以下のリソースをご利用ください。</p>
-<ul class="panelContent cardsF cols cols3" style="display:flex!important;">
+<ul class="panelContent cardsF cols cols3">
     <li>
         <div class="cardSize">
             <div class="cardPadding">

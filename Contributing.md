@@ -15,8 +15,8 @@
 
 * 記事に小さな変更を加える方法については、「[GitHub を使用して投稿する](#contribute-using-github)」を参照してください。
 * 大きな変更やコードが関係する変更を加える方法については、「[Git を使用して投稿する](#contribute-using-git)」を参照してください。
-* GitHub の問題に関 [するドキュメントのバグを報告します](https://github.com/OfficeDev/office-scripts-docs/issues)。
-* GitHub の問題を [使用して新しいドキュメントを要求します](https://github.com/OfficeDev/office-scripts-docs/issues)。
+* ドキュメントのバグに関する問題[GitHub報告します](https://github.com/OfficeDev/office-scripts-docs/issues)。
+* [問題] で新[しいGitHubを要求します](https://github.com/OfficeDev/office-scripts-docs/issues)。
 
 ## <a name="contribute-using-github"></a>GitHub を使用して投稿する
 

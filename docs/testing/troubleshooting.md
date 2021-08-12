@@ -3,12 +3,12 @@ title: スクリプトOfficeトラブルシューティング
 description: スクリプトのデバッグのヒントとOfficeヘルプ リソース。
 ms.date: 05/17/2021
 localization_priority: Normal
-ms.openlocfilehash: 251ad72588422a86c52c81666164c2c4bd79bdb5
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 4e5fbdfa9314f98ec68dfa35a8b599598cfd4eafb18d428b6431850a562caba0
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074649"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847616"
 ---
 # <a name="troubleshoot-office-scripts"></a>スクリプトOfficeトラブルシューティング
 

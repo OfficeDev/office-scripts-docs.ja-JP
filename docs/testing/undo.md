@@ -3,12 +3,12 @@ title: スクリプトによって行われた変更を元Officeする
 description: スクリプトを実行して行Excel on the webを元に戻すには、バージョン履歴を使用します。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 86ce59ea4715ac6d8b56ca8d165a1e0451e4ee22
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 361224970a13f7b4b2f380e7970c60289a72177f089d7e3fa621e9a369ef9ce2
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313968"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847606"
 ---
 # <a name="undo-the-changes-made-by-office-scripts"></a>スクリプトによって行われた変更を元Officeする
 

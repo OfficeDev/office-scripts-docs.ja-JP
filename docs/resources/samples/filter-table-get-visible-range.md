@@ -3,12 +3,12 @@ title: テーブルをExcelし、表示範囲を取得する
 description: スクリプトを使用してOfficeテーブルをフィルター処理しExcelオブジェクトの配列として表示範囲を取得する方法について学習します。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: b19b826f95c7e7aeb331130fde05afaafe500c3d
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: ea4a96882aa3e16dac9ced22c4944d06c2fdcdfd88d202a69643e24a6a39f239
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313954"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847592"
 ---
 # <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>テーブルExcelし、JSON オブジェクトとして表示範囲を取得する
 

@@ -1,8 +1,8 @@
-# <a name="office-scripts-in-excel-on-the-web-documentation"></a>Office Excel のスクリプトを Web ドキュメントに追加する
+# <a name="office-scripts-in-excel-on-the-web-documentation"></a>Officeドキュメント内Excel on the webスクリプト
 
-スクリプトドキュメント リポジトリOfficeへようこそ。 このレポでは、スクリプトのチュートリアルと使い方ガイドOfficeドキュメント ソース ファイルを検索できます。 最適にご利用いただくには、このコンテンツを [docs.microsoft.com](https://docs.microsoft.com/office/dev/scripts) で表示することをお勧めします。
+スクリプトドキュメント リポジトリOfficeへようこそ。 このレポでは、スクリプトのチュートリアルと使い方Officeドキュメント ソース ファイルを検索できます。 最適にご利用いただくには、このコンテンツを [docs.microsoft.com](https://docs.microsoft.com/office/dev/scripts) で表示することをお勧めします。
 
-> **注**: [office-scripts-docs-reference](https://github.com/OfficeDev/office-scripts-docs-reference) リポジトリには、Officeスクリプト API の参照ドキュメント ソース ファイルがあります。 これらの API には、スクリプトのすべての潜在的な Excel 操作が含まれています。
+> **注**: [office-scripts-docs-reference](https://github.com/OfficeDev/office-scripts-docs-reference)リポジトリには、Officeスクリプト API の参照ドキュメント ソース ファイルがあります。 これらの API には、スクリプトのすべての潜在的なExcelが含まれています。
 
 ## <a name="give-us-your-feedback"></a>フィードバックをお寄せください
 
@@ -23,9 +23,9 @@ repo の目的は、スクリプトに関する開発者教育を提供Officeで
 
 問題がスクリプトのドキュメントに関連Office場合は、代わりに次のいずれかのチャネルに投稿してください。
 
-- Office スクリプトまたは Office スクリプトを実行する Office.js API の設計に関する質問をするには、質問をスタック オーバーフローに投稿し、"office-scripts" タグ ( https://stackoverflow.com/questions/tagged/office-scripts) .
+- Office スクリプトまたは Office スクリプトを実行する Office.js API の設計に関する質問をするには、質問をスタック オーバーフローに投稿し、それを "office-scripts" タグ () でタグ付けします。 https://stackoverflow.com/questions/tagged/office-scripts)
 - Office.js API で問題を報告するには、製品チームのメンバーが顧客から報告された問題を監視する [OfficeDev/office-js](https://github.com/OfficeDev/office-js)リポジトリに問題を作成します。
-- Office スクリプトの機能要求を送信するには、アイデアを [ユーザー音声[](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439)] ページに投稿するか、機能要求が既に存在する場合は、その機能要求に対する投票を追加するか、機能要求が既に存在する場合は、そのユーザーの投票を追加します。 「マクロ、スクリプト、アドイン」カテゴリの Web 用 Excel で要求を必ずファイルしてください。
+- Office スクリプトの機能要求を送信するには、アイデアを [User [Voice]](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439)ページに投稿するか、機能要求が既に存在する場合は、その機能要求に対する投票を追加するか、機能要求が既に存在する場合は、そのユーザーの投票を追加します。 [マクロ、スクリプト、アドイン] Excel for the webで要求をファイルしてください。
 
 ## <a name="copyright"></a>著作権
 

@@ -3,12 +3,12 @@ title: Office スクリプトの基本的なExcel on the web
 description: スクリプト内のスクリプトと一緒にOfficeコード サンプルのコレクションExcel on the web。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 3aaaa7fe8769f6dcd658ae91c577956b56033051
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 6d74d55556feb93e0f49da375b3c7896d439663f7f922e4ae135b6fdc6a40197
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313940"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847546"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Office スクリプトの基本的なExcel on the web
 
@@ -423,4 +423,4 @@ function main(workbook: ExcelScript.Workbook) {
 
 * [Sudhi Ramamurthy の YouTube の "Range basics"](https://youtu.be/4emjkOFdLBA)
 * [Officeスクリプトのサンプルとシナリオ](samples-overview.md)
-* [Excel on the web で Office スクリプト を記録、編集、そして作成する](../../tutorials/excel-tutorial.md)
+* [Excel on the web で Office スクリプトを記録、編集、作成する](../../tutorials/excel-tutorial.md)

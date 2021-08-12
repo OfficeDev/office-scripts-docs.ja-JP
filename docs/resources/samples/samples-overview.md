@@ -1,14 +1,14 @@
 ---
 title: Officeスクリプトのサンプル
 description: 使用可能なOfficeスクリプトのサンプルとシナリオです。
-ms.date: 05/25/2021
+ms.date: 07/19/2021
 localization_priority: Normal
-ms.openlocfilehash: 1b7e9cdd9e23f57d59e5e878a37b50afb63965fd
-ms.sourcegitcommit: a063b3faf6c1b7c294bd6a73e46845b352f2a22d
+ms.openlocfilehash: 508c9fa61d6816faf3fbe740bdf1d587b127b064e9918aac2d789ff2d4faccff
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2021
-ms.locfileid: "53202852"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57846350"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Officeスクリプトのサンプルとシナリオ
 
@@ -35,6 +35,7 @@ ms.locfileid: "53202852"
 
 | Project | 詳細 |
 |---------|---------|
+| [CSV ファイルをブックExcel変換する](convert-csv.md) | このサンプルでは、OfficeスクリプトとPower Automateを使用して.xlsxファイルから.csvします。 |
 | [相互参照ブック](excel-cross-reference.md) | このサンプルでは、OfficeスクリプトPower Automateを使用して、異なるブック内の情報を相互参照して検証します。 |
 | [特定のシートまたはすべてのシートの空白行を数える](count-blank-rows.md) | このサンプルでは、データが存在すると予測されるシート内に空白行が存在する場合を検出し、データ フローで使用するために空白行数をPower Automateします。 |
 | [電子メール グラフと表の画像](email-images-chart-table.md) | このサンプルでは、OfficeスクリプトとPower Automateアクションを使用してグラフを作成し、そのグラフを画像として電子メールで送信します。 |

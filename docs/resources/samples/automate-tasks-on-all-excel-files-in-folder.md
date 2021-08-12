@@ -3,12 +3,12 @@ title: フォルダー内のすべての Excel ファイルでスクリプトを
 description: フォルダー内のすべてのファイルに対してスクリプトExcel実行する方法について説明OneDrive for Business。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: a595c31c9e0fa7066d6e18aff4d3778f727714b6
-ms.sourcegitcommit: 9d00ee1c11cdf897410e5232692ee985f01ee098
+ms.openlocfilehash: fad1483fbcddaf541874630e8a4e5a06faa784627d44d17ea2ab7ca0af1550a4
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53772324"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847413"
 ---
 # <a name="run-a-script-on-all-excel-files-in-a-folder"></a>フォルダー内のすべての Excel ファイルでスクリプトを実行する
 

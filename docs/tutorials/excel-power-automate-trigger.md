@@ -3,12 +3,12 @@ title: 自動で実行される Power Automate フロー内で、データをス
 description: メールを受信し、フロー データをスクリプトに渡すときに、Power Automate を使用して Excel on the web 用の Office スクリプトを実行する方法について説明します。
 ms.date: 06/29/2021
 localization_priority: Priority
-ms.openlocfilehash: 27a028d3cc2af58ca158bb631b7b266cd2a3d488
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 954a7e9b48d8973310a97d7d5821341907938adde98c50fd77a36d8bd966ffb9
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313702"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847369"
 ---
 # <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow"></a>自動で実行される Power Automate フロー内で、データをスクリプトに渡す
 

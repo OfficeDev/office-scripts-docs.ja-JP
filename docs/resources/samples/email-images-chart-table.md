@@ -3,12 +3,12 @@ title: グラフと表の画像Excelメールで送信する
 description: '[スクリプト] と [Office] Power Automateを使用して、グラフと表の画像Excelメールを送信する方法について学習します。'
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 003769d026eb07f9bade44a40770f6309ee52b8a
-ms.sourcegitcommit: 9d00ee1c11cdf897410e5232692ee985f01ee098
+ms.openlocfilehash: 1fffd81426c8850cb605e2dbc0f9bf023a4a3692c12f8bd7c8dcc9ec45236ab8
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/05/2021
-ms.locfileid: "53772331"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57846742"
 ---
 # <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>グラフOfficeの画像をPower Automateする場合は、スクリプトとスクリプトを使用してメールを送信します。
 
@@ -33,7 +33,7 @@ _メール フローを通じて受信Power Automateメール_
 
 :::image type="content" source="../../images/email-received.png" alt-text="本文に埋め込まれたグラフのExcelによって送信される電子メール。":::
 
-## <a name="solution"></a>ソリューション
+## <a name="solution"></a>解決方法
 
 このソリューションには、次の 2 つの部分があります。
 

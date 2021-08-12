@@ -3,12 +3,12 @@ title: 'Officeスクリプトのサンプル シナリオ: 成績計算'
 description: 学生のクラスのパーセンテージとレターの成績を決定するサンプル。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 2d98e68f37418ade238a707cb74cc7ccf47e8f59
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 9cef386939ee0740911247e4d494d0b19155577b03d275d026a433e2990d1a61
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313793"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847279"
 ---
 # <a name="office-scripts-sample-scenario-grade-calculator"></a>Officeスクリプトのサンプル シナリオ: 成績計算
 

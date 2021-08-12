@@ -3,12 +3,12 @@ title: アクティブ セルの場所に基づいてテーブル列フィルタ
 description: アクティブ セルの場所に基づいてテーブル列フィルターをクリアする方法について学習します。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: f10e23b4ad948a28c5b749533ddedefe164d7142
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 5815ae9f40ec1c529bbdc19575239e94712479d3db8a8c602cc33a270538811c
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313891"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847567"
 ---
 # <a name="clear-table-column-filter-based-on-active-cell-location"></a>アクティブ セルの場所に基づいてテーブル列フィルターをクリアする
 

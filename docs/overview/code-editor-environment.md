@@ -3,12 +3,12 @@ title: Officeスクリプト コード エディター環境
 description: スクリプトの前提条件と環境情報は、OfficeスクリプトExcel on the web。
 ms.date: 05/27/2021
 localization_priority: Normal
-ms.openlocfilehash: 4a8adc03e372bc769fb44b1c4e3e98c7a4531756
-ms.sourcegitcommit: 4693c8f79428ec74695328275703af0ba1bfea8f
+ms.openlocfilehash: 5b2f7afa193dc71e13a3d6763c9e8ff8344ee3e8be18e7e996f8431e03510509
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/23/2021
-ms.locfileid: "53074467"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847094"
 ---
 # <a name="office-scripts-code-editor-environment"></a>Officeスクリプト コード エディター環境
 

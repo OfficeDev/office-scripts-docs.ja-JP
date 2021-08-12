@@ -3,12 +3,12 @@ title: スクリプトを使用してテーブル間で行Officeする
 description: フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する方法について学習します。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: 860521de166108d5a8355ea246c1bfe77e0e064b
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: ad9d159709c27d2bcc7f7ee4f1fc6886a8d12dd6ae21d17d6eb3259aaa8d7a49
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313758"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57847439"
 ---
 # <a name="move-rows-across-tables-by-saving-filters-then-processing-and-reapplying-the-filters"></a>フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する
 

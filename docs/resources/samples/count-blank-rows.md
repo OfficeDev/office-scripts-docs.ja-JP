@@ -3,12 +3,12 @@ title: シートの空白行を数える
 description: Office スクリプトを使用して、ワークシート内のデータの代わりに空白行が含まれていますを検出し、空白の行数をレポートして、Power Automate フローで使用する方法について説明します。
 ms.date: 06/29/2021
 localization_priority: Normal
-ms.openlocfilehash: e5b60779d2ca2de5f4cf4e03ddd6ff7372515ad6
-ms.sourcegitcommit: 211c157ca746e266eeb079f5fa1925a1e35ab702
+ms.openlocfilehash: 1aea3670d1bc0b50d7a7dd8d55124049c8871b413b7400b7eaf44df714e94f79
+ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2021
-ms.locfileid: "53313807"
+ms.lasthandoff: 08/11/2021
+ms.locfileid: "57846985"
 ---
 # <a name="count-blank-rows-on-sheets"></a>シートの空白行を数える
 
