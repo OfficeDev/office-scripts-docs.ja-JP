@@ -3,12 +3,12 @@ title: Excel on the web の Office スクリプト
 description: Office スクリプト用の操作レコーダーとコード エディターの概要をご紹介します。
 ms.date: 07/04/2021
 localization_priority: Priority
-ms.openlocfilehash: 30058bb2e372e4ad0e344de6202462a744f4e65df9964a8b2329f8b3e0cc27f1
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.openlocfilehash: f64adc3604dbaf9ac98563cb9eaf8068286bfeeb
+ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847089"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "58862083"
 ---
 # <a name="office-scripts-in-excel-on-the-web"></a>Excel on the web の Office スクリプト
 
@@ -68,7 +68,7 @@ Office スクリプトの機能を学習する簡単な方法の 1 つは、Exce
 
 Office スクリプトは、Excel ブックの他のユーザーと共有できます。 共有ブックでスクリプトを共有すると、そのブックにアクセスできるすべてのユーザーがスクリプトを表示、実行することができます。
 
-共有および共有解除スクリプトの詳細については、「[Excel for the Web で Office スクリプトを共有する](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)」の記事を参照してください。
+共有および共有解除スクリプトの詳細については、「[Excel for the Web で Office スクリプトを共有する](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)」の記事を参照してください。
 
 > [!NOTE]
 > 「[Office Scripts file storage and ownership (Office スクリプトのファイル ストレージと所有権)](script-storage.md)」では、OneDrive にスクリプトを保存する方法について詳しく説明しています。
@@ -87,7 +87,6 @@ Office スクリプトは、Excel ブックの他のユーザーと共有でき�
 - [Office スクリプト API リファレンス](/javascript/api/office-scripts/overview)
 - [Office スクリプトのトラブルシューティング](../testing/troubleshooting.md)
 - [M365 での Office スクリプトの設定](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
-- [Excel の Office スクリプトの概要 (support.office.com)](https://support.office.com/article/introduction-to-office-scripts-in-excel-9fbe283d-adb8-4f13-a75b-a81c6baf163a)
-- [Excel on the web での Office スクリプトの共有](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)
+- [Excel の Office スクリプトの概要](https://support.microsoft.com/office/9fbe283d-adb8-4f13-a75b-a81c6baf163a)
+- [Excel on the web での Office スクリプトの共有](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)
 - [Office スクリプト開発者センター](https://developer.microsoft.com/office-scripts)
-
