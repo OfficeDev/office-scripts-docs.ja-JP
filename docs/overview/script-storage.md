@@ -3,12 +3,12 @@ title: Officeスクリプト ファイルのストレージと所有権
 description: スクリプトを管理者Officeに格納し、所有者Microsoft OneDrive転送する方法に関する情報。
 ms.date: 06/04/2021
 localization_priority: Normal
-ms.openlocfilehash: 6343b5bad366d9e4c4f349622a33b062de9c8ddd7877c3d40a49635d6aaef9cf
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.openlocfilehash: 788850db9c8e07ad59ea6d42eb9958779efcb06f
+ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847297"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "58862160"
 ---
 # <a name="office-scripts-file-storage-and-ownership"></a>Officeスクリプト ファイルのストレージと所有権
 
@@ -24,7 +24,7 @@ Officeスクリプトは、ユーザーの **ファイルに .osts** ファイ�
 
 ### <a name="restore-deleted-scripts"></a>削除されたスクリプトを復元する
 
-スクリプトを削除すると、Excelごみ箱にOneDriveされます。 削除されたスクリプトを復元するには、「削除されたファイルまたはフォルダーを復元する」に記載されている手順に[従](https://support.microsoft.com/office/restore-deleted-files-or-folders-in-onedrive-949ada80-0026-4db3-a953-c99083e6a84f)OneDrive。 **.osts ファイルを復元すると**、[すべてのスクリプト] リスト **に戻** されます。
+スクリプトを削除すると、Excelごみ箱にOneDriveされます。 削除されたスクリプトを復元するには、「削除されたファイルまたはフォルダーを復元する」に記載されている手順に[従](https://support.microsoft.com/office/949ada80-0026-4db3-a953-c99083e6a84f)OneDrive。 **.osts ファイルを復元すると**、[すべてのスクリプト] リスト **に戻** されます。
 
 削除されたスクリプトはブックと共有されません。 スクリプトを復元しても、スクリプト **へのアクセス** は保持されます。 スクリプトを再び共有する必要があります。
 
@@ -47,7 +47,7 @@ Officeスクリプトは、ユーザーのデータベースにOneDrive。 ユ�
 
 ## <a name="see-also"></a>関連項目
 
-- [Excel on the web での Office スクリプトの共有](https://support.microsoft.com/office/sharing-office-scripts-in-excel-for-the-web-226eddbc-3a44-4540-acfe-fccda3d1122b)
+- [Excel on the web での Office スクリプトの共有](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)
 - [Office スクリプトのトラブルシューティング](../testing/troubleshooting.md)
-- [M365 での Office スクリプトの設定](https://support.office.com/article/office-scripts-settings-in-m365-19d3c51a-6ca2-40ab-978d-60fa49554dcf)
+- [M365 での Office スクリプトの設定](/microsoft-365/admin/manage/manage-office-scripts-settings)
 - [Office スクリプトの効果を元に戻す](../testing/undo.md)

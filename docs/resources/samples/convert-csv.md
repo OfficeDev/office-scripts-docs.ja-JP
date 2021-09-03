@@ -3,18 +3,18 @@ title: CSV ファイルをブックExcel変換する
 description: スクリプトとスクリプトを使用Office、Power Automateファイルから.xlsxファイルを.csvします。
 ms.date: 07/19/2021
 localization_priority: Normal
-ms.openlocfilehash: 0208453c1c60c5458e8f5e3978fe930d5b81377b90d402df738097c653665a2c
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.openlocfilehash: d67be06dc038fc22215426e5f7143e0af9ba9f0c
+ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847519"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "58862211"
 ---
 # <a name="convert-csv-files-to-excel-workbooks"></a>CSV ファイルをブックExcel変換する
 
 多くのサービスは、データをコンマ区切り値 (CSV) ファイルとしてエクスポートします。 このソリューションは、これらの CSV ファイルを、Excel形式のブック.xlsx自動化します。 Power Automate フロー[を](https://flow.microsoft.com)使用して、OneDrive フォルダー内の .csv 拡張子を持つファイルと Office スクリプトを使用して、.csv ファイルから新しい Excel ブックにデータをコピーします。
 
-## <a name="solution"></a>解決方法
+## <a name="solution"></a>ソリューション
 
 1. 新しい.csvファイルと空の "Template" ファイルを.xlsxフォルダーにOneDriveします。
 1. CSV データOfficeを解析するスクリプトを作成します。

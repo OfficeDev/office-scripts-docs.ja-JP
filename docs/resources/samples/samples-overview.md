@@ -3,12 +3,12 @@ title: Officeスクリプトのサンプル
 description: 使用可能なOfficeスクリプトのサンプルとシナリオです。
 ms.date: 07/19/2021
 localization_priority: Normal
-ms.openlocfilehash: 508c9fa61d6816faf3fbe740bdf1d587b127b064e9918aac2d789ff2d4faccff
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.openlocfilehash: 042e49145285fe100cace1df2571f5aa06dab7d5
+ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846350"
+ms.lasthandoff: 09/02/2021
+ms.locfileid: "58862167"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Officeスクリプトのサンプルとシナリオ
 
@@ -22,7 +22,7 @@ ms.locfileid: "57846350"
 
 ## <a name="basics"></a>基本事項
 
-| Project | 詳細 |
+| プロジェクト | 詳細 |
 |---------|---------|
 | [スクリプトの基本](../excel-samples.md) | これらのサンプルでは、スクリプトの基本的な構成要素Office示します。 |
 | [コメントを追加Excel](add-excel-comments.md) | このサンプルでは、同僚を含むセルにコメント@mentioning追加します。 |
@@ -33,7 +33,7 @@ ms.locfileid: "57846350"
 
 完全なスクリプト、使用されているサンプル Excel ファイル、およびビデオ[(YouTube](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0)でホストされる) と共にサンプル シナリオを自動化する次のエンドツーエンド プロジェクトを確認してください。
 
-| Project | 詳細 |
+| プロジェクト | 詳細 |
 |---------|---------|
 | [CSV ファイルをブックExcel変換する](convert-csv.md) | このサンプルでは、OfficeスクリプトとPower Automateを使用して.xlsxファイルから.csvします。 |
 | [相互参照ブック](excel-cross-reference.md) | このサンプルでは、OfficeスクリプトPower Automateを使用して、異なるブック内の情報を相互参照して検証します。 |
@@ -64,7 +64,7 @@ Officeスクリプトは、毎日のルーチンの一部を自動化できま�
 
 スクリプト コミュニティ[からの投稿](https://github.com/OfficeDev/office-scripts-docs/blob/master/Contributing.md)Office歓迎します。 レビューのプル要求を自由に作成してください。
 
-| Project | 詳細 |
+| プロジェクト | 詳細 |
 |---------|---------|
 | [ゲーム オブ ライフ](https://techcommunity.microsoft.com/t5/excel-blog/ready-player-zero/ba-p/2246208) | Excel Tech Community の Yutao Huang による "Ready Player Zero" ブログには、John Conway's Game of Life をモデル化するスクリプト [*が含まれています*](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)。 |
 | [シーズンの案内応答アニメーション](community-seasons-greetings.md) | このスクリプトは、ホリデー シーズンの精神 [でレス](https://www.linkedin.com/in/lesblackconsultant/) リー ブラックによって投稿されました。 このスクリプトは、スクリプトを使って歌うクリスマス ツリーを表示Excel on the web楽Officeです。 |
