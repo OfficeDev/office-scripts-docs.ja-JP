@@ -2,13 +2,13 @@
 title: Office スクリプトでの組み込みの JavaScript オブジェクトの使用
 description: 組み込みの JavaScript API を、Officeスクリプトから呼び出Excel on the web。
 ms.date: 05/17/2021
-localization_priority: Normal
-ms.openlocfilehash: 6c15daf0429009d289a17e604caf51b807510442bf6e6fa6e42c85d7457f6164
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: bf12a405814bb626a72c1de4f4c75462ce0018ec
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846611"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59327690"
 ---
 # <a name="use-built-in-javascript-objects-in-office-scripts"></a>スクリプトで組み込みの JavaScript オブジェクトをOfficeする
 

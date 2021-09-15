@@ -2,13 +2,13 @@
 title: Excel on the web での Office スクリプトのスクリプトの基本事項
 description: Office スクリプトを作成する前に理解しておくべきオブジェクト モデルの情報と他の基本事項について説明します。
 ms.date: 05/24/2021
-localization_priority: Priority
-ms.openlocfilehash: b5038dde38550e63bae872b39b9222d3defe9943ccefad85a469a5c0717fb2ef
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: high
+ms.openlocfilehash: 090b5b71a9becf76186e852198fdee0e5c040866
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846702"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59326892"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Excel on the web での Office スクリプトのスクリプトの基本事項
 

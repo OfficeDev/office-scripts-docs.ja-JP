@@ -2,13 +2,13 @@
 title: スクリプトと VBA Officeの違い
 description: スクリプトと VBA マクロの動作Office API Excel違い。
 ms.date: 05/21/2021
-localization_priority: Normal
-ms.openlocfilehash: 0d94607902fa62e07ce378b94ec3b9c328937e16535b1882b6cad5bd76212b33
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 5038f8c0195cb84a2b77065d6b4c6a53e813f6a4
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847269"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59327883"
 ---
 # <a name="differences-between-office-scripts-and-vba-macros"></a>スクリプトと VBA Officeの違い
 

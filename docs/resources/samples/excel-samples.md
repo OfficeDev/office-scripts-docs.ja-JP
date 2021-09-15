@@ -2,13 +2,13 @@
 title: Office スクリプトの基本的なExcel on the web
 description: スクリプト内のスクリプトと一緒にOfficeコード サンプルのコレクションExcel on the web。
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: 6d74d55556feb93e0f49da375b3c7896d439663f7f922e4ae135b6fdc6a40197
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: c0e852ba2afcc37f5921ff0b2256df0769535f6e
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847546"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59330738"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Office スクリプトの基本的なExcel on the web
 

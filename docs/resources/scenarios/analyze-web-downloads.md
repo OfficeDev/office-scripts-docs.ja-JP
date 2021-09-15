@@ -2,13 +2,13 @@
 title: 'Officeスクリプトのサンプル シナリオ: Web ダウンロードの分析'
 description: ブック内の生のインターネット トラフィック データをExcel、その情報をテーブルに整理する前に、元の場所を決定するサンプル。
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: a3ad957492184e358015d6fed5e3850a55f153b6722d1cd02ee8e4f5b2e39f93
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: c1d7948ef2d87c0bb76ea0bd40f9c9e2823d45f1
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846333"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59337237"
 ---
 # <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Officeスクリプトのサンプル シナリオ: Web ダウンロードの分析
 

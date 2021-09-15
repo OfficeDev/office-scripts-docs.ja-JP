@@ -2,13 +2,13 @@
 title: CSV ファイルをブックExcel変換する
 description: スクリプトとスクリプトを使用Office、Power Automateファイルから.xlsxファイルを.csvします。
 ms.date: 07/19/2021
-localization_priority: Normal
-ms.openlocfilehash: d67be06dc038fc22215426e5f7143e0af9ba9f0c
-ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
+ms.localizationpriority: medium
+ms.openlocfilehash: ecfc4d143cbaf10b9ea5f02881751f2c4fa28853
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "58862211"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59333434"
 ---
 # <a name="convert-csv-files-to-excel-workbooks"></a>CSV ファイルをブックExcel変換する
 

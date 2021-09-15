@@ -2,13 +2,13 @@
 title: ブックに画像を追加する
 description: '[スクリプト] を使用してOfficeをブックに追加し、シート間でコピーする方法について学習します。'
 ms.date: 07/12/2021
-localization_priority: Normal
-ms.openlocfilehash: 7f8442ccfceb701fcca816d4203205dddabe68d9dfe594c87363c7eb42f353dd
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 0c4b3446df8de280b6cb557e291504ceed5ee7f7
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846315"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59326857"
 ---
 # <a name="add-images-to-a-workbook"></a>ブックに画像を追加する
 

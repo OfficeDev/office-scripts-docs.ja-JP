@@ -2,13 +2,13 @@
 title: Office スクリプトと Office アドインの違い
 description: スクリプトとアドインの動作Office API Office違い。
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: ac3fd216e264f0d98dd488de570fdfdfe939f243ab54e9a2865114f532883b2c
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 7b199e8f3acdbe753fcaa2d1f4b6b5f11998b52b
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847005"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59328101"
 ---
 # <a name="differences-between-office-scripts-and-office-add-ins"></a>Office スクリプトと Office アドインの違い
 
@@ -30,7 +30,7 @@ Officeスクリプトは現在、ユーザーがサポートしているExcel on
 
 OfficeアドインOffice Office スクリプト API の JavaScript API はいくつかの機能を共有しますが、プラットフォームは異なります。 スクリプト Office API は、JavaScript API モデルの最適化された同期Excelサブセットです。 大きな違いは、アドイン `load` / `sync` でのパラダイムの使用です。さらに、アドインはイベント用の API と、共通 API と呼ばれる Excel以外の広範な機能セットを提供します。
 
-### <a name="events"></a>イベント
+### <a name="events"></a>Events
 
 Officeスクリプトは、ブック レベルのイベントを[サポートしていない](/office/dev/add-ins/excel/excel-add-ins-events)。 スクリプトは、スクリプトの [実行]ボタンを選択するか、スクリプトを使用して実行Power Automate。 すべてのスクリプトでコードが 1 つのメソッドで `main` 実行され、終了します。
 

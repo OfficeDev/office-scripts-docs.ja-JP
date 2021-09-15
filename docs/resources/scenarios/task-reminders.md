@@ -2,13 +2,13 @@
 title: 'Officeスクリプトのサンプル シナリオ: タスクの自動アラーム'
 description: プロジェクト管理スプレッドシートでPower Automateアダプティブ カードを使用するサンプルは、タスクリマインダーを自動化します。
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: 8e9ddebd6ab8f061a623f646000a722c3a95ba0d255fd8bac42cda6172078879
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: a2d4701fb7a42953de669c84dbb93104d199d5b8
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846369"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59330049"
 ---
 # <a name="office-scripts-sample-scenario-automated-task-reminders"></a>Officeスクリプトのサンプル シナリオ: タスクの自動アラーム
 

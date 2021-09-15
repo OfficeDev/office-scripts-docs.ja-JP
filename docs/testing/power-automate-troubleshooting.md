@@ -2,13 +2,13 @@
 title: Officeで実行されているスクリプトのトラブルシューティングPower Automate
 description: ヒント、プラットフォーム情報、および既知の問題と、スクリプトとスクリプトのOffice統合Power Automate。
 ms.date: 05/18/2021
-localization_priority: Normal
-ms.openlocfilehash: 1746a03022b6d1aa9fc35e1a8875add301dd6a0f2d6d45cedd64308f0738d2f8
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: aa0602720233afddd88ccfb8ee86d3934892a05f
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847208"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59326850"
 ---
 # <a name="troubleshoot-office-scripts-running-in-power-automate"></a>Officeで実行されているスクリプトのトラブルシューティングPower Automate
 
@@ -29,13 +29,13 @@ Power Automate、選択したブックでスクリプトをExcel代わりに実�
 
 | クラス | メソッド |
 |--|--|
-| [グラフ](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
+| [Chart](/javascript/api/office-scripts/excelscript/excelscript.chart) | `activate` |
 | [Range](/javascript/api/office-scripts/excelscript/excelscript.range) | `select` |
-| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveCell` |
-| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveChart` |
-| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
-| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRange` |
-| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRanges` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveCell` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveChart` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveSlicer` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRange` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getSelectedRanges` |
 
 ### <a name="script-methods-with-a-default-behavior-in-power-automate-flows"></a>スクリプト フローの既定の動作を持つスクリプト メソッドPower Automateします。
 
@@ -43,8 +43,8 @@ Power Automate、選択したブックでスクリプトをExcel代わりに実�
 
 | クラス | メソッド | Power Automate動作 |
 |--|--|--|
-| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | ブックの最初のワークシート、またはメソッドによって現在アクティブ化されているワークシートのいずれかを返 `Worksheet.activate` します。 |
-| [ワークシート](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | の目的でワークシートをアクティブなワークシートとしてマークします `Workbook.getActiveWorksheet` 。 |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `getActiveWorksheet` | ブックの最初のワークシート、またはメソッドによって現在アクティブ化されているワークシートのいずれかを返 `Worksheet.activate` します。 |
+| [Worksheet](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `activate` | の目的でワークシートをアクティブなワークシートとしてマークします `Workbook.getActiveWorksheet` 。 |
 
 ## <a name="data-refresh-not-supported-in-power-automate"></a>データ更新は、データ更新プログラムではPower Automate
 
@@ -57,7 +57,7 @@ Officeスクリプトは、スクリプトで実行するとデータを更新Po
 | クラス | メソッド |
 |--|--|
 | [PivotTable](/javascript/api/office-scripts/excelscript/excelscript.pivottable) | `refresh` |
-| [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` |
+| [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllDataConnections` |
 | [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook) | `refreshAllPivotTables` |
 | [ワークシート](/javascript/api/office-scripts/excelscript/excelscript.worksheet) | `refreshAllPivotTables` |
 

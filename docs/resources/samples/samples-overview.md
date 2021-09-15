@@ -1,14 +1,14 @@
 ---
 title: Officeスクリプトのサンプル
 description: 使用可能なOfficeスクリプトのサンプルとシナリオです。
-ms.date: 07/19/2021
-localization_priority: Normal
-ms.openlocfilehash: 042e49145285fe100cace1df2571f5aa06dab7d5
-ms.sourcegitcommit: 6654aeae8a3ee2af84b4d4c4d8ff45b360a303eb
+ms.date: 09/03/2021
+ms.localizationpriority: medium
+ms.openlocfilehash: 0d11e15a7e839f33a74ca8ad7f1d09dd7711347c
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2021
-ms.locfileid: "58862167"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59334935"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Officeスクリプトのサンプルとシナリオ
 
@@ -35,6 +35,7 @@ ms.locfileid: "58862167"
 
 | プロジェクト | 詳細 |
 |---------|---------|
+| [ワークシートを 1 つのブックに結合する](combine-worksheets-into-single-workbook.md) | このサンプルでは、OfficeスクリプトとPower Automateを使用して、他のブックから 1 つのブックにデータをプルします。 |
 | [CSV ファイルをブックExcel変換する](convert-csv.md) | このサンプルでは、OfficeスクリプトとPower Automateを使用して.xlsxファイルから.csvします。 |
 | [相互参照ブック](excel-cross-reference.md) | このサンプルでは、OfficeスクリプトPower Automateを使用して、異なるブック内の情報を相互参照して検証します。 |
 | [特定のシートまたはすべてのシートの空白行を数える](count-blank-rows.md) | このサンプルでは、データが存在すると予測されるシート内に空白行が存在する場合を検出し、データ フローで使用するために空白行数をPower Automateします。 |

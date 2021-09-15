@@ -2,13 +2,13 @@
 title: ワークシート内の各セルからハイパーリンクをExcelする
 description: '[スクリプト] を使用してOfficeワークシートの各セルからハイパーリンクを削除するExcelします。'
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: 498d55ea1ee7926ab124d00795825660005c5e38e73ed5d90fe8f9208a583908
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: a738833c9542e74b88dc2cd44751513c4d61dae9
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847430"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59327848"
 ---
 # <a name="remove-hyperlinks-from-each-cell-in-an-excel-worksheet"></a>ワークシート内の各セルからハイパーリンクをExcelする
 

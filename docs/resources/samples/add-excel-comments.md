@@ -2,13 +2,13 @@
 title: コメントを追加Excel
 description: ワークシートにコメントを追加Officeスクリプトを使用する方法について説明します。
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: b57b4112f2092dd83872f63854a8156b2a19384ac1d86a44ab2d9df4e6b7ff7e
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 3ff9d56934520a98dd1de7d31077396294bde29d
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57847101"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59332398"
 ---
 # <a name="add-comments-in-excel"></a>コメントを追加Excel
 
@@ -20,7 +20,7 @@ ms.locfileid: "57847101"
 * チーム リードは、従業員に通知する必要があります。 従業員にコメントを@mentionsすると、ワークシートからカスタム メッセージが送信されます。
 * その後、従業員はブックを表示し、都合の良い時点でコメントに応答できます。
 
-## <a name="solution"></a>解決方法
+## <a name="solution"></a>ソリューション
 
 1. スクリプトは、従業員ワークシートから従業員情報を抽出します。
 1. スクリプトは、シフト レコードの適切なセルにコメント (関連する従業員の電子メールを含む) を追加します。

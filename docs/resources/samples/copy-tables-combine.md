@@ -2,13 +2,13 @@
 title: 複数のテーブルのデータExcel 1 つのテーブルに結合する
 description: 複数のテーブルから 1 Officeテーブルのデータを結合するために、Excelスクリプトを使用する方法について学習します。
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: f8285ac2302ef30de66c2bdbfb9277f83a3a75690d59a1e9cb066f544eeffb19
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 490727f39a497dd1d2e31f2fac938b6d518012a5
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846975"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59330773"
 ---
 # <a name="combine-data-from-multiple-excel-tables-into-a-single-table"></a>複数のテーブルのデータExcel 1 つのテーブルに結合する
 

@@ -2,13 +2,13 @@
 title: Office スクリプトでのベスト プラクティス
 description: 一般的な問題を防止し、予期しない入力またはデータOfficeできる堅牢なスクリプトを記述する方法。
 ms.date: 05/10/2021
-localization_priority: Normal
-ms.openlocfilehash: cdea3583120109cda05c05cb7c4f908e929bbff0d37e615b1820f67b57fbe24f
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: 49075d52587a1d2c4ed06fc2939aebc7081d4ddb
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846618"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59327841"
 ---
 # <a name="best-practices-in-office-scripts"></a>Office スクリプトでのベスト プラクティス
 

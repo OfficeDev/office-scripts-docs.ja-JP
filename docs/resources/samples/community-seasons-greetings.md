@@ -2,13 +2,13 @@
 title: 季節のご挨拶
 description: スクリプトを使用して、Officeの歌のツリーを表示する方法についてExcel on the web。
 ms.date: 06/29/2021
-localization_priority: Normal
-ms.openlocfilehash: 3474a3e4a87257bba75132b029b57b0c28c922d1b901cda10068d5998d895c53
-ms.sourcegitcommit: 75f7ed8c2d23a104acc293f8ce29ea580b4fcdc5
+ms.localizationpriority: medium
+ms.openlocfilehash: f1339bd267dbe4eba19541b2339742cbde30b1d5
+ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/11/2021
-ms.locfileid: "57846604"
+ms.lasthandoff: 09/15/2021
+ms.locfileid: "59327855"
 ---
 # <a name="seasons-greetings"></a>季節のご挨拶
 
