@@ -69,6 +69,8 @@ items:
                 href: resources/samples/copy-tables-combine.md
           - name: 応用
             items:
+              - name: ワークシートを 1 つのブックに結合する
+                href: resources/samples/combine-worksheets-into-single-workbook.md
               - name: CSV ファイルを変換する
                 href: resources/samples/convert-csv.md
               - name: 相互参照ワークシート
