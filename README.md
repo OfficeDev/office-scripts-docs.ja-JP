@@ -25,7 +25,7 @@ repo の目的は、スクリプトに関する開発者教育を提供Officeで
 
 - Office スクリプトまたは Office スクリプトを実行する Office.js API の設計に関する質問をするには、質問をスタック オーバーフローに投稿し、それを "office-scripts" タグ () でタグ付けします。 https://stackoverflow.com/questions/tagged/office-scripts)
 - Office.js API で問題を報告するには、製品チームのメンバーが顧客から報告された問題を監視する [OfficeDev/office-js](https://github.com/OfficeDev/office-js)リポジトリに問題を作成します。
-- Office スクリプトの機能要求を送信するには、アイデアを [User [Voice]](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439)ページに投稿するか、機能要求が既に存在する場合は、その機能要求に対する投票を追加するか、機能要求が既に存在する場合は、そのユーザーの投票を追加します。 [マクロ、スクリプト、アドイン] Excel for the webで要求をファイルしてください。
+- スクリプトの機能要求を送信Officeコード エディターのフィードバック ボタンを使用します。 [コード エディター] 作業ウィンドウの [その他のオプション **(....)]** メニューで、[フィードバックの送信] ボタンを選択して、機能のニーズやその他のエクスペリエンスを共有します。 
 
 ## <a name="copyright"></a>著作権
 

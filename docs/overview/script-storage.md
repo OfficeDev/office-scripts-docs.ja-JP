@@ -3,16 +3,16 @@ title: Officeスクリプト ファイルのストレージと所有権
 description: スクリプトを管理者Officeに格納し、所有者Microsoft OneDrive転送する方法に関する情報。
 ms.date: 06/04/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 2a404818ad5eb118467d5ad98c8921c5f3ea29fe
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 6b82fc041c97288feefa85f2a9c9efeab0cb5705
+ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59326864"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59447451"
 ---
 # <a name="office-scripts-file-storage-and-ownership"></a>Officeスクリプト ファイルのストレージと所有権
 
-Officeスクリプトは、ユーザーの **ファイルに .osts** ファイルとしてMicrosoft OneDrive。 ブックとは別に格納されます。 他のユーザーにアクセス権を与えるために[、スクリプトをブックExcelします](excel.md#sharing-scripts)。 つまり、スクリプトをファイルにリンクしているのではなく、ファイルとリンクします。 Excelファイルにアクセスできるユーザーは、スクリプトの表示、実行、またはコピーの作成を行えます。
+Officeスクリプトは、ユーザーの **ファイルに .osts** ファイルとしてMicrosoft OneDrive。 ブックとは別に格納されます。 他のユーザーにアクセス権を与えるために[、スクリプトをブックExcelします](excel.md#share-scripts)。 つまり、スクリプトをファイルにリンクしているのではなく、ファイルとリンクします。 Excelファイルにアクセスできるユーザーは、スクリプトの表示、実行、またはコピーの作成を行えます。
 
 スクリプトを共有しない限り、他のユーザーはスクリプトにアクセスできません。 ユーザー OneDrive設定は、すべてのスクリプト **.osts** ファイルに対する共有アクセスとアクセス許可を、すべてのスクリプト設定にExcelします。 スクリプトは、ローカル ディスクまたはカスタム クラウドの場所からリンクできません。 Officeスクリプトは、スクリプトを認識して実行できるのは、スクリプトが OneDriveフォルダーにある場合、またはブックと共有されている場合のみです。
 

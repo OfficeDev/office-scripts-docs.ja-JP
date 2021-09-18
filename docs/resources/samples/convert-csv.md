@@ -3,12 +3,12 @@ title: CSV ファイルをブックExcel変換する
 description: スクリプトとスクリプトを使用Office、Power Automateファイルから.xlsxファイルを.csvします。
 ms.date: 07/19/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: ecfc4d143cbaf10b9ea5f02881751f2c4fa28853
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 213c6caab1d1b20d566aa0e79630c1a9b50554f7
+ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59333434"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59447479"
 ---
 # <a name="convert-csv-files-to-excel-workbooks"></a>CSV ファイルをブックExcel変換する
 
@@ -67,7 +67,7 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
 1. フローを [すべての "1" "日" を繰り返す] に設定し、[作成] を **選択します**。
 1. テンプレート ファイルを取得Excelします。 これは、すべての変換されたファイルの.csvです。 [ファイル コンテンツ **の取得]** **アクションと**[OneDrive for Business] コネクタを使用する **新しい手順を追加** します。 "Template.xlsx" ファイルへのファイル パスを指定します。
     * **ファイル**: /output/Template.xlsx
-1. (コネクタ **の右上隅** にある) その手順 **の ...** メニューに移動し、[名前の変更] オプションを選択して、ファイル コンテンツの取得手順の名前 **を変更** します。 手順名を "Get Excel" に変更します。
+1. [ファイルコンテンツの取得] 手順の名前を変更するには、その手順の [ファイルコンテンツの取得]**メニュー (....)** (コネクタの右上隅) に移動し、[名前の変更] オプション **を** 選択します。 手順名を "Get Excel" に変更します。
 
      :::image type="content" source="../../images/convert-csv-flow-1.png" alt-text="完了したOneDrive for Businessコネクタを Power Automate Get Excelに変更しました。":::
 1. "出力" フォルダー内のすべてのファイルを取得します。 [フォルダー内 **のファイルの一** 覧] **OneDrive for Businessを使用** する新 **しい手順を追加** します。 フォルダー ファイルを含むフォルダー パス.csvします。

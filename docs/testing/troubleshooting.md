@@ -1,14 +1,14 @@
 ---
 title: スクリプトOfficeトラブルシューティング
 description: スクリプトのデバッグのヒントとOfficeヘルプ リソース。
-ms.date: 05/17/2021
+ms.date: 09/15/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ea133afdf302994126e8051d275d03b938df370
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 5229490e2487974f751456ef63004bcb27f7b09c
+ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59333980"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59447486"
 ---
 # <a name="troubleshoot-office-scripts"></a>スクリプトOfficeトラブルシューティング
 
@@ -84,9 +84,7 @@ console.log(myRange.getAddress());
 
 [スタック オーバーフロー](https://stackoverflow.com/questions/tagged/office-scripts) は、コーディングの問題を支援する開発者のコミュニティです。 多くの場合、スタック オーバーフローのクイック検索を使用して、問題の解決策を見つける可能性があります。 そうでない場合は、質問をして"office-scripts" タグでタグ付けします。 アドインではなく、Office *スクリプト* を作成Office *してください*。
 
-Office スクリプトの機能要求を送信するには、アイデアを [ユーザー音声[](https://excel.uservoice.com/forums/274580-excel-for-the-web?category_id=143439)] ページに投稿するか、機能要求が既に存在する場合は、そのユーザーに投票を追加します。 [マクロ、スクリプト、アドイン] Excel for the webで要求をファイルしてください。
-
-アクション レコーダーまたはエディターに問題がある場合は、お知らせください。 [コード エディター] 作業ウィンドウの **...** メニューで、[フィードバックの送信] ボタンを選択して問題を共有します。
+スクリプトの機能要求をOffice、または機能に関する問題を報告するには、コード エディターのフィードバック ボタンを使用します。 [コード エディター] 作業ウィンドウの [その他のオプション **(....)]** メニューで、[フィードバックの送信] ボタンを選択して、機能のニーズやその他のエクスペリエンスを共有します。 
 
 :::image type="content" source="../images/code-editor-feedback.png" alt-text="[フィードバックの送信] ボタンを含むコード エディターのオーバーフロー メニュー。":::
 
