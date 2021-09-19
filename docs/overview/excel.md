@@ -1,14 +1,14 @@
 ---
 title: Excel on the web の Office スクリプト
 description: Office スクリプト用の操作レコーダーとコード エディターの概要をご紹介します。
-ms.date: 07/04/2021
+ms.date: 09/17/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 056bf4bb489739d4062dcf422aded2dcc7fc5aa8
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 5b33f4b15733a0e053b7e5fa7ba1051b382f22ca
+ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59332881"
+ms.lasthandoff: 09/18/2021
+ms.locfileid: "59447500"
 ---
 # <a name="office-scripts-in-excel-on-the-web"></a>Excel on the web の Office スクリプト
 
@@ -62,7 +62,7 @@ Office スクリプトの機能を学習する簡単な方法の 1 つは、Exce
 
 チュートリアルを完了したら、「[Excel on the web での Office スクリプトのスクリプトの基本事項](../develop/scripting-fundamentals.md)」を読んで、コード エディターの詳細と、独自のスクリプトを作成および編集する方法を学習できます。 コード エディターとスクリプト コードの解釈方法の詳細については、「[Office スクリプト コード エディターの環境](code-editor-environment.md)」を参照してください。
 
-## <a name="sharing-scripts"></a>スクリプトの共有
+## <a name="share-scripts"></a>共有スクリプト
 
 :::image type="content" source="../images/script-sharing.png" alt-text="[このブックで他のユーザーと共有する] オプションを表示するスクリプトの詳細ページ。":::
 
@@ -73,7 +73,19 @@ Office スクリプトは、Excel ブックの他のユーザーと共有でき�
 > [!NOTE]
 > 「[Office Scripts file storage and ownership (Office スクリプトのファイル ストレージと所有権)](script-storage.md)」では、OneDrive にスクリプトを保存する方法について詳しく説明しています。
 
-## <a name="connecting-office-scripts-to-power-automate"></a>Office スクリプトを Power Automate に接続する
+### <a name="create-script-buttons-preview"></a>スクリプト ボタンの作成 (プレビュー)
+
+[!INCLUDE [Public preview](../includes/preview-note.md)]
+
+ブックにスクリプト ボタンを追加することにより、同僚がスクリプトを見つけて実行するのに役立ちます。 任意のスクリプトを使用して、スクリプトの [詳細] ページまたはコード エディターの作業ウィンドウで **[その他のオプション (....)]** メニューに移動し、**[追加] ボタン** を選択します。 これにより、選択した場合に関連付けられたスクリプトを実行するブックにボタンが作成されます。 また、スクリプトをブックと共有します。ブックへの書き込みアクセス許可を持つすべてのユーザーが、便利な自動処理を使用できます。
+
+次のスクリーンショットは、**[レポートの作成]** というタイトルのスクリプトの [詳細] ページを示し、強調表示された **[その他のオプション (...)]** メニュー内に **[追加] ボタン** オプションがあります。
+
+:::image type="content" source="../images/add-button.png" alt-text="スクリプトの [詳細] ページ メニューの '[追加] ボタン' オプション。":::
+
+ボタン経由でのスクリプトの共有を停止するには、スクリプトの [詳細] ページの **[その他のオプション (...)]** メニューに移動し、**[共有の停止]** を選択します。 これにより、スクリプトを実行しているすべてのボタンが削除されます。 1 つのボタンを削除すると、操作が元に戻された場合や、ボタンが切り取って貼り付けられた場合でも、その 1 つのボタンからスクリプトが削除されます。
+
+## <a name="connect-office-scripts-to-power-automate"></a>Office スクリプトを Power Automate に接続する
 
 [Power Automate](https://flow.microsoft.com/) は、複数のアプリとサービスの間のワークフローを自動化するためのサービスです。 これらのワークフローでは、Office スクリプトを使用して、ブック外のスクリプトを制御できます。 スケジュールに基づいてスクリプトを実行したり、メールに応じてスクリプトをトリガーしたりできます。 この自動化サービスに接続するための基本的な方法については、「[Power Automate を使用して Excel on the web で Office スクリプトを実行する](../tutorials/excel-power-automate-manual.md)」チュートリアルにアクセスします。
 
