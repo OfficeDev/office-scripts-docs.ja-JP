@@ -1,14 +1,14 @@
 ---
 title: ブックを 1 つのブックに結合する
 description: 他のブックから 1 OfficeブックPower Automateワークシートを作成する方法について説明します。
-ms.date: 09/03/2021
+ms.date: 09/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 6d2c9492e0e2164fe34cff21d92f3df4c9bee3fe
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: ffb0fd13cf587184aec87ade36e5e0e661043b94
+ms.sourcegitcommit: c23816babcc628b52f6d8aaa4b6342e04e83a5bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59337955"
+ms.lasthandoff: 09/21/2021
+ms.locfileid: "59460786"
 ---
 # <a name="combine-worksheets-into-a-single-workbook"></a>ワークシートを 1 つのブックに結合する
 
@@ -101,7 +101,7 @@ interface WorksheetData {
     * **ファイル**: ファイル
     * **スクリプト**: ワークシートの追加
     * **workbookName**: *名前* (フォルダー内のリスト ファイル **からの動的コンテンツ**)
-    * **worksheetInformation**: *result (Run* スクリプトからの動的 **コンテンツ**)
+    * **worksheetInformation** ([配列全体の入力に切り替える] ボタンを選択した後、次の画像に続くメモを参照してください):*結果*(Run スクリプトからの動的 **コンテンツ**)
 
     :::image type="content" source="../../images/combine-worksheets-flow-2.png" alt-text="各コントロールに適用する 2 つのスクリプトアクションを実行します。":::
     > [!NOTE]
