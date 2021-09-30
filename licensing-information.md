@@ -4420,8 +4420,9 @@ MIT ライセンス
 
 ---------------------------------------------------------
 
-@types/office-js-preview 1.0.242 - MIT https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
+@types/office-js-preview 1.0.247 - MIT https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/office-js-preview
 
+Copyright (c) Microsoft Corporation。
 
 MIT ライセンス
 
@@ -8395,14 +8396,14 @@ Copyright (c) 2014 Nathan Rajlich <nathan@tootallnate.net>
 
 ---------------------------------------------------------
 
-fill-range 4.0.0 - MIT https://github.com/jonschlinkert/fill-range
+fill-range 7.0.1 - MIT https://github.com/jonschlinkert/fill-range
 
-Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2014-2015, 2017, Jon Schlinkert.
-Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
+Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2019, Jon Schlinkert ( https://github.com/jonschlinkert) .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-2017, Jon Schlinkert
+Copyright (c) 2014-present, Jon Schlinkert.
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアが提供される人物を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得する人に対して、無料で許可されます。 次の条件に従います。
 
@@ -8415,14 +8416,14 @@ Copyright (c) 2014-2017, Jon Schlinkert
 
 ---------------------------------------------------------
 
-fill-range 7.0.1 - MIT https://github.com/jonschlinkert/fill-range
+fill-range 4.0.0 - MIT https://github.com/jonschlinkert/fill-range
 
-Copyright (c) 2014-present, Jon Schlinkert.
-Copyright (c) 2019, Jon Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2014-2015, 2017, Jon Schlinkert.
+Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-present, Jon Schlinkert.
+Copyright (c) 2014-2017, Jon Schlinkert
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアが提供される人物を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得する人に対して、無料で許可されます。 次の条件に従います。
 
@@ -11493,7 +11494,7 @@ Copyright 2010 James Halliday (mail@substack.net)
 
 ---------------------------------------------------------
 
-monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015 Copyright (c) Joshaven Potter Copyright (c) 2014 Taylor Hakes Copyright (c) Artyom Shalkhakov.
 Copyright (c) 2015 David Owens II Copyright (c) 2014 Forbes Lindesay Copyright (c) 2015 Nicolas Bevacqua Copyright (c) Microsoft Corporation.
@@ -11519,7 +11520,7 @@ Copyright (c) 2016 - 現在の Microsoft Corporation
 
 ---------------------------------------------------------
 
-monaco-editor 0.20.0 - MIT https://github.com/Microsoft/monaco-editor#readme
+monaco-editor 0.18.1 - MIT https://github.com/Microsoft/monaco-editor#readme
 
 Copyright (c) 2015 Copyright (c) Joshaven Potter Copyright (c) 2014 Taylor Hakes Copyright (c) Artyom Shalkhakov.
 Copyright (c) 2015 David Owens II Copyright (c) 2014 Forbes Lindesay Copyright (c) 2015 Nicolas Bevacqua Copyright (c) Microsoft Corporation.
@@ -13517,7 +13518,7 @@ Copyright (c) 2017 Maxime Thirouin
 
 ---------------------------------------------------------
 
-postcss-selector-parser 6.0.2 - MIT https://github.com/postcss/postcss-selector-parser
+postcss-selector-parser 5.0.0 - MIT https://github.com/postcss/postcss-selector-parser
 
 Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info)
 
@@ -13534,7 +13535,7 @@ Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info)
 
 ---------------------------------------------------------
 
-postcss-selector-parser 5.0.0 - MIT https://github.com/postcss/postcss-selector-parser
+postcss-selector-parser 6.0.2 - MIT https://github.com/postcss/postcss-selector-parser
 
 Copyright (c) Ben Briggs <beneb.info@gmail.com> (http://beneb.info)
 
@@ -13929,7 +13930,7 @@ Copyright Mathias Bynens <https://mathiasbynens.be/>
 
 ---------------------------------------------------------
 
-punycode 1.3.2 - MIT https://mths.be/punycode
+punycode 1.4.1 - MIT https://mths.be/punycode
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 
@@ -13946,7 +13947,7 @@ Copyright Mathias Bynens <https://mathiasbynens.be/>
 
 ---------------------------------------------------------
 
-punycode 1.4.1 - MIT https://mths.be/punycode
+punycode 1.3.2 - MIT https://mths.be/punycode
 
 Copyright Mathias Bynens <https://mathiasbynens.be/>
 
@@ -14329,13 +14330,13 @@ Node.jsは、次のように使用できます。
 
 ---------------------------------------------------------
 
-readdirp 2.2.1 - MIT https://github.com/paulmillr/readdirp
+readdirp 3.4.0 - MIT https://github.com/paulmillr/readdirp
 
-Copyright (c) 2012-2015 Thorsten Lorenz
+Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller ( https://paulmillr.com) Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller <https://paulmillr.com>
 
-このソフトウェアは、MIT ライセンスの下でリリースされます。
+MIT ライセンス
 
-Copyright (c) 2012-2015 Thorsten Lorenz
+Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com)
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアが提供される人物を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得する人に対して、無料で許可されます。 次の条件に従います。
 
@@ -14348,13 +14349,13 @@ Copyright (c) 2012-2015 Thorsten Lorenz
 
 ---------------------------------------------------------
 
-readdirp 3.4.0 - MIT https://github.com/paulmillr/readdirp
+readdirp 2.2.1 - MIT https://github.com/paulmillr/readdirp
 
-Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller ( https://paulmillr.com) Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller <https://paulmillr.com>
+Copyright (c) 2012-2015 Thorsten Lorenz
 
-MIT ライセンス
+このソフトウェアは、MIT ライセンスの下でリリースされます。
 
-Copyright (c) 2012-2019 Thorsten Lorenz, Paul Miller (https://paulmillr.com)
+Copyright (c) 2012-2015 Thorsten Lorenz
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアが提供される人物を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得する人に対して、無料で許可されます。 次の条件に従います。
 
@@ -15044,7 +15045,7 @@ Copyright JS Foundation および他の投稿者
 
 ---------------------------------------------------------
 
-schema-utils 0.4.7 - MIT https://github.com/webpack-contrib/schema-utils
+schema-utils 2.7.0 - MIT https://github.com/webpack/schema-utils
 
 Copyright JS Foundation および他の投稿者
 
@@ -15062,7 +15063,7 @@ Copyright JS Foundation および他の投稿者
 
 ---------------------------------------------------------
 
-schema-utils 2.7.0 - MIT https://github.com/webpack/schema-utils
+schema-utils 0.4.7 - MIT https://github.com/webpack-contrib/schema-utils
 
 Copyright JS Foundation および他の投稿者
 
@@ -15663,7 +15664,7 @@ Copyright (c) 2017 Khaled Al-Ansari
 
 ---------------------------------------------------------
 
-string_decoder 1.3.0 - MIT https://github.com/nodejs/string_decoder
+string_decoder 1.1.1 - MIT https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. および他の Node 投稿者。
 
@@ -15694,7 +15695,7 @@ Node.jsは、次のように使用できます。
 
 ---------------------------------------------------------
 
-string_decoder 1.1.1 - MIT https://github.com/nodejs/string_decoder
+string_decoder 1.3.0 - MIT https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. および他の Node 投稿者。
 
