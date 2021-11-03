@@ -1,20 +1,20 @@
 ---
 title: Power Automate を使用した Office スクリプトの実行
 description: Power Automate ワークフローを使用して Excel on the web の Office スクリプトを取得する方法。
-ms.date: 05/17/2021
+ms.date: 11/01/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: b5bddae61961a56699f99111f71c4f152382f7c6
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 1a335944230011bc8f5967004b7394f3f5958321
+ms.sourcegitcommit: 634ad2061e683ae1032c1e0b55b00ac577adc34f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59327869"
+ms.lasthandoff: 11/03/2021
+ms.locfileid: "60725595"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>Power Automate を使用した Office スクリプトの実行
 
 [Power Automate](https://flow.microsoft.com) を使用すると、Office スクリプトを大規模で自動化されたワークフローに追加できます。 Power Automate を使って、メールの内容をワークシートのテーブルに追加したり、ブックのコメントに基づいてプロジェクト管理ツールでアクションを作成したりできます。
 
-## <a name="get-started"></a>作業の開始
+## <a name="get-started"></a>開始する
 
 Power Automate を初めて使用する場合は、「[Power Automate に関する入門情報](/power-automate/getting-started)」にアクセスすることをお勧めします。 そちらで、利用可能なすべてのオートメーションの可能性について詳しく学ぶことができます。 このドキュメントでは、Power Automate での Office スクリプトの動作と、それが Excel エクスペリエンスの改善にどのように役立つかに重点が置かれています。
 
@@ -46,17 +46,19 @@ Power Automate でフローを構成する場合、スクリプト入力を静�
 
 1. 最後のパラメーターは `ExcelScript.Workbook` の型にする必要があります。 そのパラメーター名は自由に指定できます。
 
-2. すべてのパラメーターには、型 (`string` または `number` など) が必要です。
+1. すべてのパラメーターには、型 (`string` または `number` など) が必要です。
 
-3. 基本的な型 `string` `number` `boolean` `unknown` 、、、、 `object` `undefined` がサポートされています。
+1. 基本的な型 `string` `number` `boolean` `unknown` 、、、、 `object` `undefined` がサポートされています。
 
-4. 以前に一覧表示された基本型の配列がサポートされています。
+1. 前に `[]` 示した基本型の配列 ( ) がサポートされています。
+    > [!IMPORTANT]
+    > オブジェクトは、サポート `Array<T>` されているパラメーターの種類ではありません。
 
-5. 入れ子にされた配列はパラメーターとしてサポートされます (戻り値の型としてはサポートされません)。
+1. 入れ子にされた配列はパラメーターとしてサポートされます (戻り値の型としてはサポートされません)。
 
-6. 共用体型は、単一の型に属するリテラルの共用体 (`"Left" | "Right"` など) の場合に許可されます。 undefined を含むサポートされる型の共用体 (`string | undefined` など) もサポートされます。
+1. 共用体型は、単一の型に属するリテラルの共用体 (`"Left" | "Right"` など) の場合に許可されます。 undefined を含むサポートされる型の共用体 (`string | undefined` など) もサポートされます。
 
-7. オブジェクト型は、型 `string`、`number`、`boolean`、サポートされている配列、または他のサポートされているオブジェクトのプロパティが含まれる場合に許可されます。 次の例は、パラメーターの型としてサポートされる入れ子にされたオブジェクトを示しています。
+1. オブジェクト型は、型 `string`、`number`、`boolean`、サポートされている配列、または他のサポートされているオブジェクトのプロパティが含まれる場合に許可されます。 次の例は、パラメーターの型としてサポートされる入れ子にされたオブジェクトを示しています。
 
     ```TypeScript
     // Office Scripts can return an Employee object because Position only contains strings and numbers.
@@ -71,15 +73,15 @@ Power Automate でフローを構成する場合、スクリプト入力を静�
     }
     ```
 
-8. オブジェクトのインターフェイスまたはクラス定義はスクリプトで定義されている必要があります。 次の例のように、オブジェクトをインラインで匿名で定義することができます。
+1. オブジェクトのインターフェイスまたはクラス定義はスクリプトで定義されている必要があります。 次の例のように、オブジェクトをインラインで匿名で定義することができます。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook): {name: string, email: string}
     ```
 
-9. オプション パラメーターは許可されており、オプションの修飾子 `?` を使用してそのようなものとして示すことができます (例: `function main(workbook: ExcelScript.Workbook, Name?: string)`)。
+1. オプション パラメーターは許可されており、オプションの修飾子 `?` を使用してそのようなものとして示すことができます (例: `function main(workbook: ExcelScript.Workbook, Name?: string)`)。
 
-10. 既定のパラメーター値は許可されています (例: `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')`)。
+1. 既定のパラメーター値は許可されています (例: `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')`)。
 
 ### <a name="return-data-from-a-script"></a>スクリプトからデータを返す
 
@@ -87,13 +89,15 @@ Power Automate でフローを構成する場合、スクリプト入力を静�
 
 1. 基本型 `string`、`number`、`boolean`、`void`、`undefined` がサポートされています。
 
-2. 戻り値の型として使用される共用体の型は、スクリプト パラメーターとして使用する場合と同じ制限に従います。
+1. 戻り値の型として使用される共用体の型は、スクリプト パラメーターとして使用する場合と同じ制限に従います。
 
-3. 配列型は、`string`、`number`、または `boolean` の型の場合に許可されます。 型がサポートされている共用体またはサポートされているリテラルの型の場合も許可されます。
+1. 配列型 ( ) は、型 、、または `[]` `string` の場合 `number` に使用できます `boolean` 。 型がサポートされている共用体またはサポートされているリテラルの型の場合も許可されます。
+    > [!IMPORTANT]
+    > オブジェクトはサポートされている `Array<T>` 戻り値の種類ではありません。
 
-4. 戻り値の型として使用されるオブジェクトの型は、スクリプト パラメーターとして使用する場合と同じ制限に従います。
+1. 戻り値の型として使用されるオブジェクトの型は、スクリプト パラメーターとして使用する場合と同じ制限に従います。
 
-5. 暗黙的な入力はサポートされていますが、定義された型と同じ規則に従う必要があります。
+1. 暗黙的な入力はサポートされていますが、定義された型と同じ規則に従う必要があります。
 
 ## <a name="example"></a>例
 
