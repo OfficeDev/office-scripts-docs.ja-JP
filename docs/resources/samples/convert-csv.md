@@ -1,14 +1,14 @@
 ---
 title: CSV ファイルをブックExcel変換する
 description: スクリプトとスクリプトを使用Office、Power Automateファイルから.xlsxファイルを.csvします。
-ms.date: 07/19/2021
+ms.date: 11/02/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 213c6caab1d1b20d566aa0e79630c1a9b50554f7
-ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
+ms.openlocfilehash: 203174aec099e426b75d1c816fb3f849b4f13152
+ms.sourcegitcommit: 8df930d9ad90001dbed7cb9bd9015ebe7bc9854e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59447479"
+ms.lasthandoff: 11/05/2021
+ms.locfileid: "60793266"
 ---
 # <a name="convert-csv-files-to-excel-workbooks"></a>CSV ファイルをブックExcel変換する
 
@@ -99,3 +99,43 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
     :::image type="content" source="../../images/convert-csv-flow-5.png" alt-text="オンライン (Excel) コネクタの完成Power Automate。":::
 1. フローを保存します。 [フロー エディター **] ページ** の [テスト] ボタンを使用するか、[マイ フロー] タブでフロー **を実行** します。メッセージが表示されたら、必ずアクセスを許可してください。
 1. "output" フォルダー.xlsx、元のファイルと一緒に新しいファイル.csvがあります。 新しいブックには、CSV ファイルと同じデータが含まれています。
+
+## <a name="troubleshooting"></a>トラブルシューティング
+
+スクリプトでは、コンマで区切られた値が四角形の範囲を作る必要があります。 .csv ファイルに列の数が異なる行が含まれている場合は、「入力配列内の行または列の数が範囲のサイズまたはサイズと一致しない」というエラーが表示されます。 四角形の図形に準拠するためにデータを作成できない場合は、代わりに次のスクリプトを使用します。 このスクリプトは、1 つの範囲ではなく、一度に 1 行のデータを追加します。 このスクリプトの効率は低く、大きなデータ セットでは非常に遅くなります。
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook, csv: string) {
+  let sheet = workbook.getWorksheet("Sheet1");
+
+  /* Convert the CSV data into a 2D array. */
+  // Trim the trailing new line.
+  csv = csv.trim();
+
+  // Split each line into a row.
+  let rows = csv.split("\r\n");
+  rows.forEach((value, index) => {
+    /*
+     * For each row, match the comma-separated sections.
+     * For more information on how to use regular expressions to parse CSV files,
+     * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
+     */
+    let row = value.match(/(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g);
+
+    // Remove the preceding comma.
+    row.forEach((cell, index) => {
+      row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
+    });
+
+    // Create a 2D-array with one row.
+    let data: string[][] = [];
+    data.push(row);
+
+    // Put the data in the worksheet.
+    let range = sheet.getRangeByIndexes(index, 0, 1, data[0].length);
+    range.setValues(data);
+  });
+
+  // Add any formatting or table creation that you want.
+}
+```
