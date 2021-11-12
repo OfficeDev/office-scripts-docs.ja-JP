@@ -89,7 +89,7 @@ Copyright (c) 2015-2018 Google, Inc., Netflix, Inc., Microsoft Corp. および�
 
  2. 著作権ライセンスの付与。 このライセンスの条件に従い、各投稿者は、本著作物およびそのような派生作品をソースまたはオブジェクト形式で複製、公開、サブライセンス、配布するための永久的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な著作権ライセンスをユーザーに付与します。
 
- 3. 特許ライセンスの付与。 本ライセンスの使用条件に従い、 各投稿者は、永続的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な (このセクションに記載されている場合を除く) 特許ライセンスを付与し、作り、使用し、販売、販売、輸入、その他の方法で作品を譲渡します。そのような投稿が提出された作業。 お客様が、ワークまたはワーク内に組み込まれた投稿が直接的または寄稿的な特許侵害を構成すると主張する任意のエンティティ (訴訟におけるクロスクレームまたは反訴を含む) に対して特許訴訟を提起した場合、このライセンスの下でユーザーに付与された特許ライセンスは、そのような訴訟が提起された日から終了します。
+ 3. 特許ライセンスの付与。 本ライセンスの使用条件に従い、 各投稿者は、永続的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な (このセクションに記載されている場合を除く) 特許ライセンスを付与し、作り、使用し、販売、販売、輸入、その他の方法で作品を譲渡します。 そのような投稿が提出された作業。 お客様が、ワークまたはワーク内に組み込まれた投稿が直接的または寄稿的な特許侵害を構成すると主張する任意のエンティティ (訴訟におけるクロスクレームまたは反訴を含む) に対して特許訴訟を提起した場合、このライセンスの下でユーザーに付与された特許ライセンスは、そのような訴訟が提起された日から終了します。
 
  4. 再配布。 お客様は、以下の条件を満たした場合に、変更の付きまたは変更を加えることなく、Source フォームまたは Object フォーム内で、作品または派生作品のコピーを複製および配布することができます。
 
@@ -162,7 +162,7 @@ Copyright (c) 2015-2018 Google, Inc., Netflix, Inc., Microsoft Corp. および�
 
  2. 著作権ライセンスの付与。 このライセンスの条件に従い、各投稿者は、本著作物およびそのような派生作品をソースまたはオブジェクト形式で複製、公開、サブライセンス、配布するための永久的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な著作権ライセンスをユーザーに付与します。
 
- 3. 特許ライセンスの付与。 本ライセンスの使用条件に従い、 各投稿者は、永続的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な (このセクションに記載されている場合を除く) 特許ライセンスを付与し、作り、使用し、販売、販売、輸入、その他の方法で作品を譲渡します。そのような投稿が提出された作業。 お客様が、ワークまたはワーク内に組み込まれた投稿が直接的または寄稿的な特許侵害を構成すると主張する任意のエンティティ (訴訟におけるクロスクレームまたは反訴を含む) に対して特許訴訟を提起した場合、このライセンスの下でユーザーに付与された特許ライセンスは、そのような訴訟が提起された日から終了します。
+ 3. 特許ライセンスの付与。 本ライセンスの使用条件に従い、 各投稿者は、永続的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な (このセクションに記載されている場合を除く) 特許ライセンスを付与し、作り、使用し、販売、販売、輸入、その他の方法で作品を譲渡します。 そのような投稿が提出された作業。 お客様が、ワークまたはワーク内に組み込まれた投稿が直接的または寄稿的な特許侵害を構成すると主張する任意のエンティティ (訴訟におけるクロスクレームまたは反訴を含む) に対して特許訴訟を提起した場合、このライセンスの下でユーザーに付与された特許ライセンスは、そのような訴訟が提起された日から終了します。
 
  4. 再配布。 お客様は、以下の条件を満たした場合に、変更の付きまたは変更を加えることなく、Source フォームまたは Object フォーム内で、作品または派生作品のコピーを複製および配布することができます。
 
@@ -235,7 +235,7 @@ Copyright (c) 2015-2018 Google, Inc., Netflix, Inc., Microsoft Corp. および�
 
  2. 著作権ライセンスの付与。 このライセンスの条件に従い、各投稿者は、本著作物およびそのような派生作品をソースまたはオブジェクト形式で複製、公開、サブライセンス、配布するための永久的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な著作権ライセンスをユーザーに付与します。
 
- 3. 特許ライセンスの付与。 本ライセンスの使用条件に従い、 各投稿者は、永続的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な (このセクションに記載されている場合を除く) 特許ライセンスを付与し、作り、使用し、販売、販売、輸入、その他の方法で作品を譲渡します。そのような投稿が提出された作業。 お客様が、ワークまたはワーク内に組み込まれた投稿が直接的または寄稿的な特許侵害を構成すると主張する任意のエンティティ (訴訟におけるクロスクレームまたは反訴を含む) に対して特許訴訟を提起した場合、このライセンスの下でユーザーに付与された特許ライセンスは、そのような訴訟が提起された日から終了します。
+ 3. 特許ライセンスの付与。 本ライセンスの使用条件に従い、 各投稿者は、永続的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な (このセクションに記載されている場合を除く) 特許ライセンスを付与し、作り、使用し、販売、販売、輸入、その他の方法で作品を譲渡します。 そのような投稿が提出された作業。 お客様が、ワークまたはワーク内に組み込まれた投稿が直接的または寄稿的な特許侵害を構成すると主張する任意のエンティティ (訴訟におけるクロスクレームまたは反訴を含む) に対して特許訴訟を提起した場合、このライセンスの下でユーザーに付与された特許ライセンスは、そのような訴訟が提起された日から終了します。
 
  4. 再配布。 お客様は、以下の条件を満たした場合に、変更の付きまたは変更を加えることなく、Source フォームまたは Object フォーム内で、作品または派生作品のコピーを複製および配布することができます。
 
@@ -308,7 +308,7 @@ Copyright (c) 2015-2018 Google, Inc., Netflix, Inc., Microsoft Corp. および�
 
  2. 著作権ライセンスの付与。 このライセンスの条件に従い、各投稿者は、本著作物およびそのような派生作品をソースまたはオブジェクト形式で複製、公開、サブライセンス、配布するための永久的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な著作権ライセンスをユーザーに付与します。
 
- 3. 特許ライセンスの付与。 本ライセンスの使用条件に従い、 各投稿者は、永続的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な (このセクションに記載されている場合を除く) 特許ライセンスを付与し、作り、使用し、販売、販売、輸入、その他の方法で作品を譲渡します。そのような投稿が提出された作業。 お客様が、ワークまたはワーク内に組み込まれた投稿が直接的または寄稿的な特許侵害を構成すると主張する任意のエンティティ (訴訟におけるクロスクレームまたは反訴を含む) に対して特許訴訟を提起した場合、このライセンスの下でユーザーに付与された特許ライセンスは、そのような訴訟が提起された日から終了します。
+ 3. 特許ライセンスの付与。 本ライセンスの使用条件に従い、 各投稿者は、永続的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な (このセクションに記載されている場合を除く) 特許ライセンスを付与し、作り、使用し、販売、販売、輸入、その他の方法で作品を譲渡します。 そのような投稿が提出された作業。 お客様が、ワークまたはワーク内に組み込まれた投稿が直接的または寄稿的な特許侵害を構成すると主張する任意のエンティティ (訴訟におけるクロスクレームまたは反訴を含む) に対して特許訴訟を提起した場合、このライセンスの下でユーザーに付与された特許ライセンスは、そのような訴訟が提起された日から終了します。
 
  4. 再配布。 お客様は、以下の条件を満たした場合に、変更の付きまたは変更を加えることなく、Source フォームまたは Object フォーム内で、作品または派生作品のコピーを複製および配布することができます。
 
@@ -393,7 +393,7 @@ http://www.apache.org/licenses/
 
 2. 著作権ライセンスの付与。 このライセンスの条件に従い、各投稿者は、本著作物およびそのような派生作品をソースまたはオブジェクト形式で複製、公開、サブライセンス、配布するための永久的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な著作権ライセンスをユーザーに付与します。
 
-3. 特許ライセンスの付与。 本ライセンスの使用条件に従い、 各投稿者は、永続的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な (このセクションに記載されている場合を除く) 特許ライセンスを付与し、作り、使用し、販売、販売、輸入、その他の方法で作品を譲渡します。そのような投稿が提出された作業。 お客様が、ワークまたはワーク内に組み込まれた投稿が直接的または寄稿的な特許侵害を構成すると主張する任意のエンティティ (訴訟におけるクロスクレームまたは反訴を含む) に対して特許訴訟を提起した場合、このライセンスの下でユーザーに付与された特許ライセンスは、そのような訴訟が提起された日から終了します。
+3. 特許ライセンスの付与。 本ライセンスの使用条件に従い、 各投稿者は、永続的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な (このセクションに記載されている場合を除く) 特許ライセンスを付与し、作り、使用し、販売、販売、輸入、その他の方法で作品を譲渡します。 そのような投稿が提出された作業。 お客様が、ワークまたはワーク内に組み込まれた投稿が直接的または寄稿的な特許侵害を構成すると主張する任意のエンティティ (訴訟におけるクロスクレームまたは反訴を含む) に対して特許訴訟を提起した場合、このライセンスの下でユーザーに付与された特許ライセンスは、そのような訴訟が提起された日から終了します。
 
 4. 再配布。 お客様は、以下の条件を満たした場合に、変更の付きまたは変更を加えることなく、Source フォームまたは Object フォーム内で、作品または派生作品のコピーを複製および配布することができます。
 
@@ -505,7 +505,7 @@ Copyright (c) 2015 AJ ONeal
 
    2. 著作権ライセンスの付与。 このライセンスの条件に従い、各投稿者は、本著作物およびそのような派生作品をソースまたはオブジェクト形式で複製、公開、サブライセンス、配布するための永久的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な著作権ライセンスをユーザーに付与します。
 
-   3. 特許ライセンスの付与。 本ライセンスの使用条件に従い、 各投稿者は、永続的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な (このセクションに記載されている場合を除く) 特許ライセンスを付与し、作り、使用し、販売、販売、輸入、その他の方法で作品を譲渡します。そのような投稿が提出された作業。 お客様が、ワークまたはワーク内に組み込まれた投稿が直接的または寄稿的な特許侵害を構成すると主張する任意のエンティティ (訴訟におけるクロスクレームまたは反訴を含む) に対して特許訴訟を提起した場合、このライセンスの下でユーザーに付与された特許ライセンスは、そのような訴訟が提起された日から終了します。
+   3. 特許ライセンスの付与。 本ライセンスの使用条件に従い、 各投稿者は、永続的、世界的、非排他的、無料、ロイヤリティフリー、取り消し可能な (このセクションに記載されている場合を除く) 特許ライセンスを付与し、作り、使用し、販売、販売、輸入、その他の方法で作品を譲渡します。 そのような投稿が提出された作業。 お客様が、ワークまたはワーク内に組み込まれた投稿が直接的または寄稿的な特許侵害を構成すると主張する任意のエンティティ (訴訟におけるクロスクレームまたは反訴を含む) に対して特許訴訟を提起した場合、このライセンスの下でユーザーに付与された特許ライセンスは、そのような訴訟が提起された日から終了します。
 
    4. 再配布。 お客様は、以下の条件を満たした場合に、変更の付きまたは変更を加えることなく、Source フォームまたは Object フォーム内で、作品または派生作品のコピーを複製および配布することができます。
 
@@ -690,7 +690,7 @@ Copyright 2015, Yahoo! Inc. Copyright (c) 2015, Yahoo! Inc.
 
 ---------------------------------------------------------
 
-source-map 0.5.7 - BSD-3-Clause https://github.com/mozilla/source-map
+source-map 0.6.1 - BSD-3-Clause https://github.com/mozilla/source-map
 
 Copyright 2011 The closure Compiler Copyright 2011 Mozilla Foundation and contributors Copyright 2014 Mozilla Foundation and contributors Copyright 2009-2011 Mozilla Foundation and contributors Copyright (c) 2009-2011, Mozilla Foundation and contributors
 
@@ -712,7 +712,7 @@ Copyright (c) 2009-2011, Mozilla Foundation and contributors All rights reserved
 
 ---------------------------------------------------------
 
-source-map 0.6.1 - BSD-3-Clause https://github.com/mozilla/source-map
+source-map 0.5.7 - BSD-3-Clause https://github.com/mozilla/source-map
 
 Copyright 2011 The closure Compiler Copyright 2011 Mozilla Foundation and contributors Copyright 2014 Mozilla Foundation and contributors Copyright 2009-2011 Mozilla Foundation and contributors Copyright (c) 2009-2011, Mozilla Foundation and contributors
 
@@ -1778,7 +1778,7 @@ MIT ライセンス
 @fluentui/font-icons-mdl2 8.1.12 - MIT https://github.com/microsoft/fluentui#readme
 
 
-FluentUI React - アイコン
+Fluent UI React - アイコン
 
 著作権 (c) Microsoft Corporation
 
@@ -1802,7 +1802,7 @@ MIT ライセンス
 @fluentui/foundation-legacy 8.1.12 - MIT https://github.com/microsoft/fluentui#readme
 
 
-FluentUI React Foundation
+Fluent UI React Foundation
 
 著作権 (c) Microsoft Corporation
 
@@ -1877,7 +1877,7 @@ MIT ライセンス
 
 著作権 (c) Microsoft Corporation
 
-FluentUI React - マージ スタイル
+Fluent UI React - マージ スタイル
 
 著作権 (c) Microsoft Corporation
 
@@ -2026,7 +2026,7 @@ MIT ライセンス
 @fluentui/スタイル ユーティリティ 8.3.3 - MIT https://github.com/microsoft/fluentui#readme
 
 
-FluentUI React - スタイル ユーティリティ
+Fluent UI React - スタイル ユーティリティ
 
 著作権 (c) Microsoft Corporation
 
@@ -2101,7 +2101,7 @@ MIT ライセンス
 
 著作権 (c) Microsoft Corporation
 
-FluentUI React - ユーティリティ
+Fluent UI React - ユーティリティ
 
 著作権 (c) Microsoft Corporation
 
@@ -2323,7 +2323,7 @@ MIT ライセンス
 
 Copyright (c) Microsoft Corporation。
 
-FluentUI React - マージ スタイル
+Fluent UI React - マージ スタイル
 
 著作権 (c) Microsoft Corporation
 
@@ -2373,7 +2373,7 @@ MIT ライセンス
 
 著作権 (c) Microsoft Corporation
 
-FluentUI React - スタイル設定
+Fluent UI Reactスタイル
 
 著作権 (c) Microsoft Corporation
 
@@ -2398,7 +2398,7 @@ MIT ライセンス
 
 著作権 (c) Microsoft Corporation
 
-FluentUI React - ユーティリティ
+Fluent UI React - ユーティリティ
 
 著作権 (c) Microsoft Corporation
 
@@ -2536,7 +2536,7 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-ansi-regex 4.1.0 - MIT https://github.com/chalk/ansi-regex#readme
+ansi-regex 3.0.0 - MIT https://github.com/chalk/ansi-regex#readme
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -2555,7 +2555,7 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-ansi-regex 3.0.0 - MIT https://github.com/chalk/ansi-regex#readme
+ansi-regex 4.1.0 - MIT https://github.com/chalk/ansi-regex#readme
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -3402,6 +3402,26 @@ Copyright (c) 2016 Jacob Parker and Maximilian Stoiber
 
 ---------------------------------------------------------
 
+debug 4.1.1 - MIT https://github.com/visionmedia/debug#readme
+
+Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
+
+(MIT ライセンス)
+
+Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアの提供を受ける人を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル (「ソフトウェア」) のコピーを取得するユーザーに対して、無料で許可されます。 次の条件に従います。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も含めずに「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
 debug 2.6.9 - MIT https://github.com/visionmedia/debug#readme
 
 Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2016 TJ Holowaychuk <tj@vision-media.ca>
@@ -3423,26 +3443,6 @@ Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
 ---------------------------------------------------------
 
 debug 3.2.6 - MIT https://github.com/visionmedia/debug#readme
-
-Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
-
-(MIT ライセンス)
-
-Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
-
-ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアの提供を受ける人を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル (「ソフトウェア」) のコピーを取得するユーザーに対して、無料で許可されます。 次の条件に従います。
-
-上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
-
-ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も含めずに「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
-
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
-debug 4.1.1 - MIT https://github.com/visionmedia/debug#readme
 
 Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -4214,15 +4214,14 @@ Copyright (c) 2014-2016, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-has-values 0.1.4 - MIT https://github.com/jonschlinkert/has-values
+has-values 1.0.0 - MIT https://github.com/jonschlinkert/has-values
 
-Copyright (c) 2014-2015, Jon Schlinkert.
-Copyright (c) 2014-2016, Jon Schlinkert.
-Copyright (c) 2016, Jon Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2014-2015, 2017, Jon Schlinkert.
+Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-2016, Jon Schlinkert.
+Copyright (c) 2014-2017, Jon Schlinkert
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアが提供される人物を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得する人に対して、無料で許可されます。 次の条件に従います。
 
@@ -4235,14 +4234,15 @@ Copyright (c) 2014-2016, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-has-values 1.0.0 - MIT https://github.com/jonschlinkert/has-values
+has-values 0.1.4 - MIT https://github.com/jonschlinkert/has-values
 
-Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2014-2015, 2017, Jon Schlinkert.
-Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
+Copyright (c) 2014-2015, Jon Schlinkert.
+Copyright (c) 2014-2016, Jon Schlinkert.
+Copyright (c) 2016, Jon Schlinkert ( https://github.com/jonschlinkert) .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-2017, Jon Schlinkert
+Copyright (c) 2014-2016, Jon Schlinkert.
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアが提供される人物を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得する人に対して、無料で許可されます。 次の条件に従います。
 
@@ -4596,7 +4596,7 @@ Copyright (c) 2015, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-is-descriptor 1.0.2 - MIT https://github.com/jonschlinkert/is-descriptor
+is-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-descriptor
 
 Copyright (c) 2015-2017, Jon Schlinkert.
 Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
@@ -4615,7 +4615,7 @@ Copyright (c) 2015-2017, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-is-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-descriptor
+is-descriptor 1.0.2 - MIT https://github.com/jonschlinkert/is-descriptor
 
 Copyright (c) 2015-2017, Jon Schlinkert.
 Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
@@ -4729,14 +4729,14 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-is-glob 4.0.1 - MIT https://github.com/micromatch/is-glob
+is-glob 3.1.0 - MIT https://github.com/jonschlinkert/is-glob
 
-Copyright (c) 2014-2017, Jon Schlinkert.
-Copyright (c) 2019, Jon Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-2016, Jon Schlinkert.
+Copyright (c) 2016, Jon Schlinkert ( https://github.com/jonschlinkert) .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-2017, Jon Schlinkert.
+Copyright (c) 2014-2016, Jon Schlinkert.
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアが提供される人物を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得する人に対して、無料で許可されます。 次の条件に従います。
 
@@ -4749,14 +4749,14 @@ Copyright (c) 2014-2017, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-is-glob 3.1.0 - MIT https://github.com/jonschlinkert/is-glob
+is-glob 4.0.1 - MIT https://github.com/micromatch/is-glob
 
-Copyright (c) 2014-2016, Jon Schlinkert.
-Copyright (c) 2016, Jon Schlinkert ( https://github.com/jonschlinkert) .
+Copyright (c) 2014-2017, Jon Schlinkert.
+Copyright (c) 2019, Jon Schlinkert ( https://github.com/jonschlinkert) .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2014-2016, Jon Schlinkert.
+Copyright (c) 2014-2017, Jon Schlinkert.
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアが提供される人物を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得する人に対して、無料で許可されます。 次の条件に従います。
 
@@ -5115,25 +5115,6 @@ Copyright (c) 2014, 2015, 2016, 2017 Simon Lydell
 
 ---------------------------------------------------------
 
-4.0.0 の種類 - MIT https://github.com/jonschlinkert/kind-of
-
-Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2017, Jon Schlinkert ( https://github.com/jonschlinkert) .
-
-MIT ライセンス (MIT)
-
-Copyright (c) 2014-2017, Jon Schlinkert
-
-ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアが提供される人物を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得する人に対して、無料で許可されます。 次の条件に従います。
-
-上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
-
-ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 種類 5.1.0 - MIT https://github.com/jonschlinkert/kind-of
 
 Copyright (c) 2014-2017, Jon Schlinkert.
@@ -5173,6 +5154,25 @@ Copyright (c) 2014-2017, Jon Schlinkert
 
 ---------------------------------------------------------
 
+4.0.0 の種類 - MIT https://github.com/jonschlinkert/kind-of
+
+Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2017, Jon Schlinkert ( https://github.com/jonschlinkert) .
+
+MIT ライセンス (MIT)
+
+Copyright (c) 2014-2017, Jon Schlinkert
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアが提供される人物を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得する人に対して、無料で許可されます。 次の条件に従います。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
 6.0.3 の種類 - MIT https://github.com/jonschlinkert/kind-of
 
 Copyright (c) 2014-2017, Jon Schlinkert.
@@ -5192,7 +5192,7 @@ Copyright (c) 2014-2017, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-loader-utils 1.4.0 - MIT https://github.com/webpack/loader-utils#readme
+loader-utils 1.2.3 - MIT https://github.com/webpack/loader-utils#readme
 
 Copyright JS Foundation および他の投稿者
 
@@ -5210,7 +5210,7 @@ Copyright JS Foundation および他の投稿者
 
 ---------------------------------------------------------
 
-loader-utils 1.2.3 - MIT https://github.com/webpack/loader-utils#readme
+loader-utils 1.4.0 - MIT https://github.com/webpack/loader-utils#readme
 
 Copyright JS Foundation および他の投稿者
 
@@ -6637,7 +6637,7 @@ MIT ライセンス (MIT)
 
 ---------------------------------------------------------
 
-redux 4.0.5 - MIT http://redux.js.org/
+redux 4.0.1 - MIT http://redux.js.org/
 
 Copyright (c) 2015-present Dan Abramov
 
@@ -6656,7 +6656,7 @@ Copyright (c) 2015-present Dan Abramov
 
 ---------------------------------------------------------
 
-redux 4.0.1 - MIT http://redux.js.org/
+redux 4.0.5 - MIT http://redux.js.org/
 
 Copyright (c) 2015-present Dan Abramov
 
@@ -7339,7 +7339,7 @@ Copyright (c) 2016, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-string_decoder 1.3.0 - MIT https://github.com/nodejs/string_decoder
+string_decoder 1.1.1 - MIT https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. および他の Node 投稿者。
 
@@ -7370,7 +7370,7 @@ Node.jsは、次のように使用できます。
 
 ---------------------------------------------------------
 
-string_decoder 1.1.1 - MIT https://github.com/nodejs/string_decoder
+string_decoder 1.3.0 - MIT https://github.com/nodejs/string_decoder
 
 Copyright Joyent, Inc. および他の Node 投稿者。
 
@@ -7439,7 +7439,7 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-strip-ansi 5.2.0 - MIT https://github.com/chalk/strip-ansi#readme
+strip-ansi 4.0.0 - MIT https://github.com/chalk/strip-ansi#readme
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -7458,7 +7458,7 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-strip-ansi 4.0.0 - MIT https://github.com/chalk/strip-ansi#readme
+strip-ansi 5.2.0 - MIT https://github.com/chalk/strip-ansi#readme
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -7531,11 +7531,11 @@ MIT ライセンス
 
 ---------------------------------------------------------
 
-supports-color 6.1.0 - MIT https://github.com/chalk/supports-color#readme
+supports-color 2.0.0 - MIT https://github.com/chalk/supports-color
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+(c) Sindre Sorhus ( http://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-MIT ライセンス
+MIT ライセンス (MIT)
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -7569,11 +7569,11 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-supports-color 2.0.0 - MIT https://github.com/chalk/supports-color
+supports-color 6.1.0 - MIT https://github.com/chalk/supports-color#readme
 
-(c) Sindre Sorhus ( http://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-MIT ライセンス (MIT)
+MIT ライセンス
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 

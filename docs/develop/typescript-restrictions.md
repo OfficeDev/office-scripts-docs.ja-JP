@@ -1,18 +1,18 @@
 ---
 title: スクリプトの TypeScript の制限Officeスクリプト
 description: スクリプト コード エディターで使用される TypeScript コンパイラと linter のOfficeします。
-ms.date: 07/14/2021
+ms.date: 11/09/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 1e63f61116bcff64ba6ad2a24a09253cccbdce10
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 7b67ccb4898823100e890aa5c8c0332d28a4522b
+ms.sourcegitcommit: ddbb1c66d627ffabbfc3b938d6e25cf6fe3cc13f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59326885"
+ms.lasthandoff: 11/12/2021
+ms.locfileid: "60924104"
 ---
 # <a name="typescript-restrictions-in-office-scripts"></a>スクリプトの TypeScript の制限Officeスクリプト
 
-Officeスクリプトは TypeScript 言語を使用します。 ほとんどの場合、すべての TypeScript または JavaScript コードは、スクリプトのOfficeされます。 ただし、コード エディターによって、スクリプトが一貫して動作し、ブックの目的に合Excelがあります。
+Officeは TypeScript 言語を使用します。 ほとんどの場合、すべての TypeScript または JavaScript コードは、スクリプトのOfficeされます。 ただし、コード エディターによって、スクリプトが一貫して動作し、ブックの目的に合Excelがあります。
 
 ## <a name="no-any-type-in-office-scripts"></a>スクリプトに 'any' 型Officeはありません
 
@@ -26,7 +26,7 @@ Officeスクリプトは TypeScript 言語を使用します。 ほとんどの�
 
 :::image type="content" source="../images/explicit-any-error-message.png" alt-text="コンソール ウィンドウの明示的な 'any' エラー。":::
 
-前のスクリーンショットでは `[2, 14] Explicit Any is not allowed` 、行の種類を#2列#14示 `any` します。 これにより、エラーを見つけるのに役立ちます。
+前のスクリーンショットでは `[2, 14] Explicit Any is not allowed` 、行 #2、列 #14 が型を定義します `any` 。 これにより、エラーを見つけるのに役立ちます。
 
 この問題を回避するには、常に変数の種類を定義します。 変数の種類が不明な場合は、共用体の型を [使用できます](https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html)。 これは、型 、または (値の型は、それらの共用体です) の値を保持する変数 `Range` `string` `number` `boolean` `Range` に役立ちます `string | number | boolean` 。
 
@@ -83,7 +83,7 @@ let filteredArray = myArray.filter((x) => {
 
 ## <a name="unions-of-excelscript-types-and-user-defined-types-arent-supported"></a>型と `ExcelScript` ユーザー定義型の共用体はサポートされていません
 
-Officeスクリプトは実行時に同期コード ブロックから非同期コード ブロックに変換されます。 約束を通じたブックとの通信 [は](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) 、スクリプト作成者から隠されています。 この変換では、型と [ユーザー定義型](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) を含む共用 `ExcelScript` 体型はサポートされません。 その場合、スクリプトに戻されますが、Office スクリプト コンパイラはスクリプトを期待し、スクリプト作成者は `Promise` `Promise` .
+Officeスクリプトは、実行時に同期コード ブロックから非同期コード ブロックに変換されます。 約束を通じたブックとの通信 [は](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise) 、スクリプト作成者から隠されています。 この変換では、型と [ユーザー定義型](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) を含む共用 `ExcelScript` 体型はサポートされません。 その場合、スクリプトに戻されますが、Office スクリプト コンパイラはスクリプトを期待し、スクリプト作成者は `Promise` `Promise` .
 
 次のコード サンプルは、サポートされていないユニオンとカスタム インターフェイス `ExcelScript.Table` を示 `MyTable` しています。
 
@@ -103,6 +103,25 @@ function main(workbook: ExcelScript.Workbook) {
 
 interface MyTable {
   getName(): string
+}
+```
+
+## <a name="constructors-dont-support-office-scripts-apis-and-console-statements"></a>コンストラクターは、スクリプト API とOfficeを `console` サポートしません
+
+`console`ステートメントと多くのスクリプト api Office、ブックとの同期がExcelです。 これらの同期は、 `await` コンパイルされたランタイム バージョンのスクリプトでステートメントを使用します。 `await` コンストラクターでは [サポートされていません](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Classes/constructor)。 コンストラクターを持つクラスが必要な場合は、これらのコード ブロックOfficeスクリプト API またはステートメントを `console` 使用しないようにしてください。
+
+次のコード サンプルは、このシナリオを示しています。 というエラーが生成されます `failed to load [code] [library]` 。
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+  class MyClass {
+    constructor() {
+      // Console statements and Office Scripts APIs aren't supported in constructors.
+      console.log("This won't print.");
+    }
+  }
+
+  let test = new MyClass();
 }
 ```
 
