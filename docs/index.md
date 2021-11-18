@@ -5,18 +5,18 @@ title: Office スクリプト ドキュメント
 description: チュートリアル、概念に関する記事、コード サンプルなどの、Excel on the web の Office スクリプトについて学習するためのリソース。
 ms.date: 05/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 4f8840404d13da483e40d719fa96b5ed154d80fa
-ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
+ms.openlocfilehash: c3e1c95886ebef3bf34a73a374372e84be91117d
+ms.sourcegitcommit: 24a6b8ae0cc57a0307fbc9b3e87432f1f4a92263
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59447514"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61064193"
 ---
 # <a name="office-scripts-documentation"></a>Office スクリプト ドキュメント
 
 Excel on the web の Office スクリプトを使用すると、日常のタスクを自動化できます。 次の記事で、Office スクリプトの作成、編集、今すぐ自動化を開始する方法について説明します。
 
-<ul class="panelContent cardsF cols cols3">
+<ul class="panelContent cardsF cols cols3 rows2">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -74,7 +74,7 @@ Excel on the web の Office スクリプトを使用すると、日常のタス�
 
 <h2>その他のリソース</h2>
 <p>Excel on the web のブックを操作するために Office スクリプトが使用する API の説明、Excel on the web の Office スクリプトに関する質問、Excel on the web の Office スクリプトに関する機能のリクエストについては、以下のリソースをご利用ください。</p>
-<ul class="panelContent cardsF cols cols3">
+<ul class="panelContent cardsF cols cols3 rows2">
     <li>
         <div class="cardSize">
             <div class="cardPadding">
@@ -113,6 +113,22 @@ Excel on the web の Office スクリプトを使用すると、日常のタス�
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
+                            <a href="develop/power-automate-integration.md" target="_blank"><img src="images/index-landing-page/i_architecture.svg" alt="Integrate with Power Automate"/></a>
+                        </div>
+                    </div>
+                    <div class="cardText">
+                        <a href="develop/power-automate-integration.md" target="_blank"><h3>Power Automate との統合</h3></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li>
+        <div class="cardSize">
+            <div class="cardPadding">
+                <div class="card">
+                    <div class="cardImageOuter">
+                        <div class="cardImage">
                             <a href="/microsoft-365/admin/manage/manage-office-scripts-settings" target="_blank"><img src="images/index-landing-page/i_upgrade.svg" alt="Admin settings"/></a>
                         </div>
                     </div>
@@ -129,11 +145,11 @@ Excel on the web の Office スクリプトを使用すると、日常のタス�
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><img src="images/index-landing-page/i_support.svg" alt="API questions" /></a>
+                            <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><img src="images/index-landing-page/i_library.svg" alt="Licensing information" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><h3>ご質問</h3></a>
+                        <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><h3>ライセンス情報</h3></a>
                     </div>
                 </div>
             </div>
@@ -145,11 +161,11 @@ Excel on the web の Office スクリプトを使用すると、日常のタス�
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><img src="images/index-landing-page/i_library.svg" alt="Licensing information" /></a>
+                            <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><img src="images/index-landing-page/i_support.svg" alt="API questions" /></a>
                         </div>
                     </div>
                     <div class="cardText">
-                        <a href="https://github.com/OfficeDev/office-scripts-docs/blob/master/licensing-information.md" target="_blank"><h3>ライセンス情報</h3></a>
+                        <a href="/answers/topics/office-scripts-excel-dev.html" target="_blank"><h3>ご質問</h3></a>
                     </div>
                 </div>
             </div>

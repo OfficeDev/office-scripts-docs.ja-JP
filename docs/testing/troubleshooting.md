@@ -1,22 +1,25 @@
 ---
 title: スクリプトOfficeトラブルシューティング
 description: スクリプトのデバッグのヒントとOfficeヘルプ リソース。
-ms.date: 09/15/2021
+ms.date: 11/11/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 5229490e2487974f751456ef63004bcb27f7b09c
-ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
+ms.openlocfilehash: 2c43d0e4b1f4fd5675397fd79eaab1345ae39b98
+ms.sourcegitcommit: 24a6b8ae0cc57a0307fbc9b3e87432f1f4a92263
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59447486"
+ms.lasthandoff: 11/17/2021
+ms.locfileid: "61064203"
 ---
 # <a name="troubleshoot-office-scripts"></a>スクリプトOfficeトラブルシューティング
 
 スクリプトを開発Office、間違いを犯す可能性があります。 大丈夫です。 問題を見つけてスクリプトを完全に機能するためのツールがあります。
 
+> [!NOTE]
+> スクリプトに固有のトラブルシューティングのアドバイスについては、「OfficeでPower Automateスクリプトを実行Office[トラブルシューティング」を参照Power Automate。](power-automate-troubleshooting.md)
+
 ## <a name="types-of-errors"></a>エラーの種類
 
-Officeスクリプトエラーは、次の 2 つのカテゴリに分類されます。
+Officeスクリプトのエラーは、次の 2 つのカテゴリに分類されます。
 
 * コンパイル時のエラーまたは警告
 * ランタイム エラー
@@ -76,17 +79,9 @@ console.log(myRange.getAddress());
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
-## <a name="troubleshoot-scripts-in-power-automate"></a>スクリプトのトラブルシューティングを行Power Automate
-
-スクリプトの実行に関する詳細については、「Power Automateで実行されているスクリプトOffice[トラブルシューティング」を参照Power Automate。](power-automate-troubleshooting.md)
-
 ## <a name="help-resources"></a>ヘルプ リソース
 
 [スタック オーバーフロー](https://stackoverflow.com/questions/tagged/office-scripts) は、コーディングの問題を支援する開発者のコミュニティです。 多くの場合、スタック オーバーフローのクイック検索を使用して、問題の解決策を見つける可能性があります。 そうでない場合は、質問をして"office-scripts" タグでタグ付けします。 アドインではなく、Office *スクリプト* を作成Office *してください*。
-
-スクリプトの機能要求をOffice、または機能に関する問題を報告するには、コード エディターのフィードバック ボタンを使用します。 [コード エディター] 作業ウィンドウの [その他のオプション **(....)]** メニューで、[フィードバックの送信] ボタンを選択して、機能のニーズやその他のエクスペリエンスを共有します。 
-
-:::image type="content" source="../images/code-editor-feedback.png" alt-text="[フィードバックの送信] ボタンを含むコード エディターのオーバーフロー メニュー。":::
 
 ## <a name="see-also"></a>関連項目
 

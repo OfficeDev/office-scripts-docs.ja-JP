@@ -1,4 +1,4 @@
-# <a name="office-scripts-in-excel-on-the-web-documentation"></a>Officeドキュメント内Excel on the webスクリプト
+# <a name="office-scripts-in-excel-on-the-web-documentation"></a>OfficeドキュメントのExcel on the webスクリプト
 
 スクリプトドキュメント リポジトリOfficeへようこそ。 このレポでは、スクリプトのチュートリアルと使い方Officeドキュメント ソース ファイルを検索できます。 最適にご利用いただくには、このコンテンツを [docs.microsoft.com](https://docs.microsoft.com/office/dev/scripts) で表示することをお勧めします。
 
@@ -25,7 +25,6 @@ repo の目的は、スクリプトに関する開発者教育を提供Officeで
 
 - Office スクリプトまたは Office スクリプトを実行する Office.js API の設計に関する質問をするには、質問をスタック オーバーフローに投稿し、それを "office-scripts" タグ () でタグ付けします。 https://stackoverflow.com/questions/tagged/office-scripts)
 - Office.js API で問題を報告するには、製品チームのメンバーが顧客から報告された問題を監視する [OfficeDev/office-js](https://github.com/OfficeDev/office-js)リポジトリに問題を作成します。
-- スクリプトの機能要求を送信Officeコード エディターのフィードバック ボタンを使用します。 [コード エディター] 作業ウィンドウの [その他のオプション **(....)]** メニューで、[フィードバックの送信] ボタンを選択して、機能のニーズやその他のエクスペリエンスを共有します。 
 
 ## <a name="copyright"></a>著作権
 
