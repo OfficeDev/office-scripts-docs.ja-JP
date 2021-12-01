@@ -9,7 +9,7 @@ Microsoft は、特定のオープン ソース コードを利用可能にす�
 
 ---------------------------------------------------------
 
-tslib 1.13.0 - 0BSD https://www.typescriptlang.org/
+tslib 2.3.1 - 0BSD https://www.typescriptlang.org/
 
 Copyright (c) Microsoft Corporation。
 
@@ -23,7 +23,7 @@ Copyright (c) Microsoft Corporation。
 
 ---------------------------------------------------------
 
-tslib 2.3.1 - 0BSD https://www.typescriptlang.org/
+tslib 1.13.0 - 0BSD https://www.typescriptlang.org/
 
 Copyright (c) Microsoft Corporation。
 
@@ -690,7 +690,7 @@ Copyright 2015, Yahoo! Inc. Copyright (c) 2015, Yahoo! Inc.
 
 ---------------------------------------------------------
 
-source-map 0.6.1 - BSD-3-Clause https://github.com/mozilla/source-map
+source-map 0.5.7 - BSD-3-Clause https://github.com/mozilla/source-map
 
 Copyright 2011 The closure Compiler Copyright 2011 Mozilla Foundation and contributors Copyright 2014 Mozilla Foundation and contributors Copyright 2009-2011 Mozilla Foundation and contributors Copyright (c) 2009-2011, Mozilla Foundation and contributors
 
@@ -712,7 +712,7 @@ Copyright (c) 2009-2011, Mozilla Foundation and contributors All rights reserved
 
 ---------------------------------------------------------
 
-source-map 0.5.7 - BSD-3-Clause https://github.com/mozilla/source-map
+source-map 0.6.1 - BSD-3-Clause https://github.com/mozilla/source-map
 
 Copyright 2011 The closure Compiler Copyright 2011 Mozilla Foundation and contributors Copyright 2014 Mozilla Foundation and contributors Copyright 2009-2011 Mozilla Foundation and contributors Copyright (c) 2009-2011, Mozilla Foundation and contributors
 
@@ -1726,9 +1726,8 @@ MIT ライセンス
 
 ---------------------------------------------------------
 
-@fluentui/dom-utilities 1.1.2 - MIT https://github.com/microsoft/fluentui#readme
+@fluentui/dom-utilities 2.1.4 - MIT https://github.com/microsoft/fluentui#readme
 
-著作権 (c) Microsoft Corporation
 
 @fluentui/dom-utilities
 
@@ -1751,8 +1750,9 @@ MIT ライセンス
 
 ---------------------------------------------------------
 
-@fluentui/dom-utilities 2.1.4 - MIT https://github.com/microsoft/fluentui#readme
+@fluentui/dom-utilities 1.1.2 - MIT https://github.com/microsoft/fluentui#readme
 
+著作権 (c) Microsoft Corporation
 
 @fluentui/dom-utilities
 
@@ -2517,11 +2517,11 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-ansi-regex 2.1.1 - MIT https://github.com/chalk/ansi-regex#readme
+ansi-regex 4.1.0 - MIT https://github.com/chalk/ansi-regex#readme
 
-(c) Sindre Sorhus ( http://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-MIT ライセンス (MIT)
+MIT ライセンス
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -2555,11 +2555,11 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-ansi-regex 4.1.0 - MIT https://github.com/chalk/ansi-regex#readme
+ansi-regex 2.1.1 - MIT https://github.com/chalk/ansi-regex#readme
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+(c) Sindre Sorhus ( http://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-MIT ライセンス
+MIT ライセンス (MIT)
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -3402,26 +3402,6 @@ Copyright (c) 2016 Jacob Parker and Maximilian Stoiber
 
 ---------------------------------------------------------
 
-debug 4.1.1 - MIT https://github.com/visionmedia/debug#readme
-
-Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
-
-(MIT ライセンス)
-
-Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
-
-ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアの提供を受ける人を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル (「ソフトウェア」) のコピーを取得するユーザーに対して、無料で許可されます。 次の条件に従います。
-
-上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
-
-ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も含めずに「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
-
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 debug 2.6.9 - MIT https://github.com/visionmedia/debug#readme
 
 Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2016 TJ Holowaychuk <tj@vision-media.ca>
@@ -3443,6 +3423,26 @@ Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
 ---------------------------------------------------------
 
 debug 3.2.6 - MIT https://github.com/visionmedia/debug#readme
+
+Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
+
+(MIT ライセンス)
+
+Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca>
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアの提供を受ける人を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル (「ソフトウェア」) のコピーを取得するユーザーに対して、無料で許可されます。 次の条件に従います。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も含めずに「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
+debug 4.1.1 - MIT https://github.com/visionmedia/debug#readme
 
 Copyright (c) 2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2014-2017 TJ Holowaychuk <tj@vision-media.ca>
 
@@ -4423,14 +4423,14 @@ Copyright (c) 2013-present, Facebook, Inc.
 
 ---------------------------------------------------------
 
-is-accessor-descriptor 1.0.0 - MIT https://github.com/jonschlinkert/is-accessor-descriptor
+is-accessor-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-accessor-descriptor
 
-Copyright (c) 2015-2017, Jon Schlinkert.
-Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
+Copyright (c) 2015, Jon Schlinkert.
+Copyright (c) 2015 Jon Schlinkert (https://github.com/jonschlinkert)
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2015-2017, Jon Schlinkert.
+Copyright (c) 2015, Jon Schlinkert.
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアが提供される人物を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得する人に対して、無料で許可されます。 次の条件に従います。
 
@@ -4443,14 +4443,14 @@ Copyright (c) 2015-2017, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-is-accessor-descriptor 0.1.6 - MIT https://github.com/jonschlinkert/is-accessor-descriptor
+is-accessor-descriptor 1.0.0 - MIT https://github.com/jonschlinkert/is-accessor-descriptor
 
-Copyright (c) 2015, Jon Schlinkert.
-Copyright (c) 2015 Jon Schlinkert (https://github.com/jonschlinkert)
+Copyright (c) 2015-2017, Jon Schlinkert.
+Copyright (c) 2017, Jon Schlinkert https://github.com/jonschlinkert) ( .
 
 MIT ライセンス (MIT)
 
-Copyright (c) 2015, Jon Schlinkert.
+Copyright (c) 2015-2017, Jon Schlinkert.
 
 ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアが提供される人物を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得する人に対して、無料で許可されます。 次の条件に従います。
 
@@ -5115,6 +5115,25 @@ Copyright (c) 2014, 2015, 2016, 2017 Simon Lydell
 
 ---------------------------------------------------------
 
+4.0.0 の種類 - MIT https://github.com/jonschlinkert/kind-of
+
+Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2017, Jon Schlinkert ( https://github.com/jonschlinkert) .
+
+MIT ライセンス (MIT)
+
+Copyright (c) 2014-2017, Jon Schlinkert
+
+ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアが提供される人物を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得する人に対して、無料で許可されます。 次の条件に従います。
+
+上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
+
+ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
+
+
+---------------------------------------------------------
+
+---------------------------------------------------------
+
 種類 5.1.0 - MIT https://github.com/jonschlinkert/kind-of
 
 Copyright (c) 2014-2017, Jon Schlinkert.
@@ -5154,25 +5173,6 @@ Copyright (c) 2014-2017, Jon Schlinkert
 
 ---------------------------------------------------------
 
-4.0.0 の種類 - MIT https://github.com/jonschlinkert/kind-of
-
-Copyright (c) 2014-2017, Jon Schlinkert Copyright (c) 2017, Jon Schlinkert ( https://github.com/jonschlinkert) .
-
-MIT ライセンス (MIT)
-
-Copyright (c) 2014-2017, Jon Schlinkert
-
-ソフトウェアのコピーを使用、コピー、変更、マージ、発行、配布、サブライセンス、および/または販売する権利を含むが、制限なくソフトウェアを処理し、ソフトウェアが提供される人物を許可する権利は、このソフトウェアおよび関連ドキュメント ファイル ("ソフトウェア") のコピーを取得する人に対して、無料で許可されます。 次の条件に従います。
-
-上記の著作権に関する通知およびこのアクセス許可通知は、ソフトウェアのすべてのコピーまたは実質的な部分に含まれるものとします。
-
-ソフトウェアは、商品性、特定の目的への適性、および非侵害性の保証を含むがこれらに限定されない、明示または黙示を問わず、いかなる種類の保証も行わず、「現状のまま」提供されます。 いかなる場合も、著者または著作権所有者は、ソフトウェアまたはソフトウェアの使用または他の取引に関連して、契約、TORT、その他の方法で発生したいかなる請求、損害、その他の責任に対して責任を負う必要はありません。
-
-
----------------------------------------------------------
-
----------------------------------------------------------
-
 6.0.3 の種類 - MIT https://github.com/jonschlinkert/kind-of
 
 Copyright (c) 2014-2017, Jon Schlinkert.
@@ -5192,7 +5192,7 @@ Copyright (c) 2014-2017, Jon Schlinkert.
 
 ---------------------------------------------------------
 
-loader-utils 1.2.3 - MIT https://github.com/webpack/loader-utils#readme
+loader-utils 1.4.0 - MIT https://github.com/webpack/loader-utils#readme
 
 Copyright JS Foundation および他の投稿者
 
@@ -5210,7 +5210,7 @@ Copyright JS Foundation および他の投稿者
 
 ---------------------------------------------------------
 
-loader-utils 1.4.0 - MIT https://github.com/webpack/loader-utils#readme
+loader-utils 1.2.3 - MIT https://github.com/webpack/loader-utils#readme
 
 Copyright JS Foundation および他の投稿者
 
@@ -6637,7 +6637,7 @@ MIT ライセンス (MIT)
 
 ---------------------------------------------------------
 
-redux 4.0.1 - MIT http://redux.js.org/
+redux 4.0.5 - MIT http://redux.js.org/
 
 Copyright (c) 2015-present Dan Abramov
 
@@ -6656,7 +6656,7 @@ Copyright (c) 2015-present Dan Abramov
 
 ---------------------------------------------------------
 
-redux 4.0.5 - MIT http://redux.js.org/
+redux 4.0.1 - MIT http://redux.js.org/
 
 Copyright (c) 2015-present Dan Abramov
 
@@ -7439,7 +7439,7 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-strip-ansi 4.0.0 - MIT https://github.com/chalk/strip-ansi#readme
+strip-ansi 5.2.0 - MIT https://github.com/chalk/strip-ansi#readme
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -7458,7 +7458,7 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-strip-ansi 5.2.0 - MIT https://github.com/chalk/strip-ansi#readme
+strip-ansi 4.0.0 - MIT https://github.com/chalk/strip-ansi#readme
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -7531,11 +7531,11 @@ MIT ライセンス
 
 ---------------------------------------------------------
 
-supports-color 2.0.0 - MIT https://github.com/chalk/supports-color
+supports-color 6.1.0 - MIT https://github.com/chalk/supports-color#readme
 
-(c) Sindre Sorhus ( http://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-MIT ライセンス (MIT)
+MIT ライセンス
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
@@ -7569,11 +7569,11 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 ---------------------------------------------------------
 
-supports-color 6.1.0 - MIT https://github.com/chalk/supports-color#readme
+supports-color 2.0.0 - MIT https://github.com/chalk/supports-color
 
-Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
+(c) Sindre Sorhus ( http://sindresorhus.com) Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
-MIT ライセンス
+MIT ライセンス (MIT)
 
 Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 

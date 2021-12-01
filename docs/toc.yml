@@ -27,10 +27,6 @@ items:
             href: develop/javascript-objects.md
           - name: コード エディターの環境
             href: overview/code-editor-environment.md
-          - name: Office スクリプトと VBA マクロの違い
-            href: resources/vba-differences.md
-          - name: Office スクリプトと Office アドインの違い
-            href: resources/add-ins-differences.md
           - name: Office スクリプトでの外部 API 呼び出しのサポート
             href: develop/external-calls.md
           - name: ファイル ストレージと所有権
@@ -111,3 +107,11 @@ items:
             items:
               - name: 季節のご挨拶
                 href: resources/samples/community-seasons-greetings.md
+      - name: Office スクリプトとその他のプラットフォーム
+        items:
+          - name: Office スクリプトと VBA マクロの違い
+            href: resources/vba-differences.md
+          - name: Office スクリプトと Office アドインの違い
+            href: resources/add-ins-differences.md
+          - name: Power Query または Office スクリプトを使用する場合
+            href: resources/power-query-differences.md
