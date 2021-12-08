@@ -3,12 +3,12 @@ title: プラットフォームの制限と要件 (スクリプトOffice)
 description: スクリプトと一緒に使用する場合Officeスクリプトのリソース制限とブラウザー Excel on the web
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 2140ebf249af76447f64efae7fd2008e781bf815
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 6db32cd1c72850f02ee9e2a714c1a0a3bccd727d
+ms.sourcegitcommit: ea9c3685a7407a07acf802705f4f44fb007c7825
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59327876"
+ms.lasthandoff: 12/08/2021
+ms.locfileid: "61333492"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>プラットフォームの制限と要件 (スクリプトOffice)
 
@@ -16,7 +16,7 @@ ms.locfileid: "59327876"
 
 ## <a name="browser-support"></a>ブラウザのサポート
 
-Officeスクリプトは、スクリプトをサポートするブラウザー [Office for the web。](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452) ただし、JavaScript の一部の機能は、11 Internet Explorer (IE 11) ではサポートされていません。 [ES6](https://www.w3schools.com/Js/js_es6.asp)以降で導入された機能は、IE 11 では動作しません。 組織内のユーザーが引き続きそのブラウザーを使用している場合は、共有するときに、その環境でスクリプトをテストしてください。
+Officeスクリプトは、スクリプトをサポートするブラウザー[でOffice for the web。](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452) ただし、JavaScript の一部の機能は、11 Internet Explorer (IE 11) ではサポートされていません。 [ES6](https://www.w3schools.com/Js/js_es6.asp)以降で導入された機能は、IE 11 では動作しません。 組織内のユーザーが引き続きそのブラウザーを使用している場合は、共有するときに、その環境でスクリプトをテストしてください。
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
@@ -49,7 +49,7 @@ Excel for the webを使用してブックを呼び出す場合、次の制限が
 
 ### <a name="power-automate"></a>Power Automate
 
-ユーザーが OfficeスクリプトPower Automate使用する場合、各ユーザーは 1 日にスクリプトの実行アクションに対して **400 回の呼び出しに制限されます**。 この制限は、UTC の午前 12:00 にリセットされます。
+ユーザーが Office スクリプトPower Automate使用する場合、各ユーザーは 1 日にスクリプトの実行アクションに対して **800 回の呼び出しに制限されます**。 この制限は、UTC の午前 12:00 にリセットされます。
 
 このPower Automateには使用上の制限があります。これは次の記事で確認できます。
 
