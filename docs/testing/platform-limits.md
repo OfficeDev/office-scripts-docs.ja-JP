@@ -1,14 +1,14 @@
 ---
 title: プラットフォームの制限と要件 (スクリプトOffice)
 description: スクリプトと一緒に使用する場合Officeスクリプトのリソース制限とブラウザー Excel on the web
-ms.date: 05/17/2021
+ms.date: 12/14/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 6db32cd1c72850f02ee9e2a714c1a0a3bccd727d
-ms.sourcegitcommit: ea9c3685a7407a07acf802705f4f44fb007c7825
+ms.openlocfilehash: e0c2c8108bb36dc979b33e195cdc0e0e17a586ba
+ms.sourcegitcommit: 1e561d245d9ab7f2529a1b071b1fa0326e37c4ca
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "61333492"
+ms.lasthandoff: 12/15/2021
+ms.locfileid: "61513630"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>プラットフォームの制限と要件 (スクリプトOffice)
 
@@ -51,10 +51,13 @@ Excel for the webを使用してブックを呼び出す場合、次の制限が
 
 ユーザーが Office スクリプトPower Automate使用する場合、各ユーザーは 1 日にスクリプトの実行アクションに対して **800 回の呼び出しに制限されます**。 この制限は、UTC の午前 12:00 にリセットされます。
 
-このPower Automateには使用上の制限があります。これは次の記事で確認できます。
+またPower Automateプラットフォームには使用上の制限があります。これは次の記事で確認できます。
 
 - [サーバーの制限と構成Power Automate](/power-automate/limits-and-config)
 - [オンライン (Business) コネクタExcel既知の問題と制限事項](/connectors/excelonlinebusiness/#known-issues-and-limitations)
+
+> [!NOTE]
+> 実行時間が長いスクリプトがある場合は、同期的なスクリプト操作の[120 秒のタイムアウトPower Automate注意してください](/power-automate/limits-and-config#timeout)。 スクリプトを最適化[するか、オートメーション](../develop/web-client-performance.md)を複数のスクリプトにExcelする必要があります。
 
 ## <a name="see-also"></a>関連項目
 
