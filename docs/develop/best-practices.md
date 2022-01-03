@@ -1,18 +1,24 @@
 ---
 title: Office スクリプトでのベスト プラクティス
 description: 一般的な問題を防止し、予期しない入力またはデータOfficeできる堅牢なスクリプトを記述する方法。
-ms.date: 05/10/2021
+ms.date: 12/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: c37559c978a04bd99fff044674b2f64b7758438b
-ms.sourcegitcommit: 5ec904cbb1f2cc00a301a5ba7ccb8ae303341267
+ms.openlocfilehash: 19b10cf6ea778f109edeb74fa5995628bb8bf632
+ms.sourcegitcommit: c62567dc1188527511e4618d3e04e26580d4bb44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2021
-ms.locfileid: "59447463"
+ms.lasthandoff: 01/03/2022
+ms.locfileid: "61659195"
 ---
 # <a name="best-practices-in-office-scripts"></a>Office スクリプトでのベスト プラクティス
 
 これらのパターンとプラクティスは、スクリプトが毎回正常に実行されるのを助けるために設計されています。 ワークフローの自動化を開始する場合、一般的な落とし穴をExcelしてください。
+
+## <a name="use-the-action-recorder-to-learn-new-features"></a>アクション レコーダーを使用して新機能を学習する
+
+Excel多くのことを行います。 ほとんどのスクリプトはスクリプト化できます。 アクション レコーダーは、ユーザーのExcelを記録し、コードに変換します。 これは、さまざまな機能がスクリプトを使用してどのように動作Office方法です。 特定のアクションのコードが必要な場合は、アクション レコーダーに切り替えてアクションを実行し、[コードとしてコピー] を選択して、結果のコードをスクリプトに貼り付けます。
+
+:::image type="content" source="../images/action-recorder-copy-code.png" alt-text="[コードとしてコピー] ボタンが強調表示されたアクション レコーダー作業ウィンドウ。":::
 
 ## <a name="verify-an-object-is-present"></a>オブジェクトが存在する確認
 
