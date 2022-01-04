@@ -2,14 +2,14 @@
 title: Excel on the web の Office スクリプト
 description: Office スクリプト用の操作レコーダーとコード エディターの概要をご紹介します。
 ms.topic: overview
-ms.date: 09/17/2021
+ms.date: 12/29/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 8fdb39b2e0dd35cd09d5d8c65b17d6ee3f8fd08d
-ms.sourcegitcommit: 1e561d245d9ab7f2529a1b071b1fa0326e37c4ca
+ms.openlocfilehash: baf1957fc476279e1c1e53ebe568dabe1498a4ee
+ms.sourcegitcommit: c62567dc1188527511e4618d3e04e26580d4bb44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "61513637"
+ms.lasthandoff: 01/03/2022
+ms.locfileid: "61659184"
 ---
 # <a name="office-scripts-in-excel-on-the-web"></a>Excel on the web の Office スクリプト
 
@@ -59,9 +59,12 @@ Office スクリプトを使用するには、以下が必要です。
 
 操作レコーダーで記録したすべてのスクリプトは、コード エディターで編集できます。 これにより、ニーズにぴったり合うようにスクリプトを微調整したり、カスタマイズしたりできます。 また、条件付きステートメント (if/else) やループなど、Excel の UI からでは直接アクセスできないロジックや機能を追加することもできます。
 
-Office スクリプトの機能を学習する簡単な方法の 1 つは、Excel on the web でスクリプトを記録し、作成されたコードを表示することです。 別の方法としては、用意されている[チュートリアル](../tutorials/excel-tutorial.md)に従うと、詳しいガイド付きで、より体系的に学習できます。
+> [!TIP]
+> 操作レコーダーには **［コードとしてコピー］** ボタンがあり、スクリプト全体を保存せずにスクリプト コードに操作を記録できます。
+>
+> :::image type="content" source="../images/action-recorder-copy-code.png" alt-text="[コードとしてコピー] ボタンが強調表示された、操作レコーダー作業ウィンドウ。":::
 
-チュートリアルを完了したら、「[Excel on the web での Office スクリプトのスクリプトの基本事項](../develop/scripting-fundamentals.md)」を読んで、コード エディターの詳細と、独自のスクリプトを作成および編集する方法を学習できます。 コード エディターとスクリプト コードの解釈方法の詳細については、「[Office スクリプト コード エディターの環境](code-editor-environment.md)」を参照してください。
+[チュートリアル](../tutorials/excel-tutorial.md) では、Office スクリプトの機能をガイド付きで体系的に学ぶことができます。 チュートリアルを完了したら、「[Excel on the web での Office スクリプトのスクリプトの基本事項](../develop/scripting-fundamentals.md)」を読み、コード エディターの詳細と、独自のスクリプトを作成および編集する方法を学習してください。 コード エディターとスクリプト コードの解釈方法の詳細については、「[Office スクリプト コード エディターの環境](code-editor-environment.md)」を参照してください。
 
 ## <a name="share-scripts"></a>共有スクリプト
 
