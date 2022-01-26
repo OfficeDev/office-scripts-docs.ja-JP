@@ -63,6 +63,8 @@ items:
                 href: resources/samples/add-image-to-workbook.md
               - name: 複数のテーブルを 1 つのテーブルにコピーする
                 href: resources/samples/copy-tables-combine.md
+              - name: ブックの目次を作成する
+                href: resources/samples/table-of-contents.md
           - name: 応用
             items:
               - name: ワークシートを 1 つのブックに結合する
