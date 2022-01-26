@@ -1,14 +1,14 @@
 ---
 title: Officeスクリプトのサンプル
 description: 使用可能なOfficeスクリプトのサンプルとシナリオです。
-ms.date: 09/03/2021
+ms.date: 01/20/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 0d11e15a7e839f33a74ca8ad7f1d09dd7711347c
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: ca8ed15983c2171c2e9eb2291cc78d7e4d536ac8
+ms.sourcegitcommit: 161229492c85f3519c899573cf5022140026e7b8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59334935"
+ms.lasthandoff: 01/26/2022
+ms.locfileid: "62220408"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Officeスクリプトのサンプルとシナリオ
 
@@ -22,18 +22,19 @@ ms.locfileid: "59334935"
 
 ## <a name="basics"></a>基本事項
 
-| プロジェクト | 詳細 |
+| Project | 詳細 |
 |---------|---------|
 | [スクリプトの基本](../excel-samples.md) | これらのサンプルでは、スクリプトの基本的な構成要素Office示します。 |
 | [コメントを追加Excel](add-excel-comments.md) | このサンプルでは、同僚を含むセルにコメント@mentioning追加します。 |
 | [ブックに画像を追加する](add-image-to-workbook.md) | このサンプルでは、ブックにイメージを追加し、シート間でイメージをコピーします。|
 | [複数のテーブルExcel 1 つのテーブルにコピーする](copy-tables-combine.md) | このサンプルでは、複数のテーブルExcelデータを、すべての行を含む 1 つのテーブルに結合します。 |
+| [ブックの目次を作成する](table-of-contents.md) | このサンプルでは、各ワークシートへのリンクを含む目次を作成します。 |
 
 ## <a name="beyond-the-basics"></a>応用
 
 完全なスクリプト、使用されているサンプル Excel ファイル、およびビデオ[(YouTube](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0)でホストされる) と共にサンプル シナリオを自動化する次のエンドツーエンド プロジェクトを確認してください。
 
-| プロジェクト | 詳細 |
+| Project | 詳細 |
 |---------|---------|
 | [ワークシートを 1 つのブックに結合する](combine-worksheets-into-single-workbook.md) | このサンプルでは、OfficeスクリプトとPower Automateを使用して、他のブックから 1 つのブックにデータをプルします。 |
 | [CSV ファイルをブックExcel変換する](convert-csv.md) | このサンプルでは、OfficeスクリプトとPower Automateを使用して.xlsxファイルから.csvします。 |
@@ -51,7 +52,7 @@ ms.locfileid: "59334935"
 
 ## <a name="scenarios"></a>シナリオ
 
-Officeスクリプトは、毎日のルーチンの一部を自動化できます。 これらの毎日のタスクは、多くの場合、固有のエコシステムに存在し、Excelブックは特定の方法で設定されます。 これらの大規模なシナリオ サンプルでは、このような実際の使用例を示します。 これらのスクリプトには、Officeスクリプトとブックの両方が含まれるので、シナリオを最後から最後まで確認できます。
+Officeスクリプトは、日常の一部を自動化できます。 これらの毎日のタスクは、多くの場合、固有のエコシステムに存在し、Excelブックは特定の方法で設定されます。 これらの大規模なシナリオ サンプルでは、このような実際の使用例を示します。 これらのスクリプトには、Officeスクリプトとブックの両方が含まれるので、シナリオを最後から最後まで確認できます。
 
 | シナリオ | 詳細 |
 |---------|---------|
@@ -65,7 +66,7 @@ Officeスクリプトは、毎日のルーチンの一部を自動化できま�
 
 スクリプト コミュニティ[からの投稿](https://github.com/OfficeDev/office-scripts-docs/blob/master/Contributing.md)Office歓迎します。 レビューのプル要求を自由に作成してください。
 
-| プロジェクト | 詳細 |
+| Project | 詳細 |
 |---------|---------|
 | [ゲーム オブ ライフ](https://techcommunity.microsoft.com/t5/excel-blog/ready-player-zero/ba-p/2246208) | Excel Tech Community の Yutao Huang による "Ready Player Zero" ブログには、John Conway's Game of Life をモデル化するスクリプト [*が含まれています*](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)。 |
 | [シーズンの案内応答アニメーション](community-seasons-greetings.md) | このスクリプトは、ホリデー シーズンの精神 [でレス](https://www.linkedin.com/in/lesblackconsultant/) リー ブラックによって投稿されました。 このスクリプトは、スクリプトを使って歌うクリスマス ツリーを表示Excel on the web楽Officeです。 |
