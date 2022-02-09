@@ -1,14 +1,14 @@
 ---
 title: プラットフォームの制限と要件 (スクリプトOffice)
-description: スクリプトと一緒に使用する場合Officeスクリプトのリソース制限とブラウザー Excel on the web
-ms.date: 12/14/2021
+description: スクリプトと一緒に使用する場合Officeスクリプトのリソース制限とブラウザーのサポートExcel on the web。
+ms.date: 01/31/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: e0c2c8108bb36dc979b33e195cdc0e0e17a586ba
-ms.sourcegitcommit: 1e561d245d9ab7f2529a1b071b1fa0326e37c4ca
+ms.openlocfilehash: 385248e5c62ed3dbf2827105b3097ef27e5187a7
+ms.sourcegitcommit: b84d4c8dd31335e4e39b0da6ad25fd528cb9d8f3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/15/2021
-ms.locfileid: "61513630"
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62462503"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>プラットフォームの制限と要件 (スクリプトOffice)
 
@@ -16,7 +16,7 @@ ms.locfileid: "61513630"
 
 ## <a name="browser-support"></a>ブラウザのサポート
 
-Officeスクリプトは、スクリプトをサポートするブラウザー[でOffice for the web。](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452) ただし、JavaScript の一部の機能は、11 Internet Explorer (IE 11) ではサポートされていません。 [ES6](https://www.w3schools.com/Js/js_es6.asp)以降で導入された機能は、IE 11 では動作しません。 組織内のユーザーが引き続きそのブラウザーを使用している場合は、共有するときに、その環境でスクリプトをテストしてください。
+Officeスクリプトは、スクリプトをサポートする任意の[ブラウザー Office for the web](https://support.microsoft.com/office/ad1303e0-a318-47aa-b409-d3a5eb44e452)。 ただし、JavaScript の一部の機能は、11 Internet Explorer (IE 11) ではサポートされていません。 [ES6 以降で導入された](https://www.w3schools.com/Js/js_es6.asp)機能は、IE 11 では動作しません。 組織内のユーザーが引き続きそのブラウザーを使用している場合は、共有するときに、その環境でスクリプトをテストしてください。
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
@@ -42,14 +42,14 @@ Officeスクリプトは、スクリプトをサポートするブラウザー[�
 
 Excel for the webを使用してブックを呼び出す場合、次の制限があります。
 
-- 要求と応答は **5 MB に制限されています**。
+- 要求と応答は **5 MB に制限されます**。
 - 範囲は 500 万 **セルに制限されます**。
 
-大規模なデータセットを扱う際にエラーが発生する場合は、より大きな範囲ではなく、複数の小さい範囲を使用してみてください。 例については、「大規模なデータセットを書 [き込む」サンプルを参照](../resources/samples/write-large-dataset.md) してください。 [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#getSpecialCells_cellType__cellValueType_)のような API を使用して、大きな範囲ではなく特定のセルをターゲットにすることもできます。
+大規模なデータセットを扱う際にエラーが発生する場合は、より大きな範囲ではなく、複数の小さい範囲を使用してみてください。 例については、「大規模なデータセットを書 [き込む」サンプルを参照](../resources/samples/write-large-dataset.md) してください。 [Range.getSpecialCells のような API](/javascript/api/office-scripts/excelscript/excelscript.range#excelscript-excelscript-range-getspecialcells-member(1)) を使用して、大きな範囲ではなく特定のセルをターゲットにすることもできます。
 
 ### <a name="power-automate"></a>Power Automate
 
-ユーザーが Office スクリプトPower Automate使用する場合、各ユーザーは 1 日にスクリプトの実行アクションに対して **800 回の呼び出しに制限されます**。 この制限は、UTC の午前 12:00 にリセットされます。
+OfficeスクリプトPower Automate使用する場合、各ユーザーは 1 日にスクリプトの実行アクションを **1,600 回呼び出します**。 この制限は、UTC の午前 12:00 にリセットされます。
 
 またPower Automateプラットフォームには使用上の制限があります。これは次の記事で確認できます。
 
@@ -57,7 +57,7 @@ Excel for the webを使用してブックを呼び出す場合、次の制限が
 - [オンライン (Business) コネクタExcel既知の問題と制限事項](/connectors/excelonlinebusiness/#known-issues-and-limitations)
 
 > [!NOTE]
-> 実行時間が長いスクリプトがある場合は、同期的なスクリプト操作の[120 秒のタイムアウトPower Automate注意してください](/power-automate/limits-and-config#timeout)。 スクリプトを最適化[するか、オートメーション](../develop/web-client-performance.md)を複数のスクリプトにExcelする必要があります。
+> 実行時間の長いスクリプトがある場合は、同期的なデータ処理の [120 秒のタイムアウトPower Automateしてください](/power-automate/limits-and-config#timeout)。 スクリプトを最適化するか[、オートメーションを](../develop/web-client-performance.md)複数のスクリプトにExcelする必要があります。
 
 ## <a name="see-also"></a>関連項目
 
