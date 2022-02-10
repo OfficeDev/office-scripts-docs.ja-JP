@@ -2,14 +2,14 @@
 title: Excel on the web の Office スクリプト
 description: Office スクリプト用の操作レコーダーとコード エディターの概要をご紹介します。
 ms.topic: overview
-ms.date: 12/29/2021
+ms.date: 02/04/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 0d06bbc386f0a9189fe1abd3b25b72a43c2ac7bd
-ms.sourcegitcommit: 161229492c85f3519c899573cf5022140026e7b8
+ms.openlocfilehash: b4222d4f3d99ccd26dde534659681a5919088450
+ms.sourcegitcommit: b84d4c8dd31335e4e39b0da6ad25fd528cb9d8f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2022
-ms.locfileid: "62220380"
+ms.lasthandoff: 02/09/2022
+ms.locfileid: "62462536"
 ---
 # <a name="office-scripts-in-excel-on-the-web"></a>Excel on the web の Office スクリプト
 
@@ -77,15 +77,22 @@ Office スクリプトは、Excel ブックの他のユーザーと共有でき�
 > [!NOTE]
 > 「[Office Scripts file storage and ownership (Office スクリプトのファイル ストレージと所有権)](script-storage.md)」では、OneDrive にスクリプトを保存する方法について詳しく説明しています。
 
-### <a name="create-script-buttons-preview"></a>スクリプト ボタンの作成 (プレビュー)
+### <a name="create-script-buttons"></a>スクリプト ボタンの作成
 
-[!INCLUDE [Public preview](../includes/preview-note.md)]
+[!INCLUDE [Rollout information](../includes/rollout-note.md)]
+
+:::image type="content" source="../images/run-from-button.png" alt-text="クリックするとスクリプトを実行するワークシート内のボタン。":::
 
 ブックにスクリプト ボタンを追加することにより、同僚がスクリプトを見つけて実行するのに役立ちます。 任意のスクリプトを使用して、スクリプトの [詳細] ページまたはコード エディターの作業ウィンドウで **[その他のオプション (....)]** メニューに移動し、**[追加] ボタン** を選択します。 これにより、選択した場合に関連付けられたスクリプトを実行するブックにボタンが作成されます。 また、スクリプトをブックと共有します。ブックへの書き込みアクセス許可を持つすべてのユーザーが、便利な自動処理を使用できます。
 
 次のスクリーンショットは、**[レポートの作成]** というタイトルのスクリプトの [詳細] ページを示し、強調表示された **[その他のオプション (...)]** メニュー内に **[追加] ボタン** オプションがあります。
 
 :::image type="content" source="../images/add-button.png" alt-text="スクリプトの [詳細] ページ メニューの '[追加] ボタン' オプション。":::
+
+これらのスクリプト ボタンは Windows でも機能します。 Excel on the web でボタンを作成すると、Windows のユーザーはボタンを押すだけでスクリプトを実行できます。 Windows ではボタンの実行のみがサポートされていることに注意してください。 スクリプトを編集する必要がある場合は、Web アプリケーションを通じて編集する必要があります。
+
+> [!NOTE]
+> Windows でこの機能を使用するには、Microsoft 365 サブスクリプションに接続された Excel のコピーが必要です。 サポートされていないプラットフォームまたは以前のバージョンの Office は、スクリプト ボタンに使用されている図形を表示しますが、クリックすることはできません。
 
 ボタン経由でのスクリプトの共有を停止するには、スクリプトの [詳細] ページの **[その他のオプション (...)]** メニューに移動し、**[共有の停止]** を選択します。 これにより、スクリプトを実行しているすべてのボタンが削除されます。 1 つのボタンを削除すると、操作が元に戻された場合や、ボタンが切り取って貼り付けられた場合でも、その 1 つのボタンからスクリプトが削除されます。
 
