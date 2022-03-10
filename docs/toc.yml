@@ -31,6 +31,8 @@ items:
             href: develop/external-calls.md
           - name: ファイル ストレージと所有権
             href: overview/script-storage.md
+          - name: ボタンでスクリプトを実行する
+            href: develop/script-buttons.md
           - name: Power Automate でスクリプトを実行する
             href: develop/power-automate-integration.md
           - name: Power Automate フローでマクロ ファイルを使用する

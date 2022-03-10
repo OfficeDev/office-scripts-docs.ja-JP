@@ -2,14 +2,14 @@
 title: Excel on the web の Office スクリプト
 description: Office スクリプト用の操作レコーダーとコード エディターの概要をご紹介します。
 ms.topic: overview
-ms.date: 02/08/2022
+ms.date: 02/25/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 7c6027386bf8953d6bd260979ad96e7195a2b786
-ms.sourcegitcommit: fce857e91be769c62685d90290acf75cc54d3ef9
+ms.openlocfilehash: 88c5c6179b1f459e2e20e6dd0dcd80d71829c714
+ms.sourcegitcommit: 49f527a7f54aba00e843ad4a92385af59c1d7bfa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/10/2022
-ms.locfileid: "62517882"
+ms.lasthandoff: 03/08/2022
+ms.locfileid: "63352148"
 ---
 # <a name="office-scripts-in-excel-on-the-web"></a>Excel on the web の Office スクリプト
 
@@ -66,33 +66,18 @@ Office スクリプトを使用するには、以下が必要です。
 
 [チュートリアル](../tutorials/excel-tutorial.md) では、Office スクリプトの機能をガイド付きで体系的に学ぶことができます。 チュートリアルを完了したら、「[Excel on the web での Office スクリプトのスクリプトの基本事項](../develop/scripting-fundamentals.md)」を読み、コード エディターの詳細と、独自のスクリプトを作成および編集する方法を学習してください。 コード エディターとスクリプト コードの解釈方法の詳細については、「[Office スクリプト コード エディターの環境](code-editor-environment.md)」を参照してください。
 
-## <a name="share-scripts"></a>共有スクリプト
+## <a name="share-office-scripts"></a>Office スクリプトを共有する
+
+Office スクリプトは、Excel ブックの他のユーザーと共有できます。 共有ブックでスクリプトを共有すると、そのブックにアクセスできるすべてのユーザーがスクリプトを表示、実行することができます。 共有および共有解除スクリプトの詳細については、「[Excel for the Web で Office スクリプトを共有する](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)」を参照してください。
 
 :::image type="content" source="../images/script-sharing.png" alt-text="[このブックで他のユーザーと共有する] オプションを表示するスクリプトの詳細ページ。":::
 
-Office スクリプトは、Excel ブックの他のユーザーと共有できます。 共有ブックでスクリプトを共有すると、そのブックにアクセスできるすべてのユーザーがスクリプトを表示、実行することができます。
+スクリプトを実行するボタンを追加して、同僚が貴重なソリューションを見つけられるようにします。 スクリプト ボタンの詳細については、「[ボタンで Office スクリプトを実行する](../develop/script-buttons.md)」をご覧ください。
 
-共有および共有解除スクリプトの詳細については、「[Excel for the Web で Office スクリプトを共有する](https://support.microsoft.com/office/226eddbc-3a44-4540-acfe-fccda3d1122b)」を参照してください。
+:::image type="content" source="../images/add-button.png" alt-text="クリックするとスクリプトを実行するワークシート内のボタン。":::
 
 > [!NOTE]
 > 「[Office Scripts file storage and ownership (Office スクリプトのファイル ストレージと所有権)](script-storage.md)」では、OneDrive にスクリプトを保存する方法について詳しく説明しています。
-
-### <a name="create-script-buttons"></a>スクリプト ボタンの作成
-
-:::image type="content" source="../images/run-from-button.png" alt-text="クリックするとスクリプトを実行するワークシート内のボタン。":::
-
-ブックにスクリプト ボタンを追加することにより、同僚がスクリプトを見つけて実行するのに役立ちます。 任意のスクリプトを使用して、スクリプトの [詳細] ページまたはコード エディターの作業ウィンドウで **[その他のオプション (....)]** メニューに移動し、**[追加] ボタン** を選択します。 これにより、選択した場合に関連付けられたスクリプトを実行するブックにボタンが作成されます。 また、スクリプトをブックと共有します。ブックへの書き込みアクセス許可を持つすべてのユーザーが、便利な自動処理を使用できます。
-
-次のスクリーンショットは、**[レポートの作成]** というタイトルのスクリプトの [詳細] ページを示し、強調表示された **[その他のオプション (...)]** メニュー内に **[追加] ボタン** オプションがあります。
-
-:::image type="content" source="../images/add-button.png" alt-text="スクリプトの [詳細] ページ メニューの '[追加] ボタン' オプション。":::
-
-これらのスクリプト ボタンは Windows でも機能します。 Excel on the web でボタンを作成すると、Windows のユーザーはボタンを押すだけでスクリプトを実行できます。 Windows ではボタンの実行のみがサポートされていることに注意してください。 スクリプトを編集する必要がある場合は、Web アプリケーションを通じて編集する必要があります。
-
-> [!NOTE]
-> この機能は、Microsoft 365 サブスクリプションを使用しているユーザーに展開されており、すべてのユーザーが利用できるわけではありません。 期待どおりに機能するように、より多くのユーザーにゆっくりとリリースされます。 この機能は、フィードバックに基づいて変更される場合があります。 サポートされていないプラットフォームまたは機能のない Office バージョンでは、スクリプト ボタンに使用されている図形が表示されますが、ボタンをクリックすることはできません。
-
-ボタン経由でのスクリプトの共有を停止するには、スクリプトの [詳細] ページの **[その他のオプション (...)]** メニューに移動し、**[共有の停止]** を選択します。 これにより、スクリプトを実行しているすべてのボタンが削除されます。 1 つのボタンを削除すると、操作が元に戻された場合や、ボタンが切り取って貼り付けられた場合でも、その 1 つのボタンからスクリプトが削除されます。
 
 ## <a name="connect-office-scripts-to-power-automate"></a>Office スクリプトを Power Automate に接続する
 
