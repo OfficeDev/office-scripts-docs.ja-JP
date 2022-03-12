@@ -1,16 +1,16 @@
 ---
 title: テーブルをExcelし、表示範囲を取得する
 description: スクリプトを使用してOfficeテーブルをフィルター処理しExcelオブジェクトの配列として表示範囲を取得する方法について学習します。
-ms.date: 06/29/2021
+ms.date: 03/10/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 35c769ff1d5a088b652833826d41ecad2c317465
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 752566aae1f5e64748e9a7a4c33447129905be22
+ms.sourcegitcommit: 79ce4fad6d284b1aa71f5ad6d2938d9ad6a09fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59333063"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63459655"
 ---
-# <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>テーブルExcelし、JSON オブジェクトとして表示範囲を取得する
+# <a name="filter-excel-table-and-get-visible-range-as-a-json-object"></a>テーブルをExcelし、JSON オブジェクトとして表示範囲を取得する
 
 次のサンプルでは、Excelをフィルター処理し、表示範囲を JSON オブジェクトとして返します。 この JSON は、大規模なソリューションの一部Power Automateフローに提供できます。
 
@@ -22,7 +22,7 @@ ms.locfileid: "59333063"
 
 ## <a name="sample-excel-file"></a>サンプル Excel ファイル
 
-すぐに <a href="table-filter.xlsx"> 使用table-filter.xlsx</a> ブックのブックをダウンロードします。 次のスクリプトを追加して、サンプルを自分で試してみてください。
+すぐに <a href="table-filter.xlsx">table-filter.xlsx</a> ブックのダウンロード を行います。 次のスクリプトを追加して、サンプルを自分で試してみてください。
 
 ## <a name="sample-code-filter-a-table-and-get-visible-range"></a>サンプル コード: テーブルをフィルター処理し、表示範囲を取得する
 
@@ -60,7 +60,7 @@ function main(workbook: ExcelScript.Workbook): ReturnTemplate {
 
 // This function converts a 2D-array of values into a generic JSON object.
 function returnObjectFromValues(values: string[][]): BasicObject[] {
-  let objectArray = [];
+  let objectArray: BasicObject[] = [];
   let objectKeys: string[] = [];
   for (let i = 0; i < values.length; i++) {
     if (i === 0) {
@@ -138,4 +138,4 @@ interface ReturnTemplate {
 
 ## <a name="training-video-filter-an-excel-table-and-get-the-visible-range"></a>トレーニング ビデオ: テーブルのExcelし、表示範囲を取得する
 
-[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/Mv7BrvPq84A).
+[Sudhi Ramamurthy が YouTube でこのサンプルを見るのを見る](https://youtu.be/Mv7BrvPq84A)。

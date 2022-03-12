@@ -787,7 +787,7 @@ caniuse-lite 1.0.30001261 - CC-BY-4.0 https://github.com/browserslist/caniuse-li
 
 セクション 1 -- 定義。
 
-  a. 適合素材とは、ライセンス素材から派生または基づく著作権および類似の権利の対象となる素材を意味し、ライセンスマテリアルがライセンサーが保持する著作権および類似の権利の下で許可を必要とする方法で翻訳、変更、配置、変換、または変更される場合。 ライセンスマテリアルが音楽作品、パフォーマンス、またはサウンドレコーディングであるこのパブリック ライセンスの目的で、Adapted Material は常に作成され、ライセンスマテリアルが移動画像との時間指定関係で同期されます。
+  a.  適合素材とは、ライセンス素材から派生または基づく著作権および類似の権利の対象となる素材を意味し、ライセンスマテリアルがライセンサーが保持する著作権および類似の権利の下で許可を必要とする方法で翻訳、変更、配置、変換、または変更される場合。 ライセンスマテリアルが音楽作品、パフォーマンス、またはサウンドレコーディングであるこのパブリック ライセンスの目的で、Adapted Material は常に作成され、ライセンスマテリアルが移動画像との時間指定関係で同期されます。
 
   b. アダプターのライセンスとは、お客様が本パブリック ライセンスの条件に従って、お客様が適応素材に対する投稿における著作権および類似の権利に適用するライセンスを意味します。
 
@@ -812,7 +812,7 @@ caniuse-lite 1.0.30001261 - CC-BY-4.0 https://github.com/browserslist/caniuse-li
 
 セクション 2 -- Scope。
 
-  a. ライセンス付与。
+  a.  ライセンス付与。
 
        1. Subject to the terms and conditions of this Public License,
           the Licensor hereby grants You a worldwide, royalty-free,
@@ -891,7 +891,7 @@ caniuse-lite 1.0.30001261 - CC-BY-4.0 https://github.com/browserslist/caniuse-li
 
 ライセンス権の行使は、以下の条件に従って明示的に行います。
 
-  a. 属性。
+  a.  属性。
 
        1. If You Share the Licensed Material (including in modified
           form), You must:
@@ -942,7 +942,7 @@ caniuse-lite 1.0.30001261 - CC-BY-4.0 https://github.com/browserslist/caniuse-li
 
 ライセンスされた権利には、ライセンスマテリアルの使用に適用される Sui Generis データベース権限が含まれます。
 
-  a. 疑いの回避のため、セクション 2(a)(1) は、データベースの内容のすべてまたは実質的な部分を抽出、再利用、再現、および共有する権利をユーザーに付与します。
+  a.  疑いの回避のため、セクション 2(a)(1) は、データベースの内容のすべてまたは実質的な部分を抽出、再利用、再現、および共有する権利をユーザーに付与します。
 
   b. Sui Generis Database Rights を持つデータベースにデータベースコンテンツの一部または実質的な部分を含める場合は、Sui Generis Database Rights (ただし、個々のコンテンツではない) を持つデータベースは、Adapted Material です。そして
 
@@ -953,7 +953,7 @@ caniuse-lite 1.0.30001261 - CC-BY-4.0 https://github.com/browserslist/caniuse-li
 
 セクション 5 -- 保証の免責と責任の制限。
 
-  a. ライセンサーが別途引き受けた場合を除き、可能な限り、ライセンサーはライセンスされた資料を現状のまま提供し、明示的、黙示、法定、その他のライセンスを受けた素材に関するいかなる種類の表明または保証も行いません。 これには、タイトルの保証、商品性、特定の目的に対する適性、非侵害、潜在的または他の欠陥の不在、正確性、またはエラーの有無(既知または発見可能かどうか)が含まれますが、これには制限はありません。 保証の免責事項が完全または部分的に許可されない場合、この免責事項は適用されない場合があります。
+  a.  ライセンサーが別途引き受けた場合を除き、可能な限り、ライセンサーはライセンスされた資料を現状のまま提供し、明示的、黙示、法定、その他のライセンスを受けた素材に関するいかなる種類の表明または保証も行いません。 これには、タイトルの保証、商品性、特定の目的に対する適性、非侵害、潜在的または他の欠陥の不在、正確性、またはエラーの有無(既知または発見可能かどうか)が含まれますが、これには制限はありません。 保証の免責事項が完全または部分的に許可されない場合、この免責事項は適用されない場合があります。
 
   b. 可能な限り、ライセンサーは、このような損失の可能性についてライセンサーが助言を受けた場合でも、いかなる法的理論 (制限なく、過失を含む)、または直接的、特別、間接的、偶発的、結果的、懲罰的、模範的、その他の損失、コスト、費用、またはライセンス資料の使用に起因する損害について、いかなる場合も責任を負わない。 コスト、経費、または損害。 責任の制限が完全または部分的に許可されていない場合、この制限は適用されない場合があります。
 
@@ -962,7 +962,7 @@ caniuse-lite 1.0.30001261 - CC-BY-4.0 https://github.com/browserslist/caniuse-li
 
 セクション 6 -- 用語と終了。
 
-  a. このパブリック ライセンスは、ここでライセンスされている著作権と類似の権利の用語に適用されます。 ただし、このパブリック ライセンスに準拠しない場合、このパブリック ライセンスに基くお客様の権利は自動的に終了します。
+  a.  このパブリック ライセンスは、ここでライセンスされている著作権と類似の権利の用語に適用されます。 ただし、このパブリック ライセンスに準拠しない場合、このパブリック ライセンスに基くお客様の権利は自動的に終了します。
 
   b. ライセンスマテリアルを使用する権利がセクション 6(a) の下で終了した場合、次の情報が元に戻されます。
 
@@ -983,14 +983,14 @@ caniuse-lite 1.0.30001261 - CC-BY-4.0 https://github.com/browserslist/caniuse-li
 
 セクション 7 -- その他の利用規約。
 
-  a. 明示的に同意しない限り、ライセンサーは、お客様が連絡する追加または異なる条件に拘束されないものとします。
+  a.  明示的に同意しない限り、ライセンサーは、お客様が連絡する追加または異なる条件に拘束されないものとします。
 
   b. ここに記載されていないライセンス素材に関する取り決め、理解、または契約は、このパブリック ライセンスの条件とは別であり、独立しています。
 
 
 セクション 8 -- 解釈。
 
-  a. 疑いの回避のために、このパブリック ライセンスは、このパブリック ライセンスの下で許可なく合法に行う可能性があるライセンスマテリアルの使用に関する条件を解釈、制限、制限、または課すのではなく、解釈されません。
+  a.  疑いの回避のために、このパブリック ライセンスは、このパブリック ライセンスの下で許可なく合法に行う可能性があるライセンスマテリアルの使用に関する条件を解釈、制限、制限、または課すのではなく、解釈されません。
 
   b. 可能な限り、このパブリック ライセンスの条項が執行不能と判断された場合は、強制的に適用するために必要な最小限の範囲で自動的に変更されます。 条項を変更できない場合は、残りの契約条件の強制性に影響を与えることなく、このパブリック ライセンスから切断されます。
 
@@ -1003,7 +1003,7 @@ caniuse-lite 1.0.30001261 - CC-BY-4.0 https://github.com/browserslist/caniuse-li
 
 クリエイティブ コモンズは、パブリック ライセンスの当事者ではありません。 いうまでも、クリエイティブ コモンズは公開する資料に公開ライセンスの 1 つを適用する場合があります。そのような場合は"Licensor" と見なされます。 クリエイティブ コモンズのパブリック ライセンスのテキストは、CC0 パブリック ドメインの献身の下でパブリック ドメイン専用です。 クリエイティブ コモンズのパブリック ライセンスの下で、または creativecommons.org/policies で公開されているクリエイティブ コモンズ ポリシーで許可されている限られた目的を除き、クリエイティブ コモンズは、事前の書面による同意なしに、商標 "Creative Commons" またはクリエイティブ コモンズのその他の商標またはロゴの使用を承認しません。 いかなる公的ライセンスに対する不正な変更、またはライセンスされた資料の使用に関するその他の取り決め、理解、または契約に関連して、制限なく。 疑いの回避のために、この段落はパブリック ライセンスの一部を形成しません。
 
-クリエイティブ・コモンズは、creativecommons.org。
+クリエイティブ コモンズは、creativecommons.org で連絡を受 creativecommons.org。
 
 
 ---------------------------------------------------------
@@ -1705,7 +1705,7 @@ MIT ライセンス
 @fluentui/日時ユーティリティ 8.2.2 - MIT https://github.com/microsoft/fluentui#readme
 
 
-@fluentui/日時ユーティリティ
+@fluentui/日付/時刻ユーティリティ
 
 著作権 (c) Microsoft Corporation
 
@@ -3653,7 +3653,7 @@ Copyright (c) Sindre Sorhus <sindresorhus@gmail.com> (sindresorhus.com)
 
 eventsource 1.0.7 - MIT http://github.com/EventSource/eventsource
 
-Copyright (c) EventSource GitHub Joyent, Inc. および他の Node 投稿者。
+Copyright (c) EventSource GitHub、Copyright Joyent, Inc. および他の Node 投稿者です。
 
 MIT ライセンス
 
@@ -5294,7 +5294,7 @@ CC0: http://creativecommons.org/publicdomain/zero/1.0/
 
 ====
 
-node_modulesベンダー ディレクトリにあるファイルは、独自のライセンスを持つこのソフトウェアで使用される外部管理ライブラリです。これらの用語は上記の用語と異なる場合があります。
+node_modulesおよびベンダー ディレクトリにあるファイルは、独自のライセンスを持つこのソフトウェアで使用される外部管理ライブラリです。これらの用語は上記の用語と異なる場合があります。
 
 
 ---------------------------------------------------------
@@ -6504,7 +6504,7 @@ Copyright (c) 2015-present Dan Abramov
 
 react-router 5.2.0 - MIT https://github.com/ReactTraining/react-router#readme
 
-(c) Sindre Sorhus Copyright 2015, Yahoo! Inc. Copyright (c) React トレーニング 2016-2018 Copyright (c) 2013-present, Facebook, Inc. Copyright (c) Facebook, Inc. とその関連会社。
+(c) Sindre Sorhus Copyright 2015, Yahoo! Inc. Copyright (c) React トレーニング 2016-2018 Copyright (c) 2013-present, Facebook, Inc. Copyright (c) Facebook, Inc. とその関連会社.
 
 MIT ライセンス
 
@@ -6523,7 +6523,7 @@ Copyright (c) React トレーニング 2016-2018
 
 react-router-dom 5.2.0 - MIT https://github.com/ReactTraining/react-router#readme
 
-(c) Sindre Sorhus Copyright 2015, Yahoo! Inc. Copyright (c) React トレーニング 2016-2018 Copyright (c) 2013-present, Facebook, Inc. Copyright (c) Facebook, Inc. とその関連会社。
+(c) Sindre Sorhus Copyright 2015, Yahoo! Inc. Copyright (c) React トレーニング 2016-2018 Copyright (c) 2013-present, Facebook, Inc. Copyright (c) Facebook, Inc. とその関連会社.
 
 MIT ライセンス
 
@@ -7719,7 +7719,7 @@ Copyright (c) 2014 KARASZI István
 
 to-fast-properties 2.0.0 - MIT https://github.com/sindresorhus/to-fast-properties#readme
 
-(c) Petka Antonov, John-David ダルトン, Sindre Sorhus Copyright (c) 2014 Petka Antonov 2015 Sindre Sorhus
+(c) Petka Antonov, John-David Dalton, Sindre Sorhus Copyright (c) 2014 Petka Antonov 2015 Sindre Sorhus
 
 MIT ライセンス
 
@@ -8188,4 +8188,3 @@ Copyright (c) 2016 Christian Speckner <cnspeckn@googlemail.com>
 
 
 ---------------------------------------------------------
-

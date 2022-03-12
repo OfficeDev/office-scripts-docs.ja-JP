@@ -1,20 +1,20 @@
 ---
 title: Power Automate を使用した Office スクリプトの実行
 description: Power Automate ワークフローを使用して Excel on the web の Office スクリプトを取得する方法。
-ms.date: 11/01/2021
+ms.date: 03/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 1a335944230011bc8f5967004b7394f3f5958321
-ms.sourcegitcommit: 634ad2061e683ae1032c1e0b55b00ac577adc34f
+ms.openlocfilehash: f7358b79248974ddb548b54437422670a37531bf
+ms.sourcegitcommit: 79ce4fad6d284b1aa71f5ad6d2938d9ad6a09fee
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2021
-ms.locfileid: "60725595"
+ms.lasthandoff: 03/12/2022
+ms.locfileid: "63459621"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>Power Automate を使用した Office スクリプトの実行
 
 [Power Automate](https://flow.microsoft.com) を使用すると、Office スクリプトを大規模で自動化されたワークフローに追加できます。 Power Automate を使って、メールの内容をワークシートのテーブルに追加したり、ブックのコメントに基づいてプロジェクト管理ツールでアクションを作成したりできます。
 
-## <a name="get-started"></a>開始する
+## <a name="get-started"></a>作業の開始
 
 Power Automate を初めて使用する場合は、「[Power Automate に関する入門情報](/power-automate/getting-started)」にアクセスすることをお勧めします。 そちらで、利用可能なすべてのオートメーションの可能性について詳しく学ぶことができます。 このドキュメントでは、Power Automate での Office スクリプトの動作と、それが Excel エクスペリエンスの改善にどのように役立つかに重点が置かれています。
 
@@ -42,26 +42,22 @@ Power Automate を使用すると、フローのステップ間でデータの�
 
 Power Automate でフローを構成する場合、スクリプト入力を静的な値、[式](/power-automate/use-expressions-in-conditions)、または動的なコンテンツとして指定できます。 個々のサービスのコネクタの詳細については、[Power Automate コネクタに関するドキュメント](/connectors/)を参照してください。
 
-スクリプトの `main` 関数に入力パラメーターを追加する場合は、次の上限や制限を検討してください。
+#### <a name="type-restrictions"></a>型の制限
 
-1. 最後のパラメーターは `ExcelScript.Workbook` の型にする必要があります。 そのパラメーター名は自由に指定できます。
+スクリプトの `main` 関数に入力パラメーターを追加する場合は、次の上限や制限を検討してください。 これらは、スクリプトの戻り値の種類にも適用されます。
 
-1. すべてのパラメーターには、型 (`string` または `number` など) が必要です。
+1. 最後のパラメーターは `ExcelScript.Workbook` の型にする必要があります。 パラメーター名は関係ありません。
 
-1. 基本的な型 `string` `number` `boolean` `unknown` 、、、、 `object` `undefined` がサポートされています。
+1. `string`型 、、`number`、`boolean``unknown`、`object`、、`undefined`およびサポートされています。
 
-1. 前に `[]` 示した基本型の配列 ( ) がサポートされています。
-    > [!IMPORTANT]
-    > オブジェクトは、サポート `Array<T>` されているパラメーターの種類ではありません。
+1. 前にリストした `[]` 型 `Array<T>` の配列 (およびスタイルの両方) がサポートされています。 入れ子になった配列もサポートされています。
 
-1. 入れ子にされた配列はパラメーターとしてサポートされます (戻り値の型としてはサポートされません)。
+1. 共用体の型は、単一の型に属するリテラルの共用体である場合に使用できます ( `"Left" | "Right"`例: ,not `"Left", 5`)。 undefined を含むサポートされる型の共用体 (`string | undefined` など) もサポートされます。
 
-1. 共用体型は、単一の型に属するリテラルの共用体 (`"Left" | "Right"` など) の場合に許可されます。 undefined を含むサポートされる型の共用体 (`string | undefined` など) もサポートされます。
-
-1. オブジェクト型は、型 `string`、`number`、`boolean`、サポートされている配列、または他のサポートされているオブジェクトのプロパティが含まれる場合に許可されます。 次の例は、パラメーターの型としてサポートされる入れ子にされたオブジェクトを示しています。
+1. オブジェクト型は、型 `string`、`number`、`boolean`、サポートされている配列、または他のサポートされているオブジェクトのプロパティが含まれる場合に許可されます。 次の例は、パラメーターの種類としてサポートされている入れ子になったオブジェクトを示しています。
 
     ```TypeScript
-    // Office Scripts can return an Employee object because Position only contains strings and numbers.
+    // The Employee object is supported because Position is also composed of supported types.
     interface Employee {
         name: string;
         job: Position;
@@ -73,31 +69,21 @@ Power Automate でフローを構成する場合、スクリプト入力を静�
     }
     ```
 
-1. オブジェクトのインターフェイスまたはクラス定義はスクリプトで定義されている必要があります。 次の例のように、オブジェクトをインラインで匿名で定義することができます。
+1. オブジェクトのインターフェイスまたはクラス定義はスクリプトで定義されている必要があります。 次の例のように、オブジェクトをインラインで匿名で定義できます。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook): {name: string, email: string}
     ```
 
-1. オプション パラメーターは許可されており、オプションの修飾子 `?` を使用してそのようなものとして示すことができます (例: `function main(workbook: ExcelScript.Workbook, Name?: string)`)。
+#### <a name="optional-and-default-parameters"></a>省略可能なパラメーターと既定のパラメーター
 
-1. 既定のパラメーター値は許可されています (例: `async function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')`)。
+1. 省略可能なパラメーターは許可され、省略可能な修飾子 (たとえば) `?` で示されます `function main(workbook: ExcelScript.Workbook, Name?: string)`。
+
+1. 既定のパラメーター値は許可されています (例: `function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')`)。
 
 ### <a name="return-data-from-a-script"></a>スクリプトからデータを返す
 
-スクリプトではブックからデータを返すことができ、Power Automate フローの動的なコンテンツとして使用することができます。 入力パラメーターと同様に、Power Automate では、戻り値の型にいくつかの制限が設定されます。
-
-1. 基本型 `string`、`number`、`boolean`、`void`、`undefined` がサポートされています。
-
-1. 戻り値の型として使用される共用体の型は、スクリプト パラメーターとして使用する場合と同じ制限に従います。
-
-1. 配列型 ( ) は、型 、、または `[]` `string` の場合 `number` に使用できます `boolean` 。 型がサポートされている共用体またはサポートされているリテラルの型の場合も許可されます。
-    > [!IMPORTANT]
-    > オブジェクトはサポートされている `Array<T>` 戻り値の種類ではありません。
-
-1. 戻り値の型として使用されるオブジェクトの型は、スクリプト パラメーターとして使用する場合と同じ制限に従います。
-
-1. 暗黙的な入力はサポートされていますが、定義された型と同じ規則に従う必要があります。
+スクリプトではブックからデータを返すことができ、Power Automate フローの動的なコンテンツとして使用することができます。 前 [に示したのと同じ型制限](#type-restrictions) が戻り値の型に適用されます。 オブジェクトを返す場合は、戻り値の型の構文を関数に追加 `main` します。 たとえば、スクリプトから値を返す`string`場合、署名は `main` .`function main(workbook: ExcelScript.Workbook): string`
 
 ## <a name="example"></a>例
 
