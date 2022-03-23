@@ -1,38 +1,32 @@
 ---
 title: JSON Excelデータを出力する
 description: テーブル データを JSON Excelとして出力する方法について説明します。Power Automate。
-ms.date: 07/22/2021
+ms.date: 03/18/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 2b613f41618594f6f38634e4126ab8f616f1f3f4
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: d6f15b9b59a2dfe1c74caa11c748f5f52c4ef35e
+ms.sourcegitcommit: 62a62351a0a15a658f93336269f3f50767ca6b62
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59332109"
+ms.lasthandoff: 03/23/2022
+ms.locfileid: "63746357"
 ---
-# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>テーブルExcelを JSON として出力して、テーブルの使用状況をPower Automate
+# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>テーブル Excelを JSON として出力して、テーブルの使用状況をPower Automate
 
-Excelデータは、JSON 形式のオブジェクトの配列として表されます。 各オブジェクトは、テーブル内の行を表します。 これにより、ユーザーに表示されるExcel形式でデータを抽出できます。 その後、データを他のシステムに与え、Power Automateできます。
+Excelデータは、JSON 形式のオブジェクトの配列として表されます。 各オブジェクトは、テーブル内の行を表します。 これにより、ユーザーに表示される一Excel形式でデータを抽出できます。 その後、データを他のシステムに与え、Power Automateできます。
 
-_入力テーブル のデータ_
+## <a name="sample-excel-file"></a>サンプル Excel ファイル
+
+すぐに使用できる <a href="table-data-with-hyperlinks.xlsx"> ブックtable-data-with-hyperlinks.xlsx</a> ファイル をダウンロードします。
 
 :::image type="content" source="../../images/table-input.png" alt-text="入力テーブル データを示すワークシート。":::
 
 このサンプルのバリエーションには、表の列の 1 つにもハイパーリンクが含まれています。 これにより、追加レベルのセル データを JSON に表示できます。
 
-_ハイパーリンクを含む入力テーブル データ_
-
 :::image type="content" source="../../images/table-hyperlink-view.png" alt-text="ハイパーリンクとして書式設定されたテーブル データの列を示すワークシート。":::
 
-_ハイパーリンクを編集するダイアログ_
-
-:::image type="content" source="../../images/table-hyperlink-edit.png" alt-text="ハイパーリンクを変更するためのオプションを表示する [ハイパーリンクの編集] ダイアログ ボックス。":::
-
-## <a name="sample-excel-file"></a>サンプル Excel ファイル
-
-すぐに使用できる <a href="table-data-with-hyperlinks.xlsx"> ブックtable-data-with-hyperlinks.xlsx</a> ファイル をダウンロードします。 次のスクリプトを追加して、サンプルを自分で試してみてください。
-
 ## <a name="sample-code-return-table-data-as-json"></a>サンプル コード: JSON としてテーブル データを返す
+
+次のスクリプトを追加して、サンプルを自分で試してみてください。
 
 > [!NOTE]
 > テーブル列に一致 `interface TableData` する構造を変更できます。 スペースを含む列名の場合は、サンプルに含まれているなど、キーを二重引用符で囲んでください `"Event ID"` 。
@@ -264,6 +258,6 @@ interface TableData {
 }]
 ```
 
-## <a name="use-in-power-automate"></a>[Power Automate
+## <a name="use-in-power-automate"></a>[ファイル内で使用Power Automate
 
-このようなスクリプトを使用する方法については、「Power Automateを使用して自動化されたワークフローを作成する」[を参照Power Automate。](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)
+このようなスクリプトを使用する方法については、「Power Automateを使用して自動化されたワークフローを作成する」[を参照Power Automate](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)。
