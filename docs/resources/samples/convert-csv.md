@@ -1,14 +1,14 @@
 ---
 title: CSV ファイルをブックにExcelする
 description: スクリプトとスクリプトを使用してOfficeファイルPower Automateファイル.xlsx作成する.csvします。
-ms.date: 02/25/2022
+ms.date: 03/28/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 5e501368015840d4181c5565662638b65e213fed
-ms.sourcegitcommit: 49f527a7f54aba00e843ad4a92385af59c1d7bfa
+ms.openlocfilehash: 52619c1867b654fae3fce1a383a612f81f80d868
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63352126"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585591"
 ---
 # <a name="convert-csv-files-to-excel-workbooks"></a>CSV ファイルをブックにExcelする
 
@@ -29,38 +29,46 @@ ms.locfileid: "63352126"
 ## <a name="sample-code-insert-comma-separated-values-into-a-workbook"></a>サンプル コード: ブックにコンマ区切りの値を挿入する
 
 ```TypeScript
+/**
+ * Convert incoming CSV data into a range and add it to the workbook.
+ */
 function main(workbook: ExcelScript.Workbook, csv: string) {
-  /* Convert the CSV data into a 2D array. */
-  // Trim the trailing new line.
-  csv = csv.trim();
+  let sheet = workbook.getWorksheet("Sheet1");
+
+  // Remove any Windows \r characters.
+  csv = csv.replace(/\r/g, "");
 
   // Split each line into a row.
-  let rows = csv.split("\r\n");
-  let data : string[][] = [];
-  rows.forEach((value) => {
-    /*
-     * For each row, match the comma-separated sections.
-     * For more information on how to use regular expressions to parse CSV files,
-     * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
-     */
-    let row = value.match(/(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g);
-
-    // Check for blanks at the start of the row.
-    if (row[0].charAt(0) === ',') {
-      row.unshift("");
-    }
+  let rows = csv.split("\n");
+  /*
+   * For each row, match the comma-separated sections.
+   * For more information on how to use regular expressions to parse CSV files,
+   * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
+   */
+  const csvMatchRegex = /(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g
+  rows.forEach((value, index) => {
+    if (value.length > 0) {
+        let row = value.match(csvMatchRegex);
     
-    // Remove the preceding comma.
-    row.forEach((cell, index) => {
-      row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
-    });
-    data.push(row);
+        // Check for blanks at the start of the row.
+        if (row[0].charAt(0) === ',') {
+          row.unshift("");
+        }
+    
+        // Remove the preceding comma.
+        row.forEach((cell, index) => {
+          row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
+        });
+    
+        // Create a 2D array with one row.
+        let data: string[][] = [];
+        data.push(row);
+    
+        // Put the data in the worksheet.
+        let range = sheet.getRangeByIndexes(index, 0, 1, data[0].length);
+        range.setValues(data);
+    }
   });
-
-  // Put the data in the worksheet.
-  let sheet = workbook.getWorksheet("Sheet1");
-  let range = sheet.getRangeByIndexes(0, 0, data.length, data[0].length);
-  range.setValues(data);
 
   // Add any formatting or table creation that you want.
 }
@@ -107,45 +115,59 @@ function main(workbook: ExcelScript.Workbook, csv: string) {
 
 ## <a name="troubleshooting"></a>トラブルシューティング
 
-スクリプトでは、コンマで区切られた値が四角形の範囲を作る必要があります。 .csv ファイルに列数の異なる行が含まれている場合は、「入力配列内の行または列の数が範囲のサイズまたはサイズと一致しない」というエラーが表示されます。 四角形の図形に準拠するためにデータを作成できない場合は、代わりに次のスクリプトを使用します。 このスクリプトは、1 つの範囲ではなく、一度に 1 行のデータを追加します。 このスクリプトの効率は低く、大きなデータ セットでは非常に遅くなります。
+### <a name="script-testing"></a>スクリプトのテスト
+
+スクリプトを使用せずにテストするには、Power Automate前に値`csv`を割り当てる必要があります。 関数の最初の行として次のコードを追加し `main` 、Run キーを押 **してみてください**。
 
 ```TypeScript
-function main(workbook: ExcelScript.Workbook, csv: string) {
-  let sheet = workbook.getWorksheet("Sheet1");
-
-  /* Convert the CSV data into a 2D array. */
-  // Trim the trailing new line.
-  csv = csv.trim();
-
-  // Split each line into a row.
-  let rows = csv.split("\r\n");
-  rows.forEach((value, index) => {
-    /*
-     * For each row, match the comma-separated sections.
-     * For more information on how to use regular expressions to parse CSV files,
-     * see this Stack Overflow post: https://stackoverflow.com/a/48806378/9227753
-     */
-    let row = value.match(/(?:,|\n|^)("(?:(?:"")*[^"]*)*"|[^",\n]*|(?:\n|$))/g);
-
-    // Check for blanks at the start of the row.
-    if (row[0].charAt(0) === ',') {
-      row.unshift("");
-    }
-
-    // Remove the preceding comma.
-    row.forEach((cell, index) => {
-      row[index] = cell.indexOf(",") === 0 ? cell.substr(1) : cell;
-    });
-
-    // Create a 2D-array with one row.
-    let data: string[][] = [];
-    data.push(row);
-
-    // Put the data in the worksheet.
-    let range = sheet.getRangeByIndexes(index, 0, 1, data[0].length);
-    range.setValues(data);
-  });
-
-  // Add any formatting or table creation that you want.
-}
+  csv = `1, 2, 3
+         4, 5, 6
+         7, 8, 9`;
 ```
+
+### <a name="semicolon-separated-files-and-other-alternative-separators"></a>セミコロンで区切られたファイルと他の代替の区切り記号
+
+一部の地域ではセミコロンを使用して(';')、コンマではなくセル値を区切ります。 この場合、スクリプト内の次の行を変更する必要があります。
+
+1. 正規表現ステートメントのコンマをセミコロンに置き換える。 これはで始まります `let row = value.match`。
+
+    ```TypeScript
+    let row = value.match(/(?:;|\n|^)("(?:(?:"")*[^"]*)*"|[^";\n]*|(?:\n|$))/g);
+    ```
+
+1. 空白の最初のセルのチェックで、コンマをセミコロンに置き換える。 これはで始まります `if (row[0].charAt(0)`。
+
+    ```TypeScript
+    if (row[0].charAt(0) === ';') {
+    ```
+
+1. 表示されるテキストから区切り文字を削除する行のコンマをセミコロンに置き換える。 これはで始まります `row[index] = cell.indexOf`。
+
+   ```TypeScript
+      row[index] = cell.indexOf(";") === 0 ? cell.substr(1) : cell;
+    ```
+
+> [!NOTE]
+> ファイルでタブなどの文字`;``\t`を使用して値を分離する場合は、上記の置換内の文字を使用するか、使用されている文字に置き換える必要があります。
+
+### <a name="large-csv-files"></a>大きな CSV ファイル
+
+ファイルに数十万個のセルがある場合は、データ転送の制限Excel[に達する可能性があります](../../testing/platform-limits.md#excel)。 スクリプトと定期的に同期するスクリプトExcel必要があります。 これを行う最も簡単な方法は、行の `console.log` バッチが処理された後に呼び出す方法です。 これを実行するには、次のコード行を追加します。
+
+1. 前に `rows.forEach((value, index) => {`、次の行を追加します。
+
+    ```TypeScript
+      let rowCount = 0;
+    ```
+
+1. 後 `range.setValues(data);`に、次のコードを追加します。 列の数によっては、小 `5000` さい数値に減らす必要がある場合があります。
+
+    ```TypeScript
+      rowCount++;
+      if (rowCount % 5000 === 0) {
+        console.log("Syncing 5000 rows.");
+      }
+    ```
+
+> [!WARNING]
+> CSV ファイルが非常に大きい場合は、ファイルのサイズが非常に大きい場合に、[Power Automate。](../../testing/platform-limits.md#power-automate) CSV データを別のブックに変換する前に、CSV データを複数のExcelがあります。

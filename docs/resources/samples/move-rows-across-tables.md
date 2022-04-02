@@ -3,18 +3,18 @@ title: スクリプトを使用してテーブル間で行Officeする
 description: フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する方法について学習します。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: bffdb17516016d159e61586c116d764f7bb8f3fc
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 9780cd79a55dcb5cd2e039b5198232358b3b1413
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59334970"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585479"
 ---
 # <a name="move-rows-across-tables"></a>テーブル間で行を移動する
 
 このスクリプトでは、次のことが行われます。
 
-* 列の値がスクリプト内の一部の値と等しいソース テーブルから行 `FILTER_VALUE` を選択します。
+* 列の値がスクリプト内の一部の値と等しいソース テーブルから行を`FILTER_VALUE` 選択します。
 * 選択した行を別のワークシートのターゲット テーブルに移動します。
 * 関連するフィルターをソース テーブルに再適用します。
 
@@ -107,7 +107,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="training-video-move-rows-across-tables"></a>トレーニング ビデオ: テーブル間で行を移動する
 
-[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/_3t3Pk4i2L0). ビデオのソリューションには、2 つのスクリプトが表示されます。 主な違いは、行の選択方法です。
+[Sudhi Ramamurthy が YouTube でこのサンプルを見るのを見る](https://youtu.be/_3t3Pk4i2L0)。 ビデオのソリューションには、2 つのスクリプトが表示されます。 主な違いは、行の選択方法です。
 
 * 1 つ目のバリアントでは、テーブル フィルターを適用し、表示範囲を読み取って行を選択します。
 * 2 番目の行は、値を読み取り、行の値 (このページのサンプルで使用される値) を抽出して選択します。

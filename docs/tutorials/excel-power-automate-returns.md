@@ -3,12 +3,12 @@ title: 自動で実行される Power Automate フローにスクリプトから
 description: Power Automate を使用して Excel on the web 用の Office スクリプトを実行してリマインダー メールを送信する方法を示すチュートリアル。
 ms.date: 06/29/2021
 ms.localizationpriority: high
-ms.openlocfilehash: f81f28ef6f2862608c221e2e75c2f3948a1288ed
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: e100fac263dee8f1f39529bd83610576e68eb2e6
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59335089"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64586053"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow"></a>自動で実行される Power Automate フローにスクリプトからデータを返す
 

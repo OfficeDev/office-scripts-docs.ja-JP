@@ -3,21 +3,21 @@ title: コメントを追加Excel
 description: ワークシートにコメントを追加Officeスクリプトを使用する方法について説明します。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 3ff9d56934520a98dd1de7d31077396294bde29d
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 101f07fd2f1abcd4120585162dc2b77b8aece91a
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59332398"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585598"
 ---
 # <a name="add-comments-in-excel"></a>コメントを追加Excel
 
-このサンプルでは、同僚のコメントを含むセルに [コメント@mentioning](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) 示します。
+このサンプルでは、同僚のコメントを含むセルにコメント [@mentioning](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) 示します。
 
 ## <a name="example-scenario"></a>シナリオ例
 
 * チーム リードはシフト スケジュールを維持します。 チーム リードは、シフト レコードに従業員 ID を割り当てる。
-* チーム リードは、従業員に通知する必要があります。 従業員にコメントを@mentionsすると、ワークシートからカスタム メッセージが送信されます。
+* チーム リードは、従業員に通知する必要があります。 従業員にコメントを追加@mentions、ワークシートからカスタム メッセージが送信されます。
 * その後、従業員はブックを表示し、都合の良い時点でコメントに応答できます。
 
 ## <a name="solution"></a>ソリューション
@@ -28,7 +28,7 @@ ms.locfileid: "59332398"
 
 ## <a name="sample-excel-file"></a>サンプル Excel ファイル
 
-すぐに <a href="excel-comments.xlsx"> 使用excel-comments.xlsx</a> ブックのブックをダウンロードします。 次のスクリプトを追加して、サンプルを自分で試してみてください。
+すぐに <a href="excel-comments.xlsx">excel-comments.xlsx</a> ブックのダウンロード を行います。 次のスクリプトを追加して、サンプルを自分で試してみてください。
 
 ## <a name="sample-code-add-comments"></a>サンプル コード: コメントの追加
 
@@ -79,4 +79,4 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="training-video-add-comments"></a>トレーニング ビデオ: コメントの追加
 
-[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/CpR78nkaOFw).
+[Sudhi Ramamurthy が YouTube でこのサンプルを見るのを見る](https://youtu.be/CpR78nkaOFw)。

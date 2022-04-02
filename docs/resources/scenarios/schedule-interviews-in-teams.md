@@ -3,21 +3,21 @@ title: Teams で面接をスケジュールする
 description: '[スクリプト] を使用してOfficeデータから会議Teams送信するExcelします。'
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 143b2018824f82c329692909d9a7d1ba10c2485f
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 25b70f2ee3f71c101d4ee20068c020edb5e0ac77
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59330871"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585430"
 ---
 # <a name="office-scripts-sample-scenario-schedule-interviews-in-teams"></a>Officeスクリプトのサンプル シナリオ: スケジュールの面接のスケジュールを設定Teams
 
-このシナリオでは、人事担当の採用担当者が、面接会議をスケジュールし、Teams。 候補者の面接スケジュールは、1 つのファイルExcelします。 候補者と面接官の両方にTeams会議の招待を送信する必要があります。 その後、会議が送信されたExcel確認して、Teamsファイルを更新する必要があります。
+このシナリオでは、人事担当の採用担当者が、面接会議をスケジュールし、Teams。 候補者の面接スケジュールは、1 つのファイルExcelします。 候補者と面接官の両方にTeams会議出席招待を送信する必要があります。 その後、会議が送信されたExcel確認して、Teamsファイルを更新する必要があります。
 
-ソリューションには、1 つのフローで組み合わされる 3 つのPower Automateがあります。
+ソリューションには、1 つのプロセス フローで組み合Power Automateがあります。
 
 1. スクリプトはテーブルからデータを抽出し、オブジェクトの配列を JSON データとして返します。
-1. 次に、データが [会議の作成] Teamsに送信Teams **に** 送信されます。
+1. 次に、データが [会議のTeams **をTeams送信** する] に送信されます。
 1. 招待の状態を更新するために、同じ JSON データが別のスクリプトに送信されます。
 
 ## <a name="scripting-skills-covered"></a>スクリプティングのスキルをカバー
@@ -135,16 +135,16 @@ interface InterviewInvite {
 ## <a name="sample-flow-run-the-interview-scheduling-scripts-and-send-the-teams-meetings"></a>サンプル フロー: 面接スケジュール スクリプトを実行し、会議にTeamsする
 
 1. 新しいインスタント クラウド **フローを作成します**。
-1. [フロー **を手動でトリガーする] を選択し** 、[作成] を **選択します**。
-1. オンライン **(Business)** コネクタと [スクリプト **Excel実行]** アクションを使用する新しい **手順を追加** します。 コネクタに次の値を入力します。
+1. [フロー **を手動でトリガーする] を選択し、[** 作成] を **選択します**。
+1. オンライン (**Business**) コネクタと [スクリプトExcel **実行]** アクションを使用する新しい **手順を追加** します。 コネクタに次の値を入力します。
     1. **場所**: OneDrive for Business
     1. **ドキュメント ライブラリ**: OneDrive
     1. **ファイル**: hr-interviews.xlsx *(ファイル ブラウザーから選択)*
-    1. **スクリプト**: オンライン :::image type="content" source="../../images/schedule-interviews-1.png" alt-text="(Business) コネクタExcel完了したインタビュー":::のスクリーンショットをスケジュールして、ブックからインタビュー データを取得Power Automate。
-1. [会議の **作成] アクション** を使用する **新しいTeams追加** します。 コネクタから動的コンテンツを選択Excel、フローに対して各ブロックに **適用** が生成されます。 コネクタに次の値を入力します。
-    1. **予定表 ID**: Calendar
+    1. **スクリプト**: 完了したオンライン :::image type="content" source="../../images/schedule-interviews-1.png" alt-text="(Business)"::: コネクタExcelのインタビュー のスクリーンショットをスケジュールして、ブックからインタビュー データを取得Power Automate。
+1. [会議の **作成] アクション** を使用する **新しいTeams追加** します。 新しいコネクタから動的コンテンツExcelすると、フローに対して各ブロックに **適用** が生成されます。 コネクタに次の値を入力します。
+    1. **予定表 ID**: 予定表
     1. **件名**: Contoso インタビュー
-    1. **メッセージ**:**メッセージ**(Excel値)
+    1. **メッセージ**: **メッセージ** (Excel値)
     1. **タイム ゾーン**: 太平洋標準時
     1. **開始時刻**: **StartTime** (Excel値)
     1. **終了時刻**: **FinishTime** (Excel値)
@@ -154,9 +154,9 @@ interface InterviewInvite {
     1. **ドキュメント ライブラリ**: OneDrive
     1. **ファイル**: hr-interviews.xlsx *(ファイル ブラウザーから選択)*
     1. **スクリプト**: 送信された招待を記録する
-    1. **invites**:**結果**(Excel 値) Excel Online (Business) コネクタのスクリーンショットで、招待が Power Automate で送信 :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="されたレコードを記録します。":::
+    1. **invites**: **結果** (Excel 値) Excel Online (Business) コネクタのスクリーンショットで、招待が Power Automate で送信された :::image type="content" source="../../images/schedule-interviews-3.png" alt-text="レコードを記録します。":::
 1. フローを保存し、試してみてください。[フロー エディター **] ページ** の [テスト] ボタンを使用するか、[マイ フロー] タブでフロー **を実行** します。メッセージが表示されたら、必ずアクセスを許可してください。
 
 ## <a name="training-video-send-a-teams-meeting-from-excel-data"></a>トレーニング ビデオ: データからTeams会議をExcelする
 
-[Sudhi Ramamurthy が YouTube でこのサンプル](https://youtu.be/HyBdx52NOE8)のバージョンを見るをご覧ください。 彼のバージョンでは、列の変更や廃止された会議の時間を処理する、より堅牢なスクリプトを使用しています。
+[Sudhi Ramamurthy が YouTube でこのサンプルのバージョンを見るのを見る](https://youtu.be/HyBdx52NOE8)。 彼のバージョンでは、列の変更や廃止された会議の時間を処理する、より堅牢なスクリプトを使用しています。

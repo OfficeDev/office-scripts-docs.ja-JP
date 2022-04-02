@@ -1,21 +1,21 @@
 ---
 title: シートの空白行を数える
-description: Office スクリプトを使用して、ワークシート内のデータの代わりに空白行が含まれていますを検出し、空白の行数をレポートして、Power Automate フローで使用する方法について説明します。
+description: Office スクリプトを使用して、ワークシート内のデータの代わりに空白行が含まれていますを検出し、空の行数をレポートして、Power Automate フローで使用する方法について説明します。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 103d2f96c1780b47363dcb6caab82553dd556b80
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 1ae513928b885994dc7f6d1b8ad66d694b61e7b7
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59332214"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585563"
 ---
 # <a name="count-blank-rows-on-sheets"></a>シートの空白行を数える
 
 このプロジェクトには、次の 2 つのスクリプトが含まれています。
 
-* [指定したシートの空白行を](#sample-code-count-blank-rows-on-a-given-sheet)数える: 指定したワークシートの使用範囲を走査し、空白の行数を返します。
-* [すべてのシートで空白行](#sample-code-count-blank-rows-on-all-sheets)を数える : すべてのワークシートの使用範囲を走査し、空白の行数を返します。
+* [指定したシートの空白行](#sample-code-count-blank-rows-on-a-given-sheet)を数える: 指定したワークシートの使用範囲を走査し、空白の行数を返します。
+* [すべてのシートで空白行を](#sample-code-count-blank-rows-on-all-sheets)数える: すべてのワークシートの使用範囲を走査し、空白の行数を返します。
 
 > [!NOTE]
 > スクリプトの場合、空白の行はデータがない任意の行です。 行には書式設定を指定できます。

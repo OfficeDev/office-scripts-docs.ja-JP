@@ -3,23 +3,23 @@ title: スクリプトOfficeトラブルシューティング
 description: スクリプトのデバッグのヒントとOfficeヘルプ リソース。
 ms.date: 11/11/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 2c43d0e4b1f4fd5675397fd79eaab1345ae39b98
-ms.sourcegitcommit: 24a6b8ae0cc57a0307fbc9b3e87432f1f4a92263
+ms.openlocfilehash: 2a4514aa55550311223cf6fa1179541a37e37f56
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/17/2021
-ms.locfileid: "61064203"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64586046"
 ---
 # <a name="troubleshoot-office-scripts"></a>スクリプトOfficeトラブルシューティング
 
 スクリプトを開発Office、間違いを犯す可能性があります。 大丈夫です。 問題を見つけてスクリプトを完全に機能するためのツールがあります。
 
 > [!NOTE]
-> スクリプトに固有のトラブルシューティングのアドバイスについては、「OfficeでPower Automateスクリプトを実行Office[トラブルシューティング」を参照Power Automate。](power-automate-troubleshooting.md)
+> スクリプトを使用したスクリプトのOfficeトラブルシューティングPower Automate、「トラブルシューティング Officeスクリプトが実行されている[」を参照Power Automate](power-automate-troubleshooting.md)。
 
 ## <a name="types-of-errors"></a>エラーの種類
 
-Officeスクリプトのエラーは、次の 2 つのカテゴリに分類されます。
+Officeのエラーは、次の 2 つのカテゴリに分類されます。
 
 * コンパイル時のエラーまたは警告
 * ランタイム エラー
@@ -49,7 +49,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 コンパイル時と実行時の両方のエラーは、スクリプトの実行時にコンソールにエラー メッセージを表示します。 問題が発生した行番号を指定します。 問題の根本原因は、コンソールで示されているコードとは異なるコード行である可能性があります。
 
-次の図は、明示的なコンパイラ エラーのコンソール[出力を `any` ](../develop/typescript-restrictions.md)示しています。 エラー文字列の `[5, 16]` 先頭にあるテキストに注意してください。 これは、エラーが 5 行目で、文字 16 から始まるかどうかを示します。
+次の図は、明示的なコンパイラ エラーのコンソール [出力を `any`](../develop/typescript-restrictions.md) 示しています。 エラー文字列の `[5, 16]` 先頭にあるテキストに注意してください。 これは、エラーが 5 行目で、文字 16 から始まるかどうかを示します。
 :::image type="content" source="../images/explicit-any-error-message.png" alt-text="明示的な 'any' エラー メッセージを表示するコード エディター コンソール。":::
 
 次の図は、実行時エラーのコンソール出力を示しています。 ここでは、既存のワークシートの名前を持つワークシートを追加します。 ここでも、エラーの前の "2 行目" に注意して、調査する行を表示します。
@@ -57,25 +57,25 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="console-logs"></a>コンソール ログ
 
-ステートメントを使用してメッセージを画面に印刷 `console.log` します。 これらのログには、変数の現在の値、またはトリガーされるコード パスが表示されます。 これを行うには、任意 `console.log` のオブジェクトをパラメーターとして呼び出します。 通常、コンソール `string` で読み取りが最も簡単な型は a です。
+ステートメントを使用してメッセージを画面に印刷 `console.log` します。 これらのログには、変数の現在の値、またはトリガーされるコード パスが表示されます。 これを行うには、任意の `console.log` オブジェクトをパラメーターとして呼び出します。 通常、コンソールで読み取りが最も簡単な型は a `string` です。
 
 ```TypeScript
 console.log("Logging myRange's address.");
 console.log(myRange.getAddress());
 ```
 
-渡された文字列は、作業ウィンドウの下部にあるコード エディターのログ コンソール `console.log` に表示されます。 ログは [出力] タブ **にあります** が、ログの書き込み時にタブが自動的にフォーカスを取得します。
+渡された文字列は `console.log` 、作業ウィンドウの下部にあるコード エディターのログ コンソールに表示されます。 ログは [出力] タブ **にあります** が、ログの書き込み時にタブが自動的にフォーカスを取得します。
 
 ログはブックには影響を与えかねない。
 
 ## <a name="automate-tab-not-appearing-or-office-scripts-unavailable"></a>[自動化] タブが表示されないか、Officeスクリプトが使用できない
 
-次の手順は、[自動化] タブに関連する問題のトラブルシューティングに役立つExcel on the web。
+次の手順は、[自動化] タブに関連する問題のトラブルシューティングを行う際に役立Excel on the web。
 
-1. [ライセンスにスクリプトMicrosoft 365含Officeしてください](../overview/excel.md#requirements)。
+1. [ライセンスにスクリプトMicrosoft 365含Officeします](../overview/excel.md#requirements)。
 1. [ブラウザーがサポートされていないことを確認します](platform-limits.md#browser-support)。
 1. [サードパーティの Cookie が有効になっているか確認します](platform-limits.md#third-party-cookies)。
-1. [管理者が[スクリプト] の [スクリプトOffice無効にMicrosoft 365 管理センター。](/microsoft-365/admin/manage/manage-office-scripts-settings)
+1. [管理者がサーバー内のスクリプトOffice無効にMicrosoft 365 管理センター](/microsoft-365/admin/manage/manage-office-scripts-settings)。
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 

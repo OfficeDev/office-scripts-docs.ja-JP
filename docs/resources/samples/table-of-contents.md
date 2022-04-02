@@ -3,12 +3,12 @@ title: ブックの目次を作成する
 description: 各ワークシートへのリンクを含む目次を作成する方法について説明します。
 ms.date: 01/20/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 658143e9e1e6a43cff19eac36abeec88310cda25
-ms.sourcegitcommit: 161229492c85f3519c899573cf5022140026e7b8
+ms.openlocfilehash: b2d69609514c2e1e87f9c0590ea10152fc7d5e7d
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2022
-ms.locfileid: "62220419"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585521"
 ---
 # <a name="create-a-workbook-table-of-contents"></a>ブックの目次を作成する
 
@@ -18,7 +18,7 @@ ms.locfileid: "62220419"
 
 ## <a name="sample-excel-file"></a>サンプル Excel ファイル
 
-すぐに <a href="table-of-contents.xlsx"> 使用table-of-contents.xlsx</a> ブックのブックをダウンロードします。 次のスクリプトを追加し、自分でサンプルを試してみてください。
+すぐに <a href="table-of-contents.xlsx">table-of-contents.xlsx</a> ブックのダウンロード を行います。 次のスクリプトを追加し、自分でサンプルを試してみてください。
 
 ## <a name="sample-code-create-a-workbook-table-of-contents"></a>サンプル コード: ブックの目次を作成する
 

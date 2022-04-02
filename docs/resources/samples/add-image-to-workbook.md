@@ -1,14 +1,14 @@
 ---
 title: ブックに画像を追加する
-description: '[スクリプト] を使用してOfficeをブックに追加し、シート間でコピーする方法について学習します。'
+description: Office スクリプトを使用してブックにイメージを追加し、シート間でコピーする方法について学習します。
 ms.date: 07/12/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 0c4b3446df8de280b6cb557e291504ceed5ee7f7
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: b827ebe4050fa8e260ed640a73d583264955b597
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59326857"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585864"
 ---
 # <a name="add-images-to-a-workbook"></a>ブックに画像を追加する
 
@@ -24,7 +24,7 @@ ms.locfileid: "59326857"
 
 ## <a name="sample-excel-file"></a>サンプル Excel ファイル
 
-すぐに <a href="add-images.xlsx"> 使用add-images.xlsx</a> ブックのブックをダウンロードします。 次のスクリプトを追加し、自分でサンプルを試してみてください。
+すぐに <a href="add-images.xlsx">add-images.xlsx</a> ブックのダウンロード を行います。 次のスクリプトを追加し、自分でサンプルを試してみてください。
 
 ## <a name="sample-code-copy-an-image-across-worksheets"></a>サンプル コード: ワークシート間で画像をコピーする
 

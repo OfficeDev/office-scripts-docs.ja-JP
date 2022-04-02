@@ -3,25 +3,25 @@ title: 大規模データセットを書き込む
 description: 大規模なデータセットをスクリプト内の小さな書き込み操作に分割するOfficeします。
 ms.date: 05/13/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 1b37c5892c3b5f9ba26bfc2cdf8b30db321751d3
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 0702ae5465caf91f5581cbdb79ca75a65e83adbc
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59330584"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585927"
 ---
 # <a name="write-a-large-dataset"></a>大規模データセットを書き込む
 
-API `Range.setValues()` は、データを範囲に入れる。 この API には、データ サイズやネットワーク設定など、さまざまな要因に応じて制限があります。 つまり、大量の情報を 1 つの操作としてブックに書き込もうとすると、大きな範囲を確実に更新するために、より小さなバッチでデータを書き込む必要 [があります](../../testing/platform-limits.md)。
+API `Range.setValues()` は、データを範囲に入れる。 この API には、データ サイズやネットワーク設定など、さまざまな要因に応じて制限があります。 つまり、1 つの操作として大量の情報をブックに書き込もうとすると、大きな範囲を確実に更新するために、より小さなバッチでデータを書き込む必要[があります。](../../testing/platform-limits.md)
 
-スクリプトのパフォーマンスの基本については、「Office スクリプトのパフォーマンスの向上[」をOfficeしてください](../../develop/web-client-performance.md)。
+スクリプトのパフォーマンスの基本については、「Officeスクリプトのパフォーマンスを向上させる[」をOfficeしてください](../../develop/web-client-performance.md)。
 
 ## <a name="sample-code-write-a-large-dataset"></a>サンプル コード: 大きなデータセットを記述する
 
 このスクリプトは、範囲の行を小さい部分に書き込みます。 一度に書き込む 1000 セルを選択します。 空白のワークシートでスクリプトを実行して、更新バッチの動作を確認します。 コンソール出力は、何が起こっているかについてさらに詳しい情報を提供します。
 
 > [!NOTE]
-> の値を変更すると、書き込まれる行の総数を変更できます `SAMPLE_ROWS` 。 の値を変更することで、1 つのアクションとして書き込むセルの数を変更できます `CELLS_IN_BATCH` 。
+> の値を変更すると、書き込まれる行の総数を変更できます `SAMPLE_ROWS`。 の値を変更することで、1 つのアクションとして書き込むセルの数を変更できます `CELLS_IN_BATCH`。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -148,4 +148,4 @@ function getRandomString(length: number): string {
 
 ## <a name="training-video-write-a-large-dataset"></a>トレーニング ビデオ: 大きなデータセットを記述する
 
-[Sudhi Ramamurthy が YouTube でこのサンプルを歩くのを見る](https://youtu.be/BP9Kp0Ltj7U).
+[Sudhi Ramamurthy が YouTube でこのサンプルを見るのを見る](https://youtu.be/BP9Kp0Ltj7U)。

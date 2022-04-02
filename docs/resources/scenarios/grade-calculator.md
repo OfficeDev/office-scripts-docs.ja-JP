@@ -1,16 +1,16 @@
 ---
-title: 'Officeスクリプトのサンプル シナリオ: 成績計算'
+title: 'Office スクリプトのサンプル シナリオ: 成績計算'
 description: 学生のクラスのパーセンテージとレターの成績を決定するサンプル。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 9036c12cd05e96932171cc0aefdce8eed1cc988e
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: fd9009633e4a89e3b236f765543123b3995b9f47
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59334211"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585444"
 ---
-# <a name="office-scripts-sample-scenario-grade-calculator"></a>Officeスクリプトのサンプル シナリオ: 成績計算
+# <a name="office-scripts-sample-scenario-grade-calculator"></a>Office スクリプトのサンプル シナリオ: 成績計算
 
 このシナリオでは、すべての学生の学期終了の成績を集計する講師です。 課題とテストのスコアを入力しています。 それでは、学生の運命を決定する時間です。
 

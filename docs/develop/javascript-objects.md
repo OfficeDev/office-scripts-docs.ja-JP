@@ -1,31 +1,31 @@
 ---
 title: Office スクリプトでの組み込みの JavaScript オブジェクトの使用
-description: 組み込みの JavaScript API を、Officeスクリプトから呼び出Excel on the web。
+description: 組み込みの JavaScript API を、Office スクリプトから呼び出Excel on the web。
 ms.date: 05/17/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: bf12a405814bb626a72c1de4f4c75462ce0018ec
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 620b97660eb07fd1289ab3aafcae1acaed43ed2f
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59327690"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585731"
 ---
-# <a name="use-built-in-javascript-objects-in-office-scripts"></a>スクリプトで組み込みの JavaScript オブジェクトをOfficeする
+# <a name="use-built-in-javascript-objects-in-office-scripts"></a>スクリプトで組み込みの JavaScript オブジェクトOfficeする
 
-JavaScript には、JavaScript または[TypeScript](../overview/code-editor-environment.md) (JavaScript のスーパーセット) でスクリプトを実行するかどうかに関係なく、Office スクリプトで使用できるいくつかの組み込みオブジェクトが提供されています。 この記事では、スクリプトで組み込みの JavaScript オブジェクトの一部を使用Office説明Excel on the web。
+JavaScript には、JavaScript または [TypeScript](../overview/code-editor-environment.md) (JavaScript のスーパーセット) でスクリプトを実行するかどうかに関係なく、Office スクリプトで使用できるいくつかの組み込みオブジェクトが提供されています。 この記事では、スクリプトで組み込みの JavaScript オブジェクトの一部を使用OfficeについてExcel on the web。
 
 > [!NOTE]
 > すべての組み込み JavaScript オブジェクトの完全な一覧については、Mozilla の Standard 組み込 [みオブジェクトの記事を参照](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects) してください。
 
 ## <a name="array"></a>配列
 
-[Array オブジェクト](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)は、スクリプト内の配列を扱う標準化された方法を提供します。 配列は標準的な JavaScript コンストラクトですが、Officeとコレクションの 2 つの主要な方法で関連付けされます。
+[Array オブジェクト](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array)は、スクリプト内の配列を扱う標準化された方法を提供します。 配列は標準の JavaScript コンストラクトですが、Officeとコレクションの 2 つの主要な方法で関連付けされます。
 
 ### <a name="work-with-ranges"></a>範囲の使用
 
-範囲には、その範囲内のセルに直接マップする複数の 2 次元配列が含まれます。 これらの配列には、その範囲内の各セルに関する特定の情報が含まれます。 たとえば、これらのセル内のすべての値を返します (2 次元配列の行と列は、そのワークシート のサブセクションの行と列 `Range.getValues` にマッピングされます)。 `Range.getFormulas` などの `Range.getNumberFormats` 配列を返す他の頻繁に使用されるメソッドです `Range.getValues` 。
+範囲には、その範囲内のセルに直接マップする複数の 2 次元配列が含まれます。 これらの配列には、その範囲内の各セルに関する特定の情報が含まれます。 たとえば、これらの `Range.getValues` セル内のすべての値を返します (2 次元配列の行と列は、そのワークシート のサブセクションの行と列にマッピングされます)。 `Range.getFormulas` などの `Range.getNumberFormats` 配列を返す他の頻繁に使用されるメソッドです `Range.getValues`。
 
-次のスクリプトは **、A1:D4 範囲で** "$" を含む任意の数値形式を検索します。 スクリプトは、これらのセルの塗りつぶしの色を "黄色" に設定します。
+次のスクリプトは、 **A1:D4 範囲で** "$" を含む任意の数値形式を検索します。 スクリプトは、これらのセルの塗りつぶしの色を "黄色" に設定します。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -50,10 +50,10 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="work-with-collections"></a>コレクションの使用
 
-多Excelオブジェクトはコレクションに含まれています。 このコレクションは、スクリプト API Officeによって管理され、配列として公開されます。 たとえば、ワークシート [内のすべての Shapes](/javascript/api/office-scripts/excelscript/excelscript.shape) は、メソッドによって返されるオブジェクト `Shape[]` に含 `Worksheet.getShapes` まれているとします。 この配列を使用して、コレクションから値を読み取ることができます。また、親オブジェクトのメソッドから特定のオブジェクトに `get*` アクセスすることもできます。
+多数Excelオブジェクトがコレクションに含まれています。 このコレクションは、スクリプト API Officeによって管理され、配列として公開されます。 たとえば、ワークシート [内のすべての Shapes](/javascript/api/office-scripts/excelscript/excelscript.shape) は `Shape[]` 、メソッドによって返されるオブジェクトに含まれていると `Worksheet.getShapes` します。 この配列を使用して、コレクションから値を読み取ることができます。また、親オブジェクトのメソッドから特定のオブジェクトに `get*` アクセスすることもできます。
 
 > [!NOTE]
-> これらのコレクション配列からオブジェクトを手動で追加または削除しない。 親オブジェクト `add` のメソッドとコレクション型オブジェクト `delete` のメソッドを使用します。 たとえば、メソッドを使用して[ワークシートに Table](/javascript/api/office-scripts/excelscript/excelscript.table)を追加し[](/javascript/api/office-scripts/excelscript/excelscript.worksheet) `Worksheet.addTable` 、using を削除 `Table` します `Table.delete` 。
+> これらのコレクション配列からオブジェクトを手動で追加または削除しない。 親オブジェクト `add` のメソッドとコレクション `delete` 型オブジェクトのメソッドを使用します。 たとえば、メソッドを使用して[](/javascript/api/office-scripts/excelscript/excelscript.worksheet)[ワークシートに Table](/javascript/api/office-scripts/excelscript/excelscript.table) を`Worksheet.addTable`追加し、using を削除`Table`します。`Table.delete`
 
 次のスクリプトは、現在のワークシートのすべての図形の種類をログに記録します。
 
@@ -92,7 +92,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 [Date オブジェクト](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Date)は、スクリプト内の日付を扱う標準化された方法を提供します。 `Date.now()` 現在の日付と時刻を持つオブジェクトを生成します。これは、スクリプトのデータ エントリにタイムスタンプを追加するときに便利です。
 
-次のスクリプトは、現在の日付をワークシートに追加します。 メソッドを使用すると、Excel日付として認識され、セルの数値形式 `toLocaleDateString` が自動的に変更されます。
+次のスクリプトは、現在の日付をワークシートに追加します。 メソッドを使用すると、Excel`toLocaleDateString`が日付として認識され、セルの数値形式が自動的に変更されます。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -111,9 +111,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="math"></a>数学
 
-[Math オブジェクトは](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)、一般的な数学演算のメソッドと定数を提供します。 ブックの計算エンジンを使用せずに、Excelで使用できる多くの機能を提供します。 これにより、スクリプトがブックにクエリを実行する必要が省き、パフォーマンスが向上します。
+[Math オブジェクトは](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Math)、一般的な数学演算のメソッドと定数を提供します。 これらの関数は、ブックの計算エンジンを使用Excel、他のユーザーでも使用できる多くの機能を提供します。 これにより、スクリプトがブックにクエリを実行する必要が省き、パフォーマンスが向上します。
 
-次のスクリプトは `Math.min` **、A1:D4** 範囲の最小番号を検索してログに記録するために使用します。 このサンプルでは、文字列ではなく、範囲全体に数値だけが含まれていると想定しています。
+次のスクリプトは、A1 `Math.min` :D4 範囲の最小番号を検索して **ログに記録するために使用** します。 このサンプルでは、文字列ではなく、範囲全体に数値だけが含まれていると想定しています。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -142,9 +142,9 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="use-of-external-javascript-libraries-is-not-supported"></a>外部 JavaScript ライブラリの使用はサポートされていません
 
-Officeスクリプトは、外部のサード パーティ製ライブラリの使用をサポートしています。 スクリプトでは、組み込みの JavaScript オブジェクトとスクリプト API Office使用できます。
+Officeスクリプトでは、外部のサードパーティ ライブラリの使用はサポートされていません。 スクリプトで使用できるのは、組み込みの JavaScript オブジェクトとスクリプト API Officeのみです。
 
 ## <a name="see-also"></a>関連項目
 
 - [標準の組み込みオブジェクト](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects)
-- [Officeスクリプト コード エディター環境](../overview/code-editor-environment.md)
+- [Office スクリプト コード エディター環境](../overview/code-editor-environment.md)

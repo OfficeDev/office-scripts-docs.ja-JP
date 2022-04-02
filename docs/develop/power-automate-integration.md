@@ -3,12 +3,12 @@ title: Power Automate を使用した Office スクリプトの実行
 description: Power Automate ワークフローを使用して Excel on the web の Office スクリプトを取得する方法。
 ms.date: 03/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: f7358b79248974ddb548b54437422670a37531bf
-ms.sourcegitcommit: 79ce4fad6d284b1aa71f5ad6d2938d9ad6a09fee
+ms.openlocfilehash: dbf65086e564b20ca0fc3a4dc1c527188540be6b
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63459621"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585752"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>Power Automate を使用した Office スクリプトの実行
 

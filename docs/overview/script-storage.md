@@ -3,12 +3,12 @@ title: Office スクリプト ファイルのストレージと所有権
 description: スクリプトをユーザー Officeに格納し、所有者Microsoft OneDrive転送する方法に関する情報。
 ms.date: 06/04/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 98c10ed8def417bef36d5a97eb5411648d49258e
-ms.sourcegitcommit: 49f527a7f54aba00e843ad4a92385af59c1d7bfa
+ms.openlocfilehash: 3f9e0f93c598816417a4ce920d3d481085fa8a20
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2022
-ms.locfileid: "63352133"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585913"
 ---
 # <a name="office-scripts-file-storage-and-ownership"></a>Office スクリプト ファイルのストレージと所有権
 

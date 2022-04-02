@@ -3,12 +3,12 @@ title: 'Officeスクリプトのサンプル シナリオ: NOAA Graphの水レ�
 description: NOAA データベースから JSON データをフェッチし、それを使用してグラフを作成するサンプル。
 ms.date: 03/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 23246185072587d292cec4e30f868c46ddc80cde
-ms.sourcegitcommit: 79ce4fad6d284b1aa71f5ad6d2938d9ad6a09fee
+ms.openlocfilehash: 80c9c812662b18d76bd620c512d220a68c65855f
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2022
-ms.locfileid: "63459635"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585437"
 ---
 # <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a>Officeスクリプトのサンプル シナリオ: NOAA からの水レベルデータのフェッチとグラフ化
 

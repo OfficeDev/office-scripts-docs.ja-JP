@@ -1,14 +1,14 @@
 ---
 title: Office スクリプトの基本的なExcel on the web
 description: スクリプト内のスクリプトと一緒にOfficeコード サンプルのコレクションExcel on the web。
-ms.date: 06/29/2021
+ms.date: 03/24/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: c0e852ba2afcc37f5921ff0b2256df0769535f6e
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 853b00349b246e74765eb2959b4926fad42f07c5
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59330738"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585871"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel-on-the-web"></a>Office スクリプトの基本的なExcel on the web
 
@@ -25,7 +25,7 @@ ms.locfileid: "59330738"
 
 ### <a name="read-and-log-one-cell"></a>1 つのセルを読み取り、ログに記録する
 
-このサンプルでは **、A1 の値を読み** 取り、コンソールに出力します。
+このサンプルでは、 **A1 の値を読み** 取り、コンソールに出力します。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -233,7 +233,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-次のサンプルでは、データに格納されている日付を読みExcel JavaScript Date オブジェクトに変換します。 日付の数値 [シリアル番号を](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) JavaScript Date の入力として使用します。
+次のサンプルでは、データに格納されている日付を読みExcel JavaScript Date オブジェクトに変換します。 日付の数値シリアル番号を JavaScript Date の入力として使用します。 このシリアル番号については、 [NOW() 関数の記事で説明](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) します。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -383,7 +383,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ### <a name="handle-a-spill-error-returned-from-a-formula"></a>数式から `#SPILL!` 返されるエラーを処理する
 
-このスクリプトは、TRANSPOSE 関数を使用して範囲 "A1:D2" を "A4:B7" にトランスポーズします。 トランスポーズでエラーが発生した場合は、ターゲット範囲をクリアし `#SPILL` 、数式を再度適用します。
+このスクリプトは、TRANSPOSE 関数を使用して範囲 "A1:D2" を "A4:B7" にトランスポーズします。 トランスポーズでエラーが発生した `#SPILL` 場合は、ターゲット範囲をクリアし、数式を再度適用します。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

@@ -3,18 +3,18 @@ title: アクティブ セルの場所に基づいてテーブル列フィルタ
 description: アクティブ セルの場所に基づいてテーブル列フィルターをクリアする方法について学習します。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: bb01292017a027e41230d786337b5bf53293a20c
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: c52f1a3501318a479744abc6f2aa15cfaf3f9ded
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59332986"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585584"
 ---
 # <a name="clear-table-column-filter-based-on-active-cell-location"></a>アクティブ セルの場所に基づいてテーブル列フィルターをクリアする
 
 このサンプルでは、アクティブセルの場所に基づいてテーブル列フィルターをクリアします。 このスクリプトは、セルがテーブルの一部かどうかを検出し、テーブル列を決定し、そのセルに適用されているフィルターをクリアします。
 
-フィルターをクリアする前に (および後で再適用する) 前にフィルターを保存する方法の[](move-rows-across-tables.md)詳細については、「フィルターを保存してテーブル間で行を移動する」、より高度なサンプルを参照してください。
+フィルターをクリアする前に (および後で再適用する) 前にフィルターを保存する方法の詳細については[](move-rows-across-tables.md)、「フィルターを保存してテーブル間で行を移動する」、より高度なサンプルを参照してください。
 
 _列フィルターをクリアする前に (アクティブ セルに注意してください)_
 
@@ -26,11 +26,11 @@ _列フィルターをクリアした後_
 
 ## <a name="sample-excel-file"></a>サンプル Excel ファイル
 
-すぐに <a href="table-with-filter.xlsx"> 使用table-with-filter.xlsx</a> ブックのブックをダウンロードします。 次のスクリプトを追加して、サンプルを自分で試してみてください。
+すぐに <a href="table-with-filter.xlsx">table-with-filter.xlsx</a> ブックのダウンロード を行います。 次のスクリプトを追加して、サンプルを自分で試してみてください。
 
 ## <a name="sample-code-clear-table-column-filter-based-on-active-cell"></a>サンプル コード: アクティブ セルに基づいてテーブル列フィルターをクリアする
 
-次のスクリプトは、アクティブなセルの場所に基づいてテーブル列フィルターをクリアし、テーブルを持つ任意のExcelに適用できます。
+次のスクリプトは、アクティブ セルの場所に基づいてテーブル列フィルターをクリアし、テーブルを持つ任意のExcelに適用できます。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

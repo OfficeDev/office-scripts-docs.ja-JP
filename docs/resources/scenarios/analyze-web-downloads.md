@@ -1,18 +1,18 @@
 ---
-title: 'Officeスクリプトのサンプル シナリオ: Web ダウンロードの分析'
+title: 'Office スクリプトのサンプル シナリオ: Web ダウンロードの分析'
 description: ブック内の生のインターネット トラフィック データをExcel、その情報をテーブルに整理する前に、元の場所を決定するサンプル。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: ad889e75d5f2e4b8af4379c3875b43ff8e1beda6
-ms.sourcegitcommit: ea9c3685a7407a07acf802705f4f44fb007c7825
+ms.openlocfilehash: 9d2d0ba302c72d4ca1f1aaad5e9cee5ba40d64e9
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2021
-ms.locfileid: "61333499"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585492"
 ---
-# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Officeスクリプトのサンプル シナリオ: Web ダウンロードの分析
+# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office スクリプトのサンプル シナリオ: Web ダウンロードの分析
 
-このシナリオでは、会社の Web サイトからダウンロード レポートを分析する必要があります。 この分析の目的は、Web トラフィックが米国または世界の他の場所から送信されるかどうかを判断します。
+このシナリオでは、会社の Web サイトからダウンロード レポートを分析する必要があります。 この分析の目的は、Web トラフィックが世界中の米国から送信されるかどうかを判断します。
 
 同僚が生データをブックにアップロードします。 毎週のデータ セットには、独自のワークシートがあります。 また、週 **別の傾向を** 示す表とグラフを含むサマリー ワークシートがあります。
 
@@ -207,11 +207,11 @@ ms.locfileid: "61333499"
     }
     ```
 
-1. スクリプトの名前を **[Web ダウンロードの分析] に変更し** 、保存します。
+1. スクリプトの名前を [ **Web ダウンロードの分析] に変更し** 、保存します。
 
 ## <a name="running-the-script"></a>スクリプトを実行する
 
-[週] ワークシート **に \* \* 移動** し、[Web ダウンロードの分析]**スクリプトを実行** します。 スクリプトは、現在のシートに条件付き書式と場所のラベル付けを適用します。 また、[概要] ワークシート **も更新** されます。
+[週] ワークシートに **移動\*\*** し、[Web ダウンロードの **分析] スクリプトを実行** します。 スクリプトは、現在のシートに条件付き書式と場所のラベル付けを適用します。 また、[概要] ワークシート **も更新** されます。
 
 ### <a name="before-running-the-script"></a>スクリプトを実行する前に
 

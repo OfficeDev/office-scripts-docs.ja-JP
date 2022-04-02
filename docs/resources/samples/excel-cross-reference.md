@@ -1,22 +1,22 @@
 ---
 title: ファイルとファイルExcel相互参照Power Automate
-description: スクリプトとスクリプトを使用Office、Power Automateファイルを相互参照して書式設定するExcelします。
+description: スクリプトとスクリプトをOfficeし、Power Automateファイルを相互参照して書式設定するExcelします。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: adeb84140cb9884309c9f37854a29fc4d59b17ed
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: 13ba6c8ba6f9232554ea6cfd5f98c308ea981683
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59332979"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585487"
 ---
 # <a name="cross-reference-excel-files-with-power-automate"></a>ファイルとファイルExcel相互参照Power Automate
 
-このソリューションでは、2 つのファイル間でデータを比較Excel不一致を見つける方法を示します。 このスクリプトはOfficeを使用してデータを分析し、Power Automate間の通信を行います。
+このソリューションでは、2 つのファイル間でデータを比較Excel不一致を見つける方法を示します。 このツールでは、Officeスクリプトを使用してデータを分析しPower Automateブック間の通信を行います。
 
 ## <a name="example-scenario"></a>シナリオ例
 
-今後の会議にスピーカーをスケジュールしているイベント コーディネーターです。 イベント データは 1 つのスプレッドシートに、スピーカーの登録は別のスプレッドシートに保持します。 2 つのブックの同期を確実に行う場合は、Officeスクリプトを使用して、潜在的な問題を強調表示します。
+今後の会議にスピーカーをスケジュールしているイベント コーディネーターです。 イベント データは 1 つのスプレッドシートに、スピーカーの登録は別のスプレッドシートに保持します。 2 つのブックを確実に同期するために、スクリプトを使用してフローを使用Office潜在的な問題を強調表示します。
 
 ## <a name="sample-excel-files"></a>サンプル Excel ファイル
 
@@ -144,19 +144,19 @@ interface EventData {
 }
 ```
 
-## <a name="power-automate-flow-check-for-inconsistencies-across-the-workbooks"></a>Power Automateフロー: ブック全体の不整合を確認する
+## <a name="power-automate-flow-check-for-inconsistencies-across-the-workbooks"></a>Power Automateフロー: ブック間の不整合を確認する
 
 このフローは、最初のブックからイベント情報を抽出し、そのデータを使用して 2 番目のブックを検証します。
 
-1. 新しいインスタント [Power Automate](https://flow.microsoft.com)にサインインし、**新しいインスタント クラウド フローを作成します**。
-1. [フロー **を手動でトリガーする] を選択し** 、[作成] を **選択します**。
+1. 新しいインスタント [Power Automate](https://flow.microsoft.com)にサインインして、**新しいインスタント クラウド フローを作成します**。
+1. [フロー **を手動でトリガーする] を選択し、[** 作成] を **選択します**。
 1. [スクリプト **の実行]** アクションを使用して、Excel **(Business)** コネクタを使用する新しい **手順を追加** します。 アクションには、次の値を使用します。
     * **場所**: OneDrive for Business
     * **ドキュメント ライブラリ**: OneDrive
     * **ファイル**: event-data.xlsx ([ファイル選択で選択)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
     * **スクリプト**: イベント データの取得
 
-    :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="最初のスクリプトExcelオンライン (Business) コネクタの完成Power Automate。":::
+    :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="オンライン (Excel) コネクタの最初のスクリプトの完了Power Automate。":::
 
 1. [スクリプトの実行 **] アクション** を使用して、Excel **(Business)** コネクタを使用する 2 番目の新しい **手順を追加** します。 アクションには、次の値を使用します。
     * **場所**: OneDrive for Business
@@ -165,11 +165,11 @@ interface EventData {
     * **スクリプト**: スピーカー登録の検証
 
     :::image type="content" source="../../images/cross-reference-flow-2.png" alt-text="2 番目Excelのオンライン (Business) コネクタの完成Power Automate。":::
-1. このサンプルでは、Outlookクライアントとして使用します。 サポートされている任意の電子メール コネクタPower Automate使用できます。 新しい **手順を追加** して、Office 365 Outlook **および電子** メール **(V2) アクションを使用** します。 アクションには、次の値を使用します。
-    * **To**: テスト用メール アカウント (または個人用メール)
-    * **件名**: イベントの検証結果
-    * **本文**: result (_Run スクリプト 2 からの **動的コンテンツ**_)
+1. このサンプルでは、Outlookクライアントとして使用します。 サポートされている任意の電子メール コネクタPower Automate使用できます。 新しい **手順を追加** して、**Office 365 Outlookおよび電子** メール **(V2) アクションを使用** します。 アクションには、次の値を使用します。
+    * **To**: テストメール アカウント (または個人用メール)
+    * **件名**: イベント検証の結果
+    * **本文**: result (_Run スクリプト **2 の動的コンテンツ**_)
 
-    :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="Office 365 OutlookでPower Automate。":::
+    :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="完了したOffice 365 OutlookコネクタをPower Automate。":::
 1. フローを保存します。 [フロー エディター **] ページ** の [テスト] ボタンを使用するか、[マイ フロー] タブでフロー **を実行** します。メッセージが表示されたら、必ずアクセスを許可してください。
-1. "不一致が見つかりました" というメールを受信する必要があります。 データにはレビューが必要です。 これは、グループ内の行と **speaker-registrations.xlsx行の** 間に違 **いevent-data.xlsx。** [speaker-registrations.xlsxを **開** き、スピーカー登録リストに潜在的な問題があるいくつかの強調表示されたセルを表示します。
+1. "不一致が見つかりました" というメールを受信する必要があります。 データにはレビューが必要です。 これは、グループ内の行とspeaker-registrations.xlsxの間に違い **event-data.xlsx**。 [ **speaker-registrations.xlsxを開** き、スピーカー登録リストに潜在的な問題があるいくつかの強調表示されたセルを表示します。
