@@ -3,12 +3,12 @@ title: 手動 Power Automation フローからスクリプトを呼び出す
 description: Power Automate の Office スクリプトで、手動のトリガーを使う方法を説明します。
 ms.date: 06/29/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 506481c8b5ee1ae94a4e0a7fc926abc62ba7c5f9
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: e926540976dc066b3f07620c1e710dfa3abc7660
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59330864"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585941"
 ---
 # <a name="call-scripts-from-a-manual-power-automate-flow"></a>手動 Power Automation フローからスクリプトを呼び出す
 
@@ -100,7 +100,7 @@ Power Automate では、ブック コンポーネントにアクセスするた�
 
 9. **[保存]** を選択します。
 
-これで、フローは Power Automate で実行できるようになりました。 フロー エディターの **[テスト]** ボタンを使用してテストするか、チュートリアルの残りの手順に従って、フロー コレクションからフローを実行できます。
+これで、フローをPower Automateで実行する準備ができました。フロー エディターの **［テスト］** ボタンを使用してテストするか、残りのチュートリアルの手順に従ってフロー コレクションからフローを実行できます。
 
 ## <a name="run-the-script-through-power-automate"></a>Power Automate でスクリプトを実行する
 
@@ -116,9 +116,9 @@ Power Automate では、ブック コンポーネントにアクセスするた�
 
 4. フローを実行するための作業ウィンドウが表示されます。 Excel Online への **サインイン** を要求された場合は、**[続行]** を選択します。
 
-5. **[フローの実行]** を選択します。 これにより、関連する Office スクリプトを実行するフローが実行されます。
+5. **［フローの実行］** を選択します。これにより、関連する Office スクリプトを実行するフローが実行されます。
 
-6. **[完了]** を選択します。 それに応じて **[実行]** セクションが更新されます。
+6. **［完了］** を選択します。それに応じて **[実行]** セクションが更新されます。
 
 7. ページを更新して、Power Automate の結果を表示します。 成功した場合は、ワークブックに移動して、更新されたセルを確認します。 エラーが発生した場合は、フローの設定を確認し、もう一度実行します。
 

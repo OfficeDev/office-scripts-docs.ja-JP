@@ -3,12 +3,12 @@ title: Excel on the web での Office スクリプトのスクリプトの基本
 description: Office スクリプトを作成する前に理解しておくべきオブジェクト モデルの情報と他の基本事項について説明します。
 ms.date: 05/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 090b5b71a9becf76186e852198fdee0e5c040866
-ms.sourcegitcommit: d3ed4bdeeba805d97c930394e172e8306a0cf484
+ms.openlocfilehash: e2ba7eaa956f2009c9017bbfd1f390f56eb9008e
+ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/15/2021
-ms.locfileid: "59326892"
+ms.lasthandoff: 03/31/2022
+ms.locfileid: "64585724"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Excel on the web での Office スクリプトのスクリプトの基本事項
 
@@ -63,7 +63,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="ranges"></a>範囲
 
-範囲とは、ブック内の連続したセルのグループのことです。 スクリプトでは、範囲を定義するのに通常 A1 形式の表記が使用されます (例: **B3** は、列 **B**、行 **3** の単一のセルで、**C2:F4** は、列 **C** から **F**、行 **2** から **4** までのセル)。
+範囲は、ブック内の連続したセルのグループです。スクリプトでは、範囲を定義するのに通常 A1 形式の表記が使用されます (例: **B3** は、列 **B**、行 **3** の単一のセルで、**C2:F4** は、列 **C** から **F**、行 **2** から **4** までのセル)。
 
 範囲には、値、数式、書式の 3 つの主要プロパティがあります。 これらのプロパティで、セルの値、評価する数式、およびセルの視覚的な書式設定を取得または設定します。 `getValues`、`getFormulas`、`getFormat` を介してアクセスします。 値と数式は、`setValues` と `setFormulas` で変更できますが、書式は、個別に設定されている複数の小さなオブジェクトから構成されている `RangeFormat` オブジェクトです。
 
@@ -240,7 +240,7 @@ function main(workbook: ExcelScript.Workbook) {
 ```
 
 > [!TIP]
-> ほとんどの Excel オブジェクトには `setName` メソッドがあります。 これにより、スクリプトの後半や、同じワークブックを扱う他のスクリプトで、Excel オブジェクトに簡単にアクセスできるようになります。
+> ほとんどの Excel オブジェクトは `setName` メソッドを持っています。これにより、スクリプトの後半や、同じワークブックを扱う他のスクリプトで、Excel オブジェクトに簡単にアクセスできるようになります。
 
 ### <a name="verify-an-object-exists-in-the-collection"></a>コレクションにオブジェクトが存在することを確認する
 

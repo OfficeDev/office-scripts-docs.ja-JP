@@ -35,7 +35,7 @@ items:
             href: develop/script-buttons.md
           - name: Power Automate でスクリプトを実行する
             href: develop/power-automate-integration.md
-          - name: Power Automate フローでマクロ ファイルを使用する
+          - name: Power Automate フローで .xlsm ファイルを使用する
             href: develop/macros-power-automate.md
       - name: トラブルシューティング
         items:
