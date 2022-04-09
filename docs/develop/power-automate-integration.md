@@ -5,16 +5,16 @@ ms.date: 03/08/2022
 ms.localizationpriority: medium
 ms.openlocfilehash: dbf65086e564b20ca0fc3a4dc1c527188540be6b
 ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/31/2022
 ms.locfileid: "64585752"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>Power Automate を使用した Office スクリプトの実行
 
-[Power Automate](https://flow.microsoft.com) を使用すると、Office スクリプトを大規模で自動化されたワークフローに追加できます。 Power Automate を使って、メールの内容をワークシートのテーブルに追加したり、ブックのコメントに基づいてプロジェクト管理ツールでアクションを作成したりできます。
+[Power Automate](https://flow.microsoft.com) では、より大規模で自動化されたワークフローに Office スクリプトを追加できます。Power Automate を使用すると、ワークシートのテーブルにメールの内容を追加したり、ブックのコメントに基づいてプロジェクト管理ツールでアクションを作成したりできます。
 
-## <a name="get-started"></a>作業の開始
+## <a name="get-started"></a>概要
 
 Power Automate を初めて使用する場合は、「[Power Automate に関する入門情報](/power-automate/getting-started)」にアクセスすることをお勧めします。 そちらで、利用可能なすべてのオートメーションの可能性について詳しく学ぶことができます。 このドキュメントでは、Power Automate での Office スクリプトの動作と、それが Excel エクスペリエンスの改善にどのように役立つかに重点が置かれています。
 
@@ -42,19 +42,19 @@ Power Automate を使用すると、フローのステップ間でデータの�
 
 Power Automate でフローを構成する場合、スクリプト入力を静的な値、[式](/power-automate/use-expressions-in-conditions)、または動的なコンテンツとして指定できます。 個々のサービスのコネクタの詳細については、[Power Automate コネクタに関するドキュメント](/connectors/)を参照してください。
 
-#### <a name="type-restrictions"></a>型の制限
+#### <a name="type-restrictions"></a>入力の制限
 
-スクリプトの `main` 関数に入力パラメーターを追加する場合は、次の上限や制限を検討してください。 これらは、スクリプトの戻り値の種類にも適用されます。
+スクリプトの `main` 関数に入力パラメーターを追加する場合は、次の上限や制限を検討してください。 これらは、スクリプトの戻り値の型にも適用されます。
 
 1. 最後のパラメーターは `ExcelScript.Workbook` の型にする必要があります。 パラメーター名は関係ありません。
 
-1. `string`型 、、`number`、`boolean``unknown`、`object`、、`undefined`およびサポートされています。
+1. 型 `string`、`number`、`boolean`、`unknown`、`object`、および `undefined` がサポートされています。
 
-1. 前にリストした `[]` 型 `Array<T>` の配列 (およびスタイルの両方) がサポートされています。 入れ子になった配列もサポートされています。
+1. 前述の型の配列 (`[]` と `Array<T>` スタイルの両方) がサポートされています。 入れ子になった配列もサポートされています。
 
-1. 共用体の型は、単一の型に属するリテラルの共用体である場合に使用できます ( `"Left" | "Right"`例: ,not `"Left", 5`)。 undefined を含むサポートされる型の共用体 (`string | undefined` など) もサポートされます。
+1. 共用体型は、単一の型に属するリテラルの共用体 (`"Left", 5` ではなく、`"Left" | "Right"` など) の場合に許可されます。 undefined を含むサポートされる型の共用体 (`string | undefined` など) もサポートされます。
 
-1. オブジェクト型は、型 `string`、`number`、`boolean`、サポートされている配列、または他のサポートされているオブジェクトのプロパティが含まれる場合に許可されます。 次の例は、パラメーターの種類としてサポートされている入れ子になったオブジェクトを示しています。
+1. オブジェクト型は、型 `string`、`number`、`boolean`、サポートされている配列、または他のサポートされているオブジェクトのプロパティが含まれる場合に許可されます。 次の例は、パラメーターの型としてサポートされる入れ子にされたオブジェクトを示しています。
 
     ```TypeScript
     // The Employee object is supported because Position is also composed of supported types.
@@ -69,7 +69,7 @@ Power Automate でフローを構成する場合、スクリプト入力を静�
     }
     ```
 
-1. オブジェクトのインターフェイスまたはクラス定義はスクリプトで定義されている必要があります。 次の例のように、オブジェクトをインラインで匿名で定義できます。
+1. オブジェクトのインターフェイスまたはクラス定義はスクリプトで定義されている必要があります。 次の例のように、オブジェクトをインラインで匿名で定義することができます。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook): {name: string, email: string}
@@ -77,13 +77,13 @@ Power Automate でフローを構成する場合、スクリプト入力を静�
 
 #### <a name="optional-and-default-parameters"></a>省略可能なパラメーターと既定のパラメーター
 
-1. 省略可能なパラメーターは許可され、省略可能な修飾子 (たとえば) `?` で示されます `function main(workbook: ExcelScript.Workbook, Name?: string)`。
+1. 省略可能なパラメーターは許可され、省略可能な修飾子 `?` で示されます (例: `function main(workbook: ExcelScript.Workbook, Name?: string)`)。
 
 1. 既定のパラメーター値は許可されています (例: `function main(workbook: ExcelScript.Workbook, Name: string = 'Jane Doe')`)。
 
 ### <a name="return-data-from-a-script"></a>スクリプトからデータを返す
 
-スクリプトではブックからデータを返すことができ、Power Automate フローの動的なコンテンツとして使用することができます。 前 [に示したのと同じ型制限](#type-restrictions) が戻り値の型に適用されます。 オブジェクトを返す場合は、戻り値の型の構文を関数に追加 `main` します。 たとえば、スクリプトから値を返す`string`場合、署名は `main` .`function main(workbook: ExcelScript.Workbook): string`
+スクリプトではブックからデータを返すことができ、Power Automate フローの動的なコンテンツとして使用することができます。 [前述の型制限](#type-restrictions) が戻り値の型に適用されます。 オブジェクトを返すには、戻り値の型構文を `main` 関数に追加します。 たとえば、スクリプトから `string` 値を返す場合、`main` シグネチャは `function main(workbook: ExcelScript.Workbook): string` になります。
 
 ## <a name="example"></a>例
 
