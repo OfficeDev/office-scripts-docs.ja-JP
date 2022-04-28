@@ -111,6 +111,8 @@ items:
                 href: resources/scenarios/task-reminders.md
           - name: コミュニティの投稿
             items:
+              - name: 時計のボタンを押す
+                href: resources/scenarios/punch-clock.md
               - name: 季節のご挨拶
                 href: resources/samples/community-seasons-greetings.md
       - name: Office スクリプトとその他のプラットフォーム
