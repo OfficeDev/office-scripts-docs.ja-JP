@@ -1,80 +1,81 @@
 ---
-title: Officeスクリプトのサンプル
-description: 使用可能なOfficeスクリプトのサンプルとシナリオです。
-ms.date: 01/20/2022
+title: Office スクリプトのサンプル
+description: スクリプトのサンプルとシナリオOffice使用できます。
+ms.date: 04/26/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 2dbbf4479b79e5a3d9f8215ed58fc13ca56605e6
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 7c9bbe9b6f7eb8abad2995dac72ccf636d585d69
+ms.sourcegitcommit: e6428a5214fa38aef036a952a0e3c09dbf6e4d3e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585780"
+ms.lasthandoff: 04/28/2022
+ms.locfileid: "65109159"
 ---
-# <a name="office-scripts-samples-and-scenarios"></a>Officeスクリプトのサンプルとシナリオ
+# <a name="office-scripts-samples-and-scenarios"></a>Office スクリプトのサンプルとシナリオ
 
-このセクションでは、エンドユーザー [Officeタスク](../../overview/excel.md)の自動化に役立つスクリプト ベースのオートメーション ソリューションについて説明します。 これは、ビジネス ユーザーが直面する現実的なシナリオが含まれています。詳細なソリューションと、ステップバイステップの説明ビデオ リンクを提供します。
+このセクションには、エンド ユーザーが毎日のタスクの自動化を実現するのに役立つ[、スクリプト](../../overview/excel.md) ベースの自動化ソリューションOfficeが含まれています。 ビジネス ユーザーが直面する現実的なシナリオが含まれており、詳細なソリューションとステップバイステップの手順ビデオ リンクが提供されます。
 
-「基本」および「基本 [](#basics)」の各 [](#beyond-the-basics)プロジェクトについて、ソース コード、ステップ バイ ステップ [**の YouTube**](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0) ビデオなどをご覧ください。
+[[基本]](#basics) と [[基本以外](#beyond-the-basics)] の各プロジェクトについて、ソース コード、ステップ バイ ステップ [**の YouTube ビデオ**](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0)などを確認してください。
 
-シナリオ [では](#scenarios)、実際の使用例を示す大きなシナリオ サンプルがいくつか含まれています。
+シナリオには、実際 [の](#scenarios)ユース ケースを示す大規模なシナリオ サンプルがいくつか含まれています。
 
-また、コミュニティ [からの投稿も歓迎します](#community-contributions-and-fun-samples)。
+また、 [コミュニティからの貢献](#community-contributions-and-fun-samples)も歓迎します。
 
 ## <a name="basics"></a>基本事項
 
 | Project | 詳細 |
 |---------|---------|
-| [スクリプトの基本](../excel-samples.md) | これらのサンプルでは、スクリプトの基本的な構成要素Office示します。 |
-| [コメントを追加Excel](add-excel-comments.md) | このサンプルでは、同僚を含むセルにコメント@mentioning追加します。 |
-| [ブックに画像を追加する](add-image-to-workbook.md) | このサンプルでは、ブックにイメージを追加し、シート間でイメージをコピーします。|
-| [複数のテーブルExcel 1 つのテーブルにコピーする](copy-tables-combine.md) | このサンプルでは、複数のテーブルExcelデータを、すべての行を含む 1 つのテーブルに結合します。 |
+| [スクリプトの基本](../excel-samples.md) | これらのサンプルでは、Office スクリプトの基本的な構成要素を示します。 |
+| [Excelにコメントを追加する](add-excel-comments.md) | このサンプルでは、同僚@mentioning含むコメントをセルに追加します。 |
+| [ブックに画像を追加する](add-image-to-workbook.md) | このサンプルでは、ブックに画像を追加し、シート間で画像をコピーします。|
+| [複数のExcel テーブルを 1 つのテーブルにコピーする](copy-tables-combine.md) | このサンプルでは、複数のExcel テーブルのデータを、すべての行を含む 1 つのテーブルに結合します。 |
 | [ブックの目次を作成する](table-of-contents.md) | このサンプルでは、各ワークシートへのリンクを含む目次を作成します。 |
 
 ## <a name="beyond-the-basics"></a>応用
 
-完全なスクリプト、使用されているサンプル Excel ファイル、およびビデオ (YouTube でホストされる) と共にサンプル シナリオを自動化する次のエンドツーエンド プロジェクト[を確認してください](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0)。
+サンプル シナリオを自動化する次のエンド ツー エンド プロジェクトと、完全なスクリプト、使用されるサンプル Excel ファイル、[およびビデオ (YouTube でホスト) を](https://www.youtube.com/playlist?list=PLr3zVPZrMOUMl88fs8uc2GGAePRnNe6m0)確認してください。
 
 | Project | 詳細 |
 |---------|---------|
-| [ワークシートを 1 つのブックに結合する](combine-worksheets-into-single-workbook.md) | このサンプルでは、OfficeスクリプトとPower Automateを使用して、他のブックから 1 つのブックにデータをプルします。 |
-| [CSV ファイルをブックにExcelする](convert-csv.md) | このサンプルでは、OfficeスクリプトとPower Automateを使用して、.xlsxファイル.csvします。 |
-| [相互参照ブック](excel-cross-reference.md) | このサンプルでは、OfficeスクリプトPower Automateを使用して、さまざまなブックの情報を相互参照して検証します。 |
-| [特定のシートまたはすべてのシートの空白行を数える](count-blank-rows.md) | このサンプルでは、データが存在すると予測されるシート内に空白行が存在する場合を検出し、データ フローで使用するために空白行数をPower Automateします。 |
-| [電子メール グラフと表の画像](email-images-chart-table.md) | このサンプルでは、OfficeおよびPower Automateアクションを使用してグラフを作成し、そのグラフを画像として電子メールで送信します。 |
-| [外部フェッチ呼び出し](external-fetch-calls.md) | このサンプルでは、`fetch`スクリプトのデータからGitHubを取得します。 |
-| [テーブルをExcelし、表示範囲を取得する](filter-table-get-visible-range.md) | 次のサンプルでは、Excelをフィルター処理し、表示範囲を JSON オブジェクトとして返します。 この JSON は、大規模なソリューションの一部Power Automateフローに提供できます。 |
-| [計算モードを管理Excel](excel-calculation.md) | このサンプルでは、スクリプトを使用して計算モードを使用し、Excel on the webメソッドOffice示します。 |
+| [ワークシートを 1 つのブックに結合する](combine-worksheets-into-single-workbook.md) | このサンプルでは、Office スクリプトとPower Automateを使用して、他のブックから 1 つのブックにデータをプルします。 |
+| [CSV ファイルをExcel ブックに変換する](convert-csv.md) | このサンプルでは、Office スクリプトとPower Automateを使用して、.csv ファイルから.xlsx ファイルを作成します。 |
+| [相互参照ブック](excel-cross-reference.md) | このサンプルでは、Office スクリプトとPower Automateを使用して、さまざまなブックの情報を相互参照および検証します。 |
+| [特定のシートまたはすべてのシート内の空白行をカウントする](count-blank-rows.md) | このサンプルでは、シートにデータが存在すると予測される空白行があるかどうかを検出し、Power Automate フローでの使用状況の空白行数を報告します。 |
+| [電子メール グラフと表の画像](email-images-chart-table.md) | このサンプルでは、Office スクリプトとPower Automateアクションを使用してグラフを作成し、そのグラフを電子メールで画像として送信します。 |
+| [外部フェッチ呼び出し](external-fetch-calls.md) | このサンプルでは、スクリプトのGitHubから情報を取得するために使用`fetch`します。 |
+| [テーブルExcelフィルター処理し、表示範囲を取得する](filter-table-get-visible-range.md) | このサンプルでは、Excel テーブルをフィルター処理し、表示範囲を JSON オブジェクトとして返します。 この JSON は、大規模なソリューションの一部としてPower Automate フローに提供できます。 |
+| [Excelで計算モードを管理する](excel-calculation.md) | このサンプルでは、Office スクリプトを使用して計算モードを使用し、Excel on the webでメソッドを計算する方法を示します。 |
 | [テーブル間で行を移動する](move-rows-across-tables.md) | このサンプルでは、フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する方法を示します。 |
-| [JSON Excelデータを出力する](get-table-data.md) | このソリューションは、テーブル データExcel JSON として出力する方法を示Power Automate。 |
-| [ワークシート内の各セルからハイパーリンクをExcelする](remove-hyperlinks-from-cells.md) | このサンプルでは、現在のワークシートからすべてのハイパーリンクをクリアします。 |
-| [フォルダー内のすべての Excel ファイルでスクリプトを実行する](automate-tasks-on-all-excel-files-in-folder.md) | このプロジェクトは、OneDrive for Business のフォルダー内のすべてのファイルに対して一連の自動化タスクをSharePointします。 ファイルの計算を実行し、Excelを追加し、同僚にコメント@mentions挿入します。 |
-| [大規模データセットを書き込む](write-large-dataset.md) | このサンプルでは、大きな範囲を小さいサブ範囲として送信する方法を示します。 |
+| [JSON としてデータExcel出力する](get-table-data.md) | このソリューションでは、Power Automateで使用Excelテーブル データを JSON として出力する方法を示します。 |
+| [Excel ワークシート内の各セルからハイパーリンクを削除する](remove-hyperlinks-from-cells.md) | このサンプルでは、現在のワークシートからすべてのハイパーリンクをクリアします。 |
+| [フォルダー内のすべての Excel ファイルでスクリプトを実行する](automate-tasks-on-all-excel-files-in-folder.md) | このプロジェクトは、OneDrive for Business上のフォルダーに置かれたすべてのファイルに対して一連の自動化タスクを実行します (SharePoint フォルダーにも使用できます)。 Excel ファイルに対して計算を実行し、書式設定を追加し、同僚@mentionsコメントを挿入します。 |
+| [大規模データセットを書き込む](write-large-dataset.md) | このサンプルでは、より小さい部分範囲として大きな範囲を送信する方法を示します。 |
 
 ## <a name="scenarios"></a>シナリオ
 
-Officeスクリプトは、日常の一部を自動化できます。 これらの毎日のタスクは、多くの場合、固有のエコシステムに存在し、Excelブックは特定の方法で設定されます。 これらの大規模なシナリオ サンプルでは、このような実際の使用例を示します。 これらのスクリプトには、Officeブックの両方が含まれるので、シナリオを最後から最後まで確認できます。
+Office スクリプトは、毎日のルーチンの一部を自動化できます。 これらの日常的なタスクは、多くの場合、固有のエコシステムに存在し、特定の方法で設定されたExcelブックがあります。 これらの大規模なシナリオ サンプルは、このような実際のユース ケースを示しています。 Office スクリプトとブックの両方が含まれているので、シナリオを最後から最後まで確認できます。
 
 | シナリオ | 詳細 |
 |---------|---------|
-| [Web ダウンロードの分析](../scenarios/analyze-web-downloads.md) | このシナリオでは、Web トラフィック レコードを解析してユーザーの原産国を決定するスクリプトを備えます。 スクリプトのサブ関数の使用、条件付き書式の適用、テーブルの操作など、テキスト解析のスキルを紹介します。 |
-| [NOAA の水位データを取得してグラフ化する](../scenarios/noaa-data-fetch.md) | このシナリオでは、Office スクリプトを使用して、外部ソース ([NOAA Tides および Currents](https://tidesandcurrents.noaa.gov/) データベース) からデータを取得し、結果の情報をグラフ化します。 データを取得し、グラフを使用する `fetch` スキルを強調します。 |
-| [グレード計算機](../scenarios/grade-calculator.md) | このシナリオでは、教員の成績を検証するスクリプトを備えます。 エラー チェック、セルの書式設定、および正規表現のスキルを紹介します。 |
-| [Teams で面接をスケジュールする](../scenarios/schedule-interviews-in-teams.md) | このシナリオでは、スプレッドシートを使用してExcel会議の時間を管理し、会議をスケジュールするフローを作成する方法をTeams。 |
-| [タスクのリマインダー](../scenarios/task-reminders.md) | このシナリオでは、Officeフロー Power Automateスクリプトを使用して、同僚にリマインダーを送信してプロジェクトの状態を更新します。 スクリプトとの間の統合Power Automateデータ転送のスキルを強調します。 |
+| [Web ダウンロードの分析](../scenarios/analyze-web-downloads.md) | このシナリオでは、Web トラフィック レコードを解析してユーザーの配信元の国を特定するスクリプトが用意されています。 スクリプトでサブ関数を使用し、条件付き書式を適用し、テーブルを操作するテキスト解析のスキルを紹介します。 |
+| [NOAA の水位データを取得してグラフ化する](../scenarios/noaa-data-fetch.md) | このシナリオでは、Office スクリプトを使用して外部ソース ([NOAA Tides および Currents データベース](https://tidesandcurrents.noaa.gov/)) からデータをプルし、結果の情報をグラフ化します。 データの取得とグラフの使用に使用 `fetch` するスキルが強調されています。 |
+| [グレード計算機](../scenarios/grade-calculator.md) | このシナリオでは、クラスの成績についてインストラクターのレコードを検証するスクリプトが用意されています。 エラーチェック、セルの書式設定、正規表現のスキルを紹介します。 |
+| [Teams で面接をスケジュールする](../scenarios/schedule-interviews-in-teams.md) | このシナリオでは、Excel スプレッドシートを使用して面接会議の時間を管理し、Teamsで会議をスケジュールするフローを作成する方法を示します。 |
+| [タスクのリマインダー](../scenarios/task-reminders.md) | このシナリオでは、Power Automate フローのOffice スクリプトを使用して、同僚にリマインダーを送信してプロジェクトの状態を更新します。 これは、Power Automate統合とスクリプトとの間のデータ転送のスキルを強調しています。 |
 
-## <a name="community-contributions-and-fun-samples"></a>Communityと楽しいサンプル
+## <a name="community-contributions-and-fun-samples"></a>Community投稿と楽しいサンプル
 
-スクリプト コミュニティ[からの投稿](https://github.com/OfficeDev/office-scripts-docs/blob/master/Contributing.md)Office歓迎します。 レビューのプル要求を自由に作成してください。
+Office スクリプト コミュニティからの[貢献](https://github.com/OfficeDev/office-scripts-docs/blob/master/Contributing.md)を歓迎します。 レビュー用のプル要求を自由に作成してください。
 
 | Project | 詳細 |
 |---------|---------|
-| [ゲーム オブ ライフ](https://techcommunity.microsoft.com/t5/excel-blog/ready-player-zero/ba-p/2246208) | Excel Tech Community の Yutao Huang による "Ready Player Zero" ブログには、John Conway's Game of Life をモデル化するスクリプト [*が含まれています*](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)。 |
-| [シーズンの案内応答アニメーション](community-seasons-greetings.md) | このスクリプトは、ホリデー シーズンの精神 [でレス](https://www.linkedin.com/in/lesblackconsultant/) リー ブラックによって投稿されました。 このスクリプトは、新しいスクリプトを使用して、Excel on the webクリスマス ツリー Officeです。 |
+| [Game of Life](https://techcommunity.microsoft.com/t5/excel-blog/ready-player-zero/ba-p/2246208) | Excel Tech Communityの Yutao Raspberr による "Ready Player Zero" ブログには、John Conway [*の The Game of Life*](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) をモデル化するスクリプトが含まれています。 |
+| [パンチ クロック ボタン](../scenarios/punch-clock.md) | このスクリプトは [、Brian Gonzalez](https://github.com/b-gonzalez) によって提供されました。 シナリオには、現在の時刻を記録するスクリプトとスクリプト ボタンが用意されています。 |
+| [シーズンのあいさつアニメーション](community-seasons-greetings.md) | このスクリプトは、休日の季節の精神で [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) によって提供されました。 Office スクリプトを使用して、Excel on the webでクリスマス ツリーを歌うのを示す楽しいスクリプトです。 |
 
 ## <a name="try-it-out"></a>試してみる
 
-これらのサンプルは、オープンソース。 自分で試してみてください。 Microsoft の仕事または学校のアカウントが、ライセンスを持つ仕事または学校からサブスクリプション (E3 以上) Microsoft 365必要です。 アカウントにサインインして https://office.com 開始してください。
+これらのサンプルはオープンソース。 自分で試してみてください。 サブスクリプションをMicrosoft 365するライセンスを持つ職場または学校の Microsoft 職場または学校アカウント (E3 以上) が必要です。 アカウントに https://office.com サインインして作業を開始します。
 
 ## <a name="leave-a-comment"></a>コメントを残す
 
-特定のサンプルのドキュメント ページの下部にある [フィードバック] セクションを使用して、コメントを残したり、提案をしたり、問題を記録したりしてください。
+特定のサンプルのドキュメント ページの下部にある **フィードバック** セクションを使用して、コメントを残したり、提案をしたり、問題をログに記録したりできます。

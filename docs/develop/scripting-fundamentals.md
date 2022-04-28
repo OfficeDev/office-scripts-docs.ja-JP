@@ -3,12 +3,12 @@ title: Excel on the web での Office スクリプトのスクリプトの基本
 description: Office スクリプトを作成する前に理解しておくべきオブジェクト モデルの情報と他の基本事項について説明します。
 ms.date: 05/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: e2ba7eaa956f2009c9017bbfd1f390f56eb9008e
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 633772655ca9346055d33682c36f35a5a8610cc8
+ms.sourcegitcommit: 4e3d3aa25fe4e604b806fbe72310b7a84ee72624
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585724"
+ms.lasthandoff: 04/27/2022
+ms.locfileid: "65077039"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Excel on the web での Office スクリプトのスクリプトの基本事項
 
@@ -319,11 +319,14 @@ function main(workbook: ExcelScript.Workbook) {
 - [ブック](/javascript/api/office-scripts/excelscript/excelscript.workbook)
 - [ワークシート](/javascript/api/office-scripts/excelscript/excelscript.worksheet)
 
+ピボットテーブル オブジェクト モデルに固有の情報については、「[Office スクリプトでのピボットテーブルの操作](pivottables.md)」を参照してください。
+
 ## <a name="see-also"></a>関連項目
 
 - [Excel on the web で Office スクリプトを記録、編集、作成する](../tutorials/excel-tutorial.md)
 - [Excel on the web で Office スクリプトを使用してブックのデータを読み取る](../tutorials/excel-read-tutorial.md)
 - [Office スクリプト API リファレンス](/javascript/api/office-scripts/overview)
+- [Office スクリプトでピボットテーブルを操作する](pivottables.md)
 - [Office スクリプトでの組み込みの JavaScript オブジェクトの使用](javascript-objects.md)
 - [Office スクリプトでのベスト プラクティス](best-practices.md)
 - [Office スクリプト開発者センター](https://developer.microsoft.com/office-scripts)

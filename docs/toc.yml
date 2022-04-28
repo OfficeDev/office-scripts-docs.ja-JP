@@ -37,6 +37,8 @@ items:
             href: develop/power-automate-integration.md
           - name: Power Automate フローで .xlsm ファイルを使用する
             href: develop/macros-power-automate.md
+          - name: ピボットテーブルを使用して作業する
+            href: develop/pivottables.md
       - name: トラブルシューティング
         items:
           - name: トラブルシューティングの基本
