@@ -1,2 +1,2 @@
 > [!IMPORTANT]
-> Excel を Teams で使用する場合、Office スクリプトは web 上の Teams でのみサポートされます (Teams Windows、Mac、iOS、または Android ではサポートされません)。
+> Teams で Excel を使用する場合、Office スクリプトは Web 版の Teams でのみサポートされます (Windows、Mac、iOS、Android の Teams ではサポートされません)。
