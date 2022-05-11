@@ -1,49 +1,46 @@
 ---
 title: Office スクリプト ファイルのストレージと所有権
-description: スクリプトをユーザー Officeに格納し、所有者Microsoft OneDrive転送する方法に関する情報。
-ms.date: 06/04/2021
+description: Office スクリプトをMicrosoft OneDriveに格納し、所有者間で転送する方法に関する情報。
+ms.date: 05/10/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 3f9e0f93c598816417a4ce920d3d481085fa8a20
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 5e2bc89db54ee5520c3b911ebd0f182777a78e2b
+ms.sourcegitcommit: 8ae932e8b4e521fec8576ab16126eb9fe22a8dd7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585913"
+ms.lasthandoff: 05/11/2022
+ms.locfileid: "65310758"
 ---
 # <a name="office-scripts-file-storage-and-ownership"></a>Office スクリプト ファイルのストレージと所有権
 
-Officeスクリプトは、ユーザーの **ファイルに .osts** ファイルとしてMicrosoft OneDrive。 ブックとは別に格納されます。 他のユーザーにアクセス権を与えるために、スクリプト[を他のブックExcelします](excel.md#share-office-scripts)。 つまり、スクリプトをファイルにリンクしているのではなく、ファイルとリンクします。 Excelファイルにアクセスできるユーザーは、スクリプトの表示、実行、またはコピーの作成を行えます。
+Office スクリプトは、Microsoft OneDriveに **.osts** ファイルとして格納されます。 ブックとは別に格納されます。 他のユーザーにアクセス権を付与するには、[スクリプトをExcel ブックと共有します](excel.md#share-office-scripts)。 つまり、スクリプトを添付せず、ファイルとリンクしています。 Excel ファイルにアクセスできるユーザーは、スクリプトを表示、実行、または作成することもできます。
 
-スクリプトを共有しない限り、他のユーザーはスクリプトにアクセスできません。 ユーザー OneDrive設定は、すべてのスクリプト **.osts** ファイルに対する共有アクセスとアクセス許可を、すべてのスクリプト設定に関係Excelします。 スクリプトは、ローカル ディスクまたはカスタム クラウドの場所からリンクできません。 Officeスクリプトは、スクリプトが OneDrive フォルダー内にある場合、またはブックと共有されている場合にのみ認識され、実行されます。
+スクリプトを共有しない限り、他のユーザーはアクセスできません。 OneDrive設定は、Excel設定に関係なく、すべてのスクリプト **.osts** ファイルに対する共有アクセスとアクセス許可を制御します。 スクリプトをローカル ディスクまたはカスタム クラウドの場所からリンクすることはできません。 Office スクリプトは、OneDrive フォルダー内にある場合、またはブックと共有されている場合にのみ、スクリプトを認識して実行します。
 
 ## <a name="file-storage"></a>ファイルの記憶域
 
-スクリプトOfficeに保存されている必要OneDrive。 **.osts ファイル** は、**/Documents/Officeフォルダーにあります**。 ファイルの名前の変更や削除など、これらの **.osts** ファイルに対して行われた編集は、コード エディターとスクリプト ギャラリーに反映されます。
+スクリプトはOneDriveに格納Office。 **.osts** ファイルは、**/Documents/Office Scripts/** フォルダーにあります。 これらの **.osts** ファイルに対して行われた編集 (ファイルの名前変更や削除など) は、コード エディターとスクリプト ギャラリーに反映されます。
 
-ブックの 1 つと共有されているスクリプトは、スクリプト作成者のデータベースに残OneDrive。 共有スクリプトをローカル フォルダーまたはローカル フォルダー OneDrive、共有スクリプトを実行すると、これらのフォルダーはコピー Excel。 コード **エディターの [コピー** を作成] ボタンをクリックすると、スクリプトの別のコピーがユーザーのページに保存OneDrive。 コピーに対する変更は、元のスクリプトには影響を与えかねない。
+ブックの 1 つと共有されるスクリプトは、スクリプト作成者のOneDriveに残ります。 共有スクリプトを Excel で実行すると、ローカル フォルダーまたはOneDrive フォルダーにはコピーされません。 コード エディターの **[コピーを作成**] ボタンをクリックすると、スクリプトの別のコピーがOneDriveに保存されます。 コピーに対する変更は、元のスクリプトには影響しません。
 
 ### <a name="restore-deleted-scripts"></a>削除されたスクリプトを復元する
 
-スクリプトを削除すると、Excelごみ箱にOneDriveされます。 削除されたスクリプトを復元するには、「削除されたファイルまたはフォルダーを復元する」に記載されている手順に[従](https://support.microsoft.com/office/949ada80-0026-4db3-a953-c99083e6a84f)OneDrive。 **.osts ファイルを復元すると**、[すべてのスクリプト] リスト **に戻** されます。
+Excelでスクリプトを削除すると、OneDriveのごみ箱に移動します。 削除されたスクリプトを復元するには、「[OneDriveで削除されたファイルまたはフォルダーを復元する」に記載されている手順に](https://support.microsoft.com/office/949ada80-0026-4db3-a953-c99083e6a84f)従います。 **.osts** ファイルを復元すると、[**すべてのスクリプト**] リストに返されます。
 
-削除されたスクリプトはブックと共有されません。 スクリプトを復元しても、スクリプト **へのアクセス** は保持されます。 スクリプトを再び共有する必要があります。
+削除されたスクリプトは、ブックと共有されません。 スクリプトを復元しても、スクリプトへのアクセスは保持 **されません** 。 スクリプトをもう一度共有する必要があります。
 
-復元されたスクリプトは、引き続き必要にPower Automateです。 フロー コネクタを再作成する必要はない。
+復元されたスクリプトは、Power Automate フローで引き続き期待どおりに動作します。 フロー コネクタを再作成する必要はありません。
 
-## <a name="file-ownership-and-retention"></a>ファイルの所有権と保持
+## <a name="file-ownership-and-retention"></a>ファイルの所有権と保持期間
 
-Officeスクリプトは、ユーザーのデータベースにOneDrive。 ユーザーは、ユーザーが指定した保持ポリシーと削除ポリシーに従Microsoft OneDrive。 組織から削除されるユーザーによって作成および共有されたスクリプトを処理する方法については、[OneDrive の保持と削除](/onedrive/retention-and-deletion)を参照してください。
+Office スクリプトは、ユーザーのOneDriveに格納されます。 これらのポリシーは、Microsoft OneDriveで指定された保持ポリシーと削除ポリシーに従います。 組織から削除されるユーザーによって作成および共有されたスクリプトを処理する方法については、[OneDrive の保持と削除](/onedrive/retention-and-deletion)を参照してください。
 
-編集中、ファイルはブラウザーに一時的に保存されます。 スクリプトを保存してから、新しいウィンドウを閉Excelして、スクリプトを保存するOneDriveがあります。 編集後にファイルを保存することを忘れないでください。それ以外の場合、これらの編集はブラウザーのバージョンのファイルにのみ含されます。
+編集中、ファイルは一時的にブラウザーに保存されます。 Excel ウィンドウを閉じる前にスクリプトを保存して、OneDriveの場所に保存する必要があります。 編集後にファイルを保存することを忘れないでください。それ以外の場合、これらの編集はブラウザーのバージョンのファイルにのみ含まれます。
 
-## <a name="audit-office-scripts-usage-at-the-admin-level"></a>管理者Officeスクリプトの使用状況を監査する
+## <a name="audit-office-scripts-usage-at-the-admin-level"></a>管理者レベルでのスクリプトの使用Office監査する
 
-コンプライアンス センターで監査ログOfficeスクリプトを使用しているテナントを確認します。 このツールの使い方については、「セキュリティ コンプライアンス センターで監査ログを検索する [」を&してください](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide&preserve-view=true#search-the-audit-log)。
+コンプライアンス センターの監査ログでOffice スクリプトを使用しているテナントを確認します。 このツールの使用方法については、 [セキュリティ & コンプライアンス センターの監査ログを検索](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide&preserve-view=true#search-the-audit-log)するを参照してください。
 
-検索ツールでスクリプトをOfficeするユーザーを検索するには、[ファイル`.osts`]、フォルダー、またはサイト フィールド **に追加** します。 これにより、スクリプト ファイル拡張子が Officeファイルが検索されます。 組織内のユーザーが [スクリプト] 機能を使用Office、監査ログの検索結果にユーザー アクティビティが表示されます。
-
-> [!NOTE]
-> スクリプトの実行は現在ログに記録されません。 作成、表示、および変更のアクションだけがログに記録されます。
+検索ツールでOffice スクリプトを使用しているユーザーを検索するには、[**ファイル]、[フォルダー]、または [サイト**] フィールドに追加`.osts`します。 これにより、Office Scripts ファイル拡張子を持つすべてのファイルが検索されます。 組織内のだれかが Office スクリプト機能を使用した場合、ユーザー アクティビティは監査ログの検索結果に表示されます。
 
 ## <a name="see-also"></a>関連項目
 
