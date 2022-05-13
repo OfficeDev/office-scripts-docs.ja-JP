@@ -2,14 +2,14 @@
 title: ボタンを使用してExcelで Office スクリプトを実行する
 description: ExcelのスクリプトOffice制御するブックにボタンを追加します。
 ms.topic: overview
-ms.date: 04/28/2022
+ms.date: 05/09/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 070e392c05752d0e34b9797384275c1e1ca13447
-ms.sourcegitcommit: f1550e457c220a2d1498907e925768aba0c36dc3
+ms.openlocfilehash: fde34d62f9abe897a8b93195ab37a75cfc73f619
+ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65187225"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393685"
 ---
 # <a name="run-office-scripts-in-excel-with-buttons"></a>ボタンを使用してExcelで Office スクリプトを実行する
 
@@ -29,6 +29,11 @@ ms.locfileid: "65187225"
 
 ボタンを使用してスクリプトの共有を停止するには、スクリプトの詳細ページの **[その他のオプション (...)]** メニューに移動し、[ **共有の停止**] を選択します。 これにより、スクリプトを実行しているすべてのボタンが削除されます。 1 つのボタンを削除すると、操作が元に戻された場合や、ボタンが切り取って貼り付けられた場合でも、その 1 つのボタンからスクリプトが削除されます。
 
-## <a name="script-buttons-on-excel-for-windows"></a>WindowsのExcelのスクリプト ボタン
+## <a name="script-buttons-with-excel-on-windows"></a>WindowsのExcelを含むスクリプト ボタン
 
 これらのスクリプト ボタンは Windows でも機能します。 Excel on the webでボタンを作成し、Windowsのユーザーはボタンをクリックしてスクリプトを実行できます。 WindowsのExcelでスクリプトを編集することはできません。 スクリプトは、Excel on the webでのみ編集できます。
+
+一部のOffice スクリプト API は、Windows (特に古いビルド) のExcelではサポートされない場合があります。 これには、Web 専用機能用の新しい API と API が含まれます。 スクリプトにサポートされていない API が含まれている場合、スクリプトは実行されません。代わりに、[**スクリプトの実行状態**] 作業ウィンドウに警告メッセージが表示されます。"このスクリプトは、現在、Excel for the webで実行する必要があります。 ブラウザーでブックを開いてからもう一度試すか、スクリプト所有者に問い合わせてください。  
+
+> [!IMPORTANT]
+> スクリプト ボタンでは[、webView2](/deployoffice/webview2-install) がWindowsでExcelを操作する必要があります。 これは、デスクトップ上の最新バージョンのExcelで既定でインストールされますが、スクリプト ボタンをクリックできない場合は、[WebView2 ランタイムのダウンロード](https://developer.microsoft.com/en-us/microsoft-edge/webview2/#download-section)とブラウザー エンジンのダウンロードに関するページを参照してください。

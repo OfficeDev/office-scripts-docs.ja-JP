@@ -1,5 +1,5 @@
 <!---
-Welcome to the documentation repository for Office Scripts in Excel on the web.
+Welcome to the documentation repository for Office Scripts.
 
 To report an issue with the Office Scripts documentation, please provide the article URL and describe the issue below. Alternatively, if you want to submit a pull request with your recommended documentation changes, we will review your contributions and update our documentation accordingly.
 
@@ -12,7 +12,7 @@ If your issue is not related to the Office Scripts documentation, please post it
 
 <!--- Provide a general summary of the documentation issue in the Title above -->
 
-## <a name="article-url"></a>記事の URL
+## <a name="article-url"></a>アーティクル URL
 <!-- Provide the URL of the article that this documentation issue relates to -->
 
 ## <a name="issue"></a>問題

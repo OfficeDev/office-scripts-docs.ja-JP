@@ -3,12 +3,12 @@ title: Power Automate を使用した Office スクリプトの実行
 description: Power Automate ワークフローを使用して Excel on the web の Office スクリプトを取得する方法。
 ms.date: 03/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: dbf65086e564b20ca0fc3a4dc1c527188540be6b
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
-ms.translationtype: HT
+ms.openlocfilehash: 67e48d297a8db16661ce394a11f2e425bc0a33be
+ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585752"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393678"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>Power Automate を使用した Office スクリプトの実行
 
@@ -114,7 +114,7 @@ function main(
 
 ## <a name="see-also"></a>関連項目
 
-- [Power Automate を使用して、Excel on the web で Office スクリプトを実行する](../tutorials/excel-power-automate-manual.md)
+- [手動 Power Automation フローからスクリプトを呼び出す](../tutorials/excel-power-automate-manual.md)
 - [自動で実行される Power Automate フロー内で、データをスクリプトに渡す](../tutorials/excel-power-automate-trigger.md)
 - [自動で実行される Power Automate フローにスクリプトからデータを返す](../tutorials/excel-power-automate-returns.md)
 - [Office スクリプトを使用した Power Automate のトラブルシューティング情報](../testing/power-automate-troubleshooting.md)
