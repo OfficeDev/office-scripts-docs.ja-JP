@@ -1,19 +1,19 @@
 ---
-title: Excel on the web の Office スクリプト
+title: Excel の Office スクリプト
 description: Office スクリプト用の操作レコーダーとコード エディターの概要をご紹介します。
 ms.topic: overview
 ms.date: 02/25/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 3c5423344bb1d0f619ea1933a2681dc7e5fd8ba1
-ms.sourcegitcommit: f1550e457c220a2d1498907e925768aba0c36dc3
+ms.openlocfilehash: a85e8dad8d6e99ee3b4c5558cd2c1b8417956fb3
+ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2022
-ms.locfileid: "65187232"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393636"
 ---
-# <a name="office-scripts-in-excel-on-the-web"></a>Excel on the web の Office スクリプト
+# <a name="office-scripts-in-excel"></a>Excel の Office スクリプト
 
-Excel on the web の Office スクリプトを使用すると、日常のタスクを自動化できます。 Excel で行う操作を操作レコーダーで記録すると、TypeScript 言語スクリプトが作成されます。 さらに、コード エディターでスクリプトの作成や編集をすることもできます。 スクリプトは組織全体で共有できるため、同僚もワークフローを自動化できます。
+Excel の Office スクリプトを使用すると、日常のタスクを自動化できます。 Excel 内では、アクション レコーダーを使用してアクションを記録できます。 これにより、いつでも再実行できる TypeScript 言語スクリプトが作成されます。 さらに、コード エディターでスクリプトの作成や編集をすることもできます。 スクリプトは組織全体で共有できるため、同僚もワークフローを自動化できます。
 
 この一連のドキュメントで、これらのツールの使用方法について説明します。 操作レコーダーの紹介では、頻繁に実行する Excel 操作の記録方法を説明します。 また、コード エディターを使用して、独自のスクリプトを作成したり更新したりする方法についても説明します。
 
@@ -25,7 +25,7 @@ Excel on the web の Office スクリプトを使用すると、日常のタス�
 
 Office スクリプトを使用するには、以下が必要です。
 
-1. [Excel on the web](https://www.office.com/launch/excel) (デスクトップなどのその他のプラットフォームは、サポートされていません)。
+1. [Excel](https://www.office.com/launch/excel) (Windows の Excel は、[スクリプト ボタン](../develop/script-buttons.md)を含むOffice スクリプトのみを使用できます)。
 1. OneDrive for Business。
 1. Microsoft 365 Office デスクトップ アプリにアクセスできる、次のような商用または教育機関向けの Microsoft 365 ライセンス。
 
@@ -72,7 +72,7 @@ Office スクリプトは、Excel ブックの他のユーザーと共有でき�
 
 :::image type="content" source="../images/script-sharing.png" alt-text="[このブックで他のユーザーと共有する] オプションを表示するスクリプトの詳細ページ。":::
 
-スクリプトを実行するボタンを追加して、同僚が貴重なソリューションを見つけられるようにします。 スクリプト ボタンの詳細については、「[ボタンで Office スクリプトを実行する](../develop/script-buttons.md)」をご覧ください。
+スクリプトを実行するボタンを追加して、同僚が貴重なソリューションを見つけて、デスクトップ上の Excel でスクリプトを実行できるようにします。 スクリプト ボタンの詳細については、「[ボタンで Office スクリプトを実行する](../develop/script-buttons.md)」をご覧ください。
 
 :::image type="content" source="../images/add-button.png" alt-text="クリックするとスクリプトを実行するワークシート内のボタン。":::
 
@@ -81,7 +81,7 @@ Office スクリプトは、Excel ブックの他のユーザーと共有でき�
 
 ## <a name="connect-office-scripts-to-power-automate"></a>Office スクリプトを Power Automate に接続する
 
-[Power Automate](https://flow.microsoft.com/) は、複数のアプリとサービスの間のワークフローを自動化するためのサービスです。 これらのワークフローでは、Office スクリプトを使用して、ブック外のスクリプトを制御できます。 スケジュールに基づいてスクリプトを実行したり、メールに応じてスクリプトをトリガーしたりできます。 この自動化サービスに接続するための基本的な方法については、「[Power Automate を使用して Excel on the web で Office スクリプトを実行する](../tutorials/excel-power-automate-manual.md)」チュートリアルにアクセスします。
+[Power Automate](https://flow.microsoft.com/) は、複数のアプリとサービスの間のワークフローを自動化するためのサービスです。 これらのワークフローでは、Office スクリプトを使用して、ブック外のスクリプトを制御できます。 スケジュールに基づいてスクリプトを実行したり、メールに応じてスクリプトをトリガーしたりできます。 この自動化サービスに接続するための基本的な方法については、「[Power Automate を使用してOffice スクリプトを実行する](../tutorials/excel-power-automate-manual.md)」チュートリアルにアクセスします。
 
 ## <a name="next-steps"></a>次の手順
 

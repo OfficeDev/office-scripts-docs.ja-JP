@@ -1,7 +1,7 @@
 items:
   - name: Office スクリプト ドキュメント
     href: index.md
-  - name: Excel on the web の Office スクリプト
+  - name: Excel の Office スクリプト
     items:
       - name: 概要
         href: overview/excel.md

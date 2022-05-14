@@ -3,12 +3,12 @@ title: Excel on the web で Office スクリプトを記録、編集、作成す
 description: 操作レコーダーを使用したスクリプトの記録、ブックへのデータの書き込みなど、Office スクリプトの基本について説明したチュートリアル。
 ms.date: 05/23/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 15f55eff0d042f862d6607099882ad123369e676
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 30caa66787bce9c4341069461ea54ef3c63d9601
+ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585822"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393629"
 ---
 # <a name="record-edit-and-create-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを記録、編集、作成する
 
@@ -61,7 +61,7 @@ ms.locfileid: "64585822"
 
     このコードは、ブックから現在のワークシートを取得します。 次に、**A2:C2** の範囲の塗りつぶしの色を設定します。
 
-    範囲は、Excel on the web の Office スクリプトの基本となる部分です。 範囲とは、隣接するセルからなる四角形のブロックで、値、数式、書式設定が含まれます。 範囲はセルの基本構造であり、スクリプト タスクの大部分は範囲を指定することにより実行します。
+    範囲は、Excel の Office スクリプトの基本となる部分です。 範囲とは、隣接するセルからなる四角形のブロックで、値、数式、書式設定が含まれます。 範囲はセルの基本構造であり、スクリプト タスクの大部分は範囲を指定することにより実行します。
 
 3. 次の行をスクリプトの最後 (`color` の設定箇所と末尾の `}` の間) に追加します。
 

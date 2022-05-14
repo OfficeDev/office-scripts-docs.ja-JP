@@ -3,12 +3,12 @@ title: Excel on the web で Office スクリプトを使用してブックのデ
 description: ブックのデータを読み取り、スクリプトでそのデータを評価する方法について説明した Office スクリプトのチュートリアル。
 ms.date: 01/06/2021
 ms.localizationpriority: high
-ms.openlocfilehash: c1bc867b6df91a7dedde4020177ed87682d060f9
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: d4378e1b4c851a1a2cf072b0eabb3d3d765bc234
+ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64586039"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393643"
 ---
 # <a name="read-workbook-data-with-office-scripts-in-excel-on-the-web"></a>Excel on the web で Office スクリプトを使用してブックのデータを読み取る
 
@@ -147,6 +147,6 @@ ms.locfileid: "64586039"
 
 ## <a name="next-steps"></a>次の手順
 
-コード エディターを開き、「[Excel on the web での Office スクリプトのサンプル スクリプト](../resources/samples/excel-samples.md)」をいくつか試してみます。 Office スクリプトの作成について詳しくは、「[Excel on the web での Office スクリプトのスクリプトの基本事項](../develop/scripting-fundamentals.md)」も参照してください。
+コード エディターを開き、「[Excel での Office スクリプトのサンプル スクリプト](../resources/samples/excel-samples.md)」をいくつか試してみます。 Office スクリプトの作成について詳しくは、「[Excel on the web での Office スクリプトのスクリプトの基本事項](../develop/scripting-fundamentals.md)」も参照してください。
 
 Office スクリプトの次の一連のチュートリアルでは、Power Automate で Office スクリプトを使用することに重点を置きます。[Office スクリプトを Power Automate で実行する](../develop/power-automate-integration.md) の 2 つのプラットフォームを組み合わせた利点の詳細を確認するか、[マニュアル Power Automate フローからスクリプトを呼び出す](excel-power-automate-manual.md) のチュートリアルを試して、Office スクリプトを使用する Power Automate フローを作成してください。

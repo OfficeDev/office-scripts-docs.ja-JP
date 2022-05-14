@@ -2,19 +2,19 @@
 layout: LandingPage
 ms.topic: landing-page
 title: Office スクリプト ドキュメント
-description: チュートリアル、概念に関する記事、コード サンプルなどの、Excel on the web の Office スクリプトについて学習するためのリソース。
+description: チュートリアル、概念に関する記事、コード サンプルなどの、Excel の Office スクリプトについて学習するためのリソース。
 ms.date: 05/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 2f9a380408a2df793886093c10b685f918483489
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: b98c746ec89b61f05c3a6ded04100c0a1efc20bc
+ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585668"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393692"
 ---
 # <a name="office-scripts-documentation"></a>Office スクリプト ドキュメント
 
-Excel on the web の Office スクリプトを使用すると、日常のタスクを自動化できます。 次の記事で、Office スクリプトの作成、編集、今すぐ自動化を開始する方法について説明します。
+Excel の Office スクリプトを使用すると、日常のタスクを自動化できます。 次の記事で、Office スクリプトの作成、編集、今すぐ自動化を開始する方法について説明します。
 
 <ul class="panelContent cardsF cols cols3 rows2">
     <li>
@@ -73,7 +73,7 @@ Excel on the web の Office スクリプトを使用すると、日常のタス�
 ---
 
 <h2>その他のリソース</h2>
-<p>Excel on the web のブックを操作するために Office スクリプトが使用する API の説明、Excel on the web の Office スクリプトに関する質問、Excel on the web の Office スクリプトに関する機能のリクエストについては、以下のリソースをご利用ください。</p>
+<p>次のリソースを使用して、Office スクリプトが使用する API について学習したり、Office スクリプトについて質問したり、Office スクリプトの機能を要求したりします。</p>
 <ul class="panelContent cardsF cols cols3 rows2">
     <li>
         <div class="cardSize">

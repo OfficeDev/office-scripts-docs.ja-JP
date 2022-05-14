@@ -3,16 +3,16 @@ title: Excel on the web での Office スクリプトのスクリプトの基本
 description: Office スクリプトを作成する前に理解しておくべきオブジェクト モデルの情報と他の基本事項について説明します。
 ms.date: 05/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: 633772655ca9346055d33682c36f35a5a8610cc8
-ms.sourcegitcommit: 4e3d3aa25fe4e604b806fbe72310b7a84ee72624
+ms.openlocfilehash: bd51f814de60da8006413096f4d6aad125f78fab
+ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077039"
+ms.lasthandoff: 05/13/2022
+ms.locfileid: "65393601"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Excel on the web での Office スクリプトのスクリプトの基本事項
 
-この記事では、Office スクリプトの技術的な側面について説明します。 Excel オブジェクトどうしが連携する仕組みや、コード エディターがブックと同期する仕組みについて説明します。
+この記事では、Office スクリプトの技術的な側面について説明します。 TypeScript ベースのスクリプト コードの重要な部分と、Excel オブジェクトと API の連携方法について説明します。
 
 ## <a name="typescript-the-language-of-office-scripts"></a>TypeScript: オフィス スクリプトの言語
 
@@ -194,7 +194,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 Excel オブジェクトは、1 つ以上の同じ種類のオブジェクトのコレクションがある場合、それらを配列に格納します。 たとえば、`Workbook` オブジェクトには `Worksheet[]` が含まれます。 この配列は `Workbook.getWorksheets()` メソッドでアクセスします。 複数の `get` メソッド (`Worksheet.getCharts()` など) は、オブジェクト コレクション全体を配列として返します。 このパターンは、Office スクリプトの API 全体で見ることができます。たとえば、`Worksheet` オブジェクトには `getTables()` メソッドがあり、`Table[]` を返し、`Table` オブジェクトには `getColumns()` メソッドがあり、`TableColumn[]` を返すといったことです。
 
-返された配列は通常の配列なので、スクリプトでは通常の配列操作がすべて可能です。 配列のインデックス値を使用して、コレクション内の個々のオブジェクトにアクセスすることもできます。 たとえば、`workbook.getTables()[0]` はコレクション内の最初のテーブルを返します。 Office スクリプト フレームワークで組み込みの配列機能を使用する方法については、「[コレクションでの作業](javascript-objects.md#work-with-collections)」を参照してください。 
+返された配列は通常の配列なので、スクリプトでは通常の配列操作がすべて可能です。 配列のインデックス値を使用して、コレクション内の個々のオブジェクトにアクセスすることもできます。 たとえば、`workbook.getTables()[0]` はコレクション内の最初のテーブルを返します。 Office スクリプト フレームワークで組み込みの配列機能を使用する方法については、「[コレクションでの作業](javascript-objects.md#work-with-collections)」を参照してください。
 
 個々のオブジェクトには、`get` メソッドを通してコレクションからアクセスします。 単一の `get` メソッド (`Worksheet.getTable(name)` など) は、単一のオブジェクトを返し、特定のオブジェクトの ID または名前を要求します。 この ID や名前は通常、スクリプトや Excel の UI で設定します。
 
