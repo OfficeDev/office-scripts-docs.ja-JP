@@ -1,35 +1,35 @@
 ---
-title: JSON Excelデータを出力する
-description: テーブル データを JSON Excelとして出力する方法について説明します。Power Automate。
-ms.date: 03/18/2022
+title: Excel データを JSON として出力する
+description: Power Automate で使用する EXCEL テーブル データを JSON として出力する方法について説明します。
+ms.date: 06/02/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: d6f15b9b59a2dfe1c74caa11c748f5f52c4ef35e
-ms.sourcegitcommit: 62a62351a0a15a658f93336269f3f50767ca6b62
+ms.openlocfilehash: 2d316a7f1a3def869b59e0ff2b2e64284f0d2022
+ms.sourcegitcommit: 4a28220decc2f25b2ecd0ebaf52a5de68f7b7a83
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/23/2022
-ms.locfileid: "63746357"
+ms.lasthandoff: 06/04/2022
+ms.locfileid: "65895042"
 ---
-# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>テーブル Excelを JSON として出力して、テーブルの使用状況をPower Automate
+# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Power Automate で使用するために Excel テーブル データを JSON として出力する
 
-Excelデータは、JSON 形式のオブジェクトの配列として表されます。 各オブジェクトは、テーブル内の行を表します。 これにより、ユーザーに表示される一Excel形式でデータを抽出できます。 その後、データを他のシステムに与え、Power Automateできます。
+Excel テーブル データは、JSON 形式のオブジェクトの配列として表すことができます。 各オブジェクトは、テーブル内の行を表します。 これにより、ユーザーに表示される一貫性のある形式で Excel からデータを抽出できます。 その後、Power Automate フローを使用して他のシステムにデータを渡すことができます。
 
-## <a name="sample-excel-file"></a>サンプル Excel ファイル
+## <a name="sample-excel-file"></a>Excel ファイルのサンプル
 
-すぐに使用できる <a href="table-data-with-hyperlinks.xlsx"> ブックtable-data-with-hyperlinks.xlsx</a> ファイル をダウンロードします。
+すぐに使用できるブックのファイル <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> をダウンロードします。
 
 :::image type="content" source="../../images/table-input.png" alt-text="入力テーブル データを示すワークシート。":::
 
-このサンプルのバリエーションには、表の列の 1 つにもハイパーリンクが含まれています。 これにより、追加レベルのセル データを JSON に表示できます。
+このサンプルのバリエーションには、テーブル列の 1 つのハイパーリンクも含まれています。 これにより、追加のレベルのセル データを JSON に表示できます。
 
 :::image type="content" source="../../images/table-hyperlink-view.png" alt-text="ハイパーリンクとして書式設定されたテーブル データの列を示すワークシート。":::
 
-## <a name="sample-code-return-table-data-as-json"></a>サンプル コード: JSON としてテーブル データを返す
+## <a name="sample-code-return-table-data-as-json"></a>サンプル コード: テーブル データを JSON として返す
 
-次のスクリプトを追加して、サンプルを自分で試してみてください。
+サンプルを自分で試すには、次のスクリプトを追加します。
 
 > [!NOTE]
-> テーブル列に一致 `interface TableData` する構造を変更できます。 スペースを含む列名の場合は、サンプルに含まれているなど、キーを二重引用符で囲んでください `"Event ID"` 。
+> テーブル列と `interface TableData` 一致するように構造を変更できます。 スペースを含む列名の場合は、サンプルのように `"Event ID"` キーを引用符で囲んでください。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -62,12 +62,12 @@ function returnObjectFromValues(values: string[][]): TableData[] {
       continue;
     }
 
-    let object = {}
+    let object: {[key: string]: string} = {}
     for (let j = 0; j < values[i].length; j++) {
       object[objectKeys[j]] = values[i][j]
     }
 
-    objectArray.push(object as TableData);
+    objectArray.push(object as unknown as TableData);
   }
 
   return objectArray;
@@ -139,7 +139,7 @@ interface TableData {
 ## <a name="sample-code-return-table-data-as-json-with-hyperlink-text"></a>サンプル コード: ハイパーリンク テキストを含む JSON としてテーブル データを返す
 
 > [!NOTE]
-> スクリプトは常に、テーブルの 4 列目 (インデックス 0) からハイパーリンクを抽出します。 コメントの下のコードを変更することで、その順序を変更したり、複数の列をハイパーリンク データとして含めすることができます。 `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
+> このスクリプトは、テーブルの 4 番目の列 (インデックス 0) からハイパーリンクを常に抽出します。 コメントの下のコードを変更することで、その順序を変更したり、ハイパーリンク データとして複数の列を含めたりすることができます。 `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -196,7 +196,7 @@ interface TableData {
 }
 ```
 
-### <a name="sample-output-from-the-withhyperlink-worksheet"></a>"WithHyperLink" ワークシートからの出力例
+### <a name="sample-output-from-the-withhyperlink-worksheet"></a>"WithHyperLink" ワークシートからのサンプル出力
 
 ```json
 [{
@@ -258,6 +258,6 @@ interface TableData {
 }]
 ```
 
-## <a name="use-in-power-automate"></a>[ファイル内で使用Power Automate
+## <a name="use-in-power-automate"></a>Power Automate で使用する
 
-このようなスクリプトを使用する方法については、「Power Automateを使用して自動化されたワークフローを作成する」[を参照Power Automate](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)。
+Power Automate でこのようなスクリプトを使用する方法については、「Power Automate を [使用して自動化されたワークフローを作成する」を](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)参照してください。
