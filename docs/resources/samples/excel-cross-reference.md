@@ -1,33 +1,33 @@
 ---
-title: ファイルとファイルExcel相互参照Power Automate
-description: スクリプトとスクリプトをOfficeし、Power Automateファイルを相互参照して書式設定するExcelします。
-ms.date: 06/29/2021
+title: Power Automateを使用したクロスリファレンス Excel ファイル
+description: Office スクリプトとPower Automateを使用して、Excel ファイルを相互参照および書式設定する方法について説明します。
+ms.date: 06/06/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 13ba6c8ba6f9232554ea6cfd5f98c308ea981683
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 02c06b6376d3726b3e1b44255df14aa64be196ea
+ms.sourcegitcommit: f5fc9146d5c096e3a580a3fa8f9714147c548df4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585487"
+ms.lasthandoff: 06/12/2022
+ms.locfileid: "66038673"
 ---
-# <a name="cross-reference-excel-files-with-power-automate"></a>ファイルとファイルExcel相互参照Power Automate
+# <a name="cross-reference-excel-files-with-power-automate"></a>Power Automateを使用したクロスリファレンス Excel ファイル
 
-このソリューションでは、2 つのファイル間でデータを比較Excel不一致を見つける方法を示します。 このツールでは、Officeスクリプトを使用してデータを分析しPower Automateブック間の通信を行います。
+このソリューションでは、2 つのExcel ファイル間でデータを比較して不一致を見つける方法を示します。 Office スクリプトを使用してデータを分析し、Power Automateブック間で通信します。
 
 ## <a name="example-scenario"></a>シナリオ例
 
-今後の会議にスピーカーをスケジュールしているイベント コーディネーターです。 イベント データは 1 つのスプレッドシートに、スピーカーの登録は別のスプレッドシートに保持します。 2 つのブックを確実に同期するために、スクリプトを使用してフローを使用Office潜在的な問題を強調表示します。
+あなたは、今後の会議の講演者をスケジュールしているイベント コーディネーターです。 イベント データは 1 つのスプレッドシートに保持し、話者の登録は別のスプレッドシートに保持します。 2 つのブックが確実に同期されるようにするには、Office スクリプトを含むフローを使用して、潜在的な問題を強調表示します。
 
 ## <a name="sample-excel-files"></a>サンプル Excel ファイル
 
-次のファイルをダウンロードして、サンプルのすぐに使用できるブックを取得します。
+サンプルのすぐに使用できるブックを取得するには、次のファイルをダウンロードします。
 
 1. <a href="event-data.xlsx">event-data.xlsx</a>
 1. <a href="speaker-registrations.xlsx">speaker-registrations.xlsx</a>
 
-次のスクリプトを追加して、サンプルを自分で試してみてください。
+サンプルを自分で試すには、次のスクリプトを追加します。
 
-## <a name="sample-code-get-event-data"></a>サンプル コード: イベント データの取得
+## <a name="sample-code-get-event-data"></a>サンプル コード: イベント データを取得する
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): string {
@@ -65,7 +65,7 @@ interface EventData {
 }
 ```
 
-## <a name="sample-code-validate-speaker-registrations"></a>サンプル コード: スピーカー登録の検証
+## <a name="sample-code-validate-speaker-registrations"></a>サンプル コード: 話者の登録を検証する
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook, keys: string): string {
@@ -144,32 +144,33 @@ interface EventData {
 }
 ```
 
-## <a name="power-automate-flow-check-for-inconsistencies-across-the-workbooks"></a>Power Automateフロー: ブック間の不整合を確認する
+## <a name="power-automate-flow-check-for-inconsistencies-across-the-workbooks"></a>Power Automate フロー: ブック間の不整合を確認する
 
 このフローは、最初のブックからイベント情報を抽出し、そのデータを使用して 2 番目のブックを検証します。
 
-1. 新しいインスタント [Power Automate](https://flow.microsoft.com)にサインインして、**新しいインスタント クラウド フローを作成します**。
-1. [フロー **を手動でトリガーする] を選択し、[** 作成] を **選択します**。
-1. [スクリプト **の実行]** アクションを使用して、Excel **(Business)** コネクタを使用する新しい **手順を追加** します。 アクションには、次の値を使用します。
+1. [Power Automate](https://flow.microsoft.com)サインインし、新しい **インスタント クラウド フロー** を作成します。
+1. [ **手動でフローをトリガーする** ] を選択し、[ **作成**] を選択します。
+1. **スクリプトの実行** アクションで **Excel Online (Business)** コネクタを使用する **新しいステップ** を追加します。 アクションには次の値を使用します。
     * **場所**: OneDrive for Business
     * **ドキュメント ライブラリ**: OneDrive
-    * **ファイル**: event-data.xlsx ([ファイル選択で選択)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
-    * **スクリプト**: イベント データの取得
+    * **ファイル**: event-data.xlsx ([ファイル選択子で選択)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
+    * **スクリプト**: イベント データを取得する
 
-    :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="オンライン (Excel) コネクタの最初のスクリプトの完了Power Automate。":::
+    :::image type="content" source="../../images/cross-reference-flow-1.png" alt-text="Power Automateの最初のスクリプト用に完成したExcel Online (Business) コネクタ。":::
 
-1. [スクリプトの実行 **] アクション** を使用して、Excel **(Business)** コネクタを使用する 2 番目の新しい **手順を追加** します。 アクションには、次の値を使用します。
+1. **スクリプトの実行** アクションで **Excel Online (Business)** コネクタを使用する 2 番目の **新しい手順** を追加します。 これにより、イベント データの **検証** スクリプトの入力として **、Get イベント データ** スクリプトから返された値が使用されます。 アクションには次の値を使用します。
     * **場所**: OneDrive for Business
     * **ドキュメント ライブラリ**: OneDrive
-    * **ファイル**: speaker-registration.xlsx ([ファイル選択で選択)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
-    * **スクリプト**: スピーカー登録の検証
+    * **ファイル**: speaker-registration.xlsx ([ファイル選択子で選択)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
+    * **スクリプト**: 話者の登録を検証する
+    * **キー**: 結果 (_**実行スクリプト** からの動的コンテンツ_)
 
-    :::image type="content" source="../../images/cross-reference-flow-2.png" alt-text="2 番目Excelのオンライン (Business) コネクタの完成Power Automate。":::
-1. このサンプルでは、Outlookクライアントとして使用します。 サポートされている任意の電子メール コネクタPower Automate使用できます。 新しい **手順を追加** して、**Office 365 Outlookおよび電子** メール **(V2) アクションを使用** します。 アクションには、次の値を使用します。
-    * **To**: テストメール アカウント (または個人用メール)
+    :::image type="content" source="../../images/cross-reference-flow-2.png" alt-text="Power Automateの 2 番目のスクリプト用に完成したExcel Online (Business) コネクタ。":::
+1. このサンプルでは、電子メール クライアントとしてOutlookを使用します。 サポートPower Automate任意の電子メール コネクタを使用できます。 **Office 365 Outlook** コネクタと **送信と電子メール (V2)** アクションを使用する **新しい手順** を追加します。 これは、電子メール本文のコンテンツとして **、スピーカー登録の検証** スクリプトから返された値を使用します。 アクションには次の値を使用します。
+    * **To**: テスト用メール アカウント (または個人用メール)
     * **件名**: イベント検証の結果
-    * **本文**: result (_Run スクリプト **2 の動的コンテンツ**_)
+    * **本文**: 結果 (_**実行スクリプト 2** の動的コンテンツ_)
 
-    :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="完了したOffice 365 OutlookコネクタをPower Automate。":::
-1. フローを保存します。 [フロー エディター **] ページ** の [テスト] ボタンを使用するか、[マイ フロー] タブでフロー **を実行** します。メッセージが表示されたら、必ずアクセスを許可してください。
-1. "不一致が見つかりました" というメールを受信する必要があります。 データにはレビューが必要です。 これは、グループ内の行とspeaker-registrations.xlsxの間に違い **event-data.xlsx**。 [ **speaker-registrations.xlsxを開** き、スピーカー登録リストに潜在的な問題があるいくつかの強調表示されたセルを表示します。
+    :::image type="content" source="../../images/cross-reference-flow-3.png" alt-text="Power Automateで完成したOffice 365 Outlook コネクタ。":::
+1. フローを保存します。 フロー エディター ページの **[テスト** ] ボタンを使用するか、[ **マイ フロー** ] タブでフローを実行します。メッセージが表示されたら、必ずアクセスを許可してください。
+1. "不一致が見つかりました。 データにはレビューが必要です。 これは、speaker-registrations.xlsxの行と **event-data.xlsx** **の行** の間に違いがあることを示しています。 **speaker-registrations.xlsx** を開いて、スピーカー登録の一覧に問題があるいくつかの強調表示されたセルを表示します。
