@@ -1,32 +1,34 @@
 ---
-title: 'Officeスクリプトのサンプル シナリオ: NOAA Graphの水レベルデータの作成'
+title: 'Office スクリプトのサンプル シナリオ: NOAA から水レベルのデータをGraphする'
 description: NOAA データベースから JSON データをフェッチし、それを使用してグラフを作成するサンプル。
 ms.date: 03/08/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 80c9c812662b18d76bd620c512d220a68c65855f
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: b4181edae7d8a46ae381ddfb1a2893b03faffd9b
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585437"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088100"
 ---
-# <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a>Officeスクリプトのサンプル シナリオ: NOAA からの水レベルデータのフェッチとグラフ化
+# <a name="office-scripts-sample-scenario-fetch-and-graph-water-level-data-from-noaa"></a>Office スクリプトのサンプル シナリオ: NOAA から水レベルのデータをフェッチしてグラフ化する
 
-このシナリオでは、国立海洋大気局のシアトルステーションで水位を [プロットする必要があります](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130)。 外部データを使用してスプレッドシートにデータを入力し、グラフを作成します。
+このシナリオでは、 [米国海洋大気局のシアトル局](https://tidesandcurrents.noaa.gov/stationhome.html?id=9447130)で水位をプロットする必要があります。 外部データを使用してスプレッドシートを設定し、グラフを作成します。
 
-このコマンドを使用して `fetch` [NOAA Tides データベースと Currents](https://tidesandcurrents.noaa.gov/) データベースにクエリを実行するスクリプトを開発します。 この場合、指定した期間にわたって水位が記録されます。 情報は JSON として返されます。そのため、スクリプトの一部は、それを範囲の値に変換します。 データがスプレッドシートに入った後、グラフの作成に使用されます。
+このコマンドを使用 `fetch` して [NOAA Tides および Currents データベース](https://tidesandcurrents.noaa.gov/)に対するクエリを実行するスクリプトを開発します。 これは、特定の期間にわたって記録される水位を取得します。 情報は [JSON](https://www.w3schools.com/whatis/whatis_json.asp) として返されるため、スクリプトの一部では、その情報が範囲の値に変換されます。 データがスプレッドシートに含まれると、グラフを作成するために使用されます。
 
-## <a name="scripting-skills-covered"></a>スクリプティングのスキルをカバー
+JSON の操作の詳細については、「[JSON を使用して、Office スクリプトとの間でデータを渡す](../../develop/use-json.md)」を参照してください。
+
+## <a name="scripting-skills-covered"></a>スクリプティング スキルの説明
 
 - 外部 API 呼び出し (`fetch`)
-- JSON の解析
+- JSON 解析
 - グラフ
 
 ## <a name="setup-instructions"></a>セットアップ手順
 
-1. ブックを開き、Excel on the web。
+1. Excel on the webを使用してブックを開きます。
 
-1. [自動化] **タブで** 、[新しい **スクリプト] を選択** し、次のスクリプトをエディターに貼り付けます。
+1. [ **自動化** ] タブで [ **新しいスクリプト** ] を選択し、次のスクリプトをエディターに貼り付けます。
 
     ```TypeScript
     /**
@@ -109,12 +111,12 @@ ms.locfileid: "64585437"
     }
     ```
 
-1. スクリプトの名前を **NOAA 水位グラフに変更し** 、保存します。
+1. スクリプトの名前を **NOAA 水位グラフ** に変更して保存します。
 
 ## <a name="running-the-script"></a>スクリプトを実行する
 
-任意のワークシートで、 **NOAA 水位グラフ スクリプトを実行** します。 このスクリプトは、2020 年 12 月 25 日から 2020 年 12 月 27 日まで水位データをフェッチします。 スクリプト `const` の先頭にある変数は、異なる日付を使用したり、異なるステーション情報を取得したりするために変更できます。 [CO-OPS API For Data Retrieval では](https://api.tidesandcurrents.noaa.gov/api/prod/)、このすべてのデータを取得する方法について説明します。
+任意のワークシートで、 **NOAA 水位チャート** スクリプトを実行します。 このスクリプトは、2020 年 12 月 25 日から 2020 年 12 月 27 日までの水位データをフェッチします。 スクリプトの先頭の変数を `const` 変更して、異なる日付を使用したり、異なるステーション情報を取得したりできます。 [データ取得用 CO-OPS API](https://api.tidesandcurrents.noaa.gov/api/prod/) では、このすべてのデータを取得する方法について説明します。
 
-### <a name="after-running-the-script"></a>スクリプトの実行後
+### <a name="after-running-the-script"></a>スクリプトを実行した後
 
 :::image type="content" source="../../images/scenario-noaa-water-level-after.png" alt-text="スクリプトを実行した後のワークシートには、水位データとグラフが表示されます。":::

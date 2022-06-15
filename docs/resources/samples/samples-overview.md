@@ -1,14 +1,14 @@
 ---
 title: Office スクリプトのサンプル
 description: スクリプトのサンプルとシナリオOffice使用できます。
-ms.date: 04/26/2022
+ms.date: 06/14/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 7c9bbe9b6f7eb8abad2995dac72ccf636d585d69
-ms.sourcegitcommit: e6428a5214fa38aef036a952a0e3c09dbf6e4d3e
+ms.openlocfilehash: 059a21711f36273207f1e65ba844ba23c502ffe0
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65109159"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088051"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Office スクリプトのサンプルとシナリオ
 
@@ -18,7 +18,10 @@ ms.locfileid: "65109159"
 
 シナリオには、実際 [の](#scenarios)ユース ケースを示す大規模なシナリオ サンプルがいくつか含まれています。
 
-また、 [コミュニティからの貢献](#community-contributions-and-fun-samples)も歓迎します。
+また、 [コミュニティからの貢献](#community-contributions-and-fun-samples)も歓迎します。 これらのサンプルはオープンソース。
+
+> [!IMPORTANT]
+> サンプルを試す前に、Office スクリプトの前提条件を満たしていることを確認してください。 Microsoft 365サブスクリプションとアカウントの要件については、[Excelの概要に関するOfficeスクリプトの「要件」セクション](../../overview/excel.md#requirements)を参照してください。
 
 ## <a name="basics"></a>基本事項
 
@@ -69,12 +72,8 @@ Office スクリプト コミュニティからの[貢献](https://github.com/Of
 | Project | 詳細 |
 |---------|---------|
 | [Game of Life](https://techcommunity.microsoft.com/t5/excel-blog/ready-player-zero/ba-p/2246208) | Excel Tech Communityの Yutao Raspberr による "Ready Player Zero" ブログには、John Conway [*の The Game of Life*](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life) をモデル化するスクリプトが含まれています。 |
-| [パンチ クロック ボタン](../scenarios/punch-clock.md) | このスクリプトは [、Brian Gonzalez](https://github.com/b-gonzalez) によって提供されました。 シナリオには、現在の時刻を記録するスクリプトとスクリプト ボタンが用意されています。 |
+| [時計のボタンを押す](../scenarios/punch-clock.md) | このスクリプトは [、Brian Gonzalez](https://github.com/b-gonzalez) によって提供されました。 シナリオには、現在の時刻を記録するスクリプトとスクリプト ボタンが用意されています。 |
 | [シーズンのあいさつアニメーション](community-seasons-greetings.md) | このスクリプトは、休日の季節の精神で [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) によって提供されました。 Office スクリプトを使用して、Excel on the webでクリスマス ツリーを歌うのを示す楽しいスクリプトです。 |
-
-## <a name="try-it-out"></a>試してみる
-
-これらのサンプルはオープンソース。 自分で試してみてください。 サブスクリプションをMicrosoft 365するライセンスを持つ職場または学校の Microsoft 職場または学校アカウント (E3 以上) が必要です。 アカウントに https://office.com サインインして作業を開始します。
 
 ## <a name="leave-a-comment"></a>コメントを残す
 

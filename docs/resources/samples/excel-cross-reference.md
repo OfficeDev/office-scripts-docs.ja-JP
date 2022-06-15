@@ -3,16 +3,18 @@ title: Power Automateを使用したクロスリファレンス Excel ファイ�
 description: Office スクリプトとPower Automateを使用して、Excel ファイルを相互参照および書式設定する方法について説明します。
 ms.date: 06/06/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 02c06b6376d3726b3e1b44255df14aa64be196ea
-ms.sourcegitcommit: f5fc9146d5c096e3a580a3fa8f9714147c548df4
+ms.openlocfilehash: a470ee4c59d0fc0a5612a54326a0dec3ab3a59d6
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2022
-ms.locfileid: "66038673"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088121"
 ---
 # <a name="cross-reference-excel-files-with-power-automate"></a>Power Automateを使用したクロスリファレンス Excel ファイル
 
 このソリューションでは、2 つのExcel ファイル間でデータを比較して不一致を見つける方法を示します。 Office スクリプトを使用してデータを分析し、Power Automateブック間で通信します。
+
+このサンプルでは、 [JSON](https://www.w3schools.com/whatis/whatis_json.asp) オブジェクトを使用してブック間でデータを渡します。 JSON の操作の詳細については、「[JSON を使用して、Office スクリプトとの間でデータを渡す](../../develop/use-json.md)」を参照してください。
 
 ## <a name="example-scenario"></a>シナリオ例
 

@@ -1,56 +1,56 @@
 ---
 title: Office スクリプトでの外部 API 呼び出しのサポート
-description: スクリプトで外部 API 呼び出しを行うOffice。
-ms.date: 05/21/2021
+description: Office スクリプトで外部 API 呼び出しを行うためのサポートとガイダンス。
+ms.date: 06/10/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: abcd548c9b62ce9bd5c40866915ae50a6d1cc5be
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: b847400893184533c250ab99b640563ff0cbdb3e
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585738"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088044"
 ---
 # <a name="external-api-call-support-in-office-scripts"></a>Office スクリプトでの外部 API 呼び出しのサポート
 
-スクリプトは、外部サービスへの呼び出しをサポートします。 これらのサービスを使用して、ブックにデータなどの情報を提供します。
+スクリプトは、外部サービスへの呼び出しをサポートします。 これらのサービスを使用して、ブックにデータやその他の情報を提供します。
 
 > [!CAUTION]
 > 外部呼び出しにより、機密データが望ましくないエンドポイントに公開される可能性があります。 管理者は、このような呼び出しに対するファイアウォール保護を確立できます。
 
 > [!IMPORTANT]
-> 外部 API への呼び出しは、通常の状況Excel、Power Automateを介して[行う必要があります](#external-calls-from-power-automate)。
+> 外部 API の呼び出しは、[通常の状況](#external-calls-from-power-automate)ではPower Automateを通じてではなく、Excel アプリケーションを介してのみ行うことができます。
 
 ## <a name="configure-your-script-for-external-calls"></a>外部呼び出し用にスクリプトを構成する
 
-外部呼び出 [しは非同期](https://developer.mozilla.org/docs/Learn/JavaScript/Asynchronous/Async_await) であり、スクリプトがとしてマークされている必要があります `async`。 次に示 `async` すように、 `main` プレフィックスを関数に追加し、それを `Promise`返すようにします。
+外部呼び出しは [非同期](https://developer.mozilla.org/docs/Learn/JavaScript/Asynchronous/Async_await) であり、スクリプトに `async`. 次に `async` 示すように、関数にプレフィックスを `main` 追加して返 `Promise`すようにします。
 
 ```typescript
 async function main(workbook: ExcelScript.Workbook) : Promise <void>
 ```
 
 > [!NOTE]
-> 他の情報を返すスクリプトは、その種類の 1 `Promise` つを返す可能性があります。 たとえば、スクリプトでオブジェクトを返す必要 `Employee` がある場合、戻り値の署名は次のようになります。 `: Promise <Employee>`
+> 他の情報を返すスクリプトは、その型を `Promise` 返すことができます。 たとえば、スクリプトでオブジェクトを返す必要がある `Employee` 場合、戻りシグネチャは次のようになります。 `: Promise <Employee>`
 
-そのサービスを呼び出すには、外部サービスのインターフェイスを学習する必要があります。 REST API を使用`fetch`[している場合](https://wikipedia.org/wiki/Representational_state_transfer)は、返されるデータの JSON 構造を決定する必要があります。 スクリプトの入力と出力の両方について `interface` 、必要な JSON 構造に一致するを検討してください。 これにより、スクリプトの型の安全性が向上します。 この例については、「スクリプトからフェッチを使用する[」でOfficeできます](../resources/samples/external-fetch-calls.md)。
+そのサービスを呼び出すには、外部サービスのインターフェイスについて学習する必要があります。 [API または REST API を](https://wikipedia.org/wiki/Representational_state_transfer)使用`fetch`している場合は、返されるデータの JSON 構造を決定する必要があります。 スクリプトとの間の入力と出力の両方について、必要な JSON 構造に一致するようにすることを `interface` 検討してください。 これにより、スクリプトの安全性が向上します。 この例については、「[Office スクリプトからのフェッチの使用](../resources/samples/external-fetch-calls.md)」を参照してください。
 
-### <a name="limitations-with-external-calls-from-office-scripts"></a>スクリプトからの外部呼び出しOffice制限
+### <a name="limitations-with-external-calls-from-office-scripts"></a>Office スクリプトからの外部呼び出しに関する制限事項
 
-* OAuth2 タイプの認証フローをサインインまたは使用する方法はありません。 すべてのキーと資格情報をハードコード (または別のソースから読み取る) 必要があります。
-* API の資格情報とキーを格納するインフラストラクチャはありません。 これは、ユーザーが管理する必要があります。
-* ドキュメント Cookie、 `localStorage`およびオブジェクト `sessionStorage` はサポートされていません。
-* 外部呼び出しにより、機密データが望ましくないエンドポイントに公開される場合や、内部ブックに外部データが取り込まれたりする場合があります。 管理者は、このような呼び出しに対するファイアウォール保護を確立できます。 外部通話に依存する前に、必ずローカル ポリシーに確認してください。
-* 依存関係を取得する前に、データ スループットの量を確認してください。 たとえば、外部データセット全体を引き下げないのが最適な選択肢ではなく、代わりにページネーションを使用してデータをチャンク単位で取得する必要があります。
+* サインインしたり、OAuth2 の種類の認証フローを使用したりする方法はありません。 すべてのキーと資格情報はハードコーディングする (または別のソースから読み取る) 必要があります。
+* API 資格情報とキーを格納するインフラストラクチャはありません。 これはユーザーが管理する必要があります。
+* ドキュメント Cookie、 `localStorage`および `sessionStorage` オブジェクトはサポートされていません。
+* 外部呼び出しにより、機密データが望ましくないエンドポイントに公開されたり、外部データが内部ブックに取り込まれたりすることがあります。 管理者は、このような呼び出しに対するファイアウォール保護を確立できます。 外部呼び出しに依存する前に、必ずローカル ポリシーを確認してください。
+* 依存関係を取得する前に、データ スループットの量を確認してください。 たとえば、外部データセット全体をプルダウンすることは最適なオプションではない可能性があり、代わりに改ページ分割を使用してデータをチャンク単位で取得する必要があります。
 
 ## <a name="retrieve-information-with-fetch"></a>を使用して情報を取得する `fetch`
 
-フェッチ [API は、](https://developer.mozilla.org/docs/Web/API/Fetch_API) 外部サービスから情報を取得します。 これは API なので `async` 、スクリプトの署名を `main` 調整する必要があります。 関数を作成 `main` します `async`。 また、呼び出しと取得 `await` も確認 `fetch` する必要 `json` があります。 これにより、スクリプトが終了する前にこれらの操作が確実に完了します。
+[フェッチ API](https://developer.mozilla.org/docs/Web/API/Fetch_API) は、外部サービスから情報を取得します。 これは `async` API であるため、スクリプトのシグネチャを調整する `main` 必要があります。 関数`async`を作成します`main`。 また、呼び出しと`json`取得も`await``fetch`必ず行う必要があります。 これにより、スクリプトが終了する前にこれらの操作が確実に完了します。
 
-取得した JSON データは、スクリプト `fetch` で定義されているインターフェイスと一致している必要があります。 返される値は、スクリプトが型をサポートしていないOffice型に割[り当てる必要`any`があります](typescript-restrictions.md#no-any-type-in-office-scripts)。 返されるプロパティの名前と種類については、サービスのドキュメントを参照してください。 次に、一致するインターフェイスまたはインターフェイスをスクリプトに追加します。
+取得される `fetch` JSON データは、スクリプトで定義されているインターフェイスと一致する必要があります。 Office スクリプトでは型がサポートされていないため、返される値を特定[の型に`any`](typescript-restrictions.md#no-any-type-in-office-scripts)割り当てる必要があります。 返されるプロパティの名前と型を確認するには、サービスのドキュメントを参照する必要があります。 次に、一致するインターフェイスまたはインターフェイスをスクリプトに追加します。
 
-次のスクリプトは、指定 `fetch` された URL のテスト サーバーから JSON データを取得するために使用します。 データを `JSONData` 一致する型として格納するインターフェイスに注意してください。
+次のスクリプトは、指定された URL のテスト サーバーから JSON データを取得するために使用 `fetch` します。 データを `JSONData` 一致する型として格納するインターフェイスに注意してください。
 
 ```TypeScript
-async function main(workbook: ExcelScript.Workbook){
+async function main(workbook: ExcelScript.Workbook) {
   // Retrieve sample JSON data from a test server.
   let fetchResult = await fetch('https://jsonplaceholder.typicode.com/todos/1');
 
@@ -75,20 +75,21 @@ interface JSONData {
 
 ### <a name="other-fetch-samples"></a>その他の `fetch` サンプル
 
-* [[スクリプトの外部フェッチ](../resources/samples/external-fetch-calls.md)呼びOffice使用する] サンプルは、ユーザーのリポジトリに関する基本情報を取得するGitHub示しています。
-* Office スクリプトのサンプル シナリオ[: NOAA の Graph](../resources/scenarios/noaa-data-fetch.md) 水レベルデータは、全米海洋大気局のタイドと Currents データベースからレコードを取得するために使用されるフェッチ コマンドを示しています。
+* [Office スクリプトサンプルで外部フェッチ呼び出しを使用](../resources/samples/external-fetch-calls.md)するサンプルでは、ユーザーのGitHubリポジトリに関する基本情報を取得する方法を示します。
+* [Office スクリプトのサンプル シナリオ: NOAA から水レベルのデータをGraph](../resources/scenarios/noaa-data-fetch.md)すると、海洋大気局の Tides および Currents データベースからレコードを取得するために使用される fetch コマンドが示されています。
 
-## <a name="external-calls-from-power-automate"></a>ユーザーからの外部通話Power Automate
+## <a name="external-calls-from-power-automate"></a>Power Automateからの外部呼び出し
 
-スクリプトを実行すると、外部 API 呼び出しは失敗し、Power Automate。 これは、スクリプトをアプリケーション経由で実行する場合と、Excelスクリプトを実行する場合Power Automate。 フローに組み込む前に、スクリプトでそのような参照を確認してください。
+スクリプトがPower Automateで実行されると、外部 API 呼び出しは失敗します。 これは、Excel アプリケーションを使用してスクリプトを実行することと、Power Automateを介してスクリプトを実行する場合の動作上の違いです。 フローにビルドする前に、スクリプトでこのような参照がないか確認してください。
 
-外部サービスからデータを取得または外部サービスにプッシュするには、Azure ADまたは他の同等のアクションで [HTTP](/connectors/webcontents/) を使用する必要があります。
+Azure AD またはその他の同等のアクション [で HTTP](/connectors/webcontents/) を使用して、外部サービスからデータをプルするか、外部サービスにプッシュする必要があります。
 
 > [!WARNING]
-> 既存のデータ損失防止ポリシーをPower Automate Excel[、](/connectors/excelonlinebusiness)オンライン コネクタを介して行われた外部呼び出しは失敗します。 ただし、組織のファイアウォールPower Automate実行されるスクリプトは、組織の外部および組織のファイアウォールの外部で実行されます。 この外部環境で悪意のあるユーザーからの保護を強化するために、管理者はスクリプトの使用Officeできます。 管理者は、Power Automate で Excel Online コネクタを無効にするか、Office スクリプト管理者Excel on the webをOffice[できます](/microsoft-365/admin/manage/manage-office-scripts-settings)。
+> Power Automate [Excel Online コネクタ](/connectors/excelonlinebusiness)を介して行われた外部呼び出しは、既存のデータ損失防止ポリシーを維持するために失敗します。 ただし、Power Automateを介して実行されるスクリプトは、組織の外部および組織のファイアウォールの外部で実行されます。 この外部環境で悪意のあるユーザーからの保護を強化するために、管理者は Office スクリプトの使用を制御できます。 管理者は、Power Automateで Excel Online コネクタを無効にするか、Office [スクリプト管理者コントロール](/microsoft-365/admin/manage/manage-office-scripts-settings)を使用してExcel on the webのスクリプトOffice無効にすることができます。
 
 ## <a name="see-also"></a>関連項目
 
+* [JSON を使用して、Office スクリプトとの間でデータを渡す](use-json.md)
 * [Office スクリプトでの組み込みの JavaScript オブジェクトの使用](javascript-objects.md)
 * [Office スクリプトで外部取得呼び出しを使用する](../resources/samples/external-fetch-calls.md)
-* [Officeスクリプトのサンプル シナリオ: NOAA Graphの水レベルデータの作成](../resources/scenarios/noaa-data-fetch.md)
+* [Office スクリプトのサンプル シナリオ: NOAA から水レベルのデータをGraphする](../resources/scenarios/noaa-data-fetch.md)

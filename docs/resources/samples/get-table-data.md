@@ -1,20 +1,20 @@
 ---
-title: Excel データを JSON として出力する
-description: Power Automate で使用する EXCEL テーブル データを JSON として出力する方法について説明します。
+title: JSON としてデータExcel出力する
+description: Power Automateで使用する JSON としてテーブル データExcel出力する方法について説明します。
 ms.date: 06/02/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 2d316a7f1a3def869b59e0ff2b2e64284f0d2022
-ms.sourcegitcommit: 4a28220decc2f25b2ecd0ebaf52a5de68f7b7a83
+ms.openlocfilehash: bf7e8ceb7bec5a7362b1894cdfe13d9e01576a66
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2022
-ms.locfileid: "65895042"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088107"
 ---
-# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Power Automate で使用するために Excel テーブル データを JSON として出力する
+# <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Power Automateで使用するために、テーブル データExcel JSON として出力する
 
-Excel テーブル データは、JSON 形式のオブジェクトの配列として表すことができます。 各オブジェクトは、テーブル内の行を表します。 これにより、ユーザーに表示される一貫性のある形式で Excel からデータを抽出できます。 その後、Power Automate フローを使用して他のシステムにデータを渡すことができます。
+テーブル データExcel [JSON](https://www.w3schools.com/whatis/whatis_json.asp) 形式のオブジェクトの配列として表すことができます。 各オブジェクトは、テーブル内の行を表します。 これにより、ユーザーに表示される一貫性のある形式でExcelからデータを抽出できます。 その後、Power Automate フローを使用して、データを他のシステムに渡すことができます。 
 
-## <a name="sample-excel-file"></a>Excel ファイルのサンプル
+## <a name="sample-excel-file"></a>サンプル Excel ファイル
 
 すぐに使用できるブックのファイル <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> をダウンロードします。
 
@@ -29,7 +29,7 @@ Excel テーブル データは、JSON 形式のオブジェクトの配列と�
 サンプルを自分で試すには、次のスクリプトを追加します。
 
 > [!NOTE]
-> テーブル列と `interface TableData` 一致するように構造を変更できます。 スペースを含む列名の場合は、サンプルのように `"Event ID"` キーを引用符で囲んでください。
+> テーブル列と `interface TableData` 一致するように構造を変更できます。 スペースを含む列名の場合は、サンプルのように `"Event ID"` キーを引用符で囲んでください。 JSON の操作の詳細については、「[JSON を使用して、Office スクリプトとの間でデータを渡す](../../develop/use-json.md)」を参照してください。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -258,6 +258,6 @@ interface TableData {
 }]
 ```
 
-## <a name="use-in-power-automate"></a>Power Automate で使用する
+## <a name="use-in-power-automate"></a>Power Automateで使用する
 
-Power Automate でこのようなスクリプトを使用する方法については、「Power Automate を [使用して自動化されたワークフローを作成する」を](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)参照してください。
+Power Automateでこのようなスクリプトを使用する方法については、「[Power Automateを使用して自動化されたワークフローを作成する」を](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)参照してください。
