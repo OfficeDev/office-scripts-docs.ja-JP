@@ -1,14 +1,14 @@
 ---
 title: 自動で実行される Power Automate フロー内で、データをスクリプトに渡す
 description: メールを受信し、フロー データをスクリプトに渡すときに、Power Automate を使用して Excel on the web 用の Office スクリプトを実行する方法について説明します。
-ms.date: 06/29/2021
+ms.date: 06/10/2022
 ms.localizationpriority: high
-ms.openlocfilehash: ae57bb52b07df0822f1fac8c931c90de8614a770
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 73a551df09eadba1f6e75de35e17e1c5a93498e9
+ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64586060"
+ms.lasthandoff: 06/15/2022
+ms.locfileid: "66088138"
 ---
 # <a name="pass-data-to-scripts-in-an-automatically-run-power-automate-flow"></a>自動で実行される Power Automate フロー内で、データをスクリプトに渡す
 
@@ -210,6 +210,18 @@ function main(
 :::image type="content" source="../images/power-automate-params-tutorial-4.png" alt-text="フローの実行を 3 回行った後のメール テーブルを示すワークシート。":::
 
 :::image type="content" source="../images/power-automate-params-tutorial-5.png" alt-text="フローの実行を 3 回行った後のピボット テーブルを示すワークシート。":::
+
+## <a name="troubleshooting"></a>トラブルシューティング
+
+同時に複数のメールを受信すると、Excel でマージの競合が発生する可能性があります。 このリスクは、電子メール コネクタを一度に 1 つのメールのみに対して動作するように設定することで軽減されます。 これを行うには、次の手順を実行します。
+
+1. メール コネクタで [**メニュー (...)**] ボタンを選択し、[**設定**] を選択します。
+
+    :::image type="content" source="../images/outlook-connector-settings-1.png" alt-text="コネクタ メニューで強調表示されている設定オプション。":::
+
+1. ポップアップ表示される [**設定**] オプションで、[**コンカレンシー制御**] を [**オン**] に設定します。 次に、[**並列処理の度合い**] を **1** に設定します。
+
+    :::image type="content" source="../images/outlook-connector-settings-2.png" alt-text="設定メニューのコンカレンシー オプション。":::
 
 ## <a name="next-steps"></a>次の手順
 

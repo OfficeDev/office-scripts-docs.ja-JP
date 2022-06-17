@@ -35,6 +35,8 @@ items:
             href: develop/script-buttons.md
           - name: Power Automate でスクリプトを実行する
             href: develop/power-automate-integration.md
+          - name: JSON を使用してデータを渡す
+            href: develop/use-json.md
           - name: Power Automate フローで .xlsm ファイルを使用する
             href: develop/macros-power-automate.md
           - name: ピボットテーブルを使用して作業する
