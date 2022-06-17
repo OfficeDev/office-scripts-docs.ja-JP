@@ -1,14 +1,14 @@
 ---
 title: Power Automate を使用した Office スクリプトの実行
 description: Power Automate ワークフローを使用して Excel on the web の Office スクリプトを取得する方法。
-ms.date: 03/08/2022
+ms.date: 05/16/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 67e48d297a8db16661ce394a11f2e425bc0a33be
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
+ms.openlocfilehash: 85c335eeb736ec544eccb2fbdbe819bdbef6848c
+ms.sourcegitcommit: aecbd5baf1e2122d836c3eef3b15649e132bc68e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393678"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128231"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>Power Automate を使用した Office スクリプトの実行
 
@@ -26,6 +26,9 @@ Power Automate と Office スクリプトの統合を開始するには、チュ
 
 > [!IMPORTANT]
 > "スクリプトの実行" アクションにより、Excel コネクタを使用するユーザーにブックとそのデータへの重要なアクセス権が付与されます。 さらに、「[Power Automate からの外部呼び出し](external-calls.md)」で説明されているとおり、外部 API の呼び出しを行うスクリプトにセキュリティ上のリスクがあります。 管理者が機密性の高いデータの流出を懸念している場合は、Excel Online コネクタをオフにするか、[Office スクリプト管理者制御](/microsoft-365/admin/manage/manage-office-scripts-settings)で Office スクリプトへのアクセスを制限することができます。
+
+> [!IMPORTANT]
+> Power Automateでは、現時点ではSharePointに格納されているスクリプトはサポート **されていません**。
 
 ## <a name="data-transfer-in-flows-for-scripts"></a>スクリプトのフローでのデータ転送
 

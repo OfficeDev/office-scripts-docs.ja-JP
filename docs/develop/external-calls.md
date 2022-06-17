@@ -3,12 +3,12 @@ title: Office スクリプトでの外部 API 呼び出しのサポート
 description: Office スクリプトで外部 API 呼び出しを行うためのサポートとガイダンス。
 ms.date: 06/10/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: b847400893184533c250ab99b640563ff0cbdb3e
-ms.sourcegitcommit: dd01979d34b3499360d2f79a56f8a8f24f480eed
+ms.openlocfilehash: 472b2e1b4aa38366b68b573fa959deee616b9dbe
+ms.sourcegitcommit: aecbd5baf1e2122d836c3eef3b15649e132bc68e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2022
-ms.locfileid: "66088044"
+ms.lasthandoff: 06/16/2022
+ms.locfileid: "66128224"
 ---
 # <a name="external-api-call-support-in-office-scripts"></a>Office スクリプトでの外部 API 呼び出しのサポート
 
@@ -18,7 +18,7 @@ ms.locfileid: "66088044"
 > 外部呼び出しにより、機密データが望ましくないエンドポイントに公開される可能性があります。 管理者は、このような呼び出しに対するファイアウォール保護を確立できます。
 
 > [!IMPORTANT]
-> 外部 API の呼び出しは、[通常の状況](#external-calls-from-power-automate)ではPower Automateを通じてではなく、Excel アプリケーションを介してのみ行うことができます。
+> 外部 API の呼び出しは、[通常の状況](#external-calls-from-power-automate)ではPower Automateを通じてではなく、Excel アプリケーションを介してのみ行うことができます。 外部呼び出しは、SharePoint サイトに格納されているスクリプトでもサポートされていません。
 
 ## <a name="configure-your-script-for-external-calls"></a>外部呼び出し用にスクリプトを構成する
 
