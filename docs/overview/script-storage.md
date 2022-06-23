@@ -1,14 +1,14 @@
 ---
 title: Office スクリプト ファイルのストレージと所有権
 description: Office スクリプトをMicrosoft OneDriveに格納し、所有者間で転送する方法に関する情報。
-ms.date: 06/01/2022
+ms.date: 06/21/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 17603660bcafa41f898b15b1226d11fa0d51b0a5
-ms.sourcegitcommit: aecbd5baf1e2122d836c3eef3b15649e132bc68e
+ms.openlocfilehash: 9dbf53292cb16b0be32afe3cdb93409f3dbb2612
+ms.sourcegitcommit: 4f2164ac4dd61d123ea5442a4c446be2d139e8ff
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66128210"
+ms.lasthandoff: 06/23/2022
+ms.locfileid: "66211305"
 ---
 # <a name="office-scripts-file-storage-and-ownership"></a>Office スクリプト ファイルのストレージと所有権
 
@@ -57,9 +57,20 @@ Office スクリプトは、Microsoft OneDriveおよび Microsoft SharePointに�
 
 ## <a name="audit-office-scripts-usage-at-the-admin-level"></a>管理者レベルでのスクリプトの使用Office監査する
 
-コンプライアンス センターの監査ログでOffice スクリプトを使用しているテナントを確認します。 このツールの使用方法については、 [セキュリティ & コンプライアンス センターの監査ログを検索](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide&preserve-view=true#search-the-audit-log)するを参照してください。
+コンプライアンス センターの監査ログを使用して、組織内でOffice スクリプトを使用しているユーザーを確認します。 監査ログの詳細については、 [セキュリティ & コンプライアンス センターの監査ログの検索](/microsoft-365/compliance/search-the-audit-log-in-security-and-compliance?view=o365-worldwide&preserve-view=true#search-the-audit-log)に関するページを参照してください。
 
-検索ツールでOffice スクリプトを使用しているユーザーを検索するには、[**ファイル]、[フォルダー]、または [サイト**] フィールドに追加`.osts`します。 これにより、Office Scripts ファイル拡張子を持つすべてのファイルが検索されます。 組織内のだれかが Office スクリプト機能を使用した場合、ユーザー アクティビティは監査ログの検索結果に表示されます。
+管理者としてスクリプト関連のアクティビティOffice具体的に監査するには、次の手順に従います。
+
+1. InPrivate ブラウザー ウィンドウ (または Incognito またはその他のブラウザー固有の制限付き追跡モード) で、 [コンプライアンス センター](https://compliance.microsoft.com/)を開いてログインします。
+1. **[監査**] ページに移動します。
+1. *(1 回限り)* [ **検索** ] タブで、[ **ユーザーと管理者のアクティビティの記録を開始する**] を選択します。
+
+    > [!IMPORTANT]
+    > テナント全体のすべてのアクティビティが記録されるまでに、記録を有効にしてから 1 時間または 2 時間かかる場合があります。
+
+1. 目的の検索オプションを設定し、 **Search** キーを押します。 **アクティビティ** をフィルター処理して **ブックでスクリプトを実行** し、スクリプトが実行された日時を確認します。 [ **ファイル]、[フォルダー]、または [サイト** ] フィールドをフィルター処理して `.osts`、 . これにより、組織内のだれがスクリプトを作成または変更しているかがわかります。
+
+    :::image type="content" source="../images/audit-log-example.png" alt-text="&quot;ブックにスクリプトを実行する&quot; アクションや .osts ファイルのアップロードと変更など、いくつかの監査ログ検索結果行。":::
 
 ## <a name="see-also"></a>関連項目
 
