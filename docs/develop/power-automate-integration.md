@@ -1,14 +1,14 @@
 ---
 title: Power Automate を使用した Office スクリプトの実行
 description: Power Automate ワークフローを使用して Excel on the web の Office スクリプトを取得する方法。
-ms.date: 05/16/2022
+ms.date: 06/22/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 85c335eeb736ec544eccb2fbdbe819bdbef6848c
-ms.sourcegitcommit: aecbd5baf1e2122d836c3eef3b15649e132bc68e
+ms.openlocfilehash: 61e51861bd2c987c25d40e9ac6d2247122256918
+ms.sourcegitcommit: c5ffe0a95b962936ee92e7ffe17388bef6d4fad8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/16/2022
-ms.locfileid: "66128231"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66241857"
 ---
 # <a name="run-office-scripts-with-power-automate"></a>Power Automate を使用した Office スクリプトの実行
 
@@ -18,7 +18,26 @@ ms.locfileid: "66128231"
 
 Power Automate を初めて使用する場合は、「[Power Automate に関する入門情報](/power-automate/getting-started)」にアクセスすることをお勧めします。 そちらで、利用可能なすべてのオートメーションの可能性について詳しく学ぶことができます。 このドキュメントでは、Power Automate での Office スクリプトの動作と、それが Excel エクスペリエンスの改善にどのように役立つかに重点が置かれています。
 
-Power Automate と Office スクリプトの統合を開始するには、チュートリアル「[Power Automate でスクリプトの使用を開始する](../tutorials/excel-power-automate-manual.md)」に従ってください。 単純なスクリプトを呼び出すフローの作成方法について学ぶことができます。 このチュートリアルと「[自動で実行される Power Automate フロー内で、データをスクリプトに渡す](../tutorials/excel-power-automate-trigger.md)」のチュートリアルが完了したら、こちらに戻り、Office スクリプトを Power Automate フローに接続する方法の詳細をご確認ください。
+### <a name="step-by-step-tutorials"></a>詳細なチュートリアル
+
+Power Automate と Office スクリプトには、3 つのステップ バイ ステップチュートリアルがあります。 これらは、自動化サービスを結合し、ブックとフローの間でデータを渡す方法を示しています。
+
+- [手動 Power Automation フローからスクリプトを呼び出す](../tutorials/excel-power-automate-manual.md)
+- [自動で実行される Power Automate フロー内で、データをスクリプトに渡す](../tutorials/excel-power-automate-trigger.md)
+- [自動で実行される Power Automate フローにスクリプトからデータを返す](../tutorials//excel-power-automate-returns.md)
+
+### <a name="create-a-flow-from-excel"></a>Excel からフローを作成する
+
+Excel で Power Automate の使用を開始するには、さまざまなフロー テンプレートを使用します。 [ **自動化** ] タブで、[ **タスクの自動化**] を選択します。
+
+:::image type="content" source="../images/automate-a-task-button.png" alt-text="リボンの [タスクの自動化] ボタン。":::
+
+これにより作業ウィンドウが開き、Office スクリプトの大規模な自動化ソリューションへの接続を開始するためのいくつかのオプションが表示されます。 開始するオプションを選択します。 フローには現在のブックが付属しています。
+
+:::image type="content" source="../images/automate-a-task-choices.png" alt-text="[Office スクリプトを Excel で実行してメールを送信する] や [Microsoft Forms応答が受信されたときに Excel で Office スクリプトを実行する] などのフロー テンプレート オプションを示す作業ウィンドウ。":::
+
+> [!TIP]
+> また、個々のスクリプトの **[その他のオプション ] (...)** メニューからフローの作成を開始することもできます。
 
 ## <a name="excel-online-business-connector"></a>Excel Online (Business) コネクタ
 
@@ -28,7 +47,7 @@ Power Automate と Office スクリプトの統合を開始するには、チュ
 > "スクリプトの実行" アクションにより、Excel コネクタを使用するユーザーにブックとそのデータへの重要なアクセス権が付与されます。 さらに、「[Power Automate からの外部呼び出し](external-calls.md)」で説明されているとおり、外部 API の呼び出しを行うスクリプトにセキュリティ上のリスクがあります。 管理者が機密性の高いデータの流出を懸念している場合は、Excel Online コネクタをオフにするか、[Office スクリプト管理者制御](/microsoft-365/admin/manage/manage-office-scripts-settings)で Office スクリプトへのアクセスを制限することができます。
 
 > [!IMPORTANT]
-> Power Automateでは、現時点ではSharePointに格納されているスクリプトはサポート **されていません**。
+> Power Automate では、現時点では SharePoint に格納されているスクリプトはサポート **されていません** 。
 
 ## <a name="data-transfer-in-flows-for-scripts"></a>スクリプトのフローでのデータ転送
 

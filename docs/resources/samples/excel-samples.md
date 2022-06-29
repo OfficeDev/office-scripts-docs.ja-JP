@@ -1,18 +1,18 @@
 ---
-title: ExcelのOffice スクリプトの基本スクリプト
-description: ExcelのOffice スクリプトで使用するコード サンプルのコレクション。
-ms.date: 03/24/2022
+title: Excel の Office スクリプトの基本的なスクリプト
+description: Excel の Office スクリプトで使用するコード サンプルのコレクション。
+ms.date: 06/24/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e28026b7a3498d477cce8b6dc5940da33a30f53
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
+ms.openlocfilehash: 071329e35a1a3fe6197896afe3acaf11d3a53fd5
+ms.sourcegitcommit: c5ffe0a95b962936ee92e7ffe17388bef6d4fad8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393657"
+ms.lasthandoff: 06/29/2022
+ms.locfileid: "66241845"
 ---
-# <a name="basic-scripts-for-office-scripts-in-excel"></a>ExcelのOffice スクリプトの基本スクリプト
+# <a name="basic-scripts-for-office-scripts-in-excel"></a>Excel の Office スクリプトの基本的なスクリプト
 
-次のサンプルは、独自のブックを試用するための簡単なスクリプトです。 Excelで使用するには:
+次のサンプルは、独自のブックを試用するための簡単なスクリプトです。 Excel で使用するには:
 
 1. Excel on the webでブックを開きます。
 1. **[自動化]** タブを開きます。
@@ -234,7 +234,7 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-次のサンプルでは、Excelに格納されている日付を読み取り、JavaScript Date オブジェクトに変換します。 JavaScript 日付の入力として、日付の数値シリアル番号が使用されます。 このシリアル番号については、 [NOW() 関数](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) の記事で説明されています。
+次のサンプルでは、Excel に格納されている日付を読み取り、JavaScript Date オブジェクトに変換します。 JavaScript 日付の入力として、日付の数値シリアル番号が使用されます。 このシリアル番号については、 [NOW() 関数](https://support.office.com/article/now-function-3337fd29-145a-4347-b2e6-20c904739c46) の記事で説明されています。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -359,11 +359,11 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="formulas"></a>数式
 
-これらのサンプルでは、Excel数式を使用し、スクリプトで操作する方法を示します。
+これらのサンプルでは、Excel の数式を使用し、スクリプトで操作する方法を示します。
 
 ### <a name="single-formula"></a>単一の数式
 
-このスクリプトはセルの数式を設定し、セルの数式と値Excel個別に格納する方法を表示します。
+このスクリプトは、セルの数式を設定し、Excel がセルの数式と値を個別に格納する方法を表示します。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -413,6 +413,27 @@ function main(workbook: ExcelScript.Workbook) {
 
   // Select the transposed range to highlight it.
   targetRange.select();
+}
+```
+
+### <a name="replace-all-formulas-with-their-result-values"></a>すべての数式を結果の値に置き換える
+
+このスクリプトは、数式を含む現在のワークシート内のすべてのセルを、その数式の結果に置き換えます。 つまり、スクリプトの実行後に数式は存在せず、値のみが存在します。
+
+```TypeScript
+function main(workbook: ExcelScript.Workbook) {
+    // Get the ranges with formulas.
+    let sheet = workbook.getActiveWorksheet();
+    let usedRange = sheet.getUsedRange();
+    let formulaCells = usedRange.getSpecialCells(ExcelScript.SpecialCellType.formulas);
+
+    // In each formula range: get the current value, clear the contents, and set the value as the old one.
+    // This removes the formula but keeps the result.
+    formulaCells.getAreas().forEach((range) => {
+      let currentValues = range.getValues();
+      range.clear(ExcelScript.ClearApplyTo.contents);
+      range.setValues(currentValues);
+    });
 }
 ```
 
