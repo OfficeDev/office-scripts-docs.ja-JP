@@ -83,8 +83,6 @@ items:
                 href: resources/samples/count-blank-rows.md
               - name: チャートとテーブルの画像をメールで送信
                 href: resources/samples/email-images-chart-table.md
-              - name: テーブルをフィルター処理し、可視範囲を取得する
-                href: resources/samples/filter-table-get-visible-range.md
               - name: 計算モードの管理
                 href: resources/samples/excel-calculation.md
               - name: 選択した行をテーブル間で移動する
