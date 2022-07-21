@@ -1,70 +1,61 @@
 ---
-title: アクティブ セルの場所に基づいてテーブル列フィルターをクリアする
-description: アクティブ セルの場所に基づいてテーブル列フィルターをクリアする方法について学習します。
-ms.date: 06/29/2021
+title: テーブル列フィルターを削除する
+description: アクティブなセルの場所に基づいてテーブル列フィルターをクリアする方法について説明します。
+ms.date: 07/15/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: c52f1a3501318a479744abc6f2aa15cfaf3f9ded
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 21a79abfdd4aeac79af4a0f9ea4a581d45b9706b
+ms.sourcegitcommit: dd632402cb46ec8407a1c98456f1bc9ab96ffa46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585584"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66918812"
 ---
-# <a name="clear-table-column-filter-based-on-active-cell-location"></a>アクティブ セルの場所に基づいてテーブル列フィルターをクリアする
+# <a name="remove-table-column-filters"></a>テーブル列フィルターを削除する
 
-このサンプルでは、アクティブセルの場所に基づいてテーブル列フィルターをクリアします。 このスクリプトは、セルがテーブルの一部かどうかを検出し、テーブル列を決定し、そのセルに適用されているフィルターをクリアします。
+このサンプルでは、アクティブなセルの場所に基づいて、テーブル列からフィルターを削除します。 スクリプトは、セルがテーブルの一部であるかどうかを検出し、テーブル列を決定し、それに適用されるすべてのフィルターをクリアします。
 
-フィルターをクリアする前に (および後で再適用する) 前にフィルターを保存する方法の詳細については[](move-rows-across-tables.md)、「フィルターを保存してテーブル間で行を移動する」、より高度なサンプルを参照してください。
+フィルターをクリアする前にフィルターを保存する (後で再適用する) 方法の詳細については、より高度なサンプルである [フィルターを保存してテーブル間で行を移動](move-rows-across-tables.md)する方法に関するページを参照してください。
 
-_列フィルターをクリアする前に (アクティブ セルに注意してください)_
+## <a name="sample-excel-file"></a>Excel ファイルのサンプル
 
-:::image type="content" source="../../images/before-filter-applied.png" alt-text="列フィルターをクリアする前のアクティブ セル。":::
+すぐに使用できるブックの <a href="table-with-filter.xlsx">table-with-filter.xlsx</a> をダウンロードします。 サンプルを自分で試すには、次のスクリプトを追加します。
 
-_列フィルターをクリアした後_
+## <a name="sample-code-clear-table-column-filter-based-on-active-cell"></a>サンプル コード: 作業中のセルに基づいてテーブル列フィルターをクリアする
 
-:::image type="content" source="../../images/after-filter-cleared.png" alt-text="列フィルターをクリアした後のアクティブ なセル。":::
-
-## <a name="sample-excel-file"></a>サンプル Excel ファイル
-
-すぐに <a href="table-with-filter.xlsx">table-with-filter.xlsx</a> ブックのダウンロード を行います。 次のスクリプトを追加して、サンプルを自分で試してみてください。
-
-## <a name="sample-code-clear-table-column-filter-based-on-active-cell"></a>サンプル コード: アクティブ セルに基づいてテーブル列フィルターをクリアする
-
-次のスクリプトは、アクティブ セルの場所に基づいてテーブル列フィルターをクリアし、テーブルを持つ任意のExcelに適用できます。
+次のスクリプトは、アクティブなセルの場所に基づいてテーブル列フィルターをクリアし、テーブルを含む任意の Excel ファイルに適用できます。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
-    // Get the active cell.
-    const cell = workbook.getActiveCell();
+  // Get the active cell.
+  const cell = workbook.getActiveCell();
 
-    // Get all tables associated with that cell.
-    const tables = cell.getTables();
-    
-    // If there is no table on the selection, end the script.
-    if (tables.length !== 1) {
-      console.log("The selection is not in a table.");
-      return;
-    }
+  // Get the tables associated with that cell.
+  // Since tables can't overlap, this will be one table at most.
+  const currentTable = cell.getTables()[0];
 
-    // Get the first table associated with the active cell.
-    const currentTable = tables[0];
+  // If there is no table on the selection, end the script.
+  if (!currentTable) {
+    console.log("The selection is not in a table.");
+    return;
+  }
 
-    // Log key information about the table.
-    console.log(currentTable.getName());
-    console.log(currentTable.getRange().getAddress());
+  // Get the table header above the current cell by referencing its column.
+  const entireColumn = cell.getEntireColumn();
+  const intersect = entireColumn.getIntersection(currentTable.getRange());
+  const headerCellValue = intersect.getCell(0, 0).getValue() as string;
 
-    // Get the table header above the current cell by referencing its column.
-    const entireColumn = cell.getEntireColumn();
-    const intersect = entireColumn.getIntersection(currentTable.getRange());
-    console.log(intersect.getAddress());
+  // Get the TableColumn object matching that header.
+  const tableColumn = currentTable.getColumnByName(headerCellValue);
 
-    const headerCellValue = intersect.getCell(0,0).getValue() as string;
-    console.log(headerCellValue);
-
-    // Get the TableColumn object matching that header.
-    const tableColumn = currentTable.getColumnByName(headerCellValue);
-
-    // Clear the filter on that table column.
-    tableColumn.getFilter().clear();
+  // Clear the filters on that table column.
+  tableColumn.getFilter().clear();
 }
 ```
+
+## <a name="before-clearing-column-filter-notice-the-active-cell"></a>列フィルターをクリアする前に (アクティブなセルに注意してください)
+
+:::image type="content" source="../../images/before-filter-applied.png" alt-text="列フィルターをクリアする前のアクティブセル。":::
+
+## <a name="after-clearing-column-filter"></a>列フィルターをクリアした後
+
+:::image type="content" source="../../images/after-filter-cleared.png" alt-text="列フィルターをクリアした後のアクティブセル。":::

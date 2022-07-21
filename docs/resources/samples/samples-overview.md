@@ -3,12 +3,12 @@ title: Office スクリプトのサンプル
 description: 使用可能な Office スクリプトのサンプルとシナリオ。
 ms.date: 06/14/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: c9b16272c893bf048f45d7f3256906c7d550d089
-ms.sourcegitcommit: 82fb78e6907b7c3b95c5c53cfc83af4ea1067a78
+ms.openlocfilehash: 5959bc472dbec04526dcf912a8bd67e2554aa251
+ms.sourcegitcommit: dd632402cb46ec8407a1c98456f1bc9ab96ffa46
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66572336"
+ms.lasthandoff: 07/21/2022
+ms.locfileid: "66918826"
 ---
 # <a name="office-scripts-samples-and-scenarios"></a>Office スクリプトのサンプルとシナリオ
 
@@ -32,6 +32,7 @@ ms.locfileid: "66572336"
 | [ブックに画像を追加する](add-image-to-workbook.md) | このサンプルでは、ブックに画像を追加し、シート間で画像をコピーします。|
 | [複数の Excel テーブルを 1 つのテーブルにコピーする](copy-tables-combine.md) | このサンプルでは、複数の Excel テーブルのデータを、すべての行を含む 1 つのテーブルに結合します。 |
 | [ブックの目次を作成する](table-of-contents.md) | このサンプルでは、各ワークシートへのリンクを含む目次を作成します。 |
+| [テーブル列フィルターを削除する](clear-table-filter-for-active-cell.md) | このサンプルでは、テーブル列からすべてのフィルターをクリアします。 |
 
 ## <a name="beyond-the-basics"></a>応用
 
@@ -43,7 +44,7 @@ ms.locfileid: "66572336"
 | [CSV ファイルを Excel ブックに変換する](convert-csv.md) | このサンプルでは、Office スクリプトと Power Automate を使用して、.csv ファイルから.xlsx ファイルを作成します。 |
 | [相互参照ブック](excel-cross-reference.md) | このサンプルでは、Office スクリプトと Power Automate を使用して、さまざまなブックの情報を相互参照および検証します。 |
 | [特定のシートまたはすべてのシート内の空白行をカウントする](count-blank-rows.md) | このサンプルでは、データが存在すると予想されるシートに空白行があるかどうかを検出し、Power Automate フローでの使用に関する空白行数を報告します。 |
-| [電子メール グラフと表の画像](email-images-chart-table.md) | このサンプルでは、Office スクリプトと Power Automate アクションを使用してグラフを作成し、そのグラフを電子メールで画像として送信します。 |
+| [グラフとテーブルの画像をEmailする](email-images-chart-table.md) | このサンプルでは、Office スクリプトと Power Automate アクションを使用してグラフを作成し、そのグラフを電子メールで画像として送信します。 |
 | [外部フェッチ呼び出し](external-fetch-calls.md) | このサンプルでは、スクリプトの GitHub から情報を取得するために使用 `fetch` します。 |
 | [Excel で計算モードを管理する](excel-calculation.md) | このサンプルでは、Office スクリプトを使用して計算モードを使用し、Excel on the webでメソッドを計算する方法を示します。 |
 | [テーブル間で行を移動する](move-rows-across-tables.md) | このサンプルでは、フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する方法を示します。 |

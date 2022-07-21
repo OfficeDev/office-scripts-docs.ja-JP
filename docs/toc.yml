@@ -71,6 +71,8 @@ items:
                 href: resources/samples/copy-tables-combine.md
               - name: ブックの目次を作成する
                 href: resources/samples/table-of-contents.md
+              - name: テーブル列フィルターを削除する
+                href: resources/samples/clear-table-filter-for-active-cell.md
           - name: 応用
             items:
               - name: ワークシートを 1 つのブックに結合する
