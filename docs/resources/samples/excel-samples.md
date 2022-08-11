@@ -3,12 +3,12 @@ title: Excel の Office スクリプトの基本的なスクリプト
 description: Excel の Office スクリプトで使用するコード サンプルのコレクション。
 ms.date: 06/24/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: eea455cbaa2cbc96556e71deec1a9fbd4cdbeea7
-ms.sourcegitcommit: dd632402cb46ec8407a1c98456f1bc9ab96ffa46
+ms.openlocfilehash: 3d17e2cf2314ccd6c07d81e53337fcd63a474fd8
+ms.sourcegitcommit: 33fe0f6807daefb16b148fd73c863de101f47cea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66918819"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "67281904"
 ---
 # <a name="basic-scripts-for-office-scripts-in-excel"></a>Excel の Office スクリプトの基本的なスクリプト
 
@@ -183,12 +183,13 @@ function main(workbook: ExcelScript.Workbook) {
       range.setRowHidden(false);
     }
 }
+```
 
-### Freeze Currently Selected Cells
+### <a name="freeze-currently-selected-cells"></a>現在選択されているセルを固定する
 
-This script checks what cells are currently selected and freezes that selection, so those cells are always visible.
+このスクリプトは、現在選択されているセルをチェックし、その選択を固定して、それらのセルが常に表示されるようにします。
 
-```Typescript
+```TypeScript
 function main(workbook: ExcelScript.Workbook) {
     // Get the currently selected sheet.
     const selectedSheet = workbook.getActiveWorksheet();
