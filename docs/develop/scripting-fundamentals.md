@@ -3,12 +3,12 @@ title: Excel on the web での Office スクリプトのスクリプトの基本
 description: Office スクリプトを作成する前に理解しておくべきオブジェクト モデルの情報と他の基本事項について説明します。
 ms.date: 05/24/2021
 ms.localizationpriority: high
-ms.openlocfilehash: bd51f814de60da8006413096f4d6aad125f78fab
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
+ms.openlocfilehash: 97aa840809010f3640b045ce2fd28a39a47243b4
+ms.sourcegitcommit: 33fe0f6807daefb16b148fd73c863de101f47cea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393601"
+ms.lasthandoff: 08/08/2022
+ms.locfileid: "67281925"
 ---
 # <a name="scripting-fundamentals-for-office-scripts-in-excel-on-the-web"></a>Excel on the web での Office スクリプトのスクリプトの基本事項
 
@@ -32,7 +32,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 スクリプトを実行すると、`main` 関数の内部のコードが実行されます。 `main` は、スクリプト内の他の関数を呼び出すことができますが、関数に含まれていないコードは実行されません。 スクリプトは、他の Office スクリプトを呼び出すことはできません。
 
-[Power Automate](https://flow.microsoft.com) では、スクリプトをフローで接続することができます。 スクリプトとフローの間のデータの受け渡しは、`main` メソッドのパラメーターと戻り値を介して行われます。 Office スクリプトと Power Automate を統合する方法については、 [「Power Automate で Office スクリプトを実行する」](power-automate-integration.md)で詳しく説明しています。
+[Power Automate](https://flow.microsoft.com) では、スクリプトをフローで接続することができます。 スクリプトとフローの間のデータの受け渡しは、`main` 関数のパラメーターと戻り値を介して行われます。 Office スクリプトと Power Automate を統合する方法については、 [「Power Automate で Office スクリプトを実行する」](power-automate-integration.md)で詳しく説明しています。
 
 ## <a name="object-model-overview"></a>オブジェクト モデルの概要
 
