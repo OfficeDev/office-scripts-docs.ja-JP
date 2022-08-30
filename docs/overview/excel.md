@@ -6,7 +6,7 @@ ms.date: 02/25/2022
 ms.localizationpriority: high
 ms.openlocfilehash: a85e8dad8d6e99ee3b4c5558cd2c1b8417956fb3
 ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 05/13/2022
 ms.locfileid: "65393636"
