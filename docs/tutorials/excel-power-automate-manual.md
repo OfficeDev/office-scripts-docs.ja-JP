@@ -1,14 +1,14 @@
 ---
 title: 手動 Power Automation フローからスクリプトを呼び出す
 description: Power Automate の Office スクリプトで、手動のトリガーを使う方法を説明します。
-ms.date: 06/29/2021
+ms.date: 08/22/2022
 ms.localizationpriority: high
-ms.openlocfilehash: e926540976dc066b3f07620c1e710dfa3abc7660
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
-ms.translationtype: HT
+ms.openlocfilehash: c7d7df926ac00f4f9ee5ad47ae52089e5c46d2cc
+ms.sourcegitcommit: 4a26aa16a9c8cbedb2bb9f482235ea52a88cf08f
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585941"
+ms.lasthandoff: 08/24/2022
+ms.locfileid: "67424277"
 ---
 # <a name="call-scripts-from-a-manual-power-automate-flow"></a>手動 Power Automation フローからスクリプトを呼び出す
 
@@ -120,9 +120,13 @@ Power Automate では、ブック コンポーネントにアクセスするた�
 
 6. **［完了］** を選択します。それに応じて **[実行]** セクションが更新されます。
 
-7. ページを更新して、Power Automate の結果を表示します。 成功した場合は、ワークブックに移動して、更新されたセルを確認します。 エラーが発生した場合は、フローの設定を確認し、もう一度実行します。
+7. ページを更新して、Power Automate の結果を表示します。 エラーが発生した場合は、フローの設定を確認し、もう一度実行します。
 
     :::image type="content" source="../images/power-automate-tutorial-9.png" alt-text="正常にフローが発生したことを示す Power Automate 出力。":::
+
+8. ブックを開いて、更新されたセルを表示します。 セル **A1** に現在の日付が表示され、セル **B1** に現在の時刻が表示されます。 Power Automate では協定世界時 (UTC) が使用されるため、時刻は現在のタイム ゾーンからオフセットされる可能性があります。
+
+    :::image type="content" source="../images/power-automate-tutorial-10.png" alt-text="セル A1 と B1 の日付と時刻の値を示すブック。":::
 
 ## <a name="next-steps"></a>次の手順
 
