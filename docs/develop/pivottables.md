@@ -1,37 +1,37 @@
 ---
-title: Office スクリプトでのピボットテーブルの操作
+title: Office スクリプトでピボットテーブルを操作する
 description: Office Scripts JavaScript API でピボットテーブルのオブジェクト モデルについて説明します。
 ms.date: 04/20/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 579f94140214674912c9610e707123924e4aef18
-ms.sourcegitcommit: 4e3d3aa25fe4e604b806fbe72310b7a84ee72624
+ms.openlocfilehash: a457c41bd1205f4e17636c43d7ba78addc80d0e4
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/27/2022
-ms.locfileid: "65077091"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572585"
 ---
-# <a name="work-with-pivottables-in-office-scripts"></a>Office スクリプトでのピボットテーブルの操作
+# <a name="work-with-pivottables-in-office-scripts"></a>Office スクリプトでピボットテーブルを操作する
 
-ピボットテーブルを使用すると、大量のデータコレクションをすばやく分析できます。 その能力には複雑さが伴います。 Office スクリプト API を使用すると、ニーズに合わせてピボットテーブルをカスタマイズできますが、API セットのスコープを使用すると、作業を開始することが困難になります。 この記事では、一般的なピボットテーブル タスクを実行する方法と、重要なクラスとメソッドについて説明します。
+ピボットテーブルを使用すると、大量のデータコレクションをすばやく分析できます。 その能力には複雑さが伴います。 Office スクリプト API を使用すると、ニーズに合わせてピボットテーブルをカスタマイズできますが、API セットの範囲により、作業を開始することが困難になります。 この記事では、一般的なピボットテーブル タスクを実行する方法と、重要なクラスとメソッドについて説明します。
 
 > [!NOTE]
-> API で使用される用語のコンテキストを理解するには、最初にExcelのピボットテーブルドキュメントを参照してください。 [ワークシート データを分析するピボットテーブルの作成](https://support.microsoft.com/office/a9a84538-bfe9-40a9-a8e9-f99134456576)から始めます。
+> API で使用される用語のコンテキストを理解するには、まず Excel のピボットテーブルドキュメントを参照してください。 [ワークシート データを分析するピボットテーブルの作成](https://support.microsoft.com/office/a9a84538-bfe9-40a9-a8e9-f99134456576)から始めます。
 
 ## <a name="object-model"></a>オブジェクト モデル
 
 :::image type="content" source="../images/pivottable-object-model.png" alt-text="ピボットテーブルを操作するときに使用されるクラス、メソッド、プロパティの簡略化された図。":::
 
-[ピボットテーブル](/javascript/api/office-scripts/excelscript/excelscript.pivottable)は、Office Scripts API のピボットテーブルの中央オブジェクトです。
+[ピボットテーブル](/javascript/api/office-scripts/excelscript/excelscript.pivottable)は、Office スクリプト API のピボットテーブルの中央オブジェクトです。
 
 - [Workbook](/javascript/api/office-scripts/excelscript/excelscript.workbook) オブジェクトには、すべての[ピボットテーブル](/javascript/api/office-scripts/excelscript/excelscript.pivottable)のコレクションがあります。 各 [ワークシート](/javascript/api/office-scripts/excelscript/excelscript.worksheet) には、そのシートのローカルであるピボットテーブル コレクションも含まれています。
 - [ピボットテーブル](/javascript/api/office-scripts/excelscript/excelscript.pivottable)には [PivotHierarchies が含まれています](/javascript/api/office-scripts/excelscript/excelscript.pivothierarchy)。 階層は、テーブル内の列と考えることができます。
 - [PivotHierarchies](/javascript/api/office-scripts/excelscript/excelscript.pivothierarchy) は、行または列 ([RowColumnPivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.rowcolumnpivothierarchy))、データ ([DataPivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.datapivothierarchy))、またはフィルター ([FilterPivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.filterpivothierarchy)) として追加できます。
-- 各 [PivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.pivothierarchy) には、ピボットフィールドが 1 つだけ含 [まれています](/javascript/api/office-scripts/excelscript/excelscript.pivotfield)。 Excelの外部のピボットテーブル構造には、階層ごとに複数のフィールドが含まれる場合があるため、この設計は将来のオプションをサポートするために存在します。 Office スクリプトの場合、フィールドと階層は同じ情報にマップされます。
+- 各 [PivotHierarchy](/javascript/api/office-scripts/excelscript/excelscript.pivothierarchy) には、ピボットフィールドが 1 つだけ含 [まれています](/javascript/api/office-scripts/excelscript/excelscript.pivotfield)。 Excel の外部のピボットテーブル構造には階層ごとに複数のフィールドが含まれている可能性があるため、この設計は将来のオプションをサポートするために存在します。 Office スクリプトの場合、フィールドと階層は同じ情報にマップされます。
 - [PivotField](/javascript/api/office-scripts/excelscript/excelscript.pivotfield) には、複数の [PivotItem が含まれています](/javascript/api/office-scripts/excelscript/excelscript.pivotitem)。 各 PivotItem は、フィールド内の一意の値です。 各項目は、テーブル列の値と考えてください。 フィールドがデータに使用されている場合は、項目の集計値 (合計など) を指定することもできます。
 - [PivotLayout は](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout)、[PivotFields](/javascript/api/office-scripts/excelscript/excelscript.pivotfield) と [PivotItems](/javascript/api/office-scripts/excelscript/excelscript.pivotitem) の表示方法を定義します。
 - [PivotFilter は、](/javascript/api/office-scripts/excelscript/excelscript.pivotfilters) 異なる条件を使用して [ピボットテーブル](/javascript/api/office-scripts/excelscript/excelscript.pivottable) からデータをフィルター処理します。
 
-これらのリレーションシップの実際の動作を確認します。 次のデータでは、さまざまなファームからの果樹の売上について説明します。 この記事のすべての例のベースです。 <a href="pivottable-sample.xlsx">pivottable-sample.xlsx</a>を使用してフォローします。
+これらのリレーションシップの実際の動作を確認します。 次のデータでは、さまざまなファームからの果樹の売上について説明します。 この記事のすべての例のベースです。 [pivottable-sample.xlsx](pivottable-sample.xlsx)を使用してフォローします。
 
 :::image type="content" source="../images/pivottable-raw-data.png" alt-text="さまざまなファームのさまざまな種類の果樹販売のコレクション。":::
 
@@ -75,7 +75,7 @@ ms.locfileid: "65077091"
 
 ## <a name="layout-ranges"></a>レイアウト範囲
 
-ピボットテーブルの各部分は、範囲にマップされます。 これにより、スクリプトで後で使用したり、[Power Automate フロー](power-automate-integration.md)で返したりするために、ピボットテーブルからデータを取得できます。 これらの範囲には、. から取得した [PivotLayout](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout) オブジェクトを `PivotTable.getLayout()`介してアクセスされます。 次の図は、次のメソッド `PivotLayout`によって返される範囲を示しています。
+ピボットテーブルの各部分は、範囲にマップされます。 これにより、スクリプトで後で使用したり [、Power Automate フロー](power-automate-integration.md)で返したりするために、ピボットテーブルからデータを取得できます。 これらの範囲には、. から取得した [PivotLayout](/javascript/api/office-scripts/excelscript/excelscript.pivotlayout) オブジェクトを `PivotTable.getLayout()`介してアクセスされます。 次の図は、次のメソッド `PivotLayout`によって返される範囲を示しています。
 
 :::image type="content" source="../images/pivottable-layout-breakdown.png" alt-text="レイアウトの get range 関数によって返されるピボットテーブルのセクションを示す図。":::
 

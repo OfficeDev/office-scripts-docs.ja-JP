@@ -3,12 +3,12 @@ title: ブックの目次を作成する
 description: 各ワークシートへのリンクを含む目次を作成する方法について説明します。
 ms.date: 01/20/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: b2d69609514c2e1e87f9c0590ea10152fc7d5e7d
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 5b158160ecb9ac29df547c6da6552e21c9875be3
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585521"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572515"
 ---
 # <a name="create-a-workbook-table-of-contents"></a>ブックの目次を作成する
 
@@ -16,11 +16,11 @@ ms.locfileid: "64585521"
 
 :::image type="content" source="../../images/table-of-contents-sample.png" alt-text="他のワークシートへのリンクを示す目次ワークシート。":::
 
-## <a name="sample-excel-file"></a>サンプル Excel ファイル
+## <a name="sample-excel-file"></a>Excel ファイルのサンプル
 
-すぐに <a href="table-of-contents.xlsx">table-of-contents.xlsx</a> ブックのダウンロード を行います。 次のスクリプトを追加し、自分でサンプルを試してみてください。
+すぐに使用できるブックの [table-of-contents.xlsx](table-of-contents.xlsx) をダウンロードします。 次のスクリプトを追加し、サンプルを自分で試してください。
 
-## <a name="sample-code-create-a-workbook-table-of-contents"></a>サンプル コード: ブックの目次を作成する
+## <a name="sample-code-create-a-workbook-table-of-contents"></a>サンプル コード: ブック目次を作成する
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {

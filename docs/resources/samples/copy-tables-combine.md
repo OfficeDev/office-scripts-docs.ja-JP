@@ -1,29 +1,29 @@
 ---
-title: 複数のテーブルのデータExcel 1 つのテーブルに結合する
-description: スクリプトを使用して複数のOfficeテーブルのデータを 1 つのExcelに結合する方法について学習します。
+title: 複数の Excel テーブルのデータを 1 つのテーブルに結合する
+description: Office スクリプトを使用して、複数の Excel テーブルのデータを 1 つのテーブルに結合する方法について説明します。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: bfe2f4af579e5ee59d20e12fe4850dd9c41bcc56
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 3db510514c676b9012fd47abc2a7e92492a9cf87
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585892"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572452"
 ---
-# <a name="combine-data-from-multiple-excel-tables-into-a-single-table"></a>複数のテーブルのデータExcel 1 つのテーブルに結合する
+# <a name="combine-data-from-multiple-excel-tables-into-a-single-table"></a>複数の Excel テーブルのデータを 1 つのテーブルに結合する
 
-このサンプルでは、複数のテーブルExcelデータを、すべての行を含む 1 つのテーブルに結合します。 使用されているテーブルはすべて同じ構造を持つ必要があります。
+このサンプルでは、複数の Excel テーブルのデータを、すべての行を含む 1 つのテーブルに結合します。 使用されているすべてのテーブルの構造が同じであることを前提としています。
 
-このスクリプトには、次の 2 つのバリエーションがあります。
+このスクリプトには 2 つのバリエーションがあります。
 
-1. 最初[のスクリプトは、](#sample-code-combine-data-from-multiple-excel-tables-into-a-single-table)ファイル内のすべてのテーブルを結合Excelします。
+1. [最初のスクリプト](#sample-code-combine-data-from-multiple-excel-tables-into-a-single-table)は、Excel ファイル内のすべてのテーブルを結合します。
 1. [2 番目のスクリプト](#sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table)は、ワークシートのセット内のテーブルを選択的に取得します。
 
-## <a name="sample-excel-file"></a>サンプル Excel ファイル
+## <a name="sample-excel-file"></a>Excel ファイルのサンプル
 
-すぐに <a href="tables-copy.xlsx">tables-copy.xlsx</a> ブックのダウンロード を行います。 次のスクリプトを追加して、サンプルを自分で試してみてください。
+すぐに使用できるブックの [tables-copy.xlsx](tables-copy.xlsx) をダウンロードします。 サンプルを自分で試すには、次のスクリプトを追加します。
 
-## <a name="sample-code-combine-data-from-multiple-excel-tables-into-a-single-table"></a>サンプル コード: 複数のテーブルのデータExcel 1 つのテーブルに結合する
+## <a name="sample-code-combine-data-from-multiple-excel-tables-into-a-single-table"></a>サンプル コード: 複数の Excel テーブルのデータを 1 つのテーブルに結合する
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -57,9 +57,9 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table"></a>サンプル コード: 選択したワークシート内の複数Excelテーブルのデータを 1 つのテーブルに結合する
+## <a name="sample-code-combine-data-from-multiple-excel-tables-in-select-worksheets-into-a-single-table"></a>サンプル コード: 選択したワークシートの複数の Excel テーブルのデータを 1 つのテーブルに結合する
 
-サンプル ファイルをダウンロード <a href="tables-select-copy.xlsx">tables-select-copy.xlsx</a> 、次のスクリプトと一緒に使用して、自分で試してみてください。
+[tables-select-copy.xlsx](tables-select-copy.xlsx)サンプル ファイルをダウンロードし、次のスクリプトで使用して自分で試してください。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -95,6 +95,6 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="training-video-combine-data-from-multiple-excel-tables-into-a-single-table"></a>トレーニング ビデオ: 複数のテーブルのデータExcel 1 つのテーブルに結合する
+## <a name="training-video-combine-data-from-multiple-excel-tables-into-a-single-table"></a>トレーニング ビデオ: 複数の Excel テーブルのデータを 1 つのテーブルに結合する
 
-[Sudhi Ramamurthy が YouTube でこのサンプルを見るのを見る](https://youtu.be/di-8JukK3Lc)。
+[YouTube でこのサンプルを見る、スディ Ramamurthy のチュートリアルをご覧ください](https://youtu.be/di-8JukK3Lc)。

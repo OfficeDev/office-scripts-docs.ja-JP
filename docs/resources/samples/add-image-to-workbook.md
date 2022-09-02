@@ -1,32 +1,32 @@
 ---
 title: ブックに画像を追加する
-description: Office スクリプトを使用してブックにイメージを追加し、シート間でコピーする方法について学習します。
+description: Office スクリプトを使用して画像をブックに追加し、シート間でコピーする方法について説明します。
 ms.date: 07/12/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: b827ebe4050fa8e260ed640a73d583264955b597
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 78c7779cf4d524ed62bf8d419135863228b23d33
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585864"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572606"
 ---
 # <a name="add-images-to-a-workbook"></a>ブックに画像を追加する
 
-このサンプルでは、スクリプト内のスクリプトを使用してイメージをOffice方法をExcel。
+このサンプルでは、Excel で Office スクリプトを使用してイメージを操作する方法を示します。
 
 ## <a name="scenario"></a>シナリオ
 
-画像は、ブランド化、ビジュアル ID、テンプレートに役立ちます。 これらは、単なる巨大なテーブル以外のブックを作成するのに役立ちます。
+イメージは、ブランド化、ビジュアル ID、テンプレートに役立ちます。 これらは、単なる巨大なテーブル以上のブックを作成するのに役立ちます。
 
-最初のサンプルでは、あるワークシートから別のワークシートにイメージをコピーします。 これは、会社のロゴをすべてのシートで同じ位置に配置するために使用できます。
+最初のサンプルでは、あるワークシートから別のワークシートに画像をコピーします。 これは、会社のロゴをすべてのシートに同じ位置に配置するために使用できます。
 
 2 番目のサンプルでは、URL からイメージをコピーします。 これは、同僚が共有フォルダーに保存した写真を関連するブックにコピーするために使用できます。
 
-## <a name="sample-excel-file"></a>サンプル Excel ファイル
+## <a name="sample-excel-file"></a>Excel ファイルのサンプル
 
-すぐに <a href="add-images.xlsx">add-images.xlsx</a> ブックのダウンロード を行います。 次のスクリプトを追加し、自分でサンプルを試してみてください。
+すぐに使用できるブックの [add-images.xlsx](add-images.xlsx) をダウンロードします。 次のスクリプトを追加し、サンプルを自分で試してください。
 
-## <a name="sample-code-copy-an-image-across-worksheets"></a>サンプル コード: ワークシート間で画像をコピーする
+## <a name="sample-code-copy-an-image-across-worksheets"></a>サンプル コード: ワークシート間でイメージをコピーする
 
 ```TypeScript
 /**

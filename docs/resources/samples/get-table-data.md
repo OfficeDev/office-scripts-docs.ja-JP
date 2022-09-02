@@ -3,12 +3,12 @@ title: Excel データを JSON として出力する
 description: Power Automate で使用する EXCEL テーブル データを JSON として出力する方法について説明します。
 ms.date: 06/27/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 6453d9f0e92f9b3fcccc6e3ec9c1b6c9af49859c
-ms.sourcegitcommit: 82fb78e6907b7c3b95c5c53cfc83af4ea1067a78
+ms.openlocfilehash: 5078d2d86c92aacb0c0c2438b7298a523c132522
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2022
-ms.locfileid: "66572343"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572669"
 ---
 # <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Power Automate で使用するために Excel テーブル データを JSON として出力する
 
@@ -16,7 +16,7 @@ Excel テーブル データは、 [JSON](https://www.w3schools.com/whatis/whati
 
 ## <a name="sample-excel-file"></a>Excel ファイルのサンプル
 
-すぐに使用できるブックのファイル <a href="table-data-with-hyperlinks.xlsx">table-data-with-hyperlinks.xlsx</a> をダウンロードします。
+すぐに使用できるブックのファイル [table-data-with-hyperlinks.xlsx](table-data-with-hyperlinks.xlsx) をダウンロードします。
 
 :::image type="content" source="../../images/table-input.png" alt-text="入力テーブル データを示すワークシート。":::
 

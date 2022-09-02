@@ -1,28 +1,28 @@
 ---
-title: スクリプトを使用してテーブル間で行Officeする
-description: フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する方法について学習します。
+title: Office スクリプトを使用してテーブル間で行を移動する
+description: フィルターを保存し、フィルターを処理して再適用することで、テーブル間で行を移動する方法について説明します。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 9780cd79a55dcb5cd2e039b5198232358b3b1413
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: a7c28c4fef91402b8889d749a03f3aab5e615521
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585479"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572620"
 ---
 # <a name="move-rows-across-tables"></a>テーブル間で行を移動する
 
 このスクリプトでは、次のことが行われます。
 
-* 列の値がスクリプト内の一部の値と等しいソース テーブルから行を`FILTER_VALUE` 選択します。
-* 選択した行を別のワークシートのターゲット テーブルに移動します。
+* 列の値が (スクリプト内の)`FILTER_VALUE` 値と等しいソース テーブルから行を選択します。
+* 選択したすべての行を別のワークシートのターゲット テーブルに移動します。
 * 関連するフィルターをソース テーブルに再適用します。
 
-## <a name="sample-excel-file"></a>サンプル Excel ファイル
+## <a name="sample-excel-file"></a>Excel ファイルのサンプル
 
-すぐに使用できる <a href="input-table-filters.xlsx"> ブックinput-table-filters.xlsx</a> ファイル をダウンロードします。 次のスクリプトを追加して、サンプルを自分で試してみてください。
+すぐに使用できるブックのファイル [input-table-filters.xlsx](input-table-filters.xlsx) をダウンロードします。 サンプルを自分で試すには、次のスクリプトを追加します。
 
-## <a name="sample-code-move-rows-using-range-values"></a>サンプル コード: 範囲の値を使用して行を移動する
+## <a name="sample-code-move-rows-using-range-values"></a>サンプル コード: 範囲値を使用して行を移動する
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -107,7 +107,7 @@ function main(workbook: ExcelScript.Workbook) {
 
 ## <a name="training-video-move-rows-across-tables"></a>トレーニング ビデオ: テーブル間で行を移動する
 
-[Sudhi Ramamurthy が YouTube でこのサンプルを見るのを見る](https://youtu.be/_3t3Pk4i2L0)。 ビデオのソリューションには、2 つのスクリプトが表示されます。 主な違いは、行の選択方法です。
+[YouTube でこのサンプルを見る、スディ Ramamurthy のチュートリアルをご覧ください](https://youtu.be/_3t3Pk4i2L0)。 ビデオのソリューションには 2 つのスクリプトが表示されます。 主な違いは、行の選択方法です。
 
-* 1 つ目のバリアントでは、テーブル フィルターを適用し、表示範囲を読み取って行を選択します。
-* 2 番目の行は、値を読み取り、行の値 (このページのサンプルで使用される値) を抽出して選択します。
+* 最初のバリアントでは、テーブル フィルターを適用し、表示範囲を読み取って行を選択します。
+* 2 番目の行は、値を読み取り、行の値を抽出することによって選択されます (このページのサンプルで使用されます)。

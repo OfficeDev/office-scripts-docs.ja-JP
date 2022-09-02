@@ -73,6 +73,8 @@ items:
                 href: resources/samples/table-of-contents.md
               - name: テーブル列フィルターを削除する
                 href: resources/samples/clear-table-filter-for-active-cell.md
+              - name: Power Automate で日々の変更を報告する
+                href: resources/samples/report-day-to-day-changes.md
           - name: 応用
             items:
               - name: ワークシートを 1 つのブックに結合する

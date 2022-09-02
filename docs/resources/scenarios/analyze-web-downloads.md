@@ -1,37 +1,37 @@
 ---
-title: 'Office スクリプトのサンプル シナリオ: Web ダウンロードの分析'
-description: ブック内の生のインターネット トラフィック データをExcel、その情報をテーブルに整理する前に、元の場所を決定するサンプル。
+title: 'Office スクリプトのサンプル シナリオ: Web ダウンロードを分析する'
+description: Excel ブックで生のインターネット トラフィック データを取得し、その情報をテーブルに整理する前に配信元の場所を決定するサンプル。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 9d2d0ba302c72d4ca1f1aaad5e9cee5ba40d64e9
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 0ef368c5193fe65c0a01676aa2a8b3a2c5cf3bdc
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585492"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572424"
 ---
-# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office スクリプトのサンプル シナリオ: Web ダウンロードの分析
+# <a name="office-scripts-sample-scenario-analyze-web-downloads"></a>Office スクリプトのサンプル シナリオ: Web ダウンロードを分析する
 
-このシナリオでは、会社の Web サイトからダウンロード レポートを分析する必要があります。 この分析の目的は、Web トラフィックが世界中の米国から送信されるかどうかを判断します。
+このシナリオでは、会社の Web サイトからのダウンロード レポートを分析する必要があります。 この分析の目的は、Web トラフィックが世界の米国または他の場所から送信されているかどうかを判断することです。
 
-同僚が生データをブックにアップロードします。 毎週のデータ セットには、独自のワークシートがあります。 また、週 **別の傾向を** 示す表とグラフを含むサマリー ワークシートがあります。
+同僚は生データをブックにアップロードします。 毎週の一連のデータには、独自のワークシートがあります。 また、週単位の傾向を示すテーブルとグラフを含む **[概要** ] ワークシートもあります。
 
-アクティブなワークシートの毎週のダウンロード データを分析するスクリプトを開発します。 各ダウンロードに関連付けられた IP アドレスを解析し、それが米国から送信されたかどうかを判断します。 答えは、ブール値 ("TRUE" または "FALSE") としてワークシートに挿入され、条件付き書式がそれらのセルに適用されます。 IP アドレスの場所の結果はワークシートで合計され、サマリー テーブルにコピーされます。
+作業中のワークシート内の毎週のダウンロード データを分析するスクリプトを開発します。 各ダウンロードに関連付けられている IP アドレスを解析し、それが米国から来たかどうかを判断します。 回答は、ブール値 ("TRUE" または "FALSE") としてワークシートに挿入され、条件付き書式がそれらのセルに適用されます。 IP アドレスの場所の結果はワークシートに合計され、概要テーブルにコピーされます。
 
-## <a name="scripting-skills-covered"></a>スクリプティングのスキルをカバー
+## <a name="scripting-skills-covered"></a>スクリプティング スキルの説明
 
 - テキスト解析
-- スクリプトのサブ機能
+- スクリプトのサブ関数
 - 条件付き書式
 - テーブル
 
 ## <a name="setup-instructions"></a>セットアップ手順
 
-1. ユーザー <a href="analyze-web-downloads.xlsx">analyze-web-downloads.xlsx</a>にダウンロードOneDrive。
+1. [analyze-web-downloads.xlsx](analyze-web-downloads.xlsx)を OneDrive にダウンロードします。
 
-1. ブックを開き、Excel for the web。
+1. Excel for the webを使用してブックを開きます。
 
-1. [自動化] **タブで** 、[新しい **スクリプト] を選択** し、次のスクリプトをエディターに貼り付けます。
+1. [ **自動化** ] タブで [ **新しいスクリプト** ] を選択し、次のスクリプトをエディターに貼り付けます。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -207,18 +207,18 @@ ms.locfileid: "64585492"
     }
     ```
 
-1. スクリプトの名前を [ **Web ダウンロードの分析] に変更し** 、保存します。
+1. スクリプトの名前を [ **Web ダウンロードの分析** ] に変更し、保存します。
 
 ## <a name="running-the-script"></a>スクリプトを実行する
 
-[週] ワークシートに **移動\*\*** し、[Web ダウンロードの **分析] スクリプトを実行** します。 スクリプトは、現在のシートに条件付き書式と場所のラベル付けを適用します。 また、[概要] ワークシート **も更新** されます。
+**任意の週\*\*** ワークシートに移動し、**Web ダウンロードの分析スクリプトを** 実行します。 このスクリプトは、現在のシートに条件付き書式と位置ラベル付けを適用します。 また、[ **概要** ] ワークシートも更新されます。
 
 ### <a name="before-running-the-script"></a>スクリプトを実行する前に
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="生の Web トラフィック データを表示するワークシート。":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-before.png" alt-text="未加工の Web トラフィック データを示すワークシート。":::
 
-### <a name="after-running-the-script"></a>スクリプトの実行後
+### <a name="after-running-the-script"></a>スクリプトを実行した後
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="前の Web トラフィック行で書式設定された IP 場所情報を表示するワークシート。":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-after.png" alt-text="前の Web トラフィック行で書式設定された IP の場所情報を示すワークシート。":::
 
-:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="スクリプトが実行されたワークシートをまとめたサマリー テーブルとグラフ。":::
+:::image type="content" source="../../images/scenario-analyze-web-downloads-table.png" alt-text="スクリプトが実行されたワークシートをまとめた概要テーブルとグラフ。":::

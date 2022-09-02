@@ -3,12 +3,12 @@ title: テーブル列フィルターを削除する
 description: アクティブなセルの場所に基づいてテーブル列フィルターをクリアする方法について説明します。
 ms.date: 07/15/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 21a79abfdd4aeac79af4a0f9ea4a581d45b9706b
-ms.sourcegitcommit: dd632402cb46ec8407a1c98456f1bc9ab96ffa46
+ms.openlocfilehash: e016f7f2af9e7553229f3b3b19007e011879de8e
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/21/2022
-ms.locfileid: "66918812"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572522"
 ---
 # <a name="remove-table-column-filters"></a>テーブル列フィルターを削除する
 
@@ -18,7 +18,7 @@ ms.locfileid: "66918812"
 
 ## <a name="sample-excel-file"></a>Excel ファイルのサンプル
 
-すぐに使用できるブックの <a href="table-with-filter.xlsx">table-with-filter.xlsx</a> をダウンロードします。 サンプルを自分で試すには、次のスクリプトを追加します。
+すぐに使用できるブックの [table-with-filter.xlsx](table-with-filter.xlsx) をダウンロードします。 サンプルを自分で試すには、次のスクリプトを追加します。
 
 ## <a name="sample-code-clear-table-column-filter-based-on-active-cell"></a>サンプル コード: 作業中のセルに基づいてテーブル列フィルターをクリアする
 

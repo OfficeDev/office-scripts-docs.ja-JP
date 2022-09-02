@@ -1,35 +1,35 @@
 ---
-title: 'Office スクリプトのサンプル シナリオ: 成績計算'
-description: 学生のクラスのパーセンテージとレターの成績を決定するサンプル。
+title: 'Office スクリプトのサンプル シナリオ: 成績計算ツール'
+description: 学生のクラスの割合と文字の成績を決定するサンプル。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: fd9009633e4a89e3b236f765543123b3995b9f47
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 7dda3ebe84dc3edd10998cbe2c4cd0806da11411
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585444"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572529"
 ---
-# <a name="office-scripts-sample-scenario-grade-calculator"></a>Office スクリプトのサンプル シナリオ: 成績計算
+# <a name="office-scripts-sample-scenario-grade-calculator"></a>Office スクリプトのサンプル シナリオ: 成績計算ツール
 
-このシナリオでは、すべての学生の学期終了の成績を集計する講師です。 課題とテストのスコアを入力しています。 それでは、学生の運命を決定する時間です。
+このシナリオでは、すべての学生の最終学年を集計するインストラクターです。 割り当てとテストのスコアを入力しています。 次に、学生の運運を判断します。
 
-各ポイント カテゴリの成績を合計するスクリプトを開発します。 その後、合計に基づいて各学生にレターグレードを割り当てる。 精度を確保するために、複数のチェックを追加して、個々のスコアが低すぎるか高すぎるか確認します。 学生のスコアが 0 未満または指定できるポイント値より大きい場合、スクリプトはセルに赤い塗りつぶしを付け、その学生のポイントの合計にはフラグを設定します。 これは、ダブル チェックする必要があるレコードを明確に示します。 また、クラスの上部と下部をすばやく表示するために、いくつかの基本的な書式を成績に追加します。
+各ポイント カテゴリの成績を合計するスクリプトを開発します。 その後、合計に基づいて、各学生にレターの成績が割り当てられます。 精度を確保するために、いくつかのチェックを追加して、個々のスコアが低すぎるか高すぎるかを確認します。 学生のスコアが 0 未満または可能なポイント値より大きい場合、スクリプトは赤い塗りつぶしでセルにフラグを設定し、その学生のポイントの合計は設定しません。 これは、再確認する必要があるレコードを明確に示します。 また、クラスの上部と下部をすばやく表示できるように、いくつかの基本的な書式設定を成績に追加します。
 
-## <a name="scripting-skills-covered"></a>スクリプティングのスキルをカバー
+## <a name="scripting-skills-covered"></a>スクリプティング スキルの説明
 
 - セルの書式設定
-- エラー チェック
+- エラーチェック
 - 正規表現
 - 条件付き書式
 
 ## <a name="setup-instructions"></a>セットアップ手順
 
-1. ユーザー <a href="grade-calculator.xlsx">grade-calculator.xlsx</a>にダウンロードOneDrive。
+1. [grade-calculator.xlsx](grade-calculator.xlsx)を OneDrive にダウンロードします。
 
-1. ブックを開き、Excel for the web。
+1. Excel for the webを使用してブックを開きます。
 
-1. [自動化] **タブで** 、[新しい **スクリプト] を選択** し、次のスクリプトをエディターに貼り付けます。
+1. [ **自動化** ] タブで [ **新しいスクリプト** ] を選択し、次のスクリプトをエディターに貼り付けます。
 
     ```TypeScript
     function main(workbook: ExcelScript.Workbook) {
@@ -172,16 +172,16 @@ ms.locfileid: "64585444"
     }
     ```
 
-1. スクリプトの名前を [ **成績計算] に変更** し、保存します。
+1. スクリプトの名前を **成績計算ツール** に変更して保存します。
 
 ## <a name="running-the-script"></a>スクリプトを実行する
 
-唯一の **ワークシートで成績計算** スクリプトを実行します。 スクリプトは、成績を合計し、各学生にレターグレードを割り当てる。 個々の成績に割り当てまたはテストよりも多くのポイントがある場合、問題のある成績は赤でマークされ、合計は計算されません。 また、'A' の成績は緑色で強調表示され、'D' と 'F' の成績は黄色で強調表示されます。
+唯一のワークシートで **成績計算ツール** スクリプトを実行します。 このスクリプトは成績を合計し、各学生にレターの成績を割り当てます。 課題またはテストの価値を超えるポイントを持つ個々の成績がある場合、問題のある成績は赤でマークされ、合計は計算されません。 また、'A' の成績は緑色で強調表示され、'D' と 'F' の成績は黄色で強調表示されます。
 
 ### <a name="before-running-the-script"></a>スクリプトを実行する前に
 
-:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="学生のスコアの行を表示するワークシート。":::
+:::image type="content" source="../../images/scenario-grade-calculator-before.png" alt-text="学生のスコアの行を示すワークシート。":::
 
-### <a name="after-running-the-script"></a>スクリプトの実行後
+### <a name="after-running-the-script"></a>スクリプトを実行した後
 
-:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="有効な学生行の赤い合計に無効なセルを含む学生スコア データを示すワークシート。":::
+:::image type="content" source="../../images/scenario-grade-calculator-after.png" alt-text="有効な学生行の赤の合計に無効なセルを含む学生スコア データを示すワークシート。":::

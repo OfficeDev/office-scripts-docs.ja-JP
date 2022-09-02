@@ -1,26 +1,26 @@
 ---
 title: 季節のご挨拶
-description: スクリプトを使用して、Officeの歌のツリーを表示する方法についてExcel on the web。
+description: Office スクリプトを使用して、Excel on the webに歌のツリーを表示する方法について説明します。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 56d3bb758edf1b9416a67bc8e806034d086c88ef
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: aee953bd3f92912b6b3bcf55c3a3da110ff38528
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585577"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572445"
 ---
 # <a name="seasons-greetings"></a>季節のご挨拶
 
-このスクリプトは、ホリデー シーズンの精神 [でレス](https://www.linkedin.com/in/lesblackconsultant/) リー ブラックによって投稿されました。 このスクリプトは、スクリプトを使用して、Excel on the webのOfficeです。
+このスクリプトは、休日の季節の精神で [Leslie Black](https://www.linkedin.com/in/lesblackconsultant/) によって提供されました。 Office スクリプトを使用して、Excel on the webで歌のツリーを示す楽しいスクリプトです。
 
-お楽しみください!
+お 楽しみ ください！
 
-["Les's IT Blog" YouTube](https://youtu.be/HBiGEkzmkgo) チャンネルで、シーズンの案内応答スクリプトの動作をご覧ください。
+["Les's IT Blog" YouTube チャンネルで、シーズンのあいさつスクリプトの動作を確認します](https://youtu.be/HBiGEkzmkgo)。
 
 ## <a name="script"></a>Script
 
-すぐに <a href="happy-tree.xlsx">happy-tree.xlsx</a> ブックのダウンロード を行います。 次のスクリプトを追加して、サンプルを自分で試してみてください。
+すぐに使用できるブックの [happy-tree.xlsx](happy-tree.xlsx) をダウンロードします。 サンプルを自分で試すには、次のスクリプトを追加します。
 
 ```TypeScript
 /* Original version by Leslie Black.  */

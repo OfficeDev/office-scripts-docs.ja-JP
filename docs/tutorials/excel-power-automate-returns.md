@@ -3,12 +3,12 @@ title: 自動で実行される Power Automate フローにスクリプトから
 description: Power Automate を使用して Excel on the web 用の Office スクリプトを実行してリマインダー メールを送信する方法を示すチュートリアル。
 ms.date: 04/12/2022
 ms.localizationpriority: high
-ms.openlocfilehash: 7d232b4688132532dd2bc029588d6244a4a64ef8
-ms.sourcegitcommit: 8bcd743bebfacafa548b936ca99ad6d4918e7bcd
-ms.translationtype: HT
+ms.openlocfilehash: c35e3c0e005c7d64c9a0d860f1f6eafd2e26e13f
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2022
-ms.locfileid: "64826689"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572599"
 ---
 # <a name="return-data-from-a-script-to-an-automatically-run-power-automate-flow"></a>自動で実行される Power Automate フローにスクリプトからデータを返す
 
@@ -27,7 +27,7 @@ ms.locfileid: "64826689"
 
 ## <a name="prepare-the-workbook"></a>ブックを準備する
 
-1. ブック <a href="on-call-rotation.xlsx">on-call-rotation.xlsx</a> を 自分の OneDrive にダウンロードします。
+1. ブック [on-call-rotation.xlsx](on-call-rotation.xlsx) を 自分の OneDrive にダウンロードします。
 
 1. Excel on the web で **on-call-rotation.xlsx** を開きます。
 

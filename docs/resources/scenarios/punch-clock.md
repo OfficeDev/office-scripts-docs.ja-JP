@@ -3,24 +3,24 @@ title: 'Office スクリプトのサンプル シナリオ: パンチ クロッ�
 description: このサンプルでは、パンチ クロック ボタンを追加し、ユーザーが現在の時刻を使用して出勤および退勤できるようにします。
 ms.date: 04/26/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: de56fb651d6f6088620678cfd72ce662875eafa7
-ms.sourcegitcommit: e6428a5214fa38aef036a952a0e3c09dbf6e4d3e
+ms.openlocfilehash: ac128a33b653506b6168bd4acfe1713bf6d26759
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2022
-ms.locfileid: "65109300"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572683"
 ---
 # <a name="office-scripts-sample-scenario-punch-clock-button"></a>Office スクリプトのサンプル シナリオ: パンチ クロック ボタン
 
-このサンプルで使用されるシナリオのアイデアとスクリプトは、Office Scripts コミュニティ メンバー[の Brian Gonzalez](https://github.com/b-gonzalez) によって提供されました。
+このサンプルで使用されるシナリオのアイデアとスクリプトは、Office スクリプト コミュニティ メンバー [の Brian Gonzalez](https://github.com/b-gonzalez) によって提供されました。
 
-このシナリオでは、 [従業員がボタン](../../develop/script-buttons.md)を押して開始時刻と終了時刻を記録できるタイム シートを作成します。 以前に記録された内容に基づいて、ボタンを押すと、1 日の開始 (クロックイン) または 1 日の終了 (退勤) が行われます。 このサンプルは、Excel on the webとWindowsの両方で機能します。
+このシナリオでは、 [従業員がボタン](../../develop/script-buttons.md)を押して開始時刻と終了時刻を記録できるタイム シートを作成します。 以前に記録された内容に基づいて、ボタンを押すと、1 日の開始 (クロックイン) または 1 日の終了 (退勤) が行われます。 このサンプルは、Excel on the webと Windows の両方で機能します。
 
 :::image type="content" source="../../images/punch-clock-sample-3.png" alt-text="3 つの列 ('Clock In'、'Clock Out'、および 'Duration') と、ブック内の &quot;パンチ クロック&quot; というラベルの付いたボタンを含むテーブル。":::
 
 ## <a name="setup-instructions"></a>セットアップ手順
 
-1. <a href="punch-clock-sample.xlsx"> OneDriveにpunch-clock-sample.xlsx</a>をダウンロードします。
+1. [punch-clock-sample.xlsx](punch-clock-sample.xlsx)を OneDrive にダウンロードします。
 
     :::image type="content" source="../../images/punch-clock-sample-1.png" alt-text="'Clock In'、'Clock Out'、'Duration' の 3 つの列を持つテーブル。":::
 

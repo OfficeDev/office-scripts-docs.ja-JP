@@ -1,36 +1,36 @@
 ---
-title: コメントを追加Excel
-description: ワークシートにコメントを追加Officeスクリプトを使用する方法について説明します。
+title: Excel でコメントを追加する
+description: Office スクリプトを使用してワークシートにコメントを追加する方法について説明します。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 101f07fd2f1abcd4120585162dc2b77b8aece91a
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: 90f072805e6798a4f9d6e74889ccca15610c87bd
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585598"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572494"
 ---
-# <a name="add-comments-in-excel"></a>コメントを追加Excel
+# <a name="add-comments-in-excel"></a>Excel でコメントを追加する
 
-このサンプルでは、同僚のコメントを含むセルにコメント [@mentioning](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) 示します。
+このサンプルでは、同僚を含むセルにコメント [@mentioning](https://support.microsoft.com/office/90701709-5dc1-41c7-aa48-b01d4a46e8c7) 追加する方法を示します。
 
 ## <a name="example-scenario"></a>シナリオ例
 
-* チーム リードはシフト スケジュールを維持します。 チーム リードは、シフト レコードに従業員 ID を割り当てる。
-* チーム リードは、従業員に通知する必要があります。 従業員にコメントを追加@mentions、ワークシートからカスタム メッセージが送信されます。
-* その後、従業員はブックを表示し、都合の良い時点でコメントに応答できます。
+* チーム リーダーはシフト スケジュールを維持します。 チーム リーダーは、従業員 ID をシフト レコードに割り当てます。
+* チーム リーダーは、従業員に通知することを希望しています。 従業員を@mentionsコメントを追加すると、従業員にワークシートからのカスタム メッセージが電子メールで送信されます。
+* その後、従業員はブックを表示し、都合のよくコメントに返信できます。
 
 ## <a name="solution"></a>ソリューション
 
-1. スクリプトは、従業員ワークシートから従業員情報を抽出します。
-1. スクリプトは、シフト レコードの適切なセルにコメント (関連する従業員の電子メールを含む) を追加します。
+1. このスクリプトは、従業員ワークシートから従業員情報を抽出します。
+1. 次に、スクリプトによって、シフト レコードの適切なセルにコメント (関連する従業員のメールを含む) が追加されます。
 1. セル内の既存のコメントは、新しいコメントを追加する前に削除されます。
 
-## <a name="sample-excel-file"></a>サンプル Excel ファイル
+## <a name="sample-excel-file"></a>Excel ファイルのサンプル
 
-すぐに <a href="excel-comments.xlsx">excel-comments.xlsx</a> ブックのダウンロード を行います。 次のスクリプトを追加して、サンプルを自分で試してみてください。
+すぐに使用できるブックの [excel-comments.xlsx](excel-comments.xlsx) をダウンロードします。 サンプルを自分で試すには、次のスクリプトを追加します。
 
-## <a name="sample-code-add-comments"></a>サンプル コード: コメントの追加
+## <a name="sample-code-add-comments"></a>サンプル コード: コメントを追加する
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook) {
@@ -77,6 +77,6 @@ function main(workbook: ExcelScript.Workbook) {
 }
 ```
 
-## <a name="training-video-add-comments"></a>トレーニング ビデオ: コメントの追加
+## <a name="training-video-add-comments"></a>トレーニング ビデオ: コメントを追加する
 
-[Sudhi Ramamurthy が YouTube でこのサンプルを見るのを見る](https://youtu.be/CpR78nkaOFw)。
+[YouTube でこのサンプルを見る、スディ Ramamurthy のチュートリアルをご覧ください](https://youtu.be/CpR78nkaOFw)。

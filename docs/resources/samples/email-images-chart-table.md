@@ -1,50 +1,50 @@
 ---
-title: グラフと表の画像Excelメールで送信する
-description: '[スクリプトとスクリプト] OfficeをPower Automateして、グラフと表の画像を抽出Excelメールで送信する方法について学習します。'
+title: Excel グラフとテーブルの画像をEmailする
+description: Office スクリプトと Power Automate を使用して Excel グラフとテーブルの画像を抽出して電子メールで送信する方法について説明します。
 ms.date: 06/29/2021
 ms.localizationpriority: medium
-ms.openlocfilehash: 2930a70a5bed4eb49f33f315460ae32f40b5a2f2
-ms.sourcegitcommit: 7023b9e23499806901a5ecf8ebc460b76887cca6
+ms.openlocfilehash: dbf9135723a735321c99991d94f4b4387d800702
+ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/31/2022
-ms.locfileid: "64585507"
+ms.lasthandoff: 09/02/2022
+ms.locfileid: "67572466"
 ---
-# <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>グラフOffice表の画像Power Automateメールを送信するには、スクリプトとスクリプトを使用します。
+# <a name="use-office-scripts-and-power-automate-to-email-images-of-a-chart-and-table"></a>Office スクリプトと Power Automate を使用して、グラフとテーブルの画像を電子メールで送信する
 
-このサンプルでは、OfficeスクリプトとPower Automateを使用してグラフを作成します。 次に、グラフとその基本テーブルの画像を電子メールで送信します。
+このサンプルでは、Office スクリプトと Power Automate を使用してグラフを作成します。 次に、グラフとその基本テーブルの画像を電子メールで送信します。
 
 ## <a name="example-scenario"></a>シナリオ例
 
 * 最新の結果を取得するために計算します。
 * グラフを作成します。
-* グラフと表の画像を取得します。
-* 画像にメールを送信Power Automate。
+* グラフとテーブルの画像を取得します。
+* Power Automate を使用してイメージをEmailします。
 
 _入力データ_
 
-:::image type="content" source="../../images/input-data.png" alt-text="入力データの表を示すワークシート。":::
+:::image type="content" source="../../images/input-data.png" alt-text="入力データのテーブルを示すワークシート。":::
 
 _出力グラフ_
 
-:::image type="content" source="../../images/chart-created.png" alt-text="顧客による金額を示す列グラフが作成されました。":::
+:::image type="content" source="../../images/chart-created.png" alt-text="顧客の支払額を示す縦棒グラフ。":::
 
-_メール フローを通じて受信Power Automateメール_
+_Power Automate フローを介して受信したEmail_
 
-:::image type="content" source="../../images/email-received.png" alt-text="本文に埋め込まれたグラフのExcelによって送信される電子メール。":::
+:::image type="content" source="../../images/email-received.png" alt-text="本文に埋め込まれた Excel グラフを示すフローによって送信された電子メール。":::
 
 ## <a name="solution"></a>ソリューション
 
 このソリューションには、次の 2 つの部分があります。
 
-1. [グラフOfficeテーブルを計算して抽出Excelスクリプト](#sample-code-calculate-and-extract-excel-chart-and-table)
-1. スクリプトPower Automateし、結果を電子メールで送信するフローを示します。 これを行う方法の例については、「自動ワークフロー[を作成する」](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)を参照Power Automate。
+1. [Excel のグラフとテーブルを計算して抽出する Office スクリプト](#sample-code-calculate-and-extract-excel-chart-and-table)
+1. スクリプトを呼び出し、結果を電子メールで送信する Power Automate フロー。 これを行う方法の例については、「 [Power Automate を使用して自動化されたワークフローを作成する](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)」を参照してください。
 
-## <a name="sample-excel-file"></a>サンプル Excel ファイル
+## <a name="sample-excel-file"></a>Excel ファイルのサンプル
 
-すぐに <a href="email-chart-table.xlsx">email-chart-table.xlsx</a> ブックのダウンロード を行います。 次のスクリプトを追加して、サンプルを自分で試してみてください。
+すぐに使用できるブックの [email-chart-table.xlsx](email-chart-table.xlsx) をダウンロードします。 サンプルを自分で試すには、次のスクリプトを追加します。
 
-## <a name="sample-code-calculate-and-extract-excel-chart-and-table"></a>サンプル コード: グラフと表のExcel抽出する
+## <a name="sample-code-calculate-and-extract-excel-chart-and-table"></a>サンプル コード: Excel グラフとテーブルを計算して抽出する
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): ReportImages {
@@ -89,23 +89,23 @@ interface ReportImages {
 }
 ```
 
-## <a name="power-automate-flow-email-the-chart-and-table-images"></a>Power Automateフロー: グラフと表の画像をメールで送信する
+## <a name="power-automate-flow-email-the-chart-and-table-images"></a>Power Automate フロー: グラフとテーブルイメージをEmailする
 
-このフローはスクリプトを実行し、返された画像を電子メールで送信します。
+このフローはスクリプトを実行し、返された画像に電子メールを送信します。
 
-1. 新しいインスタント クラウド **フローを作成します**。
-1. [フロー **を手動でトリガーする] を選択し、[** 作成] を **選択します**。
-1. [スクリプト **の実行]** アクションを使用して、Excel **(Business)** コネクタを使用する新しい **手順を追加** します。 アクションには、次の値を使用します。
+1. 新しい **インスタント クラウド フロー** を作成します。
+1. [ **手動でフローをトリガーする** ] を選択し、[ **作成**] を選択します。
+1. **スクリプトの実行** アクションで **Excel Online (Business)** コネクタを使用する **新しいステップ** を追加します。 アクションには次の値を使用します。
     * **場所**: OneDrive for Business
     * **ドキュメント ライブラリ**: OneDrive
-    * **ファイル**: ブック ([ファイル選択ウィンドウで選択](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control))
+    * **ファイル**: ブック ([ファイル選択子で選択)](../../testing/power-automate-troubleshooting.md#select-workbooks-with-the-file-browser-control)
     * **スクリプト**: スクリプト名
 
-    :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="オンライン (Excel) コネクタの完成Power Automate。":::
-1. このサンプルでは、Outlookクライアントとして使用します。 サポートされている任意の電子メール コネクタPower Automate使用できますが、残りの手順では、ユーザーがサポートを選択Outlook。 新しい **手順を追加** して、**Office 365 Outlookおよび電子** メール **(V2) アクションを使用** します。 アクションには、次の値を使用します。
-    * **To**: テストメール アカウント (または個人用メール)
+    :::image type="content" source="../../images/email-chart-sample-flow-1.png" alt-text="Power Automate で完成した Excel Online (Business) コネクタ。":::
+1. このサンプルでは、Outlook を電子メール クライアントとして使用します。 Power Automate でサポートされている電子メール コネクタを使用できますが、残りの手順では Outlook を選択したことを前提としています。 **Office 365 Outlook** コネクタと **送信と電子メール (V2)** アクションを使用する **新しい手順** を追加します。 アクションには次の値を使用します。
+    * **To**: テスト用メール アカウント (または個人用メール)
     * **件名**: レポート データを確認してください
-    * [本文 **] フィールドで** [コード ビュー] () を選択`</>`し、次の値を入力します。
+    * **[本文**] フィールドで [コード ビュー] (`</>`) を選択し、次のように入力します。
 
     ```HTML
     <p>Please review the following report data:<br>
@@ -121,9 +121,9 @@ interface ReportImages {
     </p>
     ```
 
-    :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="完了したOffice 365 OutlookコネクタをPower Automate。":::
-1. フローを保存し、試してみてください。[フロー エディター **] ページ** の [テスト] ボタンを使用するか、[マイ フロー] タブでフロー **を実行** します。メッセージが表示されたら、必ずアクセスを許可してください。
+    :::image type="content" source="../../images/email-chart-sample-flow-2.png" alt-text="Power Automate の完成したOffice 365 Outlook コネクタ。":::
+1. フローを保存して試してください。フロー エディター ページの **[テスト** ] ボタンを使用するか、[ **マイ フロー** ] タブでフローを実行します。メッセージが表示されたら、必ずアクセスを許可してください。
 
 ## <a name="training-video-extract-and-email-images-of-chart-and-table"></a>トレーニング ビデオ: グラフとテーブルの画像を抽出して電子メールで送信する
 
-[Sudhi Ramamurthy が YouTube でこのサンプルを見るのを見る](https://youtu.be/152GJyqc-Kw)。
+[YouTube でこのサンプルを見る、スディ Ramamurthy のチュートリアルをご覧ください](https://youtu.be/152GJyqc-Kw)。
