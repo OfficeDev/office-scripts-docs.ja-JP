@@ -1,6 +1,6 @@
 # <a name="office-scripts-documentation"></a>Office スクリプト ドキュメント
 
-Office スクリプトのドキュメント リポジトリへようこそ。 このリポジトリでは、Office スクリプトのチュートリアルとハウツー ガイドのドキュメント ソース ファイルを見つけることができます。 最適なエクスペリエンスを得るには、[Microsoft Docsでこの](https://docs.microsoft.com/office/dev/scripts)コンテンツを表示することをお勧めします。
+Office スクリプトのドキュメント リポジトリへようこそ。 このリポジトリでは、Office スクリプトのチュートリアルとハウツー ガイドのドキュメント ソース ファイルを見つけることができます。 最適なエクスペリエンスを得るには、 [Microsoft Learn](https://learn.microsoft.com/office/dev/scripts) でこのコンテンツを表示することをお勧めします。
 
 > **注**: Office スクリプト API のリファレンス ドキュメント ソース ファイルは [、office-scripts-docs-reference](https://github.com/OfficeDev/office-scripts-docs-reference) リポジトリにあります。 これらの API には、スクリプトに対して考えられるすべての操作が含まれています。
 
@@ -19,7 +19,7 @@ Office スクリプトのドキュメント リポジトリへようこそ。 �
 - 問題を再現する手順。
 - コンソールの出力メッセージとエラー メッセージ。
 
-また、フォーク、修正、提案される変更のプル リクエストもお願いしています。詳細については、「[このドキュメントに投稿する](Contributing.md)」を参照してください。
+We also encourage you to fork, make the fix, and do a pull request of your proposed changes. For details, see [Contribute to this documentation](Contributing.md).
 
 問題が Office スクリプトのドキュメントに関連していない場合は、代わりに次のいずれかのチャネルに投稿してください。
 
@@ -30,6 +30,7 @@ Office スクリプトのドキュメント リポジトリへようこそ。 �
 
 Copyright (c) 2019 Microsoft Corporation. All rights reserved。
 
-## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft Open Source Code of Conduct
+## <a name="microsoft-open-source-code-of-conduct"></a>Microsoft オープンソース倫理規定
 
-このプロジェクトでは、[Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/) が採用されています。詳細については、「[規範に関する FAQ](https://opensource.microsoft.com/codeofconduct/faq/)」を参照してください。または、その他の質問やコメントがあれば、[opencode@microsoft.com](mailto:opencode@microsoft.com) までにお問い合わせください。
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
+For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.

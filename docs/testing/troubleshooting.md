@@ -1,21 +1,21 @@
 ---
 title: Office Scripts のトラブルシューティング
 description: Office スクリプトのデバッグのヒントと手法、およびヘルプ リソース。
-ms.date: 11/11/2021
+ms.date: 10/05/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 8e673d39b6249ccc7598b832d6478cc8dc0751f6
-ms.sourcegitcommit: f5fc9146d5c096e3a580a3fa8f9714147c548df4
+ms.openlocfilehash: 4fe4a9b17d51d078403d1a46abed774d38eeaa80
+ms.sourcegitcommit: 64d506257bee282fb01aedbf4d090781b06e4900
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2022
-ms.locfileid: "66038680"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68495468"
 ---
 # <a name="troubleshoot-office-scripts"></a>Office Scripts のトラブルシューティング
 
 Office スクリプトを開発すると、間違いを犯す可能性があります。 大丈夫です。 問題を見つけてスクリプトを完全に動作させるためのツールがあります。
 
 > [!NOTE]
-> Power Automateを使用したOffice スクリプトに固有のトラブルシューティングのアドバイスについては、「[Power Automateで実行されているOffice スクリプトのトラブルシューティング](power-automate-troubleshooting.md)」を参照してください。
+> Power Automate を使用した Office スクリプトに固有のトラブルシューティングのアドバイスについては、「 [Power Automate で実行されている Office スクリプトのトラブルシューティング](power-automate-troubleshooting.md)」を参照してください。
 
 ## <a name="types-of-errors"></a>エラーの種類
 
@@ -68,26 +68,29 @@ console.log(myRange.getAddress());
 
 ログはブックには影響しません。
 
-## <a name="automate-tab-not-appearing-or-office-scripts-unavailable"></a>[自動化] タブが表示されないか、スクリプトを使用できないOfficeする
+## <a name="automate-tab-not-appearing-or-office-scripts-unavailable"></a>[自動化] タブが表示されない、または Office スクリプトが使用できない
 
 次の手順は、[**自動化**] タブがExcel on the webに表示されない問題のトラブルシューティングに役立ちます。
 
-1. [Microsoft 365 ライセンスにOfficeスクリプトが含まれていることを確認します](../overview/excel.md#requirements)。
+1. [Microsoft 365 ライセンスに Office スクリプトが含まれていることを確認します](../overview/excel.md#requirements)。
 1. [ブラウザーがサポートされていることを確認します](platform-limits.md#browser-support)。
 1. [サード パーティの Cookie が有効になっていることを確認します](platform-limits.md#third-party-cookies)。
-1. [管理者がMicrosoft 365 管理センターのスクリプトOffice無効になっていないことを確認](/microsoft-365/admin/manage/manage-office-scripts-settings)します。
+1. [管理者がMicrosoft 365 管理センターで Office スクリプトを無効にされていないことを確認](/microsoft-365/admin/manage/manage-office-scripts-settings)します。
 1. テナントに外部ユーザーまたはゲスト ユーザーとしてログインしていないことを確認します。
 
 [!INCLUDE [Teams support note](../includes/teams-support-note.md)]
 
+> [!NOTE]
+> SharePoint に格納されているスクリプトが、最近使用したリストに常に表示されないという既知の問題があります。 これは、管理者が Exchange Web Services (EWS) をオフにしたときに発生します。 SharePoint ベースのスクリプトは、ファイル ダイアログから引き続きアクセスでき、使用できます。
+
 ## <a name="help-resources"></a>ヘルプ リソース
 
-[Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts) は、コーディングの問題を支援する開発者のコミュニティです。 多くの場合、スタック オーバーフローのクイック検索を使用して問題の解決策を見つけることができます。 そうでない場合は、質問をして、"office-scripts" タグでタグ付けします。 Office *アドイン* ではなく、Office *スクリプト* を作成していることを確認してください。
+[Stack Overflow](https://stackoverflow.com/questions/tagged/office-scripts) は、コーディングの問題を支援する開発者のコミュニティです。 多くの場合、スタック オーバーフローのクイック検索を使用して問題の解決策を見つけることができます。 そうでない場合は、質問をして、"office-scripts" タグでタグ付けします。 Office *アドイン* ではなく、Office *スクリプト* を作成していることを必ず説明してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [Office スクリプトでのベスト プラクティス](../develop/best-practices.md)
-- [Office スクリプトを使用したプラットフォームの制限](platform-limits.md)
+- [Office スクリプトでのプラットフォームの制限](platform-limits.md)
 - [Office Scripts のパフォーマンスの改善](../develop/web-client-performance.md)
-- [PowerAutomate で実行されているOffice スクリプトのトラブルシューティング](power-automate-troubleshooting.md)
+- [PowerAutomate で実行されている Office スクリプトのトラブルシューティング](power-automate-troubleshooting.md)
 - [Office スクリプトの効果を元に戻す](undo.md)

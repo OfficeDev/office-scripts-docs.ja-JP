@@ -3,14 +3,14 @@ layout: LandingPage
 ms.topic: landing-page
 title: Office スクリプト ドキュメント
 description: チュートリアル、概念に関する記事、コード サンプルなどの、Excel の Office スクリプトについて学習するためのリソース。
-ms.date: 05/24/2021
+ms.date: 09/12/2022
 ms.localizationpriority: high
-ms.openlocfilehash: b98c746ec89b61f05c3a6ded04100c0a1efc20bc
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
-ms.translationtype: HT
+ms.openlocfilehash: 3219d7c508381ab34615c5f6cc5a16507a9b021a
+ms.sourcegitcommit: 64d506257bee282fb01aedbf4d090781b06e4900
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393692"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68495482"
 ---
 # <a name="office-scripts-documentation"></a>Office スクリプト ドキュメント
 
@@ -73,7 +73,7 @@ Excel の Office スクリプトを使用すると、日常のタスクを自動
 ---
 
 <h2>その他のリソース</h2>
-<p>次のリソースを使用して、Office スクリプトが使用する API について学習したり、Office スクリプトについて質問したり、Office スクリプトの機能を要求したりします。</p>
+<p>Office スクリプト API について学習したり、Office スクリプトについて質問したり、Office スクリプトの機能を要求したりするには、次のリソースを使用します。</p>
 <ul class="panelContent cardsF cols cols3 rows2">
     <li>
         <div class="cardSize">

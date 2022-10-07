@@ -2,14 +2,14 @@
 title: Excel の Office スクリプト
 description: Office スクリプト用の操作レコーダーとコード エディターの概要をご紹介します。
 ms.topic: overview
-ms.date: 02/25/2022
+ms.date: 10/05/2022
 ms.localizationpriority: high
-ms.openlocfilehash: a85e8dad8d6e99ee3b4c5558cd2c1b8417956fb3
-ms.sourcegitcommit: 34c7740c9bff0e4c7426e01029f967724bfee566
+ms.openlocfilehash: 02a45e5aae468cff2c61e18b35c54ba656d0484b
+ms.sourcegitcommit: 64d506257bee282fb01aedbf4d090781b06e4900
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2022
-ms.locfileid: "65393636"
+ms.lasthandoff: 10/07/2022
+ms.locfileid: "68495475"
 ---
 # <a name="office-scripts-in-excel"></a>Excel の Office スクリプト
 
@@ -25,7 +25,11 @@ Excel の Office スクリプトを使用すると、日常のタスクを自動
 
 Office スクリプトを使用するには、以下が必要です。
 
-1. [Excel](https://www.office.com/launch/excel) (Windows の Excel は、[スクリプト ボタン](../develop/script-buttons.md)を含むOffice スクリプトのみを使用できます)。
+1. [Excel on the web](https://www.office.com/launch/excel) (Excel on Windows では、[スクリプト ボタン](../develop/script-buttons.md)を含む Office スクリプトのみを使用できます)。
+
+    > [!TIP]
+    > Office スクリプトは、Office on Windows および Mac for [Office Insiders](https://insider.office.com/) で使用できるようになりました。
+
 1. OneDrive for Business。
 1. Microsoft 365 Office デスクトップ アプリにアクセスできる、次のような商用または教育機関向けの Microsoft 365 ライセンス。
 
