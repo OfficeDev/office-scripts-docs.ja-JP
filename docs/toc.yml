@@ -39,6 +39,8 @@ items:
             href: develop/use-json.md
           - name: Power Automate フローで .xlsm ファイルを使用する
             href: develop/macros-power-automate.md
+          - name: OFFICE スクリプトの VS Code (プレビュー)
+            href: develop/vscode-for-scripts.md
           - name: ピボットテーブルを使用して作業する
             href: develop/pivottables.md
       - name: トラブルシューティング

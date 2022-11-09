@@ -1,14 +1,14 @@
 ---
 title: Excel データを JSON として出力する
-description: Power Automate で使用する EXCEL テーブル データを JSON として出力する方法について説明します。
-ms.date: 06/27/2022
+description: Power Automate で使用する JSON として Excel テーブル データを出力する方法について説明します。
+ms.date: 11/04/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 5078d2d86c92aacb0c0c2438b7298a523c132522
-ms.sourcegitcommit: a6504f8b0d6b717457c6e0b5306c35ad3900914e
+ms.openlocfilehash: 96883bb1f74f66065e8f45760858e960ece90e30
+ms.sourcegitcommit: 7cadf2b637bf62874e43b6e595286101816662aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2022
-ms.locfileid: "67572669"
+ms.lasthandoff: 11/09/2022
+ms.locfileid: "68891240"
 ---
 # <a name="output-excel-table-data-as-json-for-usage-in-power-automate"></a>Power Automate で使用するために Excel テーブル データを JSON として出力する
 
@@ -20,7 +20,7 @@ Excel テーブル データは、 [JSON](https://www.w3schools.com/whatis/whati
 
 :::image type="content" source="../../images/table-input.png" alt-text="入力テーブル データを示すワークシート。":::
 
-このサンプルのバリエーションには、テーブル列の 1 つのハイパーリンクも含まれています。 これにより、追加のレベルのセル データを JSON に表示できます。
+このサンプルのバリエーションには、いずれかのテーブル列のハイパーリンクも含まれています。 これにより、追加レベルのセル データを JSON で表示できます。
 
 :::image type="content" source="../../images/table-hyperlink-view.png" alt-text="ハイパーリンクとして書式設定されたテーブル データの列を示すワークシート。":::
 
@@ -29,7 +29,7 @@ Excel テーブル データは、 [JSON](https://www.w3schools.com/whatis/whati
 サンプルを自分で試すには、次のスクリプトを追加します。
 
 > [!NOTE]
-> テーブル列と `interface TableData` 一致するように構造を変更できます。 スペースを含む列名の場合は、サンプルのように `"Event ID"` キーを引用符で囲んでください。 JSON の操作の詳細については、「JSON を [使用して Office スクリプトとの間でデータを渡す」を参照](../../develop/use-json.md)してください。
+> テーブル列に `interface TableData` 合わせて構造体を変更できます。 スペースを含む列名の場合は、サンプルの のように、キーを引用符で囲 `"Event ID"` んでください。 JSON の操作の詳細については、「JSON を [使用して Office スクリプトとの間でデータを渡す」を参照](../../develop/use-json.md)してください。
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -82,7 +82,7 @@ interface TableData {
 }
 ```
 
-### <a name="sample-output-from-the-plaintable-worksheet"></a>"PlainTable" ワークシートからの出力例
+### <a name="sample-output-from-the-plaintable-worksheet"></a>"PlainTable" ワークシートからのサンプル出力
 
 ```json
 [{
@@ -136,10 +136,10 @@ interface TableData {
 }]
 ```
 
-## <a name="sample-code-return-table-data-as-json-with-hyperlink-text"></a>サンプル コード: ハイパーリンク テキストを含む JSON としてテーブル データを返す
+## <a name="sample-code-return-table-data-as-json-with-hyperlink-text"></a>サンプル コード: ハイパーリンク テキストを使用してテーブル データを JSON として返す
 
 > [!NOTE]
-> このスクリプトは、テーブルの 4 番目の列 (インデックス 0) からハイパーリンクを常に抽出します。 コメントの下のコードを変更することで、その順序を変更したり、ハイパーリンク データとして複数の列を含めたりすることができます。 `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
+> スクリプトは常に、テーブルの 4 番目の列 (0 インデックス) からハイパーリンクを抽出します。 コメントの下のコードを変更することで、その順序を変更したり、ハイパーリンク データとして複数の列を含めたりすることができます `// For the 4th column (0 index), extract the hyperlink and use that instead of text.`
 
 ```TypeScript
 function main(workbook: ExcelScript.Workbook): TableData[] {
@@ -196,7 +196,7 @@ interface TableData {
 }
 ```
 
-### <a name="sample-output-from-the-withhyperlink-worksheet"></a>"WithHyperLink" ワークシートからのサンプル出力
+### <a name="sample-output-from-the-withhyperlink-worksheet"></a>"WithHyperLink" ワークシートからの出力例
 
 ```json
 [{
@@ -258,6 +258,6 @@ interface TableData {
 }]
 ```
 
-## <a name="use-in-power-automate"></a>Power Automate で使用する
+## <a name="use-in-power-automate"></a>Power Automate での使用
 
-Power Automate でこのようなスクリプトを使用する方法については、「Power Automate を [使用して自動化されたワークフローを作成する」を](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)参照してください。
+Power Automate でこのようなスクリプトを使用する方法については、「Power Automate を使用 [して自動化されたワークフローを作成する](../../tutorials/excel-power-automate-returns.md#create-an-automated-workflow-with-power-automate)」を参照してください。

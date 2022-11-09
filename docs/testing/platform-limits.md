@@ -1,14 +1,14 @@
 ---
 title: Office Scripts を使用したプラットフォームの制限と要件
 description: Excel on the Web で使用する場合の Office Scripts のリソース制限とブラウザーのサポート。
-ms.date: 01/31/2022
+ms.date: 11/07/2022
 ms.localizationpriority: medium
-ms.openlocfilehash: 385248e5c62ed3dbf2827105b3097ef27e5187a7
-ms.sourcegitcommit: b84d4c8dd31335e4e39b0da6ad25fd528cb9d8f3
-ms.translationtype: HT
+ms.openlocfilehash: 764d1eddaf303a941a098ec1d3f3056d63e8693f
+ms.sourcegitcommit: 7cadf2b637bf62874e43b6e595286101816662aa
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2022
-ms.locfileid: "62462503"
+ms.lasthandoff: 11/09/2022
+ms.locfileid: "68891247"
 ---
 # <a name="platform-limits-and-requirements-with-office-scripts"></a>Office Scripts を使用したプラットフォームの制限と要件
 
@@ -47,6 +47,8 @@ Excel for the Web には、スクリプトを使用して Workbook を呼び出�
 
 大規模なデータセットを処理するときにエラーが発生する場合は、より大きな範囲ではなく、複数の小さい範囲を使用してみてください。 例としては、「[大規模なデータセットの書き込み](../resources/samples/write-large-dataset.md)」のサンプルを参照してください。 [Range.getSpecialCells](/javascript/api/office-scripts/excelscript/excelscript.range#excelscript-excelscript-range-getspecialcells-member(1)) などの API を使用して、大きな範囲ではなく特定のセルをターゲットにすることもできます。
 
+Office スクリプトに固有ではない Excel の制限については、 [Excel の仕様と制限](https://support.microsoft.com/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3)に関する記事を参照してください。
+
 ### <a name="power-automate"></a>Power Automate
 
 Power Automate で Office Scripts を使用する場合、各ユーザーは **1 日あたり 1,600 回のRun Script アクションの呼び出し** に制限されます。 この制限は、UTC の午前 12:00 にリセットされます。
@@ -61,7 +63,7 @@ Power Automate プラットフォームには、次の記事に記載されて�
 
 ## <a name="see-also"></a>関連項目
 
+- [Excel の仕様と制限](https://support.microsoft.com/office/excel-specifications-and-limits-1672b34d-7043-467e-8e27-269d656771c3)
 - [Office Scripts のトラブルシューティング](troubleshooting.md)
 - [Office スクリプトの効果を元に戻す](undo.md)
 - [Office Scripts のパフォーマンスの改善](../develop/web-client-performance.md)
-- [Excel on the Web における Office Scripts のためのスクリプト作成の基礎](../develop/scripting-fundamentals.md)
