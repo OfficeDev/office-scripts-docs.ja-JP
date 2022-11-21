@@ -17,7 +17,7 @@ items:
             href: tutorials/excel-power-automate-trigger.md
           - name: スクリプトから Power Automate フローにデータを渡す
             href: tutorials/excel-power-automate-returns.md
-      - name: スクリプトの基本事項
+      - name: スクリプトの基礎
         href: develop/scripting-fundamentals.md
       - name: 概念
         items:
